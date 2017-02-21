@@ -1,0 +1,33 @@
+C:\Users\Logan\documents\visual studio 2015\Projects\HistacomCS\HistacomCS\bin\Debug\HistacomCS.exe.config
+C:\Users\Logan\documents\visual studio 2015\Projects\HistacomCS\HistacomCS\bin\Debug\HistacomCS.exe.manifest
+C:\Users\Logan\documents\visual studio 2015\Projects\HistacomCS\HistacomCS\bin\Debug\HistacomCS.application
+C:\Users\Logan\documents\visual studio 2015\Projects\HistacomCS\HistacomCS\bin\Debug\HistacomCS.exe
+C:\Users\Logan\documents\visual studio 2015\Projects\HistacomCS\HistacomCS\bin\Debug\HistacomCS.pdb
+C:\Users\Logan\documents\visual studio 2015\Projects\HistacomCS\HistacomCS\obj\Debug\HistacomCS.Desktop.resources
+C:\Users\Logan\documents\visual studio 2015\Projects\HistacomCS\HistacomCS\obj\Debug\HistacomCS.Properties.Resources.resources
+C:\Users\Logan\documents\visual studio 2015\Projects\HistacomCS\HistacomCS\obj\Debug\HistacomCS.TitleScreen.resources
+C:\Users\Logan\documents\visual studio 2015\Projects\HistacomCS\HistacomCS\obj\Debug\HistacomCS.csproj.GenerateResource.Cache
+C:\Users\Logan\documents\visual studio 2015\Projects\HistacomCS\HistacomCS\obj\Debug\HistacomCS.exe.manifest
+C:\Users\Logan\documents\visual studio 2015\Projects\HistacomCS\HistacomCS\obj\Debug\HistacomCS.application
+C:\Users\Logan\documents\visual studio 2015\Projects\HistacomCS\HistacomCS\obj\Debug\HistacomCS.exe
+C:\Users\Logan\documents\visual studio 2015\Projects\HistacomCS\HistacomCS\obj\Debug\HistacomCS.pdb
+C:\Users\Logan\documents\visual studio 2015\Projects\HistacomCS\HistacomCS\obj\Debug\HistacomCS.csprojResolveAssemblyReference.cache
+C:\Users\Logan\Documents\HistacomCS\HistacomCS\obj\Debug\HistacomCS.exe
+C:\Users\Logan\Documents\HistacomCS\HistacomCS\obj\Debug\HistacomCS.pdb
+C:\Users\Logan\Documents\HistacomCS\HistacomCS\bin\Debug\HistacomCS.exe.manifest
+C:\Users\Logan\Documents\HistacomCS\HistacomCS\bin\Debug\HistacomCS.application
+C:\Users\Logan\Documents\HistacomCS\HistacomCS\bin\Debug\HistacomCS.exe
+C:\Users\Logan\Documents\HistacomCS\HistacomCS\bin\Debug\HistacomCS.pdb
+C:\Users\Logan\Documents\HistacomCS\HistacomCS\obj\Debug\HistacomCS.csprojResolveAssemblyReference.cache
+C:\Users\Logan\Documents\HistacomCS\HistacomCS\obj\Debug\HistacomCS.Properties.Resources.resources
+C:\Users\Logan\Documents\HistacomCS\HistacomCS\obj\Debug\HistacomCS.TitleScreen.resources
+C:\Users\Logan\Documents\HistacomCS\HistacomCS\obj\Debug\HistacomCS.csproj.GenerateResource.Cache
+C:\Users\Logan\Documents\HistacomCS\HistacomCS\obj\Debug\HistacomCS.exe.manifest
+C:\Users\Logan\Documents\HistacomCS\HistacomCS\obj\Debug\HistacomCS.application
+C:\Users\Logan\Documents\HistacomCS\HistacomCS\obj\Debug\HistacomCS.Windows95.resources
+C:\Users\Logan\Documents\HistacomCS\HistacomCS\obj\Debug\HistacomCS.WinClassicNotepad.resources
+C:\Users\Logan\Documents\HistacomCS\HistacomCS\obj\Debug\HistacomCS.WinClassicForms.WinClassicTerminal.resources
+C:\Users\Logan\Documents\HistacomCS\HistacomCS\obj\Debug\HistacomCS.WinClassicTemplate.resources
+C:\Users\Logan\Documents\HistacomCS\HistacomCS\obj\Debug\TimeHACK.Properties.Resources.resources
+C:\Users\Logan\Documents\TimeHACK\HistacomCS\obj\Debug\HistacomCS.exe
+C:\Users\Logan\Documents\TimeHACK\HistacomCS\obj\Debug\HistacomCS.pdb
