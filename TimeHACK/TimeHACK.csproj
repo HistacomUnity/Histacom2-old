@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B958AA5F-8AED-456C-9C07-9E4C6C027042}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TimeHACK</RootNamespace>
+    <AssemblyName>TimeHACK</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Logan\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <SupportUrl>http://www.ashifter.ml/histacom/forum</SupportUrl>
+    <TargetCulture>en</TargetCulture>
+    <ProductName>HistacomCS</ProductName>
+    <PublisherName>HistacomCS Development Team</PublisherName>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.1.0</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>TimeHACK.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>1194F9D110CE37E287D2AAE10D81371AB88D31B2</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Icon128x.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ExtraEntry.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="WinClassicForms\WinClassicTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinClassicForms\WinClassicTemplate.Designer.cs">
+      <DependentUpon>WinClassicTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinClassicForms\WinClassicTerminal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinClassicForms\WinClassicTerminal.Designer.cs">
+      <DependentUpon>WinClassicTerminal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinClassicForms\WinClassicIE4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinClassicForms\WinClassicIE4.Designer.cs">
+      <DependentUpon>WinClassicIE4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows95.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows95.Designer.cs">
+      <DependentUpon>Windows95.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TitleScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TitleScreen.Designer.cs">
+      <DependentUpon>TitleScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinClassicForms\WinClassicNotepad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinClassicForms\WinClassicNotepad.Designer.cs">
+      <DependentUpon>WinClassicNotepad.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="WinClassicForms\WinClassicIE4.resx">
+      <DependentUpon>WinClassicIE4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinClassicForms\WinClassicTerminal.resx">
+      <DependentUpon>WinClassicTerminal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows95.resx">
+      <DependentUpon>Windows95.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TitleScreen.resx">
+      <DependentUpon>TitleScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinClassicForms\WinClassicNotepad.resx">
+      <DependentUpon>WinClassicNotepad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinClassicForms\WinClassicTemplate.resx">
+      <DependentUpon>WinClassicTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\EULA.txt" />
+    <Content Include="Resources\Icon128x.ico" />
+    <Content Include="Resources\TitleScreen\Exit.png" />
+    <Content Include="Resources\TitleScreen\LoadGame.png" />
+    <Content Include="Resources\TitleScreen\MSExit.png" />
+    <Content Include="Resources\TitleScreen\MSLoadGame.png" />
+    <Content Include="Resources\TitleScreen\MSNewGame.png" />
+    <Content Include="Resources\TitleScreen\NewGame.png" />
+    <Content Include="Resources\TitleScreen\TaskBarButton.png" />
+    <Content Include="Resources\TitleScreen\TaskBarClock.png" />
+    <Content Include="Resources\TitleScreen\TimeHACK_Logo.png" />
+    <Content Include="Resources\TitleScreen\TitleScreenBG.png" />
+    <Content Include="Resources\WinClassic\16Color.png" />
+    <Content Include="Resources\WinClassic\256Color.png" />
+    <Content Include="Resources\WinClassic\TrueColor.png" />
+    <Content Include="Resources\WinClassic\Win95SideBar.png" />
+    <Content Include="Resources\WinClassic\Win95Start.wav" />
+    <Content Include="Resources\WinClassic\WinClassicClock.png" />
+    <Content Include="Resources\WinClassic\WinClassicComputer.png" />
+    <Content Include="Resources\WinClassic\WinClassicDocuments.png" />
+    <Content Include="Resources\WinClassic\WinClassicFind.png" />
+    <Content Include="Resources\WinClassic\WinClassicFolder.png" />
+    <Content Include="Resources\WinClassic\WinClassicHelp.png" />
+    <Content Include="Resources\WinClassic\WinClassicIE4.png" />
+    <Content Include="Resources\WinClassic\WinClassicInbox.png" />
+    <Content Include="Resources\WinClassic\WinClassicMSN.png" />
+    <Content Include="Resources\WinClassic\WinClassicNetworking.png" />
+    <Content Include="Resources\WinClassic\WinClassicOutlook.png" />
+    <Content Include="Resources\WinClassic\WinClassicPrograms.png" />
+    <Content Include="Resources\WinClassic\WinClassicRecycle.png" />
+    <Content Include="Resources\WinClassic\WinClassicRun.png" />
+    <Content Include="Resources\WinClassic\WinClassicSettings.png" />
+    <Content Include="Resources\WinClassic\WinClassicShutdown.png" />
+    <Content Include="Resources\WinClassic\WinClassicStart.png" />
+    <Content Include="Resources\WinClassic\WinClassicSuspend.png" />
+    <Content Include="Resources\WinClassic\WinClassicTaskBar.png" />
+    <Content Include="Resources\WinClassic\WinClassicTime.png" />
+    <Content Include="Resources\WinClassic\Window\BottomLeft.png" />
+    <Content Include="Resources\WinClassic\Window\BottomRight.png" />
+    <Content Include="Resources\WinClassic\Window\BottomSide.png" />
+    <Content Include="Resources\WinClassic\Window\LeftSide.png" />
+    <Content Include="Resources\WinClassic\Window\RightSide.png" />
+    <Content Include="Resources\WinClassic\Window\TopLeft.png" />
+    <Content Include="Resources\WinClassic\Window\TopRight.png" />
+    <Content Include="Resources\WinClassic\Window\TopSide.png" />
+    <Content Include="Resources\WinClassic\Window\WinClassicClose.png" />
+    <Content Include="Resources\WinClassic\Window\WinClassicMax.png" />
+    <Content Include="Resources\WinClassic\Window\WinClassicMin.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
