@@ -1,0 +1,8 @@
+D:\Documents\GitHub\TimeHACK\TimeHACK.Engine\bin\Debug\TimeHACK.Engine.dll
+D:\Documents\GitHub\TimeHACK\TimeHACK.Engine\bin\Debug\TimeHACK.Engine.pdb
+D:\Documents\GitHub\TimeHACK\TimeHACK.Engine\obj\Debug\TimeHACK.Engine.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\TimeHACK\TimeHACK.Engine\obj\Debug\TimeHACK.Engine.OSProgramTemplates.WinClassic.resources
+D:\Documents\GitHub\TimeHACK\TimeHACK.Engine\obj\Debug\TimeHACK.Engine.Properties.Resources.resources
+D:\Documents\GitHub\TimeHACK\TimeHACK.Engine\obj\Debug\TimeHACK.Engine.csproj.GenerateResource.Cache
+D:\Documents\GitHub\TimeHACK\TimeHACK.Engine\obj\Debug\TimeHACK.Engine.dll
+D:\Documents\GitHub\TimeHACK\TimeHACK.Engine\obj\Debug\TimeHACK.Engine.pdb
