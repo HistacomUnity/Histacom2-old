@@ -1,0 +1,17 @@
+D:\Documents\GitHub\TimeHACK\TimeHACK\bin\Release\TimeHACK.exe.manifest
+D:\Documents\GitHub\TimeHACK\TimeHACK\bin\Release\TimeHACK.application
+D:\Documents\GitHub\TimeHACK\TimeHACK\bin\Release\TimeHACK.exe
+D:\Documents\GitHub\TimeHACK\TimeHACK\bin\Release\TimeHACK.pdb
+D:\Documents\GitHub\TimeHACK\TimeHACK\obj\Release\TimeHACK.WinForms.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\TimeHACK\TimeHACK\obj\Release\TimeHACK.WinClassicIE4.resources
+D:\Documents\GitHub\TimeHACK\TimeHACK\obj\Release\TimeHACK.WinClassicForms.WinClassicTerminal.resources
+D:\Documents\GitHub\TimeHACK\TimeHACK\obj\Release\TimeHACK.Windows95.resources
+D:\Documents\GitHub\TimeHACK\TimeHACK\obj\Release\TimeHACK.Properties.Resources.resources
+D:\Documents\GitHub\TimeHACK\TimeHACK\obj\Release\TimeHACK.TitleScreen.resources
+D:\Documents\GitHub\TimeHACK\TimeHACK\obj\Release\TimeHACK.WinClassicNotepad.resources
+D:\Documents\GitHub\TimeHACK\TimeHACK\obj\Release\TimeHACK.WinClassicTemplate.resources
+D:\Documents\GitHub\TimeHACK\TimeHACK\obj\Release\TimeHACK.WinForms.csproj.GenerateResource.Cache
+D:\Documents\GitHub\TimeHACK\TimeHACK\obj\Release\TimeHACK.exe.manifest
+D:\Documents\GitHub\TimeHACK\TimeHACK\obj\Release\TimeHACK.application
+D:\Documents\GitHub\TimeHACK\TimeHACK\obj\Release\TimeHACK.exe
+D:\Documents\GitHub\TimeHACK\TimeHACK\obj\Release\TimeHACK.pdb
