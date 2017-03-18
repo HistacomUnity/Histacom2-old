@@ -80,5 +80,8 @@
     <Content Include="Resources\WinClassic\Window\WinClassicMin.png" />
     <Content Include="Resources\WinClassic\Window\WinClassicRestore.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewFolder1\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

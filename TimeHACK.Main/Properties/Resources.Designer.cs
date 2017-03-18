@@ -111,23 +111,6 @@ namespace TimeHACK.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to By Installing this software you agree to the following terms:
-        ///
-        ///You agree that you will not try to try to reverse engineer it in anyway or take it as your own work. 
-        ///
-        ///You agree that you will not try to spread this software or any of its components to other companies without rightful permission from the owner. 
-        ///
-        ///You agree that if you bought this program that you own it and that nobody else is allowed to use it on your computer or on their computer. 
-        ///
-        ///You agree that you will not use this software to launch and [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string EULA {
-            get {
-                return ResourceManager.GetString("EULA", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Exit {
