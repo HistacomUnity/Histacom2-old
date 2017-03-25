@@ -222,6 +222,8 @@
     <Content Include="Resources\TitleScreen\TaskBarClock.png" />
     <Content Include="Resources\TitleScreen\TimeHACK_Logo.png" />
     <Content Include="Resources\TitleScreen\TitleScreenBG.png" />
+    <None Include="Resources\LeviWindows.ttf" />
+    <None Include="Resources\WinClassicFont.bmp" />
     <Content Include="Resources\WinClassic\16Color.png" />
     <Content Include="Resources\WinClassic\256Color.png" />
     <Content Include="Resources\WinClassic\TrueColor.png" />
