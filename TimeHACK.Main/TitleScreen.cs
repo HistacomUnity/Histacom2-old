@@ -8,7 +8,7 @@ namespace TimeHACK
 {
     public partial class TitleScreen : Form
     {
-        System.Drawing.Text.PrivateFontCollection pfc = new System.Drawing.Text.PrivateFontCollection();
+        public static System.Drawing.Text.PrivateFontCollection pfc = new System.Drawing.Text.PrivateFontCollection();
 
         public TitleScreen()
         {
