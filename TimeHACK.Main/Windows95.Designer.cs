@@ -87,6 +87,7 @@
             this.TimeDistorterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DocumentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.windowManagerTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.downloaderTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ControlPanelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PrintersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -124,6 +125,7 @@
             this.BitmapImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MicrosoftDataLinkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PropertiesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.installerTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.taskbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.startbutton)).BeginInit();
@@ -228,7 +230,7 @@
             this.startmenuitems.Name = "startmenuitems";
             this.startmenuitems.Padding = new System.Windows.Forms.Padding(6, 2, 0, 0);
             this.startmenuitems.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.startmenuitems.Size = new System.Drawing.Size(144, 292);
+            this.startmenuitems.Size = new System.Drawing.Size(144, 311);
             this.startmenuitems.TabIndex = 0;
             this.startmenuitems.Text = "StartMenu";
             // 
@@ -617,7 +619,9 @@
             // 
             this.DocumentsToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.DocumentsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.windowManagerTestToolStripMenuItem});
+            this.windowManagerTestToolStripMenuItem,
+            this.downloaderTestToolStripMenuItem,
+            this.installerTestToolStripMenuItem});
             this.DocumentsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DocumentsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("DocumentsToolStripMenuItem.Image")));
             this.DocumentsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -634,6 +638,13 @@
             this.windowManagerTestToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.windowManagerTestToolStripMenuItem.Text = "WindowManagerTest";
             this.windowManagerTestToolStripMenuItem.Click += new System.EventHandler(this.windowManagerTestToolStripMenuItem_Click);
+            // 
+            // downloaderTestToolStripMenuItem
+            // 
+            this.downloaderTestToolStripMenuItem.Name = "downloaderTestToolStripMenuItem";
+            this.downloaderTestToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.downloaderTestToolStripMenuItem.Text = "DownloaderTest";
+            this.downloaderTestToolStripMenuItem.Click += new System.EventHandler(this.downloaderTestToolStripMenuItem_Click);
             // 
             // SettingsToolStripMenuItem
             // 
@@ -1000,6 +1011,13 @@
             this.PropertiesToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
             this.PropertiesToolStripMenuItem1.Text = "Properties";
             // 
+            // installerTestToolStripMenuItem
+            // 
+            this.installerTestToolStripMenuItem.Name = "installerTestToolStripMenuItem";
+            this.installerTestToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.installerTestToolStripMenuItem.Text = "InstallerTest";
+            this.installerTestToolStripMenuItem.Click += new System.EventHandler(this.installerTestToolStripMenuItem_Click);
+            // 
             // Windows95
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1119,5 +1137,7 @@
         internal System.Windows.Forms.ToolStripMenuItem MicrosoftDataLinkToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem PropertiesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem windowManagerTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem downloaderTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem installerTestToolStripMenuItem;
     }
 }

@@ -93,7 +93,7 @@
             this.programtopbar.Name = "programtopbar";
             this.programtopbar.Size = new System.Drawing.Size(292, 18);
             this.programtopbar.TabIndex = 0;
-            this.programtopbar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Programtopbar_drag);
+            this.programtopbar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.programtopbar_drag);
             // 
             // maximizebutton
             // 
@@ -104,7 +104,7 @@
             this.maximizebutton.Size = new System.Drawing.Size(16, 14);
             this.maximizebutton.TabIndex = 6;
             this.maximizebutton.TabStop = false;
-            this.maximizebutton.Click += new System.EventHandler(this.Maximizebutton_Click);
+            this.maximizebutton.Click += new System.EventHandler(this.maximizebutton_Click);
             // 
             // minimizebutton
             // 
@@ -136,7 +136,7 @@
             this.closebutton.Size = new System.Drawing.Size(16, 14);
             this.closebutton.TabIndex = 4;
             this.closebutton.TabStop = false;
-            this.closebutton.Click += new System.EventHandler(this.Closebutton_Click);
+            this.closebutton.Click += new System.EventHandler(this.closebutton_Click);
             // 
             // toprightcorner
             // 
