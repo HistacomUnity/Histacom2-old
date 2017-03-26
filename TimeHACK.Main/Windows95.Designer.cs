@@ -175,6 +175,7 @@
             this.taskbartime.Size = new System.Drawing.Size(31, 15);
             this.taskbartime.TabIndex = 2;
             this.taskbartime.Text = "time";
+            this.taskbartime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.taskbartime.Click += new System.EventHandler(this.taskbartime_Click);
             // 
             // clockPanel
