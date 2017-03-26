@@ -44,11 +44,13 @@
             this.bottom = new System.Windows.Forms.Panel();
             this.right = new System.Windows.Forms.Panel();
             this.top = new System.Windows.Forms.Panel();
+            this.programIcon = new System.Windows.Forms.PictureBox();
             this.program.SuspendLayout();
             this.programtopbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maximizebutton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizebutton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closebutton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // program
@@ -81,6 +83,7 @@
             // programtopbar
             // 
             this.programtopbar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(170)))));
+            this.programtopbar.Controls.Add(this.programIcon);
             this.programtopbar.Controls.Add(this.maximizebutton);
             this.programtopbar.Controls.Add(this.minimizebutton);
             this.programtopbar.Controls.Add(this.Title);
@@ -90,6 +93,7 @@
             this.programtopbar.Name = "programtopbar";
             this.programtopbar.Size = new System.Drawing.Size(292, 18);
             this.programtopbar.TabIndex = 0;
+            this.programtopbar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.programtopbar_drag);
             // 
             // maximizebutton
             // 
@@ -100,6 +104,7 @@
             this.maximizebutton.Size = new System.Drawing.Size(16, 14);
             this.maximizebutton.TabIndex = 6;
             this.maximizebutton.TabStop = false;
+            this.maximizebutton.Click += new System.EventHandler(this.maximizebutton_Click);
             // 
             // minimizebutton
             // 
@@ -116,7 +121,7 @@
             this.Title.AutoSize = true;
             this.Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Title.ForeColor = System.Drawing.Color.White;
-            this.Title.Location = new System.Drawing.Point(3, 2);
+            this.Title.Location = new System.Drawing.Point(23, 3);
             this.Title.Name = "Title";
             this.Title.Size = new System.Drawing.Size(99, 13);
             this.Title.TabIndex = 3;
@@ -131,6 +136,7 @@
             this.closebutton.Size = new System.Drawing.Size(16, 14);
             this.closebutton.TabIndex = 4;
             this.closebutton.TabStop = false;
+            this.closebutton.Click += new System.EventHandler(this.closebutton_Click);
             // 
             // toprightcorner
             // 
@@ -208,6 +214,17 @@
             this.top.Size = new System.Drawing.Size(300, 4);
             this.top.TabIndex = 8;
             // 
+            // programIcon
+            // 
+            this.programIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.programIcon.ErrorImage = null;
+            this.programIcon.InitialImage = null;
+            this.programIcon.Location = new System.Drawing.Point(2, 1);
+            this.programIcon.Name = "programIcon";
+            this.programIcon.Size = new System.Drawing.Size(16, 16);
+            this.programIcon.TabIndex = 0;
+            this.programIcon.TabStop = false;
+            // 
             // WinClassic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,6 +240,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.maximizebutton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizebutton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.closebutton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programIcon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -230,10 +248,7 @@
         #endregion
 
         internal System.Windows.Forms.Panel program;
-        private System.Windows.Forms.Panel programContent;
         internal System.Windows.Forms.Panel programtopbar;
-        internal System.Windows.Forms.PictureBox maximizebutton;
-        internal System.Windows.Forms.PictureBox minimizebutton;
         internal System.Windows.Forms.Label Title;
         internal System.Windows.Forms.PictureBox closebutton;
         internal System.Windows.Forms.Panel toprightcorner;
@@ -244,5 +259,9 @@
         internal System.Windows.Forms.Panel bottom;
         internal System.Windows.Forms.Panel right;
         internal System.Windows.Forms.Panel top;
+        public System.Windows.Forms.Panel programContent;
+        public System.Windows.Forms.PictureBox maximizebutton;
+        public System.Windows.Forms.PictureBox minimizebutton;
+        public System.Windows.Forms.PictureBox programIcon;
     }
 }

@@ -1,9 +1,7 @@
 D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.Main.csprojResolveAssemblyReference.cache
 D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.WinClassicIE4.resources
-D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.WinClassicForms.WinClassicTerminal.resources
 D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.Windows95.resources
 D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.TitleScreen.resources
-D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.WinClassicNotepad.resources
 D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.WinClassicTemplate.resources
 D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.Main.csproj.GenerateResource.Cache
 D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.exe
@@ -36,3 +34,4 @@ C:\Users\Liam\Documents\GitHub\TimeHACK-lempfork\TimeHACK.Main\obj\Release\TimeH
 C:\Users\Liam\Documents\GitHub\TimeHACK-lempfork\TimeHACK.Main\obj\Release\TimeHACK.application
 C:\Users\Liam\Documents\GitHub\TimeHACK-lempfork\TimeHACK.Main\obj\Release\TimeHACK.exe
 C:\Users\Liam\Documents\GitHub\TimeHACK-lempfork\TimeHACK.Main\obj\Release\TimeHACK.pdb
+D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.WinClassicForms.TestApp.resources

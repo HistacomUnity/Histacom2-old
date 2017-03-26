@@ -71,6 +71,7 @@
     <Content Include="Resources\WinClassic\Window\BottomRight.png" />
     <Content Include="Resources\WinClassic\Window\BottomSide.png" />
     <Content Include="Resources\WinClassic\Window\LeftSide.png" />
+    <Content Include="Resources\WinClassic\Window\nullIcon.png" />
     <Content Include="Resources\WinClassic\Window\RightSide.png" />
     <Content Include="Resources\WinClassic\Window\TopLeft.png" />
     <Content Include="Resources\WinClassic\Window\TopRight.png" />
@@ -80,8 +81,6 @@
     <Content Include="Resources\WinClassic\Window\WinClassicMin.png" />
     <Content Include="Resources\WinClassic\Window\WinClassicRestore.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="NewFolder1\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

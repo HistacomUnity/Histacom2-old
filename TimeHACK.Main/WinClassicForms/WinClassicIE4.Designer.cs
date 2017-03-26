@@ -311,19 +311,10 @@
             this.ToolStripMenuItem93 = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem94 = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem95 = new System.Windows.Forms.ToolStripMenuItem();
-            this.programtopbar = new System.Windows.Forms.Panel();
-            this.maximizebutton = new System.Windows.Forms.PictureBox();
-            this.minimizebutton = new System.Windows.Forms.PictureBox();
-            this.programname = new System.Windows.Forms.Label();
-            this.closebutton = new System.Windows.Forms.PictureBox();
             this.toprightcorner = new System.Windows.Forms.Panel();
             this.bottomrightcorner = new System.Windows.Forms.Panel();
             this.bottomleftcorner = new System.Windows.Forms.Panel();
             this.topleftcorner = new System.Windows.Forms.Panel();
-            this.left = new System.Windows.Forms.Panel();
-            this.bottom = new System.Windows.Forms.Panel();
-            this.right = new System.Windows.Forms.Panel();
-            this.top = new System.Windows.Forms.Panel();
             this.program.SuspendLayout();
             this.browsingarea.SuspendLayout();
             this.padamsmain.SuspendLayout();
@@ -373,10 +364,6 @@
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.MenuStrip3.SuspendLayout();
-            this.programtopbar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.maximizebutton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.minimizebutton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.closebutton)).BeginInit();
             this.SuspendLayout();
             // 
             // program
@@ -387,15 +374,10 @@
             this.program.Controls.Add(this.Panel1);
             this.program.Controls.Add(this.PictureBox1);
             this.program.Controls.Add(this.MenuStrip3);
-            this.program.Controls.Add(this.programtopbar);
             this.program.Controls.Add(this.toprightcorner);
             this.program.Controls.Add(this.bottomrightcorner);
             this.program.Controls.Add(this.bottomleftcorner);
             this.program.Controls.Add(this.topleftcorner);
-            this.program.Controls.Add(this.left);
-            this.program.Controls.Add(this.bottom);
-            this.program.Controls.Add(this.right);
-            this.program.Controls.Add(this.top);
             this.program.Dock = System.Windows.Forms.DockStyle.Fill;
             this.program.Location = new System.Drawing.Point(0, 0);
             this.program.Name = "program";
@@ -418,9 +400,9 @@
             this.browsingarea.Controls.Add(this.googlemain);
             this.browsingarea.Controls.Add(this.googleprototype);
             this.browsingarea.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.browsingarea.Location = new System.Drawing.Point(4, 133);
+            this.browsingarea.Location = new System.Drawing.Point(0, 111);
             this.browsingarea.Name = "browsingarea";
-            this.browsingarea.Size = new System.Drawing.Size(951, 457);
+            this.browsingarea.Size = new System.Drawing.Size(959, 483);
             this.browsingarea.TabIndex = 9;
             // 
             // webBrowser1
@@ -746,7 +728,7 @@
             this.Panel13.Controls.Add(this.win95background);
             this.Panel13.Location = new System.Drawing.Point(46, 74);
             this.Panel13.Name = "Panel13";
-            this.Panel13.Size = new System.Drawing.Size(6152, 118);
+            this.Panel13.Size = new System.Drawing.Size(6554, 118);
             this.Panel13.TabIndex = 2;
             // 
             // Previewimage
@@ -757,7 +739,7 @@
             this.Previewimage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Previewimage.Location = new System.Drawing.Point(246, 6);
             this.Previewimage.Name = "Previewimage";
-            this.Previewimage.Size = new System.Drawing.Size(4735, 118);
+            this.Previewimage.Size = new System.Drawing.Size(5137, 118);
             this.Previewimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Previewimage.TabIndex = 1;
             this.Previewimage.TabStop = false;
@@ -1895,7 +1877,7 @@
             this.Label42.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Label42.AutoSize = true;
             this.Label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label42.Location = new System.Drawing.Point(923, 9);
+            this.Label42.Location = new System.Drawing.Point(990, 9);
             this.Label42.Name = "Label42";
             this.Label42.Size = new System.Drawing.Size(263, 18);
             this.Label42.TabIndex = 5;
@@ -1906,7 +1888,7 @@
             this.Label41.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Label41.AutoSize = true;
             this.Label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label41.Location = new System.Drawing.Point(1023, 33);
+            this.Label41.Location = new System.Drawing.Point(1090, 33);
             this.Label41.Name = "Label41";
             this.Label41.Size = new System.Drawing.Size(71, 24);
             this.Label41.TabIndex = 4;
@@ -1921,14 +1903,14 @@
             this.TextBox8.Multiline = true;
             this.TextBox8.Name = "TextBox8";
             this.TextBox8.ReadOnly = true;
-            this.TextBox8.Size = new System.Drawing.Size(172, 5223);
+            this.TextBox8.Size = new System.Drawing.Size(172, 5574);
             this.TextBox8.TabIndex = 3;
             this.TextBox8.Text = resources.GetString("TextBox8.Text");
             // 
             // PictureBox11
             // 
             this.PictureBox11.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.PictureBox11.Location = new System.Drawing.Point(893, 60);
+            this.PictureBox11.Location = new System.Drawing.Point(960, 60);
             this.PictureBox11.Name = "PictureBox11";
             this.PictureBox11.Size = new System.Drawing.Size(337, 386);
             this.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -2220,16 +2202,16 @@
             this.Panel14.Controls.Add(this.addressbar);
             this.Panel14.Controls.Add(this.Label1);
             this.Panel14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Panel14.Location = new System.Drawing.Point(4, 95);
+            this.Panel14.Location = new System.Drawing.Point(0, 73);
             this.Panel14.Name = "Panel14";
-            this.Panel14.Size = new System.Drawing.Size(951, 38);
+            this.Panel14.Size = new System.Drawing.Size(959, 38);
             this.Panel14.TabIndex = 13;
             // 
             // Button8
             // 
             this.Button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button8.Location = new System.Drawing.Point(890, 5);
+            this.Button8.Location = new System.Drawing.Point(898, 5);
             this.Button8.Name = "Button8";
             this.Button8.Size = new System.Drawing.Size(55, 28);
             this.Button8.TabIndex = 2;
@@ -2244,7 +2226,7 @@
             this.addressbar.FormattingEnabled = true;
             this.addressbar.Location = new System.Drawing.Point(58, 9);
             this.addressbar.Name = "addressbar";
-            this.addressbar.Size = new System.Drawing.Size(804, 21);
+            this.addressbar.Size = new System.Drawing.Size(812, 21);
             this.addressbar.TabIndex = 1;
             this.addressbar.Text = "www.microsoft.com/internetexplorer4/welcome";
             // 
@@ -2272,9 +2254,9 @@
             this.Panel1.Controls.Add(this.Button2);
             this.Panel1.Controls.Add(this.Button1);
             this.Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Panel1.Location = new System.Drawing.Point(4, 46);
+            this.Panel1.Location = new System.Drawing.Point(0, 24);
             this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(951, 49);
+            this.Panel1.Size = new System.Drawing.Size(959, 49);
             this.Panel1.TabIndex = 7;
             // 
             // Button30
@@ -2447,9 +2429,9 @@
             this.ToolStripMenuItem78,
             this.ToolStripMenuItem73,
             this.ToolStripMenuItem88});
-            this.MenuStrip3.Location = new System.Drawing.Point(4, 22);
+            this.MenuStrip3.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip3.Name = "MenuStrip3";
-            this.MenuStrip3.Size = new System.Drawing.Size(951, 24);
+            this.MenuStrip3.Size = new System.Drawing.Size(959, 24);
             this.MenuStrip3.TabIndex = 11;
             this.MenuStrip3.Text = "MenuStrip1";
             // 
@@ -3217,62 +3199,6 @@
             this.ToolStripMenuItem95.Size = new System.Drawing.Size(196, 22);
             this.ToolStripMenuItem95.Text = "Send Feedback";
             // 
-            // programtopbar
-            // 
-            this.programtopbar.BackColor = System.Drawing.Color.DarkBlue;
-            this.programtopbar.Controls.Add(this.maximizebutton);
-            this.programtopbar.Controls.Add(this.minimizebutton);
-            this.programtopbar.Controls.Add(this.programname);
-            this.programtopbar.Controls.Add(this.closebutton);
-            this.programtopbar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.programtopbar.Location = new System.Drawing.Point(4, 4);
-            this.programtopbar.Name = "programtopbar";
-            this.programtopbar.Size = new System.Drawing.Size(951, 18);
-            this.programtopbar.TabIndex = 0;
-            this.programtopbar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.programtopbar_drag);
-            // 
-            // maximizebutton
-            // 
-            this.maximizebutton.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.maximizebutton.BackgroundImage = global::TimeHACK.Properties.Resources.WinClassicMax;
-            this.maximizebutton.Location = new System.Drawing.Point(915, 2);
-            this.maximizebutton.Name = "maximizebutton";
-            this.maximizebutton.Size = new System.Drawing.Size(16, 14);
-            this.maximizebutton.TabIndex = 6;
-            this.maximizebutton.TabStop = false;
-            // 
-            // minimizebutton
-            // 
-            this.minimizebutton.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.minimizebutton.BackgroundImage = global::TimeHACK.Properties.Resources.WinClassicMin;
-            this.minimizebutton.Location = new System.Drawing.Point(899, 2);
-            this.minimizebutton.Name = "minimizebutton";
-            this.minimizebutton.Size = new System.Drawing.Size(16, 14);
-            this.minimizebutton.TabIndex = 5;
-            this.minimizebutton.TabStop = false;
-            // 
-            // programname
-            // 
-            this.programname.AutoSize = true;
-            this.programname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.programname.ForeColor = System.Drawing.Color.White;
-            this.programname.Location = new System.Drawing.Point(3, 2);
-            this.programname.Name = "programname";
-            this.programname.Size = new System.Drawing.Size(112, 13);
-            this.programname.TabIndex = 3;
-            this.programname.Text = "Internet Explorer 4";
-            // 
-            // closebutton
-            // 
-            this.closebutton.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.closebutton.BackgroundImage = global::TimeHACK.Properties.Resources.WinClassicClose;
-            this.closebutton.Location = new System.Drawing.Point(932, 2);
-            this.closebutton.Name = "closebutton";
-            this.closebutton.Size = new System.Drawing.Size(16, 14);
-            this.closebutton.TabIndex = 4;
-            this.closebutton.TabStop = false;
-            this.closebutton.Click += new System.EventHandler(this.closebutton_Click);
-            // 
             // toprightcorner
             // 
             this.toprightcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -3308,44 +3234,6 @@
             this.topleftcorner.Name = "topleftcorner";
             this.topleftcorner.Size = new System.Drawing.Size(4, 4);
             this.topleftcorner.TabIndex = 1;
-            // 
-            // left
-            // 
-            this.left.BackgroundImage = global::TimeHACK.Properties.Resources.LeftSide;
-            this.left.Dock = System.Windows.Forms.DockStyle.Left;
-            this.left.Location = new System.Drawing.Point(0, 4);
-            this.left.Name = "left";
-            this.left.Size = new System.Drawing.Size(4, 586);
-            this.left.TabIndex = 3;
-            // 
-            // bottom
-            // 
-            this.bottom.BackgroundImage = global::TimeHACK.Properties.Resources.BottomSide;
-            this.bottom.Cursor = System.Windows.Forms.Cursors.SizeNS;
-            this.bottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bottom.Location = new System.Drawing.Point(0, 590);
-            this.bottom.Name = "bottom";
-            this.bottom.Size = new System.Drawing.Size(955, 4);
-            this.bottom.TabIndex = 5;
-            // 
-            // right
-            // 
-            this.right.BackgroundImage = global::TimeHACK.Properties.Resources.RightSide;
-            this.right.Cursor = System.Windows.Forms.Cursors.SizeWE;
-            this.right.Dock = System.Windows.Forms.DockStyle.Right;
-            this.right.Location = new System.Drawing.Point(955, 4);
-            this.right.Name = "right";
-            this.right.Size = new System.Drawing.Size(4, 590);
-            this.right.TabIndex = 7;
-            // 
-            // top
-            // 
-            this.top.BackgroundImage = global::TimeHACK.Properties.Resources.TopSide;
-            this.top.Dock = System.Windows.Forms.DockStyle.Top;
-            this.top.Location = new System.Drawing.Point(0, 0);
-            this.top.Name = "top";
-            this.top.Size = new System.Drawing.Size(959, 4);
-            this.top.TabIndex = 8;
             // 
             // WinClassicIE4
             // 
@@ -3433,11 +3321,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.MenuStrip3.ResumeLayout(false);
             this.MenuStrip3.PerformLayout();
-            this.programtopbar.ResumeLayout(false);
-            this.programtopbar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.maximizebutton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.minimizebutton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.closebutton)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3724,19 +3607,10 @@
         internal System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem93;
         internal System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem94;
         internal System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem95;
-        internal System.Windows.Forms.Panel programtopbar;
-        internal System.Windows.Forms.PictureBox maximizebutton;
-        internal System.Windows.Forms.PictureBox minimizebutton;
-        internal System.Windows.Forms.Label programname;
-        internal System.Windows.Forms.PictureBox closebutton;
         internal System.Windows.Forms.Panel toprightcorner;
         internal System.Windows.Forms.Panel bottomrightcorner;
         internal System.Windows.Forms.Panel bottomleftcorner;
         internal System.Windows.Forms.Panel topleftcorner;
-        internal System.Windows.Forms.Panel left;
-        internal System.Windows.Forms.Panel bottom;
-        internal System.Windows.Forms.Panel right;
-        internal System.Windows.Forms.Panel top;
         private System.Windows.Forms.WebBrowser webBrowser1;
         internal System.Windows.Forms.LinkLabel linkLabel19;
     }

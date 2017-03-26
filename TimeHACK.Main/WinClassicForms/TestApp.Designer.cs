@@ -28,10 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(24, 91);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(237, 65);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "If you are reading this, you are reading a window\r\nwith borders that are being re" +
+    "ndered by the\r\nWindowManager. All you need is 3 lines of code.\r\n\r\nTHIS IS AWESOM" +
+    "E!";
+            // 
+            // TestApp
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label1);
+            this.Name = "TestApp";
+            this.Size = new System.Drawing.Size(292, 274);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label1;
     }
 }
