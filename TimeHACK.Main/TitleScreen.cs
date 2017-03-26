@@ -8,6 +8,8 @@ namespace TimeHACK
 {
     public partial class TitleScreen : Form
     {
+        public static System.Drawing.Text.PrivateFontCollection pfc = new System.Drawing.Text.PrivateFontCollection();
+
         public TitleScreen()
         {
             InitializeComponent();
@@ -24,6 +26,9 @@ namespace TimeHACK
         {
             // Set GameVersion
             gameversion.Text = "TimeHACK " + Program.gameID + " by AShifter";
+
+            // Initialize Font
+            pfc.AddFontFile(AppDomain.CurrentDomain.BaseDirectory + "\\LeviWindows.ttf");
 
             // Start the VM Mode timer
             vmModeTimer.Start();

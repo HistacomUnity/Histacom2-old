@@ -121,13 +121,13 @@
   <data name="taskbar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAMAAAAcCAIAAAArypKmAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAABdJREFUKFNjOAADDP9hAEkMSo801oEDAK4uvzipdjzMAAAAAElFTkSuQmCC
+        wgAADsIBFShKgAAAABdJREFUKFNjOAADDP9hAEkMSo801oEDAK4uvzipdjzMAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="startbutton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADYAAAAWCAIAAAAEi/i8AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAARJJREFUSEvdlQEOwjAMA/f0PY2f8JSROl6apg1jgonCCRXHSam1amLZ5mYR5Os+
+        wgAADsIBFShKgAAAARJJREFUSEvdlQEOwjAMA/f0PY2f8JSROl6apg1jgonCCRXHSam1amLZ5mYR5Os+
         K+u61oi3Kfm7iGV0h9b1vBoRqQawfSWDiP3BZQLg1QJVNcO0AK23SSPaakiqJuJeYFPBl5k+pB9OLxqT
         DaciejJ/SD88iChHqzCwy+VTTkYUQikEJ2gljWhrTNaBTYQWoLWbLBzmmwhaSS9aw3URWel/ksINLb7l
         taClYY7vqlaGr8umwsAuoQaWiJaSQy2+dahNBK2kEW3FRzmI6MtT2kTQSnrRe6Aay4nC8CnSArSAd1Qb
@@ -138,6 +138,18 @@
   <metadata name="startmenuitems.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="startmenuitems.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="AccessoriesToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACcSURBVDhP1ZBBDsAgCAR9uj+3Li4VLRrszUk20CBT23QX
+        Oecyh6NzdLmUNNRf0pXMSr1g5oLhKRT60i70b+jVkBC9Ho4GK9gbwKDRhjwYZS1Ebz6ngrqLoLWzvuEs
+        mCNo7Xg3jCDL0Rt26gvwHmLavXAOEFHNIET4yPWvkGAgUSGwssz/hgrQV5bCFyvcweMxIdsIobM4dJJr
+        SOkBE6rCoA7vOu8AAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="CommunicationsToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -163,15 +175,6 @@
         lcxKvWDmguEpFPrSLvRv6NWQEL0ejgYr2BvAoNGGPBhlLURvPqeCuougtbO+4SyYI2jteDeMIMvRG3bq
         C/AeYtq9cA4QUc0gRPjI9a+QYCBRIbCyzP+GCtBXlsIXK9zB4zEh2wihszh0kmtI6QETqsKgDu867wAA
         AABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="AccessoriesToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACcSURBVDhP1ZBBDsAgCAR9uj+3Li4VLRrszUk20CBT23QX
-        Oecyh6NzdLmUNNRf0pXMSr1g5oLhKRT60i70b+jVkBC9Ho4GK9gbwKDRhjwYZS1Ebz6ngrqLoLWzvuEs
-        mCNo7Xg3jCDL0Rt26gvwHmLavXAOEFHNIET4yPWvkGAgUSGwssz/hgrQV5bCFyvcweMxIdsIobM4dJJr
-        SOkBE6rCoA7vOu8AAAAASUVORK5CYII=
 </value>
   </data>
   <data name="StartUpToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -236,7 +239,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAE
-        VwAAAk1TRnQBSQFMAgEBCAEAAXgBAAF4AQABIAEAASABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAGA
+        VwAAAk1TRnQBSQFMAgEBCAEAAYABAAGAAQABIAEAASABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAGA
         AwABYAMAAQEBAAEgBgABwP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A
         /wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A
         /wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8AVQAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/
