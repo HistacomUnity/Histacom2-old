@@ -1,4 +1,4 @@
-<a href="https://ci.appveyor.com/project/AShifter/timehack"><img src="https://ci.appveyor.com/api/projects/status/xi9yr5en7ysxmcge?svg=true" style="border: 0;" alt="AppVeyor Badge"></a>
+<a href="https://ci.appveyor.com/project/timehack/timehack"><img src="https://ci.appveyor.com/api/projects/status/8x34p8b0i2idblgd?svg=true" style="border: 0;" alt="AppVeyor Badge"></a>
 
 [![Discord](https://discordapp.com/api/guilds/234414439330349056/widget.png?style=shield)](https://discord.gg/zMwf3)
 
@@ -19,7 +19,7 @@ TimeHACK has a forum at http://www.ashifter.ml/timehack/forum
 
 TimeHACK has a Discord at https://discord.gg/FZgQMDe (YOU CAN GO TO THE BADGE WHICH SAYS "<A-NUMBER> online")
 
-TimeHACK has an AppVeyor at https://ci.appveyor.com/project/AShifter/timehack (YOU CAN GO TO THE OTHER BADGE)
+TimeHACK has an AppVeyor at https://ci.appveyor.com/project/timehack/timehack (YOU CAN GO TO THE OTHER BADGE)
 
 ## Documentation
 This section will be filled at a later date.
