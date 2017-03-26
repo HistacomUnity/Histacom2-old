@@ -20,7 +20,7 @@ namespace TimeHACK.Engine.Template
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        private void programtopbar_drag(object sender, MouseEventArgs e)
+        private void Programtopbar_drag(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -29,14 +29,14 @@ namespace TimeHACK.Engine.Template
             }
         }
 
-        private void closebutton_Click(object sender, EventArgs e)
+        private void Closebutton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
            public Boolean max = false;
 
-        private void maximizebutton_Click(object sender, EventArgs e)
+        private void Maximizebutton_Click(object sender, EventArgs e)
         {
             if (max == false)
             {

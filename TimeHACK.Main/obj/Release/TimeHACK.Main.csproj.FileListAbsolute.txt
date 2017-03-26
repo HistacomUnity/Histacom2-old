@@ -35,3 +35,4 @@ C:\Users\Liam\Documents\GitHub\TimeHACK-lempfork\TimeHACK.Main\obj\Release\TimeH
 C:\Users\Liam\Documents\GitHub\TimeHACK-lempfork\TimeHACK.Main\obj\Release\TimeHACK.exe
 C:\Users\Liam\Documents\GitHub\TimeHACK-lempfork\TimeHACK.Main\obj\Release\TimeHACK.pdb
 D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.WinClassicForms.TestApp.resources
+D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.WinClassic.Win95IE4.resources

@@ -120,22 +120,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="WinClassicForms\TestApp.cs">
+    <Compile Include="WinClassic\TestApp.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="WinClassicForms\TestApp.Designer.cs">
+    <Compile Include="WinClassic\TestApp.Designer.cs">
       <DependentUpon>TestApp.cs</DependentUpon>
     </Compile>
-    <Compile Include="WinClassicForms\WinClassicTemplate.cs">
+    <Compile Include="WinClassic\Win95IE4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WinClassic\Win95IE4.Designer.cs">
+      <DependentUpon>Win95IE4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinClassic\WinClassicTemplate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WinClassicForms\WinClassicTemplate.Designer.cs">
+    <Compile Include="WinClassic\WinClassicTemplate.Designer.cs">
       <DependentUpon>WinClassicTemplate.cs</DependentUpon>
     </Compile>
-    <Compile Include="WinClassicForms\WinClassicIE4.cs">
+    <Compile Include="WinClassic\WinClassicIE4.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WinClassicForms\WinClassicIE4.Designer.cs">
+    <Compile Include="WinClassic\WinClassicIE4.Designer.cs">
       <DependentUpon>WinClassicIE4.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows95.cs">
@@ -152,10 +158,13 @@
     <Compile Include="TitleScreen.Designer.cs">
       <DependentUpon>TitleScreen.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="WinClassicForms\TestApp.resx">
+    <EmbeddedResource Include="WinClassic\TestApp.resx">
       <DependentUpon>TestApp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinClassicForms\WinClassicIE4.resx">
+    <EmbeddedResource Include="WinClassic\Win95IE4.resx">
+      <DependentUpon>Win95IE4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinClassic\WinClassicIE4.resx">
       <DependentUpon>WinClassicIE4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows95.resx">
@@ -169,7 +178,7 @@
     <EmbeddedResource Include="TitleScreen.resx">
       <DependentUpon>TitleScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinClassicForms\WinClassicTemplate.resx">
+    <EmbeddedResource Include="WinClassic\WinClassicTemplate.resx">
       <DependentUpon>WinClassicTemplate.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">

@@ -116,7 +116,7 @@ namespace TimeHACK
         {
             WindowManager wm = new WindowManager();
             TestApp test = new TestApp();
-            wm.startWinClassic(test, "TestApp", null, true, true);
+            wm.StartWinClassic(test, "TestApp", null, true, true);
         }
     }
 }

@@ -6,7 +6,7 @@ namespace TimeHACK.Engine
 {
     public class WindowManager
     {
-        public void startWinClassic(UserControl content, String title, PictureBox icon, Boolean MaxButton, Boolean MinButton)
+        public void StartWinClassic(UserControl content, String title, PictureBox icon, Boolean MaxButton, Boolean MinButton)
         {
             // Setup Window
             WinClassic app = new WinClassic();
