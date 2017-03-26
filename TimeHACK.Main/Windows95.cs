@@ -116,7 +116,22 @@ namespace TimeHACK
         {
             WindowManager wm = new WindowManager();
             TestApp test = new TestApp();
-            wm.StartWinClassic(test, "TestApp", null, true, true);
+            wm.startWinClassic(test, "TestApp", null, true, true);
+        }
+
+        private void downloaderTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WinClassicDownloader opendownload = new WinClassicDownloader();
+            WindowManager wm = new WindowManager();
+            wm.startWinClassic(opendownload, "Downloader", null, false, true);
+            opendownload.appName.Text = "Downloading: Survive The Day";
+        }
+
+        private void installerTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WinClassicInstaller openinstaller = new WinClassicInstaller();
+            WindowManager wm = new WindowManager();
+            wm.startWinClassic(openinstaller, "Installer", null, false, true);
         }
     }
 }
