@@ -7,6 +7,9 @@ namespace TimeHACK
 {
     public partial class Windows95 : Form
     {
+        private SoundPlayer start;
+        private SoundPlayer stop;
+
         // Init the form
         public Windows95()
         {
@@ -30,8 +33,8 @@ namespace TimeHACK
 
             // Play Windows 95 Start Sound
             Stream audio = Properties.Resources.Win95Start;
-            SoundPlayer Win95Start = new SoundPlayer(audio);
-            Win95Start.Play();
+            start = new SoundPlayer(audio);
+            start.Play();
 
             // Set the StartMenu seperator
             startmenuitems.Items.Insert(6, new ToolStripSeparator());
@@ -59,6 +62,11 @@ namespace TimeHACK
         // Shutdown button
         private void ShutdownToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            start.Stop();
+            Stream audio = Properties.Resources.tada;
+            stop = new SoundPlayer(audio);
+            stop.Play();
+            System.Threading.Thread.Sleep(1500);
             Application.Exit();
         }
 

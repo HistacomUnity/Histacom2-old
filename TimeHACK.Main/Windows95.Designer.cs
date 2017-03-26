@@ -204,7 +204,7 @@
             this.startmenu.Controls.Add(this.ossidestartmenu);
             this.startmenu.Location = new System.Drawing.Point(0, 397);
             this.startmenu.Name = "startmenu";
-            this.startmenu.Size = new System.Drawing.Size(174, 295);
+            this.startmenu.Size = new System.Drawing.Size(174, 298);
             this.startmenu.TabIndex = 3;
             this.startmenu.Paint += new System.Windows.Forms.PaintEventHandler(this.startmenu_Paint);
             // 
@@ -847,6 +847,7 @@
             this.NewToolStripMenuItem1,
             this.PropertiesToolStripMenuItem1});
             this.rightclickbackproperties.Name = "ContextMenuStrip1";
+            this.rightclickbackproperties.Font = new System.Drawing.Font(TitleScreen.pfc.Families[0], 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rightclickbackproperties.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.rightclickbackproperties.Size = new System.Drawing.Size(151, 136);
             // 

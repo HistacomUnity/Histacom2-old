@@ -226,6 +226,7 @@
     <None Include="Resources\WinClassicFont.bmp" />
     <Content Include="Resources\WinClassic\16Color.png" />
     <Content Include="Resources\WinClassic\256Color.png" />
+    <None Include="Resources\WinClassic\tada.wav" />
     <Content Include="Resources\WinClassic\TrueColor.png" />
     <Content Include="Resources\WinClassic\Win95SideBar.png" />
     <Content Include="Resources\WinClassic\Win95Start.wav" />
