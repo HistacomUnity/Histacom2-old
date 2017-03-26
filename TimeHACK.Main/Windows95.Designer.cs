@@ -75,7 +75,7 @@
             this.SetupWOWFromCompuServeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MSDOSPromptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.EmptyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.WindowsExplorerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.InternetExplorerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MSDOSPromptToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.OutlookExpressToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.WindowsExplorerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -175,6 +175,7 @@
             this.taskbartime.Size = new System.Drawing.Size(31, 15);
             this.taskbartime.TabIndex = 2;
             this.taskbartime.Text = "time";
+            this.taskbartime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.taskbartime.Click += new System.EventHandler(this.taskbartime_Click);
             // 
             // clockPanel
@@ -238,7 +239,7 @@
             this.AccessoriesToolStripMenuItem,
             this.StartUpToolStripMenuItem,
             this.MSDOSPromptToolStripMenuItem,
-            this.WindowsExplorerToolStripMenuItem,
+            this.InternetExplorerToolStripMenuItem,
             this.MSDOSPromptToolStripMenuItem1,
             this.OutlookExpressToolStripMenuItem,
             this.WindowsExplorerToolStripMenuItem1,
@@ -524,15 +525,16 @@
             this.EmptyToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.EmptyToolStripMenuItem.Text = "(Empty)";
             // 
-            // WindowsExplorerToolStripMenuItem
+            // InternetExplorerToolStripMenuItem
             // 
-            this.WindowsExplorerToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.WindowsExplorerToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.WindowsExplorerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.WindowsExplorerToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
-            this.WindowsExplorerToolStripMenuItem.Name = "WindowsExplorerToolStripMenuItem";
-            this.WindowsExplorerToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
-            this.WindowsExplorerToolStripMenuItem.Text = "Internet Explorer";
+            this.InternetExplorerToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.InternetExplorerToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.InternetExplorerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.InternetExplorerToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
+            this.InternetExplorerToolStripMenuItem.Name = "WindowsExplorerToolStripMenuItem";
+            this.InternetExplorerToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.InternetExplorerToolStripMenuItem.Text = "Internet Explorer";
+            this.InternetExplorerToolStripMenuItem.Click += new System.EventHandler(this.InternetExplorerToolStripMenuItem_Click);
             // 
             // MSDOSPromptToolStripMenuItem1
             // 
@@ -1061,7 +1063,7 @@
         internal System.Windows.Forms.ToolStripMenuItem SetupWOWFromCompuServeToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem MSDOSPromptToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem EmptyToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem WindowsExplorerToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem InternetExplorerToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem MSDOSPromptToolStripMenuItem1;
         internal System.Windows.Forms.ToolStripMenuItem OutlookExpressToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem WindowsExplorerToolStripMenuItem1;

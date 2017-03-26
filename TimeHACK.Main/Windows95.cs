@@ -38,6 +38,8 @@ namespace TimeHACK
 
             // Set the StartMenu seperator
             startmenuitems.Items.Insert(6, new ToolStripSeparator());
+
+            this.SendToBack();
         }
 
         #region StartMenu
@@ -57,6 +59,7 @@ namespace TimeHACK
         private void startbutton_Click(object sender, EventArgs e)
         {
             startmenu.Show();
+            startmenu.BringToFront();
         }
 
         // Shutdown button
@@ -87,7 +90,7 @@ namespace TimeHACK
         // Set the Clock
         private void clockTimer_Tick(object sender, EventArgs e)
         {
-            taskbartime.Text = DateTime.Now.ToString("hh:mm tt");
+            taskbartime.Text = DateTime.Now.ToString("h:mm tt");
         }
 
         // On Desktop MouseDown
@@ -98,6 +101,7 @@ namespace TimeHACK
                 rightclickbackproperties.Show();
                 rightclickbackproperties.BringToFront();
                 rightclickbackproperties.Location = MousePosition;
+                startmenu.Hide();
             }
 
             // If 
@@ -117,11 +121,21 @@ namespace TimeHACK
         {
             WinClassicNotepad notepad = new WinClassicNotepad();
             notepad.Show();
+            notepad.BringToFront();
+            startmenu.Hide();
         }
 
         private void desktopicons_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void InternetExplorerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WinClassicIE4 ie = new WinClassicIE4();
+            ie.Show();
+            ie.BringToFront();
+            startmenu.Hide();
         }
     }
 }

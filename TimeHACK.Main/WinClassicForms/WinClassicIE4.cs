@@ -31,6 +31,7 @@ namespace TimeHACK
 
         private void WinClassicIE4_Load(object sender, EventArgs e)
         {
+            TopMost = true;
             hidePrograms();
             welcomeinternetscreen.Show();
             welcomeinternetscreen.Dock = DockStyle.Fill;

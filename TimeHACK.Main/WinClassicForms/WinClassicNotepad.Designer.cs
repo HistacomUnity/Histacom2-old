@@ -81,6 +81,7 @@
             // 
             this.notepadtextbox.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.notepadtextbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.notepadtextbox.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.notepadtextbox.Location = new System.Drawing.Point(4, 46);
             this.notepadtextbox.Multiline = true;
             this.notepadtextbox.Name = "notepadtextbox";
@@ -163,9 +164,9 @@
             // programname
             // 
             this.programname.AutoSize = true;
-            this.programname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.programname.Font = new System.Drawing.Font(TitleScreen.pfc.Families[0], 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.programname.ForeColor = System.Drawing.Color.White;
-            this.programname.Location = new System.Drawing.Point(3, 2);
+            this.programname.Location = new System.Drawing.Point(3, 1);
             this.programname.Name = "programname";
             this.programname.Size = new System.Drawing.Size(55, 13);
             this.programname.TabIndex = 3;
@@ -262,6 +263,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 520);
             this.Controls.Add(this.program);
+            this.Font = new System.Drawing.Font(TitleScreen.pfc.Families[0], 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "WinClassicNotepad";
             this.Text = "WinClassicNotepad";
