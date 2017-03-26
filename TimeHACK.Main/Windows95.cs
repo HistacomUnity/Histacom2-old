@@ -140,12 +140,22 @@ namespace TimeHACK
         
         private void desktopicons_Click(object sender, EventArgs e)
         {
-            if (desktopicons.SelectedItems.ContainsKey("Internet Explorer"))
+            Point objDrawingPoint = desktopicons.PointToClient(Cursor.Position);
+            ListViewItem objListViewItem;
+
+            if (objDrawingPoint != null)
             {
-                WinClassicIE4 ie = new WinClassicIE4();
-                ie.Show();
-                ie.BringToFront();
-                startmenu.Hide();
+                objListViewItem = desktopicons.GetItemAt(objDrawingPoint.X, objDrawingPoint.Y);
+                if (objListViewItem != null)
+                {
+                    if (objListViewItem.Text == "Internet Explorer")
+                    {
+                        WinClassicIE4 ie = new WinClassicIE4();
+                        ie.Show();
+                        ie.BringToFront();
+                        startmenu.Hide();
+                    }
+                }
             }
         }
     }
