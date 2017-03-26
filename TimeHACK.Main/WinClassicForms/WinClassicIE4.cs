@@ -69,6 +69,7 @@ namespace TimeHACK
             hidePrograms();
             padamsmain.Dock = DockStyle.Fill;
             padamsmain.Show();
+            addressbar.Text = "www.12padams.com";
         }
 
         private void closebutton_Click(object sender, EventArgs e)

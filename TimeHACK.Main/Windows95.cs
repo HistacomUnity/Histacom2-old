@@ -137,6 +137,17 @@ namespace TimeHACK
             ie.BringToFront();
             startmenu.Hide();
         }
+        
+        private void desktopicons_Click(object sender, EventArgs e)
+        {
+            if (desktopicons.SelectedItems.ContainsKey("Internet Explorer"))
+            {
+                WinClassicIE4 ie = new WinClassicIE4();
+                ie.Show();
+                ie.BringToFront();
+                startmenu.Hide();
+            }
+        }
     }
 }
 
