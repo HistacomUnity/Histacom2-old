@@ -59,6 +59,7 @@ namespace TimeHACK
         private void startbutton_Click(object sender, EventArgs e)
         {
             startmenu.Show();
+            startmenu.BringToFront();
         }
 
         // Shutdown button
@@ -127,6 +128,14 @@ namespace TimeHACK
         private void desktopicons_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void InternetExplorerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WinClassicIE4 ie = new WinClassicIE4();
+            ie.Show();
+            ie.BringToFront();
+            startmenu.Hide();
         }
     }
 }
