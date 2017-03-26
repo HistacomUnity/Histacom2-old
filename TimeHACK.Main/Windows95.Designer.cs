@@ -205,7 +205,7 @@
             this.startmenu.Controls.Add(this.ossidestartmenu);
             this.startmenu.Location = new System.Drawing.Point(0, 397);
             this.startmenu.Name = "startmenu";
-            this.startmenu.Size = new System.Drawing.Size(174, 298);
+            this.startmenu.Size = new System.Drawing.Size(174, 300);
             this.startmenu.TabIndex = 3;
             this.startmenu.Paint += new System.Windows.Forms.PaintEventHandler(this.startmenu_Paint);
             // 
@@ -838,6 +838,7 @@
             this.desktopicons.UseCompatibleStateImageBehavior = false;
             this.desktopicons.SelectedIndexChanged += new System.EventHandler(this.desktopicons_SelectedIndexChanged);
             this.desktopicons.MouseDown += new System.Windows.Forms.MouseEventHandler(this.desktop_mousedown);
+            this.desktopicons.DoubleClick += new System.EventHandler(this.desktopicons_Click);
             // 
             // rightclickbackproperties
             // 
