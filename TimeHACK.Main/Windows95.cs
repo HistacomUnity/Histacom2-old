@@ -146,7 +146,8 @@ namespace TimeHACK
         {
             WinClassicIE4 ie = new WinClassicIE4();
             WindowManager wm = new WindowManager();
-            wm.startWinClassic(ie, "Internet Explorer 4", null, true, true, new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0))));
+            Engine.Template.WinClassic app = wm.startWinClassic(ie, "Internet Explorer 4", null, true, true, new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0))));
+            app.BringToFront();
             startmenu.Hide();
         }
 
@@ -164,7 +165,8 @@ namespace TimeHACK
                     {
                         WinClassicIE4 ie = new WinClassicIE4();
                         WindowManager wm = new WindowManager();
-                        wm.startWinClassic(ie, "Internet Explorer 4", null, true, true, new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0))));
+                        Engine.Template.WinClassic app = wm.startWinClassic(ie, "Internet Explorer 4", null, true, true, new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0))));
+                        app.BringToFront();
                         startmenu.Hide();
                     }
                 }
