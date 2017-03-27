@@ -7,13 +7,14 @@ namespace TimeHACK.Engine
 {
     public class WindowManager
     {
-        public void startWinClassic(UserControl content, String title, PictureBox icon, Boolean MaxButton, Boolean MinButton)
+        public void startWinClassic(UserControl content, String title, PictureBox icon, Boolean MaxButton, Boolean MinButton, Font fnt)
         {
             // Setup Window
             WinClassic app = new WinClassic();
             app.Title.Text = title;
             app.Width = content.Width + 8;
             app.Height = content.Height + 26;
+            app.fnt = fnt;
             content.Parent = app.programContent;
             content.BringToFront();
             content.Dock = DockStyle.Fill;

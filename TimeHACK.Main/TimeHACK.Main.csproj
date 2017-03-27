@@ -138,12 +138,6 @@
     <Compile Include="WinClassicForms\WinClassicInstaller.Designer.cs">
       <DependentUpon>WinClassicInstaller.cs</DependentUpon>
     </Compile>
-    <Compile Include="WinClassicForms\WinClassicTemplate.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WinClassicForms\WinClassicTemplate.Designer.cs">
-      <DependentUpon>WinClassicTemplate.cs</DependentUpon>
-    </Compile>
     <Compile Include="WinClassicForms\WinClassicIE4.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,9 +180,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TitleScreen.resx">
       <DependentUpon>TitleScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WinClassicForms\WinClassicTemplate.resx">
-      <DependentUpon>WinClassicTemplate.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

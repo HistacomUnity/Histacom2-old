@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace TimeHACK
+namespace TimeHACK.WinClassicForms
 {
     public partial class WinClassicIE4 : UserControl
     {
