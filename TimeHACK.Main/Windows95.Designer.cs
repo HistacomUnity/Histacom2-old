@@ -428,6 +428,7 @@
             this.CalculatorToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.CalculatorToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
             this.CalculatorToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.CalculatorToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("CalculatorToolStripMenuItem.Image")));
             this.CalculatorToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.CalculatorToolStripMenuItem.Name = "CalculatorToolStripMenuItem";
             this.CalculatorToolStripMenuItem.Size = new System.Drawing.Size(185, 26);

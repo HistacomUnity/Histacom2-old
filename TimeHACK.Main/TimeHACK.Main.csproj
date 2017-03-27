@@ -205,6 +205,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\12padams_EULA.txt" />
+    <None Include="Resources\CalculatorToolStripMenuItem.Image.png" />
     <Content Include="Resources\Icon128x.ico" />
     <None Include="Resources\NotePadToolStripMenuItem.bmp" />
     <None Include="Resources\NotePadToolStripMenuItem.Image.bmp" />
