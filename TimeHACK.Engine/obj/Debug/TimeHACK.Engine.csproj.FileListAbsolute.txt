@@ -14,3 +14,17 @@ C:\Users\Liam\Documents\GitHub\TimeHACK-lempfork\TimeHACK.Engine\obj\Debug\TimeH
 C:\Users\Liam\Documents\GitHub\TimeHACK-lempfork\TimeHACK.Engine\obj\Debug\TimeHACK.Engine.csproj.GenerateResource.Cache
 C:\Users\Liam\Documents\GitHub\TimeHACK-lempfork\TimeHACK.Engine\obj\Debug\TimeHACK.Engine.dll
 C:\Users\Liam\Documents\GitHub\TimeHACK-lempfork\TimeHACK.Engine\obj\Debug\TimeHACK.Engine.pdb
+F:\Users\force\Documents\TimeHACK-master\TimeHACK.Engine\bin\Debug\TimeHACK.Engine.dll
+F:\Users\force\Documents\TimeHACK-master\TimeHACK.Engine\bin\Debug\TimeHACK.Engine.pdb
+F:\Users\force\Documents\TimeHACK-master\TimeHACK.Engine\obj\Debug\TimeHACK.Engine.csprojResolveAssemblyReference.cache
+F:\Users\force\Documents\TimeHACK-master\TimeHACK.Engine\obj\Debug\TimeHACK.Engine.Properties.Resources.resources
+F:\Users\force\Documents\TimeHACK-master\TimeHACK.Engine\obj\Debug\TimeHACK.Engine.Template.WinClassic.resources
+F:\Users\force\Documents\TimeHACK-master\TimeHACK.Engine\obj\Debug\TimeHACK.Engine.csproj.GenerateResource.Cache
+F:\Users\force\Documents\TimeHACK-master\TimeHACK.Engine\obj\Debug\TimeHACK.Engine.dll
+F:\Users\force\Documents\TimeHACK-master\TimeHACK.Engine\obj\Debug\TimeHACK.Engine.pdb
+C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Engine\obj\Debug\TimeHACK.Engine.csprojResolveAssemblyReference.cache
+C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Engine\obj\Debug\TimeHACK.Engine.Properties.Resources.resources
+C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Engine\obj\Debug\TimeHACK.Engine.Template.WinClassic.resources
+C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Engine\obj\Debug\TimeHACK.Engine.csproj.GenerateResource.Cache
+C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Engine\obj\Debug\TimeHACK.Engine.dll
+C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Engine\obj\Debug\TimeHACK.Engine.pdb

@@ -10,6 +10,9 @@ namespace TimeHACK
 {
     public partial class Windows95 : Form
     {
+        private SoundPlayer startsound;
+        private SoundPlayer stopsound;
+
         // Init the form
         public Windows95()
         {
@@ -33,8 +36,8 @@ namespace TimeHACK
 
             // Play Windows 95 Start Sound
             Stream audio = Properties.Resources.Win95Start;
-            SoundPlayer Win95Start = new SoundPlayer(audio);
-            Win95Start.Play();
+            startsound = new SoundPlayer(audio);
+            startsound.Play();
 
             // Set the StartMenu seperator
             startmenuitems.Items.Insert(6, new ToolStripSeparator());
@@ -62,6 +65,11 @@ namespace TimeHACK
         // Shutdown button
         private void ShutdownToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            startsound.Stop();
+            Stream audio = Properties.Resources.tada;
+            stopsound = new SoundPlayer(audio);
+            stopsound.Play();
+            System.Threading.Thread.Sleep(1500);
             Application.Exit();
         }
 
@@ -82,7 +90,7 @@ namespace TimeHACK
         // Set the Clock
         private void clockTimer_Tick(object sender, EventArgs e)
         {
-            taskbartime.Text = DateTime.Now.ToString("hh:mm tt");
+            taskbartime.Text = DateTime.Now.ToString("h:mm tt");
         }
 
         // On Desktop MouseDown
@@ -116,7 +124,51 @@ namespace TimeHACK
         {
             WindowManager wm = new WindowManager();
             TestApp test = new TestApp();
-            wm.StartWinClassic(test, "TestApp", null, true, true);
+            wm.startWinClassic(test, "TestApp", null, true, true);
+        }
+
+        private void downloaderTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WinClassicDownloader opendownload = new WinClassicDownloader();
+            WindowManager wm = new WindowManager();
+            wm.startWinClassic(opendownload, "Downloader", null, false, true);
+            opendownload.appName.Text = "Downloading: Survive The Day";
+        }
+
+        private void installerTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WinClassicInstaller openinstaller = new WinClassicInstaller();
+            WindowManager wm = new WindowManager();
+            wm.startWinClassic(openinstaller, "Installer", null, false, true);
+        }
+
+        private void InternetExplorerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WinClassicIE4 ie = new WinClassicIE4();
+            ie.Show();
+            ie.BringToFront();
+            startmenu.Hide();
+        }
+
+        private void desktopicons_Click(object sender, EventArgs e)
+        {
+            Point objDrawingPoint = desktopicons.PointToClient(Cursor.Position);
+            ListViewItem objListViewItem;
+
+            if (objDrawingPoint != null)
+            {
+                objListViewItem = desktopicons.GetItemAt(objDrawingPoint.X, objDrawingPoint.Y);
+                if (objListViewItem != null)
+                {
+                    if (objListViewItem.Text == "Internet Explorer")
+                    {
+                        WinClassicIE4 ie = new WinClassicIE4();
+                        WindowManager wm = new WindowManager();
+                        wm.startWinClassic(ie, "Internet Explorer 4", null, true, true);
+                        startmenu.Hide();
+                    }
+                }
+            }
         }
     }
 }

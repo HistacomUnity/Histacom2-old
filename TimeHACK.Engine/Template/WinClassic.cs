@@ -29,14 +29,14 @@ namespace TimeHACK.Engine.Template
             }
         }
 
-        private void Closebutton_Click(object sender, EventArgs e)
+        private void closebutton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
            public Boolean max = false;
 
-        private void Maximizebutton_Click(object sender, EventArgs e)
+        private void maximizebutton_Click(object sender, EventArgs e)
         {
             if (max == false)
             {
