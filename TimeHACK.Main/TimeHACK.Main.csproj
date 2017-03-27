@@ -209,6 +209,7 @@
     <None Include="Resources\NotePadToolStripMenuItem.bmp" />
     <None Include="Resources\NotePadToolStripMenuItem.Image.bmp" />
     <None Include="Resources\NotePadToolStripMenuItem.Image.png" />
+    <None Include="Resources\sliversilver.png" />
     <Content Include="Resources\TitleScreen\Exit.png" />
     <Content Include="Resources\TitleScreen\LoadGame.png" />
     <Content Include="Resources\TitleScreen\MSExit.png" />

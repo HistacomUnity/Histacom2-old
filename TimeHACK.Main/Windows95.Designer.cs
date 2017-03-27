@@ -237,6 +237,8 @@
             // ProgramsToolStripMenuItem
             // 
             this.ProgramsToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.ProgramsToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
+            this.ProgramsToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ProgramsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AccessoriesToolStripMenuItem,
             this.StartUpToolStripMenuItem,
@@ -264,6 +266,8 @@
             // AccessoriesToolStripMenuItem
             // 
             this.AccessoriesToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.AccessoriesToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
+            this.AccessoriesToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.AccessoriesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CommunicationsToolStripMenuItem,
             this.MultimediaToolStripMenuItem,
@@ -288,6 +292,8 @@
             // CommunicationsToolStripMenuItem
             // 
             this.CommunicationsToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.CommunicationsToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
+            this.CommunicationsToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.CommunicationsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.InternetConnectionWizardToolStripMenuItem,
             this.NetMeetingToolStripMenuItem});
@@ -300,6 +306,8 @@
             // InternetConnectionWizardToolStripMenuItem
             // 
             this.InternetConnectionWizardToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.InternetConnectionWizardToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
+            this.InternetConnectionWizardToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.InternetConnectionWizardToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.InternetConnectionWizardToolStripMenuItem.Name = "InternetConnectionWizardToolStripMenuItem";
             this.InternetConnectionWizardToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
@@ -308,6 +316,8 @@
             // NetMeetingToolStripMenuItem
             // 
             this.NetMeetingToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.NetMeetingToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
+            this.NetMeetingToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.NetMeetingToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.NetMeetingToolStripMenuItem.Name = "NetMeetingToolStripMenuItem";
             this.NetMeetingToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
@@ -316,6 +326,8 @@
             // MultimediaToolStripMenuItem
             // 
             this.MultimediaToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.MultimediaToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
+            this.MultimediaToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.MultimediaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CDPlayerToolStripMenuItem,
             this.SoundRecorderToolStripMenuItem,
@@ -330,6 +342,8 @@
             // CDPlayerToolStripMenuItem
             // 
             this.CDPlayerToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.CDPlayerToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
+            this.CDPlayerToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.CDPlayerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.CDPlayerToolStripMenuItem.Name = "CDPlayerToolStripMenuItem";
             this.CDPlayerToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
@@ -338,6 +352,8 @@
             // SoundRecorderToolStripMenuItem
             // 
             this.SoundRecorderToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.SoundRecorderToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
+            this.SoundRecorderToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.SoundRecorderToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SoundRecorderToolStripMenuItem.Name = "SoundRecorderToolStripMenuItem";
             this.SoundRecorderToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
@@ -346,6 +362,8 @@
             // VolumeControlToolStripMenuItem
             // 
             this.VolumeControlToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.VolumeControlToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
+            this.VolumeControlToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.VolumeControlToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.VolumeControlToolStripMenuItem.Name = "VolumeControlToolStripMenuItem";
             this.VolumeControlToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
@@ -354,6 +372,8 @@
             // WindowsMediaPlayerToolStripMenuItem
             // 
             this.WindowsMediaPlayerToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.WindowsMediaPlayerToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
+            this.WindowsMediaPlayerToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.WindowsMediaPlayerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.WindowsMediaPlayerToolStripMenuItem.Name = "WindowsMediaPlayerToolStripMenuItem";
             this.WindowsMediaPlayerToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
@@ -362,6 +382,8 @@
             // SystemToolsToolStripMenuItem
             // 
             this.SystemToolsToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.SystemToolsToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
+            this.SystemToolsToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.SystemToolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.DiskDefragmenterToolStripMenuItem,
             this.ScanDiskToolStripMenuItem});
@@ -374,6 +396,8 @@
             // DiskDefragmenterToolStripMenuItem
             // 
             this.DiskDefragmenterToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.DiskDefragmenterToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
+            this.DiskDefragmenterToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.DiskDefragmenterToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.DiskDefragmenterToolStripMenuItem.Name = "DiskDefragmenterToolStripMenuItem";
             this.DiskDefragmenterToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
@@ -382,6 +406,8 @@
             // ScanDiskToolStripMenuItem
             // 
             this.ScanDiskToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.ScanDiskToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
+            this.ScanDiskToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ScanDiskToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ScanDiskToolStripMenuItem.Name = "ScanDiskToolStripMenuItem";
             this.ScanDiskToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
