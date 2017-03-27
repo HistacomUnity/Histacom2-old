@@ -44,14 +44,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TimeHACK.exe" size="4272128">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TimeHACK.exe" size="4292608">
       <assemblyIdentity name="TimeHACK" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>a195m/FVq7D1VXSsD5UlJt8G92gqRxAIBSlvD7iViak=</dsig:DigestValue>
+        <dsig:DigestValue>KFBJghWM6tQN9yHc9HtQtaxNrRKUyWAgTsCeXWI/iiA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -63,17 +63,17 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>YDC6fdQvXveTmH0thYXVu9Uk9dtVVg3+QjDTaaqtScc=</dsig:DigestValue>
+        <dsig:DigestValue>nX0fiAB5vQEHq/Z8CtUVBx8HhJhYC9SvY46LL07z1QE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Resources\12padams_EULA.txt" size="1306">
+  <file name="Resources\12padams_EULA.txt" size="1288">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>lqdCpqWSG703aUKUZuVLCGvz3fv9DSk/gweD2eGYZrQ=</dsig:DigestValue>
+      <dsig:DigestValue>ek1mKL6dQbzI3KFwKvQRop8CoauDU3uUPLwcJc/Xx4E=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\Icon128x.ico" size="99678">

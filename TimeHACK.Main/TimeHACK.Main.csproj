@@ -126,6 +126,18 @@
     <Compile Include="WinClassicForms\TestApp.Designer.cs">
       <DependentUpon>TestApp.cs</DependentUpon>
     </Compile>
+    <Compile Include="WinClassicForms\WinClassicDownloader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WinClassicForms\WinClassicDownloader.Designer.cs">
+      <DependentUpon>WinClassicDownloader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinClassicForms\WinClassicInstaller.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WinClassicForms\WinClassicInstaller.Designer.cs">
+      <DependentUpon>WinClassicInstaller.cs</DependentUpon>
+    </Compile>
     <Compile Include="WinClassicForms\WinClassicTemplate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,8 +167,14 @@
     <EmbeddedResource Include="WinClassicForms\TestApp.resx">
       <DependentUpon>TestApp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WinClassicForms\WinClassicDownloader.resx">
+      <DependentUpon>WinClassicDownloader.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WinClassicForms\WinClassicIE4.resx">
       <DependentUpon>WinClassicIE4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinClassicForms\WinClassicInstaller.resx">
+      <DependentUpon>WinClassicInstaller.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows95.resx">
       <DependentUpon>Windows95.cs</DependentUpon>

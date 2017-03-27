@@ -728,7 +728,7 @@
             this.Panel13.Controls.Add(this.win95background);
             this.Panel13.Location = new System.Drawing.Point(46, 74);
             this.Panel13.Name = "Panel13";
-            this.Panel13.Size = new System.Drawing.Size(6554, 118);
+            this.Panel13.Size = new System.Drawing.Size(6956, 118);
             this.Panel13.TabIndex = 2;
             // 
             // Previewimage
@@ -739,7 +739,7 @@
             this.Previewimage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Previewimage.Location = new System.Drawing.Point(246, 6);
             this.Previewimage.Name = "Previewimage";
-            this.Previewimage.Size = new System.Drawing.Size(5137, 118);
+            this.Previewimage.Size = new System.Drawing.Size(5539, 118);
             this.Previewimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Previewimage.TabIndex = 1;
             this.Previewimage.TabStop = false;
@@ -1877,7 +1877,7 @@
             this.Label42.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Label42.AutoSize = true;
             this.Label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label42.Location = new System.Drawing.Point(990, 9);
+            this.Label42.Location = new System.Drawing.Point(1057, 9);
             this.Label42.Name = "Label42";
             this.Label42.Size = new System.Drawing.Size(263, 18);
             this.Label42.TabIndex = 5;
@@ -1888,7 +1888,7 @@
             this.Label41.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Label41.AutoSize = true;
             this.Label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label41.Location = new System.Drawing.Point(1090, 33);
+            this.Label41.Location = new System.Drawing.Point(1157, 33);
             this.Label41.Name = "Label41";
             this.Label41.Size = new System.Drawing.Size(71, 24);
             this.Label41.TabIndex = 4;
@@ -1903,14 +1903,14 @@
             this.TextBox8.Multiline = true;
             this.TextBox8.Name = "TextBox8";
             this.TextBox8.ReadOnly = true;
-            this.TextBox8.Size = new System.Drawing.Size(172, 5574);
+            this.TextBox8.Size = new System.Drawing.Size(172, 5925);
             this.TextBox8.TabIndex = 3;
             this.TextBox8.Text = resources.GetString("TextBox8.Text");
             // 
             // PictureBox11
             // 
             this.PictureBox11.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.PictureBox11.Location = new System.Drawing.Point(960, 60);
+            this.PictureBox11.Location = new System.Drawing.Point(1027, 60);
             this.PictureBox11.Name = "PictureBox11";
             this.PictureBox11.Size = new System.Drawing.Size(337, 386);
             this.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -2156,6 +2156,7 @@
             this.Button9.TabIndex = 3;
             this.Button9.Text = "Google Search";
             this.Button9.UseVisualStyleBackColor = false;
+            this.Button9.Click += new System.EventHandler(this.Button9_Click);
             // 
             // ComboBox1
             // 
