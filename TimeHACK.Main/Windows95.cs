@@ -124,14 +124,14 @@ namespace TimeHACK
         {
             WindowManager wm = new WindowManager();
             TestApp test = new TestApp();
-            wm.startWinClassic(test, "TestApp", null, true, true);
+            wm.startWinClassic(test, "TestApp", null, true, true, new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0))));
         }
 
         private void downloaderTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WinClassicDownloader opendownload = new WinClassicDownloader();
             WindowManager wm = new WindowManager();
-            wm.startWinClassic(opendownload, "Downloader", null, false, true);
+            wm.startWinClassic(opendownload, "Downloader", null, false, true, new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0))));
             opendownload.appName.Text = "Downloading: Survive The Day";
         }
 
@@ -139,14 +139,14 @@ namespace TimeHACK
         {
             WinClassicInstaller openinstaller = new WinClassicInstaller();
             WindowManager wm = new WindowManager();
-            wm.startWinClassic(openinstaller, "Installer", null, false, true);
+            wm.startWinClassic(openinstaller, "Installer", null, false, true, new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0))));
         }
 
         private void InternetExplorerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WinClassicIE4 ie = new WinClassicIE4();
-            ie.Show();
-            ie.BringToFront();
+            WindowManager wm = new WindowManager();
+            wm.startWinClassic(ie, "Internet Explorer 4", null, true, true, new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0))));
             startmenu.Hide();
         }
 
@@ -164,7 +164,7 @@ namespace TimeHACK
                     {
                         WinClassicIE4 ie = new WinClassicIE4();
                         WindowManager wm = new WindowManager();
-                        wm.startWinClassic(ie, "Internet Explorer 4", null, true, true);
+                        wm.startWinClassic(ie, "Internet Explorer 4", null, true, true, new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0))));
                         startmenu.Hide();
                     }
                 }

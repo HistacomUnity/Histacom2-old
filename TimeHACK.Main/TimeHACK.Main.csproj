@@ -138,12 +138,6 @@
     <Compile Include="WinClassicForms\WinClassicInstaller.Designer.cs">
       <DependentUpon>WinClassicInstaller.cs</DependentUpon>
     </Compile>
-    <Compile Include="WinClassicForms\WinClassicTemplate.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WinClassicForms\WinClassicTemplate.Designer.cs">
-      <DependentUpon>WinClassicTemplate.cs</DependentUpon>
-    </Compile>
     <Compile Include="WinClassicForms\WinClassicIE4.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -187,9 +181,6 @@
     <EmbeddedResource Include="TitleScreen.resx">
       <DependentUpon>TitleScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinClassicForms\WinClassicTemplate.resx">
-      <DependentUpon>WinClassicTemplate.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -215,6 +206,9 @@
   <ItemGroup>
     <Content Include="Resources\12padams_EULA.txt" />
     <Content Include="Resources\Icon128x.ico" />
+    <None Include="Resources\NotePadToolStripMenuItem.bmp" />
+    <None Include="Resources\NotePadToolStripMenuItem.Image.bmp" />
+    <None Include="Resources\NotePadToolStripMenuItem.Image.png" />
     <Content Include="Resources\TitleScreen\Exit.png" />
     <Content Include="Resources\TitleScreen\LoadGame.png" />
     <Content Include="Resources\TitleScreen\MSExit.png" />
@@ -242,6 +236,7 @@
     <Content Include="Resources\WinClassic\WinClassicInbox.png" />
     <Content Include="Resources\WinClassic\WinClassicMSN.png" />
     <Content Include="Resources\WinClassic\WinClassicNetworking.png" />
+    <None Include="Resources\WinClassic\WinClassicNotepad.png" />
     <Content Include="Resources\WinClassic\WinClassicOutlook.png" />
     <Content Include="Resources\WinClassic\WinClassicPrograms.png" />
     <Content Include="Resources\WinClassic\WinClassicRecycle.png" />

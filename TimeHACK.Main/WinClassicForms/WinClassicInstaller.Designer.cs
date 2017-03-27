@@ -1,4 +1,4 @@
-﻿namespace TimeHACK.Engine
+﻿namespace TimeHACK.WinClassicForms
 {
     partial class WinClassicInstaller
     {

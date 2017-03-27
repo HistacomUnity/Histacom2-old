@@ -60,12 +60,9 @@ C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.Main.csprojResolveAssemblyReference.cache
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.WinClassicForms.TestApp.resources
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.WinClassicForms.WinClassicDownloader.resources
-C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.WinClassicIE4.resources
-C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.Engine.WinClassicInstaller.resources
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.Windows95.resources
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.Properties.Resources.resources
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.TitleScreen.resources
-C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.WinClassicTemplate.resources
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.Main.csproj.GenerateResource.Cache
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\bin\Release\TimeHACK.exe.manifest
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\bin\Release\TimeHACK.application
@@ -75,5 +72,5 @@ C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\bin\Release\TimeHACK.
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\bin\Release\TimeHACK.Engine.pdb
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.exe.manifest
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.application
-D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.WinClassicForms.WinClassicDownloader.resources
-D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.Engine.WinClassicInstaller.resources
+C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.WinClassicForms.WinClassicIE4.resources
+C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.WinClassicForms.WinClassicInstaller.resources

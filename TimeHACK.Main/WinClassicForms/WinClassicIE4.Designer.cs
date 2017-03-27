@@ -1,4 +1,4 @@
-﻿namespace TimeHACK
+﻿namespace TimeHACK.WinClassicForms
 {
     partial class WinClassicIE4
     {

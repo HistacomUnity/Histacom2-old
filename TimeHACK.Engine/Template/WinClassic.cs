@@ -11,6 +11,8 @@ namespace TimeHACK.Engine.Template
             InitializeComponent();
         }
 
+        public System.Drawing.Font fnt;
+
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
 

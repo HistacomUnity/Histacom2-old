@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TimeHACK.Engine
+namespace TimeHACK.WinClassicForms
 {
     public partial class WinClassicInstaller : UserControl
     {
