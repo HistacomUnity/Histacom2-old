@@ -7,7 +7,7 @@ namespace TimeHACK.Engine
 {
     public class WindowManager
     {
-        public void startWinClassic(UserControl content, String title, PictureBox icon, Boolean MaxButton, Boolean MinButton, Font fnt)
+        public WinClassic startWinClassic(UserControl content, String title, PictureBox icon, Boolean MaxButton, Boolean MinButton, Font fnt)
         {
             // Setup Window
             WinClassic app = new WinClassic();
@@ -43,7 +43,7 @@ namespace TimeHACK.Engine
             // Show the app
             app.Show();
 
-
+            return app;
         }
     }
 }
