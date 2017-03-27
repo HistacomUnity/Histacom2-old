@@ -206,6 +206,9 @@
   <ItemGroup>
     <Content Include="Resources\12padams_EULA.txt" />
     <Content Include="Resources\Icon128x.ico" />
+    <None Include="Resources\NotePadToolStripMenuItem.bmp" />
+    <None Include="Resources\NotePadToolStripMenuItem.Image.bmp" />
+    <None Include="Resources\NotePadToolStripMenuItem.Image.png" />
     <Content Include="Resources\TitleScreen\Exit.png" />
     <Content Include="Resources\TitleScreen\LoadGame.png" />
     <Content Include="Resources\TitleScreen\MSExit.png" />
@@ -233,6 +236,7 @@
     <Content Include="Resources\WinClassic\WinClassicInbox.png" />
     <Content Include="Resources\WinClassic\WinClassicMSN.png" />
     <Content Include="Resources\WinClassic\WinClassicNetworking.png" />
+    <None Include="Resources\WinClassic\WinClassicNotepad.png" />
     <Content Include="Resources\WinClassic\WinClassicOutlook.png" />
     <Content Include="Resources\WinClassic\WinClassicPrograms.png" />
     <Content Include="Resources\WinClassic\WinClassicRecycle.png" />

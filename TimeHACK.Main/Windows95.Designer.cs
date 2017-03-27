@@ -422,6 +422,7 @@
             // NotePadToolStripMenuItem
             // 
             this.NotePadToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.NotePadToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("NotePadToolStripMenuItem.Image")));
             this.NotePadToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.NotePadToolStripMenuItem.Name = "NotePadToolStripMenuItem";
             this.NotePadToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
@@ -439,6 +440,7 @@
             // PaintToolStripMenuItem
             // 
             this.PaintToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.PaintToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("PaintToolStripMenuItem.Image")));
             this.PaintToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.PaintToolStripMenuItem.Name = "PaintToolStripMenuItem";
             this.PaintToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
@@ -455,6 +457,7 @@
             // WordPadToolStripMenuItem
             // 
             this.WordPadToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.WordPadToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("WordPadToolStripMenuItem.Image")));
             this.WordPadToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.WordPadToolStripMenuItem.Name = "WordPadToolStripMenuItem";
             this.WordPadToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
