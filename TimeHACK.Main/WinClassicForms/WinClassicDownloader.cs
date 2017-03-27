@@ -9,9 +9,20 @@ namespace TimeHACK.WinClassicForms
         public WinClassicDownloader()
         {
             InitializeComponent();
+
         }
+
+        private string DownloadSpeed(string str)
+        {
+            Random rnd = new Random();
+            int dl1 = rnd.Next(7, 9);
+            int dl2 = rnd.Next(1, 9);
+            int dl3 = rnd.Next(1, 9);
+            string speed = dl1.ToString() + "." + dl2.ToString() + dl3.ToString();
+            return speed;
+        }
+
         int amountToDL = 100;
-        int downloadSpeed = 8;
         int amountDLed = 0;
         Windows95 Windows95 = new Windows95();
 
@@ -19,13 +30,13 @@ namespace TimeHACK.WinClassicForms
         private void WinClassicDownloader_Load(object sender, EventArgs e)
         {
             dlTimer.Start();
-            transferLbl.Text = ("Transfer speed: " + downloadSpeed + " KB/s");
+            dlSpeed.Start();
         }
 
         private void dlTimer_Tick(object sender, EventArgs e)
         {
-            amountDLed = amountDLed + downloadSpeed;
-            if(downloadSpeed > amountToDL - amountDLed){
+            amountDLed = amountDLed + 8;
+            if(8 > amountToDL - amountDLed){
                 progBar.Value = 100;
                 amountLbl.Text = ("Downloaded " + amountDLed + " KB out of " + amountToDL + " KB");
 
@@ -66,6 +77,11 @@ namespace TimeHACK.WinClassicForms
                 progBar.Value = amountDLed;
             }
             amountLbl.Text = ("Downloaded " + amountDLed + " KB out of " + amountToDL);
+        }
+
+        private void dlSpeed_Tick(object sender, EventArgs e)
+        {
+            transferLbl.Text = ("Transfer speed: " + DownloadSpeed("") + " KB/s");
         }
     }
 }

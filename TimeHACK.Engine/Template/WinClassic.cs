@@ -22,7 +22,7 @@ namespace TimeHACK.Engine.Template
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        private void programtopbar_drag(object sender, MouseEventArgs e)
+        private void Programtopbar_drag(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -51,6 +51,7 @@ namespace TimeHACK.Engine.Template
                 this.topleftcorner.Hide();
                 this.toprightcorner.Hide();
                 this.Dock = DockStyle.Fill;
+                this.WindowState = FormWindowState.Maximized;
                 max = true;
                 maximizebutton.Image = Properties.Resources.WinClassicRestore;
             }
@@ -65,6 +66,7 @@ namespace TimeHACK.Engine.Template
                 this.topleftcorner.Show();
                 this.toprightcorner.Show();
                 this.Dock = DockStyle.None;
+                this.WindowState = FormWindowState.Normal;
                 max = false;
                 maximizebutton.Image = Properties.Resources.WinClassicMax;
             }

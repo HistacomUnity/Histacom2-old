@@ -11,6 +11,7 @@ namespace TimeHACK.Engine
         {
             // Setup Window
             WinClassic app = new WinClassic();
+            app.Text = title;
             app.Title.Text = title;
             app.Width = content.Width + 8;
             app.Height = content.Height + 26;
@@ -29,7 +30,7 @@ namespace TimeHACK.Engine
             if (MaxButton == false)
             {
                 app.maximizebutton.Visible = false;
-                app.minimizebutton.Location = new Point(app.closebutton.Location.X - 16, app.minimizebutton.Location.Y);
+                app.minimizebutton.Location = new Point(app.closebutton.Location.X - 14, app.minimizebutton.Location.Y);
             }
 
             // Check if Min button is enabled

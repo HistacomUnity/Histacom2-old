@@ -35,6 +35,7 @@
             this.locationLbl = new System.Windows.Forms.Label();
             this.transferLbl = new System.Windows.Forms.Label();
             this.dlTimer = new System.Windows.Forms.Timer(this.components);
+            this.dlSpeed = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // progBar
@@ -88,6 +89,11 @@
             this.dlTimer.Interval = 1000;
             this.dlTimer.Tick += new System.EventHandler(this.dlTimer_Tick);
             // 
+            // dlSpeed
+            // 
+            this.dlSpeed.Interval = 750;
+            this.dlSpeed.Tick += new System.EventHandler(this.dlSpeed_Tick);
+            // 
             // WinClassicDownloader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -113,5 +119,6 @@
         internal System.Windows.Forms.Label locationLbl;
         internal System.Windows.Forms.Label transferLbl;
         private System.Windows.Forms.Timer dlTimer;
+        private System.Windows.Forms.Timer dlSpeed;
     }
 }

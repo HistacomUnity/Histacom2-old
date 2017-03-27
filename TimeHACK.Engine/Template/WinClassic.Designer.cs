@@ -32,6 +32,7 @@
             this.program = new System.Windows.Forms.Panel();
             this.programContent = new System.Windows.Forms.Panel();
             this.programtopbar = new System.Windows.Forms.Panel();
+            this.programIcon = new System.Windows.Forms.PictureBox();
             this.maximizebutton = new System.Windows.Forms.PictureBox();
             this.minimizebutton = new System.Windows.Forms.PictureBox();
             this.Title = new System.Windows.Forms.Label();
@@ -44,13 +45,12 @@
             this.bottom = new System.Windows.Forms.Panel();
             this.right = new System.Windows.Forms.Panel();
             this.top = new System.Windows.Forms.Panel();
-            this.programIcon = new System.Windows.Forms.PictureBox();
             this.program.SuspendLayout();
             this.programtopbar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.programIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maximizebutton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizebutton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closebutton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.programIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // program
@@ -93,7 +93,18 @@
             this.programtopbar.Name = "programtopbar";
             this.programtopbar.Size = new System.Drawing.Size(292, 18);
             this.programtopbar.TabIndex = 0;
-            this.programtopbar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.programtopbar_drag);
+            this.programtopbar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Programtopbar_drag);
+            // 
+            // programIcon
+            // 
+            this.programIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.programIcon.ErrorImage = null;
+            this.programIcon.InitialImage = null;
+            this.programIcon.Location = new System.Drawing.Point(2, 1);
+            this.programIcon.Name = "programIcon";
+            this.programIcon.Size = new System.Drawing.Size(16, 16);
+            this.programIcon.TabIndex = 0;
+            this.programIcon.TabStop = false;
             // 
             // maximizebutton
             // 
@@ -126,6 +137,7 @@
             this.Title.Size = new System.Drawing.Size(99, 13);
             this.Title.TabIndex = 3;
             this.Title.Text = "Application Title";
+            this.Title.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Programtopbar_drag);
             // 
             // closebutton
             // 
@@ -214,17 +226,6 @@
             this.top.Size = new System.Drawing.Size(300, 4);
             this.top.TabIndex = 8;
             // 
-            // programIcon
-            // 
-            this.programIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.programIcon.ErrorImage = null;
-            this.programIcon.InitialImage = null;
-            this.programIcon.Location = new System.Drawing.Point(2, 1);
-            this.programIcon.Name = "programIcon";
-            this.programIcon.Size = new System.Drawing.Size(16, 16);
-            this.programIcon.TabIndex = 0;
-            this.programIcon.TabStop = false;
-            // 
             // WinClassic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,10 +238,10 @@
             this.program.ResumeLayout(false);
             this.programtopbar.ResumeLayout(false);
             this.programtopbar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.programIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maximizebutton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizebutton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.closebutton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.programIcon)).EndInit();
             this.ResumeLayout(false);
 
         }
