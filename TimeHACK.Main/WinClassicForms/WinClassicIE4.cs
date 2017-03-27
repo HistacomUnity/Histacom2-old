@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace TimeHACK
 {
-    public partial class WinClassicIE4 : Form
+    public partial class WinClassicIE4 : UserControl
     {
         public WinClassicIE4()
         {
@@ -12,7 +12,7 @@ namespace TimeHACK
         }
         private void WinClassicIE4_Load(object sender, EventArgs e)
         {
-            TopMost = true;
+            BringToFront();
             hidePrograms();
             welcomeinternetscreen.Show();
             welcomeinternetscreen.Dock = DockStyle.Fill;
@@ -55,7 +55,7 @@ namespace TimeHACK
 
         private void closebutton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            ((Form)this.TopLevelControl).Close();
         }
 
         private void googleprototypelink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
