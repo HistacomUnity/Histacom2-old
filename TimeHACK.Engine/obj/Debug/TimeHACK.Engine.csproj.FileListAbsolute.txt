@@ -22,3 +22,9 @@ F:\Users\force\Documents\TimeHACK-master\TimeHACK.Engine\obj\Debug\TimeHACK.Engi
 F:\Users\force\Documents\TimeHACK-master\TimeHACK.Engine\obj\Debug\TimeHACK.Engine.csproj.GenerateResource.Cache
 F:\Users\force\Documents\TimeHACK-master\TimeHACK.Engine\obj\Debug\TimeHACK.Engine.dll
 F:\Users\force\Documents\TimeHACK-master\TimeHACK.Engine\obj\Debug\TimeHACK.Engine.pdb
+C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Engine\obj\Debug\TimeHACK.Engine.csprojResolveAssemblyReference.cache
+C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Engine\obj\Debug\TimeHACK.Engine.Properties.Resources.resources
+C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Engine\obj\Debug\TimeHACK.Engine.Template.WinClassic.resources
+C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Engine\obj\Debug\TimeHACK.Engine.csproj.GenerateResource.Cache
+C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Engine\obj\Debug\TimeHACK.Engine.dll
+C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Engine\obj\Debug\TimeHACK.Engine.pdb
