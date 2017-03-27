@@ -49,6 +49,7 @@ namespace TimeHACK.Engine.Template
                 this.topleftcorner.Hide();
                 this.toprightcorner.Hide();
                 this.Dock = DockStyle.Fill;
+                this.WindowState = FormWindowState.Maximized;
                 max = true;
                 maximizebutton.Image = Properties.Resources.WinClassicRestore;
             }
@@ -63,6 +64,7 @@ namespace TimeHACK.Engine.Template
                 this.topleftcorner.Show();
                 this.toprightcorner.Show();
                 this.Dock = DockStyle.None;
+                this.WindowState = FormWindowState.Normal;
                 max = false;
                 maximizebutton.Image = Properties.Resources.WinClassicMax;
             }
