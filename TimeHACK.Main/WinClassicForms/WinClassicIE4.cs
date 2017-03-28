@@ -98,7 +98,7 @@ namespace TimeHACK.WinClassicForms
                     browsinghistory[i] = null;
                 }
                 int j = 0;
-                for (int i = 0; i < browsinghistory.Count; i++)
+                for (int i = 1; i < browsinghistory.Count; i++)
                 {
                     if (browsinghistory[i] != null && browsinghistory[i] != "") j++;
                 }
