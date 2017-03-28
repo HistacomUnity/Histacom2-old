@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json.Linq;
+using System.Net;
 
 namespace TimeHACK
 {
@@ -18,8 +20,17 @@ namespace TimeHACK
         [STAThread]
         static void Main()
         {
-            // Set the GameID
-            gameID = "1.0.44";
+            try {
+                WebClient wc = new WebClient();
+
+                // Set the GameID
+                string json = wc.DownloadString("http://ci.appveyor.com/api/projects/timehack/timehack");
+                JObject j = JObject.Parse(JObject.Parse(json)["build"].ToString());
+                gameID = "1.0." + j["buildNumber"].ToString();
+            } catch (WebException)
+            {
+                gameID = "1.0.42";
+            }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new TitleScreen());

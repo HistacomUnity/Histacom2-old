@@ -13,6 +13,8 @@ namespace TimeHACK
         private SoundPlayer startsound;
         private SoundPlayer stopsound;
 
+        public bool webchatInstalled = false;
+
         // Init the form
         public Windows95()
         {

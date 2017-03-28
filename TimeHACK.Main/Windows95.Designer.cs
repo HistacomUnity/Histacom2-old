@@ -939,6 +939,7 @@
             this.desktopicons.TabIndex = 6;
             this.desktopicons.UseCompatibleStateImageBehavior = false;
             this.desktopicons.MouseDown += new System.Windows.Forms.MouseEventHandler(this.desktop_mousedown);
+            this.desktopicons.DoubleClick += new System.EventHandler(this.desktopicons_Click);
             // 
             // rightclickbackproperties
             // 
