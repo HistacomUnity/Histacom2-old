@@ -29,3 +29,4 @@ We have another version of TimeHACK, based on the Histacom 1.8.5 source. It can 
 
 ## License
 TimeHACK is Licensed under the MIT software license. All code contributed to the TimeHACK project is the property of the TimeHACK development team, and will not be removed upon request.
+
