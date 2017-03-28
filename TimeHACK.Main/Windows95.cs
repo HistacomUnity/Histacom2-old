@@ -173,6 +173,14 @@ namespace TimeHACK
                         Engine.Template.WinClassic app = wm.startWinClassic(ie, "Internet Explorer 4", null, true, true, new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0))));
                         app.BringToFront();
                         startmenu.Hide();
+                    } else if (objListViewItem.Text == "Web Chat Setup")
+                    {
+                        WinClassicInstaller inst = new WinClassicInstaller();
+                        WindowManager wm = new WindowManager();
+                        inst.installname.Text = "Web Chat 1998";
+                        Engine.Template.WinClassic app = wm.startWinClassic(inst, "Internet Explorer 4", null, true, true, new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0))));
+                        app.BringToFront();
+                        startmenu.Hide();
                     }
                 }
             }

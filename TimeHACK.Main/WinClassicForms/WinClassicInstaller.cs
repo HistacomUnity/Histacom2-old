@@ -45,6 +45,11 @@ namespace TimeHACK.WinClassicForms
         {
             if (Button3.Text == "Finish")
             {
+                if (programtoinstall == "Web Chat 1998")
+                {
+                    ((Windows95)this.ParentForm.ParentForm).WebChatToolStripMenuItem.Visible = true;
+                    ((Form)this.TopLevelControl).Close();
+                }
                 if (programtoinstall == "Guess The Number 2")
                 {
                     ((Form)this.TopLevelControl).Close();
@@ -62,8 +67,8 @@ namespace TimeHACK.WinClassicForms
                 }
                 if (programtoinstall == "Skindows 95")
                 {
+                    ((Windows95)this.ParentForm.ParentForm).SkindowsToolStripMenuItem.Visible = true;
                     ((Form)this.TopLevelControl).Close();
-                    //Windows2000.SkindowsToolStripMenuItem.Visible = true;
                 }
                 if (programtoinstall == "Web Chat 2000")
                 {
