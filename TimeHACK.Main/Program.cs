@@ -19,7 +19,7 @@ namespace TimeHACK
         static void Main()
         {
             // Set the GameID
-            gameID = "Nightly 1.0.14";
+            gameID = "1.0.44";
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new TitleScreen());
