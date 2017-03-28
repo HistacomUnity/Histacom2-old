@@ -2341,6 +2341,7 @@
             this.Button5.Text = "Home";
             this.Button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Button5.UseVisualStyleBackColor = true;
+            this.Button5.Click += new System.EventHandler(this.Button5_Click);
             // 
             // Button4
             // 

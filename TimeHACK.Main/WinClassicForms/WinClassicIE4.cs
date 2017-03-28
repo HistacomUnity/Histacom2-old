@@ -147,5 +147,10 @@ namespace TimeHACK.WinClassicForms
         {
             if(browsinghistory[historylocation+1] != null) goToSite(browsinghistory[historylocation + 1], false);
         }
+
+        private void Button5_Click(object sender, EventArgs e)
+        {
+            goToSite("www.microsoft.com/internetexplorer4/welcome", false);
+        }
     }
 }
