@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using TimeHACK.Engine;
 
 namespace TimeHACK.WinClassicForms
 {
@@ -137,7 +139,8 @@ namespace TimeHACK.WinClassicForms
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            if (!(historylocation <= 0)) {
+            if (!(historylocation <= 0))
+            {
                 goToSite(browsinghistory[historylocation - 1], true);
                 historylocation--;
             }
@@ -151,6 +154,14 @@ namespace TimeHACK.WinClassicForms
         private void Button5_Click(object sender, EventArgs e)
         {
             goToSite("www.microsoft.com/internetexplorer4/welcome", false);
+        }
+
+        private void Button25_Click(object sender, EventArgs e)
+        {
+            WinClassicDownloader opendownload = new WinClassicDownloader();
+            WindowManager wm = new WindowManager();
+            wm.startWinClassic(opendownload, "Downloader", null, false, true, new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0))));
+            opendownload.appName.Text = "Downloading: Web Chat";
         }
     }
 }

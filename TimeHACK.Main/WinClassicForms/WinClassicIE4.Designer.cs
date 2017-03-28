@@ -631,6 +631,7 @@
             this.Button25.TabIndex = 6;
             this.Button25.Text = "Download";
             this.Button25.UseVisualStyleBackColor = false;
+            this.Button25.Click += new System.EventHandler(this.Button25_Click);
             // 
             // Label43
             // 
