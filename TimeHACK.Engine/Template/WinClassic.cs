@@ -13,6 +13,8 @@ namespace TimeHACK.Engine.Template
 
         public System.Drawing.Font fnt;
 
+        public bool closeDisabled = false;
+
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
 
@@ -33,7 +35,7 @@ namespace TimeHACK.Engine.Template
 
         private void closebutton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (!closeDisabled) this.Close();
         }
 
            public Boolean max = false;

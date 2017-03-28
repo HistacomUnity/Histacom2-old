@@ -42,6 +42,8 @@ namespace TimeHACK.Engine
 
             // Show the app
             app.Show();
+            app.BringToFront();
+            app.TopMost = true;
 
             return app;
         }
