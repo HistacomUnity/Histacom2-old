@@ -16,9 +16,11 @@ namespace TimeHACK.WinClassicForms
         }
         private void WinClassicIE4_Load(object sender, EventArgs e)
         {
+            browsinghistory.Capacity = 99;
             BringToFront();
             hidePrograms();
             browsinghistory.Add("www.microsoft.com/internetexplorer4/welcome");
+            for (int i = 0; i < 99; i++) browsinghistory.Add(null);
             welcomeinternetscreen.Show();
             welcomeinternetscreen.Dock = DockStyle.Fill;
         }
@@ -44,39 +46,22 @@ namespace TimeHACK.WinClassicForms
 
         private void LinkLabel15_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            hidePrograms();
-            googlemain.Dock = DockStyle.Fill;
-            googlemain.Show();
-            addressbar.Text = "www.google.com";
+            goToSite("www.google.com", false);
         }
 
         private void LinkLabel16_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            hidePrograms();
-            padamsmain.Dock = DockStyle.Fill;
-            padamsmain.Show();
-            addressbar.Text = "www.12padams.com";
-        }
-
-        private void closebutton_Click(object sender, EventArgs e)
-        {
-            ((Form)this.TopLevelControl).Close();
+            goToSite("www.12padams.com", false);
         }
 
         private void googleprototypelink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            hidePrograms();
-            googleprototype.Dock = DockStyle.Fill;
-            googleprototype.Show();
-            addressbar.Text = "www.google.stanford.edu";
+            goToSite("www.google.stanford.edu", false);
         }
 
         private void googlebetalink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            hidePrograms();
-            googlealpha.Dock = DockStyle.Fill;
-            googlealpha.Show();
-            addressbar.Text = "www.alpha.google.com";
+            goToSite("www.alpha.google.com", false);
         }
 
         private void Label20_Click(object sender, EventArgs e)
@@ -98,7 +83,7 @@ namespace TimeHACK.WinClassicForms
 
         private void ToolStripMenuItem21_Click(object sender, EventArgs e)
         {
-            this.ParentForm.Close();
+            ((Form)this.TopLevelControl).Close();
         }
 
         private void goToSite(string url, bool back)
@@ -112,9 +97,42 @@ namespace TimeHACK.WinClassicForms
                 {
                     browsinghistory[i] = null;
                 }
+                int j = 0;
+                for (int i = 0; i < browsinghistory.Count; i++)
+                {
+                    if (browsinghistory[i] != null && browsinghistory[i] != "") j++;
+                }
+                historylocation = j;
+                browsinghistory[historylocation + 1] = url;
+                historylocation++;
             }
 
             addressbar.Text = url;
+
+            switch (url)
+            {
+                case "www.google.com":
+                    googlemain.Dock = DockStyle.Fill;
+                    googlemain.Show();
+                    break;
+                case "www.google.stanford.edu":
+                    googleprototype.Dock = DockStyle.Fill;
+                    googleprototype.Show();
+                    break;
+                case "www.alpha.google.com":
+                    googlealpha.Dock = DockStyle.Fill;
+                    googlealpha.Show();
+                    break;
+                case "www.12padams.com":
+                    padamsmain.Dock = DockStyle.Fill;
+                    padamsmain.Show();
+                    break;
+                case "www.microsoft.com/internetexplorer4/welcome":
+                    welcomeinternetscreen.Dock = DockStyle.Fill;
+                    welcomeinternetscreen.Show();
+                    break;
+            }
+
         }
 
         private void Button1_Click(object sender, EventArgs e)
