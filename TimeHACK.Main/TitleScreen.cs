@@ -25,7 +25,7 @@ namespace TimeHACK
         private void TitleScreen_Load(object sender, EventArgs e)
         {
             // Set GameVersion
-            gameversion.Text = "TimeHACK " + Program.gameID + " by AShifter";
+            gameversion.Text = "TimeHACK " + Program.gameID + " by TimeHACKDevs";
 
             // Initialize Font
             pfc.AddFontFile(AppDomain.CurrentDomain.BaseDirectory + "\\LeviWindows.ttf");
@@ -147,7 +147,7 @@ namespace TimeHACK
 
         private void gameversion_MouseLeave(object sender, EventArgs e)
         {
-            gameversion.Text = "TimeHACK " + Program.gameID + " by AShifter";
+            gameversion.Text = "TimeHACK " + Program.gameID + " by TimeHACKDevs";
         }
     }
 }

@@ -98,7 +98,7 @@ namespace TimeHACK.WinClassicForms
                     browsinghistory[i] = null;
                 }
                 int j = 0;
-                for (int i = 0; i < browsinghistory.Count; i++)
+                for (int i = 1; i < browsinghistory.Count; i++)
                 {
                     if (browsinghistory[i] != null && browsinghistory[i] != "") j++;
                 }
@@ -141,6 +141,16 @@ namespace TimeHACK.WinClassicForms
                 goToSite(browsinghistory[historylocation - 1], true);
                 historylocation--;
             }
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            if(browsinghistory[historylocation+1] != null) goToSite(browsinghistory[historylocation + 1], false);
+        }
+
+        private void Button5_Click(object sender, EventArgs e)
+        {
+            goToSite("www.microsoft.com/internetexplorer4/welcome", false);
         }
     }
 }
