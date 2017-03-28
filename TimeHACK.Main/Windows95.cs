@@ -41,6 +41,8 @@ namespace TimeHACK
 
             // Set the StartMenu seperator
             startmenuitems.Items.Insert(6, new ToolStripSeparator());
+
+            this.SendToBack();
         }
 
         #region StartMenu
@@ -60,6 +62,7 @@ namespace TimeHACK
         private void startbutton_Click(object sender, EventArgs e)
         {
             startmenu.Show();
+            startmenu.BringToFront();
         }
 
         // Shutdown button

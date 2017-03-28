@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -6,6 +7,9 @@ namespace TimeHACK.WinClassicForms
 {
     public partial class WinClassicIE4 : UserControl
     {
+        public List<string> browsinghistory = new List<string>();
+        public int historylocation = 0;
+
         public WinClassicIE4()
         {
             InitializeComponent();
@@ -14,6 +18,7 @@ namespace TimeHACK.WinClassicForms
         {
             BringToFront();
             hidePrograms();
+            browsinghistory.Add("www.microsoft.com/internetexplorer4/welcome");
             welcomeinternetscreen.Show();
             welcomeinternetscreen.Dock = DockStyle.Fill;
         }
@@ -81,13 +86,6 @@ namespace TimeHACK.WinClassicForms
             padamshidden.Show();
         }
 
-        private void linkLabel19_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            hidePrograms();
-            webBrowser1.Dock = DockStyle.Fill;
-            webBrowser1.Show();
-        }
-
         private void Button12_Click(object sender, EventArgs e)
         {
 
@@ -96,6 +94,35 @@ namespace TimeHACK.WinClassicForms
         private void Button9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ToolStripMenuItem21_Click(object sender, EventArgs e)
+        {
+            this.ParentForm.Close();
+        }
+
+        private void goToSite(string url, bool back)
+        {
+            hidePrograms();
+
+            if (!back)
+            {
+                if (historylocation >= 98) historylocation = 79;
+                for (int i = historylocation + 1; i < browsinghistory.Count; i++)
+                {
+                    browsinghistory[i] = null;
+                }
+            }
+
+            addressbar.Text = url;
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            if (!(historylocation <= 0)) {
+                goToSite(browsinghistory[historylocation - 1], true);
+                historylocation--;
+            }
         }
     }
 }
