@@ -1,7 +1,5 @@
 <a href="https://ci.appveyor.com/project/timehack/timehack"><img src="https://ci.appveyor.com/api/projects/status/8x34p8b0i2idblgd?svg=true" style="border: 0;" alt="AppVeyor Badge"></a>
 
-[![Discord](https://discordapp.com/api/guilds/234414439330349056/widget.png?style=shield)](https://discord.gg/zMwf3)
-
 # TimeHACK
 ## The original hacking simulator!
 TimeHACK is a C# version of the PC game Histacom, released by 12padams in 2010. Here are some of our goals:
@@ -16,8 +14,6 @@ Load the ``.SLN`` project file into Visual Studio and compile. No further steps 
 
 ## Links
 TimeHACK has a forum at http://www.ashifter.ml/timehack/forum
-
-TimeHACK has a Discord at https://discord.gg/FZgQMDe (YOU CAN GO TO THE BADGE WHICH SAYS "<A-NUMBER> online")
 
 TimeHACK has an AppVeyor at https://ci.appveyor.com/project/timehack/timehack (YOU CAN GO TO THE OTHER BADGE)
 
