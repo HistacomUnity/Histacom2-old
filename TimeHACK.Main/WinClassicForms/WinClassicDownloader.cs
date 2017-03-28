@@ -62,7 +62,7 @@ namespace TimeHACK.WinClassicForms
                 }
                 if (appName.Text == "Downloading: hwcv.exe")
                 {
-                    Windows95.desktopicons.Items.Add("hwcv.exe", imageIndex: 11);
+                    Windows95.desktopicons.Items.Add("hwcv.exe", imageIndex: 14);
                 }
                 if (appName.Text == "Downloading: Time Distorter")
                 {

@@ -911,6 +911,10 @@
             this.desktopImages.Images.SetKeyName(5, "WinClassicNetworking.png");
             this.desktopImages.Images.SetKeyName(6, "WinClassicOutlook.png");
             this.desktopImages.Images.SetKeyName(7, "WinClassicRecycle.png");
+            this.desktopImages.Images.SetKeyName(8, "WinClassicSetup.png");
+            this.desktopImages.Images.SetKeyName(9, "WinClassicSetup.png");
+            this.desktopImages.Images.SetKeyName(10, "WinClassicSetup.png");
+            this.desktopImages.Images.SetKeyName(11, "WinClassicSetup.png");
             // 
             // desktopicons
             // 
