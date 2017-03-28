@@ -142,5 +142,10 @@ namespace TimeHACK.WinClassicForms
                 historylocation--;
             }
         }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            if(browsinghistory[historylocation+1] != null) goToSite(browsinghistory[historylocation + 1], false);
+        }
     }
 }

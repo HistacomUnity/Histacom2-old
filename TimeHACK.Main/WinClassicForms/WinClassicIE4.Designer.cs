@@ -2380,6 +2380,7 @@
             this.Button2.Text = "Forward";
             this.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Button2.UseVisualStyleBackColor = true;
+            this.Button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // Button1
             // 
