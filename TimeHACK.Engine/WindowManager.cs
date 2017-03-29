@@ -7,7 +7,9 @@ namespace TimeHACK.Engine
 {
     public class WindowManager
     {
-        public WinClassic startWinClassic(UserControl content, String title, PictureBox icon, Boolean MaxButton, Boolean MinButton, Font fnt)
+        public static System.Drawing.Text.PrivateFontCollection pfc = new System.Drawing.Text.PrivateFontCollection();
+
+        public WinClassic startWinClassic(UserControl content, String title, PictureBox icon, Boolean MaxButton, Boolean MinButton)
         {
             // Setup Window
             WinClassic app = new WinClassic();
@@ -15,10 +17,16 @@ namespace TimeHACK.Engine
             app.Title.Text = title;
             app.Width = content.Width + 8;
             app.Height = content.Height + 26;
+            // Initialize Font
+            pfc.AddFontFile(AppDomain.CurrentDomain.BaseDirectory + "\\LeviWindows.ttf");
+            Font fnt = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             app.fnt = fnt;
+            // Setup UC
             content.Parent = app.programContent;
             content.BringToFront();
             content.Dock = DockStyle.Fill;
+
+            // Check if icon is null
             if (icon == null)
             {
                 icon = app.programIcon;

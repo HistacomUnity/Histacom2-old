@@ -129,14 +129,14 @@ namespace TimeHACK
         {
             WindowManager wm = new WindowManager();
             TestApp test = new TestApp();
-            wm.startWinClassic(test, "TestApp", null, true, true, new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0))));
+            wm.startWinClassic(test, "TestApp", null, true, true);
         }
 
         private void downloaderTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WinClassicDownloader opendownload = new WinClassicDownloader();
             WindowManager wm = new WindowManager();
-            wm.startWinClassic(opendownload, "Downloader", null, false, true, new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0))));
+            wm.startWinClassic(opendownload, "Downloader", null, false, true);
             opendownload.appName.Text = "Downloading: Survive The Day";
         }
 
@@ -144,14 +144,14 @@ namespace TimeHACK
         {
             WinClassicInstaller openinstaller = new WinClassicInstaller();
             WindowManager wm = new WindowManager();
-            wm.startWinClassic(openinstaller, "Installer", null, false, true, new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0))));
+            wm.startWinClassic(openinstaller, "Installer", null, false, true);
         }
 
         private void InternetExplorerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WinClassicIE4 ie = new WinClassicIE4();
             WindowManager wm = new WindowManager();
-            Engine.Template.WinClassic app = wm.startWinClassic(ie, "Internet Explorer 4", null, true, true, new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0))));
+            Engine.Template.WinClassic app = wm.startWinClassic(ie, "Internet Explorer 4", null, true, true);
             app.BringToFront();
             startmenu.Hide();
         }
@@ -170,7 +170,7 @@ namespace TimeHACK
                     {
                         WinClassicIE4 ie = new WinClassicIE4();
                         WindowManager wm = new WindowManager();
-                        Engine.Template.WinClassic app = wm.startWinClassic(ie, "Internet Explorer 4", null, true, true, new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0))));
+                        Engine.Template.WinClassic app = wm.startWinClassic(ie, "Internet Explorer 4", null, true, true);
                         app.BringToFront();
                         startmenu.Hide();
                     } else if (objListViewItem.Text == "Web Chat Setup")
@@ -178,7 +178,7 @@ namespace TimeHACK
                         WinClassicInstaller inst = new WinClassicInstaller();
                         WindowManager wm = new WindowManager();
                         inst.installname.Text = "Web Chat 1998";
-                        Engine.Template.WinClassic app = wm.startWinClassic(inst, "Internet Explorer 4", null, true, true, new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0))));
+                        Engine.Template.WinClassic app = wm.startWinClassic(inst, "Internet Explorer 4", null, true, true);
                         app.BringToFront();
                         startmenu.Hide();
                     }

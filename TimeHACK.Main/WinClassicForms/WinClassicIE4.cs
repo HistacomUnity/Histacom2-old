@@ -160,7 +160,7 @@ namespace TimeHACK.WinClassicForms
         {
             WinClassicDownloader opendownload = new WinClassicDownloader();
             WindowManager wm = new WindowManager();
-            wm.startWinClassic(opendownload, "Downloader", null, false, true, new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0))));
+            wm.startWinClassic(opendownload, "Downloader", null, false, true);
             opendownload.appName.Text = "Downloading: Web Chat";
         }
     }
