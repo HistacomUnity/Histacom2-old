@@ -311,10 +311,6 @@
             this.ToolStripMenuItem93 = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem94 = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem95 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toprightcorner = new System.Windows.Forms.Panel();
-            this.bottomrightcorner = new System.Windows.Forms.Panel();
-            this.bottomleftcorner = new System.Windows.Forms.Panel();
-            this.topleftcorner = new System.Windows.Forms.Panel();
             this.program.SuspendLayout();
             this.browsingarea.SuspendLayout();
             this.padamsmain.SuspendLayout();
@@ -374,10 +370,6 @@
             this.program.Controls.Add(this.Panel1);
             this.program.Controls.Add(this.PictureBox1);
             this.program.Controls.Add(this.MenuStrip3);
-            this.program.Controls.Add(this.toprightcorner);
-            this.program.Controls.Add(this.bottomrightcorner);
-            this.program.Controls.Add(this.bottomleftcorner);
-            this.program.Controls.Add(this.topleftcorner);
             this.program.Dock = System.Windows.Forms.DockStyle.Fill;
             this.program.Location = new System.Drawing.Point(0, 0);
             this.program.Name = "program";
@@ -3200,49 +3192,12 @@
             this.ToolStripMenuItem95.Size = new System.Drawing.Size(196, 22);
             this.ToolStripMenuItem95.Text = "Send Feedback";
             // 
-            // toprightcorner
-            // 
-            this.toprightcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.toprightcorner.BackgroundImage = global::TimeHACK.Properties.Resources.TopRight;
-            this.toprightcorner.Location = new System.Drawing.Point(955, 0);
-            this.toprightcorner.Name = "toprightcorner";
-            this.toprightcorner.Size = new System.Drawing.Size(4, 4);
-            this.toprightcorner.TabIndex = 6;
-            // 
-            // bottomrightcorner
-            // 
-            this.bottomrightcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bottomrightcorner.BackgroundImage = global::TimeHACK.Properties.Resources.BottomRight;
-            this.bottomrightcorner.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
-            this.bottomrightcorner.Location = new System.Drawing.Point(955, 590);
-            this.bottomrightcorner.Name = "bottomrightcorner";
-            this.bottomrightcorner.Size = new System.Drawing.Size(4, 4);
-            this.bottomrightcorner.TabIndex = 4;
-            // 
-            // bottomleftcorner
-            // 
-            this.bottomleftcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.bottomleftcorner.BackgroundImage = global::TimeHACK.Properties.Resources.BottomLeft;
-            this.bottomleftcorner.Location = new System.Drawing.Point(0, 590);
-            this.bottomleftcorner.Name = "bottomleftcorner";
-            this.bottomleftcorner.Size = new System.Drawing.Size(4, 4);
-            this.bottomleftcorner.TabIndex = 2;
-            // 
-            // topleftcorner
-            // 
-            this.topleftcorner.BackgroundImage = global::TimeHACK.Properties.Resources.TopLeft;
-            this.topleftcorner.Location = new System.Drawing.Point(0, 0);
-            this.topleftcorner.Name = "topleftcorner";
-            this.topleftcorner.Size = new System.Drawing.Size(4, 4);
-            this.topleftcorner.TabIndex = 1;
-            // 
             // WinClassicIE4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(959, 594);
             this.Controls.Add(this.program);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "WinClassicIE4";
             this.Text = "WinClassicIE4";
             this.Load += new System.EventHandler(this.WinClassicIE4_Load);
@@ -3608,10 +3563,6 @@
         internal System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem93;
         internal System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem94;
         internal System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem95;
-        internal System.Windows.Forms.Panel toprightcorner;
-        internal System.Windows.Forms.Panel bottomrightcorner;
-        internal System.Windows.Forms.Panel bottomleftcorner;
-        internal System.Windows.Forms.Panel topleftcorner;
         private System.Windows.Forms.WebBrowser webBrowser1;
         internal System.Windows.Forms.LinkLabel linkLabel19;
     }

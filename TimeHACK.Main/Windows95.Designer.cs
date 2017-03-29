@@ -75,7 +75,7 @@
             this.SetupWOWFromCompuServeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MSDOSPromptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.EmptyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.WindowsExplorerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.InternetExplorerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MSDOSPromptToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.OutlookExpressToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.WindowsExplorerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -172,7 +172,7 @@
             this.taskbartime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.taskbartime.AutoSize = true;
             this.taskbartime.BackColor = System.Drawing.Color.Transparent;
-            this.taskbartime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.taskbartime.Font = new System.Drawing.Font(TitleScreen.pfc.Families[0], 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taskbartime.Location = new System.Drawing.Point(1217, 6);
             this.taskbartime.Name = "taskbartime";
             this.taskbartime.Size = new System.Drawing.Size(31, 15);
@@ -207,7 +207,7 @@
             this.startmenu.Controls.Add(this.ossidestartmenu);
             this.startmenu.Location = new System.Drawing.Point(0, 397);
             this.startmenu.Name = "startmenu";
-            this.startmenu.Size = new System.Drawing.Size(174, 295);
+            this.startmenu.Size = new System.Drawing.Size(174, 300);
             this.startmenu.TabIndex = 3;
             this.startmenu.Paint += new System.Windows.Forms.PaintEventHandler(this.startmenu_Paint);
             // 
@@ -241,7 +241,7 @@
             this.AccessoriesToolStripMenuItem,
             this.StartUpToolStripMenuItem,
             this.MSDOSPromptToolStripMenuItem,
-            this.WindowsExplorerToolStripMenuItem,
+            this.InternetExplorerToolStripMenuItem,
             this.MSDOSPromptToolStripMenuItem1,
             this.OutlookExpressToolStripMenuItem,
             this.WindowsExplorerToolStripMenuItem1,
@@ -251,7 +251,7 @@
             this.SkindowsToolStripMenuItem,
             this.WebChatToolStripMenuItem,
             this.TimeDistorterToolStripMenuItem});
-            this.ProgramsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProgramsToolStripMenuItem.Font = new System.Drawing.Font(TitleScreen.pfc.Families[0], 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProgramsToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicPrograms;
             this.ProgramsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ProgramsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -527,15 +527,16 @@
             this.EmptyToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.EmptyToolStripMenuItem.Text = "(Empty)";
             // 
-            // WindowsExplorerToolStripMenuItem
+            // InternetExplorerToolStripMenuItem
             // 
-            this.WindowsExplorerToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.WindowsExplorerToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.WindowsExplorerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.WindowsExplorerToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
-            this.WindowsExplorerToolStripMenuItem.Name = "WindowsExplorerToolStripMenuItem";
-            this.WindowsExplorerToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
-            this.WindowsExplorerToolStripMenuItem.Text = "Internet Explorer";
+            this.InternetExplorerToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.InternetExplorerToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.InternetExplorerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.InternetExplorerToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
+            this.InternetExplorerToolStripMenuItem.Name = "InternetExplorerToolStripMenuItem";
+            this.InternetExplorerToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.InternetExplorerToolStripMenuItem.Text = "Internet Explorer";
+            this.InternetExplorerToolStripMenuItem.Click += new System.EventHandler(this.InternetExplorerToolStripMenuItem_Click);
             // 
             // MSDOSPromptToolStripMenuItem1
             // 
@@ -622,7 +623,7 @@
             this.windowManagerTestToolStripMenuItem,
             this.downloaderTestToolStripMenuItem,
             this.installerTestToolStripMenuItem});
-            this.DocumentsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DocumentsToolStripMenuItem.Font = new System.Drawing.Font(TitleScreen.pfc.Families[0], 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DocumentsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("DocumentsToolStripMenuItem.Image")));
             this.DocumentsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DocumentsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -653,7 +654,7 @@
             this.ControlPanelToolStripMenuItem,
             this.PrintersToolStripMenuItem,
             this.TaskbarToolStripMenuItem});
-            this.SettingsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsToolStripMenuItem.Font = new System.Drawing.Font(TitleScreen.pfc.Families[0], 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SettingsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("SettingsToolStripMenuItem.Image")));
             this.SettingsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SettingsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -695,7 +696,7 @@
             this.ComputerToolStripMenuItem,
             this.OnTheInternetToolStripMenuItem,
             this.PeopleToolStripMenuItem});
-            this.FindToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FindToolStripMenuItem.Font = new System.Drawing.Font(TitleScreen.pfc.Families[0], 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FindToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicFind;
             this.FindToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.FindToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -741,7 +742,7 @@
             // HelpToolStripMenuItem
             // 
             this.HelpToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.HelpToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HelpToolStripMenuItem.Font = new System.Drawing.Font(TitleScreen.pfc.Families[0], 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HelpToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicHelp;
             this.HelpToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.HelpToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -755,7 +756,7 @@
             // RunToolStripMenuItem
             // 
             this.RunToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.RunToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RunToolStripMenuItem.Font = new System.Drawing.Font(TitleScreen.pfc.Families[0], 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RunToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicRun;
             this.RunToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RunToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -769,7 +770,7 @@
             // SuspendToolStripMenuItem
             // 
             this.SuspendToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.SuspendToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SuspendToolStripMenuItem.Font = new System.Drawing.Font(TitleScreen.pfc.Families[0], 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SuspendToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("SuspendToolStripMenuItem.Image")));
             this.SuspendToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SuspendToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -782,7 +783,7 @@
             // ShutdownToolStripMenuItem
             // 
             this.ShutdownToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.ShutdownToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShutdownToolStripMenuItem.Font = new System.Drawing.Font(TitleScreen.pfc.Families[0], 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ShutdownToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicShutdown;
             this.ShutdownToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ShutdownToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -838,7 +839,7 @@
             this.desktopicons.BackColor = System.Drawing.Color.Teal;
             this.desktopicons.BackgroundImageTiled = true;
             this.desktopicons.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.desktopicons.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.desktopicons.Font = new System.Drawing.Font(TitleScreen.pfc.Families[0], 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.desktopicons.ForeColor = System.Drawing.Color.White;
             this.desktopicons.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1,
@@ -1087,7 +1088,7 @@
         internal System.Windows.Forms.ToolStripMenuItem SetupWOWFromCompuServeToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem MSDOSPromptToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem EmptyToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem WindowsExplorerToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem InternetExplorerToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem MSDOSPromptToolStripMenuItem1;
         internal System.Windows.Forms.ToolStripMenuItem OutlookExpressToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem WindowsExplorerToolStripMenuItem1;
