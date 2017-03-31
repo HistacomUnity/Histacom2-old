@@ -68,7 +68,6 @@ C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\bin\Release\TimeHACK.
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\bin\Release\TimeHACK.pdb
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\bin\Release\TimeHACK.Engine.dll
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\bin\Release\TimeHACK.Engine.pdb
-C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\bin\Release\Newtonsoft.Json.xml
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.exe.manifest
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.application
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.exe
