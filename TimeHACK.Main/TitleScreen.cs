@@ -2,7 +2,9 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using TimeHACK.Main;
+using TimeHACK.OS.Win95;
+using TimeHACK.Engine;
+
 namespace TimeHACK
 {
     public partial class TitleScreen : Form

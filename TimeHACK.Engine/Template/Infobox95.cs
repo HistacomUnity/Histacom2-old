@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace TimeHACK.Main.Template
+namespace TimeHACK.Engine.Template
 {
     public partial class Infobox95 : Form
     {

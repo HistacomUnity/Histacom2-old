@@ -3,10 +3,10 @@ using System.Drawing;
 using System.IO;
 using System.Media;
 using System.Windows.Forms;
-using TimeHACK.Main;
+using TimeHACK.Engine;
 using TimeHACK.WinClassicForms;
 
-namespace TimeHACK
+namespace TimeHACK.OS.Win95
 {
     public partial class Windows95 : Form
     {
@@ -148,7 +148,7 @@ namespace TimeHACK
         private void InternetExplorerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WinClassicIE4 ie = new WinClassicIE4();
-            Main.Template.WinClassic app = wm.startWin95(ie, "Internet Explorer 4", null, true, true);
+            Engine.Template.WinClassic app = wm.startWin95(ie, "Internet Explorer 4", null, true, true);
             app.BringToFront();
             startmenu.Hide();
         }
@@ -166,14 +166,14 @@ namespace TimeHACK
                     if (objListViewItem.Text == "Internet Explorer")
                     {
                         WinClassicIE4 ie = new WinClassicIE4();
-                        Main.Template.WinClassic app = wm.startWin95(ie, "Internet Explorer 4", null, true, true);
+                        Engine.Template.WinClassic app = wm.startWin95(ie, "Internet Explorer 4", null, true, true);
                         app.BringToFront();
                         startmenu.Hide();
                     } else if (objListViewItem.Text == "Web Chat Setup")
                     {
                         WinClassicInstaller inst = new WinClassicInstaller();
                         inst.installname.Text = "Web Chat 1998";
-                        Main.Template.WinClassic app = wm.startWin95(inst, "Web Chat Setup", null, true, true);
+                        Engine.Template.WinClassic app = wm.startWin95(inst, "Web Chat Setup", null, true, true);
                         app.BringToFront();
                         startmenu.Hide();
                     }

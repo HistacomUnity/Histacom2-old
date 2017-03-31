@@ -56,26 +56,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TimeHACK.exe" size="4304896">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TimeHACK.exe" size="5509120">
       <assemblyIdentity name="TimeHACK" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>U7Kekeyx6Ql+9uqUNh8/OwQYQaKLz8r3pS1n2eI6994=</dsig:DigestValue>
+        <dsig:DigestValue>+7pai1S3Q/PZ9rTMRZLCxc+p+EzrZ2Tk18Rz8h9s7jY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TimeHACK.Engine.dll" size="21504">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TimeHACK.Engine.dll" size="126976">
       <assemblyIdentity name="TimeHACK.Engine" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>egCP83neM3apVMcIH6zkNIiRVob2rALwSMmYPhotJik=</dsig:DigestValue>
+        <dsig:DigestValue>SNU8shTRP8QXCifGeLuklgIPQZQs0gMJyA6LTOuPX5w=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -331,6 +331,15 @@
       <dsig:DigestValue>uw/4Jjmd9N9HqHaI17CYoAEwsYy8+2t/nJ3z5vGDD04=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="Resources\WinClassic\WinClassicProgramItem.png" size="302">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>M5GJAXXqneQ9yY1yfeuyV5j9IYIBp6b0BRj5KAOwv2s=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="Resources\WinClassic\WinClassicPrograms.png" size="377">
     <hash>
       <dsig:Transforms>
@@ -410,114 +419,6 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>x6TTsUiEHqlRiSdsR7WH5jiWTj1u/cJsO7BItxU4X9Q=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Resources\WinClassic\Window\BottomLeft.png" size="173">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>vLKiQmF9fj0io7r6UGuL5e/3WSAHHXMKpKiUziMXHOQ=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Resources\WinClassic\Window\BottomRight.png" size="173">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>4iHqcxBewVjdPPl1AEChcp2PGd7U07uBs0i748VH91o=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Resources\WinClassic\Window\BottomSide.png" size="165">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>9CDLugo2+itYyEtaoyicSqTf3tRCNT7f3H94BCjT+MI=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Resources\WinClassic\Window\LeftSide.png" size="164">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>EdvcURgatvq9VwLWLL/Dm9nvR1AZUAZOeIJfJbpzVu8=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Resources\WinClassic\Window\RightSide.png" size="164">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>yrDBF1QPiJUsw5OapnDIEykQ8dj5guyF87IFQaEAs2w=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Resources\WinClassic\Window\sliversilver.png" size="156">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>T9l945vYoKcCSIEDDqot2H3OVrkVxqkoQ/E6pZokY8g=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Resources\WinClassic\Window\TopLeft.png" size="170">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>fNYpCdwE/1pbT1i/vDl94vOLJFdHLe1VrOt4SXQiavA=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Resources\WinClassic\Window\TopRight.png" size="173">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>YehKOiCd84vrlEqtmKBpwT9e/HFf31/IqbbXDihNtfc=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Resources\WinClassic\Window\TopSide.png" size="165">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>mP7l6tIyYar/QNmZ2dYlK5ziwCzwTCE2TzvrJv4i/UQ=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Resources\WinClassic\Window\WinClassicClose.png" size="236">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>xZ618k4GMln49q2Dax8vRsViqQN9qPxt1VhrnxtyHJ8=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Resources\WinClassic\Window\WinClassicMax.png" size="206">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>LyiYNXHdtH09DFLzaoV8YCHx1QoLx4ZEEjKhVdIUrR0=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Resources\WinClassic\Window\WinClassicMin.png" size="201">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>r1NgHwcJelFqM+/Fla3stkxQ+y1PqE5gxtYktbcDxHI=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

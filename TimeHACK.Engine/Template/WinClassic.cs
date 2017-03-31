@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace TimeHACK.Main.Template
+namespace TimeHACK.Engine.Template
 {
     public partial class WinClassic : Form
     {
