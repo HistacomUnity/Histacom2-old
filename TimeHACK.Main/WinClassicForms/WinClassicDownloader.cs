@@ -58,7 +58,7 @@ namespace TimeHACK.WinClassicForms
                 }
                 if (appName.Text == "Downloading: Web Chat")
                 {
-                    Windows95.desktopicons.Items.Add("Web Chat Setup", imageIndex: 11);
+                    TitleScreen.frm95.desktopicons.Items.Add("Web Chat Setup", imageIndex: 11);
                 }
                 if (appName.Text == "Downloading: hwcv.exe")
                 {

@@ -63,19 +63,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>hYNudg0pa9pdzPPS+8FICDMsvMVpUTxvq9Inh6HUbhE=</dsig:DigestValue>
+        <dsig:DigestValue>uej3H/Ood53UtfISOj5TukUpUyWOhgL37Yaa0XoGz/A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TimeHACK.Engine.dll" size="20992">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TimeHACK.Engine.dll" size="21504">
       <assemblyIdentity name="TimeHACK.Engine" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>9LWiwIaWzKxJKS8B5yDD3ciYAkI1Fyn89e2XKmrud8s=</dsig:DigestValue>
+        <dsig:DigestValue>JcbRZTkAsDszUwGNpbxDF8k8HOqul6OO1xlMBp+H1As=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

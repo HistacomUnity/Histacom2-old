@@ -9,6 +9,7 @@ namespace TimeHACK
     public partial class TitleScreen : Form
     {
         public static System.Drawing.Text.PrivateFontCollection pfc = new System.Drawing.Text.PrivateFontCollection();
+        public static Windows95 frm95;
 
         public TitleScreen()
         {
@@ -64,11 +65,11 @@ namespace TimeHACK
             if (vm_mode.Checked != true)
             {
                 // Generate fullscreen desktop
-                Windows95 frm = new Windows95();
-                frm.TopMost = true;
-                frm.FormBorderStyle = FormBorderStyle.None;
-                frm.WindowState = FormWindowState.Maximized;
-                frm.Show();
+                frm95 = new Windows95();
+                frm95.TopMost = true;
+                frm95.FormBorderStyle = FormBorderStyle.None;
+                frm95.WindowState = FormWindowState.Maximized;
+                frm95.Show();
                 Hide();
             }
             // If VM Mode is enabled
