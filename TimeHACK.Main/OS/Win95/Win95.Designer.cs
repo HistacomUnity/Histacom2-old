@@ -29,23 +29,46 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("My Computer", 0);
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("Network Neighborhood", 5);
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem("Inbox", 3);
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem("Recycle Bin", 7);
+            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem("Internet Explorer", 2);
+            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem("Online services", 1);
+            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem("Set Up The Microsoft Network", 4);
+            System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem("Outlook Express", 6);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Windows95));
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("My Computer", 0);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Network Neighborhood", 5);
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Inbox", 3);
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("Recycle Bin", 7);
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("Internet Explorer", 2);
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("Online services", 1);
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("Set Up The Microsoft Network", 4);
-            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("Outlook Express", 6);
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.startmenu = new System.Windows.Forms.Panel();
+            this.startmenuitems = new System.Windows.Forms.MenuStrip();
+            this.ossidestartmenu = new System.Windows.Forms.Panel();
+            this.clockTimer = new System.Windows.Forms.Timer(this.components);
+            this.desktopImages = new System.Windows.Forms.ImageList(this.components);
+            this.desktopicons = new System.Windows.Forms.ListView();
+            this.rightclickbackproperties = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.PropertiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ByNameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ByTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BySizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AutoArrangeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ByDateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.LineUpIconsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PasteShortcutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.NewToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.FolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ShortcutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.WaveSoundToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TextDocumentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.WordPadDocumentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BitmapImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MicrosoftDataLinkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PropertiesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.taskbar = new System.Windows.Forms.Panel();
             this.taskbartime = new System.Windows.Forms.Label();
             this.clockPanel = new System.Windows.Forms.Panel();
             this.startbutton = new System.Windows.Forms.PictureBox();
-            this.startmenu = new System.Windows.Forms.Panel();
-            this.startmenuitems = new System.Windows.Forms.MenuStrip();
             this.ProgramsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AccessoriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CommunicationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -88,6 +111,8 @@
             this.DocumentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.windowManagerTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.downloaderTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.installerTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.infoboxTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ControlPanelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PrintersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -101,39 +126,15 @@
             this.RunToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SuspendToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ShutdownToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ossidestartmenu = new System.Windows.Forms.Panel();
             this.osimage = new System.Windows.Forms.PictureBox();
-            this.clockTimer = new System.Windows.Forms.Timer(this.components);
-            this.desktopImages = new System.Windows.Forms.ImageList(this.components);
-            this.desktopicons = new System.Windows.Forms.ListView();
-            this.rightclickbackproperties = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.PropertiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ByNameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ByTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.BySizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.AutoArrangeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ByDateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.LineUpIconsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PasteShortcutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.NewToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.FolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ShortcutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.WaveSoundToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.TextDocumentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.WordPadDocumentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.BitmapImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.MicrosoftDataLinkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PropertiesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.installerTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
-            this.taskbar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.startbutton)).BeginInit();
             this.startmenu.SuspendLayout();
             this.startmenuitems.SuspendLayout();
             this.ossidestartmenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.osimage)).BeginInit();
             this.rightclickbackproperties.SuspendLayout();
+            this.taskbar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.startbutton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.osimage)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -154,58 +155,13 @@
             this.panel2.Size = new System.Drawing.Size(54, 22);
             this.panel2.TabIndex = 1;
             // 
-            // taskbar
-            // 
-            this.taskbar.BackColor = System.Drawing.Color.Silver;
-            this.taskbar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("taskbar.BackgroundImage")));
-            this.taskbar.Controls.Add(this.taskbartime);
-            this.taskbar.Controls.Add(this.clockPanel);
-            this.taskbar.Controls.Add(this.startbutton);
-            this.taskbar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.taskbar.Location = new System.Drawing.Point(0, 692);
-            this.taskbar.Name = "taskbar";
-            this.taskbar.Size = new System.Drawing.Size(1280, 28);
-            this.taskbar.TabIndex = 2;
-            // 
-            // taskbartime
-            // 
-            this.taskbartime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.taskbartime.AutoSize = true;
-            this.taskbartime.BackColor = System.Drawing.Color.Transparent;
-            this.taskbartime.Font = new System.Drawing.Font(TitleScreen.pfc.Families[0], 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taskbartime.Location = new System.Drawing.Point(1217, 6);
-            this.taskbartime.Name = "taskbartime";
-            this.taskbartime.Size = new System.Drawing.Size(31, 15);
-            this.taskbartime.TabIndex = 2;
-            this.taskbartime.Text = "time";
-            this.taskbartime.Click += new System.EventHandler(this.taskbartime_Click);
-            // 
-            // clockPanel
-            // 
-            this.clockPanel.BackgroundImage = global::TimeHACK.Properties.Resources.WinClassicTime;
-            this.clockPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.clockPanel.Location = new System.Drawing.Point(1215, 0);
-            this.clockPanel.Name = "clockPanel";
-            this.clockPanel.Size = new System.Drawing.Size(65, 28);
-            this.clockPanel.TabIndex = 4;
-            // 
-            // startbutton
-            // 
-            this.startbutton.Image = ((System.Drawing.Image)(resources.GetObject("startbutton.Image")));
-            this.startbutton.Location = new System.Drawing.Point(3, 3);
-            this.startbutton.Name = "startbutton";
-            this.startbutton.Size = new System.Drawing.Size(54, 22);
-            this.startbutton.TabIndex = 3;
-            this.startbutton.TabStop = false;
-            this.startbutton.Click += new System.EventHandler(this.startbutton_Click);
-            // 
             // startmenu
             // 
             this.startmenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.startmenu.BackColor = System.Drawing.Color.Silver;
             this.startmenu.Controls.Add(this.startmenuitems);
             this.startmenu.Controls.Add(this.ossidestartmenu);
-            this.startmenu.Location = new System.Drawing.Point(0, 397);
+            this.startmenu.Location = new System.Drawing.Point(0, 392);
             this.startmenu.Name = "startmenu";
             this.startmenu.Size = new System.Drawing.Size(174, 300);
             this.startmenu.TabIndex = 3;
@@ -230,651 +186,9 @@
             this.startmenuitems.Name = "startmenuitems";
             this.startmenuitems.Padding = new System.Windows.Forms.Padding(6, 2, 0, 0);
             this.startmenuitems.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.startmenuitems.Size = new System.Drawing.Size(144, 311);
+            this.startmenuitems.Size = new System.Drawing.Size(141, 311);
             this.startmenuitems.TabIndex = 0;
             this.startmenuitems.Text = "StartMenu";
-            // 
-            // ProgramsToolStripMenuItem
-            // 
-            this.ProgramsToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.ProgramsToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.ProgramsToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ProgramsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.AccessoriesToolStripMenuItem,
-            this.StartUpToolStripMenuItem,
-            this.MSDOSPromptToolStripMenuItem,
-            this.InternetExplorerToolStripMenuItem,
-            this.MSDOSPromptToolStripMenuItem1,
-            this.OutlookExpressToolStripMenuItem,
-            this.WindowsExplorerToolStripMenuItem1,
-            this.GuessTheNumberToolStripMenuItem,
-            this.StartRunnerToolStripMenuItem,
-            this.ErrorBlasterToolStripMenuItem,
-            this.SkindowsToolStripMenuItem,
-            this.WebChatToolStripMenuItem,
-            this.TimeDistorterToolStripMenuItem});
-            this.ProgramsToolStripMenuItem.Font = new System.Drawing.Font(TitleScreen.pfc.Families[0], 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProgramsToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicPrograms;
-            this.ProgramsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ProgramsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ProgramsToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
-            this.ProgramsToolStripMenuItem.Name = "ProgramsToolStripMenuItem";
-            this.ProgramsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.ProgramsToolStripMenuItem.Size = new System.Drawing.Size(137, 36);
-            this.ProgramsToolStripMenuItem.Text = "Programs";
-            // 
-            // AccessoriesToolStripMenuItem
-            // 
-            this.AccessoriesToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.AccessoriesToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.AccessoriesToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.AccessoriesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.CommunicationsToolStripMenuItem,
-            this.MultimediaToolStripMenuItem,
-            this.SystemToolsToolStripMenuItem,
-            this.AddressBookToolStripMenuItem,
-            this.CalculatorToolStripMenuItem,
-            this.HyperTerminalToolStripMenuItem,
-            this.ImagingToolStripMenuItem,
-            this.NotePadToolStripMenuItem,
-            this.OnlineRegistrationToolStripMenuItem,
-            this.PaintToolStripMenuItem,
-            this.PhoneDialerToolStripMenuItem,
-            this.WordPadToolStripMenuItem});
-            this.AccessoriesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("AccessoriesToolStripMenuItem.Image")));
-            this.AccessoriesToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AccessoriesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.AccessoriesToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
-            this.AccessoriesToolStripMenuItem.Name = "AccessoriesToolStripMenuItem";
-            this.AccessoriesToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
-            this.AccessoriesToolStripMenuItem.Text = "Accessories";
-            // 
-            // CommunicationsToolStripMenuItem
-            // 
-            this.CommunicationsToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.CommunicationsToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.CommunicationsToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.CommunicationsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.InternetConnectionWizardToolStripMenuItem,
-            this.NetMeetingToolStripMenuItem});
-            this.CommunicationsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("CommunicationsToolStripMenuItem.Image")));
-            this.CommunicationsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.CommunicationsToolStripMenuItem.Name = "CommunicationsToolStripMenuItem";
-            this.CommunicationsToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
-            this.CommunicationsToolStripMenuItem.Text = "Communications";
-            // 
-            // InternetConnectionWizardToolStripMenuItem
-            // 
-            this.InternetConnectionWizardToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.InternetConnectionWizardToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.InternetConnectionWizardToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.InternetConnectionWizardToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.InternetConnectionWizardToolStripMenuItem.Name = "InternetConnectionWizardToolStripMenuItem";
-            this.InternetConnectionWizardToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
-            this.InternetConnectionWizardToolStripMenuItem.Text = "Internet Connection Wizard";
-            // 
-            // NetMeetingToolStripMenuItem
-            // 
-            this.NetMeetingToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.NetMeetingToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.NetMeetingToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.NetMeetingToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.NetMeetingToolStripMenuItem.Name = "NetMeetingToolStripMenuItem";
-            this.NetMeetingToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
-            this.NetMeetingToolStripMenuItem.Text = "NetMeeting";
-            // 
-            // MultimediaToolStripMenuItem
-            // 
-            this.MultimediaToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.MultimediaToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.MultimediaToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.MultimediaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.CDPlayerToolStripMenuItem,
-            this.SoundRecorderToolStripMenuItem,
-            this.VolumeControlToolStripMenuItem,
-            this.WindowsMediaPlayerToolStripMenuItem});
-            this.MultimediaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("MultimediaToolStripMenuItem.Image")));
-            this.MultimediaToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.MultimediaToolStripMenuItem.Name = "MultimediaToolStripMenuItem";
-            this.MultimediaToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
-            this.MultimediaToolStripMenuItem.Text = "Multimedia";
-            // 
-            // CDPlayerToolStripMenuItem
-            // 
-            this.CDPlayerToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.CDPlayerToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.CDPlayerToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.CDPlayerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.CDPlayerToolStripMenuItem.Name = "CDPlayerToolStripMenuItem";
-            this.CDPlayerToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.CDPlayerToolStripMenuItem.Text = "CD Player";
-            // 
-            // SoundRecorderToolStripMenuItem
-            // 
-            this.SoundRecorderToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.SoundRecorderToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.SoundRecorderToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.SoundRecorderToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SoundRecorderToolStripMenuItem.Name = "SoundRecorderToolStripMenuItem";
-            this.SoundRecorderToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.SoundRecorderToolStripMenuItem.Text = "Sound Recorder";
-            // 
-            // VolumeControlToolStripMenuItem
-            // 
-            this.VolumeControlToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.VolumeControlToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.VolumeControlToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.VolumeControlToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.VolumeControlToolStripMenuItem.Name = "VolumeControlToolStripMenuItem";
-            this.VolumeControlToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.VolumeControlToolStripMenuItem.Text = "Volume Control";
-            // 
-            // WindowsMediaPlayerToolStripMenuItem
-            // 
-            this.WindowsMediaPlayerToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.WindowsMediaPlayerToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.WindowsMediaPlayerToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.WindowsMediaPlayerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.WindowsMediaPlayerToolStripMenuItem.Name = "WindowsMediaPlayerToolStripMenuItem";
-            this.WindowsMediaPlayerToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.WindowsMediaPlayerToolStripMenuItem.Text = "Windows Media Player";
-            // 
-            // SystemToolsToolStripMenuItem
-            // 
-            this.SystemToolsToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.SystemToolsToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.SystemToolsToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.SystemToolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.DiskDefragmenterToolStripMenuItem,
-            this.ScanDiskToolStripMenuItem});
-            this.SystemToolsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("SystemToolsToolStripMenuItem.Image")));
-            this.SystemToolsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SystemToolsToolStripMenuItem.Name = "SystemToolsToolStripMenuItem";
-            this.SystemToolsToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
-            this.SystemToolsToolStripMenuItem.Text = "System Tools";
-            // 
-            // DiskDefragmenterToolStripMenuItem
-            // 
-            this.DiskDefragmenterToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.DiskDefragmenterToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.DiskDefragmenterToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.DiskDefragmenterToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.DiskDefragmenterToolStripMenuItem.Name = "DiskDefragmenterToolStripMenuItem";
-            this.DiskDefragmenterToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.DiskDefragmenterToolStripMenuItem.Text = "Disk Defragmenter";
-            // 
-            // ScanDiskToolStripMenuItem
-            // 
-            this.ScanDiskToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.ScanDiskToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.ScanDiskToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ScanDiskToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ScanDiskToolStripMenuItem.Name = "ScanDiskToolStripMenuItem";
-            this.ScanDiskToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.ScanDiskToolStripMenuItem.Text = "ScanDisk";
-            // 
-            // AddressBookToolStripMenuItem
-            // 
-            this.AddressBookToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.AddressBookToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.AddressBookToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.AddressBookToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.AddressBookToolStripMenuItem.Name = "AddressBookToolStripMenuItem";
-            this.AddressBookToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
-            this.AddressBookToolStripMenuItem.Text = "Address Book";
-            // 
-            // CalculatorToolStripMenuItem
-            // 
-            this.CalculatorToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.CalculatorToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.CalculatorToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.CalculatorToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("CalculatorToolStripMenuItem.Image")));
-            this.CalculatorToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.CalculatorToolStripMenuItem.Name = "CalculatorToolStripMenuItem";
-            this.CalculatorToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
-            this.CalculatorToolStripMenuItem.Text = "Calculator";
-            // 
-            // HyperTerminalToolStripMenuItem
-            // 
-            this.HyperTerminalToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.HyperTerminalToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.HyperTerminalToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.HyperTerminalToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.HyperTerminalToolStripMenuItem.Name = "HyperTerminalToolStripMenuItem";
-            this.HyperTerminalToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
-            this.HyperTerminalToolStripMenuItem.Text = "HyperTerminal";
-            // 
-            // ImagingToolStripMenuItem
-            // 
-            this.ImagingToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.ImagingToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.ImagingToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ImagingToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ImagingToolStripMenuItem.Name = "ImagingToolStripMenuItem";
-            this.ImagingToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
-            this.ImagingToolStripMenuItem.Text = "Imaging";
-            // 
-            // NotePadToolStripMenuItem
-            // 
-            this.NotePadToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.NotePadToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.NotePadToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.NotePadToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("NotePadToolStripMenuItem.Image")));
-            this.NotePadToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.NotePadToolStripMenuItem.Name = "NotePadToolStripMenuItem";
-            this.NotePadToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
-            this.NotePadToolStripMenuItem.Text = "NotePad";
-            this.NotePadToolStripMenuItem.Click += new System.EventHandler(this.NotePadToolStripMenuItem_Click);
-            // 
-            // OnlineRegistrationToolStripMenuItem
-            // 
-            this.OnlineRegistrationToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.OnlineRegistrationToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.OnlineRegistrationToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.OnlineRegistrationToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.OnlineRegistrationToolStripMenuItem.Name = "OnlineRegistrationToolStripMenuItem";
-            this.OnlineRegistrationToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
-            this.OnlineRegistrationToolStripMenuItem.Text = "Online Registration";
-            // 
-            // PaintToolStripMenuItem
-            // 
-            this.PaintToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.PaintToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.PaintToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.PaintToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("PaintToolStripMenuItem.Image")));
-            this.PaintToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.PaintToolStripMenuItem.Name = "PaintToolStripMenuItem";
-            this.PaintToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
-            this.PaintToolStripMenuItem.Text = "Paint";
-            // 
-            // PhoneDialerToolStripMenuItem
-            // 
-            this.PhoneDialerToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.PhoneDialerToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.PhoneDialerToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.PhoneDialerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.PhoneDialerToolStripMenuItem.Name = "PhoneDialerToolStripMenuItem";
-            this.PhoneDialerToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
-            this.PhoneDialerToolStripMenuItem.Text = "Phone Dialer";
-            // 
-            // WordPadToolStripMenuItem
-            // 
-            this.WordPadToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.WordPadToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.WordPadToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.WordPadToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("WordPadToolStripMenuItem.Image")));
-            this.WordPadToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.WordPadToolStripMenuItem.Name = "WordPadToolStripMenuItem";
-            this.WordPadToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
-            this.WordPadToolStripMenuItem.Text = "WordPad";
-            // 
-            // StartUpToolStripMenuItem
-            // 
-            this.StartUpToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.StartUpToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.StartUpToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.StartUpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.AOLInternetFREETrialToolStripMenuItem,
-            this.ATTWorldNetSignupToolStripMenuItem,
-            this.SetupCompuServe30ToolStripMenuItem,
-            this.SetupWOWFromCompuServeToolStripMenuItem});
-            this.StartUpToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("StartUpToolStripMenuItem.Image")));
-            this.StartUpToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.StartUpToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.StartUpToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
-            this.StartUpToolStripMenuItem.Name = "StartUpToolStripMenuItem";
-            this.StartUpToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
-            this.StartUpToolStripMenuItem.Text = "Online Services";
-            // 
-            // AOLInternetFREETrialToolStripMenuItem
-            // 
-            this.AOLInternetFREETrialToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.AOLInternetFREETrialToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.AOLInternetFREETrialToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.AOLInternetFREETrialToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.AOLInternetFREETrialToolStripMenuItem.Name = "AOLInternetFREETrialToolStripMenuItem";
-            this.AOLInternetFREETrialToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
-            this.AOLInternetFREETrialToolStripMenuItem.Text = "AOL & Internet FREE Trial!";
-            // 
-            // ATTWorldNetSignupToolStripMenuItem
-            // 
-            this.ATTWorldNetSignupToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.ATTWorldNetSignupToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.ATTWorldNetSignupToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ATTWorldNetSignupToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ATTWorldNetSignupToolStripMenuItem.Name = "ATTWorldNetSignupToolStripMenuItem";
-            this.ATTWorldNetSignupToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
-            this.ATTWorldNetSignupToolStripMenuItem.Text = "AT&T WorldNet Signup";
-            // 
-            // SetupCompuServe30ToolStripMenuItem
-            // 
-            this.SetupCompuServe30ToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.SetupCompuServe30ToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.SetupCompuServe30ToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.SetupCompuServe30ToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SetupCompuServe30ToolStripMenuItem.Name = "SetupCompuServe30ToolStripMenuItem";
-            this.SetupCompuServe30ToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
-            this.SetupCompuServe30ToolStripMenuItem.Text = "Setup CompuServe 3.0";
-            // 
-            // SetupWOWFromCompuServeToolStripMenuItem
-            // 
-            this.SetupWOWFromCompuServeToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.SetupWOWFromCompuServeToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.SetupWOWFromCompuServeToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.SetupWOWFromCompuServeToolStripMenuItem.Name = "SetupWOWFromCompuServeToolStripMenuItem";
-            this.SetupWOWFromCompuServeToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
-            this.SetupWOWFromCompuServeToolStripMenuItem.Text = "Setup WOW! from CompuServe";
-            // 
-            // MSDOSPromptToolStripMenuItem
-            // 
-            this.MSDOSPromptToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.MSDOSPromptToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.MSDOSPromptToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.MSDOSPromptToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.EmptyToolStripMenuItem});
-            this.MSDOSPromptToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("MSDOSPromptToolStripMenuItem.Image")));
-            this.MSDOSPromptToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.MSDOSPromptToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.MSDOSPromptToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
-            this.MSDOSPromptToolStripMenuItem.Name = "MSDOSPromptToolStripMenuItem";
-            this.MSDOSPromptToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
-            this.MSDOSPromptToolStripMenuItem.Text = "StartUp";
-            // 
-            // EmptyToolStripMenuItem
-            // 
-            this.EmptyToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.EmptyToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.EmptyToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.EmptyToolStripMenuItem.Name = "EmptyToolStripMenuItem";
-            this.EmptyToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
-            this.EmptyToolStripMenuItem.Text = "(Empty)";
-            // 
-            // InternetExplorerToolStripMenuItem
-            // 
-            this.InternetExplorerToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.InternetExplorerToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.InternetExplorerToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.InternetExplorerToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.InternetExplorerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.InternetExplorerToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
-            this.InternetExplorerToolStripMenuItem.Name = "InternetExplorerToolStripMenuItem";
-            this.InternetExplorerToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
-            this.InternetExplorerToolStripMenuItem.Text = "Internet Explorer";
-            this.InternetExplorerToolStripMenuItem.Click += new System.EventHandler(this.InternetExplorerToolStripMenuItem_Click);
-            // 
-            // MSDOSPromptToolStripMenuItem1
-            // 
-            this.MSDOSPromptToolStripMenuItem1.BackColor = System.Drawing.Color.Silver;
-            this.MSDOSPromptToolStripMenuItem1.BackgroundImage = Properties.Resources.sliversilver;
-            this.MSDOSPromptToolStripMenuItem1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.MSDOSPromptToolStripMenuItem1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.MSDOSPromptToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.MSDOSPromptToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Silver;
-            this.MSDOSPromptToolStripMenuItem1.Name = "MSDOSPromptToolStripMenuItem1";
-            this.MSDOSPromptToolStripMenuItem1.Size = new System.Drawing.Size(184, 26);
-            this.MSDOSPromptToolStripMenuItem1.Text = "MS-DOS Prompt";
-            // 
-            // OutlookExpressToolStripMenuItem
-            // 
-            this.OutlookExpressToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.OutlookExpressToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.OutlookExpressToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.OutlookExpressToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.OutlookExpressToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.OutlookExpressToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
-            this.OutlookExpressToolStripMenuItem.Name = "OutlookExpressToolStripMenuItem";
-            this.OutlookExpressToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
-            this.OutlookExpressToolStripMenuItem.Text = "Outlook Express";
-            // 
-            // WindowsExplorerToolStripMenuItem1
-            // 
-            this.WindowsExplorerToolStripMenuItem1.BackColor = System.Drawing.Color.Silver;
-            this.WindowsExplorerToolStripMenuItem1.BackgroundImage = Properties.Resources.sliversilver;
-            this.WindowsExplorerToolStripMenuItem1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.WindowsExplorerToolStripMenuItem1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.WindowsExplorerToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.WindowsExplorerToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Silver;
-            this.WindowsExplorerToolStripMenuItem1.Name = "WindowsExplorerToolStripMenuItem1";
-            this.WindowsExplorerToolStripMenuItem1.Size = new System.Drawing.Size(184, 26);
-            this.WindowsExplorerToolStripMenuItem1.Text = "Windows Explorer";
-            // 
-            // GuessTheNumberToolStripMenuItem
-            // 
-            this.GuessTheNumberToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.GuessTheNumberToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.GuessTheNumberToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.GuessTheNumberToolStripMenuItem.Name = "GuessTheNumberToolStripMenuItem";
-            this.GuessTheNumberToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
-            this.GuessTheNumberToolStripMenuItem.Text = "Guess The Number";
-            this.GuessTheNumberToolStripMenuItem.Visible = false;
-            // 
-            // StartRunnerToolStripMenuItem
-            // 
-            this.StartRunnerToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.StartRunnerToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.StartRunnerToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.StartRunnerToolStripMenuItem.Name = "StartRunnerToolStripMenuItem";
-            this.StartRunnerToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
-            this.StartRunnerToolStripMenuItem.Text = "Start Runner";
-            this.StartRunnerToolStripMenuItem.Visible = false;
-            // 
-            // ErrorBlasterToolStripMenuItem
-            // 
-            this.ErrorBlasterToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.ErrorBlasterToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.ErrorBlasterToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ErrorBlasterToolStripMenuItem.Name = "ErrorBlasterToolStripMenuItem";
-            this.ErrorBlasterToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
-            this.ErrorBlasterToolStripMenuItem.Text = "Error Blaster";
-            this.ErrorBlasterToolStripMenuItem.Visible = false;
-            // 
-            // SkindowsToolStripMenuItem
-            // 
-            this.SkindowsToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.SkindowsToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.SkindowsToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.SkindowsToolStripMenuItem.Name = "SkindowsToolStripMenuItem";
-            this.SkindowsToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
-            this.SkindowsToolStripMenuItem.Text = "Skindows 95";
-            this.SkindowsToolStripMenuItem.Visible = false;
-            // 
-            // WebChatToolStripMenuItem
-            // 
-            this.WebChatToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.WebChatToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.WebChatToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.WebChatToolStripMenuItem.Name = "WebChatToolStripMenuItem";
-            this.WebChatToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
-            this.WebChatToolStripMenuItem.Text = "Web Chat";
-            this.WebChatToolStripMenuItem.Visible = false;
-            // 
-            // TimeDistorterToolStripMenuItem
-            // 
-            this.TimeDistorterToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.TimeDistorterToolStripMenuItem.BackgroundImage = Properties.Resources.sliversilver;
-            this.TimeDistorterToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.TimeDistorterToolStripMenuItem.Name = "TimeDistorterToolStripMenuItem";
-            this.TimeDistorterToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
-            this.TimeDistorterToolStripMenuItem.Text = "Time Distorter";
-            this.TimeDistorterToolStripMenuItem.Visible = false;
-            // 
-            // DocumentsToolStripMenuItem
-            // 
-            this.DocumentsToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.DocumentsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.windowManagerTestToolStripMenuItem,
-            this.downloaderTestToolStripMenuItem,
-            this.installerTestToolStripMenuItem});
-            this.DocumentsToolStripMenuItem.Font = new System.Drawing.Font(TitleScreen.pfc.Families[0], 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DocumentsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("DocumentsToolStripMenuItem.Image")));
-            this.DocumentsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DocumentsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.DocumentsToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
-            this.DocumentsToolStripMenuItem.Name = "DocumentsToolStripMenuItem";
-            this.DocumentsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.DocumentsToolStripMenuItem.Size = new System.Drawing.Size(137, 36);
-            this.DocumentsToolStripMenuItem.Text = "Documents";
-            // 
-            // windowManagerTestToolStripMenuItem
-            // 
-            this.windowManagerTestToolStripMenuItem.Name = "windowManagerTestToolStripMenuItem";
-            this.windowManagerTestToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.windowManagerTestToolStripMenuItem.Text = "WindowManagerTest";
-            this.windowManagerTestToolStripMenuItem.Click += new System.EventHandler(this.windowManagerTestToolStripMenuItem_Click);
-            // 
-            // downloaderTestToolStripMenuItem
-            // 
-            this.downloaderTestToolStripMenuItem.Name = "downloaderTestToolStripMenuItem";
-            this.downloaderTestToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.downloaderTestToolStripMenuItem.Text = "DownloaderTest";
-            this.downloaderTestToolStripMenuItem.Click += new System.EventHandler(this.downloaderTestToolStripMenuItem_Click);
-            // 
-            // SettingsToolStripMenuItem
-            // 
-            this.SettingsToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.SettingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ControlPanelToolStripMenuItem,
-            this.PrintersToolStripMenuItem,
-            this.TaskbarToolStripMenuItem});
-            this.SettingsToolStripMenuItem.Font = new System.Drawing.Font(TitleScreen.pfc.Families[0], 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SettingsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("SettingsToolStripMenuItem.Image")));
-            this.SettingsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SettingsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SettingsToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
-            this.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem";
-            this.SettingsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.SettingsToolStripMenuItem.Size = new System.Drawing.Size(137, 36);
-            this.SettingsToolStripMenuItem.Text = "Settings";
-            // 
-            // ControlPanelToolStripMenuItem
-            // 
-            this.ControlPanelToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.ControlPanelToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ControlPanelToolStripMenuItem.Name = "ControlPanelToolStripMenuItem";
-            this.ControlPanelToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.ControlPanelToolStripMenuItem.Text = "Control Panel";
-            // 
-            // PrintersToolStripMenuItem
-            // 
-            this.PrintersToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.PrintersToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.PrintersToolStripMenuItem.Name = "PrintersToolStripMenuItem";
-            this.PrintersToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.PrintersToolStripMenuItem.Text = "Printers";
-            // 
-            // TaskbarToolStripMenuItem
-            // 
-            this.TaskbarToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.TaskbarToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.TaskbarToolStripMenuItem.Name = "TaskbarToolStripMenuItem";
-            this.TaskbarToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.TaskbarToolStripMenuItem.Text = "Taskbar";
-            // 
-            // FindToolStripMenuItem
-            // 
-            this.FindToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.FindToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.FilesOrFoldersToolStripMenuItem,
-            this.ComputerToolStripMenuItem,
-            this.OnTheInternetToolStripMenuItem,
-            this.PeopleToolStripMenuItem});
-            this.FindToolStripMenuItem.Font = new System.Drawing.Font(TitleScreen.pfc.Families[0], 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FindToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicFind;
-            this.FindToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.FindToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.FindToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
-            this.FindToolStripMenuItem.Name = "FindToolStripMenuItem";
-            this.FindToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.FindToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.FindToolStripMenuItem.Size = new System.Drawing.Size(137, 36);
-            this.FindToolStripMenuItem.Text = "Find";
-            // 
-            // FilesOrFoldersToolStripMenuItem
-            // 
-            this.FilesOrFoldersToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.FilesOrFoldersToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.FilesOrFoldersToolStripMenuItem.Name = "FilesOrFoldersToolStripMenuItem";
-            this.FilesOrFoldersToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.FilesOrFoldersToolStripMenuItem.Text = "Files or Folders...";
-            // 
-            // ComputerToolStripMenuItem
-            // 
-            this.ComputerToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.ComputerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ComputerToolStripMenuItem.Name = "ComputerToolStripMenuItem";
-            this.ComputerToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.ComputerToolStripMenuItem.Text = "Computer...";
-            // 
-            // OnTheInternetToolStripMenuItem
-            // 
-            this.OnTheInternetToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.OnTheInternetToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.OnTheInternetToolStripMenuItem.Name = "OnTheInternetToolStripMenuItem";
-            this.OnTheInternetToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.OnTheInternetToolStripMenuItem.Text = "On the Internet...";
-            // 
-            // PeopleToolStripMenuItem
-            // 
-            this.PeopleToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.PeopleToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.PeopleToolStripMenuItem.Name = "PeopleToolStripMenuItem";
-            this.PeopleToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.PeopleToolStripMenuItem.Text = "People...";
-            // 
-            // HelpToolStripMenuItem
-            // 
-            this.HelpToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.HelpToolStripMenuItem.Font = new System.Drawing.Font(TitleScreen.pfc.Families[0], 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HelpToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicHelp;
-            this.HelpToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.HelpToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.HelpToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
-            this.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem";
-            this.HelpToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.HelpToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.HelpToolStripMenuItem.Size = new System.Drawing.Size(137, 36);
-            this.HelpToolStripMenuItem.Text = "Help";
-            // 
-            // RunToolStripMenuItem
-            // 
-            this.RunToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.RunToolStripMenuItem.Font = new System.Drawing.Font(TitleScreen.pfc.Families[0], 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RunToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicRun;
-            this.RunToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.RunToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.RunToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
-            this.RunToolStripMenuItem.Name = "RunToolStripMenuItem";
-            this.RunToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.RunToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.RunToolStripMenuItem.Size = new System.Drawing.Size(137, 36);
-            this.RunToolStripMenuItem.Text = "Run...";
-            // 
-            // SuspendToolStripMenuItem
-            // 
-            this.SuspendToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.SuspendToolStripMenuItem.Font = new System.Drawing.Font(TitleScreen.pfc.Families[0], 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SuspendToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("SuspendToolStripMenuItem.Image")));
-            this.SuspendToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SuspendToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SuspendToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
-            this.SuspendToolStripMenuItem.Name = "SuspendToolStripMenuItem";
-            this.SuspendToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.SuspendToolStripMenuItem.Size = new System.Drawing.Size(137, 36);
-            this.SuspendToolStripMenuItem.Text = "Suspend";
-            // 
-            // ShutdownToolStripMenuItem
-            // 
-            this.ShutdownToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.ShutdownToolStripMenuItem.Font = new System.Drawing.Font(TitleScreen.pfc.Families[0], 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShutdownToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicShutdown;
-            this.ShutdownToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ShutdownToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ShutdownToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
-            this.ShutdownToolStripMenuItem.Name = "ShutdownToolStripMenuItem";
-            this.ShutdownToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.ShutdownToolStripMenuItem.Size = new System.Drawing.Size(137, 36);
-            this.ShutdownToolStripMenuItem.Text = "Shutdown...";
-            this.ShutdownToolStripMenuItem.Click += new System.EventHandler(this.ShutdownToolStripMenuItem_Click);
             // 
             // ossidestartmenu
             // 
@@ -883,17 +197,6 @@
             this.ossidestartmenu.Name = "ossidestartmenu";
             this.ossidestartmenu.Size = new System.Drawing.Size(26, 297);
             this.ossidestartmenu.TabIndex = 4;
-            // 
-            // osimage
-            // 
-            this.osimage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.osimage.Image = global::TimeHACK.Properties.Resources.Win95SideBar;
-            this.osimage.Location = new System.Drawing.Point(0, 0);
-            this.osimage.Name = "osimage";
-            this.osimage.Size = new System.Drawing.Size(26, 297);
-            this.osimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.osimage.TabIndex = 0;
-            this.osimage.TabStop = false;
             // 
             // clockTimer
             // 
@@ -925,25 +228,24 @@
             this.desktopicons.BackColor = System.Drawing.Color.Teal;
             this.desktopicons.BackgroundImageTiled = true;
             this.desktopicons.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.desktopicons.Font = new System.Drawing.Font(TitleScreen.pfc.Families[0], 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.desktopicons.ForeColor = System.Drawing.Color.White;
             this.desktopicons.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3,
-            listViewItem4,
-            listViewItem5,
-            listViewItem6,
-            listViewItem7,
-            listViewItem8});
+            listViewItem9,
+            listViewItem10,
+            listViewItem11,
+            listViewItem12,
+            listViewItem13,
+            listViewItem14,
+            listViewItem15,
+            listViewItem16});
             this.desktopicons.LargeImageList = this.desktopImages;
             this.desktopicons.Location = new System.Drawing.Point(0, 0);
             this.desktopicons.Name = "desktopicons";
             this.desktopicons.Size = new System.Drawing.Size(1280, 720);
             this.desktopicons.TabIndex = 6;
             this.desktopicons.UseCompatibleStateImageBehavior = false;
-            this.desktopicons.MouseDown += new System.Windows.Forms.MouseEventHandler(this.desktop_mousedown);
             this.desktopicons.DoubleClick += new System.EventHandler(this.desktopicons_Click);
+            this.desktopicons.MouseDown += new System.Windows.Forms.MouseEventHandler(this.desktop_mousedown);
             // 
             // rightclickbackproperties
             // 
@@ -1099,12 +401,709 @@
             this.PropertiesToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
             this.PropertiesToolStripMenuItem1.Text = "Properties";
             // 
+            // taskbar
+            // 
+            this.taskbar.BackColor = System.Drawing.Color.Silver;
+            this.taskbar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("taskbar.BackgroundImage")));
+            this.taskbar.Controls.Add(this.taskbartime);
+            this.taskbar.Controls.Add(this.clockPanel);
+            this.taskbar.Controls.Add(this.startbutton);
+            this.taskbar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.taskbar.Location = new System.Drawing.Point(0, 692);
+            this.taskbar.Name = "taskbar";
+            this.taskbar.Size = new System.Drawing.Size(1280, 28);
+            this.taskbar.TabIndex = 2;
+            // 
+            // taskbartime
+            // 
+            this.taskbartime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.taskbartime.AutoSize = true;
+            this.taskbartime.BackColor = System.Drawing.Color.Transparent;
+            this.taskbartime.Location = new System.Drawing.Point(1217, 6);
+            this.taskbartime.Name = "taskbartime";
+            this.taskbartime.Size = new System.Drawing.Size(26, 13);
+            this.taskbartime.TabIndex = 2;
+            this.taskbartime.Text = "time";
+            this.taskbartime.Click += new System.EventHandler(this.taskbartime_Click);
+            // 
+            // clockPanel
+            // 
+            this.clockPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("clockPanel.BackgroundImage")));
+            this.clockPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.clockPanel.Location = new System.Drawing.Point(1215, 0);
+            this.clockPanel.Name = "clockPanel";
+            this.clockPanel.Size = new System.Drawing.Size(65, 28);
+            this.clockPanel.TabIndex = 4;
+            // 
+            // startbutton
+            // 
+            this.startbutton.Image = ((System.Drawing.Image)(resources.GetObject("startbutton.Image")));
+            this.startbutton.Location = new System.Drawing.Point(3, 3);
+            this.startbutton.Name = "startbutton";
+            this.startbutton.Size = new System.Drawing.Size(54, 22);
+            this.startbutton.TabIndex = 3;
+            this.startbutton.TabStop = false;
+            this.startbutton.Click += new System.EventHandler(this.startbutton_Click);
+            // 
+            // ProgramsToolStripMenuItem
+            // 
+            this.ProgramsToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.ProgramsToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ProgramsToolStripMenuItem.BackgroundImage")));
+            this.ProgramsToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ProgramsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AccessoriesToolStripMenuItem,
+            this.StartUpToolStripMenuItem,
+            this.MSDOSPromptToolStripMenuItem,
+            this.InternetExplorerToolStripMenuItem,
+            this.MSDOSPromptToolStripMenuItem1,
+            this.OutlookExpressToolStripMenuItem,
+            this.WindowsExplorerToolStripMenuItem1,
+            this.GuessTheNumberToolStripMenuItem,
+            this.StartRunnerToolStripMenuItem,
+            this.ErrorBlasterToolStripMenuItem,
+            this.SkindowsToolStripMenuItem,
+            this.WebChatToolStripMenuItem,
+            this.TimeDistorterToolStripMenuItem});
+            this.ProgramsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ProgramsToolStripMenuItem.Image")));
+            this.ProgramsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ProgramsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ProgramsToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
+            this.ProgramsToolStripMenuItem.Name = "ProgramsToolStripMenuItem";
+            this.ProgramsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
+            this.ProgramsToolStripMenuItem.Size = new System.Drawing.Size(134, 36);
+            this.ProgramsToolStripMenuItem.Text = "Programs";
+            // 
+            // AccessoriesToolStripMenuItem
+            // 
+            this.AccessoriesToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.AccessoriesToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AccessoriesToolStripMenuItem.BackgroundImage")));
+            this.AccessoriesToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.AccessoriesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.CommunicationsToolStripMenuItem,
+            this.MultimediaToolStripMenuItem,
+            this.SystemToolsToolStripMenuItem,
+            this.AddressBookToolStripMenuItem,
+            this.CalculatorToolStripMenuItem,
+            this.HyperTerminalToolStripMenuItem,
+            this.ImagingToolStripMenuItem,
+            this.NotePadToolStripMenuItem,
+            this.OnlineRegistrationToolStripMenuItem,
+            this.PaintToolStripMenuItem,
+            this.PhoneDialerToolStripMenuItem,
+            this.WordPadToolStripMenuItem});
+            this.AccessoriesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("AccessoriesToolStripMenuItem.Image")));
+            this.AccessoriesToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AccessoriesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.AccessoriesToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
+            this.AccessoriesToolStripMenuItem.Name = "AccessoriesToolStripMenuItem";
+            this.AccessoriesToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
+            this.AccessoriesToolStripMenuItem.Text = "Accessories";
+            // 
+            // CommunicationsToolStripMenuItem
+            // 
+            this.CommunicationsToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.CommunicationsToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CommunicationsToolStripMenuItem.BackgroundImage")));
+            this.CommunicationsToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.CommunicationsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.InternetConnectionWizardToolStripMenuItem,
+            this.NetMeetingToolStripMenuItem});
+            this.CommunicationsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("CommunicationsToolStripMenuItem.Image")));
+            this.CommunicationsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.CommunicationsToolStripMenuItem.Name = "CommunicationsToolStripMenuItem";
+            this.CommunicationsToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.CommunicationsToolStripMenuItem.Text = "Communications";
+            // 
+            // InternetConnectionWizardToolStripMenuItem
+            // 
+            this.InternetConnectionWizardToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.InternetConnectionWizardToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InternetConnectionWizardToolStripMenuItem.BackgroundImage")));
+            this.InternetConnectionWizardToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.InternetConnectionWizardToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.InternetConnectionWizardToolStripMenuItem.Name = "InternetConnectionWizardToolStripMenuItem";
+            this.InternetConnectionWizardToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.InternetConnectionWizardToolStripMenuItem.Text = "Internet Connection Wizard";
+            // 
+            // NetMeetingToolStripMenuItem
+            // 
+            this.NetMeetingToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.NetMeetingToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("NetMeetingToolStripMenuItem.BackgroundImage")));
+            this.NetMeetingToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.NetMeetingToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.NetMeetingToolStripMenuItem.Name = "NetMeetingToolStripMenuItem";
+            this.NetMeetingToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.NetMeetingToolStripMenuItem.Text = "NetMeeting";
+            // 
+            // MultimediaToolStripMenuItem
+            // 
+            this.MultimediaToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.MultimediaToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MultimediaToolStripMenuItem.BackgroundImage")));
+            this.MultimediaToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.MultimediaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.CDPlayerToolStripMenuItem,
+            this.SoundRecorderToolStripMenuItem,
+            this.VolumeControlToolStripMenuItem,
+            this.WindowsMediaPlayerToolStripMenuItem});
+            this.MultimediaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("MultimediaToolStripMenuItem.Image")));
+            this.MultimediaToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MultimediaToolStripMenuItem.Name = "MultimediaToolStripMenuItem";
+            this.MultimediaToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.MultimediaToolStripMenuItem.Text = "Multimedia";
+            // 
+            // CDPlayerToolStripMenuItem
+            // 
+            this.CDPlayerToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.CDPlayerToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CDPlayerToolStripMenuItem.BackgroundImage")));
+            this.CDPlayerToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.CDPlayerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.CDPlayerToolStripMenuItem.Name = "CDPlayerToolStripMenuItem";
+            this.CDPlayerToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.CDPlayerToolStripMenuItem.Text = "CD Player";
+            // 
+            // SoundRecorderToolStripMenuItem
+            // 
+            this.SoundRecorderToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.SoundRecorderToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SoundRecorderToolStripMenuItem.BackgroundImage")));
+            this.SoundRecorderToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.SoundRecorderToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.SoundRecorderToolStripMenuItem.Name = "SoundRecorderToolStripMenuItem";
+            this.SoundRecorderToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.SoundRecorderToolStripMenuItem.Text = "Sound Recorder";
+            // 
+            // VolumeControlToolStripMenuItem
+            // 
+            this.VolumeControlToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.VolumeControlToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("VolumeControlToolStripMenuItem.BackgroundImage")));
+            this.VolumeControlToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.VolumeControlToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.VolumeControlToolStripMenuItem.Name = "VolumeControlToolStripMenuItem";
+            this.VolumeControlToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.VolumeControlToolStripMenuItem.Text = "Volume Control";
+            // 
+            // WindowsMediaPlayerToolStripMenuItem
+            // 
+            this.WindowsMediaPlayerToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.WindowsMediaPlayerToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("WindowsMediaPlayerToolStripMenuItem.BackgroundImage")));
+            this.WindowsMediaPlayerToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.WindowsMediaPlayerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.WindowsMediaPlayerToolStripMenuItem.Name = "WindowsMediaPlayerToolStripMenuItem";
+            this.WindowsMediaPlayerToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.WindowsMediaPlayerToolStripMenuItem.Text = "Windows Media Player";
+            // 
+            // SystemToolsToolStripMenuItem
+            // 
+            this.SystemToolsToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.SystemToolsToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SystemToolsToolStripMenuItem.BackgroundImage")));
+            this.SystemToolsToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.SystemToolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.DiskDefragmenterToolStripMenuItem,
+            this.ScanDiskToolStripMenuItem});
+            this.SystemToolsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("SystemToolsToolStripMenuItem.Image")));
+            this.SystemToolsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.SystemToolsToolStripMenuItem.Name = "SystemToolsToolStripMenuItem";
+            this.SystemToolsToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.SystemToolsToolStripMenuItem.Text = "System Tools";
+            // 
+            // DiskDefragmenterToolStripMenuItem
+            // 
+            this.DiskDefragmenterToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.DiskDefragmenterToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DiskDefragmenterToolStripMenuItem.BackgroundImage")));
+            this.DiskDefragmenterToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.DiskDefragmenterToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.DiskDefragmenterToolStripMenuItem.Name = "DiskDefragmenterToolStripMenuItem";
+            this.DiskDefragmenterToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.DiskDefragmenterToolStripMenuItem.Text = "Disk Defragmenter";
+            // 
+            // ScanDiskToolStripMenuItem
+            // 
+            this.ScanDiskToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.ScanDiskToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ScanDiskToolStripMenuItem.BackgroundImage")));
+            this.ScanDiskToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ScanDiskToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ScanDiskToolStripMenuItem.Name = "ScanDiskToolStripMenuItem";
+            this.ScanDiskToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.ScanDiskToolStripMenuItem.Text = "ScanDisk";
+            // 
+            // AddressBookToolStripMenuItem
+            // 
+            this.AddressBookToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.AddressBookToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddressBookToolStripMenuItem.BackgroundImage")));
+            this.AddressBookToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.AddressBookToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.AddressBookToolStripMenuItem.Name = "AddressBookToolStripMenuItem";
+            this.AddressBookToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.AddressBookToolStripMenuItem.Text = "Address Book";
+            // 
+            // CalculatorToolStripMenuItem
+            // 
+            this.CalculatorToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.CalculatorToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CalculatorToolStripMenuItem.BackgroundImage")));
+            this.CalculatorToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.CalculatorToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("CalculatorToolStripMenuItem.Image")));
+            this.CalculatorToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.CalculatorToolStripMenuItem.Name = "CalculatorToolStripMenuItem";
+            this.CalculatorToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.CalculatorToolStripMenuItem.Text = "Calculator";
+            // 
+            // HyperTerminalToolStripMenuItem
+            // 
+            this.HyperTerminalToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.HyperTerminalToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HyperTerminalToolStripMenuItem.BackgroundImage")));
+            this.HyperTerminalToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.HyperTerminalToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.HyperTerminalToolStripMenuItem.Name = "HyperTerminalToolStripMenuItem";
+            this.HyperTerminalToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.HyperTerminalToolStripMenuItem.Text = "HyperTerminal";
+            // 
+            // ImagingToolStripMenuItem
+            // 
+            this.ImagingToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.ImagingToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ImagingToolStripMenuItem.BackgroundImage")));
+            this.ImagingToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ImagingToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ImagingToolStripMenuItem.Name = "ImagingToolStripMenuItem";
+            this.ImagingToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.ImagingToolStripMenuItem.Text = "Imaging";
+            // 
+            // NotePadToolStripMenuItem
+            // 
+            this.NotePadToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.NotePadToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("NotePadToolStripMenuItem.BackgroundImage")));
+            this.NotePadToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.NotePadToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("NotePadToolStripMenuItem.Image")));
+            this.NotePadToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.NotePadToolStripMenuItem.Name = "NotePadToolStripMenuItem";
+            this.NotePadToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.NotePadToolStripMenuItem.Text = "NotePad";
+            this.NotePadToolStripMenuItem.Click += new System.EventHandler(this.NotePadToolStripMenuItem_Click);
+            // 
+            // OnlineRegistrationToolStripMenuItem
+            // 
+            this.OnlineRegistrationToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.OnlineRegistrationToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("OnlineRegistrationToolStripMenuItem.BackgroundImage")));
+            this.OnlineRegistrationToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.OnlineRegistrationToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.OnlineRegistrationToolStripMenuItem.Name = "OnlineRegistrationToolStripMenuItem";
+            this.OnlineRegistrationToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.OnlineRegistrationToolStripMenuItem.Text = "Online Registration";
+            // 
+            // PaintToolStripMenuItem
+            // 
+            this.PaintToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.PaintToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PaintToolStripMenuItem.BackgroundImage")));
+            this.PaintToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.PaintToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("PaintToolStripMenuItem.Image")));
+            this.PaintToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.PaintToolStripMenuItem.Name = "PaintToolStripMenuItem";
+            this.PaintToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.PaintToolStripMenuItem.Text = "Paint";
+            // 
+            // PhoneDialerToolStripMenuItem
+            // 
+            this.PhoneDialerToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.PhoneDialerToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PhoneDialerToolStripMenuItem.BackgroundImage")));
+            this.PhoneDialerToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.PhoneDialerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.PhoneDialerToolStripMenuItem.Name = "PhoneDialerToolStripMenuItem";
+            this.PhoneDialerToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.PhoneDialerToolStripMenuItem.Text = "Phone Dialer";
+            // 
+            // WordPadToolStripMenuItem
+            // 
+            this.WordPadToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.WordPadToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("WordPadToolStripMenuItem.BackgroundImage")));
+            this.WordPadToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.WordPadToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("WordPadToolStripMenuItem.Image")));
+            this.WordPadToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.WordPadToolStripMenuItem.Name = "WordPadToolStripMenuItem";
+            this.WordPadToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.WordPadToolStripMenuItem.Text = "WordPad";
+            // 
+            // StartUpToolStripMenuItem
+            // 
+            this.StartUpToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.StartUpToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("StartUpToolStripMenuItem.BackgroundImage")));
+            this.StartUpToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.StartUpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AOLInternetFREETrialToolStripMenuItem,
+            this.ATTWorldNetSignupToolStripMenuItem,
+            this.SetupCompuServe30ToolStripMenuItem,
+            this.SetupWOWFromCompuServeToolStripMenuItem});
+            this.StartUpToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("StartUpToolStripMenuItem.Image")));
+            this.StartUpToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.StartUpToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.StartUpToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
+            this.StartUpToolStripMenuItem.Name = "StartUpToolStripMenuItem";
+            this.StartUpToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
+            this.StartUpToolStripMenuItem.Text = "Online Services";
+            // 
+            // AOLInternetFREETrialToolStripMenuItem
+            // 
+            this.AOLInternetFREETrialToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.AOLInternetFREETrialToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AOLInternetFREETrialToolStripMenuItem.BackgroundImage")));
+            this.AOLInternetFREETrialToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.AOLInternetFREETrialToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.AOLInternetFREETrialToolStripMenuItem.Name = "AOLInternetFREETrialToolStripMenuItem";
+            this.AOLInternetFREETrialToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.AOLInternetFREETrialToolStripMenuItem.Text = "AOL & Internet FREE Trial!";
+            // 
+            // ATTWorldNetSignupToolStripMenuItem
+            // 
+            this.ATTWorldNetSignupToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.ATTWorldNetSignupToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ATTWorldNetSignupToolStripMenuItem.BackgroundImage")));
+            this.ATTWorldNetSignupToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ATTWorldNetSignupToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ATTWorldNetSignupToolStripMenuItem.Name = "ATTWorldNetSignupToolStripMenuItem";
+            this.ATTWorldNetSignupToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.ATTWorldNetSignupToolStripMenuItem.Text = "AT&T WorldNet Signup";
+            // 
+            // SetupCompuServe30ToolStripMenuItem
+            // 
+            this.SetupCompuServe30ToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.SetupCompuServe30ToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SetupCompuServe30ToolStripMenuItem.BackgroundImage")));
+            this.SetupCompuServe30ToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.SetupCompuServe30ToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.SetupCompuServe30ToolStripMenuItem.Name = "SetupCompuServe30ToolStripMenuItem";
+            this.SetupCompuServe30ToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.SetupCompuServe30ToolStripMenuItem.Text = "Setup CompuServe 3.0";
+            // 
+            // SetupWOWFromCompuServeToolStripMenuItem
+            // 
+            this.SetupWOWFromCompuServeToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.SetupWOWFromCompuServeToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SetupWOWFromCompuServeToolStripMenuItem.BackgroundImage")));
+            this.SetupWOWFromCompuServeToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.SetupWOWFromCompuServeToolStripMenuItem.Name = "SetupWOWFromCompuServeToolStripMenuItem";
+            this.SetupWOWFromCompuServeToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.SetupWOWFromCompuServeToolStripMenuItem.Text = "Setup WOW! from CompuServe";
+            // 
+            // MSDOSPromptToolStripMenuItem
+            // 
+            this.MSDOSPromptToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.MSDOSPromptToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MSDOSPromptToolStripMenuItem.BackgroundImage")));
+            this.MSDOSPromptToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.MSDOSPromptToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.EmptyToolStripMenuItem});
+            this.MSDOSPromptToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("MSDOSPromptToolStripMenuItem.Image")));
+            this.MSDOSPromptToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MSDOSPromptToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MSDOSPromptToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
+            this.MSDOSPromptToolStripMenuItem.Name = "MSDOSPromptToolStripMenuItem";
+            this.MSDOSPromptToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
+            this.MSDOSPromptToolStripMenuItem.Text = "StartUp";
+            // 
+            // EmptyToolStripMenuItem
+            // 
+            this.EmptyToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.EmptyToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EmptyToolStripMenuItem.BackgroundImage")));
+            this.EmptyToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.EmptyToolStripMenuItem.Name = "EmptyToolStripMenuItem";
+            this.EmptyToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.EmptyToolStripMenuItem.Text = "(Empty)";
+            // 
+            // InternetExplorerToolStripMenuItem
+            // 
+            this.InternetExplorerToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.InternetExplorerToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InternetExplorerToolStripMenuItem.BackgroundImage")));
+            this.InternetExplorerToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.InternetExplorerToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.InternetExplorerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.InternetExplorerToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
+            this.InternetExplorerToolStripMenuItem.Name = "InternetExplorerToolStripMenuItem";
+            this.InternetExplorerToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
+            this.InternetExplorerToolStripMenuItem.Text = "Internet Explorer";
+            this.InternetExplorerToolStripMenuItem.Click += new System.EventHandler(this.InternetExplorerToolStripMenuItem_Click);
+            // 
+            // MSDOSPromptToolStripMenuItem1
+            // 
+            this.MSDOSPromptToolStripMenuItem1.BackColor = System.Drawing.Color.Silver;
+            this.MSDOSPromptToolStripMenuItem1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MSDOSPromptToolStripMenuItem1.BackgroundImage")));
+            this.MSDOSPromptToolStripMenuItem1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.MSDOSPromptToolStripMenuItem1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MSDOSPromptToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MSDOSPromptToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Silver;
+            this.MSDOSPromptToolStripMenuItem1.Name = "MSDOSPromptToolStripMenuItem1";
+            this.MSDOSPromptToolStripMenuItem1.Size = new System.Drawing.Size(181, 28);
+            this.MSDOSPromptToolStripMenuItem1.Text = "MS-DOS Prompt";
+            // 
+            // OutlookExpressToolStripMenuItem
+            // 
+            this.OutlookExpressToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.OutlookExpressToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("OutlookExpressToolStripMenuItem.BackgroundImage")));
+            this.OutlookExpressToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.OutlookExpressToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.OutlookExpressToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.OutlookExpressToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
+            this.OutlookExpressToolStripMenuItem.Name = "OutlookExpressToolStripMenuItem";
+            this.OutlookExpressToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
+            this.OutlookExpressToolStripMenuItem.Text = "Outlook Express";
+            // 
+            // WindowsExplorerToolStripMenuItem1
+            // 
+            this.WindowsExplorerToolStripMenuItem1.BackColor = System.Drawing.Color.Silver;
+            this.WindowsExplorerToolStripMenuItem1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("WindowsExplorerToolStripMenuItem1.BackgroundImage")));
+            this.WindowsExplorerToolStripMenuItem1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.WindowsExplorerToolStripMenuItem1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.WindowsExplorerToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.WindowsExplorerToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Silver;
+            this.WindowsExplorerToolStripMenuItem1.Name = "WindowsExplorerToolStripMenuItem1";
+            this.WindowsExplorerToolStripMenuItem1.Size = new System.Drawing.Size(181, 28);
+            this.WindowsExplorerToolStripMenuItem1.Text = "Windows Explorer";
+            // 
+            // GuessTheNumberToolStripMenuItem
+            // 
+            this.GuessTheNumberToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.GuessTheNumberToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("GuessTheNumberToolStripMenuItem.BackgroundImage")));
+            this.GuessTheNumberToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.GuessTheNumberToolStripMenuItem.Name = "GuessTheNumberToolStripMenuItem";
+            this.GuessTheNumberToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
+            this.GuessTheNumberToolStripMenuItem.Text = "Guess The Number";
+            this.GuessTheNumberToolStripMenuItem.Visible = false;
+            // 
+            // StartRunnerToolStripMenuItem
+            // 
+            this.StartRunnerToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.StartRunnerToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("StartRunnerToolStripMenuItem.BackgroundImage")));
+            this.StartRunnerToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.StartRunnerToolStripMenuItem.Name = "StartRunnerToolStripMenuItem";
+            this.StartRunnerToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
+            this.StartRunnerToolStripMenuItem.Text = "Start Runner";
+            this.StartRunnerToolStripMenuItem.Visible = false;
+            // 
+            // ErrorBlasterToolStripMenuItem
+            // 
+            this.ErrorBlasterToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.ErrorBlasterToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ErrorBlasterToolStripMenuItem.BackgroundImage")));
+            this.ErrorBlasterToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ErrorBlasterToolStripMenuItem.Name = "ErrorBlasterToolStripMenuItem";
+            this.ErrorBlasterToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
+            this.ErrorBlasterToolStripMenuItem.Text = "Error Blaster";
+            this.ErrorBlasterToolStripMenuItem.Visible = false;
+            // 
+            // SkindowsToolStripMenuItem
+            // 
+            this.SkindowsToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.SkindowsToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SkindowsToolStripMenuItem.BackgroundImage")));
+            this.SkindowsToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.SkindowsToolStripMenuItem.Name = "SkindowsToolStripMenuItem";
+            this.SkindowsToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
+            this.SkindowsToolStripMenuItem.Text = "Skindows 95";
+            this.SkindowsToolStripMenuItem.Visible = false;
+            // 
+            // WebChatToolStripMenuItem
+            // 
+            this.WebChatToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.WebChatToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("WebChatToolStripMenuItem.BackgroundImage")));
+            this.WebChatToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.WebChatToolStripMenuItem.Name = "WebChatToolStripMenuItem";
+            this.WebChatToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
+            this.WebChatToolStripMenuItem.Text = "Web Chat";
+            this.WebChatToolStripMenuItem.Visible = false;
+            // 
+            // TimeDistorterToolStripMenuItem
+            // 
+            this.TimeDistorterToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.TimeDistorterToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("TimeDistorterToolStripMenuItem.BackgroundImage")));
+            this.TimeDistorterToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.TimeDistorterToolStripMenuItem.Name = "TimeDistorterToolStripMenuItem";
+            this.TimeDistorterToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
+            this.TimeDistorterToolStripMenuItem.Text = "Time Distorter";
+            this.TimeDistorterToolStripMenuItem.Visible = false;
+            // 
+            // DocumentsToolStripMenuItem
+            // 
+            this.DocumentsToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.DocumentsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.windowManagerTestToolStripMenuItem,
+            this.downloaderTestToolStripMenuItem,
+            this.installerTestToolStripMenuItem,
+            this.infoboxTestToolStripMenuItem});
+            this.DocumentsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("DocumentsToolStripMenuItem.Image")));
+            this.DocumentsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DocumentsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.DocumentsToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
+            this.DocumentsToolStripMenuItem.Name = "DocumentsToolStripMenuItem";
+            this.DocumentsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
+            this.DocumentsToolStripMenuItem.Size = new System.Drawing.Size(134, 36);
+            this.DocumentsToolStripMenuItem.Text = "Documents";
+            // 
+            // windowManagerTestToolStripMenuItem
+            // 
+            this.windowManagerTestToolStripMenuItem.Name = "windowManagerTestToolStripMenuItem";
+            this.windowManagerTestToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.windowManagerTestToolStripMenuItem.Text = "WindowManagerTest";
+            this.windowManagerTestToolStripMenuItem.Click += new System.EventHandler(this.windowManagerTestToolStripMenuItem_Click);
+            // 
+            // downloaderTestToolStripMenuItem
+            // 
+            this.downloaderTestToolStripMenuItem.Name = "downloaderTestToolStripMenuItem";
+            this.downloaderTestToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.downloaderTestToolStripMenuItem.Text = "DownloaderTest";
+            this.downloaderTestToolStripMenuItem.Click += new System.EventHandler(this.downloaderTestToolStripMenuItem_Click);
+            // 
             // installerTestToolStripMenuItem
             // 
             this.installerTestToolStripMenuItem.Name = "installerTestToolStripMenuItem";
-            this.installerTestToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.installerTestToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.installerTestToolStripMenuItem.Text = "InstallerTest";
             this.installerTestToolStripMenuItem.Click += new System.EventHandler(this.installerTestToolStripMenuItem_Click);
+            // 
+            // infoboxTestToolStripMenuItem
+            // 
+            this.infoboxTestToolStripMenuItem.Name = "infoboxTestToolStripMenuItem";
+            this.infoboxTestToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.infoboxTestToolStripMenuItem.Text = "InfoboxTest";
+            this.infoboxTestToolStripMenuItem.Click += new System.EventHandler(this.infoboxTestToolStripMenuItem_Click);
+            // 
+            // SettingsToolStripMenuItem
+            // 
+            this.SettingsToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.SettingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ControlPanelToolStripMenuItem,
+            this.PrintersToolStripMenuItem,
+            this.TaskbarToolStripMenuItem});
+            this.SettingsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("SettingsToolStripMenuItem.Image")));
+            this.SettingsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SettingsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.SettingsToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
+            this.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem";
+            this.SettingsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
+            this.SettingsToolStripMenuItem.Size = new System.Drawing.Size(134, 36);
+            this.SettingsToolStripMenuItem.Text = "Settings";
+            // 
+            // ControlPanelToolStripMenuItem
+            // 
+            this.ControlPanelToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.ControlPanelToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ControlPanelToolStripMenuItem.Name = "ControlPanelToolStripMenuItem";
+            this.ControlPanelToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.ControlPanelToolStripMenuItem.Text = "Control Panel";
+            // 
+            // PrintersToolStripMenuItem
+            // 
+            this.PrintersToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.PrintersToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.PrintersToolStripMenuItem.Name = "PrintersToolStripMenuItem";
+            this.PrintersToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.PrintersToolStripMenuItem.Text = "Printers";
+            // 
+            // TaskbarToolStripMenuItem
+            // 
+            this.TaskbarToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.TaskbarToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.TaskbarToolStripMenuItem.Name = "TaskbarToolStripMenuItem";
+            this.TaskbarToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.TaskbarToolStripMenuItem.Text = "Taskbar";
+            // 
+            // FindToolStripMenuItem
+            // 
+            this.FindToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.FindToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.FilesOrFoldersToolStripMenuItem,
+            this.ComputerToolStripMenuItem,
+            this.OnTheInternetToolStripMenuItem,
+            this.PeopleToolStripMenuItem});
+            this.FindToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("FindToolStripMenuItem.Image")));
+            this.FindToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.FindToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.FindToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
+            this.FindToolStripMenuItem.Name = "FindToolStripMenuItem";
+            this.FindToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
+            this.FindToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.FindToolStripMenuItem.Size = new System.Drawing.Size(134, 36);
+            this.FindToolStripMenuItem.Text = "Find";
+            // 
+            // FilesOrFoldersToolStripMenuItem
+            // 
+            this.FilesOrFoldersToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.FilesOrFoldersToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.FilesOrFoldersToolStripMenuItem.Name = "FilesOrFoldersToolStripMenuItem";
+            this.FilesOrFoldersToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.FilesOrFoldersToolStripMenuItem.Text = "Files or Folders...";
+            // 
+            // ComputerToolStripMenuItem
+            // 
+            this.ComputerToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.ComputerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ComputerToolStripMenuItem.Name = "ComputerToolStripMenuItem";
+            this.ComputerToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.ComputerToolStripMenuItem.Text = "Computer...";
+            // 
+            // OnTheInternetToolStripMenuItem
+            // 
+            this.OnTheInternetToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.OnTheInternetToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.OnTheInternetToolStripMenuItem.Name = "OnTheInternetToolStripMenuItem";
+            this.OnTheInternetToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.OnTheInternetToolStripMenuItem.Text = "On the Internet...";
+            // 
+            // PeopleToolStripMenuItem
+            // 
+            this.PeopleToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.PeopleToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.PeopleToolStripMenuItem.Name = "PeopleToolStripMenuItem";
+            this.PeopleToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.PeopleToolStripMenuItem.Text = "People...";
+            // 
+            // HelpToolStripMenuItem
+            // 
+            this.HelpToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.HelpToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("HelpToolStripMenuItem.Image")));
+            this.HelpToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.HelpToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.HelpToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
+            this.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem";
+            this.HelpToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
+            this.HelpToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.HelpToolStripMenuItem.Size = new System.Drawing.Size(134, 36);
+            this.HelpToolStripMenuItem.Text = "Help";
+            // 
+            // RunToolStripMenuItem
+            // 
+            this.RunToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.RunToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("RunToolStripMenuItem.Image")));
+            this.RunToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.RunToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.RunToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
+            this.RunToolStripMenuItem.Name = "RunToolStripMenuItem";
+            this.RunToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
+            this.RunToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.RunToolStripMenuItem.Size = new System.Drawing.Size(134, 36);
+            this.RunToolStripMenuItem.Text = "Run...";
+            // 
+            // SuspendToolStripMenuItem
+            // 
+            this.SuspendToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.SuspendToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("SuspendToolStripMenuItem.Image")));
+            this.SuspendToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SuspendToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.SuspendToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
+            this.SuspendToolStripMenuItem.Name = "SuspendToolStripMenuItem";
+            this.SuspendToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
+            this.SuspendToolStripMenuItem.Size = new System.Drawing.Size(134, 36);
+            this.SuspendToolStripMenuItem.Text = "Suspend";
+            // 
+            // ShutdownToolStripMenuItem
+            // 
+            this.ShutdownToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.ShutdownToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ShutdownToolStripMenuItem.Image")));
+            this.ShutdownToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ShutdownToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ShutdownToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
+            this.ShutdownToolStripMenuItem.Name = "ShutdownToolStripMenuItem";
+            this.ShutdownToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
+            this.ShutdownToolStripMenuItem.Size = new System.Drawing.Size(134, 36);
+            this.ShutdownToolStripMenuItem.Text = "Shutdown...";
+            this.ShutdownToolStripMenuItem.Click += new System.EventHandler(this.ShutdownToolStripMenuItem_Click);
+            // 
+            // osimage
+            // 
+            this.osimage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.osimage.Image = ((System.Drawing.Image)(resources.GetObject("osimage.Image")));
+            this.osimage.Location = new System.Drawing.Point(0, 0);
+            this.osimage.Name = "osimage";
+            this.osimage.Size = new System.Drawing.Size(26, 297);
+            this.osimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.osimage.TabIndex = 0;
+            this.osimage.TabStop = false;
             // 
             // Windows95
             // 
@@ -1122,16 +1121,16 @@
             this.Text = "TimeHACKDesktop";
             this.Load += new System.EventHandler(this.Desktop_Load);
             this.panel1.ResumeLayout(false);
-            this.taskbar.ResumeLayout(false);
-            this.taskbar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.startbutton)).EndInit();
             this.startmenu.ResumeLayout(false);
             this.startmenu.PerformLayout();
             this.startmenuitems.ResumeLayout(false);
             this.startmenuitems.PerformLayout();
             this.ossidestartmenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.osimage)).EndInit();
             this.rightclickbackproperties.ResumeLayout(false);
+            this.taskbar.ResumeLayout(false);
+            this.taskbar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.startbutton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.osimage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1227,5 +1226,6 @@
         private System.Windows.Forms.ToolStripMenuItem windowManagerTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem downloaderTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem installerTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem infoboxTestToolStripMenuItem;
     }
 }

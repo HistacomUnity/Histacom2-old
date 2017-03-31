@@ -2,8 +2,7 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;
-
+using TimeHACK.Main;
 namespace TimeHACK
 {
     public partial class TitleScreen : Form
@@ -14,7 +13,6 @@ namespace TimeHACK
         public TitleScreen()
         {
             InitializeComponent();
-           
         }
 
         private void closebutton_Click(object sender, EventArgs e)
@@ -22,11 +20,27 @@ namespace TimeHACK
             Close();
         }
 
+        private void VM_WidthHeight_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                    (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
         // When the TitleScreen Loads
         private void TitleScreen_Load(object sender, EventArgs e)
         {
+
             // Set GameVersion
-            gameversion.Text = "TimeHACK " + Program.gameID + " by TimeHACKDevs";
+            gameversion.Text = "TimeHACK " + Program.gameID;
 
             // Initialize Font
             pfc.AddFontFile(AppDomain.CurrentDomain.BaseDirectory + "\\LeviWindows.ttf");
@@ -35,22 +49,33 @@ namespace TimeHACK
             vmModeTimer.Start();
         }
 
+        private static void leet()
+        {
+            WindowManager wm = new WindowManager();
+            UserControl leet = new UserControl();
+            leet.Width = 500;
+            leet.Height = 500;
+            Label label1 = new Label();
+            label1.Parent = leet;
+            label1.AutoSize = true;
+            label1.Text = "Thank you for making TimeHACK possible.";
+            wm.startWin95(leet, "Thank You", null, true, true);
+        }
+
         // The VM Mode timer / checker. Updates every 100ms
-        private void timer1_Tick(object sender, EventArgs e)
+        private void vmModeTimer_Tick(object sender, EventArgs e)
         {
             // Check for VM mode
             if (vm_mode.Checked == true)
             {
-                widthBox.Visible = true;
-                charX.Visible = true;
-                heightBox.Visible = true;
+                VM_Width.Visible = true;
+                VM_Height.Visible = true;
             }
             // If VM Mode is disabled
             else
             {
-                widthBox.Visible = false;
-                charX.Visible = false;
-                heightBox.Visible = false;
+                VM_Width.Visible = false;
+                VM_Height.Visible = false;
             }
         }
 
@@ -61,6 +86,11 @@ namespace TimeHACK
         // When NewGame is Clicked
         private void NewGame_Click(object sender, EventArgs e)
         {
+            if (Convert.ToInt32(VM_Width.Text) == 1337 && Convert.ToInt32(VM_Height.Text) == 1337)
+            {
+                leet();
+            }
+            else
             // If VM Mode is not enabled
             if (vm_mode.Checked != true)
             {
@@ -75,29 +105,15 @@ namespace TimeHACK
             // If VM Mode is enabled
             else
             {
-                // Check VM Mode Resolutions
-                int parsedWidth = 0;
-                int parsedHeight = 0;
-                if (!int.TryParse(widthBox.Text, out parsedWidth))
-                {
-                    MessageBox.Show("'" + widthBox.Text + "' is not a valid value.");
-                    Application.Restart();
-                }
-                if (!int.TryParse(heightBox.Text, out parsedHeight))
-                {
-                    MessageBox.Show("'" + heightBox.Text + "' is not a valid value.");
-                    Application.Restart();
-                }
                 // Generate desktop with size entered by user
                 Windows95 frm = new Windows95();
                 frm.FormBorderStyle = FormBorderStyle.None;
-                frm.Size = new Size(parsedWidth, parsedHeight);
+                frm.Size = new Size(Convert.ToInt32(VM_Width.Text), Convert.ToInt32(VM_Height.Text));
                 frm.FormBorderStyle = FormBorderStyle.Fixed3D;
                 frm.Show();
                 Hide();
             }
 
-            
         }
         private void NewGame_MouseEnter(object sender, EventArgs e)
         {
@@ -148,7 +164,7 @@ namespace TimeHACK
 
         private void gameversion_MouseLeave(object sender, EventArgs e)
         {
-            gameversion.Text = "TimeHACK " + Program.gameID + " by TimeHACKDevs";
+            gameversion.Text = "TimeHACK " + Program.gameID;
         }
     }
 }

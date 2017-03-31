@@ -32,20 +32,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TitleScreen));
             this.gameversion = new System.Windows.Forms.Label();
             this.vm_mode = new System.Windows.Forms.CheckBox();
-            this.widthBox = new System.Windows.Forms.TextBox();
-            this.heightBox = new System.Windows.Forms.TextBox();
-            this.charX = new System.Windows.Forms.Label();
             this.vmModeTimer = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.LoadGame = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
             this.NewGame = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.startbutton = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.startbutton = new System.Windows.Forms.PictureBox();
+            this.VM_Width = new System.Windows.Forms.NumericUpDown();
+            this.VM_Height = new System.Windows.Forms.NumericUpDown();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.startbutton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.startbutton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VM_Width)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VM_Height)).BeginInit();
             this.SuspendLayout();
             // 
             // gameversion
@@ -73,44 +74,14 @@
             this.vm_mode.Text = "VM Mode";
             this.vm_mode.UseVisualStyleBackColor = false;
             // 
-            // widthBox
-            // 
-            this.widthBox.Location = new System.Drawing.Point(613, 5);
-            this.widthBox.Name = "widthBox";
-            this.widthBox.Size = new System.Drawing.Size(41, 20);
-            this.widthBox.TabIndex = 5;
-            this.widthBox.Text = "640";
-            this.widthBox.Visible = false;
-            // 
-            // heightBox
-            // 
-            this.heightBox.Location = new System.Drawing.Point(674, 5);
-            this.heightBox.Name = "heightBox";
-            this.heightBox.Size = new System.Drawing.Size(41, 20);
-            this.heightBox.TabIndex = 6;
-            this.heightBox.Text = "480";
-            this.heightBox.Visible = false;
-            // 
-            // charX
-            // 
-            this.charX.AutoSize = true;
-            this.charX.BackColor = System.Drawing.Color.Transparent;
-            this.charX.ForeColor = System.Drawing.Color.Black;
-            this.charX.Location = new System.Drawing.Point(657, 8);
-            this.charX.Name = "charX";
-            this.charX.Size = new System.Drawing.Size(14, 13);
-            this.charX.TabIndex = 7;
-            this.charX.Text = "X";
-            this.charX.Visible = false;
-            // 
             // vmModeTimer
             // 
-            this.vmModeTimer.Tick += new System.EventHandler(this.timer1_Tick);
+            this.vmModeTimer.Tick += new System.EventHandler(this.vmModeTimer_Tick);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImage = global::TimeHACK.Properties.Resources.TimeHACK_Logo;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -170,11 +141,10 @@
             // 
             // panel2
             // 
-            this.panel2.BackgroundImage = global::TimeHACK.Properties.Resources.WinClassicTaskBar;
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.Controls.Add(this.VM_Height);
+            this.panel2.Controls.Add(this.VM_Width);
             this.panel2.Controls.Add(this.vm_mode);
-            this.panel2.Controls.Add(this.heightBox);
-            this.panel2.Controls.Add(this.charX);
-            this.panel2.Controls.Add(this.widthBox);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.gameversion);
             this.panel2.Controls.Add(this.startbutton);
@@ -183,23 +153,67 @@
             this.panel2.Size = new System.Drawing.Size(800, 28);
             this.panel2.TabIndex = 10;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(612, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(187, 28);
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
             // startbutton
             // 
-            this.startbutton.Image = global::TimeHACK.Properties.Resources.TaskBarButton;
+            this.startbutton.Image = ((System.Drawing.Image)(resources.GetObject("startbutton.Image")));
             this.startbutton.Location = new System.Drawing.Point(2, 4);
             this.startbutton.Name = "startbutton";
             this.startbutton.Size = new System.Drawing.Size(279, 22);
             this.startbutton.TabIndex = 12;
             this.startbutton.TabStop = false;
             // 
-            // pictureBox1
+            // VM_Width
             // 
-            this.pictureBox1.Image = global::TimeHACK.Properties.Resources.TaskBarClock;
-            this.pictureBox1.Location = new System.Drawing.Point(612, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(187, 28);
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
+            this.VM_Width.Location = new System.Drawing.Point(612, 5);
+            this.VM_Width.Maximum = new decimal(new int[] {
+            3840,
+            0,
+            0,
+            0});
+            this.VM_Width.Minimum = new decimal(new int[] {
+            640,
+            0,
+            0,
+            0});
+            this.VM_Width.Name = "VM_Width";
+            this.VM_Width.Size = new System.Drawing.Size(50, 20);
+            this.VM_Width.TabIndex = 14;
+            this.VM_Width.Value = new decimal(new int[] {
+            640,
+            0,
+            0,
+            0});
+            // 
+            // VM_Height
+            // 
+            this.VM_Height.Location = new System.Drawing.Point(668, 5);
+            this.VM_Height.Maximum = new decimal(new int[] {
+            2160,
+            0,
+            0,
+            0});
+            this.VM_Height.Minimum = new decimal(new int[] {
+            480,
+            0,
+            0,
+            0});
+            this.VM_Height.Name = "VM_Height";
+            this.VM_Height.Size = new System.Drawing.Size(50, 20);
+            this.VM_Height.TabIndex = 15;
+            this.VM_Height.Value = new decimal(new int[] {
+            480,
+            0,
+            0,
+            0});
             // 
             // TitleScreen
             // 
@@ -220,8 +234,10 @@
             this.Load += new System.EventHandler(this.TitleScreen_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.startbutton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.startbutton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VM_Width)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VM_Height)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -229,9 +245,6 @@
         #endregion
         private System.Windows.Forms.Label gameversion;
         private System.Windows.Forms.CheckBox vm_mode;
-        private System.Windows.Forms.TextBox widthBox;
-        private System.Windows.Forms.TextBox heightBox;
-        private System.Windows.Forms.Label charX;
         private System.Windows.Forms.Timer vmModeTimer;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button LoadGame;
@@ -240,5 +253,7 @@
         private System.Windows.Forms.Panel panel2;
         internal System.Windows.Forms.PictureBox startbutton;
         internal System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.NumericUpDown VM_Height;
+        private System.Windows.Forms.NumericUpDown VM_Width;
     }
 }
