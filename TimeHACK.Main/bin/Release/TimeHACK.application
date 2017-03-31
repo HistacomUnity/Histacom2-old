@@ -7,14 +7,22 @@
     <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
+<<<<<<< HEAD
     <dependentAssembly dependencyType="install" codebase="TimeHACK.exe.manifest" size="20452">
+=======
+    <dependentAssembly dependencyType="install" codebase="TimeHACK.exe.manifest" size="25070">
+>>>>>>> origin/master
       <assemblyIdentity name="TimeHACK.exe" version="1.0.1.0" publicKeyToken="0000000000000000" language="en" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
         <dsig:DigestValue>esByQlyDRM46U3W/e6t9cu2R/zGQlSsEzPD2CdhyzAA=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>FLFyLhgh/00187VHfEwpMWCgaYVgEkJOBemU56+LWss=</dsig:DigestValue>
+>>>>>>> origin/master
       </hash>
     </dependentAssembly>
   </dependency>
