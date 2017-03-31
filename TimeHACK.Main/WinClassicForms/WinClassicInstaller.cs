@@ -47,7 +47,7 @@ namespace TimeHACK.WinClassicForms
             {
                 if (programtoinstall == "Web Chat 1998")
                 {
-                    ((Windows95)this.ParentForm.ParentForm).WebChatToolStripMenuItem.Visible = true;
+                    TitleScreen.frm95.WebChatToolStripMenuItem.Visible = true;
                     ((Form)this.TopLevelControl).Close();
                 }
                 if (programtoinstall == "Guess The Number 2")
