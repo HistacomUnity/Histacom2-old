@@ -1,8 +1,6 @@
 D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.Main.csprojResolveAssemblyReference.cache
-D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.WinClassicIE4.resources
 D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.Windows95.resources
 D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.TitleScreen.resources
-D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.WinClassicTemplate.resources
 D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.Main.csproj.GenerateResource.Cache
 D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.exe
 D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.pdb
@@ -114,3 +112,6 @@ F:\Users\force\Documents\TimeHackGIT\TimeHACK.Main\bin\Release\TimeHACK.Engine.p
 F:\Users\force\Documents\TimeHackGIT\TimeHACK.Main\bin\Release\Newtonsoft.Json.xml
 F:\Users\force\Documents\TimeHackGIT\TimeHACK.Main\obj\Release\TimeHACK.exe.manifest
 F:\Users\force\Documents\TimeHackGIT\TimeHACK.Main\obj\Release\TimeHACK.application
+D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.WinClassicForms.WinClassicDownloader.resources
+D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.WinClassicForms.WinClassicIE4.resources
+D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.WinClassicForms.WinClassicInstaller.resources

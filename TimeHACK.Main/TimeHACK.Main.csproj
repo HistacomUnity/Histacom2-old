@@ -106,14 +106,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Release\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="SharpDX, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Release\SharpDX.dll</HintPath>
-    </Reference>
-    <Reference Include="SharpDX.Direct2D1, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Release\SharpDX.Direct2D1.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -127,40 +119,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OS\Win95\Win95.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95.Designer.cs">
+      <DependentUpon>Win95.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\TestApp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\TestApp.Designer.cs">
+      <DependentUpon>TestApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicDownloader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicDownloader.Designer.cs">
+      <DependentUpon>WinClassicDownloader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicIE4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicIE4.Designer.cs">
+      <DependentUpon>WinClassicIE4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicInstaller.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicInstaller.Designer.cs">
+      <DependentUpon>WinClassicInstaller.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="WinClassicForms\TestApp.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="WinClassicForms\TestApp.Designer.cs">
-      <DependentUpon>TestApp.cs</DependentUpon>
-    </Compile>
-    <Compile Include="WinClassicForms\WinClassicDownloader.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="WinClassicForms\WinClassicDownloader.Designer.cs">
-      <DependentUpon>WinClassicDownloader.cs</DependentUpon>
-    </Compile>
-    <Compile Include="WinClassicForms\WinClassicInstaller.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="WinClassicForms\WinClassicInstaller.Designer.cs">
-      <DependentUpon>WinClassicInstaller.cs</DependentUpon>
-    </Compile>
-    <Compile Include="WinClassicForms\WinClassicIE4.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="WinClassicForms\WinClassicIE4.Designer.cs">
-      <DependentUpon>WinClassicIE4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Windows95.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Windows95.Designer.cs">
-      <DependentUpon>Windows95.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -170,20 +162,20 @@
     <Compile Include="TitleScreen.Designer.cs">
       <DependentUpon>TitleScreen.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="WinClassicForms\TestApp.resx">
+    <EmbeddedResource Include="OS\Win95\Win95.resx">
+      <DependentUpon>Win95.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\TestApp.resx">
       <DependentUpon>TestApp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinClassicForms\WinClassicDownloader.resx">
+    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicDownloader.resx">
       <DependentUpon>WinClassicDownloader.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinClassicForms\WinClassicIE4.resx">
+    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicIE4.resx">
       <DependentUpon>WinClassicIE4.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinClassicForms\WinClassicInstaller.resx">
+    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicInstaller.resx">
       <DependentUpon>WinClassicInstaller.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Windows95.resx">
-      <DependentUpon>Windows95.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -217,12 +209,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\12padams_EULA.txt" />
-    <None Include="Resources\CalculatorToolStripMenuItem.Image.png" />
     <Content Include="Resources\Icon128x.ico" />
-    <None Include="Resources\NotePadToolStripMenuItem.bmp" />
-    <None Include="Resources\NotePadToolStripMenuItem.Image.bmp" />
-    <None Include="Resources\NotePadToolStripMenuItem.Image.png" />
-    <None Include="Resources\sliversilver.png" />
     <Content Include="Resources\TitleScreen\Exit.png" />
     <Content Include="Resources\TitleScreen\LoadGame.png" />
     <Content Include="Resources\TitleScreen\MSExit.png" />
@@ -234,7 +221,6 @@
     <Content Include="Resources\TitleScreen\TimeHACK_Logo.png" />
     <Content Include="Resources\TitleScreen\TitleScreenBG.png" />
     <None Include="Resources\LeviWindows.ttf" />
-    <None Include="Resources\WebChatToolStripMenuItem.Image.png" />
     <Content Include="Resources\WinClassic\16Color.png" />
     <Content Include="Resources\WinClassic\256Color.png" />
     <None Include="Resources\WinClassic\tada.wav" />
@@ -268,6 +254,7 @@
     <Content Include="Resources\WinClassic\Window\BottomSide.png" />
     <Content Include="Resources\WinClassic\Window\LeftSide.png" />
     <Content Include="Resources\WinClassic\Window\RightSide.png" />
+    <Content Include="Resources\WinClassic\Window\sliversilver.png" />
     <Content Include="Resources\WinClassic\Window\TopLeft.png" />
     <Content Include="Resources\WinClassic\Window\TopRight.png" />
     <Content Include="Resources\WinClassic\Window\TopSide.png" />

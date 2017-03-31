@@ -28,3 +28,11 @@ F:\Users\force\Documents\TimeHackGIT\TimeHACK.Engine\obj\Release\TimeHACK.Engine
 F:\Users\force\Documents\TimeHackGIT\TimeHACK.Engine\obj\Release\TimeHACK.Engine.csproj.GenerateResource.Cache
 F:\Users\force\Documents\TimeHackGIT\TimeHACK.Engine\obj\Release\TimeHACK.Engine.dll
 F:\Users\force\Documents\TimeHackGIT\TimeHACK.Engine\obj\Release\TimeHACK.Engine.pdb
+D:\Documents\GitHub\TimeHACK\TimeHACK.Engine\bin\Release\TimeHACK.Engine.dll
+D:\Documents\GitHub\TimeHACK\TimeHACK.Engine\bin\Release\TimeHACK.Engine.pdb
+D:\Documents\GitHub\TimeHACK\TimeHACK.Engine\obj\Release\TimeHACK.Engine.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\TimeHACK\TimeHACK.Engine\obj\Release\TimeHACK.Engine.Properties.Resources.resources
+D:\Documents\GitHub\TimeHACK\TimeHACK.Engine\obj\Release\TimeHACK.Engine.Template.WinClassic.resources
+D:\Documents\GitHub\TimeHACK\TimeHACK.Engine\obj\Release\TimeHACK.Engine.csproj.GenerateResource.Cache
+D:\Documents\GitHub\TimeHACK\TimeHACK.Engine\obj\Release\TimeHACK.Engine.dll
+D:\Documents\GitHub\TimeHACK\TimeHACK.Engine\obj\Release\TimeHACK.Engine.pdb

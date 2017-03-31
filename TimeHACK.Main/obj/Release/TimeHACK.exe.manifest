@@ -63,7 +63,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>plR98K+NhvVW+NWDVr/6Ridl1ZBQjbEHLs+io1Ljf4k=</dsig:DigestValue>
+        <dsig:DigestValue>U7Kekeyx6Ql+9uqUNh8/OwQYQaKLz8r3pS1n2eI6994=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -75,7 +75,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>JcbRZTkAsDszUwGNpbxDF8k8HOqul6OO1xlMBp+H1As=</dsig:DigestValue>
+        <dsig:DigestValue>egCP83neM3apVMcIH6zkNIiRVob2rALwSMmYPhotJik=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -455,6 +455,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>yrDBF1QPiJUsw5OapnDIEykQ8dj5guyF87IFQaEAs2w=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\WinClassic\Window\sliversilver.png" size="156">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>T9l945vYoKcCSIEDDqot2H3OVrkVxqkoQ/E6pZokY8g=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\WinClassic\Window\TopLeft.png" size="170">
