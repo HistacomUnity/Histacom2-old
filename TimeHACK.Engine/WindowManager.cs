@@ -9,7 +9,7 @@ namespace TimeHACK.Engine
     {
         public static System.Drawing.Text.PrivateFontCollection pfc = new System.Drawing.Text.PrivateFontCollection();
 
-        public WinClassic startWinClassic(UserControl content, String title, PictureBox icon, Boolean MaxButton, Boolean MinButton)
+        public WinClassic startWinClassic(UserControl content, string title, PictureBox icon, bool MaxButton, bool MinButton)
         {
             // Setup Window
             WinClassic app = new WinClassic();
