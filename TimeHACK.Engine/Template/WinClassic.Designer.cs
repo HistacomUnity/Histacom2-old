@@ -1,4 +1,4 @@
-﻿namespace TimeHACK.Engine.Template
+﻿namespace TimeHACK.Main.Template
 {
     partial class WinClassic
     {
@@ -109,7 +109,7 @@
             // maximizebutton
             // 
             this.maximizebutton.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.maximizebutton.Image = global::TimeHACK.Engine.Properties.Resources.WinClassicMax;
+            this.maximizebutton.Image = ((System.Drawing.Image)(resources.GetObject("maximizebutton.Image")));
             this.maximizebutton.Location = new System.Drawing.Point(257, 2);
             this.maximizebutton.Name = "maximizebutton";
             this.maximizebutton.Size = new System.Drawing.Size(16, 14);
@@ -120,7 +120,7 @@
             // minimizebutton
             // 
             this.minimizebutton.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.minimizebutton.Image = global::TimeHACK.Engine.Properties.Resources.WinClassicMin;
+            this.minimizebutton.Image = ((System.Drawing.Image)(resources.GetObject("minimizebutton.Image")));
             this.minimizebutton.Location = new System.Drawing.Point(241, 2);
             this.minimizebutton.Name = "minimizebutton";
             this.minimizebutton.Size = new System.Drawing.Size(16, 14);
@@ -130,7 +130,7 @@
             // Title
             // 
             this.Title.AutoSize = true;
-            this.Title.Font = fnt;
+            this.Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Title.ForeColor = System.Drawing.Color.White;
             this.Title.Location = new System.Drawing.Point(23, 3);
             this.Title.Name = "Title";
@@ -142,7 +142,7 @@
             // closebutton
             // 
             this.closebutton.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.closebutton.Image = global::TimeHACK.Engine.Properties.Resources.WinClassicClose;
+            this.closebutton.Image = ((System.Drawing.Image)(resources.GetObject("closebutton.Image")));
             this.closebutton.Location = new System.Drawing.Point(275, 2);
             this.closebutton.Name = "closebutton";
             this.closebutton.Size = new System.Drawing.Size(16, 14);
@@ -197,7 +197,7 @@
             // 
             // bottom
             // 
-            this.bottom.BackgroundImage = global::TimeHACK.Engine.Properties.Resources.BottomSide;
+            this.bottom.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bottom.BackgroundImage")));
             this.bottom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bottom.Cursor = System.Windows.Forms.Cursors.SizeNS;
             this.bottom.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -218,7 +218,7 @@
             // 
             // top
             // 
-            this.top.BackgroundImage = global::TimeHACK.Engine.Properties.Resources.TopSide;
+            this.top.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("top.BackgroundImage")));
             this.top.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.top.Dock = System.Windows.Forms.DockStyle.Top;
             this.top.Location = new System.Drawing.Point(0, 0);

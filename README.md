@@ -28,5 +28,5 @@ This section will be filled at a later date.
 We have another version of TimeHACK, based on the Histacom 1.8.5 source. It can be found at http://www.github.com/TimeHACKDevs/HistacomVB
 
 ## License
-TimeHACK is Licensed under the MIT software license. All code contributed to the TimeHACK project is the property of the TimeHACK development team, and will not be removed upon request.
+TimeHACK is Licensed under the [MIT Software license](https://github.com/TimeHACKDevs/TimeHACK/blob/master/LICENSE). All code contributed to the TimeHACK project is the property of the TimeHACK development team, and will not be removed upon request.
 

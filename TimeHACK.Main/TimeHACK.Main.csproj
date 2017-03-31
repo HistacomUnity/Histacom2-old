@@ -149,13 +149,13 @@
     <Compile Include="OS\Win95\Win95Apps\WinClassicInstaller.Designer.cs">
       <DependentUpon>WinClassicInstaller.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TitleScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,6 +239,7 @@
     <Content Include="Resources\WinClassic\WinClassicNetworking.png" />
     <None Include="Resources\WinClassic\WinClassicNotepad.png" />
     <Content Include="Resources\WinClassic\WinClassicOutlook.png" />
+    <Content Include="Resources\WinClassic\WinClassicProgramItem.png" />
     <Content Include="Resources\WinClassic\WinClassicPrograms.png" />
     <Content Include="Resources\WinClassic\WinClassicRecycle.png" />
     <Content Include="Resources\WinClassic\WinClassicRun.png" />
@@ -249,18 +250,6 @@
     <Content Include="Resources\WinClassic\WinClassicSuspend.png" />
     <Content Include="Resources\WinClassic\WinClassicTaskBar.png" />
     <Content Include="Resources\WinClassic\WinClassicTime.png" />
-    <Content Include="Resources\WinClassic\Window\BottomLeft.png" />
-    <Content Include="Resources\WinClassic\Window\BottomRight.png" />
-    <Content Include="Resources\WinClassic\Window\BottomSide.png" />
-    <Content Include="Resources\WinClassic\Window\LeftSide.png" />
-    <Content Include="Resources\WinClassic\Window\RightSide.png" />
-    <Content Include="Resources\WinClassic\Window\sliversilver.png" />
-    <Content Include="Resources\WinClassic\Window\TopLeft.png" />
-    <Content Include="Resources\WinClassic\Window\TopRight.png" />
-    <Content Include="Resources\WinClassic\Window\TopSide.png" />
-    <Content Include="Resources\WinClassic\Window\WinClassicClose.png" />
-    <Content Include="Resources\WinClassic\Window\WinClassicMax.png" />
-    <Content Include="Resources\WinClassic\Window\WinClassicMin.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TimeHACK.Engine\TimeHACK.Engine.csproj">

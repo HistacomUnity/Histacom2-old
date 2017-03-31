@@ -3,7 +3,7 @@ using System.Drawing;
 using System.IO;
 using System.Media;
 using System.Windows.Forms;
-using TimeHACK.Engine;
+using TimeHACK.Main;
 using TimeHACK.WinClassicForms;
 
 namespace TimeHACK
@@ -12,6 +12,7 @@ namespace TimeHACK
     {
         private SoundPlayer startsound;
         private SoundPlayer stopsound;
+        public WindowManager wm = new WindowManager();
 
         public bool webchatInstalled = false;
 
@@ -127,31 +128,27 @@ namespace TimeHACK
         }
         private void windowManagerTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            WindowManager wm = new WindowManager();
             TestApp test = new TestApp();
-            wm.startWinClassic(test, "TestApp", null, true, true);
+            wm.startWin95(test, "TestApp", null, true, true);
         }
 
         private void downloaderTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WinClassicDownloader opendownload = new WinClassicDownloader();
-            WindowManager wm = new WindowManager();
-            wm.startWinClassic(opendownload, "Downloader", null, false, true);
+            wm.startWin95(opendownload, "Downloader", null, false, true);
             opendownload.appName.Text = "Downloading: Survive The Day";
         }
 
         private void installerTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WinClassicInstaller openinstaller = new WinClassicInstaller();
-            WindowManager wm = new WindowManager();
-            wm.startWinClassic(openinstaller, "Installer", null, false, true);
+            wm.startWin95(openinstaller, "Installer", null, false, true);
         }
 
         private void InternetExplorerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WinClassicIE4 ie = new WinClassicIE4();
-            WindowManager wm = new WindowManager();
-            Engine.Template.WinClassic app = wm.startWinClassic(ie, "Internet Explorer 4", null, true, true);
+            Main.Template.WinClassic app = wm.startWin95(ie, "Internet Explorer 4", null, true, true);
             app.BringToFront();
             startmenu.Hide();
         }
@@ -169,21 +166,24 @@ namespace TimeHACK
                     if (objListViewItem.Text == "Internet Explorer")
                     {
                         WinClassicIE4 ie = new WinClassicIE4();
-                        WindowManager wm = new WindowManager();
-                        Engine.Template.WinClassic app = wm.startWinClassic(ie, "Internet Explorer 4", null, true, true);
+                        Main.Template.WinClassic app = wm.startWin95(ie, "Internet Explorer 4", null, true, true);
                         app.BringToFront();
                         startmenu.Hide();
                     } else if (objListViewItem.Text == "Web Chat Setup")
                     {
                         WinClassicInstaller inst = new WinClassicInstaller();
-                        WindowManager wm = new WindowManager();
                         inst.installname.Text = "Web Chat 1998";
-                        Engine.Template.WinClassic app = wm.startWinClassic(inst, "Web Chat Setup", null, true, true);
+                        Main.Template.WinClassic app = wm.startWin95(inst, "Web Chat Setup", null, true, true);
                         app.BringToFront();
                         startmenu.Hide();
                     }
                 }
             }
+        }
+
+        private void infoboxTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            wm.startInfobox95("AShifter's Infobox", "This is the very first TimeHACK Infobox. It's really easy to call, too! \n Just use wm.startInfobox95(String title, String text)!");
         }
     }
 }

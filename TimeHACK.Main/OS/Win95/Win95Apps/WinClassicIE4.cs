@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using TimeHACK.Engine;
+using TimeHACK.Main;
 
 namespace TimeHACK.WinClassicForms
 {
@@ -160,7 +160,7 @@ namespace TimeHACK.WinClassicForms
         {
             WinClassicDownloader opendownload = new WinClassicDownloader();
             WindowManager wm = new WindowManager();
-            wm.startWinClassic(opendownload, "Downloader", null, false, true);
+            wm.startWin95(opendownload, "Downloader", null, false, true);
             opendownload.appName.Text = "Downloading: Web Chat";
         }
     }

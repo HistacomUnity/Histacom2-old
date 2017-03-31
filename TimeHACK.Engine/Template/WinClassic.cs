@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace TimeHACK.Engine.Template
+namespace TimeHACK.Main.Template
 {
     public partial class WinClassic : Form
     {
@@ -55,7 +55,7 @@ namespace TimeHACK.Engine.Template
                 this.Dock = DockStyle.Fill;
                 this.WindowState = FormWindowState.Maximized;
                 max = true;
-                maximizebutton.Image = Properties.Resources.WinClassicRestore;
+                maximizebutton.Image = Engine.Properties.Resources.WinClassicRestore;
             }
             else
             {
@@ -70,7 +70,7 @@ namespace TimeHACK.Engine.Template
                 this.Dock = DockStyle.None;
                 this.WindowState = FormWindowState.Normal;
                 max = false;
-                maximizebutton.Image = Properties.Resources.WinClassicMax;
+                maximizebutton.Image = Engine.Properties.Resources.WinClassicMax;
             }
             
         }

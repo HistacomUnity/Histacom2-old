@@ -1,15 +1,16 @@
 ﻿using System;
-using TimeHACK.Engine.Template;
+using TimeHACK.Main.Template;
 using System.Windows.Forms;
 using System.Drawing;
 
-namespace TimeHACK.Engine
+namespace TimeHACK.Main
 {
     public class WindowManager
     {
         public static System.Drawing.Text.PrivateFontCollection pfc = new System.Drawing.Text.PrivateFontCollection();
 
-        public WinClassic startWinClassic(UserControl content, string title, PictureBox icon, bool MaxButton, bool MinButton)
+
+        public WinClassic startWin95(UserControl content, String title, PictureBox icon, Boolean MaxButton, Boolean MinButton)
         {
             // Setup Window
             WinClassic app = new WinClassic();
@@ -30,7 +31,7 @@ namespace TimeHACK.Engine
             if (icon == null)
             {
                 icon = app.programIcon;
-                icon.Image = Properties.Resources.nullIcon;
+                icon.Image = Engine.Properties.Resources.nullIcon;
             }
             app.programIcon.Image = icon.Image;
 
@@ -53,6 +54,16 @@ namespace TimeHACK.Engine
             app.BringToFront();
             app.TopMost = true;
 
+            return app;
+        }
+
+        public Infobox95 startInfobox95(String title, String text)
+        {
+            Infobox95 app = new Infobox95();
+            app.Title.Text = title;
+            app.Text = title;
+            app.infoText.Text = text;
+            app.Show();
             return app;
         }
     }
