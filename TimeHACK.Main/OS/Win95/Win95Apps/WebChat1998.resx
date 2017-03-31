@@ -120,4 +120,14 @@
   <metadata name="Chat.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>If you do not agree to the following rules below DO NOT log into the chat:
+
+No Bullying
+No Swearing
+No Hacking
+No Illegal Files/ Piracy
+
+Failure to follow these rules will result in serious irreversible consequences.</value>
+  </data>
 </root>
