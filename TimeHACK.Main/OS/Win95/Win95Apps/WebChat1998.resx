@@ -117,9 +117,44 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="Chat.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Chat.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>17, 17</value>
-  </metadata>
+  </data>
+  <data name="convo" xml:space="preserve">
+    <value>{
+  "messages": [
+    {
+      "user": "System",
+      "delay": 5000,
+      "message": "SkyHigh has joined the chat.",
+      "special": "addsh",
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 6000,
+      "message": "damn",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 6000,
+      "message": "I thought my friend rain49 was going to be on...",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 6000,
+      "message": "hmm... how about we play a game while we wait for my friend to come",
+      "special": null,
+      "userchat": true
+    }
+  ]
+}</value>
+  </data>
   <data name="textBox1.Text" xml:space="preserve">
     <value>If you do not agree to the following rules below DO NOT log into the chat:
 

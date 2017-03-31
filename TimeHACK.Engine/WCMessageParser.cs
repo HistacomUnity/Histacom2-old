@@ -13,12 +13,18 @@ namespace TimeHACK.Engine
         {
             JObject message = JObject.Parse(JObject.Parse(json)["messages"][index].ToString());
             string newmsg = message["message"].ToString().Replace("@user", user);
-            return message["user"].ToString() + ": " + newmsg;
+            if (message["userchat"].ToObject<bool>()) return message["user"].ToString() + ": " + newmsg;
+            else return newmsg;
         }
         public int GetMessageDelay(string json, int index)
         {
             JObject message = JObject.Parse(JObject.Parse(json)["messages"][index].ToString());
             return message["delay"].ToObject<int>();
+        }
+        public string GetSpecial(string json, int index)
+        {
+            JObject message = JObject.Parse(JObject.Parse(json)["messages"][index].ToString());
+            return message["special"].ToString();
         }
     }
 }

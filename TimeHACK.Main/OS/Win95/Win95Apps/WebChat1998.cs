@@ -16,5 +16,12 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             InitializeComponent();
         }
+        private void WebChat1998_Load(object sender, EventArgs e)
+        {
+            button5.Hide();
+            button4.Hide();
+            button3.Hide();
+            label5.Hide();
+        }
     }
 }

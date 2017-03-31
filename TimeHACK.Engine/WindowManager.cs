@@ -9,6 +9,7 @@ namespace TimeHACK.Main
     {
         public static System.Drawing.Text.PrivateFontCollection pfc = new System.Drawing.Text.PrivateFontCollection();
 
+
         public WinClassic startWin95(UserControl content, String title, PictureBox icon, Boolean MaxButton, Boolean MinButton)
         {
             // Setup Window

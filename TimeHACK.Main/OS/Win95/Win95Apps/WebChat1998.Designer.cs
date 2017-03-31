@@ -269,6 +269,7 @@
             this.Controls.Add(this.listBox1);
             this.Name = "WebChat1998";
             this.Size = new System.Drawing.Size(724, 462);
+            this.Load += new System.EventHandler(this.WebChat1998_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.login.ResumeLayout(false);
