@@ -1,4 +1,4 @@
-﻿namespace TimeHACK.Main.Template
+﻿namespace TimeHACK.Engine.Template
 {
     partial class Infobox95
     {

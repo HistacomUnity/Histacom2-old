@@ -1,9 +1,9 @@
 ﻿using System;
-using TimeHACK.Main.Template;
 using System.Windows.Forms;
 using System.Drawing;
+using TimeHACK.Engine.Template;
 
-namespace TimeHACK.Main
+namespace TimeHACK.Engine
 {
     public class WindowManager
     {

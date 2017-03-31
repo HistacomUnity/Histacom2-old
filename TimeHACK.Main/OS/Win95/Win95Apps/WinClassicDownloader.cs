@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using TimeHACK.Main;
+using TimeHACK.OS.Win95;
 
 namespace TimeHACK.WinClassicForms
 {

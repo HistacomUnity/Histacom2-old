@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TimeHACK.Engine;
 
 namespace TimeHACK.OS.Win95.Win95Apps
 {
@@ -22,6 +23,14 @@ namespace TimeHACK.OS.Win95.Win95Apps
             button4.Hide();
             button3.Hide();
             label5.Hide();
+        }
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            if (txtscreenname.Text == "")
+            {
+                WindowManager wm = new WindowManager();
+                wm.startInfobox95("test", "test");
+            }
         }
     }
 }

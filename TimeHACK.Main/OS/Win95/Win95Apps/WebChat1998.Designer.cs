@@ -107,7 +107,6 @@
             // 
             // button5
             // 
-            this.button5.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
             this.button5.Location = new System.Drawing.Point(97, 13);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
@@ -197,6 +196,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // txtscreenname
             // 
