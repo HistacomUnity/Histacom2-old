@@ -178,7 +178,7 @@ namespace TimeHACK
                         WinClassicInstaller inst = new WinClassicInstaller();
                         WindowManager wm = new WindowManager();
                         inst.installname.Text = "Web Chat 1998";
-                        Engine.Template.WinClassic app = wm.startWinClassic(inst, "Internet Explorer 4", null, true, true);
+                        Engine.Template.WinClassic app = wm.startWinClassic(inst, "Web Chat Setup", null, true, true);
                         app.BringToFront();
                         startmenu.Hide();
                     }
