@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Infobox95));
             this.program = new System.Windows.Forms.Panel();
             this.programContent = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.infoText = new System.Windows.Forms.Label();
             this.ok = new System.Windows.Forms.Button();
             this.programtopbar = new System.Windows.Forms.Panel();
             this.Title = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.infoText = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.closebutton = new System.Windows.Forms.PictureBox();
             this.toprightcorner = new System.Windows.Forms.Panel();
             this.bottomrightcorner = new System.Windows.Forms.Panel();
@@ -48,9 +48,9 @@
             this.top = new System.Windows.Forms.Panel();
             this.program.SuspendLayout();
             this.programContent.SuspendLayout();
-            this.programtopbar.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.programtopbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.closebutton)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,6 +83,35 @@
             this.programContent.Name = "programContent";
             this.programContent.Size = new System.Drawing.Size(413, 138);
             this.programContent.TabIndex = 9;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.ErrorImage = null;
+            this.pictureBox1.Image = global::TimeHACK.Engine.Properties.Resources.WinClassicWarning;
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(8, 33);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.infoText);
+            this.panel1.Location = new System.Drawing.Point(57, 33);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(337, 62);
+            this.panel1.TabIndex = 2;
+            // 
+            // infoText
+            // 
+            this.infoText.AutoSize = true;
+            this.infoText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.infoText.Location = new System.Drawing.Point(0, 0);
+            this.infoText.Name = "infoText";
+            this.infoText.Size = new System.Drawing.Size(35, 13);
+            this.infoText.TabIndex = 0;
+            this.infoText.Text = "label1";
             // 
             // ok
             // 
@@ -122,35 +151,6 @@
             this.Title.TabIndex = 3;
             this.Title.Text = "Infobox Title";
             this.Title.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Programtopbar_drag);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.infoText);
-            this.panel1.Location = new System.Drawing.Point(57, 33);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(337, 62);
-            this.panel1.TabIndex = 2;
-            // 
-            // infoText
-            // 
-            this.infoText.AutoSize = true;
-            this.infoText.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.infoText.Location = new System.Drawing.Point(0, 0);
-            this.infoText.Name = "infoText";
-            this.infoText.Size = new System.Drawing.Size(35, 13);
-            this.infoText.TabIndex = 0;
-            this.infoText.Text = "label1";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.ErrorImage = null;
-            this.pictureBox1.Image = global::TimeHACK.Engine.Properties.Resources.WinClassicWarning;
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(8, 33);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // closebutton
             // 
@@ -250,11 +250,11 @@
             this.Text = "Infobox";
             this.program.ResumeLayout(false);
             this.programContent.ResumeLayout(false);
-            this.programtopbar.ResumeLayout(false);
-            this.programtopbar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.programtopbar.ResumeLayout(false);
+            this.programtopbar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.closebutton)).EndInit();
             this.ResumeLayout(false);
 
