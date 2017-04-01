@@ -1,4 +1,4 @@
-﻿namespace TimeHACK.WinClassicForms
+﻿namespace TimeHACK.OS.Win95.Win95Apps
 {
     partial class WinClassicDownloader
     {

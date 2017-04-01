@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
-using TimeHACK.OS.Win95;
 
-namespace TimeHACK.WinClassicForms
+namespace TimeHACK.OS.Win95.Win95Apps
 {
     public partial class WinClassicDownloader : UserControl
     {

@@ -58,6 +58,7 @@
             // Chat
             // 
             this.Chat.Interval = 15000;
+            this.Chat.Tick += new System.EventHandler(this.Chat_Tick);
             // 
             // listBox1
             // 

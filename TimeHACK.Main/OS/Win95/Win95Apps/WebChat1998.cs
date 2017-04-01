@@ -14,6 +14,9 @@ namespace TimeHACK.OS.Win95.Win95Apps
 {
     public partial class WebChat1998 : UserControl
     {
+        int chat_index = 0;
+        WCMessageParser wcmp = new WCMessageParser();
+
         public WebChat1998()
         {
             InitializeComponent();
@@ -36,23 +39,30 @@ namespace TimeHACK.OS.Win95.Win95Apps
             TitleScreen.username = txtscreenname.Text;
             login.Hide();
             listBox1.Items.Add(TitleScreen.username);
-            chatLoop();
+            history.Text = "System: " + TitleScreen.username + " has joined the chat." + Environment.NewLine;
+            Chat.Start();
         }
 
-        private void chatLoop()
+        private void Chat_Tick(object sender, EventArgs e)
         {
-            WCMessageParser wcmp = new WCMessageParser();
-            Thread.Sleep(15000);
-            for (int i = 0; i < 200; i++)
+            history.Text += wcmp.ParseMessage(resources.GetString("convo"), chat_index, TitleScreen.username) + Environment.NewLine;
+            switch (wcmp.GetSpecial(resources.GetString("convo"), chat_index))
             {
-                history.Text = wcmp.ParseMessage(resources.GetString("convo"), i, TitleScreen.username);
-                switch (wcmp.GetSpecial(resources.GetString("convo"), i))
-                {
-                    default:
-                        break;
-                }
-                Thread.Sleep(wcmp.GetMessageDelay(resources.GetString("convo"), i));
+                case "addsh":
+                    listBox1.Items.Add("SkyHigh");
+                    break;
+                case "nameguess":
+                    typechat.Hide();
+                    button2.Hide();
+                    button3.Show();
+                    button4.Show();
+                    Chat.Stop();
+                    break;
+                default:
+                    break;
             }
+            Chat.Interval = wcmp.GetMessageDelay(resources.GetString("convo"), chat_index);
+            chat_index++;
         }
     }
 }
