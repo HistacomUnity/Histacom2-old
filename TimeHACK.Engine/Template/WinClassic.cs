@@ -9,6 +9,7 @@ namespace TimeHACK.Engine.Template
         public WinClassic()
         {
             InitializeComponent();
+            this.Title.Font = new System.Drawing.Font(WindowManager.pfc.Families[0], 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         }
 
         public System.Drawing.Font fnt;
