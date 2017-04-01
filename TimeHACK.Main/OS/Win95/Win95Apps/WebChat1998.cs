@@ -16,6 +16,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
     {
         int chat_index = 0;
         WCMessageParser wcmp = new WCMessageParser();
+        bool correctname = false;
 
         public WebChat1998()
         {
@@ -36,6 +37,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 wm.startInfobox95("Invalid Username", "Your username cannot be blank.");
                 return;
             }
+            ParentForm.AcceptButton = button2;
             TitleScreen.username = txtscreenname.Text;
             login.Hide();
             listBox1.Items.Add(TitleScreen.username);
@@ -45,24 +47,57 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void Chat_Tick(object sender, EventArgs e)
         {
-            history.Text += wcmp.ParseMessage(resources.GetString("convo"), chat_index, TitleScreen.username) + Environment.NewLine;
-            switch (wcmp.GetSpecial(resources.GetString("convo"), chat_index))
+            if (chat_index != 6)
             {
-                case "addsh":
-                    listBox1.Items.Add("SkyHigh");
-                    break;
-                case "nameguess":
-                    typechat.Hide();
-                    button2.Hide();
-                    button3.Show();
-                    button4.Show();
-                    Chat.Stop();
-                    break;
-                default:
-                    break;
+                history.Text += wcmp.ParseMessage(resources.GetString("convo"), chat_index, TitleScreen.username) + Environment.NewLine;
+                switch (wcmp.GetSpecial(resources.GetString("convo"), chat_index))
+                {
+                    case "addsh":
+                        listBox1.Items.Add("SkyHigh");
+                        break;
+                    case "nameguess":
+                        typechat.Hide();
+                        button2.Hide();
+                        button3.Show();
+                        button4.Show();
+                        Chat.Stop();
+                        break;
+                    case "addrain":
+                        listBox1.Items.Add("rain49");
+                        break;
+                    default:
+                        break;
+                }
+                Chat.Interval = wcmp.GetMessageDelay(resources.GetString("convo"), chat_index);
             }
-            Chat.Interval = wcmp.GetMessageDelay(resources.GetString("convo"), chat_index);
+            else
+            {
+                if (correctname)
+                {
+                    history.Text += "SkyHigh: yay you got it right!" + Environment.NewLine;
+                }
+                else
+                {
+                    history.Text += "SkyHigh: sorry, my name is actually bill" + Environment.NewLine;
+                }
+                Chat.Interval = wcmp.GetMessageDelay(resources.GetString("convo"), chat_index);
+            }
             chat_index++;
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            if (typechat.Text != "") history.Text += TitleScreen.username + ": " + typechat.Text + Environment.NewLine;
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            correctname = true; Chat.Start();
+        }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            correctname = false; Chat.Start();
         }
     }
 }
