@@ -214,6 +214,48 @@
       "message": "anyway... let's get to it",
       "special": null,
       "userchat": true
+    },
+    {
+      "user": "rain49",
+      "delay": 5000,
+      "message": "wait, who's this @user guy?",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 3000,
+      "message": "oh, he's someone who just came on. doesnt seem to talk much",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "rain49",
+      "delay": 5000,
+      "message": "ah ok",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 4500,
+      "message": "i would remove him from this chat but i cant",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 3000,
+      "message": "i dont think he should know about, well, ya know..",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "rain49",
+      "delay": 3000,
+      "message": "right, that",
+      "special": null,
+      "userchat": true
     }
   ]
 }</value>

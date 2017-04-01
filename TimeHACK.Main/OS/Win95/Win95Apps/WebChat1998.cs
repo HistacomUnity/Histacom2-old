@@ -17,6 +17,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         int chat_index = 0;
         WCMessageParser wcmp = new WCMessageParser();
         bool correctname = false;
+        bool guessing = false;
 
         public WebChat1998()
         {
@@ -53,7 +54,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void Chat_Tick(object sender, EventArgs e)
         {
-            if (chat_index != 6)
+            if (!guessing)
             {
                 history.Text += wcmp.ParseMessage(resources.GetString("convo"), chat_index, TitleScreen.username) + "\n";
                 switch (wcmp.GetSpecial(resources.GetString("convo"), chat_index))
@@ -67,6 +68,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         button3.Show();
                         button4.Show();
                         Chat.Stop();
+                        guessing = true;
                         break;
                     case "addrain":
                         listBox1.Items.Add("rain49");
@@ -86,6 +88,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 {
                     history.Text += "SkyHigh: sorry, my name is actually bill\n";
                 }
+                guessing = false;
                 Chat.Interval = wcmp.GetMessageDelay(resources.GetString("convo"), chat_index);
             }
             chat_index++;
