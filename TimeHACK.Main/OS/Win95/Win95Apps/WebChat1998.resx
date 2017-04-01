@@ -148,8 +148,22 @@
     {
       "user": "SkyHigh",
       "delay": 6000,
-      "message": "hmm... how about we play a game while we wait for my friend to come",
+      "message": "hmm... how about we play a game while we wait for my friend to come?",
       "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 5000,
+      "message": "alright, go ahead and guess what my name is!",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 500,
+      "message": "ill make 2 buttons pop up, you click the one you want to guess",
+      "special": "nameguess",
       "userchat": true
     }
   ]

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TimeHACK.Engine
 {
-    class WCMessageParser
+    public class WCMessageParser
     {
         public string ParseMessage(string json, int index, string user)
         {

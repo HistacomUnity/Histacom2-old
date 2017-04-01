@@ -4,6 +4,7 @@ using System.IO;
 using System.Media;
 using System.Windows.Forms;
 using TimeHACK.Engine;
+using TimeHACK.OS.Win95.Win95Apps;
 using TimeHACK.WinClassicForms;
 
 namespace TimeHACK.OS.Win95
@@ -184,6 +185,13 @@ namespace TimeHACK.OS.Win95
         private void infoboxTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             wm.startInfobox95("AShifter's Infobox", "This is the very first TimeHACK Infobox. It's really easy to call, too! \n Just use wm.startInfobox95(String title, String text)!");
+        }
+        private void WebChatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WebChat1998 wc = new WebChat1998();
+            Engine.Template.WinClassic app = wm.startWin95(wc, "Web Chat 1998", null, true, true);
+            app.BringToFront();
+            startmenu.Hide();
         }
     }
 }

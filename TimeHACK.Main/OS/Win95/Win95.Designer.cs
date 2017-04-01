@@ -322,6 +322,7 @@
             this.NetMeetingToolStripMenuItem.Name = "NetMeetingToolStripMenuItem";
             this.NetMeetingToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.NetMeetingToolStripMenuItem.Text = "NetMeeting";
+            this.NetMeetingToolStripMenuItem.Click += new System.EventHandler(this.WebChatToolStripMenuItem_Click);
             // 
             // MultimediaToolStripMenuItem
             // 

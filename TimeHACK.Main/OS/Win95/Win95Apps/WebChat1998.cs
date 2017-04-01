@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TimeHACK.Engine;
+using System.Threading;
 
 namespace TimeHACK.OS.Win95.Win95Apps
 {
@@ -29,7 +30,28 @@ namespace TimeHACK.OS.Win95.Win95Apps
             if (txtscreenname.Text == "")
             {
                 WindowManager wm = new WindowManager();
-                wm.startInfobox95("test", "test");
+                wm.startInfobox95("Invalid Username", "Your username cannot be blank.");
+                return;
+            }
+            TitleScreen.username = txtscreenname.Text;
+            login.Hide();
+            listBox1.Items.Add(TitleScreen.username);
+            chatLoop();
+        }
+
+        private void chatLoop()
+        {
+            WCMessageParser wcmp = new WCMessageParser();
+            Thread.Sleep(15000);
+            for (int i = 0; i < 200; i++)
+            {
+                history.Text = wcmp.ParseMessage(resources.GetString("convo"), i, TitleScreen.username);
+                switch (wcmp.GetSpecial(resources.GetString("convo"), i))
+                {
+                    default:
+                        break;
+                }
+                Thread.Sleep(wcmp.GetMessageDelay(resources.GetString("convo"), i));
             }
         }
     }
