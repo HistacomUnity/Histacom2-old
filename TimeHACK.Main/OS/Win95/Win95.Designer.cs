@@ -229,7 +229,7 @@
             this.startmenuitems.Name = "startmenuitems";
             this.startmenuitems.Padding = new System.Windows.Forms.Padding(6, 2, 0, 0);
             this.startmenuitems.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.startmenuitems.Size = new System.Drawing.Size(141, 292);
+            this.startmenuitems.Size = new System.Drawing.Size(144, 311);
             this.startmenuitems.TabIndex = 0;
             this.startmenuitems.Text = "StartMenu";
             // 
@@ -284,7 +284,7 @@
             this.AccessoriesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.AccessoriesToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.AccessoriesToolStripMenuItem.Name = "AccessoriesToolStripMenuItem";
-            this.AccessoriesToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
+            this.AccessoriesToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.AccessoriesToolStripMenuItem.Text = "Accessories";
             // 
             // CommunicationsToolStripMenuItem
