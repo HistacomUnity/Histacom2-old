@@ -26,6 +26,11 @@ namespace TimeHACK.OS.Win95
         //  When New Game is clicked in TitleScreen.cs
         private void Desktop_Load(object sender, EventArgs e)
         {
+            // Play Windows 95 Start Sound
+            Stream audio = Properties.Resources.Win95Start;
+            startsound = new SoundPlayer(audio);
+            startsound.Play();
+
             // Hide the Startmenu
             startmenu.Hide();
 
@@ -37,11 +42,6 @@ namespace TimeHACK.OS.Win95
 
             // Start the ClockTimer
             clockTimer.Start();
-
-            // Play Windows 95 Start Sound
-            Stream audio = Properties.Resources.Win95Start;
-            startsound = new SoundPlayer(audio);
-            startsound.Play();
 
             // Set the StartMenu seperator
             startmenuitems.Items.Insert(6, new ToolStripSeparator());
