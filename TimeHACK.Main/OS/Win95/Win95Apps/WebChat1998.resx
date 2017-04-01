@@ -161,7 +161,7 @@
     },
     {
       "user": "SkyHigh",
-      "delay": 500,
+      "delay": 1000,
       "message": "ill make 2 buttons pop up, you click the one you want to guess",
       "special": "nameguess",
       "userchat": true

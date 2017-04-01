@@ -25,8 +25,6 @@ C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\bin\Release\TimeHACK.
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\bin\Release\TimeHACK.Engine.pdb
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.Main.csprojResolveAssemblyReference.cache
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.WinClassicForms.TestApp.resources
-C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.WinClassicForms.WinClassicDownloader.resources
-C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.WinClassicForms.WinClassicIE4.resources
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.WinClassicForms.WinClassicInstaller.resources
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.Properties.Resources.resources
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.TitleScreen.resources
@@ -37,3 +35,5 @@ C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.pdb
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WebChat1998.resources
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Windows95.resources
+C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WinClassicIE4.resources
+C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WinClassicDownloader.resources
