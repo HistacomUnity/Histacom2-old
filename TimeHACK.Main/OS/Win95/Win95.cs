@@ -26,6 +26,9 @@ namespace TimeHACK.OS.Win95
         //  When New Game is clicked in TitleScreen.cs
         private void Desktop_Load(object sender, EventArgs e)
         {
+            // Make Font Mandatory
+            fontLoad();
+
             // Play Windows 95 Start Sound
             Stream audio = Properties.Resources.Win95Start;
             startsound = new SoundPlayer(audio);
@@ -47,6 +50,20 @@ namespace TimeHACK.OS.Win95
             startmenuitems.Items.Insert(6, new ToolStripSeparator());
 
             this.SendToBack();
+        }
+
+        private void fontLoad()
+        {
+            this.taskbartime.Font = new System.Drawing.Font(TitleScreen.pfc.Families[0], 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProgramsToolStripMenuItem.Font = new System.Drawing.Font(TitleScreen.pfc.Families[0], 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DocumentsToolStripMenuItem.Font = new System.Drawing.Font(TitleScreen.pfc.Families[0], 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsToolStripMenuItem.Font = new System.Drawing.Font(TitleScreen.pfc.Families[0], 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FindToolStripMenuItem.Font = new System.Drawing.Font(TitleScreen.pfc.Families[0], 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HelpToolStripMenuItem.Font = new System.Drawing.Font(TitleScreen.pfc.Families[0], 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RunToolStripMenuItem.Font = new System.Drawing.Font(TitleScreen.pfc.Families[0], 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SuspendToolStripMenuItem.Font = new System.Drawing.Font(TitleScreen.pfc.Families[0], 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShutdownToolStripMenuItem.Font = new System.Drawing.Font(TitleScreen.pfc.Families[0], 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.desktopicons.Font = new System.Drawing.Font(TitleScreen.pfc.Families[0], 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         }
 
         #region StartMenu

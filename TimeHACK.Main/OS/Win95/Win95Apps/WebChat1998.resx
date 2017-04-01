@@ -252,8 +252,29 @@
     },
     {
       "user": "rain49",
-      "delay": 3000,
+      "delay": 5000,
       "message": "right, that",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "rain49",
+      "delay": 3500,
+      "message": "since he's here should we just tell him?",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 2500,
+      "message": "well i suppose we have to",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "rain49",
+      "delay": 2500,
+      "message": "ok then",
       "special": null,
       "userchat": true
     }

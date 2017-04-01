@@ -47,6 +47,7 @@ namespace TimeHACK
 
             // Initialize Font
             pfc.AddFontFile(AppDomain.CurrentDomain.BaseDirectory + "\\LeviWindows.ttf");
+            gameversion.Font = new Font(pfc.Families[0], 16F, FontStyle.Bold, GraphicsUnit.Point, (0));
 
             // Start the VM Mode timer
             vmModeTimer.Start();
