@@ -165,6 +165,34 @@
       "message": "ill make 2 buttons pop up, you click the one you want to guess",
       "special": "nameguess",
       "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 5000,
+      "message": "actually, if ya dont wanna do that its fine, i guess",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "System",
+      "delay": 3000,
+      "message": "rain49 has joined the chat.",
+      "special": "addrain",
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 6000,
+      "message": "hey man",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 6000,
+      "message": "ive sort of been waiting",
+      "special": null,
+      "userchat": true
     }
   ]
 }</value>
