@@ -47,7 +47,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             TitleScreen.username = txtscreenname.Text;
             login.Hide();
             listBox1.Items.Add(TitleScreen.username);
-            history.Text = "System: " + TitleScreen.username + " has joined the chat." + Environment.NewLine;
+            history.Text = "System: " + TitleScreen.username + " has joined the chat.\n";
             Chat.Start();
         }
 
@@ -55,7 +55,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             if (chat_index != 6)
             {
-                history.Text += wcmp.ParseMessage(resources.GetString("convo"), chat_index, TitleScreen.username) + Environment.NewLine;
+                history.Text += wcmp.ParseMessage(resources.GetString("convo"), chat_index, TitleScreen.username) + "\n";
                 switch (wcmp.GetSpecial(resources.GetString("convo"), chat_index))
                 {
                     case "addsh":
@@ -80,11 +80,11 @@ namespace TimeHACK.OS.Win95.Win95Apps
             {
                 if (correctname)
                 {
-                    history.Text += "SkyHigh: yay you got it right!" + Environment.NewLine;
+                    history.Text += "SkyHigh: yay you got it right!\n";
                 }
                 else
                 {
-                    history.Text += "SkyHigh: sorry, my name is actually bill" + Environment.NewLine;
+                    history.Text += "SkyHigh: sorry, my name is actually bill\n";
                 }
                 Chat.Interval = wcmp.GetMessageDelay(resources.GetString("convo"), chat_index);
             }
@@ -93,7 +93,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            if (typechat.Text != "") history.Text += TitleScreen.username + ": " + typechat.Text + Environment.NewLine;
+            if (typechat.Text != "") history.Text += TitleScreen.username + ": " + typechat.Text + "\n";
             typechat.Text = "";
         }
 
