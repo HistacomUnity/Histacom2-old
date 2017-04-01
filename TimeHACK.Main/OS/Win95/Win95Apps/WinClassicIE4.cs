@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using TimeHACK.Engine;
 
-namespace TimeHACK.WinClassicForms
+namespace TimeHACK.OS.Win95.Win95Apps
 {
     public partial class WinClassicIE4 : UserControl
     {

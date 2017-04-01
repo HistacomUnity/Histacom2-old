@@ -11,6 +11,7 @@ namespace TimeHACK
     {
         public static System.Drawing.Text.PrivateFontCollection pfc = new System.Drawing.Text.PrivateFontCollection();
         public static Windows95 frm95;
+        public static string username;
 
         public TitleScreen()
         {
