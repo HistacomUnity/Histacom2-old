@@ -133,7 +133,7 @@
     },
     {
       "user": "SkyHigh",
-      "delay": 6000,
+      "delay": 5000,
       "message": "damn",
       "special": null,
       "userchat": true
@@ -183,14 +183,35 @@
     {
       "user": "SkyHigh",
       "delay": 6000,
-      "message": "hey man",
+      "message": "hey rain",
       "special": null,
       "userchat": true
     },
     {
       "user": "SkyHigh",
-      "delay": 6000,
+      "delay": 4000,
       "message": "ive sort of been waiting",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "rain49",
+      "delay": 5000,
+      "message": "sorry man",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "rain49",
+      "delay": 4000,
+      "message": "it took a while for this to load",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 4000,
+      "message": "anyway... let's get to it",
       "special": null,
       "userchat": true
     }
