@@ -235,8 +235,11 @@
     <None Include="Resources\WinClassic\tada.wav" />
     <None Include="Resources\WinClassic\sliversilver.png" />
     <Content Include="Resources\WinClassic\TrueColor.png" />
+    <None Include="Resources\WinClassic\Win95Info.png" />
+    <None Include="Resources\WinClassic\Win95Error.png" />
     <Content Include="Resources\WinClassic\Win95SideBar.png" />
     <Content Include="Resources\WinClassic\Win95Start.wav" />
+    <None Include="Resources\WinClassic\Win95Warning.png" />
     <Content Include="Resources\WinClassic\WinClassicClock.png" />
     <Content Include="Resources\WinClassic\WinClassicComputer.png" />
     <Content Include="Resources\WinClassic\WinClassicDocuments.png" />

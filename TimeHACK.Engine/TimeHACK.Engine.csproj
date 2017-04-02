@@ -89,6 +89,9 @@
     <Content Include="Resources\WinClassic\Window\TopLeft.png" />
     <Content Include="Resources\WinClassic\Window\TopRight.png" />
     <Content Include="Resources\WinClassic\Window\TopSide.png" />
+    <None Include="Resources\WinClassic\Window\Win95Info.png" />
+    <None Include="Resources\WinClassic\Window\Win95Warning.png" />
+    <None Include="Resources\WinClassic\Window\Win95Error.png" />
     <Content Include="Resources\WinClassic\Window\WinClassicClose.png" />
     <Content Include="Resources\WinClassic\Window\WinClassicMax.png" />
     <Content Include="Resources\WinClassic\Window\WinClassicMin.png" />
