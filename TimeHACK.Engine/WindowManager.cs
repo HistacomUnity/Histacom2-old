@@ -58,7 +58,7 @@ namespace TimeHACK.Engine
             return app;
         }
 
-        public Infobox95 startInfobox95(String title, String text)
+        public Infobox95 startInfobox95(String title, String text, Image erroricon)
         {
             Infobox95 app = new Infobox95();
             app.Title.Text = title;

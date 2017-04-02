@@ -241,6 +241,26 @@ namespace TimeHACK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Win95Error {
+            get {
+                object obj = ResourceManager.GetObject("Win95Error", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Win95Info {
+            get {
+                object obj = ResourceManager.GetObject("Win95Info", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Win95SideBar {
             get {
                 object obj = ResourceManager.GetObject("Win95SideBar", resourceCulture);
@@ -263,6 +283,16 @@ namespace TimeHACK.Properties {
         internal static System.IO.UnmanagedMemoryStream Win95Start1 {
             get {
                 return ResourceManager.GetStream("Win95Start1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Win95Warning {
+            get {
+                object obj = ResourceManager.GetObject("Win95Warning", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

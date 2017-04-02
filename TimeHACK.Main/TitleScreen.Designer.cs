@@ -54,7 +54,7 @@
             this.gameversion.AutoSize = true;
             this.gameversion.BackColor = System.Drawing.Color.Transparent;
             this.gameversion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gameversion.Location = new System.Drawing.Point(25, 8);
+            this.gameversion.Location = new System.Drawing.Point(25, 6);
             this.gameversion.Name = "gameversion";
             this.gameversion.Size = new System.Drawing.Size(78, 13);
             this.gameversion.TabIndex = 0;

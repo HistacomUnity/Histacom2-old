@@ -173,6 +173,36 @@ namespace TimeHACK.Engine.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Win95Error {
+            get {
+                object obj = ResourceManager.GetObject("Win95Error", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Win95Info {
+            get {
+                object obj = ResourceManager.GetObject("Win95Info", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Win95Warning {
+            get {
+                object obj = ResourceManager.GetObject("Win95Warning", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WinClassicClose {
             get {
                 object obj = ResourceManager.GetObject("WinClassicClose", resourceCulture);
@@ -206,16 +236,6 @@ namespace TimeHACK.Engine.Properties {
         internal static System.Drawing.Bitmap WinClassicRestore {
             get {
                 object obj = ResourceManager.GetObject("WinClassicRestore", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap WinClassicWarning {
-            get {
-                object obj = ResourceManager.GetObject("WinClassicWarning", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -87,7 +87,7 @@
             // pictureBox1
             // 
             this.pictureBox1.ErrorImage = null;
-            this.pictureBox1.Image = global::TimeHACK.Engine.Properties.Resources.WinClassicWarning;
+            this.pictureBox1.Image = global::TimeHACK.Engine.Properties.Resources.Win95Warning;
             this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(8, 33);
             this.pictureBox1.Name = "pictureBox1";
