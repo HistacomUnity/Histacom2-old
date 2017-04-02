@@ -35,13 +35,13 @@ namespace TimeHACK.OS.Win95.Win95Apps
             if (txtscreenname.Text == "")
             {
                 WindowManager wm = new WindowManager();
-                wm.startInfobox95("Invalid Username", "Your username cannot be blank.");
+                wm.startInfobox95("Invalid Username", "Your username cannot be blank.", Properties.Resources.Win95Warning);
                 return;
             }
             else if (txtscreenname.Text.Length > 12)
             {
                 WindowManager wm = new WindowManager();
-                wm.startInfobox95("Invalid Username", "Your username needs to be less than 12 characters.");
+                wm.startInfobox95("Invalid Username", "Your username needs to be less than 12 characters.", Properties.Resources.Win95Warning);
                 return;
             }
             ParentForm.AcceptButton = button2;
