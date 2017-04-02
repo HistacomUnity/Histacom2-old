@@ -63,7 +63,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>gRboXh/lVHhw5uJ901V8Zmg4BAnhmp+nImuxQADJew8=</dsig:DigestValue>
+        <dsig:DigestValue>ke+yb6S++pb9eQ7keVJBkXsGT2Fo+xzu55VwmJ6SsAg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -75,7 +75,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>/l7x7HD8hXvATQQVmOSM663LgsskkmOz8feGgd4LmY8=</dsig:DigestValue>
+        <dsig:DigestValue>Y1QPCUqPsePdcLpE0c4llNeaL2BqfEG6k4jngkXuYoQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -241,13 +241,13 @@
       <dsig:DigestValue>wdycAfKPNJg2GO6pIc0JKDnDhE1zrtpamp5CVVKPOhw=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Resources\WinClassic\WinClassicComputer.png" size="409">
+  <file name="Resources\WinClassic\WinClassicComputer.png" size="410">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>0hsBiDZFmFnEFPVIFCAZuH9jO80xXdecp7LpxU5Crl8=</dsig:DigestValue>
+      <dsig:DigestValue>7qdgZRiaGUdkQELrWMmy0X2MexD+1MiZHIJbd5Uml2E=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\WinClassic\WinClassicDocuments.png" size="346">
@@ -319,7 +319,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>R6ygXhLkTBMcXVLll4JA3Al5RyP+A/ZhIGEMc6sqbw8=</dsig:DigestValue>
+      <dsig:DigestValue>qClKL3sLGduhUUkgph3TLlUcOJ9Rap+lqX32zp8f31A=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\WinClassic\WinClassicOutlook.png" size="537">
@@ -331,13 +331,13 @@
       <dsig:DigestValue>uw/4Jjmd9N9HqHaI17CYoAEwsYy8+2t/nJ3z5vGDD04=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Resources\WinClassic\WinClassicProgramItem.png" size="302">
+  <file name="Resources\WinClassic\WinClassicProgramItem.png" size="312">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>M5GJAXXqneQ9yY1yfeuyV5j9IYIBp6b0BRj5KAOwv2s=</dsig:DigestValue>
+      <dsig:DigestValue>/J+u19nP9/3Umk2QZ4141A2KL/z1/EzabYWTsBAvdwQ=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\WinClassic\WinClassicPrograms.png" size="377">

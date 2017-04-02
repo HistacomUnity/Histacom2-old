@@ -132,7 +132,7 @@
             this.Title.AutoSize = true;
             this.Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Title.ForeColor = System.Drawing.Color.White;
-            this.Title.Location = new System.Drawing.Point(23, 3);
+            this.Title.Location = new System.Drawing.Point(23, 1);
             this.Title.Name = "Title";
             this.Title.Size = new System.Drawing.Size(99, 13);
             this.Title.TabIndex = 3;
