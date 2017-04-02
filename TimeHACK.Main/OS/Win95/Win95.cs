@@ -201,7 +201,7 @@ namespace TimeHACK.OS.Win95
 
         private void infoboxTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            wm.startInfobox95("AShifter's Infobox", "This is the very first TimeHACK Infobox. It's really easy to call, too! \n Just use wm.startInfobox95(String title, String text)!");
+            wm.startInfobox95("AShifter's Infobox", "This is the very first TimeHACK Infobox. It's really easy to call, too! \n Just use wm.startInfobox95(String title, String text, Image erroricon)!", Properties.Resources.Win95Info);
         }
         private void WebChatToolStripMenuItem_Click(object sender, EventArgs e)
         {
