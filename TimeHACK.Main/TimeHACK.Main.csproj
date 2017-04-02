@@ -234,6 +234,10 @@
     <Content Include="Resources\WinClassic\256Color.png" />
     <None Include="Resources\WinClassic\tada.wav" />
     <None Include="Resources\WinClassic\sliversilver.png" />
+    <None Include="Resources\WinClassic\AIMmessagereceived.wav" />
+    <None Include="Resources\WinClassic\AIMmessagesent.wav" />
+    <None Include="Resources\WinClassic\AIMbuddyjoin.wav" />
+    <None Include="Resources\WinClassic\AIMbuddyleave.wav" />
     <Content Include="Resources\WinClassic\TrueColor.png" />
     <None Include="Resources\WinClassic\Win95Info.png" />
     <None Include="Resources\WinClassic\Win95Error.png" />
