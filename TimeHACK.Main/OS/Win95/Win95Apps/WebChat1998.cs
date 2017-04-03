@@ -48,7 +48,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             TitleScreen.username = txtscreenname.Text;
             login.Hide();
             listBox1.Items.Add(TitleScreen.username);
-            history.Text = "System: " + TitleScreen.username + " has joined the chat." + Environment.NewLine;
+            history.AppendText("System: " + TitleScreen.username + " has joined the chat." + Environment.NewLine);
             join.Play();
             Chat.Start();
         }
@@ -57,7 +57,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             if (!guessing)
             {
-                history.Text += wcmp.ParseMessage(resources.GetString("convo"), chat_index, TitleScreen.username) + Environment.NewLine;
+                history.AppendText(wcmp.ParseMessage(resources.GetString("convo"), chat_index, TitleScreen.username) + Environment.NewLine);
                 switch (wcmp.GetSpecial(resources.GetString("convo"), chat_index))
                 {
                     case "addsh":
@@ -96,11 +96,11 @@ namespace TimeHACK.OS.Win95.Win95Apps
             {
                 if (correctname)
                 {
-                    history.Text += "SkyHigh: yay you got it right!" + Environment.NewLine;
+                    history.AppendText("SkyHigh: yay you got it right!" + Environment.NewLine);
                 }
                 else
                 {
-                    history.Text += "SkyHigh: sorry, my name is actually bill" + Environment.NewLine;
+                    history.AppendText("SkyHigh: sorry, my name is actually bill" + Environment.NewLine);
                 }
                 guessing = false;
                 receive.Play();
@@ -111,7 +111,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            if (typechat.Text != "") history.Text += TitleScreen.username + ": " + typechat.Text + Environment.NewLine;
+            if (typechat.Text != "") history.AppendText(TitleScreen.username + ": " + typechat.Text + Environment.NewLine);
             typechat.Text = "";
             send.Play();
         }

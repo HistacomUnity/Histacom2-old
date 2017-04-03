@@ -182,21 +182,21 @@
     },
     {
       "user": "SkyHigh",
-      "delay": 6000,
+      "delay": 3000,
       "message": "hey rain",
       "special": null,
       "userchat": true
     },
     {
       "user": "SkyHigh",
-      "delay": 4000,
+      "delay": 3000,
       "message": "ive sort of been waiting",
       "special": null,
       "userchat": true
     },
     {
       "user": "rain49",
-      "delay": 5000,
+      "delay": 4000,
       "message": "sorry man",
       "special": null,
       "userchat": true
@@ -224,7 +224,7 @@
     },
     {
       "user": "SkyHigh",
-      "delay": 3000,
+      "delay": 2500,
       "message": "oh, he's someone who just came on. doesnt seem to talk much",
       "special": null,
       "userchat": true
@@ -273,8 +273,218 @@
     },
     {
       "user": "rain49",
-      "delay": 2500,
+      "delay": 5000,
       "message": "ok then",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "rain49",
+      "delay": 5500,
+      "message": "so @user, we are going to break the chat rules here..",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "rain49",
+      "delay": 3000,
+      "message": "so if you dont wanna get banned i recommend you just logout now",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 2500,
+      "message": "let's give him some time",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 9000,
+      "message": "to leave the chat",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 3500,
+      "message": "...",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "rain49",
+      "delay": 3000,
+      "message": "i guess he wants to risk it",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 3000,
+      "message": "tell him what we will do",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 2000,
+      "message": "you haven't said that yet",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "rain49",
+      "delay": 6000,
+      "message": "right, right",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "rain49",
+      "delay": 4000,
+      "message": "so there's this really cool program on the 12padams website called skindows95",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "rain49",
+      "delay": 5500,
+      "message": "normally youd have to pay for it",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 4000,
+      "message": "Yeah... it's really hard to even get to the buy button - stupid",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "rain49",
+      "delay": 6500,
+      "message": "But.. i have a copy i can send to you and skyhigh",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 2000,
+      "message": "Yeah... kind of not pirating because he managed to steal a copy from someone else who bought it",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 1500,
+      "message": "So hey...",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 1500,
+      "message": "You haven't left",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 2500,
+      "message": "Send it now...",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 1500,
+      "message": "I really want to skin my system",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "rain49",
+      "delay": 2500,
+      "message": "sending!",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 6000,
+      "message": "thx man",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "System",
+      "delay": 3000,
+      "message": "File \"skin95setup.exe\" has been uploaded.",
+      "special": "addfile",
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 4000,
+      "message": "yay!",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 5000,
+      "message": "im downloading it now",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "rain49",
+      "delay": 3500,
+      "message": "and @user, why dont you go and download it too?",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 4000,
+      "message": "i think he already is ;)",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 3000,
+      "message": "OH THIS IS SO COOL",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 4000,
+      "message": "lemme send a screenshot",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "System",
+      "delay": 2000,
+      "message": "12padams has joined the chat.",
+      "special": "addpadams",
+      "userchat": true
+    },
+    {
+      "user": "rain49",
+      "delay": 500,
+      "message": "CRAP",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 500,
+      "message": "ah NO WE ARE DED",
       "special": null,
       "userchat": true
     }
