@@ -26,6 +26,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         SoundPlayer leave = new SoundPlayer(Properties.Resources.AIMbuddyleave);
         SoundPlayer send = new SoundPlayer(Properties.Resources.AIMmessagesent);
         SoundPlayer receive = new SoundPlayer(Properties.Resources.AIMmessagereceived);
+        SoundPlayer file = new SoundPlayer(Properties.Resources.AIMfile);
 
         public WebChat1998()
         {
@@ -74,6 +75,15 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         break;
                     case "addrain":
                         listBox1.Items.Add("rain49");
+                        join.Play();
+                        break;
+                    case "addfile":
+                        label5.Show();
+                        button5.Show();
+                        file.Play();
+                        break;
+                    case "addpadams":
+                        listBox1.Items.Add("12padams");
                         join.Play();
                         break;
                     default:

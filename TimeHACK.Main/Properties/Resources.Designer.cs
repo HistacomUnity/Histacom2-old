@@ -101,6 +101,15 @@ namespace TimeHACK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream AIMfile {
+            get {
+                return ResourceManager.GetStream("AIMfile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream AIMmessagereceived {
             get {
                 return ResourceManager.GetStream("AIMmessagereceived", resourceCulture);

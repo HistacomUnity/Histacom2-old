@@ -238,6 +238,7 @@
     <None Include="Resources\WinClassic\AIMmessagesent.wav" />
     <None Include="Resources\WinClassic\AIMbuddyjoin.wav" />
     <None Include="Resources\WinClassic\AIMbuddyleave.wav" />
+    <None Include="Resources\WinClassic\AIMfile.wav" />
     <Content Include="Resources\WinClassic\TrueColor.png" />
     <None Include="Resources\WinClassic\Win95Info.png" />
     <None Include="Resources\WinClassic\Win95Error.png" />
