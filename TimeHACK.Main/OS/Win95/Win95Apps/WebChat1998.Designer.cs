@@ -87,6 +87,7 @@
             this.history.ReadOnly = true;
             this.history.Size = new System.Drawing.Size(471, 377);
             this.history.TabIndex = 2;
+            this.history.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             // 
             // panel1
             // 
