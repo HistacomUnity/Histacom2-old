@@ -169,7 +169,7 @@ namespace TimeHACK.OS.Win95
         private void InternetExplorerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WinClassicIE4 ie = new WinClassicIE4();
-            Engine.Template.WinClassic app = wm.startWin95(ie, "Internet Explorer 4", null, true, true);
+            Engine.Template.WinClassic app = wm.startWin95(ie, "Internet Explorer 4", (Image)resources.GetObject("InternetExplorerToolStripMenuItem.Image"), true, true);
             app.BringToFront();
             startmenu.Hide();
         }
@@ -187,7 +187,7 @@ namespace TimeHACK.OS.Win95
                     if (objListViewItem.Text == "Internet Explorer")
                     {
                         WinClassicIE4 ie = new WinClassicIE4();
-                        Engine.Template.WinClassic app = wm.startWin95(ie, "Internet Explorer 4", null, true, true);
+                        Engine.Template.WinClassic app = wm.startWin95(ie, "Internet Explorer 4", (Image)resources.GetObject("InternetExplorerToolStripMenuItem.Image"), true, true);
                         app.BringToFront();
                         startmenu.Hide();
                     } else if (objListViewItem.Text == "Web Chat Setup")
