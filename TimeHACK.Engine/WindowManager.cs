@@ -20,7 +20,7 @@ namespace TimeHACK.Engine
             app.Height = content.Height + 26;
             // Initialize Font
             pfc.AddFontFile(AppDomain.CurrentDomain.BaseDirectory + "\\LeviWindows.ttf");
-            Font fnt = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            Font fnt = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
             app.fnt = fnt;
             app.Title.Font = new Font(pfc.Families[0], 16F, FontStyle.Bold, GraphicsUnit.Point, ((0)));
             // Setup UC
