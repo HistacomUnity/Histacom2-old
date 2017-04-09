@@ -10,7 +10,7 @@ namespace TimeHACK.Engine
         public static System.Drawing.Text.PrivateFontCollection pfc = new System.Drawing.Text.PrivateFontCollection();
 
 
-        public WinClassic startWin95(UserControl content, String title, PictureBox icon, Boolean MaxButton, Boolean MinButton)
+        public WinClassic startWin95(UserControl content, String title, Image icon, Boolean MaxButton, Boolean MinButton)
         {
             // Setup Window
             WinClassic app = new WinClassic();
@@ -29,12 +29,8 @@ namespace TimeHACK.Engine
             content.Dock = DockStyle.Fill;
 
             // Check if icon is null
-            if (icon == null)
-            {
-                icon = app.programIcon;
-                icon.Image = Engine.Properties.Resources.nullIcon;
-            }
-            app.programIcon.Image = icon.Image;
+            if (icon == null) app.programIcon.Image = Engine.Properties.Resources.nullIcon;
+            else app.programIcon.Image = icon;
 
             // Check if Max button is enabled and set proper X for Min button
             if (MaxButton == false)

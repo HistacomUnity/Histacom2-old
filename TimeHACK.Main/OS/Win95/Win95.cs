@@ -142,7 +142,10 @@ namespace TimeHACK.OS.Win95
 
         private void NotePadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            Win95Notepad npad = new Win95Notepad();
+            Engine.Template.WinClassic app = wm.startWin95(npad, "Notepad", Properties.Resources.Win95IconNotepad, true, true);
+            app.BringToFront();
+            startmenu.Hide();
         }
         private void windowManagerTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
