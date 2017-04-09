@@ -306,6 +306,7 @@
             this.InternetConnectionWizardToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.InternetConnectionWizardToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
             this.InternetConnectionWizardToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.InternetConnectionWizardToolStripMenuItem.Image = ((System.Drawing.Image)resources.GetObject("InternetConnectionWizardToolStripMenuItem.Image"));
             this.InternetConnectionWizardToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.InternetConnectionWizardToolStripMenuItem.Name = "InternetConnectionWizardToolStripMenuItem";
             this.InternetConnectionWizardToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
@@ -316,6 +317,7 @@
             this.NetMeetingToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.NetMeetingToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
             this.NetMeetingToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.NetMeetingToolStripMenuItem.Image = ((System.Drawing.Image)resources.GetObject("NetMeetingToolStripMenuItem.Image"));
             this.NetMeetingToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.NetMeetingToolStripMenuItem.Name = "NetMeetingToolStripMenuItem";
             this.NetMeetingToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
@@ -343,6 +345,7 @@
             this.CDPlayerToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.CDPlayerToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
             this.CDPlayerToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.CDPlayerToolStripMenuItem.Image = ((System.Drawing.Image)resources.GetObject("CDPlayerToolStripMenuItem.Image"));
             this.CDPlayerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.CDPlayerToolStripMenuItem.Name = "CDPlayerToolStripMenuItem";
             this.CDPlayerToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
@@ -353,6 +356,7 @@
             this.SoundRecorderToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.SoundRecorderToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
             this.SoundRecorderToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.SoundRecorderToolStripMenuItem.Image = ((System.Drawing.Image)resources.GetObject("SoundRecorderToolStripMenuItem.Image"));
             this.SoundRecorderToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SoundRecorderToolStripMenuItem.Name = "SoundRecorderToolStripMenuItem";
             this.SoundRecorderToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
@@ -363,6 +367,7 @@
             this.VolumeControlToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.VolumeControlToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
             this.VolumeControlToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.VolumeControlToolStripMenuItem.Image = ((System.Drawing.Image)resources.GetObject("VolumeControlToolStripMenuItem.Image"));
             this.VolumeControlToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.VolumeControlToolStripMenuItem.Name = "VolumeControlToolStripMenuItem";
             this.VolumeControlToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
@@ -373,6 +378,7 @@
             this.WindowsMediaPlayerToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.WindowsMediaPlayerToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
             this.WindowsMediaPlayerToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.WindowsMediaPlayerToolStripMenuItem.Image = ((System.Drawing.Image)resources.GetObject("WindowsMediaPlayerToolStripMenuItem.Image"));
             this.WindowsMediaPlayerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.WindowsMediaPlayerToolStripMenuItem.Name = "WindowsMediaPlayerToolStripMenuItem";
             this.WindowsMediaPlayerToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
@@ -397,6 +403,7 @@
             this.DiskDefragmenterToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.DiskDefragmenterToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
             this.DiskDefragmenterToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.DiskDefragmenterToolStripMenuItem.Image = ((System.Drawing.Image)resources.GetObject("DiskDefragmenterToolStripMenuItem.Image"));
             this.DiskDefragmenterToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.DiskDefragmenterToolStripMenuItem.Name = "DiskDefragmenterToolStripMenuItem";
             this.DiskDefragmenterToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
@@ -407,6 +414,7 @@
             this.ScanDiskToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.ScanDiskToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
             this.ScanDiskToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ScanDiskToolStripMenuItem.Image = ((System.Drawing.Image)resources.GetObject("ScanDiskToolStripMenuItem.Image"));
             this.ScanDiskToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ScanDiskToolStripMenuItem.Name = "ScanDiskToolStripMenuItem";
             this.ScanDiskToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
@@ -417,6 +425,7 @@
             this.AddressBookToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.AddressBookToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
             this.AddressBookToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.AddressBookToolStripMenuItem.Image = ((System.Drawing.Image)resources.GetObject("AddressBookToolStripMenuItem.Image"));
             this.AddressBookToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.AddressBookToolStripMenuItem.Name = "AddressBookToolStripMenuItem";
             this.AddressBookToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
@@ -438,6 +447,7 @@
             this.HyperTerminalToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.HyperTerminalToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
             this.HyperTerminalToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.HyperTerminalToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicFolderSmall;
             this.HyperTerminalToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.HyperTerminalToolStripMenuItem.Name = "HyperTerminalToolStripMenuItem";
             this.HyperTerminalToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
@@ -448,6 +458,7 @@
             this.ImagingToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.ImagingToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
             this.ImagingToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ImagingToolStripMenuItem.Image = ((System.Drawing.Image)resources.GetObject("ImagingToolStripMenuItem.Image"));
             this.ImagingToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ImagingToolStripMenuItem.Name = "ImagingToolStripMenuItem";
             this.ImagingToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
@@ -470,6 +481,7 @@
             this.OnlineRegistrationToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.OnlineRegistrationToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
             this.OnlineRegistrationToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.OnlineRegistrationToolStripMenuItem.Image = ((System.Drawing.Image)resources.GetObject("OnlineRegistrationToolStripMenuItem.Image"));
             this.OnlineRegistrationToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.OnlineRegistrationToolStripMenuItem.Name = "OnlineRegistrationToolStripMenuItem";
             this.OnlineRegistrationToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
@@ -491,6 +503,7 @@
             this.PhoneDialerToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.PhoneDialerToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
             this.PhoneDialerToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.PhoneDialerToolStripMenuItem.Image = ((System.Drawing.Image)resources.GetObject("PhoneDialerToolStripMenuItem.Image"));
             this.PhoneDialerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.PhoneDialerToolStripMenuItem.Name = "PhoneDialerToolStripMenuItem";
             this.PhoneDialerToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
@@ -593,6 +606,7 @@
             this.InternetExplorerToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.InternetExplorerToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
             this.InternetExplorerToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.InternetExplorerToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("InternetExplorerToolStripMenuItem.Image")));
             this.InternetExplorerToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.InternetExplorerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.InternetExplorerToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
@@ -606,6 +620,7 @@
             this.MSDOSPromptToolStripMenuItem1.BackColor = System.Drawing.Color.Silver;
             this.MSDOSPromptToolStripMenuItem1.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
             this.MSDOSPromptToolStripMenuItem1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.MSDOSPromptToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("MSDOSPromptToolStripMenuItem.Image")));
             this.MSDOSPromptToolStripMenuItem1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.MSDOSPromptToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.MSDOSPromptToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Silver;
@@ -618,6 +633,7 @@
             this.OutlookExpressToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.OutlookExpressToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
             this.OutlookExpressToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.OutlookExpressToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("OutlookExpressToolStripMenuItem.Image")));
             this.OutlookExpressToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.OutlookExpressToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.OutlookExpressToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
@@ -630,6 +646,7 @@
             this.WindowsExplorerToolStripMenuItem1.BackColor = System.Drawing.Color.Silver;
             this.WindowsExplorerToolStripMenuItem1.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
             this.WindowsExplorerToolStripMenuItem1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.WindowsExplorerToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("WindowsExplorerToolStripMenuItem.Image")));
             this.WindowsExplorerToolStripMenuItem1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.WindowsExplorerToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.WindowsExplorerToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Silver;

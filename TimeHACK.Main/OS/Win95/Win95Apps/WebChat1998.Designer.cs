@@ -91,6 +91,7 @@
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Location = new System.Drawing.Point(504, 393);
@@ -105,7 +106,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 13);
             this.label5.TabIndex = 1;
-            this.label5.Text = "Skindows 95";
+            this.label5.Text = "skin95setup.exe";
             // 
             // button5
             // 
