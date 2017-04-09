@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using TimeHACK.Engine;
+using TimeHACK.Engine.Template;
 
 namespace TimeHACK.OS.Win95.Win95Apps
 {
@@ -25,6 +26,8 @@ namespace TimeHACK.OS.Win95.Win95Apps
             for (int i = 0; i < 99; i++) browsinghistory.Add(null);
             welcomeinternetscreen.Show();
             welcomeinternetscreen.Dock = DockStyle.Fill;
+            foreach (ToolStripMenuItem item in MenuStrip3.Items) item.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
+            foreach (Control ctrl in Panel1.Controls) ctrl.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
         }
 
         private void hidePrograms()
