@@ -29,7 +29,12 @@ namespace TimeHACK.Engine
             content.Dock = DockStyle.Fill;
 
             // Check if icon is null
-            if (icon == null) app.programIcon.Image = Engine.Properties.Resources.nullIcon;
+            if (icon == null)
+            {
+                app.programIcon.Hide();
+                app.programIcon.Image = Engine.Properties.Resources.nullIcon;
+                app.Title.Location = new Point(2, 1);
+            }
             else app.programIcon.Image = icon;
 
             // Check if Max button is enabled and set proper X for Min button
@@ -62,6 +67,16 @@ namespace TimeHACK.Engine
             app.infoText.Text = text;
             app.Show();
             return app;
+        }
+
+        public WinClassic startAboutBox95(String aboutwhat, String fulltitle, Image appicon)
+        {
+            AboutBox95 uc = new AboutBox95();
+            uc.pictureBox1.Image = appicon;
+            uc.textBox1.Text = fulltitle + "\r\nWindows 95\r\nCopyright © 1981-1995 Microsoft Corp.";
+            uc.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
+
+            return startWin95(uc, "About " + aboutwhat, null, false, false);
         }
     }
 }

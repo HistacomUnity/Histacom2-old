@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Windows95));
+            this.resources = new System.ComponentModel.ComponentResourceManager(typeof(Windows95));
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("My Computer", 0);
             System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Network Neighborhood", 5);
             System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Inbox", 3);
@@ -1232,6 +1232,7 @@
         internal System.Windows.Forms.ToolStripMenuItem BitmapImageToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem MicrosoftDataLinkToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem PropertiesToolStripMenuItem1;
+        internal System.ComponentModel.ComponentResourceManager resources;
         private System.Windows.Forms.ToolStripMenuItem windowManagerTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem downloaderTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem installerTestToolStripMenuItem;

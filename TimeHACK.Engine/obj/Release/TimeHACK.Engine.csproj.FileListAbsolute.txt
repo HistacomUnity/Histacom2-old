@@ -17,3 +17,4 @@ C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Engine\obj\Release\TimeHAC
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Engine\obj\Release\TimeHACK.Engine.pdb
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Engine\obj\Release\TimeHACK.Engine.Template.Infobox95.resources
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Engine\obj\Release\TimeHACK.Engine.Template.WinClassic.resources
+C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Engine\obj\Release\TimeHACK.Engine.Template.AboutBox95.resources

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TimeHACK.Engine;
 
 namespace TimeHACK.OS.Win95.Win95Apps
 {
@@ -28,6 +29,12 @@ namespace TimeHACK.OS.Win95.Win95Apps
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.ParentForm.Close();
+        }
+
+        private void aboutNotepadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WindowManager wm = new WindowManager();
+            wm.startAboutBox95("Notepad", "Microsoft Notepad", Properties.Resources.WinClassicNotepad);
         }
     }
 }

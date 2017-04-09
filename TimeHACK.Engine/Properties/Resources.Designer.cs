@@ -203,6 +203,16 @@ namespace TimeHACK.Engine.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap WinAboutSeparator95 {
+            get {
+                object obj = ResourceManager.GetObject("WinAboutSeparator95", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WinClassicClose {
             get {
                 object obj = ResourceManager.GetObject("WinClassicClose", resourceCulture);
