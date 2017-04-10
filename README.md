@@ -17,9 +17,9 @@ Load the ``.SLN`` project file into Visual Studio and compile. No further steps 
 ## Links
 TimeHACK has a forum at http://www.ashifter.ml/timehack/forum
 
-TimeHACK has a Discord at https://discord.gg/FZgQMDe (YOU CAN GO TO THE BADGE WHICH SAYS "<A-NUMBER> online")
+TimeHACK has a Discord at https://discord.gg/FZgQMDe (You can also click on the Purple Discord Badge)
 
-TimeHACK has an AppVeyor at https://ci.appveyor.com/project/timehack/timehack (YOU CAN GO TO THE OTHER BADGE)
+TimeHACK has an AppVeyor at https://ci.appveyor.com/project/timehack/timehack (You can also use the AppVeyor Badge)
 
 ## Documentation
 This section will be filled at a later date.
