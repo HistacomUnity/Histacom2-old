@@ -45,6 +45,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BSODCreator.cs" />
+    <Compile Include="Template\Win9XBSOD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\Win9XBSOD.Designer.cs">
+      <DependentUpon>Win9XBSOD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Template\AboutBox95.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -77,6 +84,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Template\Win9XBSOD.resx">
+      <DependentUpon>Win9XBSOD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Template\AboutBox95.resx">
       <DependentUpon>AboutBox95.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,6 +117,7 @@
     <Content Include="Resources\WinClassic\Window\WinClassicMin.png" />
     <Content Include="Resources\WinClassic\Window\WinClassicRestore.png" />
     <Content Include="Resources\WinClassic\Window\WinClassicWarning.png" />
+    <None Include="Resources\WinClassic\Window\windows_command_prompt.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\WinClassic\Window\LeviWindows.ttf" />

@@ -103,7 +103,7 @@
             this.textBox4.Location = new System.Drawing.Point(76, 184);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(250, 16);
-            this.textBox4.Text = "System Resources:                                   97% Free";
+            this.textBox4.Text = "System Resources:                                    97% Free";
             // 
             // AboutBox95
             // 

@@ -69,14 +69,14 @@ namespace TimeHACK.Engine
             return app;
         }
 
-        public WinClassic startAboutBox95(String aboutwhat, String fulltitle, Image appicon)
+        public WinClassic startAboutBox95(String shortname, String longname, Image appicon)
         {
             AboutBox95 uc = new AboutBox95();
             uc.pictureBox1.Image = appicon;
-            uc.textBox1.Text = fulltitle + "\r\nWindows 95\r\nCopyright © 1981-1995 Microsoft Corp.";
+            uc.textBox1.Text = longname + "\r\nWindows 95\r\nCopyright © 1981-1995 Microsoft Corp.";
             uc.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
 
-            return startWin95(uc, "About " + aboutwhat, null, false, false);
+            return startWin95(uc, "About " + shortname, null, false, false);
         }
     }
 }
