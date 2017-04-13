@@ -13,6 +13,7 @@ namespace TimeHACK
     {
         internal static bool nightly = true;
         internal static string gameID;
+        internal static TitleScreen title = null;
         
         /// <summary>
         /// The main entry point for the application.
@@ -43,7 +44,7 @@ namespace TimeHACK
             }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TitleScreen());
+            Application.Run(title = new TitleScreen());
         }
     }
 }
