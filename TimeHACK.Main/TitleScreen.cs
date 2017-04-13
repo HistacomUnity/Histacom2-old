@@ -12,6 +12,7 @@ namespace TimeHACK
         public static System.Drawing.Text.PrivateFontCollection pfc = new System.Drawing.Text.PrivateFontCollection();
         public static Windows95 frm95;
         public static string username;
+        public static string progress = "95";
 
         public TitleScreen()
         {
@@ -111,15 +112,48 @@ namespace TimeHACK
             else
             {
                 // Generate desktop with size entered by user
-                Windows95 frm = new Windows95();
-                frm.FormBorderStyle = FormBorderStyle.None;
-                frm.Size = new Size(Convert.ToInt32(VM_Width.Text), Convert.ToInt32(VM_Height.Text));
-                frm.FormBorderStyle = FormBorderStyle.Fixed3D;
-                frm.Show();
+                frm95 = new Windows95();
+                frm95.FormBorderStyle = FormBorderStyle.None;
+                frm95.Size = new Size(Convert.ToInt32(VM_Width.Text), Convert.ToInt32(VM_Height.Text));
+                frm95.FormBorderStyle = FormBorderStyle.Fixed3D;
+                frm95.Show();
                 Hide();
             }
 
         }
+
+        public void BSODRewind(object sender, EventArgs e)
+        {
+            if (progress == "95")
+            {
+                frm95.Close();
+                frm95 = null;
+
+                // If VM Mode is not enabled
+                if (vm_mode.Checked != true)
+                {
+                    // Generate fullscreen desktop
+                    frm95 = new Windows95();
+                    frm95.TopMost = true;
+                    frm95.FormBorderStyle = FormBorderStyle.None;
+                    frm95.WindowState = FormWindowState.Maximized;
+                    frm95.Show();
+                    Hide();
+                }
+                // If VM Mode is enabled
+                else
+                {
+                    // Generate desktop with size entered by user
+                    frm95 = new Windows95();
+                    frm95.FormBorderStyle = FormBorderStyle.None;
+                    frm95.Size = new Size(Convert.ToInt32(VM_Width.Text), Convert.ToInt32(VM_Height.Text));
+                    frm95.FormBorderStyle = FormBorderStyle.Fixed3D;
+                    frm95.Show();
+                    Hide();
+                }
+            }
+        }
+
         private void NewGame_MouseEnter(object sender, EventArgs e)
         {
             NewGame.Image = Resources.MSNewGame;

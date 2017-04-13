@@ -11,6 +11,7 @@ using TimeHACK.Engine;
 using System.Threading;
 using System.Media;
 using System.IO;
+using TimeHACK.Engine.Template;
 
 namespace TimeHACK.OS.Win95.Win95Apps
 {
@@ -28,9 +29,14 @@ namespace TimeHACK.OS.Win95.Win95Apps
         SoundPlayer receive = new SoundPlayer(Properties.Resources.AIMmessagereceived);
         SoundPlayer file = new SoundPlayer(Properties.Resources.AIMfile);
 
+        BSODCreator bc = new BSODCreator();
+        Win9XBSOD bsod = null;
+
         public WebChat1998()
         {
             InitializeComponent();
+            bsod = bc.throw9XBSOD(false, BSODCreator.BSODCauses.ExitChat98Early);
+            bsod.Hide();
         }
         private void WebChat1998_Load(object sender, EventArgs e)
         {
@@ -63,6 +69,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     case "addsh":
                         listBox1.Items.Add("SkyHigh");
                         join.Play();
+                        this.ParentForm.FormClosing += WebChatClosing;
                         break;
                     case "nameguess":
                         typechat.Hide();
@@ -85,6 +92,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     case "addpadams":
                         listBox1.Items.Add("12padams");
                         join.Play();
+                        ((WinClassic)this.ParentForm).closeDisabled = true;
                         break;
                     default:
                         receive.Play();
@@ -107,6 +115,13 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 Chat.Interval = wcmp.GetMessageDelay(resources.GetString("convo"), chat_index);
             }
             chat_index++;
+        }
+
+        private void WebChatClosing(object sender, FormClosingEventArgs e)
+        {
+            bsod.FormClosing += new FormClosingEventHandler(Program.title.BSODRewind);
+            bsod.Show();
+            bsod.BringToFront();
         }
 
         private void Button2_Click(object sender, EventArgs e)
