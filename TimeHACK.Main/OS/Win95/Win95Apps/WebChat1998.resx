@@ -455,21 +455,21 @@
     },
     {
       "user": "SkyHigh",
-      "delay": 3000,
+      "delay": 2000,
       "message": "OH THIS IS SO COOL",
       "special": null,
       "userchat": true
     },
     {
       "user": "SkyHigh",
-      "delay": 4000,
+      "delay": 3000,
       "message": "lemme send a screenshot",
       "special": null,
       "userchat": true
     },
     {
       "user": "System",
-      "delay": 2000,
+      "delay": 1500,
       "message": "12padams has joined the chat.",
       "special": "addpadams",
       "userchat": true
@@ -483,9 +483,233 @@
     },
     {
       "user": "SkyHigh",
-      "delay": 500,
+      "delay": 1000,
       "message": "ah NO WE ARE DED",
       "special": null,
+      "userchat": true
+    },
+    {
+      "user": "rain49",
+      "delay": 2500,
+      "message": "quick guys, LOGOUT!",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 1000,
+      "message": "i cant! the close button isnt working!",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 2500,
+      "message": "caught ya pirating my software!",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 1500,
+      "message": "now that i have you, lets have some fun, shall we?",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "rain49",
+      "delay": 1500,
+      "message": "guys, shutdown the pc from start!",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 2000,
+      "message": "not so fast!",
+      "special": "nostart",
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 2500,
+      "message": "where did the start button go?",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "rain49",
+      "delay": 2000,
+      "message": "12padams disabled it, CRAP!",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 3500,
+      "message": "feeling scared yet?",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "rain49",
+      "delay": 3500,
+      "message": "no, cuz i can just unplug my computer!",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 3500,
+      "message": "i wouldnt do that if i were you..",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "rain49",
+      "delay": 1000,
+      "message": "oh yeah? just watch this!",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "System",
+      "delay": 1500,
+      "message": "rain49 has left the chat.",
+      "special": "removerain",
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 3500,
+      "message": "all your computers are infected with a virus that makes them unable to boot.",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 2500,
+      "message": "and now, theres only two, SkyHigh, and @user.",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 5000,
+      "message": "please just let us go!",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 2500,
+      "message": "you downloaded pirated software, so you both shall be punished!",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 5000,
+      "message": "dont worry @user, ill look online for help!",
+      "special": "iconsded",
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 3000,
+      "message": "why cant i open anything?",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 4500,
+      "message": "i told you that you are going to be punished.",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 3000,
+      "message": "your computers have a lethal virus that i call \"Win9X.Plague\"",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 6000,
+      "message": "what does it do?",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 3000,
+      "message": "well, it disables your computers functions one by one, slowly killing it",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 3000,
+      "message": "anyways, time to let it do its work!",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 2500,
+      "message": "no please dont, just remove this virus!",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 6000,
+      "message": "remove the virus, you say?",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 3500,
+      "message": "well the whole of windows 95 is a virus! now where do i begin...",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 4500,
+      "message": "i see a taskbar at the bottom of the screen.",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 4000,
+      "message": "the taskbar was made by microsoft making its debut in windows 95",
+      "special": "taskbarded",
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 7000,
+      "message": "hey! give me back my taskbar!",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 4000,
+      "message": "you wanted me to remove viruses, didnt you? the taskbar was infected since it had no start button",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 2500,
+      "message": "and your icons are infected too so you dont need them",
+      "special": "iconsgone",
       "userchat": true
     }
   ]

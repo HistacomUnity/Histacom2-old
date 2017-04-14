@@ -31,12 +31,15 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         BSODCreator bc = new BSODCreator();
         Win9XBSOD bsod = null;
+        Win9XBSOD bsod2 = null;
 
         public WebChat1998()
         {
             InitializeComponent();
-            bsod = bc.throw9XBSOD(false, BSODCreator.BSODCauses.ExitChat98Early);
+            bsod = bc.throw9XBSOD(false, BSODCreator.BSODCauses.WimpEnding);
+            bsod2 = bc.throw9XBSOD(false, BSODCreator.BSODCauses.PiracyEnding);
             bsod.Hide();
+            bsod2.Hide();
         }
         private void WebChat1998_Load(object sender, EventArgs e)
         {
@@ -50,6 +53,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             if (txtscreenname.Text == "") { wm.startInfobox95("Invalid Username", "Your username cannot be blank.", Properties.Resources.Win95Warning); return; }
             if (txtscreenname.Text.Length > 12) { wm.startInfobox95("Invalid Username", "Your username needs to be less than 12 characters.", Properties.Resources.Win95Warning); return; }
             if (txtscreenname.Text.Contains(" ")) { wm.startInfobox95("Invalid Username", "Your username cannot contain spaces.", Properties.Resources.Win95Warning); return; }
+            if (txtscreenname.Text == "SkyHigh" | txtscreenname.Text == "rain49" | txtscreenname.Text == "12padams") { wm.startInfobox95("Invalid Username", "That username is already taken.", Properties.Resources.Win95Warning); return; }
             ParentForm.AcceptButton = button2;
             TitleScreen.username = txtscreenname.Text;
             login.Hide();
@@ -93,12 +97,36 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         listBox1.Items.Add("12padams");
                         join.Play();
                         ((WinClassic)this.ParentForm).closeDisabled = true;
+                        TitleScreen.frm95.startbutton.Enabled = false;
+                        TitleScreen.frm95.startmenu.Hide();
+                        break;
+                    case "nostart":
+                        TitleScreen.frm95.startbutton.Hide();
+                        TitleScreen.frm95.startmenu.Hide();
+                        receive.Play();
+                        break;
+                    case "removerain":
+                        listBox1.Items.Remove("rain49");
+                        leave.Play();
+                        break;
+                    case "iconsded":
+                        TitleScreen.frm95.desktopicons.Enabled = false;
+                        receive.Play();
+                        break;
+                    case "taskbarded":
+                        TitleScreen.frm95.taskbar.Hide();
+                        receive.Play();
+                        break;
+                    case "iconsgone":
+                        TitleScreen.frm95.desktopicons.Hide();
+                        receive.Play();
                         break;
                     default:
                         receive.Play();
                         break;
                 }
-                Chat.Interval = wcmp.GetMessageDelay(resources.GetString("convo"), chat_index);
+                if (TitleScreen.username == "devspeed") Chat.Interval = wcmp.GetMessageDelay(resources.GetString("convo"), chat_index) / 2;
+                else Chat.Interval = wcmp.GetMessageDelay(resources.GetString("convo"), chat_index);
             }
             else
             {

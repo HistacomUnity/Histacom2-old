@@ -15,7 +15,8 @@ namespace TimeHACK.Engine
         public enum BSODCauses
         {
             Testing,
-            ExitChat98Early
+            WimpEnding,
+            PiracyEnding,
         }
 
         public Win9XBSOD throw9XBSOD(bool except, BSODCauses type)
@@ -33,8 +34,15 @@ namespace TimeHACK.Engine
                 case BSODCauses.Testing:
                     bsod.textBox1.Text = "This is the testing type of BSOD. Hurrah.";
                     break;
-                case BSODCauses.ExitChat98Early:
+                case BSODCauses.WimpEnding:
                     bsod.textBox1.Text = "An unknown but fatal exception has occured has occured in the program \"wchat98.exe\". The current processes will be terminated.";
+                    break;
+                case BSODCauses.PiracyEnding:
+                    bsod.textBox1.Text = "Vital elements of Windows were removed, but recovered. However, your data has been lost.";
+                    bsod.BackColor = System.Drawing.Color.Black;
+                    foreach (Control ctrl in bsod.Controls) ctrl.ForeColor = System.Drawing.Color.Silver;
+                    bsod.label1.BackColor = System.Drawing.Color.Silver;
+                    bsod.label1.ForeColor = System.Drawing.Color.Black;
                     break;
                 default:
                     break;
