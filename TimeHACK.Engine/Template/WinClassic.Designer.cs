@@ -249,7 +249,7 @@
         #endregion
 
         internal System.Windows.Forms.Panel program;
-        internal System.Windows.Forms.Panel programtopbar;
+        public System.Windows.Forms.Panel programtopbar;
         internal System.Windows.Forms.Label Title;
         internal System.Windows.Forms.PictureBox closebutton;
         internal System.Windows.Forms.Panel toprightcorner;

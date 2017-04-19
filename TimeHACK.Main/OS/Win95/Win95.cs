@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Media;
 using System.Windows.Forms;
 using TimeHACK.Engine;
+using TimeHACK.Engine.Template;
 using TimeHACK.OS.Win95.Win95Apps;
 using TimeHACK.WinClassicForms;
 
@@ -14,6 +16,10 @@ namespace TimeHACK.OS.Win95
         private SoundPlayer startsound;
         private SoundPlayer stopsound;
         public WindowManager wm = new WindowManager();
+
+        public List<WinClassic> nonimportantapps;
+        public WinClassic webchat;
+        public WinClassic ie;
 
         public bool webchatInstalled = false;
 
@@ -56,14 +62,14 @@ namespace TimeHACK.OS.Win95
         {
             this.taskbartime.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             this.ProgramsToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
-            this.DocumentsToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SettingsToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FindToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HelpToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RunToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SuspendToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShutdownToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.desktopicons.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DocumentsToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            this.FindToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            this.HelpToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            this.RunToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            this.SuspendToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            this.ShutdownToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            this.desktopicons.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
         }
 
         #region StartMenu
@@ -142,9 +148,9 @@ namespace TimeHACK.OS.Win95
 
         private void NotePadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Win95Notepad npad = new Win95Notepad();
-            Engine.Template.WinClassic app = wm.startWin95(npad, "Notepad", Properties.Resources.Win95IconNotepad, true, true);
-            app.BringToFront();
+            nonimportantapps.Add(wm.startWin95(new Win95Notepad(), "Notepad", Properties.Resources.Win95IconNotepad, true, true));
+            nonimportantapps[nonimportantapps.Count - 1].BringToFront();
+            nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
             startmenu.Hide();
         }
         private void windowManagerTestToolStripMenuItem_Click(object sender, EventArgs e)
@@ -168,9 +174,10 @@ namespace TimeHACK.OS.Win95
 
         private void InternetExplorerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            WinClassicIE4 ie = new WinClassicIE4();
-            Engine.Template.WinClassic app = wm.startWin95(ie, "Internet Explorer 4", (Image)resources.GetObject("InternetExplorerToolStripMenuItem.Image"), true, true);
-            app.BringToFront();
+            if (ie != null) { wm.startInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", Properties.Resources.Win95Warning); return; }
+            ie = wm.startWin95(new WinClassicIE4(), "Internet Explorer 4", (Image)resources.GetObject("InternetExplorerToolStripMenuItem.Image"), true, true);
+            ie.BringToFront();
+            ie.FormClosing += new FormClosingEventHandler(InternetExplorer4_Closing);
             startmenu.Hide();
         }
 
@@ -186,15 +193,16 @@ namespace TimeHACK.OS.Win95
                 {
                     if (objListViewItem.Text == "Internet Explorer")
                     {
-                        WinClassicIE4 ie = new WinClassicIE4();
-                        Engine.Template.WinClassic app = wm.startWin95(ie, "Internet Explorer 4", (Image)resources.GetObject("InternetExplorerToolStripMenuItem.Image"), true, true);
-                        app.BringToFront();
+                        if (ie != null) { wm.startInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", Properties.Resources.Win95Warning); return; }
+                        ie = wm.startWin95(new WinClassicIE4(), "Internet Explorer 4", (Image)resources.GetObject("InternetExplorerToolStripMenuItem.Image"), true, true);
+                        ie.BringToFront();
+                        ie.FormClosing += new FormClosingEventHandler(InternetExplorer4_Closing);
                         startmenu.Hide();
                     } else if (objListViewItem.Text == "Web Chat Setup")
                     {
                         WinClassicInstaller inst = new WinClassicInstaller();
                         inst.installname.Text = "Web Chat 1998";
-                        Engine.Template.WinClassic app = wm.startWin95(inst, "Web Chat Setup", null, true, true);
+                        WinClassic app = wm.startWin95(inst, "Web Chat Setup", null, true, true);
                         app.BringToFront();
                         startmenu.Hide();
                     }
@@ -209,9 +217,17 @@ namespace TimeHACK.OS.Win95
         private void WebChatToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WebChat1998 wc = new WebChat1998();
-            Engine.Template.WinClassic app = wm.startWin95(wc, "Web Chat 1998", null, true, true);
+            WinClassic app = wm.startWin95(wc, "Web Chat 1998", null, true, true);
             app.BringToFront();
             startmenu.Hide();
+        }
+        private void NonImportantApp_Closing(object sender, FormClosingEventArgs e)
+        {
+            nonimportantapps.Remove((WinClassic)sender);
+        }
+        private void InternetExplorer4_Closing(object sender, FormClosingEventArgs e)
+        {
+            ie = null;
         }
     }
 }

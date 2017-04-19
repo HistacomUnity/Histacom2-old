@@ -121,6 +121,16 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         TitleScreen.frm95.desktopicons.Hide();
                         receive.Play();
                         break;
+                    case "bigtext":
+                        history.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
+                        ((WinClassic)this.ParentForm).maximizebutton.Enabled = false;
+                        ((WinClassic)this.ParentForm).WindowState = FormWindowState.Maximized;
+                        receive.Play();
+                        break;
+                    case "notopbar":
+                        ((WinClassic)this.ParentForm).programtopbar = null;
+                        receive.Play();
+                        break;
                     default:
                         receive.Play();
                         break;
