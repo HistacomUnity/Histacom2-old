@@ -56,14 +56,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TimeHACK.exe" size="6128640">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TimeHACK.exe" size="6129152">
       <assemblyIdentity name="TimeHACK" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>QnQUcSTfQVzISU/NuYJScvj2sxMdP7Iger7YDqQZ8+4=</dsig:DigestValue>
+        <dsig:DigestValue>W2v5olpmEdPyhq51XAzWLE5FSOI62ZDjJX87/wjXLrg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -75,7 +75,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8lvNmgG2aw+p698BkPPiKQFjbo6S/6MYNtB4CWS1dZ8=</dsig:DigestValue>
+        <dsig:DigestValue>QiXM3ckJnXanHNCl8xpurth+KTNa010j7SOgpWCwbU0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
