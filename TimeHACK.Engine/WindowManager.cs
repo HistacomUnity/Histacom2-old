@@ -59,14 +59,11 @@ namespace TimeHACK.Engine
             return app;
         }
 
-        public Infobox95 startInfobox95(String title, String text, Image erroricon)
+        public WinClassic startInfobox95(String title, String text, Image erroricon)
         {
             Infobox95 app = new Infobox95();
-            app.Title.Text = title;
-            app.Text = title;
             app.infoText.Text = text;
-            app.Show();
-            return app;
+            return startWin95(app, title, null, false, false);
         }
 
         public WinClassic startAboutBox95(String shortname, String longname, Image appicon)
