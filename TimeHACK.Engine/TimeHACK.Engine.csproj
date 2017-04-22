@@ -59,7 +59,7 @@
       <DependentUpon>AboutBox95.cs</DependentUpon>
     </Compile>
     <Compile Include="Template\Infobox95.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Template\Infobox95.Designer.cs">
       <DependentUpon>Infobox95.cs</DependentUpon>
