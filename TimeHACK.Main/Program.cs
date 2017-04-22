@@ -11,7 +11,9 @@ namespace TimeHACK
 {
     static class Program
     {
+        internal static bool nightly = true;
         internal static string gameID;
+        internal static TitleScreen title = null;
         
         /// <summary>
         /// The main entry point for the application.
@@ -20,20 +22,29 @@ namespace TimeHACK
         [STAThread]
         static void Main()
         {
-            try {
-                WebClient wc = new WebClient();
-
-                // Set the GameID
-                string json = wc.DownloadString("http://ci.appveyor.com/api/projects/timehack/timehack");
-                JObject j = JObject.Parse(JObject.Parse(json)["build"].ToString());
-                gameID = "1.0." + j["buildNumber"].ToString();
-            } catch (WebException)
+            if (nightly == true)
             {
-                gameID = "1.0.42";
+                try
+                {
+                    WebClient wc = new WebClient();
+
+                    // Set the GameID
+                    string json = wc.DownloadString("http://ci.appveyor.com/api/projects/timehack/timehack");
+                    JObject j = JObject.Parse(JObject.Parse(json)["build"].ToString());
+                    gameID = "AppVeyor-" + j["buildNumber"].ToString();
+                }
+                catch (WebException)
+                {
+                    gameID = "AppVeyor";
+                }
+            }
+            else
+            {
+                gameID = "TimeHACK 1.1";
             }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TitleScreen());
+            Application.Run(title = new TitleScreen());
         }
     }
 }

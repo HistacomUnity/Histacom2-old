@@ -1,6 +1,6 @@
 <a href="https://ci.appveyor.com/project/timehack/timehack"><img src="https://ci.appveyor.com/api/projects/status/8x34p8b0i2idblgd?svg=true" style="border: 0;" alt="AppVeyor Badge"></a>
 
-[![Discord](https://discordapp.com/api/guilds/234414439330349056/widget.png?style=shield)](https://discord.gg/zMwf3)
+[![Discord](https://discordapp.com/api/guilds/234414439330349056/widget.png?style=shield)](https://discord.gg/FZgQMDe)
 
 # TimeHACK
 ## The original hacking simulator!
@@ -17,16 +17,16 @@ Load the ``.SLN`` project file into Visual Studio and compile. No further steps 
 ## Links
 TimeHACK has a forum at http://www.ashifter.ml/timehack/forum
 
-TimeHACK has a Discord at https://discord.gg/FZgQMDe (YOU CAN GO TO THE BADGE WHICH SAYS "<A-NUMBER> online")
+TimeHACK has a Discord at https://discord.gg/FZgQMDe (You can also click on the Purple Discord Badge)
 
-TimeHACK has an AppVeyor at https://ci.appveyor.com/project/timehack/timehack (YOU CAN GO TO THE OTHER BADGE)
+TimeHACK has an AppVeyor at https://ci.appveyor.com/project/timehack/timehack (You can also use the AppVeyor Badge)
 
 ## Documentation
 This section will be filled at a later date.
 
 ## Other Repositories
-We have another version of TimeHACK, based on the Histacom 1.8.5 source. It can be found at http://www.github.com/TimeHACKDevs/HistacomVB
+We have another version of TimeHACK, based on the Histacom 1.8.5 source, discontinued. It can be found at http://www.github.com/TimeHACKDevs/HistacomVB
 
 ## License
-TimeHACK is Licensed under the MIT software license. All code contributed to the TimeHACK project is the property of the TimeHACK development team, and will not be removed upon request.
+TimeHACK is Licensed under the [MIT Software license](https://github.com/TimeHACKDevs/TimeHACK/blob/master/LICENSE). All code contributed to the TimeHACK project is the property of the TimeHACK development team, and will not be removed upon request.
 

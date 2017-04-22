@@ -81,32 +81,47 @@ namespace TimeHACK.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.Drawing.Bitmap BottomLeft {
+        internal static System.IO.UnmanagedMemoryStream AIMbuddyjoin {
             get {
-                object obj = ResourceManager.GetObject("BottomLeft", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetStream("AIMbuddyjoin", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.Drawing.Bitmap BottomRight {
+        internal static System.IO.UnmanagedMemoryStream AIMbuddyleave {
             get {
-                object obj = ResourceManager.GetObject("BottomRight", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetStream("AIMbuddyleave", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.Drawing.Bitmap BottomSide {
+        internal static System.IO.UnmanagedMemoryStream AIMfile {
             get {
-                object obj = ResourceManager.GetObject("BottomSide", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetStream("AIMfile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream AIMmessagereceived {
+            get {
+                return ResourceManager.GetStream("AIMmessagereceived", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream AIMmessagesent {
+            get {
+                return ResourceManager.GetStream("AIMmessagesent", resourceCulture);
             }
         }
         
@@ -127,16 +142,6 @@ namespace TimeHACK.Properties {
             get {
                 object obj = ResourceManager.GetObject("Icon128x", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap LeftSide {
-            get {
-                object obj = ResourceManager.GetObject("LeftSide", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -203,16 +208,6 @@ namespace TimeHACK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap RightSide {
-            get {
-                object obj = ResourceManager.GetObject("RightSide", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap sliversilver {
             get {
                 object obj = ResourceManager.GetObject("sliversilver", resourceCulture);
@@ -226,6 +221,15 @@ namespace TimeHACK.Properties {
         internal static System.IO.UnmanagedMemoryStream tada {
             get {
                 return ResourceManager.GetStream("tada", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream tada1 {
+            get {
+                return ResourceManager.GetStream("tada1", resourceCulture);
             }
         }
         
@@ -272,39 +276,39 @@ namespace TimeHACK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap TopLeft {
-            get {
-                object obj = ResourceManager.GetObject("TopLeft", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap TopRight {
-            get {
-                object obj = ResourceManager.GetObject("TopRight", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap TopSide {
-            get {
-                object obj = ResourceManager.GetObject("TopSide", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap TrueColor {
             get {
                 object obj = ResourceManager.GetObject("TrueColor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Win95Error {
+            get {
+                object obj = ResourceManager.GetObject("Win95Error", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Win95IconNotepad {
+            get {
+                object obj = ResourceManager.GetObject("Win95IconNotepad", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Win95Info {
+            get {
+                object obj = ResourceManager.GetObject("Win95Info", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -329,11 +333,30 @@ namespace TimeHACK.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Win95Start1 {
+            get {
+                return ResourceManager.GetStream("Win95Start1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap WinClassicClose {
+        internal static System.Drawing.Bitmap Win95Warning {
             get {
-                object obj = ResourceManager.GetObject("WinClassicClose", resourceCulture);
+                object obj = ResourceManager.GetObject("Win95Warning", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WinClassicClock {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicClock", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -381,6 +404,16 @@ namespace TimeHACK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap WinClassicFolderSmall {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicFolderSmall", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WinClassicHelp {
             get {
                 object obj = ResourceManager.GetObject("WinClassicHelp", resourceCulture);
@@ -411,26 +444,6 @@ namespace TimeHACK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap WinClassicMax {
-            get {
-                object obj = ResourceManager.GetObject("WinClassicMax", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap WinClassicMin {
-            get {
-                object obj = ResourceManager.GetObject("WinClassicMin", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap WinClassicMSN {
             get {
                 object obj = ResourceManager.GetObject("WinClassicMSN", resourceCulture);
@@ -451,9 +464,29 @@ namespace TimeHACK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap WinClassicNotepad {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicNotepad", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WinClassicOutlook {
             get {
                 object obj = ResourceManager.GetObject("WinClassicOutlook", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WinClassicProgramItem {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicProgramItem", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -555,6 +588,16 @@ namespace TimeHACK.Properties {
             get {
                 object obj = ResourceManager.GetObject("WinClassicTime", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] windows_command_prompt {
+            get {
+                object obj = ResourceManager.GetObject("windows_command_prompt", resourceCulture);
+                return ((byte[])(obj));
             }
         }
     }

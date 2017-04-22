@@ -101,6 +101,26 @@ namespace TimeHACK.Engine.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] LeviWindows {
+            get {
+                object obj = ResourceManager.GetObject("LeviWindows", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] LeviWindows1 {
+            get {
+                object obj = ResourceManager.GetObject("LeviWindows1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap nullIcon {
@@ -153,6 +173,46 @@ namespace TimeHACK.Engine.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Win95Error {
+            get {
+                object obj = ResourceManager.GetObject("Win95Error", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Win95Info {
+            get {
+                object obj = ResourceManager.GetObject("Win95Info", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Win95Warning {
+            get {
+                object obj = ResourceManager.GetObject("Win95Warning", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WinAboutSeparator95 {
+            get {
+                object obj = ResourceManager.GetObject("WinAboutSeparator95", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WinClassicClose {
             get {
                 object obj = ResourceManager.GetObject("WinClassicClose", resourceCulture);
@@ -187,6 +247,16 @@ namespace TimeHACK.Engine.Properties {
             get {
                 object obj = ResourceManager.GetObject("WinClassicRestore", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] windows_command_prompt {
+            get {
+                object obj = ResourceManager.GetObject("windows_command_prompt", resourceCulture);
+                return ((byte[])(obj));
             }
         }
     }
