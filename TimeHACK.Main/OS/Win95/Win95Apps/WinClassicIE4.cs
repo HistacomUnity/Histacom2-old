@@ -21,7 +21,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             browsinghistory.Capacity = 99;
             BringToFront();
-            hideWebsites();
+            hidePrograms();
             browsinghistory.Add("www.microsoft.com/internetexplorer4/welcome");
             for (int i = 0; i < 99; i++) browsinghistory.Add(null);
             welcomeinternetscreen.Show();
@@ -30,7 +30,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             foreach (Control ctrl in Panel1.Controls) ctrl.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
         }
 
-        private void hideWebsites()
+        private void hidePrograms()
         {
             googlemain.Hide();
             welcomeinternetscreen.Hide();
@@ -71,7 +71,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void Label20_Click(object sender, EventArgs e)
         {
-            hideWebsites();
+            hidePrograms();
             padamshidden.Dock = DockStyle.Fill;
             padamshidden.Show();
         }
@@ -83,7 +83,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void Button9_Click(object sender, EventArgs e)
         {
-            goToSite("www.???.com", false);
+
         }
 
         private void ToolStripMenuItem21_Click(object sender, EventArgs e)
@@ -93,7 +93,36 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void goToSite(string url, bool back)
         {
-            hideWebsites();
+            switch (url)
+            {
+                case "www.google.com":
+                    hidePrograms();
+                    googlemain.Dock = DockStyle.Fill;
+                    googlemain.Show();
+                    break;
+                case "www.google.stanford.edu":
+                    hidePrograms();
+                    googleprototype.Dock = DockStyle.Fill;
+                    googleprototype.Show();
+                    break;
+                case "www.alpha.google.com":
+                    hidePrograms();
+                    googlealpha.Dock = DockStyle.Fill;
+                    googlealpha.Show();
+                    break;
+                case "www.12padams.com":
+                    hidePrograms();
+                    padamsmain.Dock = DockStyle.Fill;
+                    padamsmain.Show();
+                    break;
+                case "www.microsoft.com/internetexplorer4/welcome":
+                    hidePrograms();
+                    welcomeinternetscreen.Dock = DockStyle.Fill;
+                    welcomeinternetscreen.Show();
+                    break;
+                default:
+                    return;
+            }
 
             if (!back)
             {
@@ -114,48 +143,9 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
             addressbar.Text = url;
 
-            switch (url)
-            {
-                case "www.google.com":
-                    addressbar.Text = url;
-                    googlemain.Dock = DockStyle.Fill;
-                    googlemain.Show();
-                    break;
-                case "www.google.stanford.edu":
-                    addressbar.Text = url;
-                    googleprototype.Dock = DockStyle.Fill;
-                    googleprototype.Show();
-                    break;
-                case "www.alpha.google.com":
-                    addressbar.Text = url;
-                    googlealpha.Dock = DockStyle.Fill;
-                    googlealpha.Show();
-                    break;
-                case "www.12padams.com":
-                    addressbar.Text = url;
-                    padamsmain.Dock = DockStyle.Fill;
-                    padamsmain.Show();
-                    break;
-                case "www.microsoft.com/internetexplorer4/welcome":
-                    addressbar.Text = url;
-                    welcomeinternetscreen.Dock = DockStyle.Fill;
-                    welcomeinternetscreen.Show();
-                    break;
-                case "www.???.com":
-                    addressbar.Text = url;
-                    secretwebsite.Dock = DockStyle.Fill;
-                    secretwebsite.Show();
-                    break;
-                case "www.12padams.com/???":
-                    addressbar.Text = url;
-                    padamshidden.Dock = DockStyle.Fill;
-                    padamshidden.Show();
-                    break;
-            }
-
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void BackButton_Click(object sender, EventArgs e)
         {
             if (!(historylocation <= 0))
             {
@@ -164,22 +154,30 @@ namespace TimeHACK.OS.Win95.Win95Apps
             }
         }
 
-        private void Button2_Click(object sender, EventArgs e)
+        private void ForwardButton_Click(object sender, EventArgs e)
         {
             if(browsinghistory[historylocation+1] != null) goToSite(browsinghistory[historylocation + 1], false);
         }
 
-        private void Button5_Click(object sender, EventArgs e)
+        private void HomeButton_Click(object sender, EventArgs e)
         {
             goToSite("www.microsoft.com/internetexplorer4/welcome", false);
         }
 
-        private void Button25_Click(object sender, EventArgs e)
+        private void WCDownloadButton_Click(object sender, EventArgs e)
         {
             WinClassicDownloader opendownload = new WinClassicDownloader();
             WindowManager wm = new WindowManager();
             wm.startWin95(opendownload, "Downloader", null, false, true);
             opendownload.appName.Text = "Downloading: Web Chat";
+        } 
+
+        private void GoButton_Click(object sender, EventArgs e)
+        {
+            goToSite(addressbar.Text, false);
         }
+        
+        //TODO: Add more websites
+        //TODO: Relabel Buttons And Things
     }
 }
