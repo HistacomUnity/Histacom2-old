@@ -21,7 +21,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             browsinghistory.Capacity = 99;
             BringToFront();
-            hidePrograms();
+            hideWebsites();
             browsinghistory.Add("www.microsoft.com/internetexplorer4/welcome");
             for (int i = 0; i < 99; i++) browsinghistory.Add(null);
             welcomeinternetscreen.Show();
@@ -30,7 +30,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             foreach (Control ctrl in Panel1.Controls) ctrl.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
         }
 
-        private void hidePrograms()
+        private void hideWebsites()
         {
             googlemain.Hide();
             welcomeinternetscreen.Hide();
@@ -71,7 +71,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void Label20_Click(object sender, EventArgs e)
         {
-            hidePrograms();
+            hideWebsites();
             padamshidden.Dock = DockStyle.Fill;
             padamshidden.Show();
         }
@@ -83,7 +83,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void Button9_Click(object sender, EventArgs e)
         {
-
+            goToSite("www.???.com", false);
         }
 
         private void ToolStripMenuItem21_Click(object sender, EventArgs e)
@@ -93,7 +93,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void goToSite(string url, bool back)
         {
-            hidePrograms();
+            hideWebsites();
 
             if (!back)
             {
@@ -117,24 +117,39 @@ namespace TimeHACK.OS.Win95.Win95Apps
             switch (url)
             {
                 case "www.google.com":
+                    addressbar.Text = url;
                     googlemain.Dock = DockStyle.Fill;
                     googlemain.Show();
                     break;
                 case "www.google.stanford.edu":
+                    addressbar.Text = url;
                     googleprototype.Dock = DockStyle.Fill;
                     googleprototype.Show();
                     break;
                 case "www.alpha.google.com":
+                    addressbar.Text = url;
                     googlealpha.Dock = DockStyle.Fill;
                     googlealpha.Show();
                     break;
                 case "www.12padams.com":
+                    addressbar.Text = url;
                     padamsmain.Dock = DockStyle.Fill;
                     padamsmain.Show();
                     break;
                 case "www.microsoft.com/internetexplorer4/welcome":
+                    addressbar.Text = url;
                     welcomeinternetscreen.Dock = DockStyle.Fill;
                     welcomeinternetscreen.Show();
+                    break;
+                case "www.???.com":
+                    addressbar.Text = url;
+                    secretwebsite.Dock = DockStyle.Fill;
+                    secretwebsite.Show();
+                    break;
+                case "www.12padams.com/???":
+                    addressbar.Text = url;
+                    padamshidden.Dock = DockStyle.Fill;
+                    padamshidden.Show();
                     break;
             }
 
