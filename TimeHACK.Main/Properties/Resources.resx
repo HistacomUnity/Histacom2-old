@@ -277,9 +277,9 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="WinClassicFolderSmall" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAFJJREFUOE9j
-        oBpoaGj4j46hUoQBSPGBAwf+///PgEITZQguzciGYMNQ7RADSAVQAyCGIAzA7gJsNFYDiNUMokddQAsX
-        kIPhBkABTIBUPOCAgQEAB3nmEC2x2cUAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAABSSURBVDhPY6AaaGho+I+OoVKEAUjxgQMH/v//z4BCE2UILs3IhmDDUO0QA0gFUAMghiAMwO4C
+        bDRWA4jVDKJHXUALF5CD4QZAAUyAVDzggIEBAAd55hAtsdnFAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="Win95IconNotepad" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -287,8 +287,5 @@
   </data>
   <data name="windows_command_prompt" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\windows_command_prompt.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="WinClassicHWCV" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\winclassic\winclassichwcv.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

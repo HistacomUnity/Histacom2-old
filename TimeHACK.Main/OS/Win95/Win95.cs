@@ -17,9 +17,11 @@ namespace TimeHACK.OS.Win95
         private SoundPlayer stopsound;
         public WindowManager wm = new WindowManager();
 
-        public List<WinClassic> nonimportantapps;
+        public List<WinClassic> nonimportantapps = new List<WinClassic>();
         public WinClassic webchat;
         public WinClassic ie;
+
+        public int currentappcount = 0;
 
         public bool webchatInstalled = false;
 
@@ -55,6 +57,7 @@ namespace TimeHACK.OS.Win95
             // Set the StartMenu seperator
             startmenuitems.Items.Insert(6, new ToolStripSeparator());
 
+            //nonimportantapps.Capacity = 100;
             this.SendToBack();
         }
 
@@ -114,7 +117,7 @@ namespace TimeHACK.OS.Win95
         // Give Year Code - NYI
         private void taskbartime_Click(object sender, EventArgs e)
         {
-
+            //TODO: Set Up Year Codes
         }
 
         // Set the Clock

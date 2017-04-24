@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WinClassicIE4));
             this.program = new System.Windows.Forms.Panel();
             this.browsingarea = new System.Windows.Forms.Panel();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.padamsmain = new System.Windows.Forms.Panel();
             this.Panel12 = new System.Windows.Forms.Panel();
             this.LinkLabel17 = new System.Windows.Forms.LinkLabel();
@@ -51,7 +52,7 @@
             this.Panel8 = new System.Windows.Forms.Panel();
             this.Button26 = new System.Windows.Forms.Button();
             this.Label57 = new System.Windows.Forms.Label();
-            this.Button25 = new System.Windows.Forms.Button();
+            this.WCDownloadButton = new System.Windows.Forms.Button();
             this.Label43 = new System.Windows.Forms.Label();
             this.Button17 = new System.Windows.Forms.Button();
             this.Label5 = new System.Windows.Forms.Label();
@@ -60,20 +61,29 @@
             this.Label4 = new System.Windows.Forms.Label();
             this.padamsbackgrounds = new System.Windows.Forms.Panel();
             this.Panel13 = new System.Windows.Forms.Panel();
+            this.Previewimage = new System.Windows.Forms.PictureBox();
             this.Button21 = new System.Windows.Forms.Button();
             this.Button22 = new System.Windows.Forms.Button();
             this.Label35 = new System.Windows.Forms.Label();
+            this.mclarinflimage = new System.Windows.Forms.PictureBox();
             this.Button20 = new System.Windows.Forms.Button();
             this.Button19 = new System.Windows.Forms.Button();
             this.Label34 = new System.Windows.Forms.Label();
+            this.win95background = new System.Windows.Forms.PictureBox();
             this.Label33 = new System.Windows.Forms.Label();
             this.Label32 = new System.Windows.Forms.Label();
             this.hotmailmain = new System.Windows.Forms.Panel();
+            this.PictureBox9 = new System.Windows.Forms.PictureBox();
+            this.PictureBox10 = new System.Windows.Forms.PictureBox();
             this.Label31 = new System.Windows.Forms.Label();
             this.Label30 = new System.Windows.Forms.Label();
             this.Label29 = new System.Windows.Forms.Label();
+            this.PictureBox8 = new System.Windows.Forms.PictureBox();
+            this.PictureBox7 = new System.Windows.Forms.PictureBox();
+            this.PictureBox6 = new System.Windows.Forms.PictureBox();
             this.Label28 = new System.Windows.Forms.Label();
             this.Label27 = new System.Windows.Forms.Label();
+            this.PictureBox5 = new System.Windows.Forms.PictureBox();
             this.RadioButton3 = new System.Windows.Forms.RadioButton();
             this.RadioButton2 = new System.Windows.Forms.RadioButton();
             this.RadioButton1 = new System.Windows.Forms.RadioButton();
@@ -85,6 +95,8 @@
             this.Label24 = new System.Windows.Forms.Label();
             this.Label23 = new System.Windows.Forms.Label();
             this.Panel11 = new System.Windows.Forms.Panel();
+            this.PictureBox4 = new System.Windows.Forms.PictureBox();
+            this.PictureBox3 = new System.Windows.Forms.PictureBox();
             this.welcomeinternetscreen = new System.Windows.Forms.Panel();
             this.Label58 = new System.Windows.Forms.Label();
             this.LinkLabel16 = new System.Windows.Forms.LinkLabel();
@@ -123,6 +135,9 @@
             this.Label50 = new System.Windows.Forms.Label();
             this.Label51 = new System.Windows.Forms.Label();
             this.ListBox1 = new System.Windows.Forms.ListBox();
+            this.PictureBox14 = new System.Windows.Forms.PictureBox();
+            this.PictureBox13 = new System.Windows.Forms.PictureBox();
+            this.PictureBox12 = new System.Windows.Forms.PictureBox();
             this.googlealpha = new System.Windows.Forms.Panel();
             this.Label15 = new System.Windows.Forms.Label();
             this.Panel6 = new System.Windows.Forms.Panel();
@@ -148,6 +163,7 @@
             this.Button12 = new System.Windows.Forms.Button();
             this.TextBox4 = new System.Windows.Forms.TextBox();
             this.Label11 = new System.Windows.Forms.Label();
+            this.PictureBox2 = new System.Windows.Forms.PictureBox();
             this.padamshidden = new System.Windows.Forms.Panel();
             this.TextBox10 = new System.Windows.Forms.TextBox();
             this.secretwebsite = new System.Windows.Forms.Panel();
@@ -156,6 +172,7 @@
             this.Label42 = new System.Windows.Forms.Label();
             this.Label41 = new System.Windows.Forms.Label();
             this.TextBox8 = new System.Windows.Forms.TextBox();
+            this.PictureBox11 = new System.Windows.Forms.PictureBox();
             this.Label40 = new System.Windows.Forms.Label();
             this.Label39 = new System.Windows.Forms.Label();
             this.googlemain = new System.Windows.Forms.Panel();
@@ -179,8 +196,9 @@
             this.ComboBox1 = new System.Windows.Forms.ComboBox();
             this.TextBox2 = new System.Windows.Forms.TextBox();
             this.Label7 = new System.Windows.Forms.Label();
+            this.pboxgoogleprototypelogo = new System.Windows.Forms.PictureBox();
             this.Panel14 = new System.Windows.Forms.Panel();
-            this.Button8 = new System.Windows.Forms.Button();
+            this.GoButton = new System.Windows.Forms.Button();
             this.addressbar = new System.Windows.Forms.ComboBox();
             this.Label1 = new System.Windows.Forms.Label();
             this.Panel1 = new System.Windows.Forms.Panel();
@@ -190,11 +208,12 @@
             this.Button27 = new System.Windows.Forms.Button();
             this.Button7 = new System.Windows.Forms.Button();
             this.Button6 = new System.Windows.Forms.Button();
-            this.Button5 = new System.Windows.Forms.Button();
+            this.HomeButton = new System.Windows.Forms.Button();
             this.Button4 = new System.Windows.Forms.Button();
             this.Button3 = new System.Windows.Forms.Button();
-            this.Button2 = new System.Windows.Forms.Button();
-            this.Button1 = new System.Windows.Forms.Button();
+            this.ForwardButton = new System.Windows.Forms.Button();
+            this.BackButton = new System.Windows.Forms.Button();
+            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.MenuStrip3 = new System.Windows.Forms.MenuStrip();
             this.ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -291,25 +310,6 @@
             this.ToolStripMenuItem93 = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem94 = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem95 = new System.Windows.Forms.ToolStripMenuItem();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.Previewimage = new System.Windows.Forms.PictureBox();
-            this.mclarinflimage = new System.Windows.Forms.PictureBox();
-            this.win95background = new System.Windows.Forms.PictureBox();
-            this.PictureBox9 = new System.Windows.Forms.PictureBox();
-            this.PictureBox10 = new System.Windows.Forms.PictureBox();
-            this.PictureBox8 = new System.Windows.Forms.PictureBox();
-            this.PictureBox7 = new System.Windows.Forms.PictureBox();
-            this.PictureBox6 = new System.Windows.Forms.PictureBox();
-            this.PictureBox5 = new System.Windows.Forms.PictureBox();
-            this.PictureBox4 = new System.Windows.Forms.PictureBox();
-            this.PictureBox3 = new System.Windows.Forms.PictureBox();
-            this.PictureBox14 = new System.Windows.Forms.PictureBox();
-            this.PictureBox13 = new System.Windows.Forms.PictureBox();
-            this.PictureBox12 = new System.Windows.Forms.PictureBox();
-            this.PictureBox2 = new System.Windows.Forms.PictureBox();
-            this.PictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pboxgoogleprototypelogo = new System.Windows.Forms.PictureBox();
-            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.program.SuspendLayout();
             this.browsingarea.SuspendLayout();
             this.padamsmain.SuspendLayout();
@@ -319,46 +319,46 @@
             this.Panel8.SuspendLayout();
             this.padamsbackgrounds.SuspendLayout();
             this.Panel13.SuspendLayout();
-            this.hotmailmain.SuspendLayout();
-            this.Panel11.SuspendLayout();
-            this.welcomeinternetscreen.SuspendLayout();
-            this.hotmailpadams.SuspendLayout();
-            this.email1.SuspendLayout();
-            this.email3.SuspendLayout();
-            this.email2.SuspendLayout();
-            this.googlealpha.SuspendLayout();
-            this.Panel6.SuspendLayout();
-            this.Panel7.SuspendLayout();
-            this.Panel5.SuspendLayout();
-            this.Panel4.SuspendLayout();
-            this.padamshidden.SuspendLayout();
-            this.secretwebsite.SuspendLayout();
-            this.skindows95advertisment.SuspendLayout();
-            this.googlemain.SuspendLayout();
-            this.googleprototype.SuspendLayout();
-            this.Panel3.SuspendLayout();
-            this.Panel2.SuspendLayout();
-            this.Panel14.SuspendLayout();
-            this.Panel1.SuspendLayout();
-            this.MenuStrip3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Previewimage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mclarinflimage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.win95background)).BeginInit();
+            this.hotmailmain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).BeginInit();
+            this.Panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).BeginInit();
+            this.welcomeinternetscreen.SuspendLayout();
+            this.hotmailpadams.SuspendLayout();
+            this.email1.SuspendLayout();
+            this.email3.SuspendLayout();
+            this.email2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox12)).BeginInit();
+            this.googlealpha.SuspendLayout();
+            this.Panel6.SuspendLayout();
+            this.Panel7.SuspendLayout();
+            this.Panel5.SuspendLayout();
+            this.Panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
+            this.padamshidden.SuspendLayout();
+            this.secretwebsite.SuspendLayout();
+            this.skindows95advertisment.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox11)).BeginInit();
+            this.googlemain.SuspendLayout();
+            this.googleprototype.SuspendLayout();
+            this.Panel3.SuspendLayout();
+            this.Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxgoogleprototypelogo)).BeginInit();
+            this.Panel14.SuspendLayout();
+            this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
+            this.MenuStrip3.SuspendLayout();
             this.SuspendLayout();
             // 
             // program
@@ -395,6 +395,15 @@
             this.browsingarea.Name = "browsingarea";
             this.browsingarea.Size = new System.Drawing.Size(959, 483);
             this.browsingarea.TabIndex = 9;
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Location = new System.Drawing.Point(578, 206);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(62, 47);
+            this.webBrowser1.TabIndex = 11;
+            this.webBrowser1.Url = new System.Uri("http://www.google.com", System.UriKind.Absolute);
             // 
             // padamsmain
             // 
@@ -584,7 +593,7 @@
             this.Panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Panel8.Controls.Add(this.Button26);
             this.Panel8.Controls.Add(this.Label57);
-            this.Panel8.Controls.Add(this.Button25);
+            this.Panel8.Controls.Add(this.WCDownloadButton);
             this.Panel8.Controls.Add(this.Label43);
             this.Panel8.Controls.Add(this.Button17);
             this.Panel8.Controls.Add(this.Label5);
@@ -613,16 +622,16 @@
             this.Label57.TabIndex = 7;
             this.Label57.Text = "Time Distorter 0.1";
             // 
-            // Button25
+            // WCDownloadButton
             // 
-            this.Button25.BackColor = System.Drawing.Color.Silver;
-            this.Button25.Location = new System.Drawing.Point(120, 81);
-            this.Button25.Name = "Button25";
-            this.Button25.Size = new System.Drawing.Size(75, 22);
-            this.Button25.TabIndex = 6;
-            this.Button25.Text = "Download";
-            this.Button25.UseVisualStyleBackColor = false;
-            this.Button25.Click += new System.EventHandler(this.Button25_Click);
+            this.WCDownloadButton.BackColor = System.Drawing.Color.Silver;
+            this.WCDownloadButton.Location = new System.Drawing.Point(120, 81);
+            this.WCDownloadButton.Name = "WCDownloadButton";
+            this.WCDownloadButton.Size = new System.Drawing.Size(75, 22);
+            this.WCDownloadButton.TabIndex = 6;
+            this.WCDownloadButton.Text = "Download";
+            this.WCDownloadButton.UseVisualStyleBackColor = false;
+            this.WCDownloadButton.Click += new System.EventHandler(this.WCDownloadButton_Click);
             // 
             // Label43
             // 
@@ -711,8 +720,21 @@
             this.Panel13.Controls.Add(this.win95background);
             this.Panel13.Location = new System.Drawing.Point(46, 74);
             this.Panel13.Name = "Panel13";
-            this.Panel13.Size = new System.Drawing.Size(7760, 118);
+            this.Panel13.Size = new System.Drawing.Size(7358, 118);
             this.Panel13.TabIndex = 2;
+            // 
+            // Previewimage
+            // 
+            this.Previewimage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Previewimage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Previewimage.Location = new System.Drawing.Point(246, 6);
+            this.Previewimage.Name = "Previewimage";
+            this.Previewimage.Size = new System.Drawing.Size(5941, 118);
+            this.Previewimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Previewimage.TabIndex = 1;
+            this.Previewimage.TabStop = false;
             // 
             // Button21
             // 
@@ -743,6 +765,15 @@
             this.Label35.TabIndex = 6;
             this.Label35.Text = "1994 Mclaren F1";
             // 
+            // mclarinflimage
+            // 
+            this.mclarinflimage.Location = new System.Drawing.Point(26, 192);
+            this.mclarinflimage.Name = "mclarinflimage";
+            this.mclarinflimage.Size = new System.Drawing.Size(184, 115);
+            this.mclarinflimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.mclarinflimage.TabIndex = 5;
+            this.mclarinflimage.TabStop = false;
+            // 
             // Button20
             // 
             this.Button20.BackColor = System.Drawing.Color.Silver;
@@ -771,6 +802,15 @@
             this.Label34.Size = new System.Drawing.Size(128, 13);
             this.Label34.TabIndex = 2;
             this.Label34.Text = "Windows 95 Boot Screen";
+            // 
+            // win95background
+            // 
+            this.win95background.Location = new System.Drawing.Point(26, 22);
+            this.win95background.Name = "win95background";
+            this.win95background.Size = new System.Drawing.Size(184, 115);
+            this.win95background.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.win95background.TabIndex = 0;
+            this.win95background.TabStop = false;
             // 
             // Label33
             // 
@@ -818,10 +858,26 @@
             this.hotmailmain.Controls.Add(this.Label24);
             this.hotmailmain.Controls.Add(this.Label23);
             this.hotmailmain.Controls.Add(this.Panel11);
-            this.hotmailmain.Location = new System.Drawing.Point(233, 324);
+            this.hotmailmain.Location = new System.Drawing.Point(233, 313);
             this.hotmailmain.Name = "hotmailmain";
-            this.hotmailmain.Size = new System.Drawing.Size(172, 116);
+            this.hotmailmain.Size = new System.Drawing.Size(218, 127);
             this.hotmailmain.TabIndex = 5;
+            // 
+            // PictureBox9
+            // 
+            this.PictureBox9.Location = new System.Drawing.Point(248, 207);
+            this.PictureBox9.Name = "PictureBox9";
+            this.PictureBox9.Size = new System.Drawing.Size(200, 33);
+            this.PictureBox9.TabIndex = 2;
+            this.PictureBox9.TabStop = false;
+            // 
+            // PictureBox10
+            // 
+            this.PictureBox10.Location = new System.Drawing.Point(272, 246);
+            this.PictureBox10.Name = "PictureBox10";
+            this.PictureBox10.Size = new System.Drawing.Size(160, 26);
+            this.PictureBox10.TabIndex = 3;
+            this.PictureBox10.TabStop = false;
             // 
             // Label31
             // 
@@ -830,7 +886,7 @@
             this.Label31.ForeColor = System.Drawing.Color.White;
             this.Label31.Location = new System.Drawing.Point(513, 259);
             this.Label31.Name = "Label31";
-            this.Label31.Size = new System.Drawing.Size(111, 15);
+            this.Label31.Size = new System.Drawing.Size(113, 15);
             this.Label31.TabIndex = 19;
             this.Label31.Text = "Privacy Statement";
             // 
@@ -841,7 +897,7 @@
             this.Label30.ForeColor = System.Drawing.Color.White;
             this.Label30.Location = new System.Drawing.Point(513, 234);
             this.Label30.Name = "Label30";
-            this.Label30.Size = new System.Drawing.Size(77, 15);
+            this.Label30.Size = new System.Drawing.Size(79, 15);
             this.Label30.TabIndex = 18;
             this.Label30.Text = "Email Safety";
             // 
@@ -852,9 +908,33 @@
             this.Label29.ForeColor = System.Drawing.Color.White;
             this.Label29.Location = new System.Drawing.Point(513, 207);
             this.Label29.Name = "Label29";
-            this.Label29.Size = new System.Drawing.Size(86, 15);
+            this.Label29.Size = new System.Drawing.Size(88, 15);
             this.Label29.TabIndex = 17;
             this.Label29.Text = "About Hotmail";
+            // 
+            // PictureBox8
+            // 
+            this.PictureBox8.Location = new System.Drawing.Point(478, 256);
+            this.PictureBox8.Name = "PictureBox8";
+            this.PictureBox8.Size = new System.Drawing.Size(17, 16);
+            this.PictureBox8.TabIndex = 16;
+            this.PictureBox8.TabStop = false;
+            // 
+            // PictureBox7
+            // 
+            this.PictureBox7.Location = new System.Drawing.Point(478, 231);
+            this.PictureBox7.Name = "PictureBox7";
+            this.PictureBox7.Size = new System.Drawing.Size(17, 16);
+            this.PictureBox7.TabIndex = 15;
+            this.PictureBox7.TabStop = false;
+            // 
+            // PictureBox6
+            // 
+            this.PictureBox6.Location = new System.Drawing.Point(478, 206);
+            this.PictureBox6.Name = "PictureBox6";
+            this.PictureBox6.Size = new System.Drawing.Size(17, 16);
+            this.PictureBox6.TabIndex = 14;
+            this.PictureBox6.TabStop = false;
             // 
             // Label28
             // 
@@ -875,9 +955,17 @@
             this.Label27.ForeColor = System.Drawing.Color.White;
             this.Label27.Location = new System.Drawing.Point(258, 140);
             this.Label27.Name = "Label27";
-            this.Label27.Size = new System.Drawing.Size(139, 15);
+            this.Label27.Size = new System.Drawing.Size(142, 15);
             this.Label27.TabIndex = 12;
             this.Label27.Text = "Forgot Your Password?";
+            // 
+            // PictureBox5
+            // 
+            this.PictureBox5.Location = new System.Drawing.Point(235, 139);
+            this.PictureBox5.Name = "PictureBox5";
+            this.PictureBox5.Size = new System.Drawing.Size(17, 16);
+            this.PictureBox5.TabIndex = 11;
+            this.PictureBox5.TabStop = false;
             // 
             // RadioButton3
             // 
@@ -960,7 +1048,7 @@
             this.Label25.ForeColor = System.Drawing.Color.White;
             this.Label25.Location = new System.Drawing.Point(232, 59);
             this.Label25.Name = "Label25";
-            this.Label25.Size = new System.Drawing.Size(74, 15);
+            this.Label25.Size = new System.Drawing.Size(75, 15);
             this.Label25.TabIndex = 3;
             this.Label25.Text = "Login Name";
             // 
@@ -999,6 +1087,22 @@
             this.Panel11.Size = new System.Drawing.Size(205, 445);
             this.Panel11.TabIndex = 0;
             // 
+            // PictureBox4
+            // 
+            this.PictureBox4.Location = new System.Drawing.Point(35, 179);
+            this.PictureBox4.Name = "PictureBox4";
+            this.PictureBox4.Size = new System.Drawing.Size(160, 136);
+            this.PictureBox4.TabIndex = 1;
+            this.PictureBox4.TabStop = false;
+            // 
+            // PictureBox3
+            // 
+            this.PictureBox3.Location = new System.Drawing.Point(13, 23);
+            this.PictureBox3.Name = "PictureBox3";
+            this.PictureBox3.Size = new System.Drawing.Size(160, 136);
+            this.PictureBox3.TabIndex = 0;
+            this.PictureBox3.TabStop = false;
+            // 
             // welcomeinternetscreen
             // 
             this.welcomeinternetscreen.AutoScroll = true;
@@ -1017,10 +1121,11 @@
             // Label58
             // 
             this.Label58.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Label58.AutoSize = false;
             this.Label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label58.Location = new System.Drawing.Point(0, 45);
             this.Label58.Name = "Label58";
-            this.Label58.Size = new System.Drawing.Size(200, 16);
+            this.Label58.Size = new System.Drawing.Size(browsingarea.Width, 16);
             this.Label58.TabIndex = 7;
             this.Label58.Text = "Where do you want to go today?";
             this.Label58.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1028,9 +1133,10 @@
             // LinkLabel16
             // 
             this.LinkLabel16.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.LinkLabel16.AutoSize = false;
             this.LinkLabel16.Location = new System.Drawing.Point(0, 317);
             this.LinkLabel16.Name = "LinkLabel16";
-            this.LinkLabel16.Size = new System.Drawing.Size(200, 13);
+            this.LinkLabel16.Size = new System.Drawing.Size(browsingarea.Width, 13);
             this.LinkLabel16.TabIndex = 6;
             this.LinkLabel16.TabStop = true;
             this.LinkLabel16.Text = "www.12padams.com";
@@ -1040,9 +1146,10 @@
             // LinkLabel15
             // 
             this.LinkLabel15.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.LinkLabel15.AutoSize = false;
             this.LinkLabel15.Location = new System.Drawing.Point(0, 298);
             this.LinkLabel15.Name = "LinkLabel15";
-            this.LinkLabel15.Size = new System.Drawing.Size(200, 13);
+            this.LinkLabel15.Size = new System.Drawing.Size(browsingarea.Width, 13);
             this.LinkLabel15.TabIndex = 5;
             this.LinkLabel15.TabStop = true;
             this.LinkLabel15.Text = "www.google.com";
@@ -1052,10 +1159,11 @@
             // Label3
             // 
             this.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Label3.AutoSize = false;
             this.Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label3.Location = new System.Drawing.Point(0, 258);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(200, 20);
+            this.Label3.Size = new System.Drawing.Size(browsingarea.Width, 20);
             this.Label3.TabIndex = 2;
             this.Label3.Text = "Here are some sites you may wish to visit.";
             this.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1070,7 +1178,7 @@
             this.TextBox1.Multiline = true;
             this.TextBox1.Name = "TextBox1";
             this.TextBox1.ReadOnly = true;
-            this.TextBox1.Size = new System.Drawing.Size(200, 130);
+            this.TextBox1.Size = new System.Drawing.Size(browsingarea.Width, 130);
             this.TextBox1.TabIndex = 1;
             this.TextBox1.Text = resources.GetString("TextBox1.Text");
             this.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1078,10 +1186,11 @@
             // Label2
             // 
             this.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Label2.AutoSize = false;
             this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label2.Location = new System.Drawing.Point(0, 19);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(200, 24);
+            this.Label2.Size = new System.Drawing.Size(browsingarea.Width, 24);
             this.Label2.TabIndex = 0;
             this.Label2.Text = "Welcome To Internet Explorer 4";
             this.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1098,9 +1207,9 @@
             this.hotmailpadams.Controls.Add(this.PictureBox14);
             this.hotmailpadams.Controls.Add(this.PictureBox13);
             this.hotmailpadams.Controls.Add(this.PictureBox12);
-            this.hotmailpadams.Location = new System.Drawing.Point(8, 314);
+            this.hotmailpadams.Location = new System.Drawing.Point(8, 321);
             this.hotmailpadams.Name = "hotmailpadams";
-            this.hotmailpadams.Size = new System.Drawing.Size(133, 123);
+            this.hotmailpadams.Size = new System.Drawing.Size(214, 116);
             this.hotmailpadams.TabIndex = 10;
             // 
             // email1
@@ -1394,6 +1503,33 @@
             this.ListBox1.Size = new System.Drawing.Size(518, 278);
             this.ListBox1.TabIndex = 3;
             // 
+            // PictureBox14
+            // 
+            this.PictureBox14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PictureBox14.Location = new System.Drawing.Point(154, 38);
+            this.PictureBox14.Name = "PictureBox14";
+            this.PictureBox14.Size = new System.Drawing.Size(518, 21);
+            this.PictureBox14.TabIndex = 2;
+            this.PictureBox14.TabStop = false;
+            // 
+            // PictureBox13
+            // 
+            this.PictureBox13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PictureBox13.Location = new System.Drawing.Point(154, 0);
+            this.PictureBox13.Name = "PictureBox13";
+            this.PictureBox13.Size = new System.Drawing.Size(518, 38);
+            this.PictureBox13.TabIndex = 1;
+            this.PictureBox13.TabStop = false;
+            // 
+            // PictureBox12
+            // 
+            this.PictureBox12.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PictureBox12.Location = new System.Drawing.Point(0, 0);
+            this.PictureBox12.Name = "PictureBox12";
+            this.PictureBox12.Size = new System.Drawing.Size(154, 337);
+            this.PictureBox12.TabIndex = 0;
+            this.PictureBox12.TabStop = false;
+            // 
             // googlealpha
             // 
             this.googlealpha.AutoScroll = true;
@@ -1664,6 +1800,15 @@
             this.Label11.TabIndex = 0;
             this.Label11.Text = "Search the web using Google!";
             // 
+            // PictureBox2
+            // 
+            this.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.PictureBox2.Location = new System.Drawing.Point(-96, 7);
+            this.PictureBox2.Name = "PictureBox2";
+            this.PictureBox2.Size = new System.Drawing.Size(361, 106);
+            this.PictureBox2.TabIndex = 0;
+            this.PictureBox2.TabStop = false;
+            // 
             // padamshidden
             // 
             this.padamshidden.AutoScroll = true;
@@ -1729,7 +1874,7 @@
             this.Label42.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Label42.AutoSize = true;
             this.Label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label42.Location = new System.Drawing.Point(1191, 9);
+            this.Label42.Location = new System.Drawing.Point(1124, 9);
             this.Label42.Name = "Label42";
             this.Label42.Size = new System.Drawing.Size(263, 18);
             this.Label42.TabIndex = 5;
@@ -1740,7 +1885,7 @@
             this.Label41.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Label41.AutoSize = true;
             this.Label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label41.Location = new System.Drawing.Point(1291, 33);
+            this.Label41.Location = new System.Drawing.Point(1224, 33);
             this.Label41.Name = "Label41";
             this.Label41.Size = new System.Drawing.Size(71, 24);
             this.Label41.TabIndex = 4;
@@ -1755,9 +1900,19 @@
             this.TextBox8.Multiline = true;
             this.TextBox8.Name = "TextBox8";
             this.TextBox8.ReadOnly = true;
-            this.TextBox8.Size = new System.Drawing.Size(172, 6627);
+            this.TextBox8.Size = new System.Drawing.Size(172, 6276);
             this.TextBox8.TabIndex = 3;
             this.TextBox8.Text = resources.GetString("TextBox8.Text");
+            // 
+            // PictureBox11
+            // 
+            this.PictureBox11.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.PictureBox11.Location = new System.Drawing.Point(1094, 60);
+            this.PictureBox11.Name = "PictureBox11";
+            this.PictureBox11.Size = new System.Drawing.Size(337, 386);
+            this.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBox11.TabIndex = 2;
+            this.PictureBox11.TabStop = false;
             // 
             // Label40
             // 
@@ -1790,7 +1945,7 @@
             this.googlemain.Controls.Add(this.Label6);
             this.googlemain.Location = new System.Drawing.Point(52, 3);
             this.googlemain.Name = "googlemain";
-            this.googlemain.Size = new System.Drawing.Size(301, 226);
+            this.googlemain.Size = new System.Drawing.Size(38, 38);
             this.googlemain.TabIndex = 1;
             // 
             // googlebetalink
@@ -2017,9 +2172,18 @@
             this.Label7.TabIndex = 0;
             this.Label7.Text = "Search the web using Google!";
             // 
+            // pboxgoogleprototypelogo
+            // 
+            this.pboxgoogleprototypelogo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pboxgoogleprototypelogo.Location = new System.Drawing.Point(-49, 6);
+            this.pboxgoogleprototypelogo.Name = "pboxgoogleprototypelogo";
+            this.pboxgoogleprototypelogo.Size = new System.Drawing.Size(349, 116);
+            this.pboxgoogleprototypelogo.TabIndex = 0;
+            this.pboxgoogleprototypelogo.TabStop = false;
+            // 
             // Panel14
             // 
-            this.Panel14.Controls.Add(this.Button8);
+            this.Panel14.Controls.Add(this.GoButton);
             this.Panel14.Controls.Add(this.addressbar);
             this.Panel14.Controls.Add(this.Label1);
             this.Panel14.Dock = System.Windows.Forms.DockStyle.Top;
@@ -2028,17 +2192,18 @@
             this.Panel14.Size = new System.Drawing.Size(959, 38);
             this.Panel14.TabIndex = 13;
             // 
-            // Button8
+            // GoButton
             // 
-            this.Button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button8.Location = new System.Drawing.Point(898, 5);
-            this.Button8.Name = "Button8";
-            this.Button8.Size = new System.Drawing.Size(55, 28);
-            this.Button8.TabIndex = 2;
-            this.Button8.Text = "Go";
-            this.Button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Button8.UseVisualStyleBackColor = true;
+            this.GoButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.GoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GoButton.Location = new System.Drawing.Point(898, 5);
+            this.GoButton.Name = "GoButton";
+            this.GoButton.Size = new System.Drawing.Size(55, 28);
+            this.GoButton.TabIndex = 2;
+            this.GoButton.Text = "Go";
+            this.GoButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.GoButton.UseVisualStyleBackColor = true;
+            this.GoButton.Click += new System.EventHandler(GoButton_Click);
             // 
             // addressbar
             // 
@@ -2069,11 +2234,11 @@
             this.Panel1.Controls.Add(this.Button27);
             this.Panel1.Controls.Add(this.Button7);
             this.Panel1.Controls.Add(this.Button6);
-            this.Panel1.Controls.Add(this.Button5);
+            this.Panel1.Controls.Add(this.HomeButton);
             this.Panel1.Controls.Add(this.Button4);
             this.Panel1.Controls.Add(this.Button3);
-            this.Panel1.Controls.Add(this.Button2);
-            this.Panel1.Controls.Add(this.Button1);
+            this.Panel1.Controls.Add(this.ForwardButton);
+            this.Panel1.Controls.Add(this.BackButton);
             this.Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel1.Location = new System.Drawing.Point(0, 24);
             this.Panel1.Name = "Panel1";
@@ -2166,19 +2331,19 @@
             this.Button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Button6.UseVisualStyleBackColor = true;
             // 
-            // Button5
+            // HomeButton
             // 
-            this.Button5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Button5.FlatAppearance.BorderSize = 0;
-            this.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button5.Location = new System.Drawing.Point(300, 0);
-            this.Button5.Name = "Button5";
-            this.Button5.Size = new System.Drawing.Size(75, 47);
-            this.Button5.TabIndex = 4;
-            this.Button5.Text = "Home";
-            this.Button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Button5.UseVisualStyleBackColor = true;
-            this.Button5.Click += new System.EventHandler(this.Button5_Click);
+            this.HomeButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.HomeButton.FlatAppearance.BorderSize = 0;
+            this.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HomeButton.Location = new System.Drawing.Point(300, 0);
+            this.HomeButton.Name = "HomeButton";
+            this.HomeButton.Size = new System.Drawing.Size(75, 47);
+            this.HomeButton.TabIndex = 4;
+            this.HomeButton.Text = "Home";
+            this.HomeButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.HomeButton.UseVisualStyleBackColor = true;
+            this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
             // 
             // Button4
             // 
@@ -2206,33 +2371,42 @@
             this.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Button3.UseVisualStyleBackColor = true;
             // 
-            // Button2
+            // ForwardButton
             // 
-            this.Button2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Button2.FlatAppearance.BorderSize = 0;
-            this.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button2.Location = new System.Drawing.Point(75, 0);
-            this.Button2.Name = "Button2";
-            this.Button2.Size = new System.Drawing.Size(75, 47);
-            this.Button2.TabIndex = 1;
-            this.Button2.Text = "Forward";
-            this.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Button2.UseVisualStyleBackColor = true;
-            this.Button2.Click += new System.EventHandler(this.Button2_Click);
+            this.ForwardButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ForwardButton.FlatAppearance.BorderSize = 0;
+            this.ForwardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ForwardButton.Location = new System.Drawing.Point(75, 0);
+            this.ForwardButton.Name = "ForwardButton";
+            this.ForwardButton.Size = new System.Drawing.Size(75, 47);
+            this.ForwardButton.TabIndex = 1;
+            this.ForwardButton.Text = "Forward";
+            this.ForwardButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ForwardButton.UseVisualStyleBackColor = true;
+            this.ForwardButton.Click += new System.EventHandler(this.ForwardButton_Click);
             // 
-            // Button1
+            // BackButton
             // 
-            this.Button1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Button1.FlatAppearance.BorderSize = 0;
-            this.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button1.Location = new System.Drawing.Point(0, 0);
-            this.Button1.Name = "Button1";
-            this.Button1.Size = new System.Drawing.Size(75, 47);
-            this.Button1.TabIndex = 0;
-            this.Button1.Text = "Back";
-            this.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Button1.UseVisualStyleBackColor = true;
-            this.Button1.Click += new System.EventHandler(this.Button1_Click);
+            this.BackButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.BackButton.FlatAppearance.BorderSize = 0;
+            this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackButton.Location = new System.Drawing.Point(0, 0);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(75, 47);
+            this.BackButton.TabIndex = 0;
+            this.BackButton.Text = "Back";
+            this.BackButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
+            // PictureBox1
+            // 
+            this.PictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PictureBox1.Location = new System.Drawing.Point(915, 23);
+            this.PictureBox1.Name = "PictureBox1";
+            this.PictureBox1.Size = new System.Drawing.Size(38, 21);
+            this.PictureBox1.TabIndex = 10;
+            this.PictureBox1.TabStop = false;
             // 
             // MenuStrip3
             // 
@@ -2266,7 +2440,7 @@
             this.ToolStripMenuItem20,
             this.ToolStripMenuItem21});
             this.ToolStripMenuItem1.Name = "ToolStripMenuItem1";
-            this.ToolStripMenuItem1.Size = new System.Drawing.Size(37, 20);
+            this.ToolStripMenuItem1.Size = new System.Drawing.Size(40, 20);
             this.ToolStripMenuItem1.Text = "File";
             // 
             // ToolStripMenuItem2
@@ -2279,84 +2453,84 @@
             this.ToolStripMenuItem6,
             this.ToolStripMenuItem7});
             this.ToolStripMenuItem2.Name = "ToolStripMenuItem2";
-            this.ToolStripMenuItem2.Size = new System.Drawing.Size(221, 22);
+            this.ToolStripMenuItem2.Size = new System.Drawing.Size(239, 22);
             this.ToolStripMenuItem2.Text = "New";
             // 
             // ToolStripMenuItem3
             // 
             this.ToolStripMenuItem3.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem3.Name = "ToolStripMenuItem3";
-            this.ToolStripMenuItem3.Size = new System.Drawing.Size(175, 22);
+            this.ToolStripMenuItem3.Size = new System.Drawing.Size(181, 22);
             this.ToolStripMenuItem3.Text = "Window       Ctrl+N";
             // 
             // ToolStripMenuItem4
             // 
             this.ToolStripMenuItem4.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem4.Name = "ToolStripMenuItem4";
-            this.ToolStripMenuItem4.Size = new System.Drawing.Size(175, 22);
+            this.ToolStripMenuItem4.Size = new System.Drawing.Size(181, 22);
             this.ToolStripMenuItem4.Text = "Message";
             // 
             // ToolStripMenuItem5
             // 
             this.ToolStripMenuItem5.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem5.Name = "ToolStripMenuItem5";
-            this.ToolStripMenuItem5.Size = new System.Drawing.Size(175, 22);
+            this.ToolStripMenuItem5.Size = new System.Drawing.Size(181, 22);
             this.ToolStripMenuItem5.Text = "Post";
             // 
             // ToolStripMenuItem6
             // 
             this.ToolStripMenuItem6.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem6.Name = "ToolStripMenuItem6";
-            this.ToolStripMenuItem6.Size = new System.Drawing.Size(175, 22);
+            this.ToolStripMenuItem6.Size = new System.Drawing.Size(181, 22);
             this.ToolStripMenuItem6.Text = "Contact";
             // 
             // ToolStripMenuItem7
             // 
             this.ToolStripMenuItem7.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem7.Name = "ToolStripMenuItem7";
-            this.ToolStripMenuItem7.Size = new System.Drawing.Size(175, 22);
+            this.ToolStripMenuItem7.Size = new System.Drawing.Size(181, 22);
             this.ToolStripMenuItem7.Text = "Internet Call";
             // 
             // ToolStripMenuItem8
             // 
             this.ToolStripMenuItem8.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem8.Name = "ToolStripMenuItem8";
-            this.ToolStripMenuItem8.Size = new System.Drawing.Size(221, 22);
+            this.ToolStripMenuItem8.Size = new System.Drawing.Size(239, 22);
             this.ToolStripMenuItem8.Text = "Open...                    Ctrl+O";
             // 
             // ToolStripMenuItem9
             // 
             this.ToolStripMenuItem9.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem9.Name = "ToolStripMenuItem9";
-            this.ToolStripMenuItem9.Size = new System.Drawing.Size(221, 22);
+            this.ToolStripMenuItem9.Size = new System.Drawing.Size(239, 22);
             this.ToolStripMenuItem9.Text = "Edit with Windows Notepad";
             // 
             // ToolStripMenuItem10
             // 
             this.ToolStripMenuItem10.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem10.Name = "ToolStripMenuItem10";
-            this.ToolStripMenuItem10.Size = new System.Drawing.Size(221, 22);
+            this.ToolStripMenuItem10.Size = new System.Drawing.Size(239, 22);
             this.ToolStripMenuItem10.Text = "Save                         Ctrl+S";
             // 
             // ToolStripMenuItem11
             // 
             this.ToolStripMenuItem11.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem11.Name = "ToolStripMenuItem11";
-            this.ToolStripMenuItem11.Size = new System.Drawing.Size(221, 22);
+            this.ToolStripMenuItem11.Size = new System.Drawing.Size(239, 22);
             this.ToolStripMenuItem11.Text = "Save As...";
             // 
             // ToolStripMenuItem12
             // 
             this.ToolStripMenuItem12.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem12.Name = "ToolStripMenuItem12";
-            this.ToolStripMenuItem12.Size = new System.Drawing.Size(221, 22);
+            this.ToolStripMenuItem12.Size = new System.Drawing.Size(239, 22);
             this.ToolStripMenuItem12.Text = "Print Setup...";
             // 
             // ToolStripMenuItem13
             // 
             this.ToolStripMenuItem13.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem13.Name = "ToolStripMenuItem13";
-            this.ToolStripMenuItem13.Size = new System.Drawing.Size(221, 22);
+            this.ToolStripMenuItem13.Size = new System.Drawing.Size(239, 22);
             this.ToolStripMenuItem13.Text = "Print...";
             // 
             // ToolStripMenuItem14
@@ -2367,56 +2541,56 @@
             this.ToolStripMenuItem16,
             this.ToolStripMenuItem17});
             this.ToolStripMenuItem14.Name = "ToolStripMenuItem14";
-            this.ToolStripMenuItem14.Size = new System.Drawing.Size(221, 22);
+            this.ToolStripMenuItem14.Size = new System.Drawing.Size(239, 22);
             this.ToolStripMenuItem14.Text = "Send";
             // 
             // ToolStripMenuItem15
             // 
             this.ToolStripMenuItem15.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem15.Name = "ToolStripMenuItem15";
-            this.ToolStripMenuItem15.Size = new System.Drawing.Size(179, 22);
+            this.ToolStripMenuItem15.Size = new System.Drawing.Size(198, 22);
             this.ToolStripMenuItem15.Text = "Page by E-mail...";
             // 
             // ToolStripMenuItem16
             // 
             this.ToolStripMenuItem16.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem16.Name = "ToolStripMenuItem16";
-            this.ToolStripMenuItem16.Size = new System.Drawing.Size(179, 22);
+            this.ToolStripMenuItem16.Size = new System.Drawing.Size(198, 22);
             this.ToolStripMenuItem16.Text = "Link by E-mail...";
             // 
             // ToolStripMenuItem17
             // 
             this.ToolStripMenuItem17.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem17.Name = "ToolStripMenuItem17";
-            this.ToolStripMenuItem17.Size = new System.Drawing.Size(179, 22);
+            this.ToolStripMenuItem17.Size = new System.Drawing.Size(198, 22);
             this.ToolStripMenuItem17.Text = "Shortcut to Desktop";
             // 
             // ToolStripMenuItem18
             // 
             this.ToolStripMenuItem18.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem18.Name = "ToolStripMenuItem18";
-            this.ToolStripMenuItem18.Size = new System.Drawing.Size(221, 22);
+            this.ToolStripMenuItem18.Size = new System.Drawing.Size(239, 22);
             this.ToolStripMenuItem18.Text = "Import and Export...";
             // 
             // ToolStripMenuItem19
             // 
             this.ToolStripMenuItem19.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem19.Name = "ToolStripMenuItem19";
-            this.ToolStripMenuItem19.Size = new System.Drawing.Size(221, 22);
+            this.ToolStripMenuItem19.Size = new System.Drawing.Size(239, 22);
             this.ToolStripMenuItem19.Text = "Properties";
             // 
             // ToolStripMenuItem20
             // 
             this.ToolStripMenuItem20.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem20.Name = "ToolStripMenuItem20";
-            this.ToolStripMenuItem20.Size = new System.Drawing.Size(221, 22);
+            this.ToolStripMenuItem20.Size = new System.Drawing.Size(239, 22);
             this.ToolStripMenuItem20.Text = "Work Offline";
             // 
             // ToolStripMenuItem21
             // 
             this.ToolStripMenuItem21.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem21.Name = "ToolStripMenuItem21";
-            this.ToolStripMenuItem21.Size = new System.Drawing.Size(221, 22);
+            this.ToolStripMenuItem21.Size = new System.Drawing.Size(239, 22);
             this.ToolStripMenuItem21.Text = "Close";
             this.ToolStripMenuItem21.Click += new System.EventHandler(this.ToolStripMenuItem21_Click);
             // 
@@ -2429,42 +2603,42 @@
             this.ToolStripMenuItem26,
             this.ToolStripMenuItem27});
             this.ToolStripMenuItem22.Name = "ToolStripMenuItem22";
-            this.ToolStripMenuItem22.Size = new System.Drawing.Size(39, 20);
+            this.ToolStripMenuItem22.Size = new System.Drawing.Size(43, 20);
             this.ToolStripMenuItem22.Text = "Edit";
             // 
             // ToolStripMenuItem23
             // 
             this.ToolStripMenuItem23.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem23.Name = "ToolStripMenuItem23";
-            this.ToolStripMenuItem23.Size = new System.Drawing.Size(221, 22);
+            this.ToolStripMenuItem23.Size = new System.Drawing.Size(237, 22);
             this.ToolStripMenuItem23.Text = "Cut                               Ctrl+X";
             // 
             // ToolStripMenuItem24
             // 
             this.ToolStripMenuItem24.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem24.Name = "ToolStripMenuItem24";
-            this.ToolStripMenuItem24.Size = new System.Drawing.Size(221, 22);
+            this.ToolStripMenuItem24.Size = new System.Drawing.Size(237, 22);
             this.ToolStripMenuItem24.Text = "Copy                            Ctrl+C";
             // 
             // ToolStripMenuItem25
             // 
             this.ToolStripMenuItem25.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem25.Name = "ToolStripMenuItem25";
-            this.ToolStripMenuItem25.Size = new System.Drawing.Size(221, 22);
+            this.ToolStripMenuItem25.Size = new System.Drawing.Size(237, 22);
             this.ToolStripMenuItem25.Text = "Paste                            Ctrl+V";
             // 
             // ToolStripMenuItem26
             // 
             this.ToolStripMenuItem26.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem26.Name = "ToolStripMenuItem26";
-            this.ToolStripMenuItem26.Size = new System.Drawing.Size(221, 22);
+            this.ToolStripMenuItem26.Size = new System.Drawing.Size(237, 22);
             this.ToolStripMenuItem26.Text = "Select All                     Ctrl+A";
             // 
             // ToolStripMenuItem27
             // 
             this.ToolStripMenuItem27.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem27.Name = "ToolStripMenuItem27";
-            this.ToolStripMenuItem27.Size = new System.Drawing.Size(221, 22);
+            this.ToolStripMenuItem27.Size = new System.Drawing.Size(237, 22);
             this.ToolStripMenuItem27.Text = "Find (on This Page)... Ctrl+F";
             // 
             // ToolStripMenuItem28
@@ -2481,7 +2655,7 @@
             this.ToolStripMenuItem71,
             this.ToolStripMenuItem72});
             this.ToolStripMenuItem28.Name = "ToolStripMenuItem28";
-            this.ToolStripMenuItem28.Size = new System.Drawing.Size(44, 20);
+            this.ToolStripMenuItem28.Size = new System.Drawing.Size(47, 20);
             this.ToolStripMenuItem28.Text = "View";
             // 
             // ToolStripMenuItem29
@@ -2494,49 +2668,49 @@
             this.ToolStripMenuItem33,
             this.ToolStripMenuItem34});
             this.ToolStripMenuItem29.Name = "ToolStripMenuItem29";
-            this.ToolStripMenuItem29.Size = new System.Drawing.Size(166, 22);
+            this.ToolStripMenuItem29.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuItem29.Text = "Toolbars";
             // 
             // ToolStripMenuItem30
             // 
             this.ToolStripMenuItem30.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem30.Name = "ToolStripMenuItem30";
-            this.ToolStripMenuItem30.Size = new System.Drawing.Size(165, 22);
+            this.ToolStripMenuItem30.Size = new System.Drawing.Size(183, 22);
             this.ToolStripMenuItem30.Text = "Standard Buttons";
             // 
             // ToolStripMenuItem31
             // 
             this.ToolStripMenuItem31.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem31.Name = "ToolStripMenuItem31";
-            this.ToolStripMenuItem31.Size = new System.Drawing.Size(165, 22);
+            this.ToolStripMenuItem31.Size = new System.Drawing.Size(183, 22);
             this.ToolStripMenuItem31.Text = "Address Bar";
             // 
             // ToolStripMenuItem32
             // 
             this.ToolStripMenuItem32.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem32.Name = "ToolStripMenuItem32";
-            this.ToolStripMenuItem32.Size = new System.Drawing.Size(165, 22);
+            this.ToolStripMenuItem32.Size = new System.Drawing.Size(183, 22);
             this.ToolStripMenuItem32.Text = "Links";
             // 
             // ToolStripMenuItem33
             // 
             this.ToolStripMenuItem33.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem33.Name = "ToolStripMenuItem33";
-            this.ToolStripMenuItem33.Size = new System.Drawing.Size(165, 22);
+            this.ToolStripMenuItem33.Size = new System.Drawing.Size(183, 22);
             this.ToolStripMenuItem33.Text = "Radio";
             // 
             // ToolStripMenuItem34
             // 
             this.ToolStripMenuItem34.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem34.Name = "ToolStripMenuItem34";
-            this.ToolStripMenuItem34.Size = new System.Drawing.Size(165, 22);
+            this.ToolStripMenuItem34.Size = new System.Drawing.Size(183, 22);
             this.ToolStripMenuItem34.Text = "Customize...";
             // 
             // ToolStripMenuItem35
             // 
             this.ToolStripMenuItem35.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem35.Name = "ToolStripMenuItem35";
-            this.ToolStripMenuItem35.Size = new System.Drawing.Size(166, 22);
+            this.ToolStripMenuItem35.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuItem35.Text = "Status Bar";
             // 
             // ToolStripMenuItem36
@@ -2548,35 +2722,35 @@
             this.ToolStripMenuItem39,
             this.ToolStripMenuItem40});
             this.ToolStripMenuItem36.Name = "ToolStripMenuItem36";
-            this.ToolStripMenuItem36.Size = new System.Drawing.Size(166, 22);
+            this.ToolStripMenuItem36.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuItem36.Text = "Explorer Bar";
             // 
             // ToolStripMenuItem37
             // 
             this.ToolStripMenuItem37.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem37.Name = "ToolStripMenuItem37";
-            this.ToolStripMenuItem37.Size = new System.Drawing.Size(184, 22);
+            this.ToolStripMenuItem37.Size = new System.Drawing.Size(193, 22);
             this.ToolStripMenuItem37.Text = "Search             Ctrl+E";
             // 
             // ToolStripMenuItem38
             // 
             this.ToolStripMenuItem38.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem38.Name = "ToolStripMenuItem38";
-            this.ToolStripMenuItem38.Size = new System.Drawing.Size(184, 22);
+            this.ToolStripMenuItem38.Size = new System.Drawing.Size(193, 22);
             this.ToolStripMenuItem38.Text = "Favorites         Ctrl+I";
             // 
             // ToolStripMenuItem39
             // 
             this.ToolStripMenuItem39.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem39.Name = "ToolStripMenuItem39";
-            this.ToolStripMenuItem39.Size = new System.Drawing.Size(184, 22);
+            this.ToolStripMenuItem39.Size = new System.Drawing.Size(193, 22);
             this.ToolStripMenuItem39.Text = "History            Ctrl+H";
             // 
             // ToolStripMenuItem40
             // 
             this.ToolStripMenuItem40.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem40.Name = "ToolStripMenuItem40";
-            this.ToolStripMenuItem40.Size = new System.Drawing.Size(184, 22);
+            this.ToolStripMenuItem40.Size = new System.Drawing.Size(193, 22);
             this.ToolStripMenuItem40.Text = "Tip of the Day";
             // 
             // ToolStripMenuItem41
@@ -2585,28 +2759,28 @@
             this.ToolStripMenuItem41.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripMenuItem42});
             this.ToolStripMenuItem41.Name = "ToolStripMenuItem41";
-            this.ToolStripMenuItem41.Size = new System.Drawing.Size(166, 22);
+            this.ToolStripMenuItem41.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuItem41.Text = "Go To";
             // 
             // ToolStripMenuItem42
             // 
             this.ToolStripMenuItem42.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem42.Name = "ToolStripMenuItem42";
-            this.ToolStripMenuItem42.Size = new System.Drawing.Size(136, 22);
+            this.ToolStripMenuItem42.Size = new System.Drawing.Size(143, 22);
             this.ToolStripMenuItem42.Text = "Home Page";
             // 
             // ToolStripMenuItem43
             // 
             this.ToolStripMenuItem43.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem43.Name = "ToolStripMenuItem43";
-            this.ToolStripMenuItem43.Size = new System.Drawing.Size(166, 22);
+            this.ToolStripMenuItem43.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuItem43.Text = "Stop                 Esc";
             // 
             // ToolStripMenuItem44
             // 
             this.ToolStripMenuItem44.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem44.Name = "ToolStripMenuItem44";
-            this.ToolStripMenuItem44.Size = new System.Drawing.Size(166, 22);
+            this.ToolStripMenuItem44.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuItem44.Text = "Refresh            F5";
             // 
             // ToolStripMenuItem45
@@ -2619,42 +2793,42 @@
             this.ToolStripMenuItem49,
             this.ToolStripMenuItem50});
             this.ToolStripMenuItem45.Name = "ToolStripMenuItem45";
-            this.ToolStripMenuItem45.Size = new System.Drawing.Size(166, 22);
+            this.ToolStripMenuItem45.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuItem45.Text = "Text Size";
             // 
             // ToolStripMenuItem46
             // 
             this.ToolStripMenuItem46.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem46.Name = "ToolStripMenuItem46";
-            this.ToolStripMenuItem46.Size = new System.Drawing.Size(119, 22);
+            this.ToolStripMenuItem46.Size = new System.Drawing.Size(126, 22);
             this.ToolStripMenuItem46.Text = "Largest";
             // 
             // ToolStripMenuItem47
             // 
             this.ToolStripMenuItem47.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem47.Name = "ToolStripMenuItem47";
-            this.ToolStripMenuItem47.Size = new System.Drawing.Size(119, 22);
+            this.ToolStripMenuItem47.Size = new System.Drawing.Size(126, 22);
             this.ToolStripMenuItem47.Text = "Larger";
             // 
             // ToolStripMenuItem48
             // 
             this.ToolStripMenuItem48.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem48.Name = "ToolStripMenuItem48";
-            this.ToolStripMenuItem48.Size = new System.Drawing.Size(119, 22);
+            this.ToolStripMenuItem48.Size = new System.Drawing.Size(126, 22);
             this.ToolStripMenuItem48.Text = "Medium";
             // 
             // ToolStripMenuItem49
             // 
             this.ToolStripMenuItem49.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem49.Name = "ToolStripMenuItem49";
-            this.ToolStripMenuItem49.Size = new System.Drawing.Size(119, 22);
+            this.ToolStripMenuItem49.Size = new System.Drawing.Size(126, 22);
             this.ToolStripMenuItem49.Text = "Smaller";
             // 
             // ToolStripMenuItem50
             // 
             this.ToolStripMenuItem50.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem50.Name = "ToolStripMenuItem50";
-            this.ToolStripMenuItem50.Size = new System.Drawing.Size(119, 22);
+            this.ToolStripMenuItem50.Size = new System.Drawing.Size(126, 22);
             this.ToolStripMenuItem50.Text = "Smallest";
             // 
             // ToolStripMenuItem51
@@ -2665,21 +2839,21 @@
             this.ToolStripMenuItem53,
             this.ToolStripMenuItem54});
             this.ToolStripMenuItem51.Name = "ToolStripMenuItem51";
-            this.ToolStripMenuItem51.Size = new System.Drawing.Size(166, 22);
+            this.ToolStripMenuItem51.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuItem51.Text = "Encoding";
             // 
             // ToolStripMenuItem52
             // 
             this.ToolStripMenuItem52.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem52.Name = "ToolStripMenuItem52";
-            this.ToolStripMenuItem52.Size = new System.Drawing.Size(230, 22);
+            this.ToolStripMenuItem52.Size = new System.Drawing.Size(249, 22);
             this.ToolStripMenuItem52.Text = "Auto-Select";
             // 
             // ToolStripMenuItem53
             // 
             this.ToolStripMenuItem53.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem53.Name = "ToolStripMenuItem53";
-            this.ToolStripMenuItem53.Size = new System.Drawing.Size(230, 22);
+            this.ToolStripMenuItem53.Size = new System.Drawing.Size(249, 22);
             this.ToolStripMenuItem53.Text = "Western European (Windows)";
             // 
             // ToolStripMenuItem54
@@ -2703,133 +2877,133 @@
             this.ToolStripMenuItem69,
             this.ToolStripMenuItem70});
             this.ToolStripMenuItem54.Name = "ToolStripMenuItem54";
-            this.ToolStripMenuItem54.Size = new System.Drawing.Size(230, 22);
+            this.ToolStripMenuItem54.Size = new System.Drawing.Size(249, 22);
             this.ToolStripMenuItem54.Text = "More";
             // 
             // ToolStripMenuItem55
             // 
             this.ToolStripMenuItem55.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem55.Name = "ToolStripMenuItem55";
-            this.ToolStripMenuItem55.Size = new System.Drawing.Size(199, 22);
+            this.ToolStripMenuItem55.Size = new System.Drawing.Size(216, 22);
             this.ToolStripMenuItem55.Text = "Arabic";
             // 
             // ToolStripMenuItem56
             // 
             this.ToolStripMenuItem56.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem56.Name = "ToolStripMenuItem56";
-            this.ToolStripMenuItem56.Size = new System.Drawing.Size(199, 22);
+            this.ToolStripMenuItem56.Size = new System.Drawing.Size(216, 22);
             this.ToolStripMenuItem56.Text = "Baltic";
             // 
             // ToolStripMenuItem57
             // 
             this.ToolStripMenuItem57.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem57.Name = "ToolStripMenuItem57";
-            this.ToolStripMenuItem57.Size = new System.Drawing.Size(199, 22);
+            this.ToolStripMenuItem57.Size = new System.Drawing.Size(216, 22);
             this.ToolStripMenuItem57.Text = "Central European";
             // 
             // ToolStripMenuItem58
             // 
             this.ToolStripMenuItem58.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem58.Name = "ToolStripMenuItem58";
-            this.ToolStripMenuItem58.Size = new System.Drawing.Size(199, 22);
+            this.ToolStripMenuItem58.Size = new System.Drawing.Size(216, 22);
             this.ToolStripMenuItem58.Text = "Chinese Simplified";
             // 
             // ToolStripMenuItem59
             // 
             this.ToolStripMenuItem59.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem59.Name = "ToolStripMenuItem59";
-            this.ToolStripMenuItem59.Size = new System.Drawing.Size(199, 22);
+            this.ToolStripMenuItem59.Size = new System.Drawing.Size(216, 22);
             this.ToolStripMenuItem59.Text = "Chinese Traditional";
             // 
             // ToolStripMenuItem60
             // 
             this.ToolStripMenuItem60.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem60.Name = "ToolStripMenuItem60";
-            this.ToolStripMenuItem60.Size = new System.Drawing.Size(199, 22);
+            this.ToolStripMenuItem60.Size = new System.Drawing.Size(216, 22);
             this.ToolStripMenuItem60.Text = "Cyrillic";
             // 
             // ToolStripMenuItem61
             // 
             this.ToolStripMenuItem61.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem61.Name = "ToolStripMenuItem61";
-            this.ToolStripMenuItem61.Size = new System.Drawing.Size(199, 22);
+            this.ToolStripMenuItem61.Size = new System.Drawing.Size(216, 22);
             this.ToolStripMenuItem61.Text = "Greek";
             // 
             // ToolStripMenuItem62
             // 
             this.ToolStripMenuItem62.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem62.Name = "ToolStripMenuItem62";
-            this.ToolStripMenuItem62.Size = new System.Drawing.Size(199, 22);
+            this.ToolStripMenuItem62.Size = new System.Drawing.Size(216, 22);
             this.ToolStripMenuItem62.Text = "Hebrew";
             // 
             // ToolStripMenuItem63
             // 
             this.ToolStripMenuItem63.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem63.Name = "ToolStripMenuItem63";
-            this.ToolStripMenuItem63.Size = new System.Drawing.Size(199, 22);
+            this.ToolStripMenuItem63.Size = new System.Drawing.Size(216, 22);
             this.ToolStripMenuItem63.Text = "Japanese";
             // 
             // ToolStripMenuItem64
             // 
             this.ToolStripMenuItem64.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem64.Name = "ToolStripMenuItem64";
-            this.ToolStripMenuItem64.Size = new System.Drawing.Size(199, 22);
+            this.ToolStripMenuItem64.Size = new System.Drawing.Size(216, 22);
             this.ToolStripMenuItem64.Text = "Korean";
             // 
             // ToolStripMenuItem65
             // 
             this.ToolStripMenuItem65.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem65.Name = "ToolStripMenuItem65";
-            this.ToolStripMenuItem65.Size = new System.Drawing.Size(199, 22);
+            this.ToolStripMenuItem65.Size = new System.Drawing.Size(216, 22);
             this.ToolStripMenuItem65.Text = "Thai";
             // 
             // ToolStripMenuItem66
             // 
             this.ToolStripMenuItem66.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem66.Name = "ToolStripMenuItem66";
-            this.ToolStripMenuItem66.Size = new System.Drawing.Size(199, 22);
+            this.ToolStripMenuItem66.Size = new System.Drawing.Size(216, 22);
             this.ToolStripMenuItem66.Text = "Turkish";
             // 
             // ToolStripMenuItem67
             // 
             this.ToolStripMenuItem67.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem67.Name = "ToolStripMenuItem67";
-            this.ToolStripMenuItem67.Size = new System.Drawing.Size(199, 22);
+            this.ToolStripMenuItem67.Size = new System.Drawing.Size(216, 22);
             this.ToolStripMenuItem67.Text = "Unicode (UTF-8)";
             // 
             // ToolStripMenuItem68
             // 
             this.ToolStripMenuItem68.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem68.Name = "ToolStripMenuItem68";
-            this.ToolStripMenuItem68.Size = new System.Drawing.Size(199, 22);
+            this.ToolStripMenuItem68.Size = new System.Drawing.Size(216, 22);
             this.ToolStripMenuItem68.Text = "User Defined";
             // 
             // ToolStripMenuItem69
             // 
             this.ToolStripMenuItem69.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem69.Name = "ToolStripMenuItem69";
-            this.ToolStripMenuItem69.Size = new System.Drawing.Size(199, 22);
+            this.ToolStripMenuItem69.Size = new System.Drawing.Size(216, 22);
             this.ToolStripMenuItem69.Text = "Vietnamese";
             // 
             // ToolStripMenuItem70
             // 
             this.ToolStripMenuItem70.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem70.Name = "ToolStripMenuItem70";
-            this.ToolStripMenuItem70.Size = new System.Drawing.Size(199, 22);
+            this.ToolStripMenuItem70.Size = new System.Drawing.Size(216, 22);
             this.ToolStripMenuItem70.Text = "Western European (ISO)";
             // 
             // ToolStripMenuItem71
             // 
             this.ToolStripMenuItem71.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem71.Name = "ToolStripMenuItem71";
-            this.ToolStripMenuItem71.Size = new System.Drawing.Size(166, 22);
+            this.ToolStripMenuItem71.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuItem71.Text = "Source";
             // 
             // ToolStripMenuItem72
             // 
             this.ToolStripMenuItem72.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem72.Name = "ToolStripMenuItem72";
-            this.ToolStripMenuItem72.Size = new System.Drawing.Size(166, 22);
+            this.ToolStripMenuItem72.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuItem72.Text = "Full Screen     F11";
             // 
             // ToolStripMenuItem78
@@ -2840,7 +3014,7 @@
             this.ToolStripMenuItem86,
             this.ToolStripMenuItem87});
             this.ToolStripMenuItem78.Name = "ToolStripMenuItem78";
-            this.ToolStripMenuItem78.Size = new System.Drawing.Size(34, 20);
+            this.ToolStripMenuItem78.Size = new System.Drawing.Size(36, 20);
             this.ToolStripMenuItem78.Text = "Go";
             // 
             // ToolStripMenuItem79
@@ -2853,63 +3027,63 @@
             this.ToolStripMenuItem83,
             this.ToolStripMenuItem84});
             this.ToolStripMenuItem79.Name = "ToolStripMenuItem79";
-            this.ToolStripMenuItem79.Size = new System.Drawing.Size(175, 22);
+            this.ToolStripMenuItem79.Size = new System.Drawing.Size(191, 22);
             this.ToolStripMenuItem79.Text = "Mail and News";
             // 
             // ToolStripMenuItem80
             // 
             this.ToolStripMenuItem80.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem80.Name = "ToolStripMenuItem80";
-            this.ToolStripMenuItem80.Size = new System.Drawing.Size(156, 22);
+            this.ToolStripMenuItem80.Size = new System.Drawing.Size(165, 22);
             this.ToolStripMenuItem80.Text = "Read Mail";
             // 
             // ToolStripMenuItem81
             // 
             this.ToolStripMenuItem81.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem81.Name = "ToolStripMenuItem81";
-            this.ToolStripMenuItem81.Size = new System.Drawing.Size(156, 22);
+            this.ToolStripMenuItem81.Size = new System.Drawing.Size(165, 22);
             this.ToolStripMenuItem81.Text = "New Message...";
             // 
             // ToolStripMenuItem82
             // 
             this.ToolStripMenuItem82.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem82.Name = "ToolStripMenuItem82";
-            this.ToolStripMenuItem82.Size = new System.Drawing.Size(156, 22);
+            this.ToolStripMenuItem82.Size = new System.Drawing.Size(165, 22);
             this.ToolStripMenuItem82.Text = "Send a Link...";
             // 
             // ToolStripMenuItem83
             // 
             this.ToolStripMenuItem83.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem83.Name = "ToolStripMenuItem83";
-            this.ToolStripMenuItem83.Size = new System.Drawing.Size(156, 22);
+            this.ToolStripMenuItem83.Size = new System.Drawing.Size(165, 22);
             this.ToolStripMenuItem83.Text = "Send Page...";
             // 
             // ToolStripMenuItem84
             // 
             this.ToolStripMenuItem84.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem84.Name = "ToolStripMenuItem84";
-            this.ToolStripMenuItem84.Size = new System.Drawing.Size(156, 22);
+            this.ToolStripMenuItem84.Size = new System.Drawing.Size(165, 22);
             this.ToolStripMenuItem84.Text = "Read News";
             // 
             // ToolStripMenuItem85
             // 
             this.ToolStripMenuItem85.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem85.Name = "ToolStripMenuItem85";
-            this.ToolStripMenuItem85.Size = new System.Drawing.Size(175, 22);
+            this.ToolStripMenuItem85.Size = new System.Drawing.Size(191, 22);
             this.ToolStripMenuItem85.Text = "Windows Update";
             // 
             // ToolStripMenuItem86
             // 
             this.ToolStripMenuItem86.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem86.Name = "ToolStripMenuItem86";
-            this.ToolStripMenuItem86.Size = new System.Drawing.Size(175, 22);
+            this.ToolStripMenuItem86.Size = new System.Drawing.Size(191, 22);
             this.ToolStripMenuItem86.Text = "Show Related Links";
             // 
             // ToolStripMenuItem87
             // 
             this.ToolStripMenuItem87.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem87.Name = "ToolStripMenuItem87";
-            this.ToolStripMenuItem87.Size = new System.Drawing.Size(175, 22);
+            this.ToolStripMenuItem87.Size = new System.Drawing.Size(191, 22);
             this.ToolStripMenuItem87.Text = "Internet Options...";
             // 
             // ToolStripMenuItem73
@@ -2919,21 +3093,21 @@
             this.ToolStripMenuItem75,
             this.ToolStripMenuItem76});
             this.ToolStripMenuItem73.Name = "ToolStripMenuItem73";
-            this.ToolStripMenuItem73.Size = new System.Drawing.Size(66, 20);
+            this.ToolStripMenuItem73.Size = new System.Drawing.Size(76, 20);
             this.ToolStripMenuItem73.Text = "Favorites";
             // 
             // ToolStripMenuItem74
             // 
             this.ToolStripMenuItem74.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem74.Name = "ToolStripMenuItem74";
-            this.ToolStripMenuItem74.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuItem74.Size = new System.Drawing.Size(197, 22);
             this.ToolStripMenuItem74.Text = "Add to Favorites...";
             // 
             // ToolStripMenuItem75
             // 
             this.ToolStripMenuItem75.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem75.Name = "ToolStripMenuItem75";
-            this.ToolStripMenuItem75.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuItem75.Size = new System.Drawing.Size(197, 22);
             this.ToolStripMenuItem75.Text = "Organize Favorites...";
             // 
             // ToolStripMenuItem76
@@ -2942,14 +3116,14 @@
             this.ToolStripMenuItem76.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripMenuItem77});
             this.ToolStripMenuItem76.Name = "ToolStripMenuItem76";
-            this.ToolStripMenuItem76.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuItem76.Size = new System.Drawing.Size(197, 22);
             this.ToolStripMenuItem76.Text = "Links";
             // 
             // ToolStripMenuItem77
             // 
             this.ToolStripMenuItem77.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem77.Name = "ToolStripMenuItem77";
-            this.ToolStripMenuItem77.Size = new System.Drawing.Size(109, 22);
+            this.ToolStripMenuItem77.Size = new System.Drawing.Size(111, 22);
             this.ToolStripMenuItem77.Text = "(none)";
             // 
             // ToolStripMenuItem88
@@ -2963,225 +3137,57 @@
             this.ToolStripMenuItem94,
             this.ToolStripMenuItem95});
             this.ToolStripMenuItem88.Name = "ToolStripMenuItem88";
-            this.ToolStripMenuItem88.Size = new System.Drawing.Size(44, 20);
+            this.ToolStripMenuItem88.Size = new System.Drawing.Size(46, 20);
             this.ToolStripMenuItem88.Text = "Help";
             // 
             // ToolStripMenuItem89
             // 
             this.ToolStripMenuItem89.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem89.Name = "ToolStripMenuItem89";
-            this.ToolStripMenuItem89.Size = new System.Drawing.Size(196, 22);
+            this.ToolStripMenuItem89.Size = new System.Drawing.Size(217, 22);
             this.ToolStripMenuItem89.Text = "Contects and Index";
             // 
             // ToolStripMenuItem90
             // 
             this.ToolStripMenuItem90.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem90.Name = "ToolStripMenuItem90";
-            this.ToolStripMenuItem90.Size = new System.Drawing.Size(196, 22);
+            this.ToolStripMenuItem90.Size = new System.Drawing.Size(217, 22);
             this.ToolStripMenuItem90.Text = "Tip of the Day";
             // 
             // ToolStripMenuItem91
             // 
             this.ToolStripMenuItem91.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem91.Name = "ToolStripMenuItem91";
-            this.ToolStripMenuItem91.Size = new System.Drawing.Size(196, 22);
+            this.ToolStripMenuItem91.Size = new System.Drawing.Size(217, 22);
             this.ToolStripMenuItem91.Text = "For Netscape Users";
             // 
             // ToolStripMenuItem92
             // 
             this.ToolStripMenuItem92.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem92.Name = "ToolStripMenuItem92";
-            this.ToolStripMenuItem92.Size = new System.Drawing.Size(196, 22);
+            this.ToolStripMenuItem92.Size = new System.Drawing.Size(217, 22);
             this.ToolStripMenuItem92.Text = "Tour";
             // 
             // ToolStripMenuItem93
             // 
             this.ToolStripMenuItem93.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem93.Name = "ToolStripMenuItem93";
-            this.ToolStripMenuItem93.Size = new System.Drawing.Size(196, 22);
+            this.ToolStripMenuItem93.Size = new System.Drawing.Size(217, 22);
             this.ToolStripMenuItem93.Text = "Online Support";
             // 
             // ToolStripMenuItem94
             // 
             this.ToolStripMenuItem94.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem94.Name = "ToolStripMenuItem94";
-            this.ToolStripMenuItem94.Size = new System.Drawing.Size(196, 22);
+            this.ToolStripMenuItem94.Size = new System.Drawing.Size(217, 22);
             this.ToolStripMenuItem94.Text = "About Internet Explorer";
             // 
             // ToolStripMenuItem95
             // 
             this.ToolStripMenuItem95.BackColor = System.Drawing.Color.Silver;
             this.ToolStripMenuItem95.Name = "ToolStripMenuItem95";
-            this.ToolStripMenuItem95.Size = new System.Drawing.Size(196, 22);
+            this.ToolStripMenuItem95.Size = new System.Drawing.Size(217, 22);
             this.ToolStripMenuItem95.Text = "Send Feedback";
-            // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Location = new System.Drawing.Point(578, 206);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(62, 47);
-            this.webBrowser1.TabIndex = 11;
-            this.webBrowser1.Url = new System.Uri("http://www.google.com", System.UriKind.Absolute);
-            // 
-            // Previewimage
-            // 
-            this.Previewimage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Previewimage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Previewimage.Location = new System.Drawing.Point(246, 6);
-            this.Previewimage.Name = "Previewimage";
-            this.Previewimage.Size = new System.Drawing.Size(6343, 118);
-            this.Previewimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Previewimage.TabIndex = 1;
-            this.Previewimage.TabStop = false;
-            // 
-            // mclarinflimage
-            // 
-            this.mclarinflimage.Location = new System.Drawing.Point(26, 192);
-            this.mclarinflimage.Name = "mclarinflimage";
-            this.mclarinflimage.Size = new System.Drawing.Size(184, 115);
-            this.mclarinflimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.mclarinflimage.TabIndex = 5;
-            this.mclarinflimage.TabStop = false;
-            // 
-            // win95background
-            // 
-            this.win95background.Location = new System.Drawing.Point(26, 22);
-            this.win95background.Name = "win95background";
-            this.win95background.Size = new System.Drawing.Size(184, 115);
-            this.win95background.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.win95background.TabIndex = 0;
-            this.win95background.TabStop = false;
-            // 
-            // PictureBox9
-            // 
-            this.PictureBox9.Location = new System.Drawing.Point(248, 207);
-            this.PictureBox9.Name = "PictureBox9";
-            this.PictureBox9.Size = new System.Drawing.Size(200, 33);
-            this.PictureBox9.TabIndex = 2;
-            this.PictureBox9.TabStop = false;
-            // 
-            // PictureBox10
-            // 
-            this.PictureBox10.Location = new System.Drawing.Point(272, 246);
-            this.PictureBox10.Name = "PictureBox10";
-            this.PictureBox10.Size = new System.Drawing.Size(160, 26);
-            this.PictureBox10.TabIndex = 3;
-            this.PictureBox10.TabStop = false;
-            // 
-            // PictureBox8
-            // 
-            this.PictureBox8.Location = new System.Drawing.Point(478, 256);
-            this.PictureBox8.Name = "PictureBox8";
-            this.PictureBox8.Size = new System.Drawing.Size(17, 16);
-            this.PictureBox8.TabIndex = 16;
-            this.PictureBox8.TabStop = false;
-            // 
-            // PictureBox7
-            // 
-            this.PictureBox7.Location = new System.Drawing.Point(478, 231);
-            this.PictureBox7.Name = "PictureBox7";
-            this.PictureBox7.Size = new System.Drawing.Size(17, 16);
-            this.PictureBox7.TabIndex = 15;
-            this.PictureBox7.TabStop = false;
-            // 
-            // PictureBox6
-            // 
-            this.PictureBox6.Location = new System.Drawing.Point(478, 206);
-            this.PictureBox6.Name = "PictureBox6";
-            this.PictureBox6.Size = new System.Drawing.Size(17, 16);
-            this.PictureBox6.TabIndex = 14;
-            this.PictureBox6.TabStop = false;
-            // 
-            // PictureBox5
-            // 
-            this.PictureBox5.Location = new System.Drawing.Point(235, 139);
-            this.PictureBox5.Name = "PictureBox5";
-            this.PictureBox5.Size = new System.Drawing.Size(17, 16);
-            this.PictureBox5.TabIndex = 11;
-            this.PictureBox5.TabStop = false;
-            // 
-            // PictureBox4
-            // 
-            this.PictureBox4.Location = new System.Drawing.Point(35, 179);
-            this.PictureBox4.Name = "PictureBox4";
-            this.PictureBox4.Size = new System.Drawing.Size(160, 136);
-            this.PictureBox4.TabIndex = 1;
-            this.PictureBox4.TabStop = false;
-            // 
-            // PictureBox3
-            // 
-            this.PictureBox3.Location = new System.Drawing.Point(13, 23);
-            this.PictureBox3.Name = "PictureBox3";
-            this.PictureBox3.Size = new System.Drawing.Size(160, 136);
-            this.PictureBox3.TabIndex = 0;
-            this.PictureBox3.TabStop = false;
-            // 
-            // PictureBox14
-            // 
-            this.PictureBox14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PictureBox14.Location = new System.Drawing.Point(154, 38);
-            this.PictureBox14.Name = "PictureBox14";
-            this.PictureBox14.Size = new System.Drawing.Size(518, 21);
-            this.PictureBox14.TabIndex = 2;
-            this.PictureBox14.TabStop = false;
-            // 
-            // PictureBox13
-            // 
-            this.PictureBox13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PictureBox13.Location = new System.Drawing.Point(154, 0);
-            this.PictureBox13.Name = "PictureBox13";
-            this.PictureBox13.Size = new System.Drawing.Size(518, 38);
-            this.PictureBox13.TabIndex = 1;
-            this.PictureBox13.TabStop = false;
-            // 
-            // PictureBox12
-            // 
-            this.PictureBox12.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PictureBox12.Location = new System.Drawing.Point(0, 0);
-            this.PictureBox12.Name = "PictureBox12";
-            this.PictureBox12.Size = new System.Drawing.Size(154, 337);
-            this.PictureBox12.TabIndex = 0;
-            this.PictureBox12.TabStop = false;
-            // 
-            // PictureBox2
-            // 
-            this.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.PictureBox2.Location = new System.Drawing.Point(-96, 7);
-            this.PictureBox2.Name = "PictureBox2";
-            this.PictureBox2.Size = new System.Drawing.Size(361, 106);
-            this.PictureBox2.TabIndex = 0;
-            this.PictureBox2.TabStop = false;
-            // 
-            // PictureBox11
-            // 
-            this.PictureBox11.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.PictureBox11.Location = new System.Drawing.Point(1161, 60);
-            this.PictureBox11.Name = "PictureBox11";
-            this.PictureBox11.Size = new System.Drawing.Size(337, 386);
-            this.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureBox11.TabIndex = 2;
-            this.PictureBox11.TabStop = false;
-            // 
-            // pboxgoogleprototypelogo
-            // 
-            this.pboxgoogleprototypelogo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pboxgoogleprototypelogo.Location = new System.Drawing.Point(-49, 6);
-            this.pboxgoogleprototypelogo.Name = "pboxgoogleprototypelogo";
-            this.pboxgoogleprototypelogo.Size = new System.Drawing.Size(349, 116);
-            this.pboxgoogleprototypelogo.TabIndex = 0;
-            this.pboxgoogleprototypelogo.TabStop = false;
-            // 
-            // PictureBox1
-            // 
-            this.PictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PictureBox1.Location = new System.Drawing.Point(915, 23);
-            this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(38, 21);
-            this.PictureBox1.TabIndex = 10;
-            this.PictureBox1.TabStop = false;
             // 
             // WinClassicIE4
             // 
@@ -3208,9 +3214,20 @@
             this.padamsbackgrounds.PerformLayout();
             this.Panel13.ResumeLayout(false);
             this.Panel13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Previewimage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mclarinflimage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.win95background)).EndInit();
             this.hotmailmain.ResumeLayout(false);
             this.hotmailmain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).EndInit();
             this.Panel11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).EndInit();
             this.welcomeinternetscreen.ResumeLayout(false);
             this.welcomeinternetscreen.PerformLayout();
             this.hotmailpadams.ResumeLayout(false);
@@ -3220,6 +3237,9 @@
             this.email3.PerformLayout();
             this.email2.ResumeLayout(false);
             this.email2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox12)).EndInit();
             this.googlealpha.ResumeLayout(false);
             this.googlealpha.PerformLayout();
             this.Panel6.ResumeLayout(false);
@@ -3230,12 +3250,14 @@
             this.Panel5.PerformLayout();
             this.Panel4.ResumeLayout(false);
             this.Panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
             this.padamshidden.ResumeLayout(false);
             this.padamshidden.PerformLayout();
             this.secretwebsite.ResumeLayout(false);
             this.secretwebsite.PerformLayout();
             this.skindows95advertisment.ResumeLayout(false);
             this.skindows95advertisment.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox11)).EndInit();
             this.googlemain.ResumeLayout(false);
             this.googlemain.PerformLayout();
             this.googleprototype.ResumeLayout(false);
@@ -3244,29 +3266,13 @@
             this.Panel3.PerformLayout();
             this.Panel2.ResumeLayout(false);
             this.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxgoogleprototypelogo)).EndInit();
             this.Panel14.ResumeLayout(false);
             this.Panel14.PerformLayout();
             this.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.MenuStrip3.ResumeLayout(false);
             this.MenuStrip3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Previewimage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mclarinflimage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.win95background)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxgoogleprototypelogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3400,7 +3406,7 @@
         internal System.Windows.Forms.Panel Panel8;
         internal System.Windows.Forms.Button Button26;
         internal System.Windows.Forms.Label Label57;
-        internal System.Windows.Forms.Button Button25;
+        internal System.Windows.Forms.Button WCDownloadButton;
         internal System.Windows.Forms.Label Label43;
         internal System.Windows.Forms.Button Button17;
         internal System.Windows.Forms.Label Label5;
@@ -3441,7 +3447,7 @@
         internal System.Windows.Forms.Label Label7;
         internal System.Windows.Forms.PictureBox pboxgoogleprototypelogo;
         internal System.Windows.Forms.Panel Panel14;
-        internal System.Windows.Forms.Button Button8;
+        internal System.Windows.Forms.Button GoButton;
         internal System.Windows.Forms.ComboBox addressbar;
         internal System.Windows.Forms.Label Label1;
         internal System.Windows.Forms.Panel Panel1;
@@ -3451,11 +3457,11 @@
         internal System.Windows.Forms.Button Button27;
         internal System.Windows.Forms.Button Button7;
         internal System.Windows.Forms.Button Button6;
-        internal System.Windows.Forms.Button Button5;
+        internal System.Windows.Forms.Button HomeButton;
         internal System.Windows.Forms.Button Button4;
         internal System.Windows.Forms.Button Button3;
-        internal System.Windows.Forms.Button Button2;
-        internal System.Windows.Forms.Button Button1;
+        internal System.Windows.Forms.Button ForwardButton;
+        internal System.Windows.Forms.Button BackButton;
         internal System.Windows.Forms.PictureBox PictureBox1;
         internal System.Windows.Forms.MenuStrip MenuStrip3;
         internal System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem1;

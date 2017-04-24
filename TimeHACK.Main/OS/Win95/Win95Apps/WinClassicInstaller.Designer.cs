@@ -452,21 +452,21 @@
             this.Button3.UseVisualStyleBackColor = true;
             this.Button3.Click += new System.EventHandler(this.Button3_Click);
             // 
-            // Button2
+            // ForwardButton
             // 
             this.Button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Button2.Location = new System.Drawing.Point(323, 390);
-            this.Button2.Name = "Button2";
+            this.Button2.Name = "ForwardButton";
             this.Button2.Size = new System.Drawing.Size(75, 23);
             this.Button2.TabIndex = 11;
             this.Button2.Text = "< Back";
             this.Button2.UseVisualStyleBackColor = true;
             // 
-            // Button1
+            // BackButton
             // 
             this.Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Button1.Location = new System.Drawing.Point(485, 390);
-            this.Button1.Name = "Button1";
+            this.Button1.Name = "BackButton";
             this.Button1.Size = new System.Drawing.Size(75, 23);
             this.Button1.TabIndex = 10;
             this.Button1.Text = "Cancel";

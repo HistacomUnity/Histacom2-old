@@ -130,7 +130,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     case "notopbar":
                         ((WinClassic)this.ParentForm).programtopbar = null;
                         receive.Play();
-                        break;
+                        break; // TODO: Finish WebChat 1998
                     default:
                         receive.Play();
                         break;
