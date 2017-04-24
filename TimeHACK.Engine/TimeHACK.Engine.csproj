@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BSODCreator.cs" />
+    <Compile Include="Resources\WinClassic\Window\pjBg6mKP.cs" />
     <Compile Include="Template\Win9XBSOD.cs">
       <SubType>Form</SubType>
     </Compile>
