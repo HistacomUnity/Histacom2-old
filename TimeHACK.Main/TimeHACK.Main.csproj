@@ -149,6 +149,12 @@
     <Compile Include="OS\Win95\Win95Apps\WinClassicDownloader.Designer.cs">
       <DependentUpon>WinClassicDownloader.cs</DependentUpon>
     </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicHWCV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicHWCV.Designer.cs">
+      <DependentUpon>WinClassicHWCV.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\Win95\Win95Apps\WinClassicIE4.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -188,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicDownloader.resx">
       <DependentUpon>WinClassicDownloader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicHWCV.resx">
+      <DependentUpon>WinClassicHWCV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicIE4.resx">
       <DependentUpon>WinClassicIE4.cs</DependentUpon>
@@ -229,6 +238,9 @@
   <ItemGroup>
     <Content Include="Resources\12padams_EULA.txt" />
     <Content Include="Resources\Icon128x.ico" />
+    <Content Include="Resources\ie4start.html" />
+    <Content Include="Resources\IE4\ie4start.html" />
+    <Content Include="Resources\IE4\padams.html" />
     <Content Include="Resources\TitleScreen\Exit.png" />
     <Content Include="Resources\TitleScreen\LoadGame.png" />
     <Content Include="Resources\TitleScreen\MSExit.png" />
@@ -262,6 +274,7 @@
     <Content Include="Resources\WinClassic\WinClassicFind.png" />
     <Content Include="Resources\WinClassic\WinClassicFolder.png" />
     <Content Include="Resources\WinClassic\WinClassicHelp.png" />
+    <None Include="Resources\WinClassic\WinClassicHWCV.png" />
     <Content Include="Resources\WinClassic\WinClassicIE4.png" />
     <Content Include="Resources\WinClassic\WinClassicInbox.png" />
     <Content Include="Resources\WinClassic\WinClassicMSN.png" />
