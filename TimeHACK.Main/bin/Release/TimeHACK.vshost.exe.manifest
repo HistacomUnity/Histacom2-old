@@ -56,26 +56,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TimeHACK.exe" size="6130176">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TimeHACK.exe" size="6233088">
       <assemblyIdentity name="TimeHACK" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>lFCb2hIl5JTOBA1PRZiCbgdPM9CK13/xjettDSAoDnM=</dsig:DigestValue>
+        <dsig:DigestValue>qsK1qfjuvXPNGaP+f3vgCTIamWHQKEpuzvRtw2QscVY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TimeHACK.Engine.dll" size="165376">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TimeHACK.Engine.dll" size="159232">
       <assemblyIdentity name="TimeHACK.Engine" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>LKQU2cwh9IRocm3cFUlsDcYnOkOXvYVjiSsW3t6ByXc=</dsig:DigestValue>
+        <dsig:DigestValue>cZQgpzpfSWlj7U7scJhDCNXGFbIB7vNI/XyT6QxfgYs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -95,6 +95,33 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>nzG7pg3H+3uPdr/lzLxyroAH8XD1zvIYW4peV9fAD6M=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\IE4\ie4start.html" size="980">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Sf4jcnpqMm+8SKOCp6p1gJdzo9VpBKwFezayuSmHm+Q=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\IE4\padams.html" size="1942">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>AGImdIeEP/E84lMW4mWw3wu/UigLZNCncZeFDsxs1IQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\ie4start.html" size="956">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>98XY8u0SJyERQAAYM79J7GuF2ASvy6Am/ezeExr25DA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\TitleScreen\Exit.png" size="138932">

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WinClassicIE4));
+            this.resources = new System.ComponentModel.ComponentResourceManager(typeof(WinClassicIE4));
             this.program = new System.Windows.Forms.Panel();
             this.browsingarea = new System.Windows.Forms.Panel();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
@@ -365,6 +365,7 @@
             // 
             this.program.BackColor = System.Drawing.Color.Silver;
             this.program.Controls.Add(this.browsingarea);
+            this.program.Controls.Add(this.webBrowser1);
             this.program.Controls.Add(this.Panel14);
             this.program.Controls.Add(this.Panel1);
             this.program.Controls.Add(this.PictureBox1);
@@ -378,7 +379,6 @@
             // browsingarea
             // 
             this.browsingarea.BackColor = System.Drawing.Color.White;
-            this.browsingarea.Controls.Add(this.webBrowser1);
             this.browsingarea.Controls.Add(this.padamsmain);
             this.browsingarea.Controls.Add(this.padamsbackgrounds);
             this.browsingarea.Controls.Add(this.hotmailmain);
@@ -395,15 +395,15 @@
             this.browsingarea.Name = "browsingarea";
             this.browsingarea.Size = new System.Drawing.Size(959, 483);
             this.browsingarea.TabIndex = 9;
+            this.browsingarea.Visible = false;
             // 
             // webBrowser1
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(578, 206);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.Location = new System.Drawing.Point(0, 111);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(62, 47);
+            this.webBrowser1.Size = new System.Drawing.Size(959, 483);
             this.webBrowser1.TabIndex = 11;
-            this.webBrowser1.Url = new System.Uri("http://www.google.com", System.UriKind.Absolute);
             // 
             // padamsmain
             // 
@@ -631,7 +631,6 @@
             this.WCDownloadButton.TabIndex = 6;
             this.WCDownloadButton.Text = "Download";
             this.WCDownloadButton.UseVisualStyleBackColor = false;
-            this.WCDownloadButton.Click += new System.EventHandler(this.WCDownloadButton_Click);
             // 
             // Label43
             // 
@@ -3559,6 +3558,7 @@
         internal System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem93;
         internal System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem94;
         internal System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem95;
-        private System.Windows.Forms.WebBrowser webBrowser1;
+        internal System.Windows.Forms.WebBrowser webBrowser1;
+        internal System.ComponentModel.ComponentResourceManager resources;
     }
 }

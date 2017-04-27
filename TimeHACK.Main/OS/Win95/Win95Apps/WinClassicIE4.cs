@@ -13,6 +13,8 @@ namespace TimeHACK.OS.Win95.Win95Apps
         public List<string> browsinghistory = new List<string>();
         public int historylocation = 0;
 
+        public HtmlDocument currentsite;
+
         public WinClassicIE4()
         {
             InitializeComponent();
@@ -24,8 +26,9 @@ namespace TimeHACK.OS.Win95.Win95Apps
             hidePrograms();
             browsinghistory.Add("www.microsoft.com/internetexplorer4/welcome");
             for (int i = 0; i < 99; i++) browsinghistory.Add(null);
-            welcomeinternetscreen.Show();
-            welcomeinternetscreen.Dock = DockStyle.Fill;
+            webBrowser1.DocumentText = ((string)resources.GetObject("ie4start"));
+            webBrowser1.Document.GetElementById("padams").Click += new HtmlElementEventHandler(LinkLabel16_LinkClicked);
+            webBrowser1.Show();
             foreach (ToolStripMenuItem item in MenuStrip3.Items) item.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
             foreach (Control ctrl in Panel1.Controls) ctrl.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
         }
@@ -54,7 +57,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             goToSite("www.google.com", false);
         }
 
-        private void LinkLabel16_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LinkLabel16_LinkClicked(object sender, HtmlElementEventArgs e)
         {
             goToSite("www.12padams.com", false);
         }
@@ -112,13 +115,13 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     break;
                 case "www.12padams.com":
                     hidePrograms();
-                    padamsmain.Dock = DockStyle.Fill;
-                    padamsmain.Show();
+                    webBrowser1.Url = new Uri(@"pack://application:,,,/Resources/IE4/padams.html", UriKind.RelativeOrAbsolute);
+                    currentsite = webBrowser1.Document;
+                    currentsite.GetElementById("wc_b").Click += new HtmlElementEventHandler(WCDownloadButton_Click);
                     break;
                 case "www.microsoft.com/internetexplorer4/welcome":
                     hidePrograms();
-                    welcomeinternetscreen.Dock = DockStyle.Fill;
-                    welcomeinternetscreen.Show();
+                    webBrowser1.Url = new Uri(@"pack://application:,,,/Resources/IE4/ie4start.html", UriKind.RelativeOrAbsolute);
                     break;
                 case "www.???.com":
                     hidePrograms();
@@ -152,7 +155,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             }
 
             addressbar.Text = url;
-
+            currentsite = webBrowser1.Document;
         }
 
         private void BackButton_Click(object sender, EventArgs e)
@@ -174,7 +177,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             goToSite("www.microsoft.com/internetexplorer4/welcome", false);
         }
 
-        private void WCDownloadButton_Click(object sender, EventArgs e)
+        private void WCDownloadButton_Click(object sender, HtmlElementEventArgs e)
         {
             WinClassicDownloader opendownload = new WinClassicDownloader();
             WindowManager wm = new WindowManager();
