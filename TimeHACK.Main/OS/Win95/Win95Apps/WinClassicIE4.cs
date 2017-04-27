@@ -83,7 +83,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void Button9_Click(object sender, EventArgs e)
         {
-
+            goToSite("www.???.com", false);
         }
 
         private void ToolStripMenuItem21_Click(object sender, EventArgs e)
@@ -119,6 +119,16 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     hidePrograms();
                     welcomeinternetscreen.Dock = DockStyle.Fill;
                     welcomeinternetscreen.Show();
+                    break;
+                case "www.???.com":
+                    hidePrograms();
+                    secretwebsite.Dock = DockStyle.Fill;
+                    secretwebsite.Show();
+                    break;
+                case "www.12padams.com/???":
+                    hidePrograms();
+                    padamshidden.Dock = DockStyle.Fill;
+                    padamshidden.Show();
                     break;
                 default:
                     return;

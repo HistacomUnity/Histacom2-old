@@ -192,7 +192,7 @@
             this.Panel2 = new System.Windows.Forms.Panel();
             this.Label8 = new System.Windows.Forms.Label();
             this.Button10 = new System.Windows.Forms.Button();
-            this.Button9 = new System.Windows.Forms.Button();
+            this.GoogleSearchButton = new System.Windows.Forms.Button();
             this.ComboBox1 = new System.Windows.Forms.ComboBox();
             this.TextBox2 = new System.Windows.Forms.TextBox();
             this.Label7 = new System.Windows.Forms.Label();
@@ -2102,7 +2102,7 @@
             this.Panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Panel2.Controls.Add(this.Label8);
             this.Panel2.Controls.Add(this.Button10);
-            this.Panel2.Controls.Add(this.Button9);
+            this.Panel2.Controls.Add(this.GoogleSearchButton);
             this.Panel2.Controls.Add(this.ComboBox1);
             this.Panel2.Controls.Add(this.TextBox2);
             this.Panel2.Controls.Add(this.Label7);
@@ -2131,16 +2131,16 @@
             this.Button10.Text = "I\'m Feeling Lucky";
             this.Button10.UseVisualStyleBackColor = false;
             // 
-            // Button9
+            // GoogleSearchButton
             // 
-            this.Button9.BackColor = System.Drawing.Color.Silver;
-            this.Button9.Location = new System.Drawing.Point(153, 65);
-            this.Button9.Name = "Button9";
-            this.Button9.Size = new System.Drawing.Size(104, 23);
-            this.Button9.TabIndex = 3;
-            this.Button9.Text = "Google Search";
-            this.Button9.UseVisualStyleBackColor = false;
-            this.Button9.Click += new System.EventHandler(this.Button9_Click);
+            this.GoogleSearchButton.BackColor = System.Drawing.Color.Silver;
+            this.GoogleSearchButton.Location = new System.Drawing.Point(153, 65);
+            this.GoogleSearchButton.Name = "GoogleSearchButton";
+            this.GoogleSearchButton.Size = new System.Drawing.Size(104, 23);
+            this.GoogleSearchButton.TabIndex = 3;
+            this.GoogleSearchButton.Text = "Google Search";
+            this.GoogleSearchButton.UseVisualStyleBackColor = false;
+            this.GoogleSearchButton.Click += new System.EventHandler(this.Button9_Click);
             // 
             // ComboBox1
             // 
@@ -3441,7 +3441,7 @@
         internal System.Windows.Forms.Panel Panel2;
         internal System.Windows.Forms.Label Label8;
         internal System.Windows.Forms.Button Button10;
-        internal System.Windows.Forms.Button Button9;
+        internal System.Windows.Forms.Button GoogleSearchButton;
         internal System.Windows.Forms.ComboBox ComboBox1;
         internal System.Windows.Forms.TextBox TextBox2;
         internal System.Windows.Forms.Label Label7;
