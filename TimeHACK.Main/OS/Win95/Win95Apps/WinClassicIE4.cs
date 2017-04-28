@@ -13,6 +13,8 @@ namespace TimeHACK.OS.Win95.Win95Apps
         public List<string> browsinghistory = new List<string>();
         public int historylocation = 0;
 
+        public HtmlDocument currentsite;
+
         public WinClassicIE4()
         {
             InitializeComponent();
@@ -24,8 +26,8 @@ namespace TimeHACK.OS.Win95.Win95Apps
             hidePrograms();
             browsinghistory.Add("www.microsoft.com/internetexplorer4/welcome");
             for (int i = 0; i < 99; i++) browsinghistory.Add(null);
-            welcomeinternetscreen.Show();
-            welcomeinternetscreen.Dock = DockStyle.Fill;
+            webBrowser1.DocumentText = resources.GetString("ie4start_HTML");
+            webBrowser1.Show();
             foreach (ToolStripMenuItem item in MenuStrip3.Items) item.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
             foreach (Control ctrl in Panel1.Controls) ctrl.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
         }
@@ -46,7 +48,6 @@ namespace TimeHACK.OS.Win95.Win95Apps
             email2.Hide();
             email3.Hide();
             hotmailpadams.Hide();
-            webBrowser1.Hide();
         }
 
         private void LinkLabel15_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -54,7 +55,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             goToSite("www.google.com", false);
         }
 
-        private void LinkLabel16_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void padams_LinkClicked(object sender, HtmlElementEventArgs e)
         {
             goToSite("www.12padams.com", false);
         }
@@ -83,7 +84,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void Button9_Click(object sender, EventArgs e)
         {
-
+            goToSite("www.???.com", false);
         }
 
         private void ToolStripMenuItem21_Click(object sender, EventArgs e)
@@ -112,13 +113,21 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     break;
                 case "www.12padams.com":
                     hidePrograms();
-                    padamsmain.Dock = DockStyle.Fill;
-                    padamsmain.Show();
+                    webBrowser1.DocumentText = resources.GetString("padams_HTML");
                     break;
                 case "www.microsoft.com/internetexplorer4/welcome":
                     hidePrograms();
-                    welcomeinternetscreen.Dock = DockStyle.Fill;
-                    welcomeinternetscreen.Show();
+                    webBrowser1.DocumentText = resources.GetString("ie4start_HTML");
+                    break;
+                case "www.???.com":
+                    hidePrograms();
+                    secretwebsite.Dock = DockStyle.Fill;
+                    secretwebsite.Show();
+                    break;
+                case "www.12padams.com/???":
+                    hidePrograms();
+                    padamshidden.Dock = DockStyle.Fill;
+                    padamshidden.Show();
                     break;
                 default:
                     return;
@@ -142,7 +151,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             }
 
             addressbar.Text = url;
-
+            currentsite = webBrowser1.Document;
         }
 
         private void BackButton_Click(object sender, EventArgs e)
@@ -164,7 +173,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             goToSite("www.microsoft.com/internetexplorer4/welcome", false);
         }
 
-        private void WCDownloadButton_Click(object sender, EventArgs e)
+        private void WCDownloadButton_Click(object sender, HtmlElementEventArgs e)
         {
             WinClassicDownloader opendownload = new WinClassicDownloader();
             WindowManager wm = new WindowManager();
@@ -177,6 +186,20 @@ namespace TimeHACK.OS.Win95.Win95Apps
             goToSite(addressbar.Text, false);
         }
         
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+            switch (addressbar.Text)
+            {
+                case "www.microsoft.com/internetexplorer4/welcome":
+                    webBrowser1.Document.GetElementById("padams").Click += new HtmlElementEventHandler(padams_LinkClicked);
+                    break;
+                case "www.12padams.com":
+                    webBrowser1.Document.GetElementById("wc_b").Click += new HtmlElementEventHandler(WCDownloadButton_Click);
+                    webBrowser1.Document.GetElementById("distort").Style += "visibility:hidden;";
+                    break;
+            }
+        }
+
         //TODO: Add more websites
         //TODO: Relabel Buttons And Things
     }

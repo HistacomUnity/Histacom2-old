@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WinClassicIE4));
+            this.resources = new System.ComponentModel.ComponentResourceManager(typeof(WinClassicIE4));
             this.program = new System.Windows.Forms.Panel();
             this.browsingarea = new System.Windows.Forms.Panel();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
@@ -192,7 +192,7 @@
             this.Panel2 = new System.Windows.Forms.Panel();
             this.Label8 = new System.Windows.Forms.Label();
             this.Button10 = new System.Windows.Forms.Button();
-            this.Button9 = new System.Windows.Forms.Button();
+            this.GoogleSearchButton = new System.Windows.Forms.Button();
             this.ComboBox1 = new System.Windows.Forms.ComboBox();
             this.TextBox2 = new System.Windows.Forms.TextBox();
             this.Label7 = new System.Windows.Forms.Label();
@@ -365,6 +365,7 @@
             // 
             this.program.BackColor = System.Drawing.Color.Silver;
             this.program.Controls.Add(this.browsingarea);
+            this.program.Controls.Add(this.webBrowser1);
             this.program.Controls.Add(this.Panel14);
             this.program.Controls.Add(this.Panel1);
             this.program.Controls.Add(this.PictureBox1);
@@ -378,7 +379,6 @@
             // browsingarea
             // 
             this.browsingarea.BackColor = System.Drawing.Color.White;
-            this.browsingarea.Controls.Add(this.webBrowser1);
             this.browsingarea.Controls.Add(this.padamsmain);
             this.browsingarea.Controls.Add(this.padamsbackgrounds);
             this.browsingarea.Controls.Add(this.hotmailmain);
@@ -395,15 +395,16 @@
             this.browsingarea.Name = "browsingarea";
             this.browsingarea.Size = new System.Drawing.Size(959, 483);
             this.browsingarea.TabIndex = 9;
+            this.browsingarea.Visible = false;
             // 
             // webBrowser1
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(578, 206);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.Location = new System.Drawing.Point(0, 111);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(62, 47);
+            this.webBrowser1.Size = new System.Drawing.Size(959, 483);
             this.webBrowser1.TabIndex = 11;
-            this.webBrowser1.Url = new System.Uri("http://www.google.com", System.UriKind.Absolute);
+            this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(webBrowser1_DocumentCompleted);
             // 
             // padamsmain
             // 
@@ -631,7 +632,6 @@
             this.WCDownloadButton.TabIndex = 6;
             this.WCDownloadButton.Text = "Download";
             this.WCDownloadButton.UseVisualStyleBackColor = false;
-            this.WCDownloadButton.Click += new System.EventHandler(this.WCDownloadButton_Click);
             // 
             // Label43
             // 
@@ -1141,7 +1141,6 @@
             this.LinkLabel16.TabStop = true;
             this.LinkLabel16.Text = "www.12padams.com";
             this.LinkLabel16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.LinkLabel16.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel16_LinkClicked);
             // 
             // LinkLabel15
             // 
@@ -2102,7 +2101,7 @@
             this.Panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Panel2.Controls.Add(this.Label8);
             this.Panel2.Controls.Add(this.Button10);
-            this.Panel2.Controls.Add(this.Button9);
+            this.Panel2.Controls.Add(this.GoogleSearchButton);
             this.Panel2.Controls.Add(this.ComboBox1);
             this.Panel2.Controls.Add(this.TextBox2);
             this.Panel2.Controls.Add(this.Label7);
@@ -2131,16 +2130,16 @@
             this.Button10.Text = "I\'m Feeling Lucky";
             this.Button10.UseVisualStyleBackColor = false;
             // 
-            // Button9
+            // GoogleSearchButton
             // 
-            this.Button9.BackColor = System.Drawing.Color.Silver;
-            this.Button9.Location = new System.Drawing.Point(153, 65);
-            this.Button9.Name = "Button9";
-            this.Button9.Size = new System.Drawing.Size(104, 23);
-            this.Button9.TabIndex = 3;
-            this.Button9.Text = "Google Search";
-            this.Button9.UseVisualStyleBackColor = false;
-            this.Button9.Click += new System.EventHandler(this.Button9_Click);
+            this.GoogleSearchButton.BackColor = System.Drawing.Color.Silver;
+            this.GoogleSearchButton.Location = new System.Drawing.Point(153, 65);
+            this.GoogleSearchButton.Name = "GoogleSearchButton";
+            this.GoogleSearchButton.Size = new System.Drawing.Size(104, 23);
+            this.GoogleSearchButton.TabIndex = 3;
+            this.GoogleSearchButton.Text = "Google Search";
+            this.GoogleSearchButton.UseVisualStyleBackColor = false;
+            this.GoogleSearchButton.Click += new System.EventHandler(this.Button9_Click);
             // 
             // ComboBox1
             // 
@@ -3441,7 +3440,7 @@
         internal System.Windows.Forms.Panel Panel2;
         internal System.Windows.Forms.Label Label8;
         internal System.Windows.Forms.Button Button10;
-        internal System.Windows.Forms.Button Button9;
+        internal System.Windows.Forms.Button GoogleSearchButton;
         internal System.Windows.Forms.ComboBox ComboBox1;
         internal System.Windows.Forms.TextBox TextBox2;
         internal System.Windows.Forms.Label Label7;
@@ -3559,6 +3558,7 @@
         internal System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem93;
         internal System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem94;
         internal System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem95;
-        private System.Windows.Forms.WebBrowser webBrowser1;
+        internal System.Windows.Forms.WebBrowser webBrowser1;
+        internal System.ComponentModel.ComponentResourceManager resources;
     }
 }
