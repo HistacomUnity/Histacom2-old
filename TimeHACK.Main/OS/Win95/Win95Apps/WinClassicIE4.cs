@@ -14,11 +14,15 @@ namespace TimeHACK.OS.Win95.Win95Apps
         public int historylocation = 0;
 
         public HtmlDocument currentsite;
+        private Timer loadplz = new Timer();
 
         public WinClassicIE4()
         {
             InitializeComponent();
+            loadplz.Tick += new EventHandler(loadplz_Tick);
+            loadplz.Interval = 10;
         }
+
         private void WinClassicIE4_Load(object sender, EventArgs e)
         {
             browsinghistory.Capacity = 99;
@@ -188,15 +192,27 @@ namespace TimeHACK.OS.Win95.Win95Apps
         
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
-            switch (addressbar.Text)
+            loadplz.Start();
+        }
+
+        private void loadplz_Tick(object sender, EventArgs e)
+        {
+            try
             {
-                case "www.microsoft.com/internetexplorer4/welcome":
-                    webBrowser1.Document.GetElementById("padams").Click += new HtmlElementEventHandler(padams_LinkClicked);
-                    break;
-                case "www.12padams.com":
-                    webBrowser1.Document.GetElementById("wc_b").Click += new HtmlElementEventHandler(WCDownloadButton_Click);
-                    webBrowser1.Document.GetElementById("distort").Style += "visibility:hidden;";
-                    break;
+                switch (currentsite.Title)
+                {
+                    case "IE4START":
+                        webBrowser1.Document.GetElementById("padams").Click += new HtmlElementEventHandler(padams_LinkClicked);
+                        break;
+                    case "12PADAMS":
+                        webBrowser1.Document.GetElementById("wc_b").Click += new HtmlElementEventHandler(WCDownloadButton_Click);
+                        webBrowser1.Document.GetElementById("distort").Style += "visibility:hidden;";
+                        break;
+                }
+                loadplz.Stop();
+            } catch
+            {
+
             }
         }
 

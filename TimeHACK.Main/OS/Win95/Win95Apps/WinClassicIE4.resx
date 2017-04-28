@@ -202,6 +202,7 @@ So Please enjoy Using this amzing software and show the world what your made of.
   <data name="ie4start_HTML" xml:space="preserve">
     <value>&lt;html&gt;
 	&lt;head&gt;
+		&lt;title&gt;IE4START&lt;/title&gt;
 		&lt;style&gt;
 			body {
 				font-family: "Microsoft Sans Serif";
@@ -223,6 +224,11 @@ So Please enjoy Using this amzing software and show the world what your made of.
 			p.end {
 				font-size: 9.75pt;
 			}
+			a {
+				color: blue;
+				text-decoration: underline;
+				cursor: hand;
+			}
 		&lt;/style&gt;
 	&lt;/head&gt;
 	&lt;body&gt;
@@ -233,8 +239,8 @@ Just type an address in the location bar above and then press go.&lt;br&gt;
 Instantly you will be taken to the webpage of your choosing.&lt;br&gt;
 Where do you want to go today?&lt;/p&gt;
 		&lt;h2&gt;Here are some sites you may want to visit.&lt;/h2&gt;
-		&lt;a id="google" href="google"&gt;www.google.com&lt;/a&gt;&lt;br&gt;
-		&lt;a id="padams" href="12padams"&gt;www.12padams.com&lt;/a&gt;
+		&lt;a id="google"&gt;www.google.com&lt;/a&gt;&lt;br&gt;
+		&lt;a id="padams"&gt;www.12padams.com&lt;/a&gt;
 		&lt;p class="end"&gt;Where do you want to go today?&lt;/p&gt;
 	&lt;/body&gt;
 &lt;/html&gt;</value>
@@ -245,6 +251,7 @@ Where do you want to go today?&lt;/p&gt;
   <data name="padams_HTML" xml:space="preserve">
     <value>&lt;html&gt;
 	&lt;head&gt;
+		&lt;title&gt;12PADAMS&lt;/title&gt;
 		&lt;style&gt;
 			body {
 				font-family: "Microsoft Sans Serif";
