@@ -167,6 +167,12 @@
     <Compile Include="OS\Win95\Win95Apps\WinClassicInstaller.Designer.cs">
       <DependentUpon>WinClassicInstaller.cs</DependentUpon>
     </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicWordPad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicWordPad.Designer.cs">
+      <DependentUpon>WinClassicWordPad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -203,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicInstaller.resx">
       <DependentUpon>WinClassicInstaller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicWordPad.resx">
+      <DependentUpon>WinClassicWordPad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -251,6 +260,8 @@
     <Content Include="Resources\TitleScreen\TaskBarClock.png" />
     <Content Include="Resources\TitleScreen\TimeHACK_Logo.png" />
     <Content Include="Resources\TitleScreen\TitleScreenBG.png" />
+    <None Include="Resources\WinClassic\WinClassicWordpad.png" />
+    <None Include="Resources\WinClassic\WinClassicUndo.png" />
     <None Include="Resources\LeviWindows.ttf" />
     <Content Include="Resources\WinClassic\16Color.png" />
     <Content Include="Resources\WinClassic\256Color.png" />
@@ -270,6 +281,8 @@
     <None Include="Resources\WinClassic\Win95Warning.png" />
     <Content Include="Resources\WinClassic\WinClassicClock.png" />
     <Content Include="Resources\WinClassic\WinClassicComputer.png" />
+    <None Include="Resources\WinClassic\WinClassicCopy.png" />
+    <None Include="Resources\WinClassic\WinClassicCut.png" />
     <Content Include="Resources\WinClassic\WinClassicDocuments.png" />
     <Content Include="Resources\WinClassic\WinClassicFind.png" />
     <Content Include="Resources\WinClassic\WinClassicFolder.png" />
@@ -280,7 +293,9 @@
     <Content Include="Resources\WinClassic\WinClassicMSN.png" />
     <Content Include="Resources\WinClassic\WinClassicNetworking.png" />
     <None Include="Resources\WinClassic\WinClassicNotepad.png" />
+    <None Include="Resources\WinClassic\WinClassicNew.png" />
     <Content Include="Resources\WinClassic\WinClassicOutlook.png" />
+    <None Include="Resources\WinClassic\WinClassicPaste.png" />
     <Content Include="Resources\WinClassic\WinClassicProgramItem.png" />
     <Content Include="Resources\WinClassic\WinClassicPrograms.png" />
     <Content Include="Resources\WinClassic\WinClassicRecycle.png" />
