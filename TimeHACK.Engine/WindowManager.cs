@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using System.Drawing;
 using TimeHACK.Engine.Template;
+using System.Media;
 
 namespace TimeHACK.Engine
 {
@@ -63,6 +64,8 @@ namespace TimeHACK.Engine
         {
             Infobox95 app = new Infobox95();
             app.infoText.Text = text;
+            SoundPlayer sp = new SoundPlayer(Properties.Resources.CHORD);
+            sp.Play();
             return startWin95(app, title, null, false, false);
         }
 
