@@ -191,7 +191,136 @@ If you Don't like this product you may recieve a full refund on day of purchous.
 
 So Please enjoy Using this amzing software and show the world what your made of.</value>
   </data>
-  <metadata name="MenuStrip3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="MenuStrip3.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>17, 17</value>
-  </metadata>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ie4start" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\resources\ie4\ie4start.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="ie4start_HTML" xml:space="preserve">
+    <value>&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;IE4START&lt;/title&gt;
+		&lt;style&gt;
+			body {
+				font-family: "Microsoft Sans Serif";
+				text-align: center;
+			}
+			h1 {
+				margin-top: 19px;
+				font-size: 14.25pt;
+				font-style: bold;
+			}
+			p {
+				font-size: 11.25pt;
+			}
+			h2 {
+				font-size: 12pt;
+				font-style: bold;
+				margin-top: 50px;
+			}
+			p.end {
+				font-size: 9.75pt;
+			}
+			a {
+				color: blue;
+				text-decoration: underline;
+				cursor: hand;
+			}
+		&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;h1&gt;Welcome to Internet Explorer 4&lt;/h1&gt;
+		&lt;p&gt;Welcome To Internet Explorer 4.&lt;br&gt;
+Internet Explorer 4 makes browsing the web and exploring websites a pleasant experience.&lt;br&gt;
+Just type an address in the location bar above and then press go.&lt;br&gt;
+Instantly you will be taken to the webpage of your choosing.&lt;br&gt;
+Where do you want to go today?&lt;/p&gt;
+		&lt;h2&gt;Here are some sites you may want to visit.&lt;/h2&gt;
+		&lt;a id="google"&gt;www.google.com&lt;/a&gt;&lt;br&gt;
+		&lt;a id="padams"&gt;www.12padams.com&lt;/a&gt;
+		&lt;p class="end"&gt;Where do you want to go today?&lt;/p&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="padams" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\resources\ie4\padams.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="padams_HTML" xml:space="preserve">
+    <value>&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;12PADAMS&lt;/title&gt;
+		&lt;style&gt;
+			body {
+				font-family: "Microsoft Sans Serif";
+				text-align: center;
+			}
+			h1 {
+				font-size: 9.75pt;
+				margin-top: 20px;
+			}
+			p {
+				font-size: 9.25pt;
+				margin-top: 0;
+				margin-bottom: 25px;
+			}
+			td div {
+				display: inline-block;
+				border: 1px solid black;
+				width: 215px;
+				height: 305px;
+				margin: 0 3px 0 3px;
+				text-align: center;
+			}
+			h1#copyright {
+				font-size: 9pt;
+			}
+			p.app {
+				margin-top: 30px;
+			}
+			p.app button {
+				float: right;
+				background-color: silver;
+				border-color: gray black black gray;
+				margin-right: 2px;
+			}
+			a {
+				font-size: 9.25pt;
+				color: blue;
+			}
+		&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;h1&gt;Welcome to the Official 12padams website!!!&lt;/h1&gt;
+		&lt;p&gt;The best customizations for your windows 95 computer&lt;/p&gt;
+		&lt;table align="center"&gt;
+			&lt;tr&gt;
+				&lt;td&gt;&lt;div class="software"&gt;
+					&lt;h1&gt;Games/Software&lt;/h1&gt;
+					&lt;p class="app" id="gtn"&gt;Guess the Number V1 &lt;button id="gtn_b"&gt;Download&lt;/button&gt;&lt;/p&gt;
+					&lt;p class="app" id="wc"&gt;Web Chat 1998 &lt;button id="wc_b"&gt;Download&lt;/button&gt;&lt;/p&gt;
+					&lt;p class="app" id="distort"&gt;Time Distorter 0.1 &lt;button id="distort_b"&gt;Download&lt;/button&gt;&lt;/p&gt;
+				&lt;/div&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;div class="customize"&gt;
+					&lt;h1&gt;Customizations&lt;/h1&gt;
+					&lt;p class="app" id="bg"&gt;Backgrounds &lt;button id="bg_b"&gt;View Backgrounds&lt;/button&gt;&lt;/p&gt;
+					&lt;p class="app" id="skn"&gt;Skindows 95 &lt;button id="skn_b"&gt;Info&lt;/button&gt;&lt;/p&gt;
+				&lt;/div&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;div class="viruses"&gt;
+					&lt;h1&gt;Example Viruses&lt;/h1&gt;
+					&lt;p class="app" id="sr"&gt;Start Runner 95 &lt;button id="sr_b"&gt;Download&lt;/button&gt;&lt;/p&gt;
+					&lt;p class="app" id="eb"&gt;Error Blaster 95 &lt;button id="eb_b"&gt;Download&lt;/button&gt;&lt;/p&gt;
+				&lt;/div&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;div class="sites"&gt;
+					&lt;h1&gt;WebSites&lt;/h1&gt;
+					&lt;a id="hotmail" href="hotmail"&gt;www.hotmail.com&lt;/a&gt;
+				&lt;/div&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;/table&gt;
+		&lt;h1 id="copyright"&gt;Copyright 1998 12padams&lt;/h1&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
 </root>

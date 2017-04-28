@@ -13,24 +13,30 @@ namespace TimeHACK.OS.Win95.Win95Apps
         public List<string> browsinghistory = new List<string>();
         public int historylocation = 0;
 
+        public HtmlDocument currentsite;
+        private Timer loadplz = new Timer();
+
         public WinClassicIE4()
         {
             InitializeComponent();
+            loadplz.Tick += new EventHandler(loadplz_Tick);
+            loadplz.Interval = 10;
         }
+
         private void WinClassicIE4_Load(object sender, EventArgs e)
         {
             browsinghistory.Capacity = 99;
             BringToFront();
-            hideWebsites();
+            hidePrograms();
             browsinghistory.Add("www.microsoft.com/internetexplorer4/welcome");
             for (int i = 0; i < 99; i++) browsinghistory.Add(null);
-            welcomeinternetscreen.Show();
-            welcomeinternetscreen.Dock = DockStyle.Fill;
+            webBrowser1.DocumentText = resources.GetString("ie4start_HTML");
+            webBrowser1.Show();
             foreach (ToolStripMenuItem item in MenuStrip3.Items) item.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
             foreach (Control ctrl in Panel1.Controls) ctrl.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
         }
 
-        private void hideWebsites()
+        private void hidePrograms()
         {
             googlemain.Hide();
             welcomeinternetscreen.Hide();
@@ -46,7 +52,6 @@ namespace TimeHACK.OS.Win95.Win95Apps
             email2.Hide();
             email3.Hide();
             hotmailpadams.Hide();
-            webBrowser1.Hide();
         }
 
         private void LinkLabel15_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -54,7 +59,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             goToSite("www.google.com", false);
         }
 
-        private void LinkLabel16_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void padams_LinkClicked(object sender, HtmlElementEventArgs e)
         {
             goToSite("www.12padams.com", false);
         }
@@ -71,7 +76,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void Label20_Click(object sender, EventArgs e)
         {
-            hideWebsites();
+            hidePrograms();
             padamshidden.Dock = DockStyle.Fill;
             padamshidden.Show();
         }
@@ -93,7 +98,44 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void goToSite(string url, bool back)
         {
-            hideWebsites();
+            switch (url)
+            {
+                case "www.google.com":
+                    hidePrograms();
+                    googlemain.Dock = DockStyle.Fill;
+                    googlemain.Show();
+                    break;
+                case "www.google.stanford.edu":
+                    hidePrograms();
+                    googleprototype.Dock = DockStyle.Fill;
+                    googleprototype.Show();
+                    break;
+                case "www.alpha.google.com":
+                    hidePrograms();
+                    googlealpha.Dock = DockStyle.Fill;
+                    googlealpha.Show();
+                    break;
+                case "www.12padams.com":
+                    hidePrograms();
+                    webBrowser1.DocumentText = resources.GetString("padams_HTML");
+                    break;
+                case "www.microsoft.com/internetexplorer4/welcome":
+                    hidePrograms();
+                    webBrowser1.DocumentText = resources.GetString("ie4start_HTML");
+                    break;
+                case "www.???.com":
+                    hidePrograms();
+                    secretwebsite.Dock = DockStyle.Fill;
+                    secretwebsite.Show();
+                    break;
+                case "www.12padams.com/???":
+                    hidePrograms();
+                    padamshidden.Dock = DockStyle.Fill;
+                    padamshidden.Show();
+                    break;
+                default:
+                    return;
+            }
 
             if (!back)
             {
@@ -113,49 +155,10 @@ namespace TimeHACK.OS.Win95.Win95Apps
             }
 
             addressbar.Text = url;
-
-            switch (url)
-            {
-                case "www.google.com":
-                    addressbar.Text = url;
-                    googlemain.Dock = DockStyle.Fill;
-                    googlemain.Show();
-                    break;
-                case "www.google.stanford.edu":
-                    addressbar.Text = url;
-                    googleprototype.Dock = DockStyle.Fill;
-                    googleprototype.Show();
-                    break;
-                case "www.alpha.google.com":
-                    addressbar.Text = url;
-                    googlealpha.Dock = DockStyle.Fill;
-                    googlealpha.Show();
-                    break;
-                case "www.12padams.com":
-                    addressbar.Text = url;
-                    padamsmain.Dock = DockStyle.Fill;
-                    padamsmain.Show();
-                    break;
-                case "www.microsoft.com/internetexplorer4/welcome":
-                    addressbar.Text = url;
-                    welcomeinternetscreen.Dock = DockStyle.Fill;
-                    welcomeinternetscreen.Show();
-                    break;
-                case "www.???.com":
-                    addressbar.Text = url;
-                    secretwebsite.Dock = DockStyle.Fill;
-                    secretwebsite.Show();
-                    break;
-                case "www.12padams.com/???":
-                    addressbar.Text = url;
-                    padamshidden.Dock = DockStyle.Fill;
-                    padamshidden.Show();
-                    break;
-            }
-
+            currentsite = webBrowser1.Document;
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void BackButton_Click(object sender, EventArgs e)
         {
             if (!(historylocation <= 0))
             {
@@ -164,22 +167,56 @@ namespace TimeHACK.OS.Win95.Win95Apps
             }
         }
 
-        private void Button2_Click(object sender, EventArgs e)
+        private void ForwardButton_Click(object sender, EventArgs e)
         {
             if(browsinghistory[historylocation+1] != null) goToSite(browsinghistory[historylocation + 1], false);
         }
 
-        private void Button5_Click(object sender, EventArgs e)
+        private void HomeButton_Click(object sender, EventArgs e)
         {
             goToSite("www.microsoft.com/internetexplorer4/welcome", false);
         }
 
-        private void Button25_Click(object sender, EventArgs e)
+        private void WCDownloadButton_Click(object sender, HtmlElementEventArgs e)
         {
             WinClassicDownloader opendownload = new WinClassicDownloader();
             WindowManager wm = new WindowManager();
             wm.startWin95(opendownload, "Downloader", null, false, true);
             opendownload.appName.Text = "Downloading: Web Chat";
+        } 
+
+        private void GoButton_Click(object sender, EventArgs e)
+        {
+            goToSite(addressbar.Text, false);
         }
+        
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+            loadplz.Start();
+        }
+
+        private void loadplz_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                switch (currentsite.Title)
+                {
+                    case "IE4START":
+                        webBrowser1.Document.GetElementById("padams").Click += new HtmlElementEventHandler(padams_LinkClicked);
+                        break;
+                    case "12PADAMS":
+                        webBrowser1.Document.GetElementById("wc_b").Click += new HtmlElementEventHandler(WCDownloadButton_Click);
+                        webBrowser1.Document.GetElementById("distort").Style += "visibility:hidden;";
+                        break;
+                }
+                loadplz.Stop();
+            } catch
+            {
+
+            }
+        }
+
+        //TODO: Add more websites
+        //TODO: Relabel Buttons And Things
     }
 }

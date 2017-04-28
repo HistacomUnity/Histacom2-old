@@ -238,6 +238,9 @@
   <ItemGroup>
     <Content Include="Resources\12padams_EULA.txt" />
     <Content Include="Resources\Icon128x.ico" />
+    <Content Include="Resources\ie4start.html" />
+    <Content Include="Resources\IE4\ie4start.html" />
+    <Content Include="Resources\IE4\padams.html" />
     <Content Include="Resources\TitleScreen\Exit.png" />
     <Content Include="Resources\TitleScreen\LoadGame.png" />
     <Content Include="Resources\TitleScreen\MSExit.png" />
@@ -271,7 +274,7 @@
     <Content Include="Resources\WinClassic\WinClassicFind.png" />
     <Content Include="Resources\WinClassic\WinClassicFolder.png" />
     <Content Include="Resources\WinClassic\WinClassicHelp.png" />
-    <Content Include="Resources\WinClassic\WinClassicHWCV.png" />
+    <None Include="Resources\WinClassic\WinClassicHWCV.png" />
     <Content Include="Resources\WinClassic\WinClassicIE4.png" />
     <Content Include="Resources\WinClassic\WinClassicInbox.png" />
     <Content Include="Resources\WinClassic\WinClassicMSN.png" />
