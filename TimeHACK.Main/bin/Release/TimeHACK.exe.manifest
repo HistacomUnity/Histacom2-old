@@ -56,14 +56,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TimeHACK.exe" size="6233088">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TimeHACK.exe" size="6236160">
       <assemblyIdentity name="TimeHACK" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>qsK1qfjuvXPNGaP+f3vgCTIamWHQKEpuzvRtw2QscVY=</dsig:DigestValue>
+        <dsig:DigestValue>EbCIdG1Ab3JzTNNqRbMWFm4+590vGZ3Sg4QxN1qsWac=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -106,13 +106,13 @@
       <dsig:DigestValue>Sf4jcnpqMm+8SKOCp6p1gJdzo9VpBKwFezayuSmHm+Q=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Resources\IE4\padams.html" size="1942">
+  <file name="Resources\IE4\padams.html" size="1960">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>AGImdIeEP/E84lMW4mWw3wu/UigLZNCncZeFDsxs1IQ=</dsig:DigestValue>
+      <dsig:DigestValue>FZPOIkZkFLT3KRMLipbNDuiMStSRNyrKMeGEMi5HZEQ=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\ie4start.html" size="956">

@@ -404,6 +404,7 @@
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.Size = new System.Drawing.Size(959, 483);
             this.webBrowser1.TabIndex = 11;
+            this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(webBrowser1_DocumentCompleted);
             // 
             // padamsmain
             // 
@@ -1140,7 +1141,6 @@
             this.LinkLabel16.TabStop = true;
             this.LinkLabel16.Text = "www.12padams.com";
             this.LinkLabel16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.LinkLabel16.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel16_LinkClicked);
             // 
             // LinkLabel15
             // 
