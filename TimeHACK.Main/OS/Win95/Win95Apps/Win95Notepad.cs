@@ -36,5 +36,52 @@ namespace TimeHACK.OS.Win95.Win95Apps
             WindowManager wm = new WindowManager();
             wm.startAboutBox95("Notepad", "Microsoft Notepad", Properties.Resources.WinClassicNotepad);
         }
+
+        private void wordWrapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mainText.WordWrap = wordWrapToolStripMenuItem.Checked;
+        }
+
+        private void selectAllToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mainText.SelectAll();
+        }
+
+        private void undoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mainText.Undo();
+        }
+
+        private void cutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (mainText.SelectedText.Length >= 0)
+            {
+                mainText.Cut();
+            }
+        }
+
+        private void copyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (mainText.SelectedText.Length >= 0)
+            {
+                mainText.Copy();
+            }
+        }
+
+        private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mainText.Paste();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mainText.Text.Remove(mainText.SelectionStart, mainText.SelectedText.Length);
+        }
+
+        private void timeDateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string DateTime = System.DateTime.Now.ToString("HH:mm tt dd/MM/yyyy");
+            mainText.AppendText(DateTime);
+        }
     }
 }

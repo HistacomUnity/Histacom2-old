@@ -374,6 +374,26 @@ namespace TimeHACK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap WinClassicCopy {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicCopy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WinClassicCut {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicCut", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WinClassicDocuments {
             get {
                 object obj = ResourceManager.GetObject("WinClassicDocuments", resourceCulture);
@@ -474,6 +494,16 @@ namespace TimeHACK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap WinClassicNew {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicNew", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WinClassicNotepad {
             get {
                 object obj = ResourceManager.GetObject("WinClassicNotepad", resourceCulture);
@@ -487,6 +517,16 @@ namespace TimeHACK.Properties {
         internal static System.Drawing.Bitmap WinClassicOutlook {
             get {
                 object obj = ResourceManager.GetObject("WinClassicOutlook", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WinClassicPaste {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicPaste", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -597,6 +637,26 @@ namespace TimeHACK.Properties {
         internal static System.Drawing.Bitmap WinClassicTime {
             get {
                 object obj = ResourceManager.GetObject("WinClassicTime", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WinClassicUndo {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicUndo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WinClassicWordpad {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicWordpad", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

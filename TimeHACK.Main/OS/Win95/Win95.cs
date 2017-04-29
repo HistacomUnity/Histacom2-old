@@ -232,6 +232,14 @@ namespace TimeHACK.OS.Win95
         {
             ie = null;
         }
+
+        private void WordPadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WinClassicWordPad wp = new WinClassicWordPad();
+            WinClassic app = wm.startWin95(wp, "Wordpad", null, true, true);
+            app.BringToFront();
+            startmenu.Hide();
+        }
     }
 }
 

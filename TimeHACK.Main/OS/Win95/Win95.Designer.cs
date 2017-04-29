@@ -519,6 +519,7 @@
             this.WordPadToolStripMenuItem.Name = "WordPadToolStripMenuItem";
             this.WordPadToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.WordPadToolStripMenuItem.Text = "WordPad";
+            this.WordPadToolStripMenuItem.Click += new System.EventHandler(this.WordPadToolStripMenuItem_Click);
             // 
             // StartUpToolStripMenuItem
             // 
