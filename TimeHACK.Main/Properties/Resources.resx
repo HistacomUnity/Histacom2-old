@@ -309,4 +309,31 @@
   <data name="WinClassicWordpad" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WinClassic\WinClassicWordpad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Win95IconIE4" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAACVSURBVDhPlZELEsQgDEI9em7uBhVN2HTtvhmqotBf+4/e
+        s36ih6mIrgcmARX2CdaJE/brnn+LJZhvYFo3czeFp3/W0U9UYWgjfiq4honsr5I6/EZewDDG8sBNMwgY
+        iAUvQMG5+7VA9vcTBENKzPCB4T284ikYTFNKao1SH3IBwHwdqIroJ7hJxvxJGf+Hy2RJLLrR2gerBkDv
+        4H+zGwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="Win95IconNotepad_2" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xMzQDW3oAAACFSURBVDhPpZNB
+        DsAgCAR9uk/zZ1S0i6CoDTUZQ5EdTk1EtFAPX0dkFoU0aivnTOnFrZVkCZvGjjpXSuki02c7F9g0gzdP
+        YD7mIDMGW3gV6KEdPOMJjOmECltBYLsIxHJjCg9BYDufIejXFYQ17Q1LwG7YIyTA4Tok0PwStB/LE0Dy
+        BSJKDySVfIiSNKD1AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="Win95IconWordpad" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xMzQDW3oAAACMSURBVDhPnZAB
+        DsAgCAN9Ok/zZ4yiEINsMkkKRNezWWNmlZSM84wabVwyEX3ODNLCZXWiyUrsgEr13h2gZlmvAGZGKQAX
+        VRlAzfcJIAB+/gMiM5smIMbMBLO8uUMqCcxsOzww4/AIiGZ7eR4OQBYZ2uIGswOyWj72ArQMyOoVsMY+
+        aQNok1HVambm9gBAYeI/oBSQZwAAAABJRU5ErkJggg==
+</value>
+  </data>
 </root>

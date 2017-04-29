@@ -30,7 +30,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 item.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
                 item.BackColor = Color.Silver;
                 item.BackgroundImage = Properties.Resources.sliversilver;
-                item.BackgroundImageLayout = ImageLayout.None;
+                item.BackgroundImageLayout = ImageLayout.Center;
                 item.DisplayStyle = ToolStripItemDisplayStyle.Text;
             }
 
