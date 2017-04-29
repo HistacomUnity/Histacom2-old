@@ -99,6 +99,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\CHORD.WAV" />
     <Content Include="Resources\Icon128x.ico" />
     <None Include="Resources\WinAboutSeparator95.png" />
     <Content Include="Resources\WinClassic\Window\BottomLeft.png" />

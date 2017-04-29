@@ -142,9 +142,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoSize = true;
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(0, 691);
+            this.panel1.Location = new System.Drawing.Point(0, 451);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1280, 29);
+            this.panel1.Size = new System.Drawing.Size(640, 29);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -162,9 +162,9 @@
             this.taskbar.Controls.Add(this.clockPanel);
             this.taskbar.Controls.Add(this.startbutton);
             this.taskbar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.taskbar.Location = new System.Drawing.Point(0, 692);
+            this.taskbar.Location = new System.Drawing.Point(0, 452);
             this.taskbar.Name = "taskbar";
-            this.taskbar.Size = new System.Drawing.Size(1280, 28);
+            this.taskbar.Size = new System.Drawing.Size(640, 28);
             this.taskbar.TabIndex = 2;
             // 
             // taskbartime
@@ -172,7 +172,7 @@
             this.taskbartime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.taskbartime.AutoSize = true;
             this.taskbartime.BackColor = System.Drawing.Color.Transparent;
-            this.taskbartime.Location = new System.Drawing.Point(1217, 6);
+            this.taskbartime.Location = new System.Drawing.Point(577, 6);
             this.taskbartime.Name = "taskbartime";
             this.taskbartime.Size = new System.Drawing.Size(26, 13);
             this.taskbartime.TabIndex = 2;
@@ -183,7 +183,7 @@
             // 
             this.clockPanel.BackgroundImage = global::TimeHACK.Properties.Resources.WinClassicTime;
             this.clockPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.clockPanel.Location = new System.Drawing.Point(1215, 0);
+            this.clockPanel.Location = new System.Drawing.Point(575, 0);
             this.clockPanel.Name = "clockPanel";
             this.clockPanel.Size = new System.Drawing.Size(65, 28);
             this.clockPanel.TabIndex = 4;
@@ -204,7 +204,7 @@
             this.startmenu.BackColor = System.Drawing.Color.Silver;
             this.startmenu.Controls.Add(this.startmenuitems);
             this.startmenu.Controls.Add(this.ossidestartmenu);
-            this.startmenu.Location = new System.Drawing.Point(0, 397);
+            this.startmenu.Location = new System.Drawing.Point(0, 157);
             this.startmenu.Name = "startmenu";
             this.startmenu.Size = new System.Drawing.Size(174, 300);
             this.startmenu.TabIndex = 3;
@@ -229,7 +229,7 @@
             this.startmenuitems.Name = "startmenuitems";
             this.startmenuitems.Padding = new System.Windows.Forms.Padding(6, 2, 0, 0);
             this.startmenuitems.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.startmenuitems.Size = new System.Drawing.Size(141, 311);
+            this.startmenuitems.Size = new System.Drawing.Size(141, 292);
             this.startmenuitems.TabIndex = 0;
             this.startmenuitems.Text = "StartMenu";
             // 
@@ -955,7 +955,7 @@
             this.desktopicons.LargeImageList = this.desktopImages;
             this.desktopicons.Location = new System.Drawing.Point(0, 0);
             this.desktopicons.Name = "desktopicons";
-            this.desktopicons.Size = new System.Drawing.Size(1280, 720);
+            this.desktopicons.Size = new System.Drawing.Size(640, 480);
             this.desktopicons.TabIndex = 6;
             this.desktopicons.UseCompatibleStateImageBehavior = false;
             this.desktopicons.DoubleClick += new System.EventHandler(this.desktopicons_Click);
@@ -1120,7 +1120,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.ClientSize = new System.Drawing.Size(640, 480);
             this.Controls.Add(this.taskbar);
             this.Controls.Add(this.startmenu);
             this.Controls.Add(this.panel1);

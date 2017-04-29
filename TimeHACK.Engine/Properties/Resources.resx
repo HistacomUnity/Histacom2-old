@@ -178,4 +178,7 @@
   <data name="windows_command_prompt" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WinClassic\Window\windows_command_prompt.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="CHORD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\chord.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
