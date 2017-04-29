@@ -25,7 +25,7 @@ TimeHACK has an AppVeyor at https://ci.appveyor.com/project/timehack/timehack (Y
 This section will be filled at a later date.
 
 ## Other Repositories
-We have another version of TimeHACK, based on the Histacom 1.8.5 source, discontinued. It can be found at http://www.github.com/TimeHACKDevs/HistacomVB
+We do have another repo which is of an completely discontinued porject called "HistacomVB", the idea of it being that it was, rather than a rewrite like this, the old game except being built upon. In the end however we stopped it because have "HistacomVB" and "TimeHACK" was just stupid. If you REALLY want to see the repo you can here: http://www.github.com/TimeHACKDevs/HistacomVB
 
 ## License
 TimeHACK is Licensed under the [MIT Software license](https://github.com/TimeHACKDevs/TimeHACK/blob/master/LICENSE). All code contributed to the TimeHACK project is the property of the TimeHACK development team, and will not be removed upon request.
