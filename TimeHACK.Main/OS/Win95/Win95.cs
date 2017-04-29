@@ -178,7 +178,7 @@ namespace TimeHACK.OS.Win95
         private void InternetExplorerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (ie != null) { wm.startInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", Properties.Resources.Win95Warning); return; }
-            ie = wm.startWin95(new WinClassicIE4(), "Internet Explorer 4", (Image)resources.GetObject("InternetExplorerToolStripMenuItem.Image"), true, true);
+            ie = wm.startWin95(new WinClassicIE4(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
             ie.BringToFront();
             ie.FormClosing += new FormClosingEventHandler(InternetExplorer4_Closing);
             startmenu.Hide();
@@ -197,7 +197,7 @@ namespace TimeHACK.OS.Win95
                     if (objListViewItem.Text == "Internet Explorer")
                     {
                         if (ie != null) { wm.startInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", Properties.Resources.Win95Warning); return; }
-                        ie = wm.startWin95(new WinClassicIE4(), "Internet Explorer 4", (Image)resources.GetObject("InternetExplorerToolStripMenuItem.Image"), true, true);
+                        ie = wm.startWin95(new WinClassicIE4(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
                         ie.BringToFront();
                         ie.FormClosing += new FormClosingEventHandler(InternetExplorer4_Closing);
                         startmenu.Hide();
@@ -236,7 +236,7 @@ namespace TimeHACK.OS.Win95
         private void WordPadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WinClassicWordPad wp = new WinClassicWordPad();
-            WinClassic app = wm.startWin95(wp, "Wordpad", null, true, true);
+            WinClassic app = wm.startWin95(wp, "Wordpad", Properties.Resources.Win95IconWordpad, true, true);
             app.BringToFront();
             startmenu.Hide();
         }

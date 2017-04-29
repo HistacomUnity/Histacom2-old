@@ -39,3 +39,4 @@ C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WinClassicDownloader.resources
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.Win95Notepad.resources
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WinClassicHWCV.resources
+C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WinClassicWordPad.resources
