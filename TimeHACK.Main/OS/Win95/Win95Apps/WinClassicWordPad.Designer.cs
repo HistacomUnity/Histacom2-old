@@ -111,6 +111,7 @@
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
             this.newToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.newToolStripMenuItem.Text = "New";
+            this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -122,11 +123,12 @@
             this.sendToolStripMenuItem.Name = "sendToolStripMenuItem";
             this.sendToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.sendToolStripMenuItem.Text = "Send...";
+            this.sendToolStripMenuItem.Click += new System.EventHandler(this.sendToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -150,6 +152,7 @@
             this.undoToolStripMenuItem.Name = "undoToolStripMenuItem";
             this.undoToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.undoToolStripMenuItem.Text = "Undo";
+            this.undoToolStripMenuItem.Click += new System.EventHandler(this.undoToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
@@ -161,18 +164,21 @@
             this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
             this.cutToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.cutToolStripMenuItem.Text = "Cut";
+            this.cutToolStripMenuItem.Click += new System.EventHandler(this.cutToolStripMenuItem_Click);
             // 
             // copyToolStripMenuItem
             // 
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
             this.copyToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.copyToolStripMenuItem.Text = "Copy";
+            this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
             // pasteToolStripMenuItem
             // 
             this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
             this.pasteToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.pasteToolStripMenuItem.Text = "Paste";
+            this.pasteToolStripMenuItem.Click += new System.EventHandler(this.pasteToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
@@ -184,12 +190,14 @@
             this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
             this.clearToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.clearToolStripMenuItem.Text = "Clear";
+            this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
             // selectAllToolStripMenuItem
             // 
             this.selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
             this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.selectAllToolStripMenuItem.Text = "Select All";
+            this.selectAllToolStripMenuItem.Click += new System.EventHandler(this.selectAllToolStripMenuItem_Click);
             // 
             // viewToolStripMenuItem
             // 
@@ -207,7 +215,7 @@
             this.toolbarToolStripMenuItem.CheckOnClick = true;
             this.toolbarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolbarToolStripMenuItem.Name = "toolbarToolStripMenuItem";
-            this.toolbarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.toolbarToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.toolbarToolStripMenuItem.Text = "Toolbar";
             this.toolbarToolStripMenuItem.Click += new System.EventHandler(this.toolbarToolStripMenuItem_Click);
             // 
@@ -217,7 +225,7 @@
             this.formatBarToolStripMenuItem.CheckOnClick = true;
             this.formatBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.formatBarToolStripMenuItem.Name = "formatBarToolStripMenuItem";
-            this.formatBarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.formatBarToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.formatBarToolStripMenuItem.Text = "Format Bar";
             this.formatBarToolStripMenuItem.Click += new System.EventHandler(this.formatBarToolStripMenuItem_Click);
             // 
@@ -227,7 +235,7 @@
             this.statusBarToolStripMenuItem.CheckOnClick = true;
             this.statusBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.statusBarToolStripMenuItem.Name = "statusBarToolStripMenuItem";
-            this.statusBarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.statusBarToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.statusBarToolStripMenuItem.Text = "Status Bar";
             this.statusBarToolStripMenuItem.Click += new System.EventHandler(this.statusBarToolStripMenuItem_Click);
             // 
@@ -244,6 +252,7 @@
             this.dateTimeToolStripMenuItem.Name = "dateTimeToolStripMenuItem";
             this.dateTimeToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.dateTimeToolStripMenuItem.Text = "Date/Time";
+            this.dateTimeToolStripMenuItem.Click += new System.EventHandler(this.dateTimeToolStripMenuItem_Click);
             // 
             // formatToolStripMenuItem
             // 
@@ -255,9 +264,11 @@
             // 
             // bulletStyleToolStripMenuItem
             // 
+            this.bulletStyleToolStripMenuItem.CheckOnClick = true;
             this.bulletStyleToolStripMenuItem.Name = "bulletStyleToolStripMenuItem";
-            this.bulletStyleToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.bulletStyleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.bulletStyleToolStripMenuItem.Text = "Bullet style";
+            this.bulletStyleToolStripMenuItem.Click += new System.EventHandler(this.bulletStyleToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -319,6 +330,7 @@
             this.btnPaste.Size = new System.Drawing.Size(26, 23);
             this.btnPaste.TabIndex = 1;
             this.btnPaste.UseVisualStyleBackColor = true;
+            this.btnPaste.Click += new System.EventHandler(this.btnPaste_Click);
             // 
             // btnCopy
             // 
@@ -329,6 +341,7 @@
             this.btnCopy.Size = new System.Drawing.Size(26, 23);
             this.btnCopy.TabIndex = 1;
             this.btnCopy.UseVisualStyleBackColor = true;
+            this.btnCopy.Click += new System.EventHandler(this.btnCopy_Click);
             // 
             // btnCut
             // 
@@ -339,6 +352,7 @@
             this.btnCut.Size = new System.Drawing.Size(26, 23);
             this.btnCut.TabIndex = 1;
             this.btnCut.UseVisualStyleBackColor = true;
+            this.btnCut.Click += new System.EventHandler(this.btnCut_Click);
             // 
             // btnNew
             // 
@@ -349,6 +363,7 @@
             this.btnNew.Size = new System.Drawing.Size(26, 23);
             this.btnNew.TabIndex = 1;
             this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // pictureBox1
             // 
@@ -379,10 +394,30 @@
             // comboSize
             // 
             this.comboSize.FormattingEnabled = true;
+            this.comboSize.Items.AddRange(new object[] {
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "16",
+            "18",
+            "20",
+            "22",
+            "24",
+            "26",
+            "28",
+            "36",
+            "48",
+            "72"});
             this.comboSize.Location = new System.Drawing.Point(157, 3);
             this.comboSize.Name = "comboSize";
             this.comboSize.Size = new System.Drawing.Size(50, 21);
             this.comboSize.TabIndex = 1;
+            this.comboSize.Text = "12";
+            this.comboSize.SelectedIndexChanged += new System.EventHandler(this.comboSize_SelectedIndexChanged);
             // 
             // comboFont
             // 
@@ -391,6 +426,8 @@
             this.comboFont.Name = "comboFont";
             this.comboFont.Size = new System.Drawing.Size(145, 21);
             this.comboFont.TabIndex = 1;
+            this.comboFont.Text = "Arial";
+            this.comboFont.SelectedIndexChanged += new System.EventHandler(this.comboFont_SelectedIndexChanged);
             // 
             // pictureBox2
             // 
@@ -415,6 +452,8 @@
             this.btnUnderline.Text = "U";
             this.btnUnderline.UseVisualStyleBackColor = false;
             this.btnUnderline.Click += new System.EventHandler(this.btnUnderline_Click);
+            this.btnUnderline.MouseEnter += new System.EventHandler(this.btnUnderline_MouseEnter);
+            this.btnUnderline.MouseLeave += new System.EventHandler(this.btnUnderline_MouseLeave);
             // 
             // btnItalic
             // 
@@ -428,6 +467,8 @@
             this.btnItalic.Text = "I";
             this.btnItalic.UseVisualStyleBackColor = false;
             this.btnItalic.Click += new System.EventHandler(this.btnItalic_Click);
+            this.btnItalic.MouseEnter += new System.EventHandler(this.btnItalic_MouseEnter);
+            this.btnItalic.MouseLeave += new System.EventHandler(this.btnItalic_MouseLeave);
             // 
             // btnBold
             // 
@@ -441,6 +482,8 @@
             this.btnBold.Text = "B";
             this.btnBold.UseVisualStyleBackColor = false;
             this.btnBold.Click += new System.EventHandler(this.btnBold_Click);
+            this.btnBold.MouseEnter += new System.EventHandler(this.btnBold_MouseEnter);
+            this.btnBold.MouseLeave += new System.EventHandler(this.btnBold_MouseLeave);
             // 
             // statusBar
             // 
@@ -458,9 +501,9 @@
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.Location = new System.Drawing.Point(3, 1);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(119, 16);
+            this.lblStatus.Size = new System.Drawing.Size(210, 16);
             this.lblStatus.TabIndex = 0;
-            this.lblStatus.Text = "For Help, Press F1";
+            this.lblStatus.Text = "For Help, goto Help -> Help topics";
             // 
             // WinClassicWordPad
             // 

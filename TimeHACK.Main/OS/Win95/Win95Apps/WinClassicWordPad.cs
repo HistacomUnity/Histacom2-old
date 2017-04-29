@@ -14,6 +14,8 @@ namespace TimeHACK.OS.Win95.Win95Apps
 {
     public partial class WinClassicWordPad : UserControl
     {
+        WindowManager wm = new WindowManager();
+
         bool btnBoldSelected = true;
         bool btnItalicSelected;
         bool btnUnderlineSelected;
@@ -42,6 +44,8 @@ namespace TimeHACK.OS.Win95.Win95Apps
             }
         }
 
+        #region Format_Buttons
+
         private void btnBold_Click(object sender, EventArgs e)
         {
             if (btnBoldSelected == false)
@@ -54,11 +58,11 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 btnBoldSelected = false;
             }
             doBold = btnBoldSelected;
+            DoFontStyles();
         }
 
         private void btnItalic_Click(object sender, EventArgs e)
         {
-            btnItalic.BackColor = Color.DimGray; // This is here to fix a "have to double click" bug!
             if (btnItalicSelected == false)
             {
                 btnItalic.BackgroundImage = Properties.Resources.sliversilver;
@@ -70,11 +74,11 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 btnItalicSelected = false;
             }
             doItalic = btnItalicSelected;
+            DoFontStyles();
         }
 
         private void btnUnderline_Click(object sender, EventArgs e)
         {
-            btnUnderline.BackColor = Color.DimGray; // This is here to fix a "have to double click" bug!
             if (btnUnderlineSelected == false)
             {
                 btnUnderline.BackgroundImage = Properties.Resources.sliversilver;
@@ -86,9 +90,16 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 btnUnderlineSelected = false;
             }
             doUnderline = btnUnderlineSelected;
+            DoFontStyles();
         }
 
+        #endregion
+
         #region Designer-Stuff
+        private void dateTimeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InsertDateTime();
+        }
         private void toolbarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             pnlToolbar.Visible = toolbarToolStripMenuItem.Checked;
@@ -108,12 +119,200 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             ((Form)this.TopLevelControl).Close();
         }
-        #endregion
 
         private void aboutWordpadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            WindowManager wm = new WindowManager();
             wm.startAboutBox95("Wordpad", "Microsoft Wordpad", Properties.Resources.WinClassicWordpad);
+        }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NewFile();
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            NewFile();
+        }
+
+        private void sendToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            wm.startInfobox95("Wordpad", "An error occured opening send option.", null);
+        }
+
+        void Cut()
+        {
+            if (mainText.SelectedText.Length >= 0) {
+                mainText.Cut();
+            }     
+        }
+
+        void Copy()
+        {
+            if (mainText.SelectedText.Length >= 0)
+            {
+                mainText.Copy();
+            }
+        }
+
+        void Paste()
+        {
+            mainText.Paste();
+        }
+
+        void Clear()
+        {
+            mainText.Text = mainText.Text.Remove(mainText.SelectionStart, mainText.SelectedText.Length);
+        }
+
+        void SelectAll()
+        {
+            mainText.SelectAll();
+        }
+
+        private void undoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Undo();
+        }
+
+        private void cutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cut();
+        }
+
+        private void copyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Copy();
+        }
+
+        private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Paste();
+        }
+
+        private void selectAllToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SelectAll();
+        }
+
+        private void clearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Clear();
+        }
+
+        private void btnCut_Click(object sender, EventArgs e)
+        {
+            Cut();
+        }
+
+        private void btnCopy_Click(object sender, EventArgs e)
+        {
+            Copy();
+        }
+
+        private void btnPaste_Click(object sender, EventArgs e)
+        {
+            Paste();
+        }
+
+        private void bulletStyleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mainText.SelectionBullet = bulletStyleToolStripMenuItem.Checked;
+        }
+
+        private void comboFont_SelectedIndexChanged(object sender, EventArgs e)
+        {           
+            SetSelectedTextFont(comboFont.Text);
+        }
+
+        private void comboSize_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SetSelectedTextSize(comboSize.Text);
+        }
+        private void btnBold_MouseEnter(object sender, EventArgs e)
+        {
+            lblStatus.Text = "Makes the selected text Bold. (toggle)";
+        }
+
+        private void btnBold_MouseLeave(object sender, EventArgs e)
+        {
+            lblStatus.Text = "For Help, goto Help -> Help Topics";
+        }
+
+        private void btnItalic_MouseEnter(object sender, EventArgs e)
+        {
+            lblStatus.Text = "Makes the selected text Italic. (toggle)";
+        }
+
+        private void btnItalic_MouseLeave(object sender, EventArgs e)
+        {
+            lblStatus.Text = "For Help, goto Help -> Help Topics";
+        }
+
+        private void btnUnderline_MouseEnter(object sender, EventArgs e)
+        {
+            lblStatus.Text = "Makes the selected text Underline. (toggle)";
+        }
+
+        private void btnUnderline_MouseLeave(object sender, EventArgs e)
+        {
+            lblStatus.Text = "For Help, goto Help -> Help Topics";
+        }
+        #endregion
+
+        void NewFile()
+        {
+            mainText.Text = "";
+        }
+
+        void Undo()
+        {
+            mainText.Undo();
+        }
+
+        void InsertDateTime()
+        {
+            string DateTime = System.DateTime.Now.ToString("HH:mm tt dd/MM/yyyy");
+            mainText.AppendText(DateTime);
+        }
+
+        // Things for Cut/Copy/Paste have been placed in the "Designer-Stuff" region!
+
+        void SetSelectedTextFont(String font)
+        {
+            // The next two lines convert a String to a Font
+            var cvt = new FontConverter();
+            Font f = cvt.ConvertFromString(font) as Font;
+
+            mainText.SelectionFont = f;
+        }
+
+        void SetSelectedTextSize(String size)
+        {
+            //  The next few lines will ATTEMPT to convert a String to an Integer
+            int SizeInt = Convert.ToInt32(size);
+
+            mainText.SelectionFont = new Font(mainText.SelectionFont.FontFamily, SizeInt, mainText.SelectionFont.Style);
+        }
+
+        void DoFontStyles()
+        {
+            FontStyle Bold = FontStyle.Regular;
+            FontStyle Italic = FontStyle.Regular;
+            FontStyle Underline = FontStyle.Regular;
+            if (doBold == true)
+            {
+                Bold = FontStyle.Bold;
+            }
+            if (doItalic == true)
+            {
+                Italic = FontStyle.Italic;
+            }
+            if (doUnderline == true)
+            {
+                Underline = FontStyle.Underline;
+            }
+            mainText.SelectionFont = new Font(mainText.SelectionFont.FontFamily, mainText.SelectionFont.Size, Bold | Italic | Underline);
         }
     }
 }
