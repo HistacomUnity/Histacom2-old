@@ -6,6 +6,7 @@ using System.Media;
 using System.Windows.Forms;
 using TimeHACK.Engine;
 using TimeHACK.Engine.Template;
+using TimeHACK.Engine.Template.Taskbars;
 using TimeHACK.OS.Win95.Win95Apps;
 using TimeHACK.WinClassicForms;
 
@@ -20,6 +21,7 @@ namespace TimeHACK.OS.Win95
         public List<WinClassic> nonimportantapps = new List<WinClassic>();
         public WinClassic webchat;
         public WinClassic ie;
+        public TaskBarController tb = new TaskBarController();
 
         public int currentappcount = 0;
 
@@ -59,6 +61,9 @@ namespace TimeHACK.OS.Win95
 
             //nonimportantapps.Capacity = 100;
             this.SendToBack();
+
+            // THIS IS TESTING STUFF HERE:
+            taskbarItems = tb.AddTaskbarItem95(0, "Test app", Properties.Resources.Win95IconWordpad, (UserControl)new Win95TaskBarItem(), taskbarItems);
         }
 
         private void fontLoad()
@@ -118,6 +123,7 @@ namespace TimeHACK.OS.Win95
         private void taskbartime_Click(object sender, EventArgs e)
         {
             //TODO: Set Up Year Codes
+            // We are actually thinking about not having save code because it would be nice if we could save tons of data!
         }
 
         // Set the Clock
@@ -237,8 +243,35 @@ namespace TimeHACK.OS.Win95
         {
             WinClassicWordPad wp = new WinClassicWordPad();
             WinClassic app = wm.startWin95(wp, "Wordpad", Properties.Resources.Win95IconWordpad, true, true);
+            AddTaskBarItem(app, (int)app.Tag, "Wordpad", Properties.Resources.Win95IconWordpad);
+            MessageBox.Show(app.Tag.ToString());
             app.BringToFront();
             startmenu.Hide();
+        }
+
+        public void AddTaskBarItem(Form Application, int ApplicationID, string ApplicationName, Image ApplicationIcon)
+        {
+            taskbarItems = tb.AddTaskbarItem95(ApplicationID, ApplicationName, ApplicationIcon, (UserControl)new Win95TaskBarItem(), taskbarItems);
+            Application.FormClosing += new FormClosingEventHandler(UpdateTaskbarFromClosedApplication);
+        }
+
+        public void UpdateTaskbarFromClosedApplication(object sender, FormClosingEventArgs e)
+        {
+            UpdateTaskbar();
+        }
+
+        public void UpdateTaskbar()
+        {
+            // Clears out all the items on the taskbar
+            taskbarItems.Controls.Clear();
+
+            // Loops through all the Applications which are open
+
+            foreach (Form form in tb.GetAllOpenApps()) 
+            {
+                // Calls that "AddToTaskbar" thing
+                taskbarItems = tb.AddTaskbarItem95((int)form.Tag, form.Text, (Image)form.Icon.ToBitmap(), (UserControl)new Win95TaskBarItem(), taskbarItems);                 
+            }
         }
     }
 }

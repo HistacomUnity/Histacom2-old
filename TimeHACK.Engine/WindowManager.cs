@@ -52,6 +52,17 @@ namespace TimeHACK.Engine
                 app.minimizebutton.Location = new Point(app.minimizebutton.Location.X, app.minimizebutton.Location.Y);
             }
 
+            // Time for the taskbar
+
+            // Convert an image to an icon
+            Bitmap theBitmap = new Bitmap(icon, new Size(icon.Width, icon.Height));
+            IntPtr Hicon = theBitmap.GetHicon();// Get an Hicon for myBitmap.
+            Icon newIcon = Icon.FromHandle(Hicon);// Create a new icon from the handle.
+
+            app.Tag = TaskBarController.AvalibleApplicationID;
+            app.Text = title;
+            app.Icon = newIcon;
+
             // Show the app
             app.Show();
             app.BringToFront();

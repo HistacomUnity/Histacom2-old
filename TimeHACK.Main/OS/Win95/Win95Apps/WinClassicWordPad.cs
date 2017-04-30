@@ -17,8 +17,8 @@ namespace TimeHACK.OS.Win95.Win95Apps
         WindowManager wm = new WindowManager();
 
         bool btnBoldSelected = true;
-        bool btnItalicSelected;
-        bool btnUnderlineSelected;
+        bool btnItalicSelected = true;
+        bool btnUnderlineSelected = true;
         bool doBold;
         bool doItalic;
         bool doUnderline;
