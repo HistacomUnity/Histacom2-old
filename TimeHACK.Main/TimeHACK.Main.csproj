@@ -137,11 +137,11 @@
     <Compile Include="OS\Win95\Win95Apps\WebChat1998.Designer.cs">
       <DependentUpon>WebChat1998.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\Win95Notepad.cs">
+    <Compile Include="OS\Win95\Win95Apps\WinClassicNotepad.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\Win95Notepad.Designer.cs">
-      <DependentUpon>Win95Notepad.cs</DependentUpon>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicNotepad.Designer.cs">
+      <DependentUpon>WinClassicNotepad.cs</DependentUpon>
     </Compile>
     <Compile Include="OS\Win95\Win95Apps\WinClassicDownloader.cs">
       <SubType>UserControl</SubType>
@@ -195,8 +195,8 @@
     <EmbeddedResource Include="OS\Win95\Win95Apps\WebChat1998.resx">
       <DependentUpon>WebChat1998.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\Win95Notepad.resx">
-      <DependentUpon>Win95Notepad.cs</DependentUpon>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicNotepad.resx">
+      <DependentUpon>WinClassicNotepad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicDownloader.resx">
       <DependentUpon>WinClassicDownloader.cs</DependentUpon>

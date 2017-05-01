@@ -19,7 +19,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
     {
         int chat_index = 0;
         WindowManager wm = new WindowManager();
-        WCMessageParser wcmp = new WCMessageParser();
+        MessageParser wcmp = new MessageParser();
         bool correctname = false;
         bool guessing = false;
 

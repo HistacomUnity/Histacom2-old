@@ -11,9 +11,9 @@ using TimeHACK.Engine;
 
 namespace TimeHACK.OS.Win95.Win95Apps
 {
-    public partial class Win95Notepad : UserControl
+    public partial class WinClassicNotepad : UserControl
     {
-        public Win95Notepad()
+        public WinClassicNotepad()
         {
             InitializeComponent();
             foreach (ToolStripMenuItem item in menuStrip1.Items)

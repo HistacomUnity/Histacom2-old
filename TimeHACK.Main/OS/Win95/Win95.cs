@@ -151,7 +151,7 @@ namespace TimeHACK.OS.Win95
 
         private void NotePadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            nonimportantapps.Add(wm.startWin95(new Win95Notepad(), "Notepad", Properties.Resources.Win95IconNotepad, true, true));
+            nonimportantapps.Add(wm.startWin95(new WinClassicNotepad(), "Notepad", Properties.Resources.Win95IconNotepad, true, true));
             nonimportantapps[nonimportantapps.Count - 1].BringToFront();
             nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
             startmenu.Hide();
