@@ -51,11 +51,13 @@ I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.O
 I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.WinClassicForms.TestApp.resources
 I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WebChat1998.resources
 I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.Win95Notepad.resources
+I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WinClassicAddressBook.resources
 I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WinClassicDownloader.resources
 I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WinClassicHWCV.resources
 I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WinClassicIE4.resources
 I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.WinClassicForms.WinClassicInstaller.resources
 I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WinClassicWordPad.resources
+I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.Engine.Template.Taskbars.Win95TaskBarItem.resources
 I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.Properties.Resources.resources
 I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.TitleScreen.resources
 I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.Main.csproj.GenerateResource.Cache
@@ -63,5 +65,3 @@ I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.e
 I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.application
 I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.exe
 I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.pdb
-I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WinClassicAddressBook.resources
-I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.Engine.Template.Taskbars.Win95TaskBarItem.resources

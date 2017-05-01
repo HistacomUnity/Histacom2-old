@@ -40,6 +40,7 @@
             this.progPic.Size = new System.Drawing.Size(28, 24);
             this.progPic.TabIndex = 0;
             this.progPic.TabStop = false;
+            this.progPic.Click += new System.EventHandler(this.Win95TaskBarItem_Click);
             // 
             // progName
             // 
@@ -50,6 +51,7 @@
             this.progName.Size = new System.Drawing.Size(60, 24);
             this.progName.TabIndex = 1;
             this.progName.Text = "label1";
+            this.progName.Click += new System.EventHandler(this.Win95TaskBarItem_Click);
             // 
             // Win95TaskBarItem
             // 
@@ -60,6 +62,7 @@
             this.Name = "Win95TaskBarItem";
             this.Size = new System.Drawing.Size(193, 30);
             this.Load += new System.EventHandler(this.Win95TaskBarItem_Load);
+            this.Click += new System.EventHandler(this.Win95TaskBarItem_Click);
             ((System.ComponentModel.ISupportInitialize)(this.progPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

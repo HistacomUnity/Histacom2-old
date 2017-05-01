@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TimeHACK.Engine;
 
 namespace TimeHACK.Engine.Template.Taskbars
 {
     public partial class Win95TaskBarItem : UserControl
     {
+        TaskBarController tb = new TaskBarController();
+        public string ApplicationID;
         public Win95TaskBarItem()
         {
             InitializeComponent();
@@ -23,7 +26,14 @@ namespace TimeHACK.Engine.Template.Taskbars
         {
             progName.Text = (string)this.Tag;
             progPic.Image = this.BackgroundImage;
-            this.BackgroundImage = null;
+            ApplicationID = (TaskBarController.AvalibleApplicationID - 1).ToString();
+            this.BackgroundImage = null;       
+            this.Width = (progName.Left + progName.Width);
+        }
+
+        private void Win95TaskBarItem_Click(object sender, EventArgs e)
+        {
+            tb.FocusAppFromID(ApplicationID);
         }
     }
 }

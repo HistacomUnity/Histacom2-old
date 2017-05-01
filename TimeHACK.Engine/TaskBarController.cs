@@ -10,9 +10,10 @@ namespace TimeHACK.Engine
 {
     public class TaskBarController
     {
+        
         public static int AvalibleApplicationID;
 
-        public Panel AddTaskbarItem95(int ApplicationID, string ApplicationName, Image ApplicationIcon, UserControl taskbar_item, Panel oldPanel)
+        public Panel AddTaskbarItem95(string ApplicationID, string ApplicationName, Image ApplicationIcon, UserControl taskbar_item, Panel oldPanel)
         {
             Panel returnPanel = oldPanel;
 
@@ -31,13 +32,27 @@ namespace TimeHACK.Engine
             List<Form> AppsList = new List<Form>();
             foreach (Form form in Application.OpenForms)
             {
-                if ((string)form.Tag != "ignoreFormOnTaskbar")
+                if (form.Tag.ToString() != "ignoreFormOnTaskbar")
                 {
                     AppsList.Add(form);
                 }             
             }
-
             return AppsList;
+        }
+
+        public void FocusAppFromID(string ApplicationID)
+        {
+            
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.Tag.ToString() == ApplicationID)
+                {
+                    form.Show();
+                    form.BringToFront();
+                    form.Focus();
+                    return;
+                }
+            }
         }
     }
 }
