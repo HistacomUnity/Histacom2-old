@@ -62,9 +62,11 @@ namespace TimeHACK.OS.Win95
             //nonimportantapps.Capacity = 100;
             this.SendToBack();
 
-            // THIS IS TESTING STUFF HERE:
-            taskbarItems = tb.AddTaskbarItem95("0", "Test app", Properties.Resources.Win95IconWordpad, (UserControl)new Win95TaskBarItem(), taskbarItems);
+            // Update the taskbar
             UpdateTaskbar();
+
+            // Bring to this the front
+            this.BringToFront();
         }
 
         private void fontLoad()
@@ -273,6 +275,11 @@ namespace TimeHACK.OS.Win95
             WinClassicWordPad wp = new WinClassicWordPad();
             WinClassic app = wm.startWin95(wp, "Wordpad", Properties.Resources.Win95IconWordpad, true, true);
             AddTaskBarItem(app, app.Tag.ToString(), "Wordpad", Properties.Resources.Win95IconWordpad);
+
+            nonimportantapps.Add(app);
+            nonimportantapps[nonimportantapps.Count - 1].BringToFront();
+            nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
+
             app.BringToFront();
             startmenu.Hide();
         }
