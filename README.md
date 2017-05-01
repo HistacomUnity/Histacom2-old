@@ -22,7 +22,7 @@ TimeHACK has a Discord at https://discord.gg/FZgQMDe (You can also click on the 
 TimeHACK has an AppVeyor at https://ci.appveyor.com/project/timehack/timehack (You can also use the AppVeyor Badge)
 
 ## Documentation
-This section will be filled at a later date.
+TimeHACK Documentation can be found at the TimeHACK Wiki. https://github.com/TimeHACKDevs/TimeHACK/wiki 
 
 ## Other Repositories
 We do have another repo which is of an completely discontinued porject called "HistacomVB", the idea of it being that it was, rather than a rewrite like this, the old game except being built upon. In the end however we stopped it because have "HistacomVB" and "TimeHACK" was just stupid. If you REALLY want to see the repo you can here: http://www.github.com/TimeHACKDevs/HistacomVB
