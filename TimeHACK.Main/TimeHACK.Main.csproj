@@ -137,12 +137,6 @@
     <Compile Include="OS\Win95\Win95Apps\WebChat1998.Designer.cs">
       <DependentUpon>WebChat1998.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\Win95Notepad.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="OS\Win95\Win95Apps\Win95Notepad.Designer.cs">
-      <DependentUpon>Win95Notepad.cs</DependentUpon>
-    </Compile>
     <Compile Include="OS\Win95\Win95Apps\WinClassicAddressBook.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -172,6 +166,12 @@
     </Compile>
     <Compile Include="OS\Win95\Win95Apps\WinClassicInstaller.Designer.cs">
       <DependentUpon>WinClassicInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicNotepad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicNotepad.Designer.cs">
+      <DependentUpon>WinClassicNotepad.cs</DependentUpon>
     </Compile>
     <Compile Include="OS\Win95\Win95Apps\WinClassicWordPad.cs">
       <SubType>UserControl</SubType>
@@ -207,9 +207,6 @@
     <EmbeddedResource Include="OS\Win95\Win95Apps\WebChat1998.resx">
       <DependentUpon>WebChat1998.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\Win95Notepad.resx">
-      <DependentUpon>Win95Notepad.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicAddressBook.resx">
       <DependentUpon>WinClassicAddressBook.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicInstaller.resx">
       <DependentUpon>WinClassicInstaller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicNotepad.resx">
+      <DependentUpon>WinClassicNotepad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicWordPad.resx">
       <DependentUpon>WinClassicWordPad.cs</DependentUpon>

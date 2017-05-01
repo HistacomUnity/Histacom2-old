@@ -1,6 +1,6 @@
 ﻿namespace TimeHACK.OS.Win95.Win95Apps
 {
-    partial class Win95Notepad
+    partial class WinClassicNotepad
     {
         /// <summary> 
         /// Required designer variable.
