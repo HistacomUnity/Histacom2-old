@@ -206,7 +206,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         break;
                     case "12PADAMS":
                         webBrowser1.Document.GetElementById("wc_b").Click += new HtmlElementEventHandler(WCDownloadButton_Click);
-                        webBrowser1.Document.GetElementById("distort").Style += "visibility:hidden;";
+                        if (!TitleScreen.frm95.hiddenpadamsFound) webBrowser1.Document.GetElementById("distort").Style += "visibility:hidden;";
                         break;
                 }
                 loadplz.Stop();

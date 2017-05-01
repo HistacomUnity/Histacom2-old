@@ -27,6 +27,8 @@ namespace TimeHACK.OS.Win95
 
         public bool webchatInstalled = false;
 
+        public bool hiddenpadamsFound = false;
+
         // Init the form
         public Windows95()
         {
@@ -125,8 +127,7 @@ namespace TimeHACK.OS.Win95
         // Give Year Code - NYI
         private void taskbartime_Click(object sender, EventArgs e)
         {
-            //TODO: Set Up Year Codes
-            // We are actually thinking about not having save code because it would be nice if we could save tons of data!
+            //TODO: Set Up Save System
         }
 
         // Set the Clock
@@ -308,6 +309,8 @@ namespace TimeHACK.OS.Win95
                 taskbarItems = tb.AddTaskbarItem95(form.Tag.ToString(), form.Text.ToString(), (Image)form.Icon.ToBitmap(), (UserControl)new Win95TaskBarItem(), taskbarItems);                
             }
         }
+
+        //TODO: Add Outlook Express 4
     }
 }
 
