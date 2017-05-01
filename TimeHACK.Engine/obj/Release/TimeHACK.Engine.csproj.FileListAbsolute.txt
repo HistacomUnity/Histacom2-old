@@ -19,3 +19,15 @@ C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Engine\obj\Release\TimeHAC
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Engine\obj\Release\TimeHACK.Engine.Template.WinClassic.resources
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Engine\obj\Release\TimeHACK.Engine.Template.AboutBox95.resources
 C:\Users\Liam\Documents\GitHub\TimeHACK-fork\TimeHACK.Engine\obj\Release\TimeHACK.Engine.Template.Win9XBSOD.resources
+I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Engine\bin\Release\TimeHACK.Engine.dll
+I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Engine\bin\Release\TimeHACK.Engine.pdb
+I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Engine\bin\Release\Newtonsoft.Json.dll
+I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Engine\obj\Release\TimeHACK.Engine.Properties.Resources.resources
+I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Engine\obj\Release\TimeHACK.Engine.Template.Win9XBSOD.resources
+I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Engine\obj\Release\TimeHACK.Engine.Template.AboutBox95.resources
+I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Engine\obj\Release\TimeHACK.Engine.Template.Infobox95.resources
+I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Engine\obj\Release\TimeHACK.Engine.Template.WinClassic.resources
+I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Engine\obj\Release\TimeHACK.Engine.csproj.GenerateResource.Cache
+I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Engine\obj\Release\TimeHACK.Engine.dll
+I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Engine\obj\Release\TimeHACK.Engine.pdb
+I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Engine\obj\Release\TimeHACK.Engine.csprojResolveAssemblyReference.cache

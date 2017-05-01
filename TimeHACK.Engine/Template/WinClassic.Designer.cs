@@ -93,6 +93,7 @@
             this.programtopbar.Name = "programtopbar";
             this.programtopbar.Size = new System.Drawing.Size(292, 18);
             this.programtopbar.TabIndex = 0;
+            this.programtopbar.Tag = "";
             this.programtopbar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Programtopbar_drag);
             // 
             // programIcon

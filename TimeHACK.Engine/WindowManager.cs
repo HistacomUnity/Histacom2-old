@@ -10,7 +10,6 @@ namespace TimeHACK.Engine
     {
         public static System.Drawing.Text.PrivateFontCollection pfc = new System.Drawing.Text.PrivateFontCollection();
 
-
         public WinClassic startWin95(UserControl content, String title, Image icon, Boolean MaxButton, Boolean MinButton)
         {
             // Setup Window
@@ -51,6 +50,21 @@ namespace TimeHACK.Engine
                 app.minimizebutton.Visible = false;
                 app.minimizebutton.Location = new Point(app.minimizebutton.Location.X, app.minimizebutton.Location.Y);
             }
+
+            // Time for the taskbar
+
+            // Convert an image to an icon (for the taskbar)
+            if (icon != null)
+            {
+                Bitmap theBitmap = new Bitmap(icon, new Size(icon.Width, icon.Height));
+                IntPtr Hicon = theBitmap.GetHicon(); // Get an Hicon for myBitmap.
+                Icon newIcon = Icon.FromHandle(Hicon); // Create a new icon from the handle.
+                app.Icon = newIcon;
+            }
+
+            // Set some values (for the taskbar)
+            app.Tag = TaskBarController.AvalibleApplicationID;
+            app.Text = title;        
 
             // Show the app
             app.Show();

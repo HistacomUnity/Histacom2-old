@@ -41,6 +41,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.taskbar = new System.Windows.Forms.Panel();
+            this.taskbarItems = new System.Windows.Forms.Panel();
             this.taskbartime = new System.Windows.Forms.Label();
             this.clockPanel = new System.Windows.Forms.Panel();
             this.startbutton = new System.Windows.Forms.PictureBox();
@@ -158,6 +159,7 @@
             // 
             this.taskbar.BackColor = System.Drawing.Color.Silver;
             this.taskbar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("taskbar.BackgroundImage")));
+            this.taskbar.Controls.Add(this.taskbarItems);
             this.taskbar.Controls.Add(this.taskbartime);
             this.taskbar.Controls.Add(this.clockPanel);
             this.taskbar.Controls.Add(this.startbutton);
@@ -166,6 +168,13 @@
             this.taskbar.Name = "taskbar";
             this.taskbar.Size = new System.Drawing.Size(640, 28);
             this.taskbar.TabIndex = 2;
+            // 
+            // taskbarItems
+            // 
+            this.taskbarItems.Location = new System.Drawing.Point(63, 3);
+            this.taskbarItems.Name = "taskbarItems";
+            this.taskbarItems.Size = new System.Drawing.Size(506, 22);
+            this.taskbarItems.TabIndex = 5;
             // 
             // taskbartime
             // 
@@ -1128,6 +1137,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Windows95";
+            this.Tag = "ignoreFormOnTaskbar";
             this.Text = "TimeHACKDesktop";
             this.Load += new System.EventHandler(this.Desktop_Load);
             this.panel1.ResumeLayout(false);
@@ -1237,5 +1247,6 @@
         private System.Windows.Forms.ToolStripMenuItem windowManagerTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem downloaderTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem installerTestToolStripMenuItem;
+        private System.Windows.Forms.Panel taskbarItems;
     }
 }

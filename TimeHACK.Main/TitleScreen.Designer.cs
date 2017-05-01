@@ -38,15 +38,15 @@
             this.Exit = new System.Windows.Forms.Button();
             this.NewGame = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.VM_Height = new System.Windows.Forms.NumericUpDown();
+            this.VM_Width = new System.Windows.Forms.NumericUpDown();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.startbutton = new System.Windows.Forms.PictureBox();
-            this.VM_Width = new System.Windows.Forms.NumericUpDown();
-            this.VM_Height = new System.Windows.Forms.NumericUpDown();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VM_Height)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VM_Width)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.startbutton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VM_Width)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VM_Height)).BeginInit();
             this.SuspendLayout();
             // 
             // gameversion
@@ -153,23 +153,27 @@
             this.panel2.Size = new System.Drawing.Size(800, 28);
             this.panel2.TabIndex = 10;
             // 
-            // pictureBox1
+            // VM_Height
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(612, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(187, 28);
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
-            // startbutton
-            // 
-            this.startbutton.Image = ((System.Drawing.Image)(resources.GetObject("startbutton.Image")));
-            this.startbutton.Location = new System.Drawing.Point(2, 4);
-            this.startbutton.Name = "startbutton";
-            this.startbutton.Size = new System.Drawing.Size(279, 22);
-            this.startbutton.TabIndex = 12;
-            this.startbutton.TabStop = false;
+            this.VM_Height.Location = new System.Drawing.Point(668, 5);
+            this.VM_Height.Maximum = new decimal(new int[] {
+            2160,
+            0,
+            0,
+            0});
+            this.VM_Height.Minimum = new decimal(new int[] {
+            480,
+            0,
+            0,
+            0});
+            this.VM_Height.Name = "VM_Height";
+            this.VM_Height.Size = new System.Drawing.Size(50, 20);
+            this.VM_Height.TabIndex = 15;
+            this.VM_Height.Value = new decimal(new int[] {
+            480,
+            0,
+            0,
+            0});
             // 
             // VM_Width
             // 
@@ -193,27 +197,23 @@
             0,
             0});
             // 
-            // VM_Height
+            // pictureBox1
             // 
-            this.VM_Height.Location = new System.Drawing.Point(668, 5);
-            this.VM_Height.Maximum = new decimal(new int[] {
-            2160,
-            0,
-            0,
-            0});
-            this.VM_Height.Minimum = new decimal(new int[] {
-            480,
-            0,
-            0,
-            0});
-            this.VM_Height.Name = "VM_Height";
-            this.VM_Height.Size = new System.Drawing.Size(50, 20);
-            this.VM_Height.TabIndex = 15;
-            this.VM_Height.Value = new decimal(new int[] {
-            480,
-            0,
-            0,
-            0});
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(612, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(187, 28);
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
+            // startbutton
+            // 
+            this.startbutton.Image = ((System.Drawing.Image)(resources.GetObject("startbutton.Image")));
+            this.startbutton.Location = new System.Drawing.Point(2, 4);
+            this.startbutton.Name = "startbutton";
+            this.startbutton.Size = new System.Drawing.Size(279, 22);
+            this.startbutton.TabIndex = 12;
+            this.startbutton.TabStop = false;
             // 
             // TitleScreen
             // 
@@ -230,14 +230,15 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "TitleScreen";
+            this.Tag = "ignoreFormOnTaskbar";
             this.Text = "TimeHACK Launcher";
             this.Load += new System.EventHandler(this.TitleScreen_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VM_Height)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VM_Width)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.startbutton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VM_Width)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VM_Height)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -17,8 +17,8 @@ namespace TimeHACK.OS.Win95.Win95Apps
         WindowManager wm = new WindowManager();
 
         bool btnBoldSelected = true;
-        bool btnItalicSelected;
-        bool btnUnderlineSelected;
+        bool btnItalicSelected = true;
+        bool btnUnderlineSelected = true;
         bool doBold;
         bool doItalic;
         bool doUnderline;
@@ -122,7 +122,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void aboutWordpadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            wm.startAboutBox95("Wordpad", "Microsoft Wordpad", Properties.Resources.WinClassicWordpad);
+            wm.startAboutBox95("Wordpad", "Microsoft Wordpad", Properties.Resources.Win95IconWordpad);
         }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)

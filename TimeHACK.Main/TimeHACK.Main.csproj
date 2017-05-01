@@ -137,11 +137,11 @@
     <Compile Include="OS\Win95\Win95Apps\WebChat1998.Designer.cs">
       <DependentUpon>WebChat1998.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicNotepad.cs">
+    <Compile Include="OS\Win95\Win95Apps\WinClassicAddressBook.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicNotepad.Designer.cs">
-      <DependentUpon>WinClassicNotepad.cs</DependentUpon>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicAddressBook.Designer.cs">
+      <DependentUpon>WinClassicAddressBook.cs</DependentUpon>
     </Compile>
     <Compile Include="OS\Win95\Win95Apps\WinClassicDownloader.cs">
       <SubType>UserControl</SubType>
@@ -167,11 +167,23 @@
     <Compile Include="OS\Win95\Win95Apps\WinClassicInstaller.Designer.cs">
       <DependentUpon>WinClassicInstaller.cs</DependentUpon>
     </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicNotepad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicNotepad.Designer.cs">
+      <DependentUpon>WinClassicNotepad.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\Win95\Win95Apps\WinClassicWordPad.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="OS\Win95\Win95Apps\WinClassicWordPad.Designer.cs">
       <DependentUpon>WinClassicWordPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95TaskBarItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95TaskBarItem.Designer.cs">
+      <DependentUpon>Win95TaskBarItem.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -195,8 +207,8 @@
     <EmbeddedResource Include="OS\Win95\Win95Apps\WebChat1998.resx">
       <DependentUpon>WebChat1998.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicNotepad.resx">
-      <DependentUpon>WinClassicNotepad.cs</DependentUpon>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicAddressBook.resx">
+      <DependentUpon>WinClassicAddressBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicDownloader.resx">
       <DependentUpon>WinClassicDownloader.cs</DependentUpon>
@@ -210,8 +222,14 @@
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicInstaller.resx">
       <DependentUpon>WinClassicInstaller.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicNotepad.resx">
+      <DependentUpon>WinClassicNotepad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicWordPad.resx">
       <DependentUpon>WinClassicWordPad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95TaskBarItem.resx">
+      <DependentUpon>Win95TaskBarItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

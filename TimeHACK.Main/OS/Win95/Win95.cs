@@ -6,6 +6,7 @@ using System.Media;
 using System.Windows.Forms;
 using TimeHACK.Engine;
 using TimeHACK.Engine.Template;
+using TimeHACK.Engine.Template.Taskbars;
 using TimeHACK.OS.Win95.Win95Apps;
 using TimeHACK.WinClassicForms;
 
@@ -20,6 +21,7 @@ namespace TimeHACK.OS.Win95
         public List<WinClassic> nonimportantapps = new List<WinClassic>();
         public WinClassic webchat;
         public WinClassic ie;
+        public TaskBarController tb = new TaskBarController();
 
         public int currentappcount = 0;
 
@@ -59,6 +61,10 @@ namespace TimeHACK.OS.Win95
 
             //nonimportantapps.Capacity = 100;
             this.SendToBack();
+
+            // THIS IS TESTING STUFF HERE:
+            taskbarItems = tb.AddTaskbarItem95("0", "Test app", Properties.Resources.Win95IconWordpad, (UserControl)new Win95TaskBarItem(), taskbarItems);
+            UpdateTaskbar();
         }
 
         private void fontLoad()
@@ -118,6 +124,7 @@ namespace TimeHACK.OS.Win95
         private void taskbartime_Click(object sender, EventArgs e)
         {
             //TODO: Set Up Year Codes
+            // We are actually thinking about not having save code because it would be nice if we could save tons of data!
         }
 
         // Set the Clock
@@ -151,34 +158,54 @@ namespace TimeHACK.OS.Win95
 
         private void NotePadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            nonimportantapps.Add(wm.startWin95(new WinClassicNotepad(), "Notepad", Properties.Resources.Win95IconNotepad, true, true));
+            WinClassicNotepad wp = new WinClassicNotepad();
+            WinClassic app = wm.startWin95(wp, "Notepad", Properties.Resources.Win95IconNotepad, true, true);
+            AddTaskBarItem(app, app.Tag.ToString(), "Notepad", Properties.Resources.Win95IconNotepad);
+
+            nonimportantapps.Add(app);
             nonimportantapps[nonimportantapps.Count - 1].BringToFront();
             nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
+
+            app.BringToFront();
             startmenu.Hide();
         }
         private void windowManagerTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TestApp test = new TestApp();
-            wm.startWin95(test, "TestApp", null, true, true);
+            WinClassic app = wm.startWin95(test, "TestApp", null, true, true);
+            AddTaskBarItem(app, app.Tag.ToString(), "TestApp", null);
+            app.BringToFront();
+            startmenu.Hide();
         }
 
         private void downloaderTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WinClassicDownloader opendownload = new WinClassicDownloader();
-            wm.startWin95(opendownload, "Downloader", null, false, true);
+            WinClassic app = wm.startWin95(opendownload, "Downloader", null, false, true);
             opendownload.appName.Text = "Downloading: Survive The Day";
+
+            AddTaskBarItem(app, app.Tag.ToString(), "Downloader", null);
+
+            app.BringToFront();
+            startmenu.Hide();
         }
 
         private void installerTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WinClassicInstaller openinstaller = new WinClassicInstaller();
-            wm.startWin95(openinstaller, "Installer", null, false, true);
+            WinClassic app = wm.startWin95(openinstaller, "Installer", null, false, true);
+
+            AddTaskBarItem(app, app.Tag.ToString(), "Installer", null);
+
+            app.BringToFront();
+            startmenu.Hide();
         }
 
         private void InternetExplorerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (ie != null) { wm.startInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", Properties.Resources.Win95Warning); return; }
             ie = wm.startWin95(new WinClassicIE4(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
+            AddTaskBarItem(ie, ie.Tag.ToString(), "Internet Explorer 4", Properties.Resources.Win95IconIE4);
             ie.BringToFront();
             ie.FormClosing += new FormClosingEventHandler(InternetExplorer4_Closing);
             startmenu.Hide();
@@ -198,6 +225,7 @@ namespace TimeHACK.OS.Win95
                     {
                         if (ie != null) { wm.startInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", Properties.Resources.Win95Warning); return; }
                         ie = wm.startWin95(new WinClassicIE4(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
+                        AddTaskBarItem(ie, ie.Tag.ToString(), "Internet Explorer 4", Properties.Resources.Win95IconIE4);
                         ie.BringToFront();
                         ie.FormClosing += new FormClosingEventHandler(InternetExplorer4_Closing);
                         startmenu.Hide();
@@ -206,6 +234,7 @@ namespace TimeHACK.OS.Win95
                         WinClassicInstaller inst = new WinClassicInstaller();
                         inst.installname.Text = "Web Chat 1998";
                         WinClassic app = wm.startWin95(inst, "Web Chat Setup", null, true, true);
+                        AddTaskBarItem(app, app.Tag.ToString(), "Web Chat Setup", null);
                         app.BringToFront();
                         startmenu.Hide();
                     }
@@ -215,12 +244,18 @@ namespace TimeHACK.OS.Win95
 
         private void infoboxTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            wm.startInfobox95("AShifter's Infobox", "This is the very first TimeHACK Infobox. It's really easy to call, too! \n Just use wm.startInfobox95(String title, String text, Image erroricon)!", Properties.Resources.Win95Info);
+            WinClassic app = wm.startInfobox95("AShifter's Infobox", "This is the very first TimeHACK Infobox. It's really easy to call, too! \n Just use wm.startInfobox95(String title, String text, Image erroricon)!", Properties.Resources.Win95Info);
+
+            app.BringToFront();
+            startmenu.Hide();
         }
         private void WebChatToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WebChat1998 wc = new WebChat1998();
             WinClassic app = wm.startWin95(wc, "Web Chat 1998", null, true, true);
+
+            AddTaskBarItem(app, app.Tag.ToString(), "Web Chat 1998", null);
+
             app.BringToFront();
             startmenu.Hide();
         }
@@ -237,8 +272,34 @@ namespace TimeHACK.OS.Win95
         {
             WinClassicWordPad wp = new WinClassicWordPad();
             WinClassic app = wm.startWin95(wp, "Wordpad", Properties.Resources.Win95IconWordpad, true, true);
+            AddTaskBarItem(app, app.Tag.ToString(), "Wordpad", Properties.Resources.Win95IconWordpad);
             app.BringToFront();
             startmenu.Hide();
+        }
+
+        public void AddTaskBarItem(Form Application, string ApplicationID, string ApplicationName, Image ApplicationIcon)
+        {
+            taskbarItems = tb.AddTaskbarItem95(ApplicationID, ApplicationName, ApplicationIcon, (UserControl)new Win95TaskBarItem(), taskbarItems);
+            Application.FormClosed += new FormClosedEventHandler(UpdateTaskbarFromClosedApplication);
+        }
+
+        public void UpdateTaskbarFromClosedApplication(object sender, FormClosedEventArgs e)
+        {
+            UpdateTaskbar();
+        }
+
+        public void UpdateTaskbar()
+        {
+            // Clears out all the items on the taskbar
+            taskbarItems.Controls.Clear();
+
+            // Loops through all the Applications which are open
+
+            foreach (Form form in tb.GetAllOpenApps()) 
+            {
+                // Calls that "AddToTaskbar" thing
+                taskbarItems = tb.AddTaskbarItem95(form.Tag.ToString(), form.Text.ToString(), (Image)form.Icon.ToBitmap(), (UserControl)new Win95TaskBarItem(), taskbarItems);                
+            }
         }
     }
 }

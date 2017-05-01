@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="BSODCreator.cs" />
     <None Include="Resources\WinClassic\Window\pjBg6mKP.bin" />
+    <Compile Include="TaskBarController.cs" />
     <Compile Include="Template\Win9XBSOD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,5 +125,6 @@
   <ItemGroup>
     <None Include="Resources\WinClassic\Window\LeviWindows.ttf" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
