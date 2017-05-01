@@ -158,7 +158,7 @@ namespace TimeHACK.OS.Win95
 
         private void NotePadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Win95Notepad wp = new Win95Notepad();
+            WinClassicNotepad wp = new WinClassicNotepad();
             WinClassic app = wm.startWin95(wp, "Notepad", Properties.Resources.Win95IconNotepad, true, true);
             AddTaskBarItem(app, app.Tag.ToString(), "Notepad", Properties.Resources.Win95IconNotepad);
 
