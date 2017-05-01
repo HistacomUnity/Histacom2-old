@@ -23,6 +23,8 @@ namespace TimeHACK.OS.Win95.Win95Apps
             {
                 Label3.Show();
                 Label3.Text = "Hidden Content Found: Time Distorter";
+                TitleScreen.frm95.hiddenpadamsFound = true;
+                if (TitleScreen.frm95.ie != null && ((WinClassicIE4)TitleScreen.frm95.ie.programContent.Controls[0]).currentsite.Title == "12PADAMS") ((WinClassicIE4)TitleScreen.frm95.ie.programContent.Controls[0]).webBrowser1.Refresh();
             }
             else
             {
