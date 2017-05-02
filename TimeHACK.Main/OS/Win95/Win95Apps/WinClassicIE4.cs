@@ -54,7 +54,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             hotmailpadams.Hide();
         }
 
-        private void LinkLabel15_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LinkLabel15_LinkClicked(object sender, HtmlElementEventArgs e)
         {
             goToSite("www.google.com", false);
         }
@@ -102,8 +102,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             {
                 case "www.google.com":
                     hidePrograms();
-                    googlemain.Dock = DockStyle.Fill;
-                    googlemain.Show();
+                    webBrowser1.DocumentText = resources.GetString("google_HTML");
                     break;
                 case "www.google.stanford.edu":
                     hidePrograms();
@@ -202,6 +201,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 switch (currentsite.Title)
                 {
                     case "IE4START":
+                        webBrowser1.Document.GetElementById("google").Click += new HtmlElementEventHandler(LinkLabel15_LinkClicked);
                         webBrowser1.Document.GetElementById("padams").Click += new HtmlElementEventHandler(padams_LinkClicked);
                         break;
                     case "12PADAMS":
