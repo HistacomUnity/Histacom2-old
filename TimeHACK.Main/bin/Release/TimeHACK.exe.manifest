@@ -56,14 +56,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TimeHACK.exe" size="4749312">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TimeHACK.exe" size="4759040">
       <assemblyIdentity name="TimeHACK" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>USJSB0RbAErTM2iIsNLuhWsSdFMJw1pUqFSpExMbURU=</dsig:DigestValue>
+        <dsig:DigestValue>2Jbod4Xow0JGKpYFpNEsaUATDtSEvAz3bjwZPOERE5o=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -75,7 +75,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>wm69NNpRNuCRoWK1hSrNfdidWvbiOlQSGZSent79u78=</dsig:DigestValue>
+        <dsig:DigestValue>m6y3wcwMukQ5TrLCcX8fgYK8EJp+K9PMtNF0cSKByXA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -97,22 +97,40 @@
       <dsig:DigestValue>nzG7pg3H+3uPdr/lzLxyroAH8XD1zvIYW4peV9fAD6M=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Resources\IE4\googlehome.html" size="470">
+  <file name="Resources\IE4\google.jpg" size="6218">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>AV1YV8IcNRF9IHH0S+v588FaGy4GVtg7AgrVXUKtqmE=</dsig:DigestValue>
+      <dsig:DigestValue>MsBfDGQbMHg7EHMcNY/8mrPtzIR7Si+xtJAcxLHz+wo=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Resources\IE4\ie4start.html" size="1061">
+  <file name="Resources\IE4\googlehome.html" size="473">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>CI8nqeRbEcv/kXZo8apCAtXPlg//IMQaPU9P6+ub2dw=</dsig:DigestValue>
+      <dsig:DigestValue>M69a0Q8VAYpaeWem7o8i+9iv5cJdzgRLyWD48mOZQiM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\IE4\googleprototype.html" size="2575">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>EkfQ8aLPyyAH5829pfeLE7IKs7tDqPXZl2I+MzNMjZo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\IE4\ie4start.html" size="1064">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>GI6mR05IfCFwEQvctIONdEaTnhHSnhbc3fLErCxmNJE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\IE4\padams.html" size="3165">
@@ -349,13 +367,13 @@
       <dsig:DigestValue>qClKL3sLGduhUUkgph3TLlUcOJ9Rap+lqX32zp8f31A=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Resources\WinClassic\WinClassicOutlook.png" size="537">
+  <file name="Resources\WinClassic\WinClassicOutlook.png" size="632">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>uw/4Jjmd9N9HqHaI17CYoAEwsYy8+2t/nJ3z5vGDD04=</dsig:DigestValue>
+      <dsig:DigestValue>AzvxwpGvMrksiXkc3mKW5uuzp7TsxUxS7fhCKr9tmWE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\WinClassic\WinClassicProgramItem.png" size="312">
