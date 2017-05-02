@@ -283,7 +283,7 @@ Where do you want to go today?&lt;/p&gt;
 			p.app button {
 				float: right;
 				background-color: silver;
-				border-color: gray black black gray;
+				border-color: white black black white;
 				margin-right: 2px;
 			}
 			a {
@@ -314,13 +314,36 @@ Where do you want to go today?&lt;/p&gt;
 					&lt;p class="app" id="eb"&gt;Error Blaster 95 &lt;button id="eb_b"&gt;Download&lt;/button&gt;&lt;/p&gt;
 				&lt;/div&gt;&lt;/td&gt;
 				&lt;td&gt;&lt;div class="sites"&gt;
-					&lt;h1&gt;WebSites&lt;/h1&gt;
-					&lt;a id="hotmail" href="hotmail"&gt;www.hotmail.com&lt;/a&gt;
+					&lt;h1&gt;Changelog&lt;/h1&gt;
+					&lt;p class="app"&gt;1996: 12padams.com created&lt;/p&gt;
+                    &lt;p class="app"&gt;1997: Software added to the site&lt;/p&gt;
+                    &lt;p class="app"&gt;1̧͙̙̦̪͙͇̜̥͍̟͍̹̰̝͖̫̩͘͡͡9̸̨͏̖̱̗̣̥͕̲͈̬̦9͠҉̶̢͔̹̖͇̫̩̻̪̬͔̥̟̺̼̺̟̫8̷̴̶̱̩͖̟̠̬̻̼̳̰̺͚͜͞:̧͟͏̰̣̠̹͍͔̼͕̲͇̪̥̗̞͚͇̖ͅ ͏̙͇̮̤̠͇̜͚͈͇͔̠̙͜͡ͅÀ͏̰̮̞̲̠̩̳͙͓͉̭̼̠͕̣͇̜͎ͅd̢̩̝̙̩̭̫͓̮͙͔̘̥͝d̻̻̪̙͖̬͈͟͝e͠҉̨̧҉̯̙̹̝̟̺̰͖̹̞̻̝̖̪͉͍͇̬#҉̵̻̜͇̻̹͈̀͟ ̨̡̘͓͔̜̭̫͖͔̰̦̘̀#̛͓̬̭̦̹̙̭͕̕#̧͢͠͏̖̙͚͉͇̣̜̖ͅ#̜̝͚͓̳̘̭̣̲̟̤̖͇̬̠̯̠̀͠ ̢͚̲̞̯͎͙̪̗̜̹͙͓͉͢ͅ#̡͙̻̫̝̪͙͚̺̝͓̘̬̬͙͔̀̕͠#̴҉͖̲̺̱͖͈̭̭ͅ#̸̸̷̼̫̪̖̻̻͈̭̬͓̘͓̦̟̻̪͇̞̕#̸̢̨̻̗̣̠̥̖̜̜̖̺͍̝̗͓̦̳̫#̛͡҉̭̝̙̟̘̩̬͖͎̘̞̭̖͔̪̼̠͢ͅ#̰̜̭̹̻̖̬̺͘͡#̛̬̣̳͔͔̘̟͜͢͟͡#̷̨̼̺̤̥̞́͢͡ ̢̞̬͙͍̬̪̪̰̰̰̙̮͙͚͕̩̟͇̕͜ͅ#̶͙̣̣̦͈͈̫̕͡#̸̡̥̹̮͇̱̱͍͜͜͢#̵̢̧̦͙̮̮͔͖̞̮͚͞#̧̗̤̱̪̜͓̠͖̞̰͍͢#̧̱̳̻̖̝͇͜͞#̛́҉͍̩̞̬͔̬̪̻̯̩#̷̴̨̙͚̹̘̜̗͔̺͖̳̕͜#̶̬͖͙̠̜̲̱̲͙̻̙̩̹̳̪̠̖́̕͟͞ͅ&lt;/p&gt;
 				&lt;/div&gt;&lt;/td&gt;
 			&lt;/tr&gt;
 		&lt;/table&gt;
 		&lt;h1 id="copyright"&gt;Copyright 1998 12padams&lt;/h1&gt;
 	&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="google_HTML" xml:space="preserve">
+    <value>&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8" /&gt;
+        &lt;title&gt;GOOGLE&lt;/title&gt;
+        &lt;style&gt;
+            a {
+				color: blue;
+				text-decoration: underline;
+				cursor: hand;
+			}
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Welcome to Google&lt;/h1&gt;
+        &lt;a id="prototype"&gt;Google Search Engine Prototype&lt;/a&gt;
+        &lt;br /&gt;
+        &lt;a id="alpha"&gt;Might-work-some-of-the-time-prototype that is much more up to date.&lt;/a&gt;
+    &lt;/body&gt;
 &lt;/html&gt;</value>
   </data>
 </root>

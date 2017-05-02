@@ -1153,7 +1153,6 @@
             this.LinkLabel15.TabStop = true;
             this.LinkLabel15.Text = "www.google.com";
             this.LinkLabel15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.LinkLabel15.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel15_LinkClicked);
             // 
             // Label3
             // 
