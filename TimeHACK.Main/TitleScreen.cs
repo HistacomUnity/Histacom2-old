@@ -22,8 +22,8 @@ namespace TimeHACK
         public TitleScreen()
         {
             InitializeComponent();
-            if (!Directory.Exists("C:\\TimeHackData")) thfolder = Directory.CreateDirectory("C:\\TimeHackData");
-            else thfolder = new DirectoryInfo("C:\\TimeHackData");
+            if (!Directory.Exists("C:\\TimeHack")) thfolder = Directory.CreateDirectory("C:\\TimeHack");
+            else thfolder = new DirectoryInfo("C:\\TimeHack");
             datafolder = Directory.CreateDirectory(thfolder.FullName + "\\Data");
             Resources.google.Save(datafolder.FullName + "\\google.jpg");
             profilefolder = Directory.CreateDirectory(thfolder.FullName + "\\Profiles");
