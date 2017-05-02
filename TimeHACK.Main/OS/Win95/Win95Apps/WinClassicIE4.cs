@@ -54,7 +54,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             hotmailpadams.Hide();
         }
 
-        private void LinkLabel15_LinkClicked(object sender, HtmlElementEventArgs e)
+        private void google_LinkClicked(object sender, HtmlElementEventArgs e)
         {
             goToSite("www.google.com", false);
         }
@@ -64,12 +64,12 @@ namespace TimeHACK.OS.Win95.Win95Apps
             goToSite("www.12padams.com", false);
         }
 
-        private void googleprototypelink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void googleprototypelink_LinkClicked(object sender, HtmlElementEventArgs e)
         {
             goToSite("www.google.stanford.edu", false);
         }
 
-        private void googlebetalink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void googlebetalink_LinkClicked(object sender, HtmlElementEventArgs e)
         {
             goToSite("www.alpha.google.com", false);
         }
@@ -106,8 +106,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     break;
                 case "www.google.stanford.edu":
                     hidePrograms();
-                    googleprototype.Dock = DockStyle.Fill;
-                    googleprototype.Show();
+                    webBrowser1.DocumentText = resources.GetString("prototype_HTML");
                     break;
                 case "www.alpha.google.com":
                     hidePrograms();
@@ -201,12 +200,16 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 switch (currentsite.Title)
                 {
                     case "IE4START":
-                        webBrowser1.Document.GetElementById("google").Click += new HtmlElementEventHandler(LinkLabel15_LinkClicked);
+                        webBrowser1.Document.GetElementById("google").Click += new HtmlElementEventHandler(google_LinkClicked);
                         webBrowser1.Document.GetElementById("padams").Click += new HtmlElementEventHandler(padams_LinkClicked);
                         break;
                     case "12PADAMS":
                         webBrowser1.Document.GetElementById("wc_b").Click += new HtmlElementEventHandler(WCDownloadButton_Click);
                         if (!TitleScreen.frm95.hiddenpadamsFound) webBrowser1.Document.GetElementById("distort").Style += "visibility:hidden;";
+                        break;
+                    case "GOOGLE":
+                        webBrowser1.Document.GetElementById("prototype").Click += new HtmlElementEventHandler(googleprototypelink_LinkClicked);
+                        webBrowser1.Document.GetElementById("alpha").Click += new HtmlElementEventHandler(googlebetalink_LinkClicked);
                         break;
                 }
                 loadplz.Stop();

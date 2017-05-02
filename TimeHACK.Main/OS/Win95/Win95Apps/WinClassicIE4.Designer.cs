@@ -1956,7 +1956,6 @@
             this.googlebetalink.TabIndex = 2;
             this.googlebetalink.TabStop = true;
             this.googlebetalink.Text = "Might-work-some-of-the-time-prototype that is much more up to date. ";
-            this.googlebetalink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.googlebetalink_LinkClicked);
             // 
             // googleprototypelink
             // 
@@ -1968,7 +1967,6 @@
             this.googleprototypelink.TabIndex = 1;
             this.googleprototypelink.TabStop = true;
             this.googleprototypelink.Text = "Google Search Engine Prototype";
-            this.googleprototypelink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.googleprototypelink_LinkClicked);
             // 
             // Label6
             // 

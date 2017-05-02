@@ -227,7 +227,7 @@ So Please enjoy Using this amzing software and show the world what your made of.
 			a {
 				color: blue;
 				text-decoration: underline;
-				cursor: hand;
+				cursor: pointer;
 			}
 		&lt;/style&gt;
 	&lt;/head&gt;
@@ -334,7 +334,7 @@ Where do you want to go today?&lt;/p&gt;
             a {
 				color: blue;
 				text-decoration: underline;
-				cursor: hand;
+				cursor: pointer;
 			}
         &lt;/style&gt;
     &lt;/head&gt;
@@ -343,6 +343,72 @@ Where do you want to go today?&lt;/p&gt;
         &lt;a id="prototype"&gt;Google Search Engine Prototype&lt;/a&gt;
         &lt;br /&gt;
         &lt;a id="alpha"&gt;Might-work-some-of-the-time-prototype that is much more up to date.&lt;/a&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="prototype_HTML" xml:space="preserve">
+    <value>&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8" /&gt;
+        &lt;title&gt;PROTOTYPE&lt;/title&gt;
+        &lt;style&gt;
+            a {
+                color: blue;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body bgcolor="#FFFFFF"&gt;
+        &lt;center&gt;
+            &lt;img src="file:///C:/TimeHackData/Data/google.jpg" width="351" height="113"&gt;&lt;br&gt;
+            &lt;table border="0" cellspacing="0" cellpadding="5" width="70%"&gt;
+                &lt;tr&gt;
+                    &lt;td bgcolor="#EEEEEE"&gt;
+                        &lt;center&gt;
+                            Search the web using Google!&lt;br&gt;
+                            &lt;input type="text" name="query" value="" size="40"&gt;&lt;br&gt;
+                            &lt;select name="num"&gt;
+                                &lt;option value="10" selected&gt;10 results
+                                &lt;option value="30"&gt;30 results
+                                &lt;option value="100"&gt;100 results
+                            &lt;/select&gt;
+                            &lt;button id="search"&gt;Google Search&lt;/button&gt;
+                            &lt;button id="lucky"&gt;I'm feeling lucky&lt;/button&gt; &lt;br&gt;
+                            &lt;i&gt;Index contains ~25 million pages (soon to be much bigger)&lt;/i&gt;
+                        &lt;/center&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;
+                        &lt;center&gt;
+                            &lt;h2&gt;&lt;a&gt;About Google!&lt;/a&gt;&lt;/h2&gt;
+                            &lt;a&gt;
+                                Stanford
+                                Search
+                            &lt;/a&gt; &lt;a&gt;Linux Search&lt;/a&gt;
+                        &lt;/center&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr align="LEFT"&gt;
+                    &lt;td valign="CENTER" bgcolor="#EEEEEE" width="100%"&gt;
+                        &lt;center&gt;Get Google! updates monthly!&lt;/center&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+
+                &lt;tr align="LEFT"&gt;
+                    &lt;td bgcolor="#EEEEEE"&gt;
+                        &lt;center&gt;
+                            &lt;input type="text" name="emailaddr" value="your e-mail" size="18"&gt;
+                            &lt;input type="submit" name="SubmitAction" value="Subscribe"&gt;&lt;font size="-1"&gt;&amp;nbsp;&amp;nbsp;&lt;a&gt;Archive&lt;/a&gt;&lt;/font&gt;
+                        &lt;/center&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+        &lt;/table&gt;
+        &lt;/center&gt;
+
+        &lt;center&gt;&lt;font size="-1"&gt;Copyright &amp;copy;1997-8 Stanford University&lt;/font&gt;&lt;/center&gt;
+
     &lt;/body&gt;
 &lt;/html&gt;</value>
   </data>

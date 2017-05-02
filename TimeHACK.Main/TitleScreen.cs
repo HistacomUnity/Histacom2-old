@@ -1,6 +1,7 @@
 ﻿using TimeHACK.Properties;
 using System;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 using TimeHACK.OS.Win95;
 using TimeHACK.Engine;
@@ -14,9 +15,18 @@ namespace TimeHACK
         public static string username;
         public static string progress = "95";
 
+        public static DirectoryInfo thfolder;
+        public static DirectoryInfo datafolder;
+        public static DirectoryInfo profilefolder;
+
         public TitleScreen()
         {
             InitializeComponent();
+            if (!Directory.Exists("C:\\TimeHack")) thfolder = Directory.CreateDirectory("C:\\TimeHack");
+            else thfolder = new DirectoryInfo("C:\\TimeHack");
+            datafolder = Directory.CreateDirectory(thfolder.FullName + "\\Data");
+            Resources.google.Save(datafolder.FullName + "\\google.jpg");
+            profilefolder = Directory.CreateDirectory(thfolder.FullName + "\\Profiles");
         }
 
         private void closebutton_Click(object sender, EventArgs e)
