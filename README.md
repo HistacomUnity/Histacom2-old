@@ -1,3 +1,4 @@
+
 <a href="https://ci.appveyor.com/project/timehack/timehack"><img src="https://ci.appveyor.com/api/projects/status/8x34p8b0i2idblgd?svg=true" style="border: 0;" alt="AppVeyor Badge"></a>
 
 [![Discord](https://discordapp.com/api/guilds/234414439330349056/widget.png?style=shield)](https://discord.gg/FZgQMDe)
@@ -21,6 +22,8 @@ TimeHACK has a Discord at https://discord.gg/FZgQMDe (You can also click on the 
 
 TimeHACK has an AppVeyor at https://ci.appveyor.com/project/timehack/timehack (You can also use the AppVeyor Badge)
 
+TimeHACK has a YouTube channel at https://www.youtube.com/channel/UCU3uiIgHdLaNvPYEB1hWPsg (This has a tutorial on how to contribute)
+
 ## Documentation
 TimeHACK Documentation can be found at the TimeHACK Wiki. https://github.com/TimeHACKDevs/TimeHACK/wiki 
 
@@ -29,4 +32,3 @@ We do have another repo which is of an completely discontinued porject called "H
 
 ## License
 TimeHACK is Licensed under the [MIT Software license](https://github.com/TimeHACKDevs/TimeHACK/blob/master/LICENSE). All code contributed to the TimeHACK project is the property of the TimeHACK development team, and will not be removed upon request.
-
