@@ -119,6 +119,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NewGameDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewGameDialog.Designer.cs">
+      <DependentUpon>NewGameDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\Win95\Win95.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +210,9 @@
     <Compile Include="TitleScreen.Designer.cs">
       <DependentUpon>TitleScreen.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="NewGameDialog.resx">
+      <DependentUpon>NewGameDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95.resx">
       <DependentUpon>Win95.cs</DependentUpon>
     </EmbeddedResource>

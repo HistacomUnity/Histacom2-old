@@ -90,3 +90,4 @@ C:\Users\lempamo\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHA
 C:\Users\lempamo\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.Main.csproj.GenerateResource.Cache
 C:\Users\lempamo\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.exe.manifest
 C:\Users\lempamo\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.application
+I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.NewGameDialog.resources

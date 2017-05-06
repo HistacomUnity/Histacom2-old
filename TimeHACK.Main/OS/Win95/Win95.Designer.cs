@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.resources = new System.ComponentModel.ComponentResourceManager(typeof(Windows95));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Windows95));
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("My Computer", 0);
             System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Network Neighborhood", 5);
             System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Inbox", 3);
@@ -238,7 +238,7 @@
             this.startmenuitems.Name = "startmenuitems";
             this.startmenuitems.Padding = new System.Windows.Forms.Padding(6, 2, 0, 0);
             this.startmenuitems.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.startmenuitems.Size = new System.Drawing.Size(141, 292);
+            this.startmenuitems.Size = new System.Drawing.Size(141, 311);
             this.startmenuitems.TabIndex = 0;
             this.startmenuitems.Text = "StartMenu";
             // 
@@ -439,6 +439,7 @@
             this.AddressBookToolStripMenuItem.Name = "AddressBookToolStripMenuItem";
             this.AddressBookToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.AddressBookToolStripMenuItem.Text = "Address Book";
+            this.AddressBookToolStripMenuItem.Click += new System.EventHandler(this.AddressBookToolStripMenuItem_Click);
             // 
             // CalculatorToolStripMenuItem
             // 

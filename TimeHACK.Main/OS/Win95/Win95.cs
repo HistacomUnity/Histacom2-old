@@ -310,6 +310,20 @@ namespace TimeHACK.OS.Win95
             }
         }
 
+        private void AddressBookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WinClassicAddressBook ab = new WinClassicAddressBook();
+            WinClassic app = wm.startWin95(ab, "Address Book", Properties.Resources.Win95IconWordpad, true, true);
+            AddTaskBarItem(app, app.Tag.ToString(), "Address Book", Properties.Resources.Win95IconWordpad);
+
+            nonimportantapps.Add(app);
+            nonimportantapps[nonimportantapps.Count - 1].BringToFront();
+            nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
+
+            app.BringToFront();
+            startmenu.Hide();
+        }
+
         //TODO: Add Outlook Express 4
     }
 }
