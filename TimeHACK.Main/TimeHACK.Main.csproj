@@ -210,6 +210,9 @@
     <Compile Include="TitleScreen.Designer.cs">
       <DependentUpon>TitleScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\IProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="OS\Win95\Win95.resx">
       <DependentUpon>Win95.cs</DependentUpon>
     </EmbeddedResource>
