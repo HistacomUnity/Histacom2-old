@@ -26,7 +26,7 @@ namespace TimeHACK.Engine.Template
 
         private void Programtopbar_drag(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
+            if (e.Button == MouseButtons.Left && max == false)
             {
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);

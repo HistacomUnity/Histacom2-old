@@ -56,14 +56,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TimeHACK.exe" size="4759040">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TimeHACK.exe" size="4766208">
       <assemblyIdentity name="TimeHACK" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>7LWP70+epu/ZatYgTAt1zLj3tUDScjNPBFhFDYlM4NU=</dsig:DigestValue>
+        <dsig:DigestValue>aRqzP/rD35y3yU8+o3+xULnrrst0dqO6CkFtqv8Djf4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -75,7 +75,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>m6y3wcwMukQ5TrLCcX8fgYK8EJp+K9PMtNF0cSKByXA=</dsig:DigestValue>
+        <dsig:DigestValue>kA4p/X7N+8KBmybYSG+jtZ4BgT3YvokJ8MxyIsxYSPM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -115,13 +115,13 @@
       <dsig:DigestValue>M69a0Q8VAYpaeWem7o8i+9iv5cJdzgRLyWD48mOZQiM=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Resources\IE4\googleprototype.html" size="2575">
+  <file name="Resources\IE4\googleprototype.html" size="2571">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>EkfQ8aLPyyAH5829pfeLE7IKs7tDqPXZl2I+MzNMjZo=</dsig:DigestValue>
+      <dsig:DigestValue>5dxj6DQUI8H4fwy1EkXVnQnRwj/wJVEVSlzyjSYfUgI=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\IE4\ie4start.html" size="1064">
@@ -455,6 +455,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>+fshereDl8F60Ef1K3Q1uudUcIBJeWlPAmosAdKe/eY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\WinClassic\WinClassicTaskbarItem.png" size="218">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>W0yCwc3lJJFqQfgeTtazQbdAjUboLWojci1PiqJjIBM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\WinClassic\WinClassicTime.png" size="225">
