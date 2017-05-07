@@ -66,7 +66,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(401, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(619, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -324,7 +324,7 @@
             this.mainText.Multiline = true;
             this.mainText.Name = "mainText";
             this.mainText.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.mainText.Size = new System.Drawing.Size(401, 210);
+            this.mainText.Size = new System.Drawing.Size(619, 341);
             this.mainText.TabIndex = 1;
             this.mainText.WordWrap = false;
             // 
@@ -335,7 +335,7 @@
             this.Controls.Add(this.mainText);
             this.Controls.Add(this.menuStrip1);
             this.Name = "WinClassicNotepad";
-            this.Size = new System.Drawing.Size(401, 234);
+            this.Size = new System.Drawing.Size(619, 365);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

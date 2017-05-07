@@ -5,10 +5,7 @@ D:\Documents\GitHub\TimeHACK\TimeHACK.Main\bin\Release\TimeHACK.pdb
 D:\Documents\GitHub\TimeHACK\TimeHACK.Main\bin\Release\TimeHACK.Engine.dll
 D:\Documents\GitHub\TimeHACK\TimeHACK.Main\bin\Release\TimeHACK.Engine.pdb
 D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.Main.csprojResolveAssemblyReference.cache
-D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.Windows95.resources
 D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.WinClassicForms.TestApp.resources
-D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.WinClassicForms.WinClassicDownloader.resources
-D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.WinClassicForms.WinClassicIE4.resources
 D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.WinClassicForms.WinClassicInstaller.resources
 D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.Properties.Resources.resources
 D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.TitleScreen.resources
@@ -90,3 +87,12 @@ C:\Users\lempamo\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHA
 C:\Users\lempamo\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.Main.csproj.GenerateResource.Cache
 C:\Users\lempamo\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.exe.manifest
 C:\Users\lempamo\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.application
+D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Windows95.resources
+D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WebChat1998.resources
+D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WinClassicAddressBook.resources
+D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WinClassicDownloader.resources
+D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WinClassicHWCV.resources
+D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WinClassicIE4.resources
+D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WinClassicNotepad.resources
+D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WinClassicWordPad.resources
+D:\Documents\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.Engine.Template.Taskbars.Win95TaskBarItem.resources
