@@ -19,14 +19,22 @@ namespace TimeHACK
         public static DirectoryInfo datafolder;
         public static DirectoryInfo profilefolder;
 
+        public static string GameDirectory
+        {
+            get
+            {
+                return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonDocuments), "TimeHACK");
+            }
+        }
+
         public TitleScreen()
         {
             InitializeComponent();
-            if (!Directory.Exists("C:\\TimeHack")) thfolder = Directory.CreateDirectory("C:\\TimeHack");
-            else thfolder = new DirectoryInfo("C:\\TimeHack");
-            datafolder = Directory.CreateDirectory(thfolder.FullName + "\\Data");
-            Resources.google.Save(datafolder.FullName + "\\google.jpg");
-            profilefolder = Directory.CreateDirectory(thfolder.FullName + "\\Profiles");
+            if (!Directory.Exists(GameDirectory)) Directory.CreateDirectory(GameDirectory);
+            else thfolder = new DirectoryInfo(GameDirectory);
+            datafolder = Directory.CreateDirectory(Path.Combine(thfolder.FullName, "Data"));
+            Resources.google.Save(Path.Combine(datafolder.FullName, "\\google.jpg"));
+            profilefolder = Directory.CreateDirectory(Path.Combine(thfolder.FullName, "\\Profiles"));
         }
 
         private void closebutton_Click(object sender, EventArgs e)
