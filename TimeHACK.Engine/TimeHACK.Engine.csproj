@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="BSODCreator.cs" />
     <None Include="Resources\WinClassic\Window\pjBg6mKP.bin" />
+    <Compile Include="SaveSystem.cs" />
     <Compile Include="TaskBarController.cs" />
     <Compile Include="Template\Win9XBSOD.cs">
       <SubType>Form</SubType>

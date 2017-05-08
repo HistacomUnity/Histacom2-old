@@ -5,6 +5,7 @@ using System.IO;
 using System.Windows.Forms;
 using TimeHACK.OS.Win95;
 using TimeHACK.Engine;
+using static TimeHACK.Engine.SaveSystem;
 
 namespace TimeHACK
 {
@@ -19,22 +20,43 @@ namespace TimeHACK
         public static DirectoryInfo datafolder;
         public static DirectoryInfo profilefolder;
 
-        public static string GameDirectory
+        public void StartGame()
         {
-            get
+            //TODO: You may want to handle story stuff to decide what OS to boot here.
+            if (Convert.ToInt32(VM_Width.Text) == 1337 && Convert.ToInt32(VM_Height.Text) == 1337)
             {
-                return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonDocuments), "TimeHACK");
+                leet();
             }
+            else
+// If VM Mode is not enabled
+if (vm_mode.Checked != true)
+            {
+                // Generate fullscreen desktop
+                frm95 = new Windows95();
+                frm95.TopMost = true;
+                frm95.FormBorderStyle = FormBorderStyle.None;
+                frm95.WindowState = FormWindowState.Maximized;
+                frm95.Show();
+                Hide();
+            }
+            // If VM Mode is enabled
+            else
+            {
+                // Generate desktop with size entered by user
+                frm95 = new Windows95();
+                frm95.FormBorderStyle = FormBorderStyle.None;
+                frm95.Size = new Size(Convert.ToInt32(VM_Width.Text), Convert.ToInt32(VM_Height.Text));
+                frm95.FormBorderStyle = FormBorderStyle.Fixed3D;
+                frm95.Show();
+                Hide();
+            }
+
         }
+
 
         public TitleScreen()
         {
             InitializeComponent();
-            if (!Directory.Exists(GameDirectory)) Directory.CreateDirectory(GameDirectory);
-            else thfolder = new DirectoryInfo(GameDirectory);
-            datafolder = Directory.CreateDirectory(Path.Combine(thfolder.FullName, "Data"));
-            Resources.google.Save(Path.Combine(datafolder.FullName, "\\google.jpg"));
-            profilefolder = Directory.CreateDirectory(Path.Combine(thfolder.FullName, "\\Profiles"));
         }
 
         private void closebutton_Click(object sender, EventArgs e)
@@ -60,6 +82,18 @@ namespace TimeHACK
         // When the TitleScreen Loads
         private void TitleScreen_Load(object sender, EventArgs e)
         {
+            if (!Directory.Exists(GameDirectory))
+                Directory.CreateDirectory(GameDirectory);
+            thfolder = new DirectoryInfo(GameDirectory);
+
+            string Data = Path.Combine(thfolder.FullName, "Data");
+            if (!Directory.Exists(Data))
+                Directory.CreateDirectory(Data);
+
+            Resources.google.Save(Path.Combine(Data, "google.jpg"));
+            profilefolder = Directory.CreateDirectory(Path.Combine(thfolder.FullName, "\\Profiles"));
+
+
 
             // Set GameVersion
             gameversion.Text = "TimeHACK " + Program.gameID;
@@ -110,34 +144,8 @@ namespace TimeHACK
         // When NewGame is Clicked
         private void NewGame_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(VM_Width.Text) == 1337 && Convert.ToInt32(VM_Height.Text) == 1337)
-            {
-                leet();
-            }
-            else
-            // If VM Mode is not enabled
-            if (vm_mode.Checked != true)
-            {
-                // Generate fullscreen desktop
-                frm95 = new Windows95();
-                frm95.TopMost = true;
-                frm95.FormBorderStyle = FormBorderStyle.None;
-                frm95.WindowState = FormWindowState.Maximized;
-                frm95.Show();
-                Hide();
-            }
-            // If VM Mode is enabled
-            else
-            {
-                // Generate desktop with size entered by user
-                frm95 = new Windows95();
-                frm95.FormBorderStyle = FormBorderStyle.None;
-                frm95.Size = new Size(Convert.ToInt32(VM_Width.Text), Convert.ToInt32(VM_Height.Text));
-                frm95.FormBorderStyle = FormBorderStyle.Fixed3D;
-                frm95.Show();
-                Hide();
-            }
-
+            NewGame();
+            StartGame();
         }
 
         public void BSODRewind(object sender, EventArgs e)
@@ -185,7 +193,12 @@ namespace TimeHACK
         #region LoadGame
         private void LoadGame_Click(object sender, EventArgs e)
         {
-
+            var result = LoadSave();
+            if(result == false)
+            {
+                MessageBox.Show(caption: "No save found.", text: "No save was found on your system. However, we have created a new one, and we will start it up for you.");
+            }
+            StartGame();
         }
         private void LoadGame_Enter(object sender, EventArgs e)
         {
