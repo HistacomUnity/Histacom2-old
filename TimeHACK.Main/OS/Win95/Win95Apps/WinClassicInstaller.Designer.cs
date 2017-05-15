@@ -31,19 +31,26 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WinClassicInstaller));
             this.installerproccess = new System.Windows.Forms.Panel();
+            this.PictureBox5 = new System.Windows.Forms.PictureBox();
             this.Panel5 = new System.Windows.Forms.Panel();
+            this.PictureBox4 = new System.Windows.Forms.PictureBox();
+            this.PictureBox2 = new System.Windows.Forms.PictureBox();
             this.Label9 = new System.Windows.Forms.Label();
             this.Label13 = new System.Windows.Forms.Label();
             this.Label14 = new System.Windows.Forms.Label();
             this.ProgressBar1 = new System.Windows.Forms.ProgressBar();
             this.Complete = new System.Windows.Forms.Panel();
+            this.PictureBox3 = new System.Windows.Forms.PictureBox();
             this.Panel6 = new System.Windows.Forms.Panel();
+            this.finishinstallimage = new System.Windows.Forms.PictureBox();
             this.Label17 = new System.Windows.Forms.Label();
             this.Label16 = new System.Windows.Forms.Label();
             this.Label18 = new System.Windows.Forms.Label();
             this.welcome = new System.Windows.Forms.Panel();
+            this.PictureBox9 = new System.Windows.Forms.PictureBox();
             this.Label1 = new System.Windows.Forms.Label();
             this.programimage = new System.Windows.Forms.Panel();
+            this.installimage = new System.Windows.Forms.PictureBox();
             this.Label3 = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
             this.Label4 = new System.Windows.Forms.Label();
@@ -63,65 +70,58 @@
             this.Panel7 = new System.Windows.Forms.Panel();
             this.Panel9 = new System.Windows.Forms.Panel();
             this.Panel2 = new System.Windows.Forms.Panel();
+            this.iconpic = new System.Windows.Forms.PictureBox();
             this.installname = new System.Windows.Forms.Label();
             this.Button3 = new System.Windows.Forms.Button();
             this.Button2 = new System.Windows.Forms.Button();
             this.Button1 = new System.Windows.Forms.Button();
             this.licenseagreement = new System.Windows.Forms.Panel();
+            this.PictureBox8 = new System.Windows.Forms.PictureBox();
+            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.Panel3 = new System.Windows.Forms.Panel();
+            this.licenceagreementinstallpic = new System.Windows.Forms.PictureBox();
             this.Label6 = new System.Windows.Forms.Label();
             this.Label5 = new System.Windows.Forms.Label();
             this.RadioButton2 = new System.Windows.Forms.RadioButton();
             this.RadioButton1 = new System.Windows.Forms.RadioButton();
             this.TextBox3 = new System.Windows.Forms.TextBox();
             this.summary = new System.Windows.Forms.Panel();
+            this.PictureBox7 = new System.Windows.Forms.PictureBox();
             this.Panel4 = new System.Windows.Forms.Panel();
+            this.PictureBox6 = new System.Windows.Forms.PictureBox();
+            this.suminstallpic = new System.Windows.Forms.PictureBox();
             this.Label7 = new System.Windows.Forms.Label();
             this.Label12 = new System.Windows.Forms.Label();
             this.Label11 = new System.Windows.Forms.Label();
             this.Label10 = new System.Windows.Forms.Label();
             this.Label8 = new System.Windows.Forms.Label();
-            this.iconpic = new System.Windows.Forms.PictureBox();
-            this.PictureBox8 = new System.Windows.Forms.PictureBox();
-            this.PictureBox1 = new System.Windows.Forms.PictureBox();
-            this.licenceagreementinstallpic = new System.Windows.Forms.PictureBox();
-            this.PictureBox7 = new System.Windows.Forms.PictureBox();
-            this.PictureBox6 = new System.Windows.Forms.PictureBox();
-            this.suminstallpic = new System.Windows.Forms.PictureBox();
-            this.PictureBox5 = new System.Windows.Forms.PictureBox();
-            this.PictureBox4 = new System.Windows.Forms.PictureBox();
-            this.PictureBox2 = new System.Windows.Forms.PictureBox();
-            this.PictureBox3 = new System.Windows.Forms.PictureBox();
-            this.finishinstallimage = new System.Windows.Forms.PictureBox();
-            this.PictureBox9 = new System.Windows.Forms.PictureBox();
-            this.installimage = new System.Windows.Forms.PictureBox();
             this.installerproccess.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).BeginInit();
             this.Panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
             this.Complete.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).BeginInit();
             this.Panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.finishinstallimage)).BeginInit();
             this.welcome.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox9)).BeginInit();
             this.programimage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.installimage)).BeginInit();
             this.program.SuspendLayout();
             this.Panel1.SuspendLayout();
             this.Panel2.SuspendLayout();
-            this.licenseagreement.SuspendLayout();
-            this.Panel3.SuspendLayout();
-            this.summary.SuspendLayout();
-            this.Panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconpic)).BeginInit();
+            this.licenseagreement.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
+            this.Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.licenceagreementinstallpic)).BeginInit();
+            this.summary.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox7)).BeginInit();
+            this.Panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.suminstallpic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.finishinstallimage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.installimage)).BeginInit();
             this.SuspendLayout();
             // 
             // installerproccess
@@ -135,6 +135,15 @@
             this.installerproccess.Size = new System.Drawing.Size(564, 342);
             this.installerproccess.TabIndex = 15;
             // 
+            // PictureBox5
+            // 
+            this.PictureBox5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PictureBox5.Location = new System.Drawing.Point(0, 340);
+            this.PictureBox5.Name = "PictureBox5";
+            this.PictureBox5.Size = new System.Drawing.Size(564, 2);
+            this.PictureBox5.TabIndex = 22;
+            this.PictureBox5.TabStop = false;
+            // 
             // Panel5
             // 
             this.Panel5.BackColor = System.Drawing.Color.White;
@@ -147,6 +156,25 @@
             this.Panel5.Name = "Panel5";
             this.Panel5.Size = new System.Drawing.Size(564, 55);
             this.Panel5.TabIndex = 21;
+            // 
+            // PictureBox4
+            // 
+            this.PictureBox4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PictureBox4.Location = new System.Drawing.Point(0, 53);
+            this.PictureBox4.Name = "PictureBox4";
+            this.PictureBox4.Size = new System.Drawing.Size(564, 2);
+            this.PictureBox4.TabIndex = 8;
+            this.PictureBox4.TabStop = false;
+            // 
+            // PictureBox2
+            // 
+            this.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.PictureBox2.Location = new System.Drawing.Point(512, 4);
+            this.PictureBox2.Name = "PictureBox2";
+            this.PictureBox2.Size = new System.Drawing.Size(48, 48);
+            this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBox2.TabIndex = 2;
+            this.PictureBox2.TabStop = false;
             // 
             // Label9
             // 
@@ -196,6 +224,15 @@
             this.Complete.Size = new System.Drawing.Size(564, 342);
             this.Complete.TabIndex = 17;
             // 
+            // PictureBox3
+            // 
+            this.PictureBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PictureBox3.Location = new System.Drawing.Point(180, 340);
+            this.PictureBox3.Name = "PictureBox3";
+            this.PictureBox3.Size = new System.Drawing.Size(384, 2);
+            this.PictureBox3.TabIndex = 16;
+            this.PictureBox3.TabStop = false;
+            // 
             // Panel6
             // 
             this.Panel6.Controls.Add(this.finishinstallimage);
@@ -204,6 +241,16 @@
             this.Panel6.Name = "Panel6";
             this.Panel6.Size = new System.Drawing.Size(180, 342);
             this.Panel6.TabIndex = 15;
+            // 
+            // finishinstallimage
+            // 
+            this.finishinstallimage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.finishinstallimage.Location = new System.Drawing.Point(0, 0);
+            this.finishinstallimage.Name = "finishinstallimage";
+            this.finishinstallimage.Size = new System.Drawing.Size(180, 342);
+            this.finishinstallimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.finishinstallimage.TabIndex = 0;
+            this.finishinstallimage.TabStop = false;
             // 
             // Label17
             // 
@@ -249,6 +296,15 @@
             this.welcome.Size = new System.Drawing.Size(564, 342);
             this.welcome.TabIndex = 14;
             // 
+            // PictureBox9
+            // 
+            this.PictureBox9.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PictureBox9.Location = new System.Drawing.Point(180, 338);
+            this.PictureBox9.Name = "PictureBox9";
+            this.PictureBox9.Size = new System.Drawing.Size(382, 2);
+            this.PictureBox9.TabIndex = 16;
+            this.PictureBox9.TabStop = false;
+            // 
             // Label1
             // 
             this.Label1.AutoSize = true;
@@ -267,6 +323,16 @@
             this.programimage.Name = "programimage";
             this.programimage.Size = new System.Drawing.Size(180, 340);
             this.programimage.TabIndex = 14;
+            // 
+            // installimage
+            // 
+            this.installimage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.installimage.Location = new System.Drawing.Point(0, 0);
+            this.installimage.Name = "installimage";
+            this.installimage.Size = new System.Drawing.Size(180, 340);
+            this.installimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.installimage.TabIndex = 0;
+            this.installimage.TabStop = false;
             // 
             // Label3
             // 
@@ -431,6 +497,15 @@
             this.Panel2.Size = new System.Drawing.Size(573, 421);
             this.Panel2.TabIndex = 21;
             // 
+            // iconpic
+            // 
+            this.iconpic.Location = new System.Drawing.Point(96, 350);
+            this.iconpic.Name = "iconpic";
+            this.iconpic.Size = new System.Drawing.Size(60, 31);
+            this.iconpic.TabIndex = 19;
+            this.iconpic.TabStop = false;
+            this.iconpic.Visible = false;
+            // 
             // installname
             // 
             this.installname.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -452,21 +527,21 @@
             this.Button3.UseVisualStyleBackColor = true;
             this.Button3.Click += new System.EventHandler(this.Button3_Click);
             // 
-            // ForwardButton
+            // Button2
             // 
             this.Button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Button2.Location = new System.Drawing.Point(323, 390);
-            this.Button2.Name = "ForwardButton";
+            this.Button2.Name = "Button2";
             this.Button2.Size = new System.Drawing.Size(75, 23);
             this.Button2.TabIndex = 11;
             this.Button2.Text = "< Back";
             this.Button2.UseVisualStyleBackColor = true;
             // 
-            // BackButton
+            // Button1
             // 
             this.Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Button1.Location = new System.Drawing.Point(485, 390);
-            this.Button1.Name = "BackButton";
+            this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(75, 23);
             this.Button1.TabIndex = 10;
             this.Button1.Text = "Cancel";
@@ -487,6 +562,24 @@
             this.licenseagreement.Size = new System.Drawing.Size(564, 342);
             this.licenseagreement.TabIndex = 15;
             // 
+            // PictureBox8
+            // 
+            this.PictureBox8.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PictureBox8.Location = new System.Drawing.Point(0, 340);
+            this.PictureBox8.Name = "PictureBox8";
+            this.PictureBox8.Size = new System.Drawing.Size(564, 2);
+            this.PictureBox8.TabIndex = 9;
+            this.PictureBox8.TabStop = false;
+            // 
+            // PictureBox1
+            // 
+            this.PictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PictureBox1.Location = new System.Drawing.Point(0, 55);
+            this.PictureBox1.Name = "PictureBox1";
+            this.PictureBox1.Size = new System.Drawing.Size(564, 2);
+            this.PictureBox1.TabIndex = 7;
+            this.PictureBox1.TabStop = false;
+            // 
             // Panel3
             // 
             this.Panel3.BackColor = System.Drawing.Color.White;
@@ -498,6 +591,16 @@
             this.Panel3.Name = "Panel3";
             this.Panel3.Size = new System.Drawing.Size(564, 55);
             this.Panel3.TabIndex = 6;
+            // 
+            // licenceagreementinstallpic
+            // 
+            this.licenceagreementinstallpic.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.licenceagreementinstallpic.Location = new System.Drawing.Point(512, 4);
+            this.licenceagreementinstallpic.Name = "licenceagreementinstallpic";
+            this.licenceagreementinstallpic.Size = new System.Drawing.Size(48, 48);
+            this.licenceagreementinstallpic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.licenceagreementinstallpic.TabIndex = 2;
+            this.licenceagreementinstallpic.TabStop = false;
             // 
             // Label6
             // 
@@ -566,6 +669,15 @@
             this.summary.Size = new System.Drawing.Size(564, 342);
             this.summary.TabIndex = 16;
             // 
+            // PictureBox7
+            // 
+            this.PictureBox7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PictureBox7.Location = new System.Drawing.Point(0, 340);
+            this.PictureBox7.Name = "PictureBox7";
+            this.PictureBox7.Size = new System.Drawing.Size(564, 2);
+            this.PictureBox7.TabIndex = 9;
+            this.PictureBox7.TabStop = false;
+            // 
             // Panel4
             // 
             this.Panel4.BackColor = System.Drawing.Color.White;
@@ -578,6 +690,25 @@
             this.Panel4.Name = "Panel4";
             this.Panel4.Size = new System.Drawing.Size(564, 55);
             this.Panel4.TabIndex = 7;
+            // 
+            // PictureBox6
+            // 
+            this.PictureBox6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PictureBox6.Location = new System.Drawing.Point(0, 53);
+            this.PictureBox6.Name = "PictureBox6";
+            this.PictureBox6.Size = new System.Drawing.Size(564, 2);
+            this.PictureBox6.TabIndex = 9;
+            this.PictureBox6.TabStop = false;
+            // 
+            // suminstallpic
+            // 
+            this.suminstallpic.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.suminstallpic.Location = new System.Drawing.Point(512, 4);
+            this.suminstallpic.Name = "suminstallpic";
+            this.suminstallpic.Size = new System.Drawing.Size(48, 48);
+            this.suminstallpic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.suminstallpic.TabIndex = 2;
+            this.suminstallpic.TabStop = false;
             // 
             // Label7
             // 
@@ -627,137 +758,6 @@
             this.Label8.TabIndex = 2;
             this.Label8.Text = "Guess The Number will be installed the following location:";
             // 
-            // iconpic
-            // 
-            this.iconpic.Location = new System.Drawing.Point(96, 350);
-            this.iconpic.Name = "iconpic";
-            this.iconpic.Size = new System.Drawing.Size(60, 31);
-            this.iconpic.TabIndex = 19;
-            this.iconpic.TabStop = false;
-            this.iconpic.Visible = false;
-            // 
-            // PictureBox8
-            // 
-            this.PictureBox8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PictureBox8.Location = new System.Drawing.Point(0, 340);
-            this.PictureBox8.Name = "PictureBox8";
-            this.PictureBox8.Size = new System.Drawing.Size(564, 2);
-            this.PictureBox8.TabIndex = 9;
-            this.PictureBox8.TabStop = false;
-            // 
-            // PictureBox1
-            // 
-            this.PictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PictureBox1.Location = new System.Drawing.Point(0, 55);
-            this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(564, 2);
-            this.PictureBox1.TabIndex = 7;
-            this.PictureBox1.TabStop = false;
-            // 
-            // licenceagreementinstallpic
-            // 
-            this.licenceagreementinstallpic.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.licenceagreementinstallpic.Location = new System.Drawing.Point(512, 4);
-            this.licenceagreementinstallpic.Name = "licenceagreementinstallpic";
-            this.licenceagreementinstallpic.Size = new System.Drawing.Size(48, 48);
-            this.licenceagreementinstallpic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.licenceagreementinstallpic.TabIndex = 2;
-            this.licenceagreementinstallpic.TabStop = false;
-            // 
-            // PictureBox7
-            // 
-            this.PictureBox7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PictureBox7.Location = new System.Drawing.Point(0, 340);
-            this.PictureBox7.Name = "PictureBox7";
-            this.PictureBox7.Size = new System.Drawing.Size(564, 2);
-            this.PictureBox7.TabIndex = 9;
-            this.PictureBox7.TabStop = false;
-            // 
-            // PictureBox6
-            // 
-            this.PictureBox6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PictureBox6.Location = new System.Drawing.Point(0, 53);
-            this.PictureBox6.Name = "PictureBox6";
-            this.PictureBox6.Size = new System.Drawing.Size(564, 2);
-            this.PictureBox6.TabIndex = 9;
-            this.PictureBox6.TabStop = false;
-            // 
-            // suminstallpic
-            // 
-            this.suminstallpic.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.suminstallpic.Location = new System.Drawing.Point(512, 4);
-            this.suminstallpic.Name = "suminstallpic";
-            this.suminstallpic.Size = new System.Drawing.Size(48, 48);
-            this.suminstallpic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.suminstallpic.TabIndex = 2;
-            this.suminstallpic.TabStop = false;
-            // 
-            // PictureBox5
-            // 
-            this.PictureBox5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PictureBox5.Location = new System.Drawing.Point(0, 340);
-            this.PictureBox5.Name = "PictureBox5";
-            this.PictureBox5.Size = new System.Drawing.Size(564, 2);
-            this.PictureBox5.TabIndex = 22;
-            this.PictureBox5.TabStop = false;
-            // 
-            // PictureBox4
-            // 
-            this.PictureBox4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PictureBox4.Location = new System.Drawing.Point(0, 53);
-            this.PictureBox4.Name = "PictureBox4";
-            this.PictureBox4.Size = new System.Drawing.Size(564, 2);
-            this.PictureBox4.TabIndex = 8;
-            this.PictureBox4.TabStop = false;
-            // 
-            // PictureBox2
-            // 
-            this.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.PictureBox2.Location = new System.Drawing.Point(512, 4);
-            this.PictureBox2.Name = "PictureBox2";
-            this.PictureBox2.Size = new System.Drawing.Size(48, 48);
-            this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureBox2.TabIndex = 2;
-            this.PictureBox2.TabStop = false;
-            // 
-            // PictureBox3
-            // 
-            this.PictureBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PictureBox3.Location = new System.Drawing.Point(180, 340);
-            this.PictureBox3.Name = "PictureBox3";
-            this.PictureBox3.Size = new System.Drawing.Size(384, 2);
-            this.PictureBox3.TabIndex = 16;
-            this.PictureBox3.TabStop = false;
-            // 
-            // finishinstallimage
-            // 
-            this.finishinstallimage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.finishinstallimage.Location = new System.Drawing.Point(0, 0);
-            this.finishinstallimage.Name = "finishinstallimage";
-            this.finishinstallimage.Size = new System.Drawing.Size(180, 342);
-            this.finishinstallimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.finishinstallimage.TabIndex = 0;
-            this.finishinstallimage.TabStop = false;
-            // 
-            // PictureBox9
-            // 
-            this.PictureBox9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PictureBox9.Location = new System.Drawing.Point(180, 338);
-            this.PictureBox9.Name = "PictureBox9";
-            this.PictureBox9.Size = new System.Drawing.Size(382, 2);
-            this.PictureBox9.TabIndex = 16;
-            this.PictureBox9.TabStop = false;
-            // 
-            // installimage
-            // 
-            this.installimage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.installimage.Location = new System.Drawing.Point(0, 0);
-            this.installimage.Name = "installimage";
-            this.installimage.Size = new System.Drawing.Size(180, 340);
-            this.installimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.installimage.TabIndex = 0;
-            this.installimage.TabStop = false;
-            // 
             // WinClassicInstaller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -768,40 +768,40 @@
             this.Load += new System.EventHandler(this.WinClassicInstaller_Load);
             this.installerproccess.ResumeLayout(false);
             this.installerproccess.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).EndInit();
             this.Panel5.ResumeLayout(false);
             this.Panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
             this.Complete.ResumeLayout(false);
             this.Complete.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).EndInit();
             this.Panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.finishinstallimage)).EndInit();
             this.welcome.ResumeLayout(false);
             this.welcome.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox9)).EndInit();
             this.programimage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.installimage)).EndInit();
             this.program.ResumeLayout(false);
             this.Panel1.ResumeLayout(false);
             this.Panel2.ResumeLayout(false);
             this.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconpic)).EndInit();
             this.licenseagreement.ResumeLayout(false);
             this.licenseagreement.PerformLayout();
-            this.Panel3.ResumeLayout(false);
-            this.Panel3.PerformLayout();
-            this.summary.ResumeLayout(false);
-            this.summary.PerformLayout();
-            this.Panel4.ResumeLayout(false);
-            this.Panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconpic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
+            this.Panel3.ResumeLayout(false);
+            this.Panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.licenceagreementinstallpic)).EndInit();
+            this.summary.ResumeLayout(false);
+            this.summary.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox7)).EndInit();
+            this.Panel4.ResumeLayout(false);
+            this.Panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.suminstallpic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.finishinstallimage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.installimage)).EndInit();
             this.ResumeLayout(false);
 
         }
