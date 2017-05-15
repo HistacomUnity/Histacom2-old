@@ -654,7 +654,7 @@
             this.TextBox3.Name = "TextBox3";
             this.TextBox3.Size = new System.Drawing.Size(424, 39);
             this.TextBox3.TabIndex = 2;
-            this.TextBox3.Text = "Please read the following licence agreement, use the scroll bar to view the rest " +
+            this.TextBox3.Text = "Please read the following license agreement, use the scroll bar to view the rest " +
     "of this agreement";
             // 
             // summary
