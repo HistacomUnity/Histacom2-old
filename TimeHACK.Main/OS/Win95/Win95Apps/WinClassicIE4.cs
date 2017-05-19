@@ -25,15 +25,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void WinClassicIE4_Load(object sender, EventArgs e)
         {
-            browsinghistory.Capacity = 99;
-            BringToFront();
-            hidePrograms();
-            browsinghistory.Add("www.microsoft.com/internetexplorer4/welcome");
-            for (int i = 0; i < 99; i++) browsinghistory.Add(null);
-            webBrowser1.DocumentText = resources.GetString("ie4start_HTML");
-            webBrowser1.Show();
-            foreach (ToolStripMenuItem item in MenuStrip3.Items) item.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
-            foreach (Control ctrl in Panel1.Controls) ctrl.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
+            
         }
 
         private void hidePrograms()
@@ -218,7 +210,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
             }
         }
-
+        
         //TODO: Add more websites
         //TODO: Relabel Buttons And Things
     }

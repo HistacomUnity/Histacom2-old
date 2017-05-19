@@ -209,6 +209,12 @@
     <Compile Include="OS\Win95\Win95TaskBarItem.Designer.cs">
       <DependentUpon>Win95TaskBarItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="OS\Win98\Win98.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OS\Win98\Win98.Designer.cs">
+      <DependentUpon>Win98.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -225,6 +231,9 @@
     <EmbeddedResource Include="NewGameDialog.resx">
       <DependentUpon>NewGameDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <Compile Include="UI\IProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="OS\Win95\Win95.resx">
       <DependentUpon>Win95.cs</DependentUpon>
     </EmbeddedResource>
@@ -263,6 +272,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95TaskBarItem.resx">
       <DependentUpon>Win95TaskBarItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win98\Win98.resx">
+      <DependentUpon>Win98.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -363,6 +375,7 @@
     <Content Include="Resources\WinClassic\WinClassicStart.png" />
     <Content Include="Resources\WinClassic\WinClassicSuspend.png" />
     <Content Include="Resources\WinClassic\WinClassicTaskBar.png" />
+    <Content Include="Resources\WinClassic\WinClassicTaskbarItem.png" />
     <Content Include="Resources\WinClassic\WinClassicTime.png" />
   </ItemGroup>
   <ItemGroup>
@@ -371,6 +384,7 @@
       <Name>TimeHACK.Engine</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.progBar = new System.Windows.Forms.ProgressBar();
+            this.progBar = new TimeHACK.UI.ProgressBar();
             this.amountLbl = new System.Windows.Forms.Label();
             this.appName = new System.Windows.Forms.Label();
             this.locationLbl = new System.Windows.Forms.Label();
@@ -45,6 +45,10 @@
             this.progBar.Location = new System.Drawing.Point(5, 29);
             this.progBar.Name = "progBar";
             this.progBar.Size = new System.Drawing.Size(290, 23);
+            this.progBar.ProgressColor = System.Drawing.Color.FromArgb(19, 36, 105);
+            this.progBar.Style = System.Windows.Forms.ProgressBarStyle.Blocks;
+            this.progBar.BlockWidth = 14;
+            this.progBar.BlockSpacing = 2;
             this.progBar.TabIndex = 15;
             // 
             // amountLbl
@@ -113,7 +117,7 @@
 
         #endregion
 
-        internal System.Windows.Forms.ProgressBar progBar;
+        internal TimeHACK.UI.ProgressBar progBar;
         internal System.Windows.Forms.Label amountLbl;
         internal System.Windows.Forms.Label appName;
         internal System.Windows.Forms.Label locationLbl;
