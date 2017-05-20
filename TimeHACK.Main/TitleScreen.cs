@@ -91,6 +91,10 @@ namespace TimeHACK
             if (!Directory.Exists(Data))
                 Directory.CreateDirectory(Data);
 
+            string Profiles = Path.Combine(thfolder.FullName, "Profiles");
+            if (!Directory.Exists(Profiles))
+                Directory.CreateDirectory(Profiles);
+
             Resources.google.Save(Path.Combine(Data, "google.jpg"));
             profilefolder = Directory.CreateDirectory(Path.Combine(thfolder.FullName, "\\Profiles"));
 

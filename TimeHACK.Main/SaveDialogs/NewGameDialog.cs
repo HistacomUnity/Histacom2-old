@@ -34,7 +34,7 @@ namespace TimeHACK
 
         private void btnInfo_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("The game's profiles are stored in your Documents /TimeHACK/Profiles - the rest is for you to figure out!");
+            MessageBox.Show("The game's profiles are stored in your AppData /TimeHACK/Profiles - the rest is for you to figure out!");
         }
 
         private void btnOk_Click(object sender, EventArgs e)
