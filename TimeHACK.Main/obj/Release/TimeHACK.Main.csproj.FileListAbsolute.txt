@@ -27,3 +27,5 @@ I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.e
 I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.application
 I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.exe
 I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.pdb
+I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.LoadGameDialog.resources
+I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.LoadGameProfileItem.resources

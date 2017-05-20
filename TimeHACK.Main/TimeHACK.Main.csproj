@@ -122,10 +122,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NewGameDialog.cs">
+    <Compile Include="SaveDialogs\LoadGameDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewGameDialog.Designer.cs">
+    <Compile Include="SaveDialogs\LoadGameDialog.Designer.cs">
+      <DependentUpon>LoadGameDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SaveDialogs\LoadGameProfileItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SaveDialogs\LoadGameProfileItem.Designer.cs">
+      <DependentUpon>LoadGameProfileItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SaveDialogs\NewGameDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaveDialogs\NewGameDialog.Designer.cs">
       <DependentUpon>NewGameDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="OS\Win95\Win95.cs">
@@ -231,7 +243,13 @@
     <Compile Include="TitleScreen.Designer.cs">
       <DependentUpon>TitleScreen.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="NewGameDialog.resx">
+    <EmbeddedResource Include="SaveDialogs\LoadGameDialog.resx">
+      <DependentUpon>LoadGameDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaveDialogs\LoadGameProfileItem.resx">
+      <DependentUpon>LoadGameProfileItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaveDialogs\NewGameDialog.resx">
       <DependentUpon>NewGameDialog.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="UI\IProgressBar.cs">

@@ -61,7 +61,7 @@
             this.gameversion.Text = "gameversion";
             this.gameversion.MouseLeave += new System.EventHandler(this.gameversion_MouseLeave);
             this.gameversion.MouseHover += new System.EventHandler(this.gameversion_MouseHover);
-            // 
+            this.gameversion.Click += new System.EventHandler(this.startbutton_Click);
             // vm_mode
             // 
             this.vm_mode.AutoSize = true;
@@ -214,6 +214,7 @@
             this.startbutton.Size = new System.Drawing.Size(279, 22);
             this.startbutton.TabIndex = 12;
             this.startbutton.TabStop = false;
+            this.startbutton.Click += new System.EventHandler(this.startbutton_Click);
             // 
             // TitleScreen
             // 

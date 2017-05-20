@@ -19,17 +19,19 @@ namespace TimeHACK
         public static DirectoryInfo thfolder;
         public static DirectoryInfo datafolder;
         public static DirectoryInfo profilefolder;
+        public static NewGameDialog newGameBox;
+        public static LoadGameDialog loadGameBox;
 
         public void StartGame()
-        {
+        {           
             //TODO: You may want to handle story stuff to decide what OS to boot here.
             if (Convert.ToInt32(VM_Width.Text) == 1337 && Convert.ToInt32(VM_Height.Text) == 1337)
             {
                 leet();
             }
             else
-// If VM Mode is not enabled
-if (vm_mode.Checked != true)
+            // If VM Mode is not enabled
+            if (vm_mode.Checked != true)
             {
                 // Generate fullscreen desktop
                 frm95 = new Windows95();
@@ -50,7 +52,6 @@ if (vm_mode.Checked != true)
                 frm95.Show();
                 Hide();
             }
-
         }
 
 
@@ -144,8 +145,14 @@ if (vm_mode.Checked != true)
         // When NewGame is Clicked
         private void NewGame_Click(object sender, EventArgs e)
         {
-            NewGame();
-            StartGame();
+            newGameBox = new NewGameDialog();
+            newGameBox.ShowDialog();
+
+            if (newGameBox.Successful == true)
+            {
+                NewGame();
+                StartGame();
+            }
         }
 
         public void BSODRewind(object sender, EventArgs e)
@@ -193,12 +200,19 @@ if (vm_mode.Checked != true)
         #region LoadGame
         private void LoadGame_Click(object sender, EventArgs e)
         {
-            var result = LoadSave();
-            if(result == false)
+            loadGameBox = new LoadGameDialog();
+            loadGameBox.ShowDialog();
+
+            //var result = LoadSave();
+            //if(result == false)
+            //{
+            //    MessageBox.Show(caption: "No save found.", text: "No save was found on your system. However, we have created a new one, and we will start it up for you.");
+            //}
+            if (loadGameBox.successful == true)
             {
-                MessageBox.Show(caption: "No save found.", text: "No save was found on your system. However, we have created a new one, and we will start it up for you.");
-            }
-            StartGame();
+                LoadSave();
+                StartGame();
+            }            
         }
         private void LoadGame_Enter(object sender, EventArgs e)
         {
@@ -235,6 +249,19 @@ if (vm_mode.Checked != true)
         private void gameversion_MouseLeave(object sender, EventArgs e)
         {
             gameversion.Text = "TimeHACK " + Program.gameID;
+        }
+
+        private void startbutton_Click(object sender, EventArgs e)
+        {
+            if (DevMode == true)
+            {
+                DevMode = false;
+                gameversion.Text = "Developer Mode Deactivated";
+            } else {
+                DevMode = true;
+                gameversion.Text = "Developer Mode Activated";
+            }
+            
         }
     }
 }
