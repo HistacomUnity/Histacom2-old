@@ -394,6 +394,36 @@ namespace TimeHACK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap WinClassicAddressBookDeleteIcon {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicAddressBookDeleteIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WinClassicAddressBookNewIcon {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicAddressBookNewIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WinClassicAddressBookPropertiesIcon {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicAddressBookPropertiesIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WinClassicClock {
             get {
                 object obj = ResourceManager.GetObject("WinClassicClock", resourceCulture);
@@ -467,6 +497,16 @@ namespace TimeHACK.Properties {
         internal static System.Drawing.Bitmap WinClassicFolderSmall {
             get {
                 object obj = ResourceManager.GetObject("WinClassicFolderSmall", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WinClassicGENERALApplicationToolbarBackground {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicGENERALApplicationToolbarBackground", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

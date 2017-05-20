@@ -1,4 +1,6 @@
-﻿namespace TimeHACK.OS.Win95
+﻿using TimeHACK.OS.Win95;
+
+namespace TimeHACK.OS.Win95
 {
     partial class Windows95
     {
@@ -241,7 +243,7 @@
             this.startmenuitems.Name = "startmenuitems";
             this.startmenuitems.Padding = new System.Windows.Forms.Padding(6, 2, 0, 0);
             this.startmenuitems.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.startmenuitems.Size = new System.Drawing.Size(141, 292);
+            this.startmenuitems.Size = new System.Drawing.Size(141, 311);
             this.startmenuitems.TabIndex = 0;
             this.startmenuitems.Text = "StartMenu";
             // 
@@ -442,6 +444,7 @@
             this.AddressBookToolStripMenuItem.Name = "AddressBookToolStripMenuItem";
             this.AddressBookToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.AddressBookToolStripMenuItem.Text = "Address Book";
+            this.AddressBookToolStripMenuItem.Click += new System.EventHandler(this.AddressBookToolStripMenuItem_Click);
             // 
             // CalculatorToolStripMenuItem
             // 
@@ -1262,7 +1265,7 @@
         internal System.Windows.Forms.ToolStripMenuItem BitmapImageToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem MicrosoftDataLinkToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem PropertiesToolStripMenuItem1;
-        internal System.ComponentModel.ComponentResourceManager resources;
+        internal System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Windows95));
         private System.Windows.Forms.ToolStripMenuItem windowManagerTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem downloaderTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem installerTestToolStripMenuItem;

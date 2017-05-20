@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json.Linq;
 using System.Net;
+using Newtonsoft.Json;
+using TimeHACK.OS;
+using TimeHACK.OS.Win95;
+using TimeHACK.OS.Win95.Win95Apps;
+
 
 namespace TimeHACK
 {
@@ -14,7 +19,9 @@ namespace TimeHACK
         internal static bool nightly = true;
         internal static string gameID;
         internal static TitleScreen title = null;
-        
+        public static string AddressBookSelectedFolderName;
+        public static AddressBookContact AddressBookSelectedContact;
+
         /// <summary>
         /// The main entry point for the application.
         /// Run TitleScreen.cs at launch.
@@ -22,6 +29,7 @@ namespace TimeHACK
         [STAThread]
         static void Main()
         {
+            System.Diagnostics.Debugger.Launch();
             if (nightly == true)
             {
                 try
@@ -42,6 +50,24 @@ namespace TimeHACK
             {
                 gameID = "TimeHACK 1.1";
             }
+
+            //TimeHACK.Engine.GameSave.SaveData MySaveData = new TimeHACK.Engine.GameSave.SaveData()
+            //{
+            //    OS = 60,
+            //    MyStringList = new List<string>
+            //    {
+            //        "Item1",
+            //        "Item2"
+            //    }
+            //};
+
+            //string TheJSON = JsonConvert.SerializeObject(MySaveData, Formatting.Indented);
+            //MessageBox.Show(TheJSON);
+            //MySaveData.OS = 40;
+            //MessageBox.Show(MySaveData.OS.ToString());
+
+            //MySaveData = (TimeHACK.Engine.GameSave.SaveData)JsonConvert.DeserializeObject(TheJSON, MySaveData.GetType());
+            //MessageBox.Show(MySaveData.OS.ToString());
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(title = new TitleScreen());

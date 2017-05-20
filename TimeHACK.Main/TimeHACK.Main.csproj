@@ -101,6 +101,9 @@
     <AssemblyOriginatorKeyFile>
     </AssemblyOriginatorKeyFile>
   </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -119,11 +122,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NewGameDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewGameDialog.Designer.cs">
+      <DependentUpon>NewGameDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\Win95\Win95.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OS\Win95\Win95.Designer.cs">
       <DependentUpon>Win95.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\AddressBook\FRMWinClassicAddressBookNewContact.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\AddressBook\FRMWinClassicAddressBookNewContact.Designer.cs">
+      <DependentUpon>FRMWinClassicAddressBookNewContact.cs</DependentUpon>
     </Compile>
     <Compile Include="OS\Win95\Win95Apps\TestApp.cs">
       <SubType>UserControl</SubType>
@@ -137,10 +152,16 @@
     <Compile Include="OS\Win95\Win95Apps\WebChat1998.Designer.cs">
       <DependentUpon>WebChat1998.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicAddressBook.cs">
+    <Compile Include="OS\Win95\Win95Apps\AddressBook\FRMWinClassicAddressBookNewFolder.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicAddressBook.Designer.cs">
+    <Compile Include="OS\Win95\Win95Apps\AddressBook\FRMWinClassicAddressBookNewFolder.Designer.cs">
+      <DependentUpon>FRMWinClassicAddressBookNewFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\AddressBook\WinClassicAddressBook.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\AddressBook\WinClassicAddressBook.Designer.cs">
       <DependentUpon>WinClassicAddressBook.cs</DependentUpon>
     </Compile>
     <Compile Include="OS\Win95\Win95Apps\WinClassicDownloader.cs">
@@ -210,11 +231,17 @@
     <Compile Include="TitleScreen.Designer.cs">
       <DependentUpon>TitleScreen.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="NewGameDialog.resx">
+      <DependentUpon>NewGameDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="UI\IProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>
     <EmbeddedResource Include="OS\Win95\Win95.resx">
       <DependentUpon>Win95.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\AddressBook\FRMWinClassicAddressBookNewContact.resx">
+      <DependentUpon>FRMWinClassicAddressBookNewContact.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\TestApp.resx">
       <DependentUpon>TestApp.cs</DependentUpon>
@@ -222,7 +249,10 @@
     <EmbeddedResource Include="OS\Win95\Win95Apps\WebChat1998.resx">
       <DependentUpon>WebChat1998.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicAddressBook.resx">
+    <EmbeddedResource Include="OS\Win95\Win95Apps\AddressBook\FRMWinClassicAddressBookNewFolder.resx">
+      <DependentUpon>FRMWinClassicAddressBookNewFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\AddressBook\WinClassicAddressBook.resx">
       <DependentUpon>WinClassicAddressBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicDownloader.resx">
@@ -317,6 +347,9 @@
     <Content Include="Resources\WinClassic\Win95SideBar.png" />
     <Content Include="Resources\WinClassic\Win95Start.wav" />
     <None Include="Resources\WinClassic\Win95Warning.png" />
+    <None Include="Resources\WinClassic\WinClassicAddressBookNewIcon.png" />
+    <None Include="Resources\WinClassic\WinClassicAddressBookPropertiesIcon.png" />
+    <None Include="Resources\WinClassic\WinClassicAddressBookDeleteIcon.png" />
     <Content Include="Resources\WinClassic\WinClassicClock.png" />
     <Content Include="Resources\WinClassic\WinClassicComputer.png" />
     <None Include="Resources\WinClassic\WinClassicCopy.png" />
@@ -324,6 +357,7 @@
     <Content Include="Resources\WinClassic\WinClassicDocuments.png" />
     <Content Include="Resources\WinClassic\WinClassicFind.png" />
     <Content Include="Resources\WinClassic\WinClassicFolder.png" />
+    <None Include="Resources\WinClassic\WinClassicGENERALApplicationToolbarBackground.png" />
     <Content Include="Resources\WinClassic\WinClassicHelp.png" />
     <None Include="Resources\WinClassic\WinClassicHWCV.png" />
     <Content Include="Resources\WinClassic\WinClassicIE4.png" />
