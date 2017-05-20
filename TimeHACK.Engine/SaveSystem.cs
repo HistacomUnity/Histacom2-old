@@ -16,7 +16,7 @@ namespace TimeHACK.Engine
         {
             get
             {
-                return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "TimeHACK");
+                return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "TimeHACK");
             }
         }
 
