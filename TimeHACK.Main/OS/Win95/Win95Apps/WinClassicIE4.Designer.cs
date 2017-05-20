@@ -96,13 +96,6 @@
             this.Panel11 = new System.Windows.Forms.Panel();
             this.PictureBox4 = new System.Windows.Forms.PictureBox();
             this.PictureBox3 = new System.Windows.Forms.PictureBox();
-            this.welcomeinternetscreen = new System.Windows.Forms.Panel();
-            this.Label58 = new System.Windows.Forms.Label();
-            this.LinkLabel16 = new System.Windows.Forms.LinkLabel();
-            this.LinkLabel15 = new System.Windows.Forms.LinkLabel();
-            this.Label3 = new System.Windows.Forms.Label();
-            this.TextBox1 = new System.Windows.Forms.TextBox();
-            this.Label2 = new System.Windows.Forms.Label();
             this.hotmailpadams = new System.Windows.Forms.Panel();
             this.email1 = new System.Windows.Forms.Panel();
             this.LinkLabel18 = new System.Windows.Forms.LinkLabel();
@@ -332,7 +325,6 @@
             this.Panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).BeginInit();
-            this.welcomeinternetscreen.SuspendLayout();
             this.hotmailpadams.SuspendLayout();
             this.email1.SuspendLayout();
             this.email3.SuspendLayout();
@@ -365,7 +357,6 @@
             // 
             this.program.BackColor = System.Drawing.Color.Silver;
             this.program.Controls.Add(this.browsingarea);
-            this.program.Controls.Add(this.webBrowser1);
             this.program.Controls.Add(this.Panel14);
             this.program.Controls.Add(this.Panel1);
             this.program.Controls.Add(this.PictureBox1);
@@ -382,7 +373,6 @@
             this.browsingarea.Controls.Add(this.padamsmain);
             this.browsingarea.Controls.Add(this.padamsbackgrounds);
             this.browsingarea.Controls.Add(this.hotmailmain);
-            this.browsingarea.Controls.Add(this.welcomeinternetscreen);
             this.browsingarea.Controls.Add(this.hotmailpadams);
             this.browsingarea.Controls.Add(this.googlealpha);
             this.browsingarea.Controls.Add(this.padamshidden);
@@ -453,7 +443,6 @@
             this.Label20.Size = new System.Drawing.Size(174, 15);
             this.Label20.TabIndex = 7;
             this.Label20.Text = "Copyright 1998 12padams";
-            this.Label20.Click += new System.EventHandler(this.Label20_Click);
             // 
             // Panel10
             // 
@@ -1094,6 +1083,8 @@
             this.PictureBox3.TabIndex = 0;
             this.PictureBox3.TabStop = false;
             // 
+<<<<<<< HEAD
+=======
             // welcomeinternetscreen
             // 
             this.welcomeinternetscreen.AutoScroll = true;
@@ -1179,6 +1170,7 @@
             this.Label2.Text = "Welcome To Internet Explorer 4";
             this.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+>>>>>>> origin/master
             // hotmailpadams
             // 
             this.hotmailpadams.AutoScroll = true;
@@ -1764,7 +1756,6 @@
             this.Button12.TabIndex = 2;
             this.Button12.Text = "Google Search";
             this.Button12.UseVisualStyleBackColor = false;
-            this.Button12.Click += new System.EventHandler(this.Button12_Click);
             // 
             // TextBox4
             // 
@@ -2122,7 +2113,6 @@
             this.GoogleSearchButton.TabIndex = 3;
             this.GoogleSearchButton.Text = "Google Search";
             this.GoogleSearchButton.UseVisualStyleBackColor = false;
-            this.GoogleSearchButton.Click += new System.EventHandler(this.Button9_Click);
             // 
             // ComboBox1
             // 
@@ -2583,7 +2573,6 @@
             this.ToolStripMenuItem21.Name = "ToolStripMenuItem21";
             this.ToolStripMenuItem21.Size = new System.Drawing.Size(221, 22);
             this.ToolStripMenuItem21.Text = "Close";
-            this.ToolStripMenuItem21.Click += new System.EventHandler(this.ToolStripMenuItem21_Click);
             // 
             // ToolStripMenuItem22
             // 
@@ -3219,8 +3208,6 @@
             this.Panel11.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).EndInit();
-            this.welcomeinternetscreen.ResumeLayout(false);
-            this.welcomeinternetscreen.PerformLayout();
             this.hotmailpadams.ResumeLayout(false);
             this.email1.ResumeLayout(false);
             this.email1.PerformLayout();
@@ -3310,13 +3297,6 @@
         internal System.Windows.Forms.Panel Panel11;
         internal System.Windows.Forms.PictureBox PictureBox4;
         internal System.Windows.Forms.PictureBox PictureBox3;
-        internal System.Windows.Forms.Panel welcomeinternetscreen;
-        internal System.Windows.Forms.Label Label58;
-        internal System.Windows.Forms.LinkLabel LinkLabel16;
-        internal System.Windows.Forms.LinkLabel LinkLabel15;
-        internal System.Windows.Forms.Label Label3;
-        internal System.Windows.Forms.TextBox TextBox1;
-        internal System.Windows.Forms.Label Label2;
         internal System.Windows.Forms.Panel hotmailpadams;
         internal System.Windows.Forms.Panel email1;
         internal System.Windows.Forms.LinkLabel LinkLabel18;
@@ -3550,7 +3530,6 @@
         internal System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem93;
         internal System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem94;
         internal System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem95;
-        internal System.Windows.Forms.WebBrowser webBrowser1;
         internal System.ComponentModel.ComponentResourceManager resources;
     }
 }

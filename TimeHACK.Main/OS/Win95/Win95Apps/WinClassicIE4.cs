@@ -5,6 +5,7 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using TimeHACK.Engine;
 using TimeHACK.Engine.Template;
+using TimeHACK.Resources.IE4;
 
 namespace TimeHACK.OS.Win95.Win95Apps
 {
@@ -13,27 +14,36 @@ namespace TimeHACK.OS.Win95.Win95Apps
         public List<string> browsinghistory = new List<string>();
         public int historylocation = 0;
 
-        public HtmlDocument currentsite;
-        private Timer loadplz = new Timer();
+        IE4Welcome welcomeinternetscreen = new IE4Welcome();
 
         public WinClassicIE4()
         {
             InitializeComponent();
-            loadplz.Tick += new EventHandler(loadplz_Tick);
-            loadplz.Interval = 10;
         }
 
         private void WinClassicIE4_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+            browsinghistory.Capacity = 99;
+            BringToFront();
+            hidePrograms();
+            welcomeinternetscreen.Dock = DockStyle.Fill;
+            welcomeinternetscreen.Show();
+            browsinghistory.Add("www.microsoft.com/internetexplorer4/welcome");
+            for (int i = 0; i < 99; i++) browsinghistory.Add(null);
+            foreach (ToolStripMenuItem item in MenuStrip3.Items) item.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
+            foreach (Control ctrl in Panel1.Controls) ctrl.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
+=======
             
+>>>>>>> origin/master
         }
 
         private void hidePrograms()
         {
             googlemain.Hide();
-            welcomeinternetscreen.Hide();
             googleprototype.Hide();
             googlealpha.Hide();
+            welcomeinternetscreen.Hide();
             padamsmain.Hide();
             hotmailmain.Hide();
             padamsbackgrounds.Hide();
@@ -45,60 +55,15 @@ namespace TimeHACK.OS.Win95.Win95Apps
             email3.Hide();
             hotmailpadams.Hide();
         }
-
-        private void google_LinkClicked(object sender, HtmlElementEventArgs e)
-        {
-            goToSite("www.google.com", false);
-        }
-
-        private void padams_LinkClicked(object sender, HtmlElementEventArgs e)
-        {
-            goToSite("www.12padams.com", false);
-        }
-
-        private void googleprototypelink_LinkClicked(object sender, HtmlElementEventArgs e)
-        {
-            goToSite("www.google.stanford.edu", false);
-        }
-
-        private void googlebetalink_LinkClicked(object sender, HtmlElementEventArgs e)
-        {
-            goToSite("www.alpha.google.com", false);
-        }
-
-        private void Label20_Click(object sender, EventArgs e)
-        {
-            hidePrograms();
-            padamshidden.Dock = DockStyle.Fill;
-            padamshidden.Show();
-        }
-
-        private void Button12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button9_Click(object sender, EventArgs e)
-        {
-            goToSite("www.???.com", false);
-        }
-
-        private void ToolStripMenuItem21_Click(object sender, EventArgs e)
-        {
-            ((Form)this.TopLevelControl).Close();
-        }
-
         private void goToSite(string url, bool back)
         {
             switch (url)
             {
                 case "www.google.com":
                     hidePrograms();
-                    webBrowser1.DocumentText = resources.GetString("google_HTML");
                     break;
                 case "www.google.stanford.edu":
                     hidePrograms();
-                    webBrowser1.DocumentText = resources.GetString("prototype_HTML");
                     break;
                 case "www.alpha.google.com":
                     hidePrograms();
@@ -107,11 +72,11 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     break;
                 case "www.12padams.com":
                     hidePrograms();
-                    webBrowser1.DocumentText = resources.GetString("padams_HTML");
                     break;
                 case "www.microsoft.com/internetexplorer4/welcome":
                     hidePrograms();
-                    webBrowser1.DocumentText = resources.GetString("ie4start_HTML");
+                    welcomeinternetscreen.Dock = DockStyle.Fill;
+                    welcomeinternetscreen.Show();
                     break;
                 case "www.???.com":
                     hidePrograms();
@@ -145,7 +110,6 @@ namespace TimeHACK.OS.Win95.Win95Apps
             }
 
             addressbar.Text = url;
-            currentsite = webBrowser1.Document;
         }
 
         private void BackButton_Click(object sender, EventArgs e)
@@ -179,6 +143,9 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             goToSite(addressbar.Text, false);
         }
+<<<<<<< HEAD
+
+=======
         
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
@@ -211,6 +178,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             }
         }
         
+>>>>>>> origin/master
         //TODO: Add more websites
         //TODO: Relabel Buttons And Things
     }
