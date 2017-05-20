@@ -28,7 +28,6 @@ I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Engine\obj\Release\TimeHACK
 I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Engine\obj\Release\TimeHACK.Engine.csproj.GenerateResource.Cache
 I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Engine\obj\Release\TimeHACK.Engine.dll
 I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Engine\obj\Release\TimeHACK.Engine.pdb
-I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Engine\obj\Release\TimeHACK.Engine.csprojResolveAssemblyReference.cache
 C:\Users\lempamo\Documents\GitHub\TimeHACK-fork\TimeHACK.Engine\bin\Release\TimeHACK.Engine.dll
 C:\Users\lempamo\Documents\GitHub\TimeHACK-fork\TimeHACK.Engine\bin\Release\TimeHACK.Engine.pdb
 C:\Users\lempamo\Documents\GitHub\TimeHACK-fork\TimeHACK.Engine\bin\Release\Newtonsoft.Json.dll
