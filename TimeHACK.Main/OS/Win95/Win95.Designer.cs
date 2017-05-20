@@ -1,4 +1,6 @@
-﻿namespace TimeHACK.OS.Win95
+﻿using TimeHACK.OS.Win95;
+
+namespace TimeHACK.OS.Win95
 {
     partial class Windows95
     {
@@ -30,16 +32,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Windows95));
-<<<<<<< HEAD
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("My Computer", 0);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Network Neighborhood", 5);
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Inbox", 3);
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("Recycle Bin", 7);
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("Internet Explorer", 2);
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("Online Services", 1);
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("Set Up The Microsoft Network", 4);
-            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("Outlook Express", 6);
-=======
             System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("My Computer", 0);
             System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("Network Neighborhood", 5);
             System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem("Inbox", 3);
@@ -48,7 +40,6 @@
             System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem("Online Services", 1);
             System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem("Set Up The Microsoft Network", 4);
             System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem("Outlook Express", 6);
->>>>>>> refs/remotes/TimeHACKDevs/master
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.taskbar = new System.Windows.Forms.Panel();
@@ -1274,7 +1265,7 @@
         internal System.Windows.Forms.ToolStripMenuItem BitmapImageToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem MicrosoftDataLinkToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem PropertiesToolStripMenuItem1;
-        internal System.ComponentModel.ComponentResourceManager resources;
+        internal System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Windows95));
         private System.Windows.Forms.ToolStripMenuItem windowManagerTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem downloaderTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem installerTestToolStripMenuItem;
