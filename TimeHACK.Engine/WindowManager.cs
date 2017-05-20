@@ -10,7 +10,7 @@ namespace TimeHACK.Engine
     {
         public static System.Drawing.Text.PrivateFontCollection pfc = new System.Drawing.Text.PrivateFontCollection();
 
-        public WinClassic startWin95(UserControl content, String title, Image icon, Boolean MaxButton, Boolean MinButton)
+        public WinClassic startWin95(UserControl content, String title, Image icon, Boolean MaxButton, Boolean MinButton, Boolean ShowApplicationAsDialog = false)
         {
             // Setup Window
             WinClassic app = new WinClassic();
@@ -64,13 +64,11 @@ namespace TimeHACK.Engine
 
             // Set some values (for the taskbar)
             app.Tag = TaskBarController.AvalibleApplicationID;
-            app.Text = title;        
+            app.Text = title;
 
             // Show the app
-            app.Show();
-            app.BringToFront();
             app.TopMost = true;
-
+            if (ShowApplicationAsDialog == false) { app.Show(); } else { app.ShowDialog(); }
             return app;
         }
 

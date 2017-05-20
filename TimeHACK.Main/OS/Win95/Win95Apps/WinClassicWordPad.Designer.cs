@@ -266,7 +266,7 @@
             // 
             this.bulletStyleToolStripMenuItem.CheckOnClick = true;
             this.bulletStyleToolStripMenuItem.Name = "bulletStyleToolStripMenuItem";
-            this.bulletStyleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.bulletStyleToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.bulletStyleToolStripMenuItem.Text = "Bullet style";
             this.bulletStyleToolStripMenuItem.Click += new System.EventHandler(this.bulletStyleToolStripMenuItem_Click);
             // 
@@ -501,9 +501,9 @@
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.Location = new System.Drawing.Point(3, 1);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(210, 16);
+            this.lblStatus.Size = new System.Drawing.Size(213, 16);
             this.lblStatus.TabIndex = 0;
-            this.lblStatus.Text = "For Help, goto Help -> Help topics";
+            this.lblStatus.Text = "For Help, go to Help -> Help topics";
             // 
             // WinClassicWordPad
             // 
