@@ -189,7 +189,6 @@
             this.TextBox2 = new System.Windows.Forms.TextBox();
             this.Label7 = new System.Windows.Forms.Label();
             this.pboxgoogleprototypelogo = new System.Windows.Forms.PictureBox();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.Panel14 = new System.Windows.Forms.Panel();
             this.GoButton = new System.Windows.Forms.Button();
             this.addressbar = new System.Windows.Forms.ComboBox();
@@ -1082,95 +1081,7 @@
             this.PictureBox3.Size = new System.Drawing.Size(160, 136);
             this.PictureBox3.TabIndex = 0;
             this.PictureBox3.TabStop = false;
-            // 
-<<<<<<< HEAD
-=======
-            // welcomeinternetscreen
-            // 
-            this.welcomeinternetscreen.AutoScroll = true;
-            this.welcomeinternetscreen.BackColor = System.Drawing.Color.White;
-            this.welcomeinternetscreen.Controls.Add(this.Label58);
-            this.welcomeinternetscreen.Controls.Add(this.LinkLabel16);
-            this.welcomeinternetscreen.Controls.Add(this.LinkLabel15);
-            this.welcomeinternetscreen.Controls.Add(this.Label3);
-            this.welcomeinternetscreen.Controls.Add(this.TextBox1);
-            this.welcomeinternetscreen.Controls.Add(this.Label2);
-            this.welcomeinternetscreen.Location = new System.Drawing.Point(8, 3);
-            this.welcomeinternetscreen.Name = "welcomeinternetscreen";
-            this.welcomeinternetscreen.Size = new System.Drawing.Size(38, 38);
-            this.welcomeinternetscreen.TabIndex = 0;
-            // 
-            // Label58
-            // 
-            this.Label58.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label58.Location = new System.Drawing.Point(0, 45);
-            this.Label58.Name = "Label58";
-            this.Label58.Size = new System.Drawing.Size(200, 16);
-            this.Label58.TabIndex = 7;
-            this.Label58.Text = "Where do you want to go today?";
-            this.Label58.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // LinkLabel16
-            // 
-            this.LinkLabel16.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.LinkLabel16.Location = new System.Drawing.Point(0, 317);
-            this.LinkLabel16.Name = "LinkLabel16";
-            this.LinkLabel16.Size = new System.Drawing.Size(200, 13);
-            this.LinkLabel16.TabIndex = 6;
-            this.LinkLabel16.TabStop = true;
-            this.LinkLabel16.Text = "www.12padams.com";
-            this.LinkLabel16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // LinkLabel15
-            // 
-            this.LinkLabel15.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.LinkLabel15.Location = new System.Drawing.Point(0, 298);
-            this.LinkLabel15.Name = "LinkLabel15";
-            this.LinkLabel15.Size = new System.Drawing.Size(200, 13);
-            this.LinkLabel15.TabIndex = 5;
-            this.LinkLabel15.TabStop = true;
-            this.LinkLabel15.Text = "www.google.com";
-            this.LinkLabel15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Label3
-            // 
-            this.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label3.Location = new System.Drawing.Point(0, 258);
-            this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(200, 20);
-            this.Label3.TabIndex = 2;
-            this.Label3.Text = "Here are some sites you may wish to visit.";
-            this.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // TextBox1
-            // 
-            this.TextBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.TextBox1.BackColor = System.Drawing.Color.White;
-            this.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox1.Location = new System.Drawing.Point(0, 98);
-            this.TextBox1.Multiline = true;
-            this.TextBox1.Name = "TextBox1";
-            this.TextBox1.ReadOnly = true;
-            this.TextBox1.Size = new System.Drawing.Size(200, 130);
-            this.TextBox1.TabIndex = 1;
-            this.TextBox1.Text = resources.GetString("TextBox1.Text");
-            this.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // Label2
-            // 
-            this.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.Location = new System.Drawing.Point(0, 19);
-            this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(200, 24);
-            this.Label2.TabIndex = 0;
-            this.Label2.Text = "Welcome To Internet Explorer 4";
-            this.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
->>>>>>> origin/master
+            //
             // hotmailpadams
             // 
             this.hotmailpadams.AutoScroll = true;
@@ -2152,15 +2063,6 @@
             this.pboxgoogleprototypelogo.Size = new System.Drawing.Size(349, 116);
             this.pboxgoogleprototypelogo.TabIndex = 0;
             this.pboxgoogleprototypelogo.TabStop = false;
-            // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(0, 111);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(959, 483);
-            this.webBrowser1.TabIndex = 11;
-            this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             // 
             // Panel14
             // 
