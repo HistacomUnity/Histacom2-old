@@ -47,12 +47,14 @@ namespace TimeHACK
                     {
                         ProfileName = txtProfName.Text;
                         if (DevMode == true)
+                        {
                             if (Directory.Exists(ProfileDirectory))
                             {
                                 Directory.Delete(ProfileDirectory, true);
                                 Successful = true;
                                 this.Close();
                             }
+                        }
 
                         if (!Directory.Exists(ProfileDirectory))
                         {
