@@ -40,6 +40,54 @@ namespace TimeHACK.Engine
             }
         }
 
+        public static string ProfileFileSystemDirectory
+        {
+            get
+            {
+                return Path.Combine(ProfileDirectory, "folders");
+            }
+        }
+
+        public static string ProfileMyComputerDirectory
+        {
+            get
+            {
+                return Path.Combine(ProfileFileSystemDirectory, "Computer");
+            }
+        }
+
+        public static string ProfileSettingsDirectory
+        {
+            get
+            {
+                return Path.Combine(ProfileMyComputerDirectory, "Settings");
+            }
+        }
+
+        public static string ProfileDocumentsDirectory
+        {
+            get
+            {
+                return Path.Combine(ProfileSettingsDirectory, "Doc");
+            }
+        }
+
+        public static string ProfileProgramsDirectory
+        {
+            get
+            {
+                return Path.Combine(ProfileMyComputerDirectory, "Prog");
+            }
+        }
+
+        public static string ProfileWindowsDirectory
+        {
+            get
+            {
+                return Path.Combine(ProfileMyComputerDirectory, "Win");
+            }
+        }
+
         public static bool LoadSave()
         {
             // ON A FINAL RELEASE USE THE "FINAL RELEASE THINGS"
@@ -64,6 +112,17 @@ namespace TimeHACK.Engine
         {
 
             //TODO: User must set a username....somehow
+            CheckFiles();
+
+            var save = new Save();
+            save.ExperiencedStories = new List<string>();
+            save.InstalledPrograms = new Dictionary<string, bool>();
+            CurrentSave = save;
+            SaveGame();
+        }
+
+        public static void CheckFiles()
+        {
             if (!Directory.Exists(GameDirectory))
                 Directory.CreateDirectory(GameDirectory);
 
@@ -73,12 +132,36 @@ namespace TimeHACK.Engine
             if (!Directory.Exists(ProfileDirectory))
                 Directory.CreateDirectory(ProfileDirectory);
 
-            var save = new Save();
-            save.ExperiencedStories = new List<string>();
-            save.InstalledPrograms = new Dictionary<string, bool>();
-            CurrentSave = save;
-            SaveGame();
+            if (!Directory.Exists(ProfileFileSystemDirectory))
+            {
+                Directory.CreateDirectory(ProfileFileSystemDirectory);
+                SaveDirectoryInfo(ProfileFileSystemDirectory, false, "My Computer", false);
+                Directory.CreateDirectory(ProfileMyComputerDirectory);
+                SaveDirectoryInfo(ProfileMyComputerDirectory, false, "Win95", true);
+                Directory.CreateDirectory(ProfileDocumentsDirectory);
+                SaveDirectoryInfo(ProfileDocumentsDirectory, false, "My Documents", true);
+                Directory.CreateDirectory(ProfileSettingsDirectory);
+                SaveDirectoryInfo(ProfileSettingsDirectory, false, "Documents and Settings", true);
+                Directory.CreateDirectory(ProfileProgramsDirectory);
+                SaveDirectoryInfo(ProfileProgramsDirectory, true, "Program Files", true);
+                Directory.CreateDirectory(ProfileWindowsDirectory);
+                SaveDirectoryInfo(ProfileWindowsDirectory, true, "Windows", true);
+            }
         }
+
+        public static void SaveDirectoryInfo(String Directory, Boolean isProtected, String label, Boolean allowback)
+        {
+            FileSystemFolderInfo info = new FileSystemFolderInfo();
+
+            info.Isprotected = isProtected;
+            info.label = label;
+            info.allowback = allowback;
+
+            string toWrite = JsonConvert.SerializeObject(info, Formatting.Indented);
+
+            File.WriteAllText(Path.Combine(Directory, "_data.info"), toWrite);
+        }
+
 
         public static void SaveGame()
         {
@@ -102,5 +185,12 @@ namespace TimeHACK.Engine
         public string Username { get; set; }
         public Dictionary<string, bool> InstalledPrograms { get; set; }
         public List<string> ExperiencedStories { get; set; }
+    }
+
+    public class FileSystemFolderInfo
+    {
+        public Boolean Isprotected { get; set; }
+        public String label { get; set; }
+        public Boolean allowback { get; set; }
     }
 }

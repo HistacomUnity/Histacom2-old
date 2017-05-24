@@ -10,7 +10,8 @@ using Newtonsoft.Json;
 using TimeHACK.OS;
 using TimeHACK.OS.Win95;
 using TimeHACK.OS.Win95.Win95Apps;
-
+using TimeHACK.Engine;
+using TimeHACK.Engine.Template;
 
 namespace TimeHACK
 {
@@ -21,6 +22,8 @@ namespace TimeHACK
         internal static TitleScreen title = null;
         public static string AddressBookSelectedFolderName;
         public static AddressBookContact AddressBookSelectedContact;
+        public static string WindowsExplorerReturnPath;
+        static WindowManager wm = new WindowManager();
 
         /// <summary>
         /// The main entry point for the application.
@@ -71,6 +74,25 @@ namespace TimeHACK
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(title = new TitleScreen());
+        }
+
+        public static String OpenFileExplorerAsDialogAndReturnGivenPath()
+        {
+            WinClassicWindowsExplorer we = new WinClassicWindowsExplorer();
+            WinClassic app = wm.startWin95(we, "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true, true);
+            TitleScreen.frm95.AddTaskBarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
+
+            TitleScreen.frm95.nonimportantapps.Add(app);
+            TitleScreen.frm95.nonimportantapps[TitleScreen.frm95.nonimportantapps.Count - 1].BringToFront();
+            TitleScreen.frm95.nonimportantapps[TitleScreen.frm95.nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(TitleScreen.frm95.NonImportantApp_Closing);
+
+            app.BringToFront();
+            try
+            {
+                return WindowsExplorerReturnPath;
+            } catch {
+                return "";
+            }           
         }
     }
 }

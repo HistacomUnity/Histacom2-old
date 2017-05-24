@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TimeHACK.Engine;
+using static TimeHACK.Engine.FileDialogBoxManager;
 
 namespace TimeHACK.OS.Win95.Win95Apps
 {
@@ -82,6 +83,17 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             string DateTime = System.DateTime.Now.ToString("HH:mm tt dd/MM/yyyy");
             mainText.AppendText(DateTime);
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ActivateOpenFileDialog(".txt");
+            mainText.Text = ReadTextFile(Program.OpenFileExplorerAsDialogAndReturnGivenPath());
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
