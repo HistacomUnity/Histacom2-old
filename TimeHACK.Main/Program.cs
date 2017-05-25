@@ -27,9 +27,9 @@ namespace TimeHACK
         /// Run TitleScreen.cs at launch.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
-            System.Diagnostics.Debugger.Launch();
+            if (args.Contains("-nd")) System.Diagnostics.Debugger.Launch();
             if (nightly == true)
             {
                 try
