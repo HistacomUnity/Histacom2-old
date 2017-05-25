@@ -32,7 +32,6 @@ namespace TimeHACK
         [STAThread]
         static void Main(string[] args)
         {
-            if (!args.Contains("-nd")) System.Diagnostics.Debugger.Launch();
             if (nightly == true)
             {
                 try
