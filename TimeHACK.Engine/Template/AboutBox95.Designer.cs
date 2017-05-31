@@ -44,6 +44,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(7, 7);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
             // textBox1
@@ -55,6 +56,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(193, 42);
+            this.textBox1.TabIndex = 4;
             this.textBox1.Text = "@SOFTWARENAME\r\nWindows 95\r\nCopyright © 1981-1995 Microsoft Corp.";
             // 
             // button1
@@ -77,6 +79,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(185, 42);
+            this.textBox2.TabIndex = 3;
             this.textBox2.Text = "This product is licensed to:\r\n@ACTUALUSER\r\n@COMPANYNAME";
             // 
             // pictureBox2
@@ -85,24 +88,25 @@
             this.pictureBox2.Location = new System.Drawing.Point(76, 154);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(250, 2);
+            this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.Color.Silver;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Location = new System.Drawing.Point(76, 162);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(250, 16);
+            this.textBox3.TabIndex = 1;
             this.textBox3.Text = "Physical Memory Available to Windows:   64,992 KB";
             // 
             // textBox4
             // 
             this.textBox4.BackColor = System.Drawing.Color.Silver;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox4.Location = new System.Drawing.Point(76, 184);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(250, 16);
+            this.textBox4.TabIndex = 0;
             this.textBox4.Text = "System Resources:                                    97% Free";
             // 
             // AboutBox95
@@ -119,6 +123,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "AboutBox95";
             this.Size = new System.Drawing.Size(335, 255);
+            this.Tag = "gnoreFormOnTaskbar";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

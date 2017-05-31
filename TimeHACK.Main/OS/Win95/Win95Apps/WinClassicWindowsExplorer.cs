@@ -63,24 +63,22 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         String ReadDataFile(String reqDirectory, Boolean returnYesIfProtected = false) {
             String Val = "";
-            try
+            String directoryFileInfo;
+            directoryFileInfo = File.ReadAllText(reqDirectory);
+            FileSystemFolderInfo toRead = new FileSystemFolderInfo();
+            toRead = JsonConvert.DeserializeObject<FileSystemFolderInfo>(directoryFileInfo);
+
+            MessageBox.Show(toRead.label);
+            if (returnYesIfProtected == true)
             {
-                String directoryFileInfo;
-                directoryFileInfo = File.ReadAllText(reqDirectory);
-                FileSystemFolderInfo toRead = new FileSystemFolderInfo();
-                toRead = JsonConvert.DeserializeObject<FileSystemFolderInfo>(directoryFileInfo);
-
-                if (returnYesIfProtected == true)
+                if (toRead.Isprotected == true)
                 {
-                    if (toRead.Isprotected == true)
-                    {
-                        return "yes";                        
-                    }
-                } else {
-                    return toRead.label;
+                    return "yes";
                 }
-            } catch (Exception ex) {
-
+            }
+            else
+            {
+                return toRead.label;
             }
             return Val;
         }

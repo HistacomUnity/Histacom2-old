@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WinClassicWindowsExplorer));
             this.program = new System.Windows.Forms.Panel();
             this.diskView = new System.Windows.Forms.ListView();
+            this.icons = new System.Windows.Forms.ImageList(this.components);
             this.btnGo = new System.Windows.Forms.Button();
             this.MenuStrip1 = new System.Windows.Forms.MenuStrip();
             this.FileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -93,7 +94,6 @@
             this.LinkLabel1 = new System.Windows.Forms.LinkLabel();
             this.Label3 = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
-            this.icons = new System.Windows.Forms.ImageList(this.components);
             this.program.SuspendLayout();
             this.MenuStrip1.SuspendLayout();
             this.pnlSave.SuspendLayout();
@@ -130,6 +130,14 @@
             this.diskView.UseCompatibleStateImageBehavior = false;
             this.diskView.View = System.Windows.Forms.View.List;
             this.diskView.DoubleClick += new System.EventHandler(this.diskView_DoubleClick);
+            // 
+            // icons
+            // 
+            this.icons.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("icons.ImageStream")));
+            this.icons.TransparentColor = System.Drawing.Color.Transparent;
+            this.icons.Images.SetKeyName(0, "nwnp32_1_SERVER_ICON.png");
+            this.icons.Images.SetKeyName(1, "shell32_21.ico_16x16.png");
+            this.icons.Images.SetKeyName(2, "blank-file-Windows95Icon.gif");
             // 
             // btnGo
             // 
@@ -535,15 +543,16 @@
             this.pnlSave.Controls.Add(this.Button1);
             this.pnlSave.Controls.Add(this.Label1);
             this.pnlSave.Controls.Add(this.txtSave);
-            this.pnlSave.Location = new System.Drawing.Point(162, 474);
+            this.pnlSave.Location = new System.Drawing.Point(3, 474);
             this.pnlSave.Name = "pnlSave";
-            this.pnlSave.Size = new System.Drawing.Size(253, 35);
+            this.pnlSave.Size = new System.Drawing.Size(850, 35);
             this.pnlSave.TabIndex = 18;
             this.pnlSave.Visible = false;
             // 
             // Button1
             // 
-            this.Button1.Location = new System.Drawing.Point(166, 3);
+            this.Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Button1.Location = new System.Drawing.Point(772, 3);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(75, 23);
             this.Button1.TabIndex = 17;
@@ -554,7 +563,7 @@
             // Label1
             // 
             this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(3, 3);
+            this.Label1.Location = new System.Drawing.Point(3, 6);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(57, 13);
             this.Label1.TabIndex = 16;
@@ -562,9 +571,11 @@
             // 
             // txtSave
             // 
+            this.txtSave.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSave.Location = new System.Drawing.Point(60, 3);
             this.txtSave.Name = "txtSave";
-            this.txtSave.Size = new System.Drawing.Size(100, 20);
+            this.txtSave.Size = new System.Drawing.Size(706, 20);
             this.txtSave.TabIndex = 15;
             // 
             // mainView
@@ -576,6 +587,8 @@
             this.mainView.Location = new System.Drawing.Point(222, 54);
             this.mainView.Name = "mainView";
             this.mainView.Size = new System.Drawing.Size(631, 417);
+            this.mainView.SmallImageList = this.icons;
+            this.mainView.StateImageList = this.icons;
             this.mainView.TabIndex = 10;
             this.mainView.UseCompatibleStateImageBehavior = false;
             this.mainView.DoubleClick += new System.EventHandler(this.mainView_DoubleClick);
@@ -624,14 +637,6 @@
             this.Label2.Size = new System.Drawing.Size(293, 31);
             this.Label2.TabIndex = 0;
             this.Label2.Text = "This directory is hidden";
-            // 
-            // icons
-            // 
-            this.icons.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("icons.ImageStream")));
-            this.icons.TransparentColor = System.Drawing.Color.Transparent;
-            this.icons.Images.SetKeyName(0, "nwnp32_1_SERVER_ICON.png");
-            this.icons.Images.SetKeyName(1, "shell32_21.ico_16x16.png");
-            this.icons.Images.SetKeyName(2, "blank-file-Windows95Icon.gif");
             // 
             // WinClassicWindowsExplorer
             // 
