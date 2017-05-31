@@ -122,6 +122,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicWindowsExplorer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicWindowsExplorer.Designer.cs">
+      <DependentUpon>WinClassicWindowsExplorer.cs</DependentUpon>
+    </Compile>
     <Compile Include="SaveDialogs\LoadGameDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,6 +249,9 @@
     <Compile Include="TitleScreen.Designer.cs">
       <DependentUpon>TitleScreen.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicWindowsExplorer.resx">
+      <DependentUpon>WinClassicWindowsExplorer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SaveDialogs\LoadGameDialog.resx">
       <DependentUpon>LoadGameDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -336,6 +345,8 @@
     <Content Include="Resources\IE4\googleprototype.html" />
     <Content Include="Resources\IE4\ie4start.html" />
     <Content Include="Resources\IE4\padams.html" />
+    <None Include="Resources\wmsui32_1001.ico_16x16.png" />
+    <None Include="Resources\shell32_21.ico_16x16.png" />
     <Content Include="Resources\TitleScreen\Exit.png" />
     <Content Include="Resources\TitleScreen\LoadGame.png" />
     <Content Include="Resources\TitleScreen\MSExit.png" />

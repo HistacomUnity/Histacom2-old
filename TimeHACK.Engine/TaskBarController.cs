@@ -28,10 +28,15 @@ namespace TimeHACK.Engine
             List<Form> AppsList = new List<Form>();
             foreach (Form form in Application.OpenForms)
             {
-                if (form.Tag.ToString() != "ignoreFormOnTaskbar")
+                try
                 {
+                    if (form.Tag.ToString() != "ignoreFormOnTaskbar")
+                    {
+                        AppsList.Add(form);
+                    }
+                } catch {
                     AppsList.Add(form);
-                }             
+                }
             }
             return AppsList;
         }

@@ -117,13 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TextBox1.Text" xml:space="preserve">
-    <value>Welcome To Internet Explorer 4. 
-Internet Explorer 4 makes browsing the web and exploring websites a pleasant experience.
-Just type an address in the location bar above and then press go.
-Instantly you will be taken to the webpage of your choosing.
-Where do you want to go today?</value>
-  </data>
   <data name="TextBox12.Text" xml:space="preserve">
     <value>1998: Added Time Distortion software to 12padams website.
 Software was hidden and only accessable after downloading hwcv.exe and applying it onto the 12padams website
