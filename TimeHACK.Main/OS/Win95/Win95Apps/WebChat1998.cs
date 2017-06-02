@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -22,6 +22,8 @@ namespace TimeHACK.OS.Win95.Win95Apps
         MessageParser wcmp = new MessageParser();
         bool correctname = false;
         bool guessing = false;
+
+        bool wimponclose = false;
 
         SoundPlayer join = new SoundPlayer(Properties.Resources.AIMbuddyjoin);
         SoundPlayer leave = new SoundPlayer(Properties.Resources.AIMbuddyleave);
@@ -74,6 +76,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         listBox1.Items.Add("SkyHigh");
                         join.Play();
                         this.ParentForm.FormClosing += WebChatClosing;
+                        wimponclose = true;
                         break;
                     case "nameguess":
                         typechat.Hide();
@@ -157,9 +160,13 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void WebChatClosing(object sender, FormClosingEventArgs e)
         {
-            bsod.FormClosing += new FormClosingEventHandler(Program.title.BSODRewind);
-            bsod.Show();
-            bsod.BringToFront();
+            if (wimponclose)
+            {
+                bsod.FormClosing += new FormClosingEventHandler(Program.title.BSODRewind);
+                bsod.Show();
+                bsod.BringToFront();
+                bsod2.Close();
+            }
         }
 
         private void Button2_Click(object sender, EventArgs e)

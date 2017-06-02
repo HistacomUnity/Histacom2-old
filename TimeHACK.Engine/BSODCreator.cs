@@ -35,7 +35,7 @@ namespace TimeHACK.Engine
                     bsod.textBox1.Text = "This is the testing type of BSOD. Hurrah.";
                     break;
                 case BSODCauses.WimpEnding:
-                    bsod.textBox1.Text = "An unknown but fatal exception has occured has occured in the program \"wchat98.exe\". The current processes will be terminated.";
+                    bsod.textBox1.Text = "An unknown but fatal exception has occured in the program \"wchat98.exe\". The current processes will be terminated.";
                     break;
                 case BSODCauses.PiracyEnding:
                     bsod.textBox1.Text = "Vital elements of Windows were removed, but recovered. However, your data has been lost.";
