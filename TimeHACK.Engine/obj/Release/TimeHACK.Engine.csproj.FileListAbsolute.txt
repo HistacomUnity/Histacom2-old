@@ -82,3 +82,15 @@ C:\Users\Logan\Desktop\GitHub\TimeHACK\TimeHACK.Engine\obj\Release\TimeHACK.Engi
 C:\Users\Logan\Desktop\GitHub\TimeHACK\TimeHACK.Engine\obj\Release\TimeHACK.Engine.dll
 C:\Users\Logan\Desktop\GitHub\TimeHACK\TimeHACK.Engine\obj\Release\TimeHACK.Engine.pdb
 I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Engine\obj\Release\TimeHACK.Engine.csprojResolveAssemblyReference.cache
+C:\Users\Richie\Desktop\TimeHACK\TimeHACK.Engine\bin\Release\TimeHACK.Engine.dll
+C:\Users\Richie\Desktop\TimeHACK\TimeHACK.Engine\bin\Release\TimeHACK.Engine.pdb
+C:\Users\Richie\Desktop\TimeHACK\TimeHACK.Engine\bin\Release\Newtonsoft.Json.dll
+C:\Users\Richie\Desktop\TimeHACK\TimeHACK.Engine\obj\Release\TimeHACK.Engine.csprojResolveAssemblyReference.cache
+C:\Users\Richie\Desktop\TimeHACK\TimeHACK.Engine\obj\Release\TimeHACK.Engine.Properties.Resources.resources
+C:\Users\Richie\Desktop\TimeHACK\TimeHACK.Engine\obj\Release\TimeHACK.Engine.Template.Win9XBSOD.resources
+C:\Users\Richie\Desktop\TimeHACK\TimeHACK.Engine\obj\Release\TimeHACK.Engine.Template.AboutBox95.resources
+C:\Users\Richie\Desktop\TimeHACK\TimeHACK.Engine\obj\Release\TimeHACK.Engine.Template.Infobox95.resources
+C:\Users\Richie\Desktop\TimeHACK\TimeHACK.Engine\obj\Release\TimeHACK.Engine.Template.WinClassic.resources
+C:\Users\Richie\Desktop\TimeHACK\TimeHACK.Engine\obj\Release\TimeHACK.Engine.csproj.GenerateResource.Cache
+C:\Users\Richie\Desktop\TimeHACK\TimeHACK.Engine\obj\Release\TimeHACK.Engine.dll
+C:\Users\Richie\Desktop\TimeHACK\TimeHACK.Engine\obj\Release\TimeHACK.Engine.pdb
