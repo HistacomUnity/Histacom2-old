@@ -586,5 +586,10 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             ((Form)this.TopLevelControl).Close();
         }
+
+        private void txtSave_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
