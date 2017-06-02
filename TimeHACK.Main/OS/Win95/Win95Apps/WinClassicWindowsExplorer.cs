@@ -126,7 +126,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 dirLbl.Text = currentDirectory;
                 CheckLbl();
             } catch (Exception ex) {
-                wm.startInfobox95("Windows Explorer", "Error with the file explorer \n" + ex.Message, Properties.Resources.Win95Info);
+                wm.startInfobox95("Exploring - C:", "Error with the file explorer \n" + ex.Message, Properties.Resources.Win95Info);
                 ((Form)this.TopLevelControl).Close();
             }
         }
@@ -585,6 +585,12 @@ namespace TimeHACK.OS.Win95.Win95Apps
         private void CloseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ((Form)this.TopLevelControl).Close();
+        }
+
+        private void AboutWindows95ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WindowManager wm = new WindowManager();
+            wm.startAboutBox95("Windows 95", "Microsoft Windows 95 Rev B", Properties.Resources.WinClassicAbout95);
         }
     }
 }
