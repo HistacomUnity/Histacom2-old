@@ -64,11 +64,10 @@ namespace TimeHACK.OS.Win95.Win95Apps
         String ReadDataFile(String reqDirectory, Boolean returnYesIfProtected = false) {
             String Val = "";
             String directoryFileInfo;
-            directoryFileInfo = File.ReadAllText(reqDirectory);
+            directoryFileInfo = File.ReadAllText(Path.Combine(reqDirectory, "_data.info"));
             FileSystemFolderInfo toRead = new FileSystemFolderInfo();
             toRead = JsonConvert.DeserializeObject<FileSystemFolderInfo>(directoryFileInfo);
 
-            MessageBox.Show(toRead.label);
             if (returnYesIfProtected == true)
             {
                 if (toRead.Isprotected == true)
@@ -100,10 +99,10 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     String label = ReadDataFile(str, false);
                     if (label == "")
                     {
-                        this.mainView.Items.Add(Path.GetFileName(str), 1);
+                        this.mainView.Items.Add(Path.GetFileName(str));
                         this.mainView.FindItemWithText(Path.GetFileName(str)).Tag = Path.GetFileName(str);
                     } else {
-                        this.mainView.Items.Add(label, 1);
+                        this.mainView.Items.Add(label, 1).ImageIndex = 1;
                         this.mainView.FindItemWithText(label).Tag = Path.GetFileName(str);
                     }
                 }
@@ -428,11 +427,12 @@ namespace TimeHACK.OS.Win95.Win95Apps
     //    IsFileDialog = False
     //End Sub
         void WinClassicWindowsExplorer_Load(object sender, EventArgs e) {
-            icons.Images.Add(Properties.Resources.WinClassicFolder);
-            icons.Images.Add(Properties.Resources.WinClassicComputer);
+            //icons.Images.Add(Properties.Resources.WinClassicFolder);
+            //icons.Images.Add(Properties.Resources.WinClassicComputer);
             program.BringToFront();
             dirLbl.Text = "folders";
             diskView.Items.Add("My Computer", 0);
+            Application.DoEvents();
             CheckLbl();
             RefreshAll();
             if (FileDialogBoxManager.IsInOpenDialog)
@@ -447,8 +447,11 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 pnlSave.Show();
                 Button1.Text = "Open";
             } else {
-                pnlSave.Show();
-                Button1.Text = "Save";
+                if (IsFileSaveDialog == true)
+                {
+                    pnlSave.Show();
+                    Button1.Text = "Save";
+                }       
             }
 
             onlyViewExtension = FileDialogBoxManager.OnlyViewExtension;
@@ -546,15 +549,42 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 if (new FileInfo(currentDirectory + "\\" + txtSave.Text).Extension == onlyViewExtension)
                 {
 
-                    Program.WindowsExplorerReturnPath = currentDirectory + "\\" + txtSave.Text;
+                   Program.WindowsExplorerReturnPath = currentDirectory + "\\" + txtSave.Text;
 
                 }
+                
 
                 FileDialogBoxManager.IsInOpenDialog = false;
                 FileDialogBoxManager.IsInSaveDialog = false;
 
               ((Form)this.TopLevelControl).Close();
             }
+        }
+
+        private void DeleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!File.Exists(currentDirectory + mainView.FocusedItem.Text))
+                {
+                    wm.startInfobox95("Windows Explorer", "This directory doesn't exist", Properties.Resources.Win95Info);
+                }
+                else
+                {
+                    Directory.Delete(currentDirectory + mainView.FocusedItem.Text, true);
+
+                    RefreshAll();
+                }
+            } catch
+            {
+
+            }
+            
+        }
+
+        private void CloseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ((Form)this.TopLevelControl).Close();
         }
     }
 }

@@ -94,6 +94,7 @@
             this.LinkLabel1 = new System.Windows.Forms.LinkLabel();
             this.Label3 = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
+            this.iconsList = new System.Windows.Forms.ImageList(this.components);
             this.program.SuspendLayout();
             this.MenuStrip1.SuspendLayout();
             this.pnlSave.SuspendLayout();
@@ -218,8 +219,9 @@
             // DeleteToolStripMenuItem
             // 
             this.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem";
-            this.DeleteToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.DeleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.DeleteToolStripMenuItem.Text = "Delete";
+            this.DeleteToolStripMenuItem.Click += new System.EventHandler(this.DeleteToolStripMenuItem_Click);
             // 
             // RenameToolStripMenuItem
             // 
@@ -236,8 +238,9 @@
             // CloseToolStripMenuItem
             // 
             this.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem";
-            this.CloseToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.CloseToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.CloseToolStripMenuItem.Text = "Close";
+            this.CloseToolStripMenuItem.Click += new System.EventHandler(this.CloseToolStripMenuItem_Click);
             // 
             // EditToolStripMenuItem
             // 
@@ -552,6 +555,7 @@
             // Button1
             // 
             this.Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button1.Location = new System.Drawing.Point(772, 3);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(75, 23);
@@ -583,14 +587,15 @@
             this.mainView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainView.LargeImageList = this.icons;
+            this.mainView.LargeImageList = this.iconsList;
             this.mainView.Location = new System.Drawing.Point(222, 54);
             this.mainView.Name = "mainView";
             this.mainView.Size = new System.Drawing.Size(631, 417);
-            this.mainView.SmallImageList = this.icons;
-            this.mainView.StateImageList = this.icons;
+            this.mainView.SmallImageList = this.iconsList;
+            this.mainView.StateImageList = this.iconsList;
             this.mainView.TabIndex = 10;
             this.mainView.UseCompatibleStateImageBehavior = false;
+            this.mainView.View = System.Windows.Forms.View.List;
             this.mainView.DoubleClick += new System.EventHandler(this.mainView_DoubleClick);
             // 
             // pnlHidden
@@ -637,6 +642,14 @@
             this.Label2.Size = new System.Drawing.Size(293, 31);
             this.Label2.TabIndex = 0;
             this.Label2.Text = "This directory is hidden";
+            // 
+            // iconsList
+            // 
+            this.iconsList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("iconsList.ImageStream")));
+            this.iconsList.TransparentColor = System.Drawing.Color.Transparent;
+            this.iconsList.Images.SetKeyName(0, "nwnp32_1_SERVER_ICON.png");
+            this.iconsList.Images.SetKeyName(1, "shell32_21.ico_16x16.png");
+            this.iconsList.Images.SetKeyName(2, "blank-file-Windows95Icon.gif");
             // 
             // WinClassicWindowsExplorer
             // 
@@ -724,5 +737,6 @@
         internal System.Windows.Forms.Label Label1;
         internal System.Windows.Forms.TextBox txtSave;
         internal System.Windows.Forms.ImageList icons;
+        private System.Windows.Forms.ImageList iconsList;
     }
 }

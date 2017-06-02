@@ -11,6 +11,7 @@ namespace TimeHACK.Engine
     public static class SaveSystem
     {
         public static Save CurrentSave { get; private set; }
+        public static FileSystemFolderInfo filesystemflinfo { get; set; }
         public static Boolean DevMode = false;
 
         public static string GameDirectory

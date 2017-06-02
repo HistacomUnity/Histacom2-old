@@ -29,5 +29,10 @@ namespace TimeHACK.Engine.Template
                 this.Close();
             }
         }
+
+        private void Win9XBSOD_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
+        }
     }
 }
