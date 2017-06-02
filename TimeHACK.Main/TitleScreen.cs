@@ -166,6 +166,22 @@ namespace TimeHACK
                 frm95.Close();
                 frm95 = null;
 
+                try
+                {
+                    // Time to close all the game applications
+                    foreach (Form frm in Application.OpenForms)
+                    {
+                        if (frm.Tag.ToString() != "ignoreFormOnTaskbar")
+                        {
+                            frm.Close();
+                        }
+                    }
+                } catch {
+
+                }
+                
+
+
                 // If VM Mode is not enabled
                 if (vm_mode.Checked != true)
                 {
