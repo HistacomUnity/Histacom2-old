@@ -118,7 +118,7 @@
             this.program.Dock = System.Windows.Forms.DockStyle.Fill;
             this.program.Location = new System.Drawing.Point(0, 0);
             this.program.Name = "program";
-            this.program.Size = new System.Drawing.Size(883, 517);
+            this.program.Size = new System.Drawing.Size(704, 517);
             this.program.TabIndex = 13;
             // 
             // diskView
@@ -130,6 +130,7 @@
             this.diskView.TabIndex = 13;
             this.diskView.UseCompatibleStateImageBehavior = false;
             this.diskView.View = System.Windows.Forms.View.List;
+            this.diskView.Visible = false;
             this.diskView.DoubleClick += new System.EventHandler(this.diskView_DoubleClick);
             // 
             // icons
@@ -144,7 +145,7 @@
             // 
             this.btnGo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGo.Location = new System.Drawing.Point(828, 20);
+            this.btnGo.Location = new System.Drawing.Point(646, 22);
             this.btnGo.Name = "btnGo";
             this.btnGo.Size = new System.Drawing.Size(55, 28);
             this.btnGo.TabIndex = 12;
@@ -164,7 +165,7 @@
             this.HelpToolStripMenuItem});
             this.MenuStrip1.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip1.Name = "MenuStrip1";
-            this.MenuStrip1.Size = new System.Drawing.Size(883, 24);
+            this.MenuStrip1.Size = new System.Drawing.Size(704, 24);
             this.MenuStrip1.TabIndex = 6;
             this.MenuStrip1.Text = "MenuStrip1";
             // 
@@ -228,6 +229,7 @@
             this.RenameToolStripMenuItem.Name = "RenameToolStripMenuItem";
             this.RenameToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.RenameToolStripMenuItem.Text = "Rename";
+            this.RenameToolStripMenuItem.Click += new System.EventHandler(this.RenameToolStripMenuItem_Click);
             // 
             // PropertiesToolStripMenuItem
             // 
@@ -488,11 +490,12 @@
             this.AboutWindows95ToolStripMenuItem.Name = "AboutWindows95ToolStripMenuItem";
             this.AboutWindows95ToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.AboutWindows95ToolStripMenuItem.Text = "About Windows 95";
+            this.AboutWindows95ToolStripMenuItem.Click += new System.EventHandler(this.AboutWindows95ToolStripMenuItem_Click);
             // 
             // toprightcorner
             // 
             this.toprightcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.toprightcorner.Location = new System.Drawing.Point(879, 0);
+            this.toprightcorner.Location = new System.Drawing.Point(700, 0);
             this.toprightcorner.Name = "toprightcorner";
             this.toprightcorner.Size = new System.Drawing.Size(4, 4);
             this.toprightcorner.TabIndex = 6;
@@ -513,7 +516,7 @@
             "Online Services"});
             this.dirLbl.Location = new System.Drawing.Point(11, 27);
             this.dirLbl.Name = "dirLbl";
-            this.dirLbl.Size = new System.Drawing.Size(802, 21);
+            this.dirLbl.Size = new System.Drawing.Size(629, 21);
             this.dirLbl.TabIndex = 7;
             this.dirLbl.Text = "My Computer";
             // 
@@ -521,7 +524,7 @@
             // 
             this.bottomrightcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bottomrightcorner.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
-            this.bottomrightcorner.Location = new System.Drawing.Point(879, 513);
+            this.bottomrightcorner.Location = new System.Drawing.Point(700, 513);
             this.bottomrightcorner.Name = "bottomrightcorner";
             this.bottomrightcorner.Size = new System.Drawing.Size(4, 4);
             this.bottomrightcorner.TabIndex = 4;
@@ -556,7 +559,7 @@
             // 
             this.Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button1.Location = new System.Drawing.Point(772, 3);
+            this.Button1.Location = new System.Drawing.Point(608, 1);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(75, 23);
             this.Button1.TabIndex = 17;
@@ -579,9 +582,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSave.Location = new System.Drawing.Point(60, 3);
             this.txtSave.Name = "txtSave";
-            this.txtSave.Size = new System.Drawing.Size(706, 20);
+            this.txtSave.Size = new System.Drawing.Size(542, 20);
             this.txtSave.TabIndex = 15;
-            this.txtSave.TextChanged += new System.EventHandler(this.txtSave_TextChanged);
             // 
             // mainView
             // 
@@ -589,14 +591,15 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mainView.LargeImageList = this.iconsList;
-            this.mainView.Location = new System.Drawing.Point(222, 54);
+            this.mainView.Location = new System.Drawing.Point(11, 54);
             this.mainView.Name = "mainView";
-            this.mainView.Size = new System.Drawing.Size(640, 417);
+            this.mainView.Size = new System.Drawing.Size(690, 417);
             this.mainView.SmallImageList = this.iconsList;
             this.mainView.StateImageList = this.iconsList;
             this.mainView.TabIndex = 10;
             this.mainView.UseCompatibleStateImageBehavior = false;
             this.mainView.View = System.Windows.Forms.View.List;
+            this.mainView.AfterLabelEdit += new System.Windows.Forms.LabelEditEventHandler(this.mainView_AfterLabelEdit);
             this.mainView.DoubleClick += new System.EventHandler(this.mainView_DoubleClick);
             // 
             // iconsList
@@ -615,9 +618,9 @@
             this.pnlHidden.Controls.Add(this.LinkLabel1);
             this.pnlHidden.Controls.Add(this.Label3);
             this.pnlHidden.Controls.Add(this.Label2);
-            this.pnlHidden.Location = new System.Drawing.Point(222, 54);
+            this.pnlHidden.Location = new System.Drawing.Point(9, 54);
             this.pnlHidden.Name = "pnlHidden";
-            this.pnlHidden.Size = new System.Drawing.Size(640, 417);
+            this.pnlHidden.Size = new System.Drawing.Size(692, 417);
             this.pnlHidden.TabIndex = 14;
             this.pnlHidden.Visible = false;
             // 
@@ -658,7 +661,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.program);
             this.Name = "WinClassicWindowsExplorer";
-            this.Size = new System.Drawing.Size(883, 517);
+            this.Size = new System.Drawing.Size(704, 517);
             this.Load += new System.EventHandler(this.WinClassicWindowsExplorer_Load);
             this.program.ResumeLayout(false);
             this.program.PerformLayout();

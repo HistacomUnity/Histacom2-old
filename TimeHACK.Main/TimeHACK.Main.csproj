@@ -360,6 +360,7 @@
     <None Include="Resources\WinClassic\WinClassicWordpad.png" />
     <None Include="Resources\WinClassic\WinClassicUndo.png" />
     <None Include="Resources\LeviWindows.ttf" />
+    <None Include="Resources\WinClassicAbout95.png" />
     <Content Include="Resources\WinClassic\16Color.png" />
     <Content Include="Resources\WinClassic\256Color.png" />
     <None Include="Resources\WinClassic\tada.wav" />

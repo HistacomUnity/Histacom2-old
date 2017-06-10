@@ -19,8 +19,10 @@ namespace TimeHACK.OS.Win95.Win95Apps
         public Boolean IsFileOpenDialog = false;
         public Boolean IsFileSaveDialog = false;
         public String onlyViewExtension = "";
+
         String ToReplaceWith = ProfileDirectory;
         String currentDirectory = Path.Combine(ProfileDirectory, "folders");
+        String oldLabelText;
         Int32 fileType = 6;
         String attemptedDirectory = "";
         WindowManager wm = new WindowManager();
@@ -126,7 +128,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 dirLbl.Text = currentDirectory;
                 CheckLbl();
             } catch (Exception ex) {
-                wm.startInfobox95("Windows Explorer", "Error with the file explorer \n" + ex.Message, Properties.Resources.Win95Info);
+                wm.startInfobox95("Exploring - C:", "Error with the file explorer \n" + ex.Message, Properties.Resources.Win95Info);
                 ((Form)this.TopLevelControl).Close();
             }
         }
@@ -565,7 +567,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             try
             {
-                if (!File.Exists(currentDirectory + mainView.FocusedItem.Text))
+                if (!File.Exists(Path.Combine(currentDirectory, mainView.FocusedItem.Text)))
                 {
                     wm.startInfobox95("Windows Explorer", "This directory doesn't exist", Properties.Resources.Win95Info);
                 }
@@ -586,10 +588,48 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             ((Form)this.TopLevelControl).Close();
         }
+        private void AboutWindows95ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WindowManager wm = new WindowManager();
+            wm.startAboutBox95("Windows 95", "Microsoft Windows 95 Rev B", Properties.Resources.WinClassicAbout95);
+        }
 
-        private void txtSave_TextChanged(object sender, EventArgs e)
+        private void RenameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // The AfterLabelEdit event will kick in after this
+                oldLabelText = mainView.FocusedItem.Text;
+                mainView.LabelEdit = true;
+                mainView.FocusedItem.BeginEdit();
+            } catch
+            {
+
+            }
+        }
+
+        private void mainView_AfterLabelEdit(object sender, LabelEditEventArgs e)
         {
 
+            String setText;
+            setText = mainView.FocusedItem.Text;
+            if (setText == "")
+            {
+                wm.startInfobox95("Windows Explorer", "Please enter a new directory name", Properties.Resources.Win95Info);
+            }
+            else
+            {
+                if (Directory.Exists(setText))
+                {
+                    wm.startInfobox95("Windows Explorer", "That directory already exists.", Properties.Resources.Win95Info);
+                }
+                else
+                {
+                    Directory.Delete(Path.Combine(currentDirectory, oldLabelText), true);
+                    Directory.CreateDirectory(Path.Combine(currentDirectory, setText));
+                }
+            }
+            RefreshAll();
         }
     }
 }
