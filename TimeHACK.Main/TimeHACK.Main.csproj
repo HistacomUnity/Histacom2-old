@@ -122,6 +122,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OS\Win95\Win95Apps\Story\Hack1.cs" />
+    <Compile Include="OS\Win95\Win95Apps\WinClassicFTPClient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicFTPClient.Designer.cs">
+      <DependentUpon>WinClassicFTPClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicTerminal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicTerminal.Designer.cs">
+      <DependentUpon>WinClassicTerminal.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\Win95\Win95Apps\WinClassicWindowsExplorer.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -212,12 +225,6 @@
     <Compile Include="OS\Win95\Win95Apps\WinClassicNotepad.Designer.cs">
       <DependentUpon>WinClassicNotepad.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicOE4.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicOE4.Designer.cs">
-      <DependentUpon>WinClassicOE4.cs</DependentUpon>
-    </Compile>
     <Compile Include="OS\Win95\Win95Apps\WinClassicWordPad.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -255,6 +262,12 @@
     <Compile Include="TitleScreen.Designer.cs">
       <DependentUpon>TitleScreen.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicFTPClient.resx">
+      <DependentUpon>WinClassicFTPClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicTerminal.resx">
+      <DependentUpon>WinClassicTerminal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicWindowsExplorer.resx">
       <DependentUpon>WinClassicWindowsExplorer.cs</DependentUpon>
     </EmbeddedResource>
@@ -356,6 +369,7 @@
     <Content Include="Resources\IE4\padams.html" />
     <None Include="Resources\wmsui32_1001.ico_16x16.png" />
     <None Include="Resources\shell32_21.ico_16x16.png" />
+    <Content Include="Resources\modem_dial.wav" />
     <Content Include="Resources\TitleScreen\Exit.png" />
     <Content Include="Resources\TitleScreen\LoadGame.png" />
     <Content Include="Resources\TitleScreen\MSExit.png" />
