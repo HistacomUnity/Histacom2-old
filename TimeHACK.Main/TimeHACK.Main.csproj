@@ -122,6 +122,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OS\Win95\Win95Apps\Story\Hack1.cs" />
+    <Compile Include="OS\Win95\Win95Apps\WinClassicFTPClient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicFTPClient.Designer.cs">
+      <DependentUpon>WinClassicFTPClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicTerminal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicTerminal.Designer.cs">
+      <DependentUpon>WinClassicTerminal.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\Win95\Win95Apps\WinClassicWindowsExplorer.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -255,6 +268,12 @@
     <Compile Include="TitleScreen.Designer.cs">
       <DependentUpon>TitleScreen.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicFTPClient.resx">
+      <DependentUpon>WinClassicFTPClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicTerminal.resx">
+      <DependentUpon>WinClassicTerminal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicWindowsExplorer.resx">
       <DependentUpon>WinClassicWindowsExplorer.cs</DependentUpon>
     </EmbeddedResource>

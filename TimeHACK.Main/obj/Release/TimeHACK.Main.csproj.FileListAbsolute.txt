@@ -126,3 +126,6 @@ C:\Users\Richie\Desktop\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.exe
 C:\Users\Richie\Desktop\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.pdb
 I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win98.Windows98.resources
 I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.SaveDialogs.SaveFileTroubleShooter.resources
+C:\Users\Logan\Desktop\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WinClassicWindowsExplorer.resources
+C:\Users\Logan\Desktop\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win98.Windows98.resources
+C:\Users\Logan\Desktop\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.SaveDialogs.SaveFileTroubleShooter.resources
