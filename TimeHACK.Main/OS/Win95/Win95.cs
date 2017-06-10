@@ -9,6 +9,7 @@ using TimeHACK.Engine.Template;
 using TimeHACK.Engine.Template.Taskbars;
 using TimeHACK.OS.Win95.Win95Apps;
 using TimeHACK.WinClassicForms;
+using TimeHACK.OS.Win95.Win95Apps.Story;
 
 namespace TimeHACK.OS.Win95
 {
@@ -338,6 +339,12 @@ namespace TimeHACK.OS.Win95
 
             app.BringToFront();
             startmenu.Hide();
+        }
+
+        private void storyTest1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Win95Apps.Story.Hack1 story = new Win95Apps.Story.Hack1();
+            story.startObjective();
         }
 
         //TODO: Add Outlook Express 4
