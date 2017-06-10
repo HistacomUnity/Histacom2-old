@@ -19,8 +19,10 @@ namespace TimeHACK.OS.Win95.Win95Apps
         public Boolean IsFileOpenDialog = false;
         public Boolean IsFileSaveDialog = false;
         public String onlyViewExtension = "";
+
         String ToReplaceWith = ProfileDirectory;
         String currentDirectory = Path.Combine(ProfileDirectory, "folders");
+        String oldLabelText;
         Int32 fileType = 6;
         String attemptedDirectory = "";
         WindowManager wm = new WindowManager();
@@ -114,12 +116,12 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         {
                             if (new FileInfo(str).Extension == onlyViewExtension)
                             {
-                                this.mainView.Items.Add(Path.GetFileName(str), 0);
+                                this.mainView.Items.Add(Path.GetFileName(str), 2);
                             }
                         }
                     } else {
                         if (!(Path.GetFileName(str) == "_data.info")) {
-                            this.mainView.Items.Add(Path.GetFileName(str));
+                            this.mainView.Items.Add(Path.GetFileName(str), 2);
                         }
                     }
                 }
@@ -427,6 +429,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
     //    IsFileDialog = False
     //End Sub
         void WinClassicWindowsExplorer_Load(object sender, EventArgs e) {
+
             //icons.Images.Add(Properties.Resources.WinClassicFolder);
             //icons.Images.Add(Properties.Resources.WinClassicComputer);
             program.BringToFront();
@@ -464,23 +467,18 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 if ((String)mainView.FocusedItem.Tag != "") { // If it isn't a file
                     GoToDir(currentDirectory + "\\" + mainView.FocusedItem.Tag);
                 } else { // If it is a file
-                    if (IsFileOpenDialog == true || IsFileSaveDialog == true) { // If it is a open/save file dialog box
-                        Program.WindowsExplorerReturnPath = currentDirectory + "\\" + mainView.FocusedItem.Text;
-                        ((Form)this.TopLevelControl).Close();
-
-                    } else {
-
-                        ReturnType(new FileInfo(currentDirectory + "\\" + mainView.FocusedItem.Text).Extension);
-
-                        switch (fileType) {
-                            case 1:
-                              //ManageTextFile.OpenNewTextFile(currentDirectory + "\\" + mainView.FocusedItem.Text);
-                              break;
-                        }
+                    if (new FileInfo(Path.Combine(currentDirectory, txtSave.Text)).Extension == onlyViewExtension)
+                    {
+                        Program.WindowsExplorerReturnPath = currentDirectory + "\\" + txtSave.Text;
                     }
-                }
 
-            } catch (Exception ex) {
+
+                    FileDialogBoxManager.IsInOpenDialog = false;
+                    FileDialogBoxManager.IsInSaveDialog = false;
+
+                    ((Form)this.TopLevelControl).Close();
+                }
+            } catch {
 
             }
         }
@@ -492,11 +490,9 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 if (diskView.FocusedItem.Text == "My Computer") {
 
                     GoToDir(ProfileFileSystemDirectory);
-
                 }
 
-
-            } catch (Exception ex) {
+            } catch {
             }
         }
 
@@ -540,24 +536,42 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            if (txtSave.Text == "")
+            try
             {
-                wm.startInfobox95("Windows Explorer", "Please enter a filename", Properties.Resources.Win95Info);
-            }
-            else
-            {
-                if (new FileInfo(currentDirectory + "\\" + txtSave.Text).Extension == onlyViewExtension)
+                Boolean OpenFile = false;
+                if (mainView.FocusedItem != null)
                 {
-
-                   Program.WindowsExplorerReturnPath = currentDirectory + "\\" + txtSave.Text;
-
+                    if ((String)mainView.FocusedItem.Tag != "")
+                    { // If it isn't a file
+                        GoToDir(currentDirectory + "\\" + mainView.FocusedItem.Tag);
+                    }
+                    else OpenFile = true; // If it is a file
                 }
-                
+                else OpenFile = true;
+                if (OpenFile == true)
+                {
+                    if (txtSave.Text == "")
+                    {
+                        wm.startInfobox95("Windows Explorer", "Please enter a filename", Properties.Resources.Win95Info);
+                    }
+                    else
+                    {
+                        if (new FileInfo(currentDirectory + "\\" + txtSave.Text).Extension == onlyViewExtension)
+                        {
 
-                FileDialogBoxManager.IsInOpenDialog = false;
-                FileDialogBoxManager.IsInSaveDialog = false;
+                            Program.WindowsExplorerReturnPath = currentDirectory + "\\" + txtSave.Text;
 
-              ((Form)this.TopLevelControl).Close();
+                        }
+
+
+                        FileDialogBoxManager.IsInOpenDialog = false;
+                        FileDialogBoxManager.IsInSaveDialog = false;
+
+                        ((Form)this.TopLevelControl).Close();
+                    }
+                }
+            } catch {
+
             }
         }
 
@@ -565,7 +579,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             try
             {
-                if (!File.Exists(currentDirectory + mainView.FocusedItem.Text))
+                if (!File.Exists(Path.Combine(currentDirectory, mainView.FocusedItem.Text)))
                 {
                     wm.startInfobox95("Windows Explorer", "This directory doesn't exist", Properties.Resources.Win95Info);
                 }
@@ -586,11 +600,48 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             ((Form)this.TopLevelControl).Close();
         }
-
         private void AboutWindows95ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WindowManager wm = new WindowManager();
             wm.startAboutBox95("Windows 95", "Microsoft Windows 95 Rev B", Properties.Resources.WinClassicAbout95);
+        }
+
+        private void RenameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // The AfterLabelEdit event will kick in after this
+                oldLabelText = mainView.FocusedItem.Text;
+                mainView.LabelEdit = true;
+                mainView.FocusedItem.BeginEdit();
+            } catch
+            {
+
+            }
+        }
+
+        private void mainView_AfterLabelEdit(object sender, LabelEditEventArgs e)
+        {
+
+            String setText;
+            setText = mainView.FocusedItem.Text;
+            if (setText == "")
+            {
+                wm.startInfobox95("Windows Explorer", "Please enter a new directory name", Properties.Resources.Win95Info);
+            }
+            else
+            {
+                if (Directory.Exists(setText))
+                {
+                    wm.startInfobox95("Windows Explorer", "That directory already exists.", Properties.Resources.Win95Info);
+                }
+                else
+                {
+                    Directory.Delete(Path.Combine(currentDirectory, oldLabelText), true);
+                    Directory.CreateDirectory(Path.Combine(currentDirectory, setText));
+                }
+            }
+            RefreshAll();
         }
     }
 }
