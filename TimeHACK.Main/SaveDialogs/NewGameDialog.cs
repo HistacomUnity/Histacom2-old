@@ -76,7 +76,7 @@ namespace TimeHACK
                 {
                     MessageBox.Show("You must enter a profile name!");
                 }
-            } catch (Exception ex)
+            } catch
             {
 
             }
