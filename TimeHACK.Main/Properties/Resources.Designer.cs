@@ -176,6 +176,15 @@ namespace TimeHACK.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream modem_dial {
+            get {
+                return ResourceManager.GetStream("modem_dial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap MSExit {
@@ -369,15 +378,6 @@ namespace TimeHACK.Properties {
         internal static System.IO.UnmanagedMemoryStream Win95Start {
             get {
                 return ResourceManager.GetStream("Win95Start", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Win95Start1 {
-            get {
-                return ResourceManager.GetStream("Win95Start1", resourceCulture);
             }
         }
         

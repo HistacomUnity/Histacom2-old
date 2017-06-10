@@ -45,7 +45,6 @@ C:\Users\Logan\Desktop\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.WinCla
 C:\Users\Logan\Desktop\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WinClassicNotepad.resources
 C:\Users\Logan\Desktop\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WinClassicWordPad.resources
 C:\Users\Logan\Desktop\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.Engine.Template.Taskbars.Win95TaskBarItem.resources
-C:\Users\Logan\Desktop\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win98.Win98.resources
 C:\Users\Logan\Desktop\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.Properties.Resources.resources
 C:\Users\Logan\Desktop\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.TitleScreen.resources
 C:\Users\Logan\Desktop\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.Main.csproj.GenerateResource.Cache
@@ -129,3 +128,5 @@ I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.S
 C:\Users\Logan\Desktop\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WinClassicWindowsExplorer.resources
 C:\Users\Logan\Desktop\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win98.Windows98.resources
 C:\Users\Logan\Desktop\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.SaveDialogs.SaveFileTroubleShooter.resources
+C:\Users\Logan\Desktop\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WinClassicFTPClient.resources
+C:\Users\Logan\Desktop\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WinClassicTerminal.resources

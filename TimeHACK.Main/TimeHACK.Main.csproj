@@ -225,12 +225,6 @@
     <Compile Include="OS\Win95\Win95Apps\WinClassicNotepad.Designer.cs">
       <DependentUpon>WinClassicNotepad.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicOE4.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicOE4.Designer.cs">
-      <DependentUpon>WinClassicOE4.cs</DependentUpon>
-    </Compile>
     <Compile Include="OS\Win95\Win95Apps\WinClassicWordPad.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -375,6 +369,7 @@
     <Content Include="Resources\IE4\padams.html" />
     <None Include="Resources\wmsui32_1001.ico_16x16.png" />
     <None Include="Resources\shell32_21.ico_16x16.png" />
+    <Content Include="Resources\modem_dial.wav" />
     <Content Include="Resources\TitleScreen\Exit.png" />
     <Content Include="Resources\TitleScreen\LoadGame.png" />
     <Content Include="Resources\TitleScreen\MSExit.png" />
