@@ -195,26 +195,26 @@
             // FolderToolStripMenuItem
             // 
             this.FolderToolStripMenuItem.Name = "FolderToolStripMenuItem";
-            this.FolderToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.FolderToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.FolderToolStripMenuItem.Text = "Folder";
             this.FolderToolStripMenuItem.Click += new System.EventHandler(this.FolderToolStripMenuItem_Click);
             // 
             // ShortcutToolStripMenuItem
             // 
             this.ShortcutToolStripMenuItem.Name = "ShortcutToolStripMenuItem";
-            this.ShortcutToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.ShortcutToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.ShortcutToolStripMenuItem.Text = "Shortcut";
             // 
             // TextDocumentToolStripMenuItem
             // 
             this.TextDocumentToolStripMenuItem.Name = "TextDocumentToolStripMenuItem";
-            this.TextDocumentToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.TextDocumentToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.TextDocumentToolStripMenuItem.Text = "Text Document";
             // 
             // BitmapImageToolStripMenuItem
             // 
             this.BitmapImageToolStripMenuItem.Name = "BitmapImageToolStripMenuItem";
-            this.BitmapImageToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.BitmapImageToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.BitmapImageToolStripMenuItem.Text = "Bitmap Image";
             // 
             // DeleteToolStripMenuItem
@@ -229,6 +229,7 @@
             this.RenameToolStripMenuItem.Name = "RenameToolStripMenuItem";
             this.RenameToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.RenameToolStripMenuItem.Text = "Rename";
+            this.RenameToolStripMenuItem.Click += new System.EventHandler(this.RenameToolStripMenuItem_Click);
             // 
             // PropertiesToolStripMenuItem
             // 
@@ -413,7 +414,7 @@
             this.DisconnectNetworkDriveToolStripMenuItem,
             this.GoToToolStripMenuItem});
             this.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem";
-            this.ToolsToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.ToolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.ToolsToolStripMenuItem.Text = "Tools";
             // 
             // FindToolStripMenuItem
@@ -598,6 +599,7 @@
             this.mainView.TabIndex = 10;
             this.mainView.UseCompatibleStateImageBehavior = false;
             this.mainView.View = System.Windows.Forms.View.List;
+            this.mainView.AfterLabelEdit += new System.Windows.Forms.LabelEditEventHandler(this.mainView_AfterLabelEdit);
             this.mainView.DoubleClick += new System.EventHandler(this.mainView_DoubleClick);
             // 
             // iconsList
@@ -618,7 +620,7 @@
             this.pnlHidden.Controls.Add(this.Label2);
             this.pnlHidden.Location = new System.Drawing.Point(9, 54);
             this.pnlHidden.Name = "pnlHidden";
-            this.pnlHidden.Size = new System.Drawing.Size(461, 417);
+            this.pnlHidden.Size = new System.Drawing.Size(692, 417);
             this.pnlHidden.TabIndex = 14;
             this.pnlHidden.Visible = false;
             // 

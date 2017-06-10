@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TimeHACK.OS.Win98
 {
-    public partial class Win98 : Form
+    public partial class Windows98 : Form
     {
-        public Win98()
+        public Windows98()
         {
             InitializeComponent();
         }

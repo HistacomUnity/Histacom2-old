@@ -1,6 +1,6 @@
 ﻿namespace TimeHACK.OS.Win98
 {
-    partial class Win98
+    partial class Windows98
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Win98));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Windows98));
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("My Computer", 0);
             System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Network Neighborhood", 5);
             System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Inbox", 3);
@@ -116,9 +116,9 @@
             // 
             this.taskbar.BackColor = System.Drawing.Color.Silver;
             this.taskbar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("taskbar.BackgroundImage")));
+            this.taskbar.Controls.Add(this.startbutton);
             this.taskbar.Controls.Add(this.clockPanel);
             this.taskbar.Controls.Add(this.taskbarItems);
-            this.taskbar.Controls.Add(this.startbutton);
             this.taskbar.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.taskbar.Location = new System.Drawing.Point(0, 452);
             this.taskbar.Name = "taskbar";
@@ -148,11 +148,14 @@
             // 
             // taskbarItems
             // 
+            this.taskbarItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.taskbarItems.BackColor = System.Drawing.Color.Transparent;
             this.taskbarItems.Cursor = System.Windows.Forms.Cursors.Default;
-            this.taskbarItems.Location = new System.Drawing.Point(63, 4);
+            this.taskbarItems.Location = new System.Drawing.Point(69, 4);
             this.taskbarItems.Name = "taskbarItems";
-            this.taskbarItems.Size = new System.Drawing.Size(3648, 22);
+            this.taskbarItems.Size = new System.Drawing.Size(500, 22);
             this.taskbarItems.TabIndex = 5;
             // 
             // startbutton
@@ -909,7 +912,7 @@
             this.desktopicons.TabIndex = 7;
             this.desktopicons.UseCompatibleStateImageBehavior = false;
             // 
-            // Win98
+            // Windows98
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -919,7 +922,7 @@
             this.Controls.Add(this.startmenu);
             this.Controls.Add(this.desktopicons);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Win98";
+            this.Name = "Windows98";
             this.Text = "Win98";
             this.taskbar.ResumeLayout(false);
             this.clockPanel.ResumeLayout(false);
