@@ -78,14 +78,8 @@ namespace TimeHACK
         public static String OpenFileExplorerAsDialogAndReturnGivenPath()
         {
             WinClassicWindowsExplorer we = new WinClassicWindowsExplorer();
+
             WinClassic app = wm.startWin95(we, "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true, true);
-            TitleScreen.frm95.AddTaskBarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
-
-            TitleScreen.frm95.nonimportantapps.Add(app);
-            TitleScreen.frm95.nonimportantapps[TitleScreen.frm95.nonimportantapps.Count - 1].BringToFront();
-            TitleScreen.frm95.nonimportantapps[TitleScreen.frm95.nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(TitleScreen.frm95.NonImportantApp_Closing);
-
-            app.BringToFront();
             try
             {
                 return WindowsExplorerReturnPath;

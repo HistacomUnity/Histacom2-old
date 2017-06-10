@@ -123,7 +123,7 @@ namespace TimeHACK
                     }
                 }
                 pnlConfirm.Hide();
-            } catch (Exception ex)
+            } catch
             {
                 
             }
