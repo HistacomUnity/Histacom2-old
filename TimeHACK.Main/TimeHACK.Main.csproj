@@ -122,6 +122,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OS\Win95\Win95Apps\Story\Hack1.cs" />
+    <Compile Include="OS\Win95\Win95Apps\WinClassicFTPClient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicFTPClient.Designer.cs">
+      <DependentUpon>WinClassicFTPClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicTerminal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicTerminal.Designer.cs">
+      <DependentUpon>WinClassicTerminal.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\Win95\Win95Apps\WinClassicWindowsExplorer.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -212,12 +225,6 @@
     <Compile Include="OS\Win95\Win95Apps\WinClassicNotepad.Designer.cs">
       <DependentUpon>WinClassicNotepad.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicOE4.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicOE4.Designer.cs">
-      <DependentUpon>WinClassicOE4.cs</DependentUpon>
-    </Compile>
     <Compile Include="OS\Win95\Win95Apps\WinClassicWordPad.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -243,12 +250,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="SaveDialogs\SaveFileTroubleShooter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaveDialogs\SaveFileTroubleShooter.Designer.cs">
+      <DependentUpon>SaveFileTroubleShooter.cs</DependentUpon>
+    </Compile>
     <Compile Include="TitleScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TitleScreen.Designer.cs">
       <DependentUpon>TitleScreen.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicFTPClient.resx">
+      <DependentUpon>WinClassicFTPClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicTerminal.resx">
+      <DependentUpon>WinClassicTerminal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicWindowsExplorer.resx">
       <DependentUpon>WinClassicWindowsExplorer.cs</DependentUpon>
     </EmbeddedResource>
@@ -311,6 +330,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="SaveDialogs\SaveFileTroubleShooter.resx">
+      <DependentUpon>SaveFileTroubleShooter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TitleScreen.resx">
       <DependentUpon>TitleScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -347,6 +369,7 @@
     <Content Include="Resources\IE4\padams.html" />
     <None Include="Resources\wmsui32_1001.ico_16x16.png" />
     <None Include="Resources\shell32_21.ico_16x16.png" />
+    <Content Include="Resources\modem_dial.wav" />
     <Content Include="Resources\TitleScreen\Exit.png" />
     <Content Include="Resources\TitleScreen\LoadGame.png" />
     <Content Include="Resources\TitleScreen\MSExit.png" />
@@ -360,6 +383,7 @@
     <None Include="Resources\WinClassic\WinClassicWordpad.png" />
     <None Include="Resources\WinClassic\WinClassicUndo.png" />
     <None Include="Resources\LeviWindows.ttf" />
+    <None Include="Resources\WinClassicAbout95.png" />
     <Content Include="Resources\WinClassic\16Color.png" />
     <Content Include="Resources\WinClassic\256Color.png" />
     <None Include="Resources\WinClassic\tada.wav" />

@@ -176,6 +176,15 @@ namespace TimeHACK.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream modem_dial {
+            get {
+                return ResourceManager.GetStream("modem_dial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap MSExit {
@@ -373,20 +382,21 @@ namespace TimeHACK.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Win95Start1 {
+        internal static System.Drawing.Bitmap Win95Warning {
             get {
-                return ResourceManager.GetStream("Win95Start1", resourceCulture);
+                object obj = ResourceManager.GetObject("Win95Warning", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Win95Warning {
+        internal static System.Drawing.Bitmap WinClassicAbout95 {
             get {
-                object obj = ResourceManager.GetObject("Win95Warning", resourceCulture);
+                object obj = ResourceManager.GetObject("WinClassicAbout95", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

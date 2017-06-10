@@ -60,6 +60,8 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     googlealpha.Show();
                     break;
                 case "www.12padams.com":
+                    Story.Hack1 startStory = new Story.Hack1();
+                    startStory.startObjective();
                     hidePrograms();
                     break;
                 case "www.microsoft.com/internetexplorer4/welcome":

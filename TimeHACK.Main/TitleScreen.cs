@@ -4,8 +4,10 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using TimeHACK.OS.Win95;
+using TimeHACK.OS.Win98;
 using TimeHACK.Engine;
 using static TimeHACK.Engine.SaveSystem;
+using TimeHACK.SaveDialogs;
 
 namespace TimeHACK
 {
@@ -13,6 +15,7 @@ namespace TimeHACK
     {
         public static System.Drawing.Text.PrivateFontCollection pfc = new System.Drawing.Text.PrivateFontCollection();
         public static Windows95 frm95;
+        public static Windows98 frm98;
         public static string username;
         public static string progress = "95";
 
@@ -29,29 +32,51 @@ namespace TimeHACK
             {
                 leet();
             }
-            else
-            // If VM Mode is not enabled
-            if (vm_mode.Checked != true)
-            {
-                // Generate fullscreen desktop
-                frm95 = new Windows95();
-                frm95.TopMost = true;
-                frm95.FormBorderStyle = FormBorderStyle.None;
-                frm95.WindowState = FormWindowState.Maximized;
-                frm95.Show();
-                Hide();
-            }
-            // If VM Mode is enabled
-            else
-            {
-                // Generate desktop with size entered by user
-                frm95 = new Windows95();
-                frm95.FormBorderStyle = FormBorderStyle.None;
-                frm95.Size = new Size(Convert.ToInt32(VM_Width.Text), Convert.ToInt32(VM_Height.Text));
-                frm95.FormBorderStyle = FormBorderStyle.Fixed3D;
-                frm95.Show();
-                Hide();
-            }
+            else {
+                // Time to decide which OS to start up!
+                MessageBox.Show(CurrentSave.CurrentOS);
+
+                switch (CurrentSave.CurrentOS)
+                {
+                    case "95":
+                        frm95 = new Windows95();
+                        frm95.TopMost = true;
+                        frm95.FormBorderStyle = FormBorderStyle.None;
+                        frm95.WindowState = FormWindowState.Maximized;
+                        //if (vm_mode.Checked == true)
+                        //{
+                        //    frm95.Size = new Size(Convert.ToInt32(VM_Width.Text), Convert.ToInt32(VM_Height.Text));
+                        //    frm95.FormBorderStyle = FormBorderStyle.Fixed3D;
+                        //}
+                        frm95.Show();
+                        Hide();
+
+                        break;
+                    case "98":
+                        frm98 = new Windows98();
+                        frm98.TopMost = true;
+                        frm98.FormBorderStyle = FormBorderStyle.None;
+                        frm98.WindowState = FormWindowState.Maximized;
+                        if (vm_mode.Checked == true)
+                        {
+                            frm98.Size = new Size(Convert.ToInt32(VM_Width.Text), Convert.ToInt32(VM_Height.Text));
+                            frm98.FormBorderStyle = FormBorderStyle.Fixed3D;
+                        }
+                        frm98.Show();
+                        Hide();
+
+                        break;
+                    default:
+                        MessageBox.Show("WARNING! It looks like this save is corrupt!");
+                        MessageBox.Show("We will now open the Save troubleshooter");
+
+                        SaveFileTroubleShooter troubleshooter = new SaveFileTroubleShooter();
+
+                        troubleshooter.ShowDialog();
+                        break;
+                }
+                
+            }             
         }
 
 
@@ -165,6 +190,22 @@ namespace TimeHACK
             {
                 frm95.Close();
                 frm95 = null;
+
+                try
+                {
+                    // Time to close all the game applications
+                    foreach (Form frm in Application.OpenForms)
+                    {
+                        if (frm.Tag.ToString() != "ignoreFormOnTaskbar")
+                        {
+                            frm.Close();
+                        }
+                    }
+                } catch {
+
+                }
+                
+
 
                 // If VM Mode is not enabled
                 if (vm_mode.Checked != true)

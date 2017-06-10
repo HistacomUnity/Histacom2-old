@@ -10,7 +10,8 @@ namespace TimeHACK.Engine
 {
     public static class SaveSystem
     {
-        public static Save CurrentSave { get; private set; }
+        public static Save CurrentSave { get; set; }
+        public static FileSystemFolderInfo filesystemflinfo { get; set; }
         public static Boolean DevMode = false;
 
         public static string GameDirectory
@@ -68,7 +69,13 @@ namespace TimeHACK.Engine
         {
             get
             {
-                return Path.Combine(ProfileSettingsDirectory, "Doc");
+                if (CurrentSave.CurrentOS == "95")
+                {
+                    return Path.Combine(ProfileMyComputerDirectory, "Doc");
+                } else {
+                    return Path.Combine(ProfileSettingsDirectory, "Doc");
+                }
+                
             }
         }
 
@@ -111,13 +118,14 @@ namespace TimeHACK.Engine
         public static void NewGame()
         {
 
-            //TODO: User must set a username....somehow
-            CheckFiles();
+            //TODO: User must set a username....somehow            
 
             var save = new Save();
             save.ExperiencedStories = new List<string>();
-            save.InstalledPrograms = new Dictionary<string, bool>();
+            save.CurrentOS = "95";
             CurrentSave = save;
+
+            CheckFiles();
             SaveGame();
         }
 
@@ -133,24 +141,21 @@ namespace TimeHACK.Engine
                 Directory.CreateDirectory(ProfileDirectory);
 
             if (!Directory.Exists(ProfileFileSystemDirectory))
-            {
                 Directory.CreateDirectory(ProfileFileSystemDirectory);
-                SaveDirectoryInfo(ProfileFileSystemDirectory, false, "My Computer", false);
-                Directory.CreateDirectory(ProfileMyComputerDirectory);
-                SaveDirectoryInfo(ProfileMyComputerDirectory, false, "Win95", true);
-                Directory.CreateDirectory(ProfileDocumentsDirectory);
-                SaveDirectoryInfo(ProfileDocumentsDirectory, false, "My Documents", true);
-                Directory.CreateDirectory(ProfileSettingsDirectory);
-                SaveDirectoryInfo(ProfileSettingsDirectory, false, "Documents and Settings", true);
-                Directory.CreateDirectory(ProfileProgramsDirectory);
-                SaveDirectoryInfo(ProfileProgramsDirectory, true, "Program Files", true);
-                Directory.CreateDirectory(ProfileWindowsDirectory);
-                SaveDirectoryInfo(ProfileWindowsDirectory, true, "Windows", true);
-            }
+
+            SaveDirectoryInfo(ProfileFileSystemDirectory, false, "My Computer", false);            
+            SaveDirectoryInfo(ProfileMyComputerDirectory, false, "Win95", true);
+            SaveDirectoryInfo(ProfileDocumentsDirectory, false, "My Documents", true);
+            SaveDirectoryInfo(ProfileSettingsDirectory, false, "Documents and Settings", true);
+            SaveDirectoryInfo(ProfileProgramsDirectory, true, "Program Files", true);
+            SaveDirectoryInfo(ProfileWindowsDirectory, true, "Windows", true);
         }
 
-        public static void SaveDirectoryInfo(String Directory, Boolean isProtected, String label, Boolean allowback)
+        public static void SaveDirectoryInfo(String directory, Boolean isProtected, String label, Boolean allowback)
         {
+            if (!Directory.Exists(directory))
+                Directory.CreateDirectory(directory);
+
             FileSystemFolderInfo info = new FileSystemFolderInfo();
 
             info.Isprotected = isProtected;
@@ -159,7 +164,7 @@ namespace TimeHACK.Engine
 
             string toWrite = JsonConvert.SerializeObject(info, Formatting.Indented);
 
-            File.WriteAllText(Path.Combine(Directory, "_data.info"), toWrite);
+            File.WriteAllText(Path.Combine(directory, "_data.info"), toWrite);
         }
 
 
@@ -183,7 +188,9 @@ namespace TimeHACK.Engine
     public class Save
     {
         public string Username { get; set; }
-        public Dictionary<string, bool> InstalledPrograms { get; set; }
+
+        public string CurrentOS { get; set; }
+        // public Dictionary<string, bool> InstalledPrograms { get; set; } InstallProgram is no longer needed... we have that data in the FileSystem
         public List<string> ExperiencedStories { get; set; }
     }
 

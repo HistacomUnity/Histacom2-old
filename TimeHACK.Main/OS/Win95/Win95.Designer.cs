@@ -129,6 +129,7 @@ namespace TimeHACK.OS.Win95
             this.BitmapImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MicrosoftDataLinkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PropertiesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.storyTest1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.taskbar.SuspendLayout();
             this.clockPanel.SuspendLayout();
@@ -243,7 +244,7 @@ namespace TimeHACK.OS.Win95
             this.startmenuitems.Name = "startmenuitems";
             this.startmenuitems.Padding = new System.Windows.Forms.Padding(6, 2, 0, 0);
             this.startmenuitems.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.startmenuitems.Size = new System.Drawing.Size(141, 292);
+            this.startmenuitems.Size = new System.Drawing.Size(145, 311);
             this.startmenuitems.TabIndex = 0;
             this.startmenuitems.Text = "StartMenu";
             // 
@@ -272,7 +273,7 @@ namespace TimeHACK.OS.Win95
             this.ProgramsToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.ProgramsToolStripMenuItem.Name = "ProgramsToolStripMenuItem";
             this.ProgramsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.ProgramsToolStripMenuItem.Size = new System.Drawing.Size(134, 36);
+            this.ProgramsToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
             this.ProgramsToolStripMenuItem.Text = "Programs";
             // 
             // AccessoriesToolStripMenuItem
@@ -488,7 +489,7 @@ namespace TimeHACK.OS.Win95
             this.NotePadToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.NotePadToolStripMenuItem.Name = "NotePadToolStripMenuItem";
             this.NotePadToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
-            this.NotePadToolStripMenuItem.Text = "NotePad";
+            this.NotePadToolStripMenuItem.Text = "Notepad";
             this.NotePadToolStripMenuItem.Click += new System.EventHandler(this.NotePadToolStripMenuItem_Click);
             // 
             // OnlineRegistrationToolStripMenuItem
@@ -511,7 +512,7 @@ namespace TimeHACK.OS.Win95
             this.PaintToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.PaintToolStripMenuItem.Name = "PaintToolStripMenuItem";
             this.PaintToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
-            this.PaintToolStripMenuItem.Text = "Paint";
+            this.PaintToolStripMenuItem.Text = "Paintbrush";
             // 
             // PhoneDialerToolStripMenuItem
             // 
@@ -738,14 +739,15 @@ namespace TimeHACK.OS.Win95
             this.DocumentsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.windowManagerTestToolStripMenuItem,
             this.downloaderTestToolStripMenuItem,
-            this.installerTestToolStripMenuItem});
+            this.installerTestToolStripMenuItem,
+            this.storyTest1ToolStripMenuItem});
             this.DocumentsToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicDocuments;
             this.DocumentsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DocumentsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.DocumentsToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.DocumentsToolStripMenuItem.Name = "DocumentsToolStripMenuItem";
             this.DocumentsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.DocumentsToolStripMenuItem.Size = new System.Drawing.Size(134, 36);
+            this.DocumentsToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
             this.DocumentsToolStripMenuItem.Text = "Documents";
             // 
             // windowManagerTestToolStripMenuItem
@@ -788,7 +790,7 @@ namespace TimeHACK.OS.Win95
             this.SettingsToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem";
             this.SettingsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.SettingsToolStripMenuItem.Size = new System.Drawing.Size(134, 36);
+            this.SettingsToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
             this.SettingsToolStripMenuItem.Text = "Settings";
             // 
             // ControlPanelToolStripMenuItem
@@ -834,7 +836,7 @@ namespace TimeHACK.OS.Win95
             this.FindToolStripMenuItem.Name = "FindToolStripMenuItem";
             this.FindToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
             this.FindToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.FindToolStripMenuItem.Size = new System.Drawing.Size(134, 36);
+            this.FindToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
             this.FindToolStripMenuItem.Text = "Find";
             // 
             // FilesOrFoldersToolStripMenuItem
@@ -883,7 +885,7 @@ namespace TimeHACK.OS.Win95
             this.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem";
             this.HelpToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
             this.HelpToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.HelpToolStripMenuItem.Size = new System.Drawing.Size(134, 36);
+            this.HelpToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
             this.HelpToolStripMenuItem.Text = "Help";
             // 
             // RunToolStripMenuItem
@@ -896,7 +898,7 @@ namespace TimeHACK.OS.Win95
             this.RunToolStripMenuItem.Name = "RunToolStripMenuItem";
             this.RunToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
             this.RunToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.RunToolStripMenuItem.Size = new System.Drawing.Size(134, 36);
+            this.RunToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
             this.RunToolStripMenuItem.Text = "Run...";
             // 
             // SuspendToolStripMenuItem
@@ -908,7 +910,7 @@ namespace TimeHACK.OS.Win95
             this.SuspendToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.SuspendToolStripMenuItem.Name = "SuspendToolStripMenuItem";
             this.SuspendToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.SuspendToolStripMenuItem.Size = new System.Drawing.Size(134, 36);
+            this.SuspendToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
             this.SuspendToolStripMenuItem.Text = "Suspend";
             // 
             // ShutdownToolStripMenuItem
@@ -920,8 +922,8 @@ namespace TimeHACK.OS.Win95
             this.ShutdownToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.ShutdownToolStripMenuItem.Name = "ShutdownToolStripMenuItem";
             this.ShutdownToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.ShutdownToolStripMenuItem.Size = new System.Drawing.Size(134, 36);
-            this.ShutdownToolStripMenuItem.Text = "Shutdown...";
+            this.ShutdownToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
+            this.ShutdownToolStripMenuItem.Text = "Shut Down...";
             this.ShutdownToolStripMenuItem.Click += new System.EventHandler(this.ShutdownToolStripMenuItem_Click);
             // 
             // ossidestartmenu
@@ -1144,6 +1146,14 @@ namespace TimeHACK.OS.Win95
             this.PropertiesToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
             this.PropertiesToolStripMenuItem1.Text = "Properties";
             // 
+            // storyTest1ToolStripMenuItem
+            // 
+            this.storyTest1ToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
+            this.storyTest1ToolStripMenuItem.Name = "storyTest1ToolStripMenuItem";
+            this.storyTest1ToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.storyTest1ToolStripMenuItem.Text = "StoryTest1";
+            this.storyTest1ToolStripMenuItem.Click += new System.EventHandler(this.storyTest1ToolStripMenuItem_Click);
+            // 
             // Windows95
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1269,5 +1279,6 @@ namespace TimeHACK.OS.Win95
         private System.Windows.Forms.ToolStripMenuItem downloaderTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem installerTestToolStripMenuItem;
         private System.Windows.Forms.Panel taskbarItems;
+        private System.Windows.Forms.ToolStripMenuItem storyTest1ToolStripMenuItem;
     }
 }

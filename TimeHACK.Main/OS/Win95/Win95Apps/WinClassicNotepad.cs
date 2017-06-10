@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TimeHACK.Engine;
 using static TimeHACK.Engine.FileDialogBoxManager;
+using System.IO;
 
 namespace TimeHACK.OS.Win95.Win95Apps
 {
@@ -87,13 +88,38 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ActivateOpenFileDialog(".txt");
-            mainText.Text = ReadTextFile(Program.OpenFileExplorerAsDialogAndReturnGivenPath());
+            try
+            {
+                ActivateSaveFileDialog(".txt");
+                String selectedPath;
+                selectedPath = Program.OpenFileExplorerAsDialogAndReturnGivenPath();
+
+                MessageBox.Show(selectedPath);
+                if (selectedPath != "")
+                {
+                    mainText.Text = ReadTextFile(selectedPath);
+                }
+            }
+            catch
+            {
+            }
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            try
+            {
+                ActivateSaveFileDialog(".txt");
+                String selectedPath;
+                selectedPath = Program.OpenFileExplorerAsDialogAndReturnGivenPath();
 
+                MessageBox.Show(selectedPath);
+                if (selectedPath != "")
+                {
+                    File.WriteAllText(selectedPath, mainText.Text);
+                }
+            } catch {
+            }               
         }
     }
 }
