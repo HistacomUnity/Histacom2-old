@@ -34,7 +34,6 @@ namespace TimeHACK
             }
             else {
                 // Time to decide which OS to start up!
-                MessageBox.Show(CurrentSave.CurrentOS);
 
                 switch (CurrentSave.CurrentOS)
                 {
