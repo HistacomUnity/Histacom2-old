@@ -123,6 +123,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="OS\Win95\Win95Apps\Story\Hack1.cs" />
+    <Compile Include="OS\Win95\Win95Apps\Story\NormalHack.cs" />
     <Compile Include="OS\Win95\Win95Apps\WinClassicFTPClient.cs">
       <SubType>UserControl</SubType>
     </Compile>

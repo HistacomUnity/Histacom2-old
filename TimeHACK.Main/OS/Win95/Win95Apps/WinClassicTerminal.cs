@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Media;
 using System.IO;
 using System.Threading;
+using System.Reflection;
+using System.Linq.Expressions;
 
 namespace TimeHACK.OS.Win95.Win95Apps
 {
