@@ -13,7 +13,6 @@ I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.W
 I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WinClassicNotepad.resources
 I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WinClassicWordPad.resources
 I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.Engine.Template.Taskbars.Win95TaskBarItem.resources
-I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win98.Win98.resources
 I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.TitleScreen.resources
 I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.Main.csproj.GenerateResource.Cache
 I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.Properties.Resources.resources
@@ -125,3 +124,5 @@ C:\Users\Richie\Desktop\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.exe.manifest
 C:\Users\Richie\Desktop\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.application
 C:\Users\Richie\Desktop\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.exe
 C:\Users\Richie\Desktop\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.pdb
+I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win98.Windows98.resources
+I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.SaveDialogs.SaveFileTroubleShooter.resources

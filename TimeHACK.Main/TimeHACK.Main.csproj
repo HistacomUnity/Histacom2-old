@@ -243,6 +243,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="SaveDialogs\SaveFileTroubleShooter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaveDialogs\SaveFileTroubleShooter.Designer.cs">
+      <DependentUpon>SaveFileTroubleShooter.cs</DependentUpon>
+    </Compile>
     <Compile Include="TitleScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -310,6 +316,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaveDialogs\SaveFileTroubleShooter.resx">
+      <DependentUpon>SaveFileTroubleShooter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TitleScreen.resx">
       <DependentUpon>TitleScreen.cs</DependentUpon>

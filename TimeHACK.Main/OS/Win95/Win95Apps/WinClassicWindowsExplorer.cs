@@ -429,6 +429,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
     //    IsFileDialog = False
     //End Sub
         void WinClassicWindowsExplorer_Load(object sender, EventArgs e) {
+
             //icons.Images.Add(Properties.Resources.WinClassicFolder);
             //icons.Images.Add(Properties.Resources.WinClassicComputer);
             program.BringToFront();

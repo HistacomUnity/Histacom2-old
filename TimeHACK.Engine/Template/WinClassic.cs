@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -73,6 +74,45 @@ namespace TimeHACK.Engine.Template
                 maximizebutton.Image = Engine.Properties.Resources.WinClassicMax;
             }
             
+        }
+
+        // The rest of this code will automatically style the buttons on the form!
+
+        protected override void OnControlAdded(ControlEventArgs e)
+        {
+            base.OnControlAdded(e);
+
+            if (e.Control.GetType() == typeof(Button))
+            {
+                e.Control.MouseEnter += button_MouseEnter;
+                e.Control.MouseLeave += button_MouseLeave;
+
+                ((Button)e.Control).FlatStyle = FlatStyle.Popup;
+            }
+        }
+
+        protected override void OnControlRemoved(ControlEventArgs e)
+        {
+            base.OnControlRemoved(e);
+
+            if (e.Control.GetType() == typeof(Button))
+            {
+                e.Control.MouseEnter -= button_MouseEnter;
+                e.Control.MouseLeave -= button_MouseLeave;
+            }
+        }
+
+        private void button_MouseEnter(object sender, EventArgs e)
+        {
+            var c = (Button)sender;
+            c.UseVisualStyleBackColor = false;
+            c.BackColor = Color.GhostWhite;
+        }
+
+        private void button_MouseLeave(object sender, EventArgs e)
+        {
+            var c = (Button)sender;
+            c.UseVisualStyleBackColor = true;
         }
     }
 }
