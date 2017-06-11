@@ -56,26 +56,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TimeHACK.exe" size="4834816">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TimeHACK.exe" size="7089152">
       <assemblyIdentity name="TimeHACK" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>kqatPPBK/G/VmlkO4NNuIOwfrJwVd6mbz/yROC011EA=</dsig:DigestValue>
+        <dsig:DigestValue>aQVZXO5XeVI/LFH80SyMNiN6ifkT7noACX3Ul59+7VY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TimeHACK.Engine.dll" size="189440">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TimeHACK.Engine.dll" size="190464">
       <assemblyIdentity name="TimeHACK.Engine" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>UDnzq1bid2StNY4fmq7VKMqaq81ginmz76HAKIpmlnQ=</dsig:DigestValue>
+        <dsig:DigestValue>6k0eIg8wtPh0nQO1NXeZ7jhZxhwRazjjnelCvcFuXkw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -140,6 +140,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>k2m2tLIfVCyO67LZX2zSmbVyhl5XLttVgRG6E8/VuF0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\modem_dial.wav" size="2233388">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>8GPdrHpnW0rPFWbku96u19JwgFXPTZoX4unngsc1no0=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\TitleScreen\Exit.png" size="138932">
