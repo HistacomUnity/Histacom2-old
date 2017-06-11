@@ -83,7 +83,6 @@ C:\Users\lempamo\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHA
 C:\Users\lempamo\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WinClassicNotepad.resources
 C:\Users\lempamo\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WinClassicWordPad.resources
 C:\Users\lempamo\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.Engine.Template.Taskbars.Win95TaskBarItem.resources
-C:\Users\lempamo\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.OS.Win98.Win98.resources
 C:\Users\lempamo\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.Properties.Resources.resources
 C:\Users\lempamo\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.TitleScreen.resources
 C:\Users\lempamo\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.Main.csproj.GenerateResource.Cache
@@ -132,3 +131,8 @@ C:\Users\Logan\Desktop\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win
 C:\Users\Logan\Desktop\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WinClassicTerminal.resources
 I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WinClassicFTPClient.resources
 I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WinClassicTerminal.resources
+C:\Users\lempamo\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.OS.Win2K.Win2KApps.SurviveTheDay.resources
+C:\Users\lempamo\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WinClassicFTPClient.resources
+C:\Users\lempamo\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.OS.Win95.Win95Apps.WinClassicTerminal.resources
+C:\Users\lempamo\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.OS.Win98.Windows98.resources
+C:\Users\lempamo\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.SaveDialogs.SaveFileTroubleShooter.resources
