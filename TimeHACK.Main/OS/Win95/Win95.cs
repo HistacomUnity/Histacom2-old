@@ -347,6 +347,20 @@ namespace TimeHACK.OS.Win95
             story.startObjective();
         }
 
+        private void temp_for_std(object sender, EventArgs e)
+        {
+            Win2K.Win2KApps.SurviveTheDay std = new Win2K.Win2KApps.SurviveTheDay();
+            WinClassic app = wm.startWin95(std, "Survive The Day", null, false, false);
+            AddTaskBarItem(app, app.Tag.ToString(), "Survive The Day", null);
+
+            nonimportantapps.Add(app);
+            nonimportantapps[nonimportantapps.Count - 1].BringToFront();
+            nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
+
+            app.BringToFront();
+            startmenu.Hide();
+        }
+
         //TODO: Add Outlook Express 4
     }
 }

@@ -122,6 +122,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OS\Win2K\Win2KApps\SurviveTheDay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win2K\Win2KApps\SurviveTheDay.Designer.cs">
+      <DependentUpon>SurviveTheDay.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\Win95\Win95Apps\Story\Hack1.cs" />
     <Compile Include="OS\Win95\Win95Apps\Story\NormalHack.cs" />
     <Compile Include="OS\Win95\Win95Apps\WinClassicFTPClient.cs">
@@ -263,6 +269,9 @@
     <Compile Include="TitleScreen.Designer.cs">
       <DependentUpon>TitleScreen.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="OS\Win2K\Win2KApps\SurviveTheDay.resx">
+      <DependentUpon>SurviveTheDay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicFTPClient.resx">
       <DependentUpon>WinClassicFTPClient.cs</DependentUpon>
     </EmbeddedResource>
@@ -371,6 +380,8 @@
     <None Include="Resources\wmsui32_1001.ico_16x16.png" />
     <None Include="Resources\shell32_21.ico_16x16.png" />
     <Content Include="Resources\modem_dial.wav" />
+    <Content Include="Resources\std_beep.wav" />
+    <Content Include="Resources\std_gobeep.wav" />
     <Content Include="Resources\TitleScreen\Exit.png" />
     <Content Include="Resources\TitleScreen\LoadGame.png" />
     <Content Include="Resources\TitleScreen\MSExit.png" />
