@@ -23,25 +23,22 @@ namespace TimeHACK.OS.Win95.Win95Apps.Story
         {
             
             wm.startWin95(term, "MS-DOS Prompt", null, true, true);
-
-            Thread theThread = new Thread(startObjectMAIN);
-
-            theThread.Start();
+            term.WriteLine("192.168.0.1 Connecting...");
+            Thread soundThread = new Thread(dialup_sound_play);
+            soundThread.Start();
+            soundThread.Join();
+            term.WriteLine("192.168.0.1 Connected.");
 
         }
 
-        public void startObjectMAIN()
+        public void dialup_sound_play()
         {
-            SoundPlayer startsound;
-            term.WriteLine("192.168.0.1 Connecting...");
+            SoundPlayer dialup_sound; 
 
             // Play Dial-up Sound
             Stream audio = Properties.Resources.modem_dial;
-            startsound = new SoundPlayer(audio);
-            startsound.Play();
-            Thread.Sleep(5000);
-            startsound.Stop();
-            term.WriteLine("192.168.0.1 Connected.");
+            dialup_sound = new SoundPlayer(audio);
+            dialup_sound.PlaySync();
         }
     }
 }
