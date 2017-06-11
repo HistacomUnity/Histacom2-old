@@ -363,4 +363,142 @@
   <data name="modem_dial" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\modem_dial.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="std_beep" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\std_beep.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="std_gobeep" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\std_gobeep.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="std_story" xml:space="preserve">
+    <value>{
+  "start": {
+    "time": "4:00 AM",
+    "txt": "You are laying in bed surrounded by darkness. You look to your right and see in big red numbers 4:00 AM displayed on your alarm clock.",
+    "over": false,
+    "overtxt": "",
+    "btn1txt": "Get Out Of Bed",
+    "btn1tag": "inthedark",
+    "btn2txt": "Sleep Until 8:00 AM",
+    "btn2tag": "snooze",
+    "btn3txt": "Turn On The Alarm Clock Radio",
+    "btn3tag": "theradio",
+    "btn4txt": "",
+    "btn4tag": "",
+    "btn5txt": "",
+    "btn5tag": ""
+  },
+  "inthedark": {
+    "time": "4:01 AM",
+    "txt": "You slowly get out of bed unable to see anything. Carefully you walk around in the dark and feel for the light switch. Just as you find it, you remember that the electrician said not to use the lights yet, as they may be faulty.",
+    "over": false,
+    "overtxt": "",
+    "btn1txt": "Turn On The Lights",
+    "btn1tag": "lightitup",
+    "btn2txt": "Explore The House Without Lights",
+    "btn2tag": "stumbling",
+    "btn3txt": "",
+    "btn3tag": "",
+    "btn4txt": "",
+    "btn4tag": "",
+    "btn5txt": "",
+    "btn5tag": ""
+  },
+  "lightitup": {
+    "time": "4:02 AM",
+    "txt": "The light turns on and everything seems ok. All of a sudden it starts to flicker on and off. You're just about to turn it off when it bursts open. Sparks fly everywhere, setting your room on fire.",
+    "over": false,
+    "overtxt": "",
+    "btn1txt": "Run Out Of The House",
+    "btn1tag": "go-runout",
+    "btn2txt": "Try And Put Out The Fire",
+    "btn2tag": "noextinguisher",
+    "btn3txt": "Call Emergency Services",
+    "btn3tag": "go-emergencyservices",
+    "btn4txt": "Yell Out Loud For Help",
+    "btn4tag": "go-yellforhelp",
+    "btn5txt": "",
+    "btn5tag": ""
+  },
+  "go-runout": {
+    "time": "4:03 AM",
+    "txt": "You run out of the house as it collapses behind you. Suddenly you hear a honking noise and see big lights coming toward you. You look around for the last time and you realize you're in the middle of the road. Everything goes black as you fall to the ground and get flattened by a truck.",
+    "over": true,
+    "overtxt": "GAME OVER: Crushed By Oncoming Truck",
+    "btn1txt": "Restart",
+    "btn1tag": "start",
+    "btn2txt": "Quit",
+    "btn2tag": "quit",
+    "btn3txt": "",
+    "btn3tag": "",
+    "btn4txt": "",
+    "btn4tag": "",
+    "btn5txt": "",
+    "btn5tag": ""
+  },
+  "noextinguisher": {
+    "time": "4:03 AM",
+    "txt": "You run to the kitchen to get the fire extinguisher but you remeber that your neighbour had to borrow it yesterday and has not yet returned it. The fire has now burnt down your whole room and is starting to burn down the hallway. You look around you with not many options. You need to find another way to put the fire out.",
+    "over": false,
+    "overtxt": "",
+    "btn1txt": "Pour Some Water From The Kitchen Over The Fire",
+    "btn1tag": "go-pourwaterfire",
+    "btn2txt": "Spray Water On The Fire With The Garden Hose",
+    "btn2tag": "go-gardenhose",
+    "btn3txt": "Smother The Fire With A Blanket",
+    "btn3tag": "go-blanketfire",
+    "btn4txt": "",
+    "btn4tag": "",
+    "btn5txt": "",
+    "btn5tag": ""
+  },
+  "go-pourwaterfire": {
+    "time": "4:04 AM",
+    "txt": "You fill up a glass of water in the kitchen and the pour it onto the fire, but it doesn't make a difference. The fire is still burning. Before you can get a second glass to pour over the fire, the flames surround and engulf you.",
+    "over": true,
+    "overtxt": "GAME OVER: Burnt To Death",
+    "btn1txt": "Restart",
+    "btn1tag": "start",
+    "btn2txt": "Quit",
+    "btn2tag": "quit",
+    "btn3txt": "",
+    "btn3tag": "",
+    "btn4txt": "",
+    "btn4tag": "",
+    "btn5txt": "",
+    "btn5tag": ""
+  },
+  "go-gardenhose": {
+    "time": "4:04 AM",
+    "txt": "You run outside as fast as you can ready to get the hose. You pick it up and start unwrapping it. You stand back about 5 metres from your burning house and point the hose to it and try to turn it on. No water comes out and you remember that you need to turn it on at the tap. Just as you're about to get to the tap the house collapses on it and sets the grass on fire. The last thing you feel is yourself burning all over.",
+    "over": true,
+    "overtxt": "GAME OVER: Burnt To Death",
+    "btn1txt": "Restart",
+    "btn1tag": "start",
+    "btn2txt": "Quit",
+    "btn2tag": "quit",
+    "btn3txt": "",
+    "btn3tag": "",
+    "btn4txt": "",
+    "btn4tag": "",
+    "btn5txt": "",
+    "btn5tag": ""
+  },
+  "go-blanketfire": {
+    "time": "4:04 AM",
+    "txt": "You grab a blanket from the lounge and run to your burning room. You try and put the blanket on the fire but the blanket catches on fire. In extreme shock you chuck the blanket away and your house collapses onto you burning away into nothing.",
+    "over": true,
+    "overtxt": "GAME OVER: Burnt To Death",
+    "btn1txt": "Restart",
+    "btn1tag": "start",
+    "btn2txt": "Quit",
+    "btn2tag": "quit",
+    "btn3txt": "",
+    "btn3tag": "",
+    "btn4txt": "",
+    "btn4tag": "",
+    "btn5txt": "",
+    "btn5tag": ""
+  }
+}</value>
+  </data>
 </root>

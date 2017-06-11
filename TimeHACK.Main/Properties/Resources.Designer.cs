@@ -237,6 +237,50 @@ namespace TimeHACK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream std_beep {
+            get {
+                return ResourceManager.GetStream("std_beep", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream std_gobeep {
+            get {
+                return ResourceManager.GetStream("std_gobeep", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;start&quot;: {
+        ///    &quot;time&quot;: &quot;4:00 AM&quot;,
+        ///    &quot;txt&quot;: &quot;You are laying in bed surrounded by darkness. You look to your right and see in big red numbers 4:00 AM displayed on your alarm clock.&quot;,
+        ///    &quot;over&quot;: false,
+        ///    &quot;overtxt&quot;: &quot;&quot;,
+        ///    &quot;btn1txt&quot;: &quot;Get Out Of Bed&quot;,
+        ///    &quot;btn1tag&quot;: &quot;inthedark&quot;,
+        ///    &quot;btn2txt&quot;: &quot;Sleep Until 8:00 AM&quot;,
+        ///    &quot;btn2tag&quot;: &quot;snooze&quot;,
+        ///    &quot;btn3txt&quot;: &quot;Turn On The Alarm Clock Radio&quot;,
+        ///    &quot;btn3tag&quot;: &quot;theradio&quot;,
+        ///    &quot;btn4txt&quot;: &quot;&quot;,
+        ///    &quot;btn4tag&quot;: &quot;&quot;,
+        ///    &quot;btn5txt&quot;: &quot;&quot;,
+        ///    &quot;btn5tag&quot;: &quot;&quot;
+        ///  },
+        ///  &quot;inthe [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string std_story {
+            get {
+                return ResourceManager.GetString("std_story", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream tada {
             get {
                 return ResourceManager.GetStream("tada", resourceCulture);
