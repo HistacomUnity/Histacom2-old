@@ -268,9 +268,7 @@ namespace TimeHACK.Properties {
         ///    &quot;btn4txt&quot;: &quot;&quot;,
         ///    &quot;btn4tag&quot;: &quot;&quot;,
         ///    &quot;btn5txt&quot;: &quot;&quot;,
-        ///    &quot;btn5tag&quot;: &quot;&quot;
-        ///  },
-        ///  &quot;inthe [rest of string was truncated]&quot;;.
+        ///    &quot;btn5tag&quot;: &quot; [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string std_story {
             get {
