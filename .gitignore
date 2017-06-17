@@ -384,6 +384,7 @@ typings/
 # Visual Studio 6 auto-generated workspace file (contains which files were open etc.)
 *.vbw
 
+
 # Visual Studio LightSwitch build output
 **/*.HTMLClient/GeneratedArtifacts
 **/*.DesktopClient/GeneratedArtifacts
@@ -427,9 +428,13 @@ __pycache__/
 
 ### TimeHack Extra ###
 TimeHACK.Main\bin\Debug
+TimeHACK.Main\bin\Release
 TimeHACK.Main\obj\Debug
+TimeHACK.Main\obj\Release
 TimeHACK.Engine\bin\Debug
+TimeHACK.Engine\bin\Release
 TimeHACK.Engine\obj\Debug
+TimeHACK.Engine\obj\Release
 
 # Including the .idea directory within repositories is a BAD idea:
 # - contributors that do not use IntelliJ will end up producing commits later on
