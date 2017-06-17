@@ -17,6 +17,8 @@ namespace TimeHACK
 {
     static class Program
     {
+        static System.Media.SoundPlayer stopsound;
+
         internal static bool nightly = true;
         internal static string gameID;
         internal static TitleScreen title = null;
@@ -86,6 +88,17 @@ namespace TimeHACK
             } catch {
                 return "";
             }           
+        }
+
+        public static void ShutdownApplication(System.IO.UnmanagedMemoryStream audio)
+        {
+            
+            System.IO.Stream audioPlay = audio;
+            stopsound = new System.Media.SoundPlayer(audioPlay);
+            stopsound.Play();
+
+            System.Threading.Thread.Sleep(1500);
+            Application.Exit();
         }
     }
 }

@@ -12,41 +12,52 @@ using TimeHACK.Engine;
 
 namespace TimeHACK.OS.Win95.Win95Apps.Story
 {
-    class Hack1 : NormalHack
+    static class Hack1 : Object
     {
-        WinClassicTerminal term = new WinClassicTerminal();
-        WindowManager wm = new WindowManager();
-
-        
+        static WinClassicTerminal term = new WinClassicTerminal();
+        static WindowManager wm = new WindowManager();
+        static Boolean ended = false;
+        static Thread soundThread = new Thread(dialup_sound_play);
 
         // This is the very first story script!
-        public void startObjective()
+        public static void startObjective()
         {
-            Thread terminalThread = new Thread(main);
-            terminalThread.Start();
-        }
+            System.Windows.Forms.Timer tmr = new System.Windows.Forms.Timer();
 
-        public void main()
-        {
             wm.startWin95(term, "MS-DOS Prompt", null, true, true);
             term.WriteLine("192.168.0.1 Connecting...");
 
             term.Invalidate();
-            Application.DoEvents();
+            Application.DoEvents();           
 
-            Thread soundThread = new Thread(dialup_sound_play);
+            tmr.Interval = 1;
+            tmr.Tick += new EventHandler(CheckIfSoundFinished);
+
             soundThread.Start();
-            soundThread.Join();           
 
+            tmr.Start();
+        }
+
+        public static void continueObjective()
+        {
             term.WriteLine("192.168.0.1 Connected.");
 
             Application.DoEvents();
+        }
+        
+        public static void CheckIfSoundFinished(Object sender, EventArgs e)
+        {
+            if (soundThread.IsAlive == false)
+            {
+                // Continue from where we were
+                System.Windows.Forms.Timer trm = sender as System.Windows.Forms.Timer;
 
-            Boolean ended = false;
-            while (!ended) {
+                continueObjective();
+                trm.Stop();
             }
         }
-        public void dialup_sound_play()
+
+        public static void dialup_sound_play()
         {
             SoundPlayer dialup_sound;
             // Play Dial-up Sound
