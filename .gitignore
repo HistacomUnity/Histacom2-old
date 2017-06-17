@@ -440,13 +440,21 @@ TimeHACK.Engine\obj\Release
 # The below files keep the Resources working
 
 !TimeHACK.Main\obj\Debug\TempPE
+!TimeHACK.Main\obj\Debug\DesignTimeResolveAssemblyReferences.cache
 !TimeHACK.Main\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache
+!TimeHACK.Main\obj\Debug\CoreCompileInputs.cache
 !TimeHACK.Main\obj\Release\TempPE
+!TimeHACK.Main\obj\Release\DesignTimeResolveAssemblyReferences.cache
 !TimeHACK.Main\obj\Release\DesignTimeResolveAssemblyReferencesInput.cache
+!TimeHACK.Main\obj\Release\CoreCompileInputs.cache
 !TimeHACK.Engine\obj\Debug\TempPE
+!TimeHACK.Engine\obj\Debug\DesignTimeResolveAssemblyReferences.cache
 !TimeHACK.Engine\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache
+!TimeHACK.Engine\obj\Debug\CoreCompileInputs.cache
 !TimeHACK.Engine\obj\Release\TempPE
+!TimeHACK.Engine\obj\Release\DesignTimeResolveAssemblyReferences.cache
 !TimeHACK.Engine\obj\Release\DesignTimeResolveAssemblyReferencesInput.cache
+!TimeHACK.Engine\obj\Release\CoreCompileInputs.cache
 
 # Including the .idea directory within repositories is a BAD idea:
 # - contributors that do not use IntelliJ will end up producing commits later on
