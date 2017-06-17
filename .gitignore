@@ -364,6 +364,7 @@ UpgradeLog*.htm
 # Microsoft Fakes
 FakesAssemblies/
 
+
 # GhostDoc plugin setting file
 *.GhostDoc.xml
 
@@ -425,6 +426,10 @@ __pycache__/
 # End of https://www.gitignore.io/api/macos,linux,windows,jetbrains,visualstudio,visualstudiocode
 
 ### TimeHack Extra ###
+TimeHACK.Main\bin\Debug
+TimeHACK.Main\obj\Debug
+TimeHACK.Engine\bin\Debug
+TimeHACK.Engine\obj\Debug
 
 # Including the .idea directory within repositories is a BAD idea:
 # - contributors that do not use IntelliJ will end up producing commits later on
