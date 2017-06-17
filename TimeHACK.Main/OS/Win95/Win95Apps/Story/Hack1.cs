@@ -7,6 +7,7 @@ using System.Media;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using TimeHACK.Engine;
 
 namespace TimeHACK.OS.Win95.Win95Apps.Story
@@ -21,20 +22,33 @@ namespace TimeHACK.OS.Win95.Win95Apps.Story
         // This is the very first story script!
         public void startObjective()
         {
-            
-            wm.startWin95(term, "MS-DOS Prompt", null, true, true);
-            term.WriteLine("192.168.0.1 Connecting...");
-            Thread soundThread = new Thread(dialup_sound_play);
-            soundThread.Start();
-            soundThread.Join();
-            term.WriteLine("192.168.0.1 Connected.");
-
+            Thread terminalThread = new Thread(main);
+            terminalThread.Start();
         }
 
+        public void main()
+        {
+            wm.startWin95(term, "MS-DOS Prompt", null, true, true);
+            term.WriteLine("192.168.0.1 Connecting...");
+
+            term.Invalidate();
+            Application.DoEvents();
+
+            Thread soundThread = new Thread(dialup_sound_play);
+            soundThread.Start();
+            soundThread.Join();           
+
+            term.WriteLine("192.168.0.1 Connected.");
+
+            Application.DoEvents();
+
+            Boolean ended = false;
+            while (!ended) {
+            }
+        }
         public void dialup_sound_play()
         {
-            SoundPlayer dialup_sound; 
-
+            SoundPlayer dialup_sound;
             // Play Dial-up Sound
             Stream audio = Properties.Resources.modem_dial;
             dialup_sound = new SoundPlayer(audio);
