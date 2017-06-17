@@ -21,7 +21,7 @@ namespace TimeHACK.Engine
 
         public Win9XBSOD throw9XBSOD(bool except, BSODCauses type)
         {
-            pfc.AddFontFile(AppDomain.CurrentDomain.BaseDirectory + "\\windows_command_prompt.ttf");
+            pfc.AddFontFile(SaveSystem.GameDirectory + "\\Data\\windows_command_prompt.ttf");
             Win9XBSOD bsod = new Win9XBSOD();
             foreach (Control ctrl in bsod.Controls) {
                 ctrl.Font = new System.Drawing.Font(pfc.Families[0], 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((0)));
