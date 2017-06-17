@@ -137,3 +137,4 @@ C:\Users\lempamo\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHA
 C:\Users\lempamo\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.OS.Win98.Windows98.resources
 C:\Users\lempamo\Documents\GitHub\TimeHACK-fork\TimeHACK.Main\obj\Release\TimeHACK.SaveDialogs.SaveFileTroubleShooter.resources
 C:\Users\Logan\Desktop\GitHub\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win2K.Win2KApps.SurviveTheDay.resources
+I:\Desktop\HistamcomVB\My-TimeHACK\TimeHACK\TimeHACK.Main\obj\Release\TimeHACK.OS.Win2K.Win2KApps.SurviveTheDay.resources
