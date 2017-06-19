@@ -14,35 +14,39 @@ namespace TimeHACK.OS.Win95.Win95Apps.Story
 {
     static class Hack1 : Object
     {
-        static WinClassicTerminal term = new WinClassicTerminal();
+        static WinClassicTerminal Console = new WinClassicTerminal();
         static WindowManager wm = new WindowManager();
         static Boolean ended = false;
         static Thread soundThread = new Thread(dialup_sound_play);
+        static Boolean devMode = false;
 
         // This is the very first story script!
         public static void startObjective()
         {
             System.Windows.Forms.Timer tmr = new System.Windows.Forms.Timer();
 
-            wm.startWin95(term, "MS-DOS Prompt", null, true, true);
-            term.WriteLine("192.168.0.1 Connecting...");
-
-            term.Invalidate();
-            Application.DoEvents();           
+            wm.startWin95(Console, "MS-DOS Prompt", null, true, true);
+            Console.WriteLine("telnet> 104.27.135.159 Connecting...");          
 
             tmr.Interval = 1;
             tmr.Tick += new EventHandler(CheckIfSoundFinished);
 
-            soundThread.Start();
-
-            tmr.Start();
+            if (devMode == true)
+            {
+                continueObjective();
+            }
+            else
+            {
+                soundThread.Start();
+                tmr.Start();
+            }
         }
 
         public static void continueObjective()
         {
-            term.WriteLine("192.168.0.1 Connected.");
-
-            Application.DoEvents();
+            Console.WriteLine("telnet> 104.27.135.159 Connected.");
+            Thread.Sleep(2500);
+            Console.WriteLine("telnet> 104.27.135.159 set hostname to 'TheHiddenHacker'.");
         }
         
         public static void CheckIfSoundFinished(Object sender, EventArgs e)
