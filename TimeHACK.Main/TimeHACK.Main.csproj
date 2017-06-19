@@ -121,6 +121,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OS\BIOS\BIOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OS\BIOS\BIOS.Designer.cs">
+      <DependentUpon>BIOS.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\Win2K\Win2KApps\SurviveTheDay.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -267,6 +273,9 @@
     <Compile Include="TitleScreen.Designer.cs">
       <DependentUpon>TitleScreen.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="OS\BIOS\BIOS.resx">
+      <DependentUpon>BIOS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OS\Win2K\Win2KApps\SurviveTheDay.resx">
       <DependentUpon>SurviveTheDay.cs</DependentUpon>
     </EmbeddedResource>
