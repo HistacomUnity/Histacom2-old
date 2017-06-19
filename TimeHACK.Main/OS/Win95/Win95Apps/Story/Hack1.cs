@@ -18,7 +18,7 @@ namespace TimeHACK.OS.Win95.Win95Apps.Story
         static WindowManager wm = new WindowManager();
         static Boolean ended = false;
         static Thread soundThread = new Thread(dialup_sound_play);
-        static Boolean devMode = false;
+        static Boolean devMode = true;
 
         // This is the very first story script!
         public static void startObjective()
@@ -44,9 +44,27 @@ namespace TimeHACK.OS.Win95.Win95Apps.Story
 
         public static void continueObjective()
         {
-            Console.WriteLine("telnet> 104.27.135.159 Connected.");
+            Console.WriteLine("\ntelnet> 104.27.135.159 Connected.");
             Thread.Sleep(2500);
-            Console.WriteLine("telnet> 104.27.135.159 set hostname to 'TheHiddenHacker'.");
+            Console.WriteLine("\ntelnet> 104.27.135.159 set hostname to 'TheHiddenHacker'.");
+            Thread.Sleep(2500);
+            Console.WriteLine("\nTheHiddenHacker> I see you have access to 12padams.com.");
+            Thread.Sleep(4500);
+            Console.WriteLine("\nTheHiddenHacker> Though it doesn't seem obvious, only a very limited amount of people can access the site.");
+            Thread.Sleep(6000);
+            Console.WriteLine("\nTheHiddenHacker> 12padams has a secret, and I need you to help me find it.");
+            Thread.Sleep(3500);
+            Console.WriteLine("\nTheHiddenHacker> I was snooping around his website, when he blacklisted my IP address.");
+            Thread.Sleep(4000);
+            Console.WriteLine("\nTheHiddenHacker> While I was serching, I noticed a file that I didn't have permission to download. I need you to get it for me.");
+            Thread.Sleep(6500);
+            Console.WriteLine("\nTheHiddenHacker> First, I'll need you to download an FTP client, avalible under the software section of 12padams' website.");
+            Thread.Sleep(5000);
+            Console.WriteLine("\nTheHiddenHacker> Once that's downloaded, You'll need to type in a Hostname, Username, and Password.");
+            Thread.Sleep(4500);
+            Console.WriteLine("\nTheHiddenHacker> The hostname is 172.68.119.42, and the username is most likely 12padams. I'm not too sure what the password is, however.");
+            Thread.Sleep(3500);
+            Console.WriteLine("\nTheHiddenHacker> You'll need to figure out where you can get the password. Try looking for any odd text on the website.");
         }
         
         public static void CheckIfSoundFinished(Object sender, EventArgs e)
