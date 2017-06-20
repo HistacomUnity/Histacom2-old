@@ -232,15 +232,6 @@ namespace TimeHACK
                 }
             }
         }
-
-        private void NewGame_MouseEnter(object sender, EventArgs e)
-        {
-            NewGame.Image = Resources.MSNewGame;
-        }
-        private void NewGame_MouseLeave(object sender, EventArgs e)
-        {
-            NewGame.Image = Resources.NewGame;
-        }
         #endregion
 
         #region LoadGame
@@ -260,28 +251,12 @@ namespace TimeHACK
                 StartGame();
             }            
         }
-        private void LoadGame_Enter(object sender, EventArgs e)
-        {
-            LoadGame.Image = Resources.MSLoadGame;
-        }
-        private void LoadGame_Leave(object sender, EventArgs e)
-        {
-            LoadGame.Image = Resources.LoadGame;
-        }
         #endregion
 
         #region ExitButton
         private void Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-        private void Exit_Enter(object sender, EventArgs e)
-        {
-            Exit.Image = Resources.MSExit;
-        }
-        private void Exit_Leave(object sender, EventArgs e)
-        {
-            Exit.Image = Resources.Exit;
         }
         #endregion
 
@@ -308,6 +283,11 @@ namespace TimeHACK
                 gameversion.Text = "Developer Mode Activated";
             }
             
+        }
+
+        private void closebutton_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

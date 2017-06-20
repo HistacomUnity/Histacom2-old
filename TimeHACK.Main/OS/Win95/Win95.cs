@@ -109,12 +109,7 @@ namespace TimeHACK.OS.Win95
         // Shutdown button
         private void ShutdownToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            startsound.Stop();
-            Stream audio = Properties.Resources.tada;
-            stopsound = new SoundPlayer(audio);
-            stopsound.Play();
-            System.Threading.Thread.Sleep(1500);
-            Application.Exit();
+            Program.ShutdownApplication(Properties.Resources.tada);
         }
 
         #endregion //Region
@@ -343,11 +338,17 @@ namespace TimeHACK.OS.Win95
 
         private void storyTest1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Win95Apps.Story.Hack1 story = new Win95Apps.Story.Hack1();
-            story.startObjective();
+            Hack1.startObjective();
         }
 
         private void temp_for_std(object sender, EventArgs e)
+        {
+            System.Threading.Thread thread = new System.Threading.Thread(StartSurviveTheDay);
+
+            thread.Start();
+        }
+
+        void StartSurviveTheDay()
         {
             Win2K.Win2KApps.SurviveTheDay std = new Win2K.Win2KApps.SurviveTheDay();
             WinClassic app = wm.startWin95(std, "Survive The Day", null, false, false);

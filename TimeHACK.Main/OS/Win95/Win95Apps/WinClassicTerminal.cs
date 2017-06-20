@@ -20,9 +20,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         public WinClassicTerminal()
         {
             InitializeComponent();
-            this.richTextBox1.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
         }
-        private SoundPlayer startsound;
         /// <summary>
         /// Write text to the Terminal and create a new line. Very similar to the Win32 Console.WriteLine Function.
         /// </summary>
@@ -30,6 +28,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         public void WriteLine(string Text)
         {
             richTextBox1.AppendText(Text + "\n");
+            richTextBox1.Update();
         }
 
         /// <summary>
@@ -39,6 +38,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         public void Write(String Text)
         {
             richTextBox1.AppendText(Text);
+            richTextBox1.Update();
         }
     }
 }

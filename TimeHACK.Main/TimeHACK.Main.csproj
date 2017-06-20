@@ -106,8 +106,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Release\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -122,6 +121,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OS\BIOS\BIOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OS\BIOS\BIOS.Designer.cs">
+      <DependentUpon>BIOS.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\Win2K\Win2KApps\SurviveTheDay.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -129,7 +134,6 @@
       <DependentUpon>SurviveTheDay.cs</DependentUpon>
     </Compile>
     <Compile Include="OS\Win95\Win95Apps\Story\Hack1.cs" />
-    <Compile Include="OS\Win95\Win95Apps\Story\NormalHack.cs" />
     <Compile Include="OS\Win95\Win95Apps\WinClassicFTPClient.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -269,6 +273,9 @@
     <Compile Include="TitleScreen.Designer.cs">
       <DependentUpon>TitleScreen.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="OS\BIOS\BIOS.resx">
+      <DependentUpon>BIOS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OS\Win2K\Win2KApps\SurviveTheDay.resx">
       <DependentUpon>SurviveTheDay.cs</DependentUpon>
     </EmbeddedResource>
@@ -346,6 +353,7 @@
     <EmbeddedResource Include="TitleScreen.resx">
       <DependentUpon>TitleScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

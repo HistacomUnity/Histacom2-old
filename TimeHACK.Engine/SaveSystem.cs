@@ -61,7 +61,7 @@ namespace TimeHACK.Engine
         {
             get
             {
-                return Path.Combine(ProfileMyComputerDirectory, "Settings");
+                    return Path.Combine(ProfileMyComputerDirectory, "Settings");
             }
         }
 
@@ -69,13 +69,7 @@ namespace TimeHACK.Engine
         {
             get
             {
-                if (CurrentSave.CurrentOS == "95")
-                {
-                    return Path.Combine(ProfileMyComputerDirectory, "Doc");
-                } else {
-                    return Path.Combine(ProfileSettingsDirectory, "Doc");
-                }
-                
+                return Path.Combine(ProfileMyComputerDirectory, "Doc");                
             }
         }
 
@@ -145,8 +139,8 @@ namespace TimeHACK.Engine
 
             SaveDirectoryInfo(ProfileFileSystemDirectory, false, "My Computer", false);            
             SaveDirectoryInfo(ProfileMyComputerDirectory, false, "Win95", true);
-            SaveDirectoryInfo(ProfileDocumentsDirectory, false, "My Documents", true);
-            SaveDirectoryInfo(ProfileSettingsDirectory, false, "Documents and Settings", true);
+            if (CurrentSave.CurrentOS == "95") SaveDirectoryInfo(ProfileDocumentsDirectory, false, "My Documents", true);
+            if (CurrentSave.CurrentOS != "95") SaveDirectoryInfo(ProfileSettingsDirectory, false, "Documents and Settings", true);
             SaveDirectoryInfo(ProfileProgramsDirectory, true, "Program Files", true);
             SaveDirectoryInfo(ProfileWindowsDirectory, true, "Windows", true);
         }

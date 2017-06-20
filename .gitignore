@@ -364,6 +364,7 @@ UpgradeLog*.htm
 # Microsoft Fakes
 FakesAssemblies/
 
+
 # GhostDoc plugin setting file
 *.GhostDoc.xml
 
@@ -377,11 +378,13 @@ typings/
 # Visual Studio 6 build log
 *.plg
 
+
 # Visual Studio 6 workspace options file
 *.opt
 
 # Visual Studio 6 auto-generated workspace file (contains which files were open etc.)
 *.vbw
+
 
 # Visual Studio LightSwitch build output
 **/*.HTMLClient/GeneratedArtifacts
@@ -425,6 +428,33 @@ __pycache__/
 # End of https://www.gitignore.io/api/macos,linux,windows,jetbrains,visualstudio,visualstudiocode
 
 ### TimeHack Extra ###
+TimeHACK.Main\bin\Debug
+TimeHACK.Main\bin\Release
+TimeHACK.Main\obj\Debug\*
+TimeHACK.Main\obj\Release\*
+TimeHACK.Engine\bin\Debug\*
+TimeHACK.Engine\bin\Release\*
+TimeHACK.Engine\obj\Debug
+TimeHACK.Engine\obj\Release
+
+# The below files keep the Resources working
+
+!TimeHACK.Main\obj\Debug\TempPE
+!TimeHACK.Main\obj\Debug\DesignTimeResolveAssemblyReferences.cache
+!TimeHACK.Main\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache
+!TimeHACK.Main\obj\Debug\CoreCompileInputs.cache
+!TimeHACK.Main\obj\Release\TempPE
+!TimeHACK.Main\obj\Release\DesignTimeResolveAssemblyReferences.cache
+!TimeHACK.Main\obj\Release\DesignTimeResolveAssemblyReferencesInput.cache
+!TimeHACK.Main\obj\Release\CoreCompileInputs.cache
+!TimeHACK.Engine\obj\Debug\TempPE
+!TimeHACK.Engine\obj\Debug\DesignTimeResolveAssemblyReferences.cache
+!TimeHACK.Engine\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache
+!TimeHACK.Engine\obj\Debug\CoreCompileInputs.cache
+!TimeHACK.Engine\obj\Release\TempPE
+!TimeHACK.Engine\obj\Release\DesignTimeResolveAssemblyReferences.cache
+!TimeHACK.Engine\obj\Release\DesignTimeResolveAssemblyReferencesInput.cache
+!TimeHACK.Engine\obj\Release\CoreCompileInputs.cache
 
 # Including the .idea directory within repositories is a BAD idea:
 # - contributors that do not use IntelliJ will end up producing commits later on
