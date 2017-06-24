@@ -8,12 +8,18 @@ using TimeHACK.OS.Win98;
 using TimeHACK.Engine;
 using static TimeHACK.Engine.SaveSystem;
 using TimeHACK.SaveDialogs;
+using System.Runtime.InteropServices;
+using System.Reflection;
+using System.ComponentModel;
 
 namespace TimeHACK
 {
     public partial class TitleScreen : Form
     {
         public static System.Drawing.Text.PrivateFontCollection pfc = new System.Drawing.Text.PrivateFontCollection();
+
+        TimeHACK.Engine.Template.WinClassic borders = new TimeHACK.Engine.Template.WinClassic();
+
         public static Windows95 frm95;
         public static Windows98 frm98;
         public static string username;
@@ -24,6 +30,19 @@ namespace TimeHACK
         public static DirectoryInfo profilefolder;
         public static NewGameDialog newGameBox;
         public static LoadGameDialog loadGameBox;
+
+        // Border stuff
+
+        public Boolean max = false;
+
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+
+        [DllImportAttribute("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd,
+                         int Msg, int wParam, int lParam);
+        [DllImportAttribute("user32.dll")]
+        public static extern bool ReleaseCapture();
 
         public void StartGame()
         {           
@@ -82,6 +101,51 @@ namespace TimeHACK
         public TitleScreen()
         {
             InitializeComponent();
+
+            // Add the WINDOWS BORDERS from the Window Manager
+
+            FieldInfo f1 = typeof(Control).GetField("EventMouseDown",
+    BindingFlags.Static | BindingFlags.NonPublic);
+            object obj = f1.GetValue(borders.programtopbar);
+            PropertyInfo pi = borders.programtopbar.GetType().GetProperty("Events",
+                BindingFlags.NonPublic | BindingFlags.Instance);
+            EventHandlerList list = (EventHandlerList)pi.GetValue(borders.programtopbar, null);
+            list.RemoveHandler(obj, list[obj]);
+
+            borders.programtopbar.MouseDown += new MouseEventHandler(TitleBarDrag);
+            borders.programtopbar.Controls.Find("closebutton", false)[0].MouseClick += new MouseEventHandler(closeButton);
+            borders.programtopbar.Controls.Find("maximizebutton", false)[0].MouseClick += new MouseEventHandler(MaximiseButton);
+
+            this.Controls.Add(borders.programtopbar);
+            this.Controls.Add(borders.right);
+            this.Controls.Add(borders.left);
+            this.Controls.Add(borders.bottom);
+
+            
+        }
+
+        void TitleBarDrag(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left && max == false)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
+
+        void MaximiseButton(object sender, MouseEventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            } else {
+                this.WindowState = FormWindowState.Normal;
+            }
+        }
+
+        void closeButton(object sender, MouseEventArgs e)
+        {
+            Close();
         }
 
         private void closebutton_Click(object sender, EventArgs e)
