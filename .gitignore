@@ -399,7 +399,8 @@ _Pvt_Extensions
 paket-files/
 
 # FAKE - F# Make
-.fake/
+
+!.fake/
 
 # JetBrains Rider
 .idea/
@@ -455,6 +456,7 @@ TimeHACK.Engine\obj\Release
 !TimeHACK.Engine\obj\Release\DesignTimeResolveAssemblyReferences.cache
 !TimeHACK.Engine\obj\Release\DesignTimeResolveAssemblyReferencesInput.cache
 !TimeHACK.Engine\obj\Release\CoreCompileInputs.cache
+!packages
 
 # Including the .idea directory within repositories is a BAD idea:
 # - contributors that do not use IntelliJ will end up producing commits later on
