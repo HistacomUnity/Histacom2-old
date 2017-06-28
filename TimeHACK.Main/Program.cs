@@ -21,7 +21,7 @@ namespace TimeHACK
 
         internal static bool nightly = true;
         internal static string gameID;
-        internal static TitleScreen title = null;
+        internal static TitleScreen title;
         public static string AddressBookSelectedFolderName;
         public static AddressBookContact AddressBookSelectedContact;
         public static string WindowsExplorerReturnPath;
@@ -34,26 +34,15 @@ namespace TimeHACK
         [STAThread]
         static void Main(string[] args)
         {
-            if (nightly == true)
-            {
-                try
-                {
-                    WebClient wc = new WebClient();
+            Application.SetCompatibleTextRenderingDefault(false);
 
-                    // Set the GameID
-                    string json = wc.DownloadString("http://ci.appveyor.com/api/projects/timehack/timehack");
-                    JObject j = JObject.Parse(JObject.Parse(json)["build"].ToString());
-                    gameID = "AppVeyor-" + j["buildNumber"].ToString();
-                }
-                catch (WebException)
-                {
-                    gameID = "AppVeyor";
-                }
-            }
-            else
-            {
-                gameID = "TimeHACK 1.1";
-            }
+            title = new TitleScreen();
+
+            gameID = "Getting AppVeyor...";
+            System.Threading.Thread getAppVeyor = new System.Threading.Thread(GetAppVeyor);
+
+            getAppVeyor.Start();
+            System.Threading.Thread.Sleep(500);
 
             //TimeHACK.Engine.GameSave.SaveData MySaveData = new TimeHACK.Engine.GameSave.SaveData()
             //{
@@ -72,9 +61,8 @@ namespace TimeHACK
 
             //MySaveData = (TimeHACK.Engine.GameSave.SaveData)JsonConvert.DeserializeObject(TheJSON, MySaveData.GetType());
             //MessageBox.Show(MySaveData.OS.ToString());
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(title = new TitleScreen());
+            Application.EnableVisualStyles();           
+            Application.Run(title);
         }
 
         public static String OpenFileExplorerAsDialogAndReturnGivenPath()
@@ -99,6 +87,31 @@ namespace TimeHACK
 
             System.Threading.Thread.Sleep(1500);
             Application.Exit();
+        }
+
+        public static void GetAppVeyor()
+        {
+            if (nightly == true)
+            {
+                try
+                {
+                    WebClient wc = new WebClient();
+
+                    // Set the GameID
+                    string json = wc.DownloadString("http://ci.appveyor.com/api/projects/timehack/timehack");
+                    JObject j = JObject.Parse(JObject.Parse(json)["build"].ToString());
+                    gameID = "AppVeyor-" + j["buildNumber"].ToString();
+                }
+                catch (WebException)
+                {
+                    gameID = "AppVeyor";
+                }
+            }
+            else
+            {
+                gameID = "TimeHACK 1.1";
+            }
+
         }
     }
 }

@@ -44,14 +44,43 @@ namespace TimeHACK
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
 
+
+        public TitleScreen()
+        {
+            InitializeComponent();
+
+            // Add the WINDOWS BORDERS from the Window Manager
+
+            FieldInfo f1 = typeof(Control).GetField("EventMouseDown",
+    BindingFlags.Static | BindingFlags.NonPublic);
+            object obj = f1.GetValue(borders.programtopbar);
+            PropertyInfo pi = borders.programtopbar.GetType().GetProperty("Events",
+                BindingFlags.NonPublic | BindingFlags.Instance);
+            EventHandlerList list = (EventHandlerList)pi.GetValue(borders.programtopbar, null);
+            list.RemoveHandler(obj, list[obj]);
+
+            borders.programtopbar.MouseDown += new MouseEventHandler(TitleBarDrag);
+            borders.programtopbar.Controls.Find("closebutton", false)[0].MouseClick += new MouseEventHandler(closeButton);
+            borders.programtopbar.Controls.Find("maximizebutton", false)[0].MouseClick += new MouseEventHandler(MaximiseButton);
+            
+            this.Controls.Add(borders.programtopbar);
+            this.Controls.Add(borders.top);
+            this.Controls.Add(borders.right);
+            this.Controls.Add(borders.left);
+            this.Controls.Add(borders.bottom);
+
+            
+        }
+
         public void StartGame()
-        {           
+        {
             //TODO: You may want to handle story stuff to decide what OS to boot here.
             if (Convert.ToInt32(VM_Width.Text) == 1337 && Convert.ToInt32(VM_Height.Text) == 1337)
             {
                 leet();
             }
-            else {
+            else
+            {
                 // Time to decide which OS to start up!
 
                 switch (CurrentSave.CurrentOS)
@@ -93,35 +122,13 @@ namespace TimeHACK
                         troubleshooter.ShowDialog();
                         break;
                 }
-                
-            }             
+
+            }
         }
 
-
-        public TitleScreen()
+        public void UpdateGameVersionText()
         {
-            InitializeComponent();
-
-            // Add the WINDOWS BORDERS from the Window Manager
-
-            FieldInfo f1 = typeof(Control).GetField("EventMouseDown",
-    BindingFlags.Static | BindingFlags.NonPublic);
-            object obj = f1.GetValue(borders.programtopbar);
-            PropertyInfo pi = borders.programtopbar.GetType().GetProperty("Events",
-                BindingFlags.NonPublic | BindingFlags.Instance);
-            EventHandlerList list = (EventHandlerList)pi.GetValue(borders.programtopbar, null);
-            list.RemoveHandler(obj, list[obj]);
-
-            borders.programtopbar.MouseDown += new MouseEventHandler(TitleBarDrag);
-            borders.programtopbar.Controls.Find("closebutton", false)[0].MouseClick += new MouseEventHandler(closeButton);
-            borders.programtopbar.Controls.Find("maximizebutton", false)[0].MouseClick += new MouseEventHandler(MaximiseButton);
-
-            this.Controls.Add(borders.programtopbar);
-            this.Controls.Add(borders.right);
-            this.Controls.Add(borders.left);
-            this.Controls.Add(borders.bottom);
-
-            
+            gameversion.Text = Program.gameID;
         }
 
         void TitleBarDrag(object sender, MouseEventArgs e)
@@ -189,7 +196,7 @@ namespace TimeHACK
 
 
             // Set GameVersion
-            gameversion.Text = "TimeHACK " + Program.gameID;
+            gameversion.Text = Program.gameID;
 
             // Initialize Font
             File.WriteAllBytes(Data + "\\LeviWindows.ttf", Resources.LeviWindows);
@@ -333,7 +340,7 @@ namespace TimeHACK
 
         private void gameversion_MouseLeave(object sender, EventArgs e)
         {
-            gameversion.Text = "TimeHACK " + Program.gameID;
+            gameversion.Text = Program.gameID;
         }
 
         private void startbutton_Click(object sender, EventArgs e)
@@ -352,6 +359,15 @@ namespace TimeHACK
         private void closebutton_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void updateText_Tick(object sender, EventArgs e)
+        {
+            if (gameversion.Text != Program.gameID)
+            {
+                gameversion.Text = Program.gameID;
+                updateText.Stop();
+            }
         }
     }
 }

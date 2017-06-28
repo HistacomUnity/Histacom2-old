@@ -32,20 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TitleScreen));
             this.vmModeTimer = new System.Windows.Forms.Timer(this.components);
             this.program = new System.Windows.Forms.Panel();
-            this.toprightcorner = new System.Windows.Forms.Panel();
-            this.bottomrightcorner = new System.Windows.Forms.Panel();
-            this.bottomleftcorner = new System.Windows.Forms.Panel();
-            this.topleftcorner = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.startbutton = new System.Windows.Forms.PictureBox();
-            this.gameversion = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.vm_mode = new System.Windows.Forms.CheckBox();
-            this.VM_Width = new System.Windows.Forms.NumericUpDown();
-            this.VM_Height = new System.Windows.Forms.NumericUpDown();
+            this.programContent = new System.Windows.Forms.Panel();
             this.startmenu = new System.Windows.Forms.Panel();
-            this.ossidestartmenu = new System.Windows.Forms.Panel();
-            this.osimage = new System.Windows.Forms.PictureBox();
             this.startmenuitems = new System.Windows.Forms.MenuStrip();
             this.DocumentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ProgramsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,18 +43,31 @@
             this.TaskbarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ShutdownToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.programContent = new System.Windows.Forms.Panel();
+            this.ossidestartmenu = new System.Windows.Forms.Panel();
+            this.osimage = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.VM_Height = new System.Windows.Forms.NumericUpDown();
+            this.VM_Width = new System.Windows.Forms.NumericUpDown();
+            this.vm_mode = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.gameversion = new System.Windows.Forms.Label();
+            this.startbutton = new System.Windows.Forms.PictureBox();
+            this.toprightcorner = new System.Windows.Forms.Panel();
+            this.bottomrightcorner = new System.Windows.Forms.Panel();
+            this.bottomleftcorner = new System.Windows.Forms.Panel();
+            this.topleftcorner = new System.Windows.Forms.Panel();
+            this.updateText = new System.Windows.Forms.Timer(this.components);
             this.program.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.startbutton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VM_Width)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VM_Height)).BeginInit();
+            this.programContent.SuspendLayout();
             this.startmenu.SuspendLayout();
+            this.startmenuitems.SuspendLayout();
             this.ossidestartmenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.osimage)).BeginInit();
-            this.startmenuitems.SuspendLayout();
-            this.programContent.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VM_Height)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VM_Width)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.startbutton)).BeginInit();
             this.SuspendLayout();
             // 
             // vmModeTimer
@@ -87,145 +88,16 @@
             this.program.Size = new System.Drawing.Size(800, 600);
             this.program.TabIndex = 11;
             // 
-            // toprightcorner
+            // programContent
             // 
-            this.toprightcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.toprightcorner.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("toprightcorner.BackgroundImage")));
-            this.toprightcorner.Location = new System.Drawing.Point(796, 0);
-            this.toprightcorner.Name = "toprightcorner";
-            this.toprightcorner.Size = new System.Drawing.Size(4, 4);
-            this.toprightcorner.TabIndex = 6;
-            // 
-            // bottomrightcorner
-            // 
-            this.bottomrightcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bottomrightcorner.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bottomrightcorner.BackgroundImage")));
-            this.bottomrightcorner.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
-            this.bottomrightcorner.Location = new System.Drawing.Point(796, 596);
-            this.bottomrightcorner.Name = "bottomrightcorner";
-            this.bottomrightcorner.Size = new System.Drawing.Size(4, 4);
-            this.bottomrightcorner.TabIndex = 4;
-            // 
-            // bottomleftcorner
-            // 
-            this.bottomleftcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.bottomleftcorner.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bottomleftcorner.BackgroundImage")));
-            this.bottomleftcorner.Location = new System.Drawing.Point(0, 596);
-            this.bottomleftcorner.Name = "bottomleftcorner";
-            this.bottomleftcorner.Size = new System.Drawing.Size(4, 4);
-            this.bottomleftcorner.TabIndex = 2;
-            // 
-            // topleftcorner
-            // 
-            this.topleftcorner.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("topleftcorner.BackgroundImage")));
-            this.topleftcorner.Location = new System.Drawing.Point(0, 0);
-            this.topleftcorner.Name = "topleftcorner";
-            this.topleftcorner.Size = new System.Drawing.Size(4, 4);
-            this.topleftcorner.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.Controls.Add(this.VM_Height);
-            this.panel2.Controls.Add(this.VM_Width);
-            this.panel2.Controls.Add(this.vm_mode);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.gameversion);
-            this.panel2.Controls.Add(this.startbutton);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 572);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 28);
-            this.panel2.TabIndex = 10;
-            // 
-            // startbutton
-            // 
-            this.startbutton.Image = ((System.Drawing.Image)(resources.GetObject("startbutton.Image")));
-            this.startbutton.Location = new System.Drawing.Point(2, 4);
-            this.startbutton.Name = "startbutton";
-            this.startbutton.Size = new System.Drawing.Size(279, 22);
-            this.startbutton.TabIndex = 12;
-            this.startbutton.TabStop = false;
-            this.startbutton.Click += new System.EventHandler(this.startbutton_Click);
-            // 
-            // gameversion
-            // 
-            this.gameversion.AutoSize = true;
-            this.gameversion.BackColor = System.Drawing.Color.Transparent;
-            this.gameversion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gameversion.Location = new System.Drawing.Point(25, 8);
-            this.gameversion.Name = "gameversion";
-            this.gameversion.Size = new System.Drawing.Size(78, 13);
-            this.gameversion.TabIndex = 0;
-            this.gameversion.Text = "gameversion";
-            this.gameversion.Click += new System.EventHandler(this.startbutton_Click);
-            this.gameversion.MouseLeave += new System.EventHandler(this.gameversion_MouseLeave);
-            this.gameversion.MouseHover += new System.EventHandler(this.gameversion_MouseHover);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(603, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(187, 28);
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
-            // vm_mode
-            // 
-            this.vm_mode.AutoSize = true;
-            this.vm_mode.BackColor = System.Drawing.Color.Transparent;
-            this.vm_mode.ForeColor = System.Drawing.Color.Black;
-            this.vm_mode.Location = new System.Drawing.Point(712, 7);
-            this.vm_mode.Name = "vm_mode";
-            this.vm_mode.Size = new System.Drawing.Size(72, 17);
-            this.vm_mode.TabIndex = 4;
-            this.vm_mode.Text = "VM Mode";
-            this.vm_mode.UseVisualStyleBackColor = false;
-            // 
-            // VM_Width
-            // 
-            this.VM_Width.Location = new System.Drawing.Point(605, 5);
-            this.VM_Width.Maximum = new decimal(new int[] {
-            3840,
-            0,
-            0,
-            0});
-            this.VM_Width.Minimum = new decimal(new int[] {
-            640,
-            0,
-            0,
-            0});
-            this.VM_Width.Name = "VM_Width";
-            this.VM_Width.Size = new System.Drawing.Size(50, 20);
-            this.VM_Width.TabIndex = 14;
-            this.VM_Width.Value = new decimal(new int[] {
-            640,
-            0,
-            0,
-            0});
-            // 
-            // VM_Height
-            // 
-            this.VM_Height.Location = new System.Drawing.Point(658, 5);
-            this.VM_Height.Maximum = new decimal(new int[] {
-            2160,
-            0,
-            0,
-            0});
-            this.VM_Height.Minimum = new decimal(new int[] {
-            480,
-            0,
-            0,
-            0});
-            this.VM_Height.Name = "VM_Height";
-            this.VM_Height.Size = new System.Drawing.Size(50, 20);
-            this.VM_Height.TabIndex = 15;
-            this.VM_Height.Value = new decimal(new int[] {
-            480,
-            0,
-            0,
-            0});
+            this.programContent.BackColor = System.Drawing.Color.Teal;
+            this.programContent.Controls.Add(this.startmenu);
+            this.programContent.Controls.Add(this.panel2);
+            this.programContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.programContent.Location = new System.Drawing.Point(0, 0);
+            this.programContent.Name = "programContent";
+            this.programContent.Size = new System.Drawing.Size(800, 600);
+            this.programContent.TabIndex = 9;
             // 
             // startmenu
             // 
@@ -237,25 +109,6 @@
             this.startmenu.Name = "startmenu";
             this.startmenu.Size = new System.Drawing.Size(174, 290);
             this.startmenu.TabIndex = 11;
-            // 
-            // ossidestartmenu
-            // 
-            this.ossidestartmenu.Controls.Add(this.osimage);
-            this.ossidestartmenu.Location = new System.Drawing.Point(0, 0);
-            this.ossidestartmenu.Name = "ossidestartmenu";
-            this.ossidestartmenu.Size = new System.Drawing.Size(26, 297);
-            this.ossidestartmenu.TabIndex = 4;
-            // 
-            // osimage
-            // 
-            this.osimage.BackColor = System.Drawing.Color.Gray;
-            this.osimage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.osimage.Location = new System.Drawing.Point(0, 0);
-            this.osimage.Name = "osimage";
-            this.osimage.Size = new System.Drawing.Size(26, 297);
-            this.osimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.osimage.TabIndex = 0;
-            this.osimage.TabStop = false;
             // 
             // startmenuitems
             // 
@@ -375,16 +228,169 @@
             this.ShutdownToolStripMenuItem.Text = "Shut Down...";
             this.ShutdownToolStripMenuItem.Click += new System.EventHandler(this.Exit_Click);
             // 
-            // programContent
+            // ossidestartmenu
             // 
-            this.programContent.BackColor = System.Drawing.Color.Teal;
-            this.programContent.Controls.Add(this.startmenu);
-            this.programContent.Controls.Add(this.panel2);
-            this.programContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.programContent.Location = new System.Drawing.Point(0, 0);
-            this.programContent.Name = "programContent";
-            this.programContent.Size = new System.Drawing.Size(800, 600);
-            this.programContent.TabIndex = 9;
+            this.ossidestartmenu.Controls.Add(this.osimage);
+            this.ossidestartmenu.Location = new System.Drawing.Point(0, 0);
+            this.ossidestartmenu.Name = "ossidestartmenu";
+            this.ossidestartmenu.Size = new System.Drawing.Size(26, 297);
+            this.ossidestartmenu.TabIndex = 4;
+            // 
+            // osimage
+            // 
+            this.osimage.BackColor = System.Drawing.Color.Gray;
+            this.osimage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.osimage.Location = new System.Drawing.Point(0, 0);
+            this.osimage.Name = "osimage";
+            this.osimage.Size = new System.Drawing.Size(26, 297);
+            this.osimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.osimage.TabIndex = 0;
+            this.osimage.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.Controls.Add(this.VM_Height);
+            this.panel2.Controls.Add(this.VM_Width);
+            this.panel2.Controls.Add(this.vm_mode);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.gameversion);
+            this.panel2.Controls.Add(this.startbutton);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 572);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 28);
+            this.panel2.TabIndex = 10;
+            // 
+            // VM_Height
+            // 
+            this.VM_Height.Location = new System.Drawing.Point(658, 5);
+            this.VM_Height.Maximum = new decimal(new int[] {
+            2160,
+            0,
+            0,
+            0});
+            this.VM_Height.Minimum = new decimal(new int[] {
+            480,
+            0,
+            0,
+            0});
+            this.VM_Height.Name = "VM_Height";
+            this.VM_Height.Size = new System.Drawing.Size(50, 20);
+            this.VM_Height.TabIndex = 15;
+            this.VM_Height.Value = new decimal(new int[] {
+            480,
+            0,
+            0,
+            0});
+            // 
+            // VM_Width
+            // 
+            this.VM_Width.Location = new System.Drawing.Point(605, 5);
+            this.VM_Width.Maximum = new decimal(new int[] {
+            3840,
+            0,
+            0,
+            0});
+            this.VM_Width.Minimum = new decimal(new int[] {
+            640,
+            0,
+            0,
+            0});
+            this.VM_Width.Name = "VM_Width";
+            this.VM_Width.Size = new System.Drawing.Size(50, 20);
+            this.VM_Width.TabIndex = 14;
+            this.VM_Width.Value = new decimal(new int[] {
+            640,
+            0,
+            0,
+            0});
+            // 
+            // vm_mode
+            // 
+            this.vm_mode.AutoSize = true;
+            this.vm_mode.BackColor = System.Drawing.Color.Transparent;
+            this.vm_mode.ForeColor = System.Drawing.Color.Black;
+            this.vm_mode.Location = new System.Drawing.Point(712, 7);
+            this.vm_mode.Name = "vm_mode";
+            this.vm_mode.Size = new System.Drawing.Size(72, 17);
+            this.vm_mode.TabIndex = 4;
+            this.vm_mode.Text = "VM Mode";
+            this.vm_mode.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(603, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(187, 28);
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
+            // gameversion
+            // 
+            this.gameversion.AutoSize = true;
+            this.gameversion.BackColor = System.Drawing.Color.Transparent;
+            this.gameversion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gameversion.Location = new System.Drawing.Point(25, 8);
+            this.gameversion.Name = "gameversion";
+            this.gameversion.Size = new System.Drawing.Size(78, 13);
+            this.gameversion.TabIndex = 0;
+            this.gameversion.Text = "gameversion";
+            this.gameversion.Click += new System.EventHandler(this.startbutton_Click);
+            this.gameversion.MouseLeave += new System.EventHandler(this.gameversion_MouseLeave);
+            this.gameversion.MouseHover += new System.EventHandler(this.gameversion_MouseHover);
+            // 
+            // startbutton
+            // 
+            this.startbutton.Image = ((System.Drawing.Image)(resources.GetObject("startbutton.Image")));
+            this.startbutton.Location = new System.Drawing.Point(2, 4);
+            this.startbutton.Name = "startbutton";
+            this.startbutton.Size = new System.Drawing.Size(279, 22);
+            this.startbutton.TabIndex = 12;
+            this.startbutton.TabStop = false;
+            this.startbutton.Click += new System.EventHandler(this.startbutton_Click);
+            // 
+            // toprightcorner
+            // 
+            this.toprightcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.toprightcorner.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("toprightcorner.BackgroundImage")));
+            this.toprightcorner.Location = new System.Drawing.Point(796, 0);
+            this.toprightcorner.Name = "toprightcorner";
+            this.toprightcorner.Size = new System.Drawing.Size(4, 4);
+            this.toprightcorner.TabIndex = 6;
+            // 
+            // bottomrightcorner
+            // 
+            this.bottomrightcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bottomrightcorner.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bottomrightcorner.BackgroundImage")));
+            this.bottomrightcorner.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.bottomrightcorner.Location = new System.Drawing.Point(796, 596);
+            this.bottomrightcorner.Name = "bottomrightcorner";
+            this.bottomrightcorner.Size = new System.Drawing.Size(4, 4);
+            this.bottomrightcorner.TabIndex = 4;
+            // 
+            // bottomleftcorner
+            // 
+            this.bottomleftcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.bottomleftcorner.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bottomleftcorner.BackgroundImage")));
+            this.bottomleftcorner.Location = new System.Drawing.Point(0, 596);
+            this.bottomleftcorner.Name = "bottomleftcorner";
+            this.bottomleftcorner.Size = new System.Drawing.Size(4, 4);
+            this.bottomleftcorner.TabIndex = 2;
+            // 
+            // topleftcorner
+            // 
+            this.topleftcorner.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("topleftcorner.BackgroundImage")));
+            this.topleftcorner.Location = new System.Drawing.Point(0, 0);
+            this.topleftcorner.Name = "topleftcorner";
+            this.topleftcorner.Size = new System.Drawing.Size(4, 4);
+            this.topleftcorner.TabIndex = 1;
+            // 
+            // updateText
+            // 
+            this.updateText.Enabled = true;
+            this.updateText.Tick += new System.EventHandler(this.updateText_Tick);
             // 
             // TitleScreen
             // 
@@ -399,19 +405,19 @@
             this.Text = "TimeHACK Launcher";
             this.Load += new System.EventHandler(this.TitleScreen_Load);
             this.program.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.startbutton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VM_Width)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VM_Height)).EndInit();
+            this.programContent.ResumeLayout(false);
             this.startmenu.ResumeLayout(false);
             this.startmenu.PerformLayout();
-            this.ossidestartmenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.osimage)).EndInit();
             this.startmenuitems.ResumeLayout(false);
             this.startmenuitems.PerformLayout();
-            this.programContent.ResumeLayout(false);
+            this.ossidestartmenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.osimage)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VM_Height)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VM_Width)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.startbutton)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -441,7 +447,8 @@
         private System.Windows.Forms.NumericUpDown VM_Width;
         private System.Windows.Forms.CheckBox vm_mode;
         internal System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label gameversion;
+        public System.Windows.Forms.Label gameversion;
         internal System.Windows.Forms.PictureBox startbutton;
+        private System.Windows.Forms.Timer updateText;
     }
 }
