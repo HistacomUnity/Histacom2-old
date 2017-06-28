@@ -126,11 +126,6 @@ namespace TimeHACK
             }
         }
 
-        public void UpdateGameVersionText()
-        {
-            gameversion.Text = Program.gameID;
-        }
-
         void TitleBarDrag(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left && max == false)
