@@ -27,6 +27,9 @@ namespace TimeHACK
         public static string WindowsExplorerReturnPath;
         static WindowManager wm = new WindowManager();
 
+        public static List<WinClassic> nonimportantapps = new List<WinClassic>();
+        public static int currentappcount = 0;
+
         /// <summary>
         /// The main entry point for the application.
         /// Run TitleScreen.cs at launch.

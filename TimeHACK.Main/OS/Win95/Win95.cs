@@ -13,13 +13,12 @@ using TimeHACK.OS.Win95.Win95Apps.Story;
 
 namespace TimeHACK.OS.Win95
 {
-    public partial class Windows95 : Form
+    public partial class Windows95 : BaseOS
     {
         private SoundPlayer startsound;
         private SoundPlayer stopsound;
         public WindowManager wm = new WindowManager();
 
-        public List<WinClassic> nonimportantapps = new List<WinClassic>();
         public WinClassic webchat;
         public WinClassic ie;
         public TaskBarController tb = new TaskBarController();
@@ -39,6 +38,9 @@ namespace TimeHACK.OS.Win95
         //  When New Game is clicked in TitleScreen.cs
         private void Desktop_Load(object sender, EventArgs e)
         {
+            // Setup the Form
+            startmenu.Hide();
+
             // Make Font Mandatory
             fontLoad();
 
@@ -47,8 +49,7 @@ namespace TimeHACK.OS.Win95
             startsound = new SoundPlayer(audio);
             startsound.Play();
 
-            // Hide the Startmenu
-            startmenu.Hide();
+            
 
             // Check for and set VM Mode
             if (this.FormBorderStyle != FormBorderStyle.None)
@@ -62,7 +63,7 @@ namespace TimeHACK.OS.Win95
             // Set the StartMenu seperator
             startmenuitems.Items.Insert(6, new ToolStripSeparator());
 
-            //nonimportantapps.Capacity = 100;
+            //Program.nonimportantapps.Capacity = 100;
             this.SendToBack();
 
             // Update the taskbar
@@ -161,9 +162,9 @@ namespace TimeHACK.OS.Win95
             WinClassic app = wm.startWin95(wp, "Notepad", Properties.Resources.Win95IconNotepad, true, true);
             AddTaskBarItem(app, app.Tag.ToString(), "Notepad", Properties.Resources.Win95IconNotepad);
 
-            nonimportantapps.Add(app);
-            nonimportantapps[nonimportantapps.Count - 1].BringToFront();
-            nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
+            Program.nonimportantapps.Add(app);
+            Program.nonimportantapps[Program.nonimportantapps.Count - 1].BringToFront();
+            Program.nonimportantapps[Program.nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
 
             app.BringToFront();
             startmenu.Hide();
@@ -260,7 +261,7 @@ namespace TimeHACK.OS.Win95
         }
         public void NonImportantApp_Closing(object sender, FormClosingEventArgs e)
         {
-            nonimportantapps.Remove((WinClassic)sender);
+            Program.nonimportantapps.Remove((WinClassic)sender);
         }
         private void InternetExplorer4_Closing(object sender, FormClosingEventArgs e)
         {
@@ -273,9 +274,9 @@ namespace TimeHACK.OS.Win95
             WinClassic app = wm.startWin95(wp, "Wordpad", Properties.Resources.Win95IconWordpad, true, true);
             AddTaskBarItem(app, app.Tag.ToString(), "Wordpad", Properties.Resources.Win95IconWordpad);
 
-            nonimportantapps.Add(app);
-            nonimportantapps[nonimportantapps.Count - 1].BringToFront();
-            nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
+            Program.nonimportantapps.Add(app);
+            Program.nonimportantapps[Program.nonimportantapps.Count - 1].BringToFront();
+            Program.nonimportantapps[Program.nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
 
             app.BringToFront();
             startmenu.Hide();
@@ -312,9 +313,9 @@ namespace TimeHACK.OS.Win95
             WinClassic app = wm.startWin95(ab, "Address Book", Properties.Resources.WinClassicAddressBook, true, true);
             AddTaskBarItem(app, app.Tag.ToString(), "Address Book", Properties.Resources.WinClassicAddressBook);
 
-            nonimportantapps.Add(app);
-            nonimportantapps[nonimportantapps.Count - 1].BringToFront();
-            nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
+            Program.nonimportantapps.Add(app);
+            Program.nonimportantapps[Program.nonimportantapps.Count - 1].BringToFront();
+            Program.nonimportantapps[Program.nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
 
             app.BringToFront();
             startmenu.Hide();
@@ -328,9 +329,9 @@ namespace TimeHACK.OS.Win95
             WinClassic app = wm.startWin95(we, "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
             AddTaskBarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
 
-            nonimportantapps.Add(app);
-            nonimportantapps[nonimportantapps.Count - 1].BringToFront();
-            nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
+            Program.nonimportantapps.Add(app);
+            Program.nonimportantapps[Program.nonimportantapps.Count - 1].BringToFront();
+            Program.nonimportantapps[Program.nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
 
             app.BringToFront();
             startmenu.Hide();
@@ -354,9 +355,9 @@ namespace TimeHACK.OS.Win95
             WinClassic app = wm.startWin95(std, "Survive The Day", null, false, false);
             AddTaskBarItem(app, app.Tag.ToString(), "Survive The Day", null);
 
-            nonimportantapps.Add(app);
-            nonimportantapps[nonimportantapps.Count - 1].BringToFront();
-            nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
+            Program.nonimportantapps.Add(app);
+            Program.nonimportantapps[Program.nonimportantapps.Count - 1].BringToFront();
+            Program.nonimportantapps[Program.nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
 
             app.BringToFront();
             startmenu.Hide();
