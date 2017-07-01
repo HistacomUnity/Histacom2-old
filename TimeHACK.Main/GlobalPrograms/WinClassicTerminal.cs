@@ -28,7 +28,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         public void WriteLine(string Text)
         {
             richTextBox1.AppendText(Text + "\n");
-            richTextBox1.Update();
+            this.Update();
         }
 
         /// <summary>

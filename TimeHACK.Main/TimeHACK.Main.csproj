@@ -121,6 +121,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OpenApplication.cs" />
     <Compile Include="OS\BIOS\BIOS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -273,10 +274,10 @@
     <Compile Include="TitleScreen.Designer.cs">
       <DependentUpon>TitleScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="BaseOS.cs">
+    <Compile Include="OS\BaseOS.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaseOS.Designer.cs">
+    <Compile Include="OS\BaseOS.Designer.cs">
       <DependentUpon>BaseOS.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="OS\BIOS\BIOS.resx">
@@ -359,7 +360,7 @@
     <EmbeddedResource Include="TitleScreen.resx">
       <DependentUpon>TitleScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BaseOS.resx">
+    <EmbeddedResource Include="OS\BaseOS.resx">
       <DependentUpon>BaseOS.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -432,6 +433,7 @@
     <None Include="Resources\WinClassic\WinClassicAddressBookNewIcon.png" />
     <None Include="Resources\WinClassic\WinClassicAddressBookPropertiesIcon.png" />
     <None Include="Resources\WinClassic\WinClassicAddressBookDeleteIcon.png" />
+    <None Include="Resources\WinClassic\WinClassicCalc.png" />
     <Content Include="Resources\WinClassic\WinClassicClock.png" />
     <Content Include="Resources\WinClassic\WinClassicComputer.png" />
     <None Include="Resources\WinClassic\WinClassicCopy.png" />

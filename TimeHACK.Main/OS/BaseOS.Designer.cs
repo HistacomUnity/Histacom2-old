@@ -631,7 +631,6 @@ namespace TimeHACK.OS.Win95
             this.InternetExplorerToolStripMenuItem.Name = "InternetExplorerToolStripMenuItem";
             this.InternetExplorerToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.InternetExplorerToolStripMenuItem.Text = "Internet Explorer";
-            this.InternetExplorerToolStripMenuItem.Click += new System.EventHandler(this.InternetExplorerToolStripMenuItem_Click);
             // 
             // MSDOSPromptToolStripMenuItem1
             // 

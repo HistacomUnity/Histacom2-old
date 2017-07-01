@@ -110,13 +110,27 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 }
                 foreach (String str in Directory.GetFiles(currentDirectory))
                 {
+                    // Get app Icon
+
+                    int AppIcon = 1;
+
+                    switch (Path.GetFileName(str))
+                    {
+                        case ".exe":
+                            break;
+                    }
+
                     if (IsFileOpenDialog == true || IsFileSaveDialog == true)
                     {
                         if (!(Path.GetFileName(str) == "_data.info"))
                         {
                             if (new FileInfo(str).Extension == onlyViewExtension)
                             {
-                                this.mainView.Items.Add(Path.GetFileName(str), 2);
+                                if (new FileInfo(str).Extension == ".exe")
+                                {
+                                    this.mainView.Items.Add(Path.GetFileName(str), 2);
+                                }
+                                
                             }
                         }
                     } else {

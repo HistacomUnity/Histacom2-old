@@ -122,7 +122,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         void NewFolder()
         {
-            AddressBook.FRMWinClassicAddressBookNewFolder abnf = new AddressBook.FRMWinClassicAddressBookNewFolder();
+            FRMWinClassicAddressBookNewFolder abnf = new FRMWinClassicAddressBookNewFolder();
             WinClassic app = wm.startWin95(abnf, "Address Book - New Folder", Properties.Resources.Win95IconWordpad, true, true, true);
 
             if (treeView1.SelectedNode != null)
@@ -145,7 +145,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         void NewContact()
         {
-            AddressBook.FRMWinClassicAddressBookNewContact abnc = new AddressBook.FRMWinClassicAddressBookNewContact();
+            FRMWinClassicAddressBookNewContact abnc = new FRMWinClassicAddressBookNewContact();
             WinClassic app = wm.startWin95(abnc, "Address Book - New Contact", Properties.Resources.Win95IconWordpad, true, true, true);
 
             if (treeView1.SelectedNode != null)
@@ -171,7 +171,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         void OpenProperties()
         {
-            AddressBook.FRMWinClassicAddressBookNewContact abnc = new AddressBook.FRMWinClassicAddressBookNewContact();
+            FRMWinClassicAddressBookNewContact abnc = new FRMWinClassicAddressBookNewContact();
 
             // Finds the selected contact
             if (treeView1.SelectedNode != null)
