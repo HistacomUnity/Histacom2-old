@@ -294,18 +294,6 @@ publish/
 # in these scripts will be unencrypted
 PublishScripts/
 
-# NuGet Packages
-*.nupkg
-# The packages folder can be ignored because of Package Restore
-**/packages/*
-# except build/, which is used as an MSBuild target.
-!**/packages/build/
-# Uncomment if necessary however generally it will be regenerated when needed
-#!**/packages/repositories.config
-# NuGet v3's project.json files produces more ignorable files
-*.nuget.props
-*.nuget.targets
-
 # Microsoft Azure Build Output
 csx/
 *.build.csdef
@@ -399,7 +387,8 @@ _Pvt_Extensions
 paket-files/
 
 # FAKE - F# Make
-.fake/
+
+!.fake/
 
 # JetBrains Rider
 .idea/
@@ -432,10 +421,10 @@ TimeHACK.Main\bin\Debug
 TimeHACK.Main\bin\Release
 TimeHACK.Main\obj\Debug\*
 TimeHACK.Main\obj\Release\*
-TimeHACK.Engine\bin\Debug\*
-TimeHACK.Engine\bin\Release\*
-TimeHACK.Engine\obj\Debug
-TimeHACK.Engine\obj\Release
+TimeHACK.Engine\bin\Debug
+TimeHACK.Engine\bin\Release
+TimeHACK.Engine\obj\Debug\*
+TimeHACK.Engine\obj\Release\*
 
 # The below files keep the Resources working
 
@@ -455,6 +444,7 @@ TimeHACK.Engine\obj\Release
 !TimeHACK.Engine\obj\Release\DesignTimeResolveAssemblyReferences.cache
 !TimeHACK.Engine\obj\Release\DesignTimeResolveAssemblyReferencesInput.cache
 !TimeHACK.Engine\obj\Release\CoreCompileInputs.cache
+!packages
 
 # Including the .idea directory within repositories is a BAD idea:
 # - contributors that do not use IntelliJ will end up producing commits later on
