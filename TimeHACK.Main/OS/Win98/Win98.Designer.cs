@@ -879,7 +879,7 @@
             // osimage
             // 
             this.osimage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.osimage.Image = global::TimeHACK.Properties.Resources.Win95SideBar;
+            this.osimage.Image = global::TimeHACK.Properties.Resources.Win98SideBar;
             this.osimage.Location = new System.Drawing.Point(0, 0);
             this.osimage.Name = "osimage";
             this.osimage.Size = new System.Drawing.Size(26, 297);
