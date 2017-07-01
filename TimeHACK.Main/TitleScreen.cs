@@ -18,8 +18,6 @@ namespace TimeHACK
     {
         public static System.Drawing.Text.PrivateFontCollection pfc = new System.Drawing.Text.PrivateFontCollection();
 
-        TimeHACK.Engine.Template.WinClassic borders = new TimeHACK.Engine.Template.WinClassic();
-
         public static Windows95 frm95;
         public static Windows98 frm98;
         public static string username;
@@ -48,28 +46,16 @@ namespace TimeHACK
         public TitleScreen()
         {
             InitializeComponent();
+        }
 
-            // Add the WINDOWS BORDERS from the Window Manager
-
-            FieldInfo f1 = typeof(Control).GetField("EventMouseDown",
-    BindingFlags.Static | BindingFlags.NonPublic);
-            object obj = f1.GetValue(borders.programtopbar);
-            PropertyInfo pi = borders.programtopbar.GetType().GetProperty("Events",
-                BindingFlags.NonPublic | BindingFlags.Instance);
-            EventHandlerList list = (EventHandlerList)pi.GetValue(borders.programtopbar, null);
-            list.RemoveHandler(obj, list[obj]);
-
-            borders.programtopbar.MouseDown += new MouseEventHandler(TitleBarDrag);
-            borders.programtopbar.Controls.Find("closebutton", false)[0].MouseClick += new MouseEventHandler(closeButton);
-            borders.programtopbar.Controls.Find("maximizebutton", false)[0].MouseClick += new MouseEventHandler(MaximiseButton);
-            
-            this.Controls.Add(borders.programtopbar);
-            this.Controls.Add(borders.top);
-            this.Controls.Add(borders.right);
-            this.Controls.Add(borders.left);
-            this.Controls.Add(borders.bottom);
-
-            
+        private void startmenu_Paint(object sender, PaintEventArgs e)
+        {
+            // Paint the StartMenu
+            ControlPaint.DrawBorder(e.Graphics, startmenu.ClientRectangle,
+                SystemColors.ControlLightLight, 2, ButtonBorderStyle.Outset,
+                SystemColors.ControlLightLight, 2, ButtonBorderStyle.Outset,
+                SystemColors.ControlLightLight, 2, ButtonBorderStyle.Outset,
+                SystemColors.ControlLightLight, 2, ButtonBorderStyle.Outset);
         }
 
         public void StartGame()
@@ -199,6 +185,11 @@ namespace TimeHACK
             pfc.AddFontFile(Data + "\\LeviWindows.ttf");
             pfc.AddFontFile(Data + "\\windows_command_prompt.ttf");
             gameversion.Font = new Font(pfc.Families[0], 16F, FontStyle.Bold, GraphicsUnit.Point, (0));
+            ProgramsToolStripMenuItem.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            DocumentsToolStripMenuItem.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            SettingsToolStripMenuItem.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            HelpToolStripMenuItem.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            ShutdownToolStripMenuItem.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
 
             // Start the VM Mode timer
             vmModeTimer.Start();

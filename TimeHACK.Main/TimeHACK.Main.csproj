@@ -413,6 +413,7 @@
     <None Include="Resources\WinClassic\AIMbuddyjoin.wav" />
     <None Include="Resources\WinClassic\AIMbuddyleave.wav" />
     <None Include="Resources\WinClassic\AIMfile.wav" />
+    <None Include="Resources\WinClassic\LauncherSideBar.png" />
     <Content Include="Resources\WinClassic\TrueColor.png" />
     <None Include="Resources\WinClassic\Win95Info.png" />
     <None Include="Resources\WinClassic\Win95Error.png" />
@@ -423,6 +424,7 @@
     <None Include="Resources\WinClassic\WinClassicAddressBookNewIcon.png" />
     <None Include="Resources\WinClassic\WinClassicAddressBookPropertiesIcon.png" />
     <None Include="Resources\WinClassic\WinClassicAddressBookDeleteIcon.png" />
+    <None Include="Resources\WinClassic\Win98SideBar.png" />
     <Content Include="Resources\WinClassic\WinClassicClock.png" />
     <Content Include="Resources\WinClassic\WinClassicComputer.png" />
     <None Include="Resources\WinClassic\WinClassicCopy.png" />

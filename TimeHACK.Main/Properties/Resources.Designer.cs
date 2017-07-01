@@ -156,6 +156,16 @@ namespace TimeHACK.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LauncherSideBar {
+            get {
+                object obj = ResourceManager.GetObject("LauncherSideBar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         internal static byte[] LeviWindows {
@@ -429,6 +439,16 @@ namespace TimeHACK.Properties {
         internal static System.Drawing.Bitmap Win95Warning {
             get {
                 object obj = ResourceManager.GetObject("Win95Warning", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Win98SideBar {
+            get {
+                object obj = ResourceManager.GetObject("Win98SideBar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
