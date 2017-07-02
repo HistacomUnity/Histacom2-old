@@ -12,14 +12,39 @@ using System.IO;
 using System.Threading;
 using System.Reflection;
 using System.Linq.Expressions;
+using System.Diagnostics;
 
 namespace TimeHACK.OS.Win95.Win95Apps
 {
     public partial class WinClassicTerminal : UserControl
     {
+        public Engine.WindowManager wm = new Engine.WindowManager();
+
+        public static int currentLine = 0;
+        public static string prefix = @"C:\>";
+        public static string startupDir = $"{Engine.SaveSystem.ProfileMyComputerDirectory}";
+
         public WinClassicTerminal()
         {
             InitializeComponent();
+
+            // Paint the classic borders
+            btnCopy.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            btnFont.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            btnMark.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            btnNothing.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            btnPaste.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            btnSettings.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            sizeSel.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+
+            // Set the default index to "Auto"
+            sizeSel.SelectedIndex = 0;
+
+            // Set the font and append the prefix text
+            cmdPrompt.Font = new System.Drawing.Font(TitleScreen.pfc.Families[1], 10F, System.Drawing.FontStyle.Regular);
+            cmdPrompt.AppendText(prefix);
+
+            cmdPrompt.BringToFront();
         }
         /// <summary>
         /// Write text to the Terminal and create a new line. Very similar to the Win32 Console.WriteLine Function.
@@ -27,7 +52,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         /// <param name="Text"></param>
         public void WriteLine(string Text)
         {
-            richTextBox1.AppendText(Text + "\n");
+            cmdPrompt.AppendText(Text + "\n");
             this.Update();
         }
 
@@ -37,8 +62,71 @@ namespace TimeHACK.OS.Win95.Win95Apps
         /// <param name="Text"></param>
         public void Write(String Text)
         {
-            richTextBox1.AppendText(Text);
-            richTextBox1.Update();
+            cmdPrompt.AppendText(Text);
+            cmdPrompt.Update();
+        }
+
+        private void btnCopy_Click(object sender, EventArgs e)
+        {
+            if (cmdPrompt.SelectedText.Length > 0)
+                Clipboard.SetText(cmdPrompt.SelectedText); // Set the clipboard text to the selection of the RichTextBox
+            else
+                wm.StartInfobox95("ERROR", "You need to select something to copy.", Properties.Resources.Win95Error); // Display an error message if the length is 0 
+        }
+
+        private void btnPaste_Click(object sender, EventArgs e)
+        {
+            if (Clipboard.GetText() != "")
+                Write(Clipboard.GetText()); // Write the contents of the Clipboard text in the RichTextBox
+            else
+                wm.StartInfobox95("ERROR", "You need to have something in your clipboard to paste.", Properties.Resources.Win95Error); // Display an error message if the clipboard is null/empty
+        }
+
+        private void termMax_Click(object sender, EventArgs e)
+        {
+            var windowState = ((Engine.Template.WinClassic)this.TopLevelControl).WindowState;
+
+            if (windowState == FormWindowState.Normal)
+                windowState = FormWindowState.Maximized;
+            else if (windowState == FormWindowState.Maximized)
+                windowState = FormWindowState.Normal;
+        }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            wm.StartInfobox95("INFO", "This feature has not been implemented yet. Stay tuned! -Jason", Properties.Resources.Win95Info);
+            //TODO: Well, add the settings...
+        }
+
+        private void btnFont_Click(object sender, EventArgs e)
+        {
+            //TODO: Add font UC(?)
+        }
+
+        private void richTextBox1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Return)
+            {
+                /// Temporary CMD redirect
+                Process p = new Process();
+
+                p.StartInfo.UseShellExecute = false;
+                p.StartInfo.RedirectStandardOutput = true;
+                p.StartInfo.CreateNoWindow = true;
+                p.StartInfo.WorkingDirectory = startupDir;
+                p.StartInfo.FileName = "cmd.exe";
+                p.StartInfo.Arguments = $"/C {cmdPrompt.Lines[cmdPrompt.GetLineFromCharIndex(currentLine)].Substring(prefix.Length)}";
+                p.Start();
+
+                string output = p.StandardOutput.ReadToEnd();
+                p.WaitForExit();
+
+                cmdPrompt.Focus();
+                cmdPrompt.AppendText($"\n{output}");
+
+                currentLine++;
+                cmdPrompt.AppendText($"\n{prefix}");
+            }  
         }
     }
 }

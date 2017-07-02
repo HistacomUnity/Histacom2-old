@@ -109,7 +109,7 @@ namespace TimeHACK.OS.Win95
         private void windowManagerTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TestApp test = new TestApp();
-            WinClassic app = wm.startWin95(test, "TestApp", null, true, true);
+            WinClassic app = wm.StartWin95(test, "TestApp", null, true, true);
             AddTaskBarItem(app, app.Tag.ToString(), "TestApp", null);
             app.BringToFront();
             startmenu.Hide();
@@ -118,7 +118,7 @@ namespace TimeHACK.OS.Win95
         private void downloaderTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WinClassicDownloader opendownload = new WinClassicDownloader();
-            WinClassic app = wm.startWin95(opendownload, "Downloader", null, false, true);
+            WinClassic app = wm.StartWin95(opendownload, "Downloader", null, false, true);
             opendownload.appName.Text = "Downloading: Survive The Day";
 
             AddTaskBarItem(app, app.Tag.ToString(), "Downloader", null);
@@ -130,7 +130,7 @@ namespace TimeHACK.OS.Win95
         private void installerTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WinClassicInstaller openinstaller = new WinClassicInstaller();
-            WinClassic app = wm.startWin95(openinstaller, "Installer", null, false, true);
+            WinClassic app = wm.StartWin95(openinstaller, "Installer", null, false, true);
 
             AddTaskBarItem(app, app.Tag.ToString(), "Installer", null);
 
@@ -145,7 +145,7 @@ namespace TimeHACK.OS.Win95
 
         private void infoboxTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            WinClassic app = wm.startInfobox95("AShifter's Infobox", "This is the very first TimeHACK Infobox. It's really easy to call, too! \n Just use wm.startInfobox95(String title, String text, Image erroricon)!", Properties.Resources.Win95Info);
+            WinClassic app = wm.StartInfobox95("AShifter's Infobox", "This is the very first TimeHACK Infobox. It's really easy to call, too! \n Just use wm.startInfobox95(String title, String text, Image erroricon)!", Properties.Resources.Win95Info);
 
             app.BringToFront();
             startmenu.Hide();
@@ -153,7 +153,7 @@ namespace TimeHACK.OS.Win95
         private void WebChatToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WebChat1998 wc = new WebChat1998();
-            WinClassic app = wm.startWin95(wc, "Web Chat 1998", null, true, true);
+            WinClassic app = wm.StartWin95(wc, "Web Chat 1998", null, true, true);
 
             AddTaskBarItem(app, app.Tag.ToString(), "Web Chat 1998", null);
 

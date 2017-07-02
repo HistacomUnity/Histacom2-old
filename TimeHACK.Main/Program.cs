@@ -73,7 +73,7 @@ namespace TimeHACK
         {
             WinClassicWindowsExplorer we = new WinClassicWindowsExplorer();
 
-            WinClassic app = wm.startWin95(we, "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true, true);
+            WinClassic app = wm.StartWin95(we, "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true, true);
             try
             {
                 return WindowsExplorerReturnPath;

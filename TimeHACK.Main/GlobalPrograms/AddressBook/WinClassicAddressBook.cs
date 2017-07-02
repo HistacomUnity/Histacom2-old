@@ -123,7 +123,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         void NewFolder()
         {
             FRMWinClassicAddressBookNewFolder abnf = new FRMWinClassicAddressBookNewFolder();
-            WinClassic app = wm.startWin95(abnf, "Address Book - New Folder", Properties.Resources.Win95IconWordpad, true, true, true);
+            WinClassic app = wm.StartWin95(abnf, "Address Book - New Folder", Properties.Resources.Win95IconWordpad, true, true, true);
 
             if (treeView1.SelectedNode != null)
             {
@@ -133,7 +133,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 }
                 else
                 {
-                    wm.startInfobox95("Address Book - New Folder", "You must enter a folder name!", Properties.Resources.Win95Error);
+                    wm.StartInfobox95("Address Book - New Folder", "You must enter a folder name!", Properties.Resources.Win95Error);
                 }
             }
         }
@@ -146,7 +146,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         void NewContact()
         {
             FRMWinClassicAddressBookNewContact abnc = new FRMWinClassicAddressBookNewContact();
-            WinClassic app = wm.startWin95(abnc, "Address Book - New Contact", Properties.Resources.Win95IconWordpad, true, true, true);
+            WinClassic app = wm.StartWin95(abnc, "Address Book - New Contact", Properties.Resources.Win95IconWordpad, true, true, true);
 
             if (treeView1.SelectedNode != null)
             {
@@ -189,7 +189,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         }
                     }
                 }
-                WinClassic app = wm.startWin95(abnc, "Address Book - Contact Properties", Properties.Resources.Win95IconWordpad, true, true, true);
+                WinClassic app = wm.StartWin95(abnc, "Address Book - Contact Properties", Properties.Resources.Win95IconWordpad, true, true, true);
 
                 if (treeView1.SelectedNode != null)
                 {

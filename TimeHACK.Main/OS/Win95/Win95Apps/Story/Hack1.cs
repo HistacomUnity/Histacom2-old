@@ -26,7 +26,7 @@ namespace TimeHACK.OS.Win95.Win95Apps.Story
             System.Windows.Forms.Timer tmr = new System.Windows.Forms.Timer();
 
             WinClassicTerminal Console = new WinClassicTerminal();
-            WinClassic app = wm.startWin95(Console, "MS-DOS Prompt", null, true, true);
+            WinClassic app = wm.StartWin95(Console, "MS-DOS Prompt", null, true, true);
 
             Console.WriteLine("telnet> 104.27.135.159 Connecting...");          
 
@@ -51,7 +51,7 @@ namespace TimeHACK.OS.Win95.Win95Apps.Story
         public static void continueObjective()
         {
             WinClassicTerminal Console = new WinClassicTerminal();
-            wm.startWin95(Console, "MS-DOS Prompt", null, true, true);
+            wm.StartWin95(Console, "MS-DOS Prompt", null, true, true);
 
             Application.DoEvents();
 

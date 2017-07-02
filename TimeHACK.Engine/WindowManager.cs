@@ -10,7 +10,7 @@ namespace TimeHACK.Engine
     {
         public static System.Drawing.Text.PrivateFontCollection pfc = new System.Drawing.Text.PrivateFontCollection();
 
-        public WinClassic startWin95(UserControl content, String title, Image icon, Boolean MaxButton, Boolean MinButton, Boolean ShowApplicationAsDialog = false)
+        public WinClassic StartWin95(UserControl content, String title, Image icon, Boolean MaxButton, Boolean MinButton, Boolean ShowApplicationAsDialog = false)
         {
             // Setup Window
             WinClassic app = new WinClassic();
@@ -72,23 +72,24 @@ namespace TimeHACK.Engine
             return app;
         }
 
-        public WinClassic startInfobox95(String title, String text, Image erroricon)
+        public WinClassic StartInfobox95(String title, String text, Image erroricon)
         {
             Infobox95 app = new Infobox95();
             app.infoText.Text = text;
+
             SoundPlayer sp = new SoundPlayer(Properties.Resources.CHORD);
             sp.Play();
-            return startWin95(app, title, null, false, false);
+            return StartWin95(app, title, null, false, false);
         }
 
-        public WinClassic startAboutBox95(String shortname, String longname, Image appicon)
+        public WinClassic StartAboutBox95(String shortname, String longname, Image appicon)
         {
             AboutBox95 uc = new AboutBox95();
             uc.pictureBox1.Image = appicon;
             uc.textBox1.Text = longname + "\r\nWindows 95\r\nCopyright © 1981-1995 Microsoft Corp.";
             uc.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
 
-            return startWin95(uc, "About " + shortname, null, false, false);
+            return StartWin95(uc, "About " + shortname, null, false, false);
         }
     }
 }
