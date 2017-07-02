@@ -10,16 +10,9 @@ namespace TimeHACK.Engine
 {
     public class Paintbrush
     {
-        public enum BGStyle
-        {
-            NoChange,
-            Silver,
-            XP
-        }
 
-        public static void paintClassicBorders(object sender, PaintEventArgs e, int borderwidth, BGStyle bg)
+        public static void paintClassicBorders(object sender, PaintEventArgs e, int borderwidth)
         {
-            ((Control)sender).BackColor = Color.Silver;
             ControlPaint.DrawBorder(e.Graphics, ((Control)sender).ClientRectangle,
                 SystemColors.ControlLightLight, borderwidth, ButtonBorderStyle.Outset,
                 SystemColors.ControlLightLight, borderwidth, ButtonBorderStyle.Outset,
