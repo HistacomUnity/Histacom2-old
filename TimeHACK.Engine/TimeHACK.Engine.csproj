@@ -48,6 +48,7 @@
     <Compile Include="BSODCreator.cs" />
     <None Include="packages.config" />
     <None Include="Resources\WinClassic\Window\pjBg6mKP.bin" />
+    <Compile Include="FileAssociation.cs" />
     <Compile Include="FileDialogBoxManager.cs" />
     <Compile Include="Paintbrush.cs" />
     <Compile Include="SaveSystem.cs" />

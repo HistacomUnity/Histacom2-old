@@ -14,6 +14,8 @@ namespace TimeHACK.Engine
         public static FileSystemFolderInfo filesystemflinfo { get; set; }
         public static Boolean DevMode = false;
 
+        public static FileAssociation IconChanger = new FileAssociation();
+
         public static string GameDirectory
         {
             get
@@ -118,7 +120,7 @@ namespace TimeHACK.Engine
             save.ExperiencedStories = new List<string>();
             save.CurrentOS = "95";
             CurrentSave = save;
-
+                      
             CheckFiles();
             SaveGame();
         }
@@ -143,6 +145,26 @@ namespace TimeHACK.Engine
             if (CurrentSave.CurrentOS != "95") SaveDirectoryInfo(ProfileSettingsDirectory, false, "Documents and Settings", true);
             SaveDirectoryInfo(ProfileProgramsDirectory, true, "Program Files", true);
             SaveDirectoryInfo(ProfileWindowsDirectory, true, "Windows", true);
+
+            CreateWindowsDirectory();
+        }
+
+        public static void CreateWindowsDirectory()
+        {
+            SaveDirectoryInfo(Path.Combine(ProfileWindowsDirectory, "System"), true, "System", true);
+            SaveDirectoryInfo(Path.Combine(ProfileWindowsDirectory, "Config"), true, "Config", true);
+            SaveDirectoryInfo(Path.Combine(ProfileWindowsDirectory, "Cursors"), true, "Cursors", true);
+            SaveDirectoryInfo(Path.Combine(ProfileWindowsDirectory, "Fonts"), true, "Fonts", true);
+            SaveDirectoryInfo(Path.Combine(ProfileWindowsDirectory, "Help"), true, "Help", true);
+            SaveDirectoryInfo(Path.Combine(ProfileWindowsDirectory, "Temp"), true, "Temp", true);
+
+            CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Calc.exe"), "Calculator");
+            CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "explorer.exe"), "windowsexplorer");
+        }
+
+        public static void CreateWindowsFile(String filepath, String contents)
+        {
+            File.WriteAllText(filepath, contents);
         }
 
         public static void SaveDirectoryInfo(String directory, Boolean isProtected, String label, Boolean allowback)

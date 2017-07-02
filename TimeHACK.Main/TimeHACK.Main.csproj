@@ -121,6 +121,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OpenApplication.cs" />
     <Compile Include="OS\BIOS\BIOS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,22 +135,22 @@
       <DependentUpon>SurviveTheDay.cs</DependentUpon>
     </Compile>
     <Compile Include="OS\Win95\Win95Apps\Story\Hack1.cs" />
-    <Compile Include="OS\Win95\Win95Apps\WinClassicFTPClient.cs">
+    <Compile Include="GlobalPrograms\WinClassicFTPClient.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicFTPClient.Designer.cs">
+    <Compile Include="GlobalPrograms\WinClassicFTPClient.Designer.cs">
       <DependentUpon>WinClassicFTPClient.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicTerminal.cs">
+    <Compile Include="GlobalPrograms\WinClassicTerminal.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicTerminal.Designer.cs">
+    <Compile Include="GlobalPrograms\WinClassicTerminal.Designer.cs">
       <DependentUpon>WinClassicTerminal.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicWindowsExplorer.cs">
+    <Compile Include="GlobalPrograms\WinClassicWindowsExplorer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicWindowsExplorer.Designer.cs">
+    <Compile Include="GlobalPrograms\WinClassicWindowsExplorer.Designer.cs">
       <DependentUpon>WinClassicWindowsExplorer.cs</DependentUpon>
     </Compile>
     <Compile Include="SaveDialogs\LoadGameDialog.cs">
@@ -176,16 +177,16 @@
     <Compile Include="OS\Win95\Win95.Designer.cs">
       <DependentUpon>Win95.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\AddressBook\FRMWinClassicAddressBookNewContact.cs">
+    <Compile Include="GlobalPrograms\AddressBook\FRMWinClassicAddressBookNewContact.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\AddressBook\FRMWinClassicAddressBookNewContact.Designer.cs">
+    <Compile Include="GlobalPrograms\AddressBook\FRMWinClassicAddressBookNewContact.Designer.cs">
       <DependentUpon>FRMWinClassicAddressBookNewContact.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\TestApp.cs">
+    <Compile Include="GlobalPrograms\TestApp.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\TestApp.Designer.cs">
+    <Compile Include="GlobalPrograms\TestApp.Designer.cs">
       <DependentUpon>TestApp.cs</DependentUpon>
     </Compile>
     <Compile Include="OS\Win95\Win95Apps\WebChat1998.cs">
@@ -194,28 +195,28 @@
     <Compile Include="OS\Win95\Win95Apps\WebChat1998.Designer.cs">
       <DependentUpon>WebChat1998.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\AddressBook\FRMWinClassicAddressBookNewFolder.cs">
+    <Compile Include="GlobalPrograms\AddressBook\FRMWinClassicAddressBookNewFolder.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\AddressBook\FRMWinClassicAddressBookNewFolder.Designer.cs">
+    <Compile Include="GlobalPrograms\AddressBook\FRMWinClassicAddressBookNewFolder.Designer.cs">
       <DependentUpon>FRMWinClassicAddressBookNewFolder.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\AddressBook\WinClassicAddressBook.cs">
+    <Compile Include="GlobalPrograms\AddressBook\WinClassicAddressBook.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\AddressBook\WinClassicAddressBook.Designer.cs">
+    <Compile Include="GlobalPrograms\AddressBook\WinClassicAddressBook.Designer.cs">
       <DependentUpon>WinClassicAddressBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicDownloader.cs">
+    <Compile Include="GlobalPrograms\WinClassicDownloader.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicDownloader.Designer.cs">
+    <Compile Include="GlobalPrograms\WinClassicDownloader.Designer.cs">
       <DependentUpon>WinClassicDownloader.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicHWCV.cs">
+    <Compile Include="GlobalPrograms\WinClassicHWCV.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicHWCV.Designer.cs">
+    <Compile Include="GlobalPrograms\WinClassicHWCV.Designer.cs">
       <DependentUpon>WinClassicHWCV.cs</DependentUpon>
     </Compile>
     <Compile Include="OS\Win95\Win95Apps\WinClassicIE4.cs">
@@ -224,22 +225,22 @@
     <Compile Include="OS\Win95\Win95Apps\WinClassicIE4.Designer.cs">
       <DependentUpon>WinClassicIE4.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicInstaller.cs">
+    <Compile Include="GlobalPrograms\WinClassicInstaller.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicInstaller.Designer.cs">
+    <Compile Include="GlobalPrograms\WinClassicInstaller.Designer.cs">
       <DependentUpon>WinClassicInstaller.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicNotepad.cs">
+    <Compile Include="GlobalPrograms\WinClassicNotepad.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicNotepad.Designer.cs">
+    <Compile Include="GlobalPrograms\WinClassicNotepad.Designer.cs">
       <DependentUpon>WinClassicNotepad.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicWordPad.cs">
+    <Compile Include="GlobalPrograms\WinClassicWordPad.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicWordPad.Designer.cs">
+    <Compile Include="GlobalPrograms\WinClassicWordPad.Designer.cs">
       <DependentUpon>WinClassicWordPad.cs</DependentUpon>
     </Compile>
     <Compile Include="OS\Win95\Win95TaskBarItem.cs">
@@ -273,19 +274,25 @@
     <Compile Include="TitleScreen.Designer.cs">
       <DependentUpon>TitleScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="OS\BaseOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OS\BaseOS.Designer.cs">
+      <DependentUpon>BaseOS.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="OS\BIOS\BIOS.resx">
       <DependentUpon>BIOS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win2K\Win2KApps\SurviveTheDay.resx">
       <DependentUpon>SurviveTheDay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicFTPClient.resx">
+    <EmbeddedResource Include="GlobalPrograms\WinClassicFTPClient.resx">
       <DependentUpon>WinClassicFTPClient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicTerminal.resx">
+    <EmbeddedResource Include="GlobalPrograms\WinClassicTerminal.resx">
       <DependentUpon>WinClassicTerminal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicWindowsExplorer.resx">
+    <EmbeddedResource Include="GlobalPrograms\WinClassicWindowsExplorer.resx">
       <DependentUpon>WinClassicWindowsExplorer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SaveDialogs\LoadGameDialog.resx">
@@ -303,37 +310,37 @@
     <EmbeddedResource Include="OS\Win95\Win95.resx">
       <DependentUpon>Win95.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\AddressBook\FRMWinClassicAddressBookNewContact.resx">
+    <EmbeddedResource Include="GlobalPrograms\AddressBook\FRMWinClassicAddressBookNewContact.resx">
       <DependentUpon>FRMWinClassicAddressBookNewContact.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\TestApp.resx">
+    <EmbeddedResource Include="GlobalPrograms\TestApp.resx">
       <DependentUpon>TestApp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WebChat1998.resx">
       <DependentUpon>WebChat1998.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\AddressBook\FRMWinClassicAddressBookNewFolder.resx">
+    <EmbeddedResource Include="GlobalPrograms\AddressBook\FRMWinClassicAddressBookNewFolder.resx">
       <DependentUpon>FRMWinClassicAddressBookNewFolder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\AddressBook\WinClassicAddressBook.resx">
+    <EmbeddedResource Include="GlobalPrograms\AddressBook\WinClassicAddressBook.resx">
       <DependentUpon>WinClassicAddressBook.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicDownloader.resx">
+    <EmbeddedResource Include="GlobalPrograms\WinClassicDownloader.resx">
       <DependentUpon>WinClassicDownloader.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicHWCV.resx">
+    <EmbeddedResource Include="GlobalPrograms\WinClassicHWCV.resx">
       <DependentUpon>WinClassicHWCV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicIE4.resx">
       <DependentUpon>WinClassicIE4.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicInstaller.resx">
+    <EmbeddedResource Include="GlobalPrograms\WinClassicInstaller.resx">
       <DependentUpon>WinClassicInstaller.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicNotepad.resx">
+    <EmbeddedResource Include="GlobalPrograms\WinClassicNotepad.resx">
       <DependentUpon>WinClassicNotepad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicWordPad.resx">
+    <EmbeddedResource Include="GlobalPrograms\WinClassicWordPad.resx">
       <DependentUpon>WinClassicWordPad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95TaskBarItem.resx">
@@ -352,6 +359,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TitleScreen.resx">
       <DependentUpon>TitleScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\BaseOS.resx">
+      <DependentUpon>BaseOS.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -413,7 +423,6 @@
     <None Include="Resources\WinClassic\AIMbuddyjoin.wav" />
     <None Include="Resources\WinClassic\AIMbuddyleave.wav" />
     <None Include="Resources\WinClassic\AIMfile.wav" />
-    <None Include="Resources\WinClassic\LauncherSideBar.png" />
     <Content Include="Resources\WinClassic\TrueColor.png" />
     <None Include="Resources\WinClassic\Win95Info.png" />
     <None Include="Resources\WinClassic\Win95Error.png" />
@@ -424,7 +433,7 @@
     <None Include="Resources\WinClassic\WinClassicAddressBookNewIcon.png" />
     <None Include="Resources\WinClassic\WinClassicAddressBookPropertiesIcon.png" />
     <None Include="Resources\WinClassic\WinClassicAddressBookDeleteIcon.png" />
-    <None Include="Resources\WinClassic\Win98SideBar.png" />
+    <None Include="Resources\WinClassic\WinClassicCalc.png" />
     <Content Include="Resources\WinClassic\WinClassicClock.png" />
     <Content Include="Resources\WinClassic\WinClassicComputer.png" />
     <None Include="Resources\WinClassic\WinClassicCopy.png" />
