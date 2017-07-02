@@ -16,7 +16,6 @@ namespace TimeHACK.OS.Win95
     public partial class Windows95 : Form
     {
         private SoundPlayer startsound;
-        private SoundPlayer stopsound;
         public WindowManager wm = new WindowManager();
 
         public List<WinClassic> nonimportantapps = new List<WinClassic>();
@@ -88,22 +87,12 @@ namespace TimeHACK.OS.Win95
 
         #region StartMenu
 
-        // Paint StartMenu
-        private void startmenu_Paint(object sender, PaintEventArgs e)
-        {
-            // Paint the StartMenu
-            ControlPaint.DrawBorder(e.Graphics, startmenu.ClientRectangle,
-                SystemColors.ControlLightLight, 2, ButtonBorderStyle.Outset,
-                SystemColors.ControlLightLight, 2, ButtonBorderStyle.Outset,
-                SystemColors.ControlLightLight, 2, ButtonBorderStyle.Outset,
-                SystemColors.ControlLightLight, 2, ButtonBorderStyle.Outset);
-        }
-
         // StartButton Click
         private void startbutton_Click(object sender, EventArgs e)
         {
             startmenu.Show();
             startmenu.BringToFront();
+            if (taskbar.Visible) taskbar.BringToFront();
         }
 
         // Shutdown button

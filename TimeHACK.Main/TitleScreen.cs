@@ -48,16 +48,6 @@ namespace TimeHACK
             InitializeComponent();
         }
 
-        private void startmenu_Paint(object sender, PaintEventArgs e)
-        {
-            // Paint the StartMenu
-            ControlPaint.DrawBorder(e.Graphics, startmenu.ClientRectangle,
-                SystemColors.ControlLightLight, 2, ButtonBorderStyle.Outset,
-                SystemColors.ControlLightLight, 2, ButtonBorderStyle.Outset,
-                SystemColors.ControlLightLight, 2, ButtonBorderStyle.Outset,
-                SystemColors.ControlLightLight, 2, ButtonBorderStyle.Outset);
-        }
-
         public void StartGame()
         {
             //TODO: You may want to handle story stuff to decide what OS to boot here.

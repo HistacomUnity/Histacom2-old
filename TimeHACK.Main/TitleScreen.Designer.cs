@@ -184,7 +184,7 @@
             this.gameversion.AutoSize = true;
             this.gameversion.BackColor = System.Drawing.Color.Transparent;
             this.gameversion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gameversion.Location = new System.Drawing.Point(25, 8);
+            this.gameversion.Location = new System.Drawing.Point(25, 6);
             this.gameversion.Name = "gameversion";
             this.gameversion.Size = new System.Drawing.Size(78, 13);
             this.gameversion.TabIndex = 0;
@@ -213,7 +213,7 @@
             this.startmenu.Name = "startmenu";
             this.startmenu.Size = new System.Drawing.Size(165, 187);
             this.startmenu.TabIndex = 11;
-            this.startmenu.Paint += new System.Windows.Forms.PaintEventHandler(this.startmenu_Paint);
+            this.startmenu.Paint += (sender, args) => Engine.Paintbrush.paintClassicBorders(sender, args, 2);
             // 
             // startmenuitems
             // 

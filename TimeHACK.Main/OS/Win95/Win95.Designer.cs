@@ -223,7 +223,7 @@ namespace TimeHACK.OS.Win95
             this.startmenu.Name = "startmenu";
             this.startmenu.Size = new System.Drawing.Size(174, 300);
             this.startmenu.TabIndex = 3;
-            this.startmenu.Paint += new System.Windows.Forms.PaintEventHandler(this.startmenu_Paint);
+            this.startmenu.Paint += (sender, args) => Engine.Paintbrush.paintClassicBorders(sender, args, 2);
             // 
             // startmenuitems
             // 

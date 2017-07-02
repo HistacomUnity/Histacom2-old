@@ -193,6 +193,8 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Silver;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(331, 208);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(151, 23);
@@ -200,6 +202,7 @@
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.button1.Paint += (sender, args) => Engine.Paintbrush.paintClassicBorders(sender, args, 2);
             // 
             // txtscreenname
             // 
@@ -236,6 +239,7 @@
             this.button2.Text = "Speak";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.Button2_Click);
+            this.button2.Paint += (sender, args) => Engine.Paintbrush.paintClassicBorders(sender, args, 2);
             // 
             // button3
             // 
