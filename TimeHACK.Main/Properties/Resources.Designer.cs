@@ -245,6 +245,16 @@ namespace TimeHACK.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] SSERIFE {
+            get {
+                object obj = ResourceManager.GetObject("SSERIFE", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream std_beep {
@@ -351,6 +361,16 @@ namespace TimeHACK.Properties {
             get {
                 object obj = ResourceManager.GetObject("TrueColor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] VGASYS {
+            get {
+                object obj = ResourceManager.GetObject("VGASYS", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
