@@ -504,4 +504,34 @@
   <data name="WinClassicCalc" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WinClassic\WinClassicCalc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="termCopy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\termCopy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="termFont" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\termFont.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="termMark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\termMark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="termMax" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\termMax.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="termNothing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\termNothing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="termPaste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\termPaste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="termSettings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\termSettings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LauncherSideBar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LauncherSideBar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Win98SideBar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Win98SideBar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MS_DOS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MS-DOS-logo-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

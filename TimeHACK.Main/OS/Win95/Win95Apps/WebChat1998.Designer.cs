@@ -202,7 +202,7 @@
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
-            this.button1.Paint += (sender, args) => Engine.Paintbrush.paintClassicBorders(sender, args, 2);
+            this.button1.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             // 
             // txtscreenname
             // 
@@ -241,7 +241,7 @@
             this.button2.Text = "Speak";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.Button2_Click);
-            this.button2.Paint += (sender, args) => Engine.Paintbrush.paintClassicBorders(sender, args, 2);
+            this.button2.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             // 
             // button3
             // 
@@ -254,7 +254,7 @@
             this.button3.Text = "Paul";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.Button3_Click);
-            this.button3.Paint += (sender, args) => Engine.Paintbrush.paintClassicBorders(sender, args, 2);
+            this.button3.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             // 
             // button4
             // 
