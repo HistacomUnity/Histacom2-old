@@ -41,7 +41,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             sizeSel.SelectedIndex = 0;
 
             // Set the font and append the prefix text
-            cmdPrompt.Font = new System.Drawing.Font(TitleScreen.pfc.Families[1], 10F, System.Drawing.FontStyle.Regular);
+            cmdPrompt.Font = new Font(TitleScreen.pfc.Families[1], 10F, FontStyle.Regular);
             cmdPrompt.AppendText(prefix);
 
             cmdPrompt.BringToFront();
@@ -60,7 +60,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         /// Write text to the Terminal. Very similar to the Win32 Console.Write Function.
         /// </summary>
         /// <param name="Text"></param>
-        public void Write(String Text)
+        public void Write(string Text)
         {
             cmdPrompt.AppendText(Text);
             cmdPrompt.Update();
