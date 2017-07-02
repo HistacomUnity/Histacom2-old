@@ -86,7 +86,8 @@ namespace TimeHACK
             stopsound.PlaySync();
 
             System.Threading.Thread.Sleep(500);
-            Application.Exit();
+            Environment.Exit(0);
+            //Application.Exit();
         }
 
         public static void GetAppVeyor()

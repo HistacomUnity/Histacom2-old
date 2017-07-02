@@ -232,6 +232,8 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.Silver;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(422, 415);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(71, 23);
@@ -243,6 +245,8 @@
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.Silver;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Location = new System.Drawing.Point(149, 427);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
@@ -250,6 +254,7 @@
             this.button3.Text = "Paul";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.Button3_Click);
+            this.button3.Paint += (sender, args) => Engine.Paintbrush.paintClassicBorders(sender, args, 2);
             // 
             // button4
             // 
