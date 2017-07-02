@@ -109,12 +109,6 @@ namespace TimeHACK.OS.Win95
             desktopicons.Items.Add("New Folder");
         }
 
-        // Give Year Code - NYI
-        private void taskbartime_Click(object sender, EventArgs e)
-        {
-            //TODO: Set Up Save System
-        }
-
         // Set the Clock
         private void clockTimer_Tick(object sender, EventArgs e)
         {
@@ -350,8 +344,7 @@ namespace TimeHACK.OS.Win95
             app.BringToFront();
             startmenu.Hide();
         }
-
-        //TODO: Add Outlook Express 4
+        
     }
 }
 
