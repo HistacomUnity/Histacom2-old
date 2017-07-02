@@ -106,6 +106,7 @@
             this.termMax.Size = new System.Drawing.Size(23, 22);
             this.termMax.TabIndex = 5;
             this.termMax.UseVisualStyleBackColor = true;
+            this.termMax.Click += new System.EventHandler(this.termMax_Click);
             // 
             // btnNothing
             // 
