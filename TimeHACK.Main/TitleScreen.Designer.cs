@@ -213,7 +213,7 @@
             this.startmenu.Name = "startmenu";
             this.startmenu.Size = new System.Drawing.Size(165, 187);
             this.startmenu.TabIndex = 11;
-            this.startmenu.Paint += new System.Windows.Forms.PaintEventHandler(this.startmenu_Paint);
+            this.startmenu.Paint += (sender, args) => Engine.Paintbrush.paintClassicBorders(sender, args, 2);
             // 
             // startmenuitems
             // 
