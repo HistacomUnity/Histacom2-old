@@ -13,6 +13,7 @@ using System.Threading;
 using System.Reflection;
 using System.Linq.Expressions;
 using System.Diagnostics;
+using System.Text.RegularExpressions;
 
 namespace TimeHACK.OS.Win95.Win95Apps
 {
@@ -20,9 +21,10 @@ namespace TimeHACK.OS.Win95.Win95Apps
     {
         public Engine.WindowManager wm = new Engine.WindowManager();
 
-        public static int currentLine = 0;
+        public int currentLine = 0;
         public static string prefix = @"C:\>";
         public static string startupDir = $"{Engine.SaveSystem.ProfileMyComputerDirectory}";
+        public string output = "";
 
         public WinClassicTerminal()
         {
@@ -41,7 +43,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             sizeSel.SelectedIndex = 0;
 
             // Set the font and append the prefix text
-            cmdPrompt.Font = new Font(TitleScreen.pfc.Families[1], 10F, FontStyle.Regular);
+            cmdPrompt.Font = new Font(TitleScreen.pfc.Families[1], 10F, System.Drawing.FontStyle.Regular);
             cmdPrompt.AppendText(prefix);
 
             cmdPrompt.BringToFront();
@@ -60,7 +62,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         /// Write text to the Terminal. Very similar to the Win32 Console.Write Function.
         /// </summary>
         /// <param name="Text"></param>
-        public void Write(string Text)
+        public void Write(String Text)
         {
             cmdPrompt.AppendText(Text);
             cmdPrompt.Update();
@@ -82,16 +84,6 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 wm.StartInfobox95("ERROR", "You need to have something in your clipboard to paste.", Properties.Resources.Win95Error); // Display an error message if the clipboard is null/empty
         }
 
-        private void termMax_Click(object sender, EventArgs e)
-        {
-            var windowState = ((Engine.Template.WinClassic)this.TopLevelControl).WindowState;
-
-            if (windowState == FormWindowState.Normal)
-                windowState = FormWindowState.Maximized;
-            else if (windowState == FormWindowState.Maximized)
-                windowState = FormWindowState.Normal;
-        }
-
         private void btnSettings_Click(object sender, EventArgs e)
         {
             wm.StartInfobox95("INFO", "This feature has not been implemented yet. Stay tuned! -Jason", Properties.Resources.Win95Info);
@@ -107,7 +99,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             if (e.KeyData == Keys.Return)
             {
-                /// Temporary CMD redirect
+                // Temporary CMD redirect
                 Process p = new Process();
 
                 p.StartInfo.UseShellExecute = false;
@@ -115,17 +107,18 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 p.StartInfo.CreateNoWindow = true;
                 p.StartInfo.WorkingDirectory = startupDir;
                 p.StartInfo.FileName = "cmd.exe";
-                p.StartInfo.Arguments = $"/C {cmdPrompt.Lines[cmdPrompt.GetLineFromCharIndex(currentLine)].Substring(prefix.Length)}";
+                p.StartInfo.Arguments = $"/C {cmdPrompt.Lines[currentLine].Substring(prefix.Length)}";
                 p.Start();
 
-                string output = p.StandardOutput.ReadToEnd();
-                p.WaitForExit();
+                output = p.StandardOutput.ReadToEnd();
 
                 cmdPrompt.Focus();
-                cmdPrompt.AppendText($"\n{output}");
+                cmdPrompt.AppendText($"\n{output}"); // Append the command output
 
-                currentLine++;
-                cmdPrompt.AppendText($"\n{prefix}");
+                int numLines = output.Split('\n').Length; // Get the number of lines from the command output
+                currentLine = currentLine + 2 + numLines; // Set the current line to equals the previous line plus 2 plus the number of lines from the command
+
+                cmdPrompt.AppendText($"\n{prefix}"); // Append the text to the RichTextBox
             }  
         }
     }
