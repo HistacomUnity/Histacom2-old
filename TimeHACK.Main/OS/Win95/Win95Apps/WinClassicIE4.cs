@@ -123,7 +123,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             WinClassicDownloader opendownload = new WinClassicDownloader();
             WindowManager wm = new WindowManager();
-            wm.startWin95(opendownload, "Downloader", null, false, true);
+            wm.StartWin95(opendownload, "Downloader", null, false, true);
             opendownload.appName.Text = "Downloading: Web Chat";
         } 
 

@@ -11,7 +11,7 @@ namespace TimeHACK.Engine
     public class Paintbrush
     {
 
-        public static void paintClassicBorders(object sender, PaintEventArgs e, int borderwidth)
+        public static void PaintClassicBorders(object sender, PaintEventArgs e, int borderwidth)
         {
             ControlPaint.DrawBorder(e.Graphics, ((Control)sender).ClientRectangle,
                 SystemColors.ControlLightLight, borderwidth, ButtonBorderStyle.Outset,

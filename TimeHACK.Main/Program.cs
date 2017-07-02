@@ -12,6 +12,7 @@ using TimeHACK.OS.Win95;
 using TimeHACK.OS.Win95.Win95Apps;
 using TimeHACK.Engine;
 using TimeHACK.Engine.Template;
+using System.Drawing;
 
 namespace TimeHACK
 {
@@ -26,6 +27,9 @@ namespace TimeHACK
         public static AddressBookContact AddressBookSelectedContact;
         public static string WindowsExplorerReturnPath;
         static WindowManager wm = new WindowManager();
+
+        public static List<WinClassic> nonimportantapps = new List<WinClassic>();
+        public static int currentappcount = 0;
 
         /// <summary>
         /// The main entry point for the application.
@@ -69,7 +73,7 @@ namespace TimeHACK
         {
             WinClassicWindowsExplorer we = new WinClassicWindowsExplorer();
 
-            WinClassic app = wm.startWin95(we, "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true, true);
+            WinClassic app = wm.StartWin95(we, "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true, true);
             try
             {
                 return WindowsExplorerReturnPath;
@@ -113,6 +117,16 @@ namespace TimeHACK
                 gameID = "TimeHACK 1.1";
             }
 
+        }
+
+        public static void AddTaskbarItem(Form Application, string ApplicationID, string ApplicationName, Image ApplicationIcon)
+        {
+            TitleScreen.frm95.AddTaskBarItem(Application, ApplicationID, ApplicationName, ApplicationIcon);
+        }
+
+        public static void NonImportantApp_Closing(object sender, FormClosingEventArgs e)
+        {
+            Program.nonimportantapps.Remove((WinClassic)sender);
         }
     }
 }

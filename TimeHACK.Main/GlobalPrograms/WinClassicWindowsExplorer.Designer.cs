@@ -140,6 +140,8 @@
             this.icons.Images.SetKeyName(0, "nwnp32_1_SERVER_ICON.png");
             this.icons.Images.SetKeyName(1, "shell32_21.ico_16x16.png");
             this.icons.Images.SetKeyName(2, "blank-file-Windows95Icon.gif");
+            this.icons.Images.SetKeyName(3, "WinClassicCalc.png");
+            this.icons.Images.SetKeyName(4, "WinClassicComputer.png");
             // 
             // btnGo
             // 
@@ -195,26 +197,26 @@
             // FolderToolStripMenuItem
             // 
             this.FolderToolStripMenuItem.Name = "FolderToolStripMenuItem";
-            this.FolderToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.FolderToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.FolderToolStripMenuItem.Text = "Folder";
             this.FolderToolStripMenuItem.Click += new System.EventHandler(this.FolderToolStripMenuItem_Click);
             // 
             // ShortcutToolStripMenuItem
             // 
             this.ShortcutToolStripMenuItem.Name = "ShortcutToolStripMenuItem";
-            this.ShortcutToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.ShortcutToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.ShortcutToolStripMenuItem.Text = "Shortcut";
             // 
             // TextDocumentToolStripMenuItem
             // 
             this.TextDocumentToolStripMenuItem.Name = "TextDocumentToolStripMenuItem";
-            this.TextDocumentToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.TextDocumentToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.TextDocumentToolStripMenuItem.Text = "Text Document";
             // 
             // BitmapImageToolStripMenuItem
             // 
             this.BitmapImageToolStripMenuItem.Name = "BitmapImageToolStripMenuItem";
-            this.BitmapImageToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.BitmapImageToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.BitmapImageToolStripMenuItem.Text = "Bitmap Image";
             // 
             // DeleteToolStripMenuItem
@@ -413,7 +415,7 @@
             this.DisconnectNetworkDriveToolStripMenuItem,
             this.GoToToolStripMenuItem});
             this.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem";
-            this.ToolsToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.ToolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.ToolsToolStripMenuItem.Text = "Tools";
             // 
             // FindToolStripMenuItem
@@ -607,6 +609,8 @@
             this.iconsList.Images.SetKeyName(0, "nwnp32_1_SERVER_ICON.png");
             this.iconsList.Images.SetKeyName(1, "shell32_21.ico_16x16.png");
             this.iconsList.Images.SetKeyName(2, "blank-file-Windows95Icon.gif");
+            this.iconsList.Images.SetKeyName(3, "WinClassicCalc.png");
+            this.iconsList.Images.SetKeyName(4, "WinClassicComputer.png");
             // 
             // pnlHidden
             // 

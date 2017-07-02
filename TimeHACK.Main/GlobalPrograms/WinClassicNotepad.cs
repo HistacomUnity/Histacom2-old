@@ -36,7 +36,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         private void aboutNotepadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WindowManager wm = new WindowManager();
-            wm.startAboutBox95("Notepad", "Microsoft Notepad", Properties.Resources.WinClassicNotepad);
+            wm.StartAboutBox95("Notepad", "Microsoft Notepad", Properties.Resources.WinClassicNotepad);
         }
 
         private void wordWrapToolStripMenuItem_Click(object sender, EventArgs e)

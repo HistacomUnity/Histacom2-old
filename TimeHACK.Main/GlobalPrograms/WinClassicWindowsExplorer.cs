@@ -110,25 +110,48 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 }
                 foreach (String str in Directory.GetFiles(currentDirectory))
                 {
+                    // Get app Icon
+
+                    int AppIcon = 2;
+
+                    switch (new FileInfo(str).Extension)
+                    {
+                        case ".exe":
+                            String contents;
+
+                            contents = File.ReadAllText(str);
+
+                            switch (contents.ToLower())
+                            {
+                                case "calculator":
+                                    AppIcon = 3;
+                                    break;
+                                case "windowsexplorer":
+                                    AppIcon = 4;
+                                    break;
+                            }
+                            break;
+                    }
+
                     if (IsFileOpenDialog == true || IsFileSaveDialog == true)
                     {
                         if (!(Path.GetFileName(str) == "_data.info"))
                         {
                             if (new FileInfo(str).Extension == onlyViewExtension)
                             {
-                                this.mainView.Items.Add(Path.GetFileName(str), 2);
+                                this.mainView.Items.Add(Path.GetFileName(str), AppIcon);                               
                             }
                         }
                     } else {
                         if (!(Path.GetFileName(str) == "_data.info")) {
-                            this.mainView.Items.Add(Path.GetFileName(str), 2);
+                            this.mainView.Items.Add(Path.GetFileName(str), AppIcon);
                         }
                     }
                 }
                 dirLbl.Text = currentDirectory;
                 CheckLbl();
             } catch (Exception ex) {
-                wm.startInfobox95("Exploring - C:", "Error with the file explorer \n" + ex.Message, Properties.Resources.Win95Info);
+                wm.StartInfobox95("Exploring - C:", "Error with the file explorer \n" + ex.Message, Properties.Resources.Win95Info);
                 ((Form)this.TopLevelControl).Close();
             }
         }
@@ -525,7 +548,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         private void FolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (File.Exists(currentDirectory + "\\New Folder")) {
-                wm.startInfobox95("Windows Explorer", "This directory already exists", Properties.Resources.Win95Info);
+                wm.StartInfobox95("Windows Explorer", "This directory already exists", Properties.Resources.Win95Info);
             } else {
                 Directory.CreateDirectory(currentDirectory + "\\New Folder");
                 SaveDirectoryInfo(currentDirectory + "\\New Folder", false, "New Folder", true);
@@ -552,7 +575,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 {
                     if (txtSave.Text == "")
                     {
-                        wm.startInfobox95("Windows Explorer", "Please enter a filename", Properties.Resources.Win95Info);
+                        wm.StartInfobox95("Windows Explorer", "Please enter a filename", Properties.Resources.Win95Info);
                     }
                     else
                     {
@@ -581,7 +604,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             {
                 if (!File.Exists(Path.Combine(currentDirectory, mainView.FocusedItem.Text)))
                 {
-                    wm.startInfobox95("Windows Explorer", "This directory doesn't exist", Properties.Resources.Win95Info);
+                    wm.StartInfobox95("Windows Explorer", "This directory doesn't exist", Properties.Resources.Win95Info);
                 }
                 else
                 {
@@ -603,7 +626,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         private void AboutWindows95ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WindowManager wm = new WindowManager();
-            wm.startAboutBox95("Windows 95", "Microsoft Windows 95 Rev B", Properties.Resources.WinClassicAbout95);
+            wm.StartAboutBox95("Windows 95", "Microsoft Windows 95 Rev B", Properties.Resources.WinClassicAbout95);
         }
 
         private void RenameToolStripMenuItem_Click(object sender, EventArgs e)
@@ -627,13 +650,13 @@ namespace TimeHACK.OS.Win95.Win95Apps
             setText = mainView.FocusedItem.Text;
             if (setText == "")
             {
-                wm.startInfobox95("Windows Explorer", "Please enter a new directory name", Properties.Resources.Win95Info);
+                wm.StartInfobox95("Windows Explorer", "Please enter a new directory name", Properties.Resources.Win95Info);
             }
             else
             {
                 if (Directory.Exists(setText))
                 {
-                    wm.startInfobox95("Windows Explorer", "That directory already exists.", Properties.Resources.Win95Info);
+                    wm.StartInfobox95("Windows Explorer", "That directory already exists.", Properties.Resources.Win95Info);
                 }
                 else
                 {

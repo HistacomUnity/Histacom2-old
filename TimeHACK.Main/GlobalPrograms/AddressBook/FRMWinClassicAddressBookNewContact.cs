@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TimeHACK.OS.Win95.Win95Apps.AddressBook
+
+namespace TimeHACK.OS.Win95.Win95Apps
 {
     public partial class FRMWinClassicAddressBookNewContact : UserControl
     {

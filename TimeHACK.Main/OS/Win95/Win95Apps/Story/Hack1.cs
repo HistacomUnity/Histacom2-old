@@ -9,12 +9,12 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TimeHACK.Engine;
+using TimeHACK.Engine.Template;
 
 namespace TimeHACK.OS.Win95.Win95Apps.Story
 {
     static class Hack1 : Object
     {
-        static WinClassicTerminal Console = new WinClassicTerminal();
         static WindowManager wm = new WindowManager();
         static Boolean ended = false;
         static Thread soundThread = new Thread(dialup_sound_play);
@@ -25,7 +25,9 @@ namespace TimeHACK.OS.Win95.Win95Apps.Story
         {
             System.Windows.Forms.Timer tmr = new System.Windows.Forms.Timer();
 
-            wm.startWin95(Console, "MS-DOS Prompt", null, true, true);
+            WinClassicTerminal Console = new WinClassicTerminal();
+            WinClassic app = wm.StartWin95(Console, "MS-DOS Prompt", null, true, true);
+
             Console.WriteLine("telnet> 104.27.135.159 Connecting...");          
 
             tmr.Interval = 1;
@@ -33,7 +35,11 @@ namespace TimeHACK.OS.Win95.Win95Apps.Story
 
             if (devMode == true)
             {
-                continueObjective();
+                Thread contObjective = new Thread(continueObjective);
+
+                app.Close();
+
+                contObjective.Start();
             }
             else
             {
@@ -44,6 +50,11 @@ namespace TimeHACK.OS.Win95.Win95Apps.Story
 
         public static void continueObjective()
         {
+            WinClassicTerminal Console = new WinClassicTerminal();
+            wm.StartWin95(Console, "MS-DOS Prompt", null, true, true);
+
+            Application.DoEvents();
+
             Console.WriteLine("\ntelnet> 104.27.135.159 Connected.");
             Thread.Sleep(2500);
             Console.WriteLine("\ntelnet> 104.27.135.159 set hostname to 'TheHiddenHacker'.");
@@ -65,6 +76,12 @@ namespace TimeHACK.OS.Win95.Win95Apps.Story
             Console.WriteLine("\nTheHiddenHacker> The hostname is 172.68.119.42, and the username is most likely 12padams. I'm not too sure what the password is, however.");
             Thread.Sleep(3500);
             Console.WriteLine("\nTheHiddenHacker> You'll need to figure out where you can get the password. Try looking for any odd text on the website.");
+            Thread.Sleep(1000);
+            Console.WriteLine("\nTheHiddenHacker> I don't have much time to talk - I'd quickly copy down those details into Notepad before this Terminal gets closed.");
+
+            Application.DoEvents();
+
+            Thread.Sleep(36000);
         }
         
         public static void CheckIfSoundFinished(Object sender, EventArgs e)

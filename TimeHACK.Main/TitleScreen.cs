@@ -195,7 +195,7 @@ namespace TimeHACK
             label1.Parent = leet;
             label1.AutoSize = true;
             label1.Text = "Thank you for making TimeHACK possible.";
-            wm.startWin95(leet, "Thank You", null, true, true);
+            wm.StartWin95(leet, "Thank You", null, true, true);
         }
 
         // The VM Mode timer / checker. Updates every 100ms

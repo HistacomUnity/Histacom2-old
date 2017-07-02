@@ -122,7 +122,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void aboutWordpadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            wm.startAboutBox95("Wordpad", "Microsoft Wordpad", Properties.Resources.Win95IconWordpad);
+            wm.StartAboutBox95("Wordpad", "Microsoft Wordpad", Properties.Resources.Win95IconWordpad);
         }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
@@ -137,7 +137,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void sendToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            wm.startInfobox95("Wordpad", "An error occured opening send option.", null);
+            wm.StartInfobox95("Wordpad", "An error occured opening send option.", null);
         }
 
         void Cut()

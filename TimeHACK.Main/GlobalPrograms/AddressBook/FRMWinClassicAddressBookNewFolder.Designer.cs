@@ -1,4 +1,4 @@
-﻿namespace TimeHACK.OS.Win95.Win95Apps.AddressBook
+﻿namespace TimeHACK.OS.Win95.Win95Apps
 {
     partial class FRMWinClassicAddressBookNewFolder
     {

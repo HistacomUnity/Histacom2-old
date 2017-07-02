@@ -197,6 +197,16 @@ namespace TimeHACK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap MS_DOS {
+            get {
+                object obj = ResourceManager.GetObject("MS_DOS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MSExit {
             get {
                 object obj = ResourceManager.GetObject("MSExit", resourceCulture);
@@ -320,6 +330,76 @@ namespace TimeHACK.Properties {
         internal static System.Drawing.Bitmap TaskBarClock {
             get {
                 object obj = ResourceManager.GetObject("TaskBarClock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap termCopy {
+            get {
+                object obj = ResourceManager.GetObject("termCopy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap termFont {
+            get {
+                object obj = ResourceManager.GetObject("termFont", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap termMark {
+            get {
+                object obj = ResourceManager.GetObject("termMark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap termMax {
+            get {
+                object obj = ResourceManager.GetObject("termMax", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap termNothing {
+            get {
+                object obj = ResourceManager.GetObject("termNothing", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap termPaste {
+            get {
+                object obj = ResourceManager.GetObject("termPaste", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap termSettings {
+            get {
+                object obj = ResourceManager.GetObject("termSettings", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -499,6 +579,16 @@ namespace TimeHACK.Properties {
         internal static System.Drawing.Bitmap WinClassicAddressBookPropertiesIcon {
             get {
                 object obj = ResourceManager.GetObject("WinClassicAddressBookPropertiesIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WinClassicCalc {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicCalc", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
