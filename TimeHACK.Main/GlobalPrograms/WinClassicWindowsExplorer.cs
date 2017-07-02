@@ -112,11 +112,24 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 {
                     // Get app Icon
 
-                    int AppIcon = 1;
+                    int AppIcon = 2;
 
-                    switch (Path.GetFileName(str))
+                    switch (new FileInfo(str).Extension)
                     {
                         case ".exe":
+                            String contents;
+
+                            contents = File.ReadAllText(str);
+
+                            switch (contents.ToLower())
+                            {
+                                case "calculator":
+                                    AppIcon = 3;
+                                    break;
+                                case "windowsexplorer":
+                                    AppIcon = 4;
+                                    break;
+                            }
                             break;
                     }
 
@@ -126,16 +139,12 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         {
                             if (new FileInfo(str).Extension == onlyViewExtension)
                             {
-                                if (new FileInfo(str).Extension == ".exe")
-                                {
-                                    this.mainView.Items.Add(Path.GetFileName(str), 2);
-                                }
-                                
+                                this.mainView.Items.Add(Path.GetFileName(str), AppIcon);                               
                             }
                         }
                     } else {
                         if (!(Path.GetFileName(str) == "_data.info")) {
-                            this.mainView.Items.Add(Path.GetFileName(str), 2);
+                            this.mainView.Items.Add(Path.GetFileName(str), AppIcon);
                         }
                     }
                 }
