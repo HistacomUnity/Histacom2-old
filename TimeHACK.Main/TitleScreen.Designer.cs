@@ -33,18 +33,6 @@
             this.vmModeTimer = new System.Windows.Forms.Timer(this.components);
             this.program = new System.Windows.Forms.Panel();
             this.programContent = new System.Windows.Forms.Panel();
-            this.startmenu = new System.Windows.Forms.Panel();
-            this.startmenuitems = new System.Windows.Forms.MenuStrip();
-            this.DocumentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ProgramsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.SettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ControlPanelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PrintersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.TaskbarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.HelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ShutdownToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ossidestartmenu = new System.Windows.Forms.Panel();
-            this.osimage = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.VM_Height = new System.Windows.Forms.NumericUpDown();
             this.VM_Width = new System.Windows.Forms.NumericUpDown();
@@ -52,6 +40,16 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gameversion = new System.Windows.Forms.Label();
             this.startbutton = new System.Windows.Forms.PictureBox();
+            this.startmenu = new System.Windows.Forms.Panel();
+            this.startmenuitems = new System.Windows.Forms.MenuStrip();
+            this.DocumentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ProgramsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ShutdownToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ossidestartmenu = new System.Windows.Forms.Panel();
+            this.osimage = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.toprightcorner = new System.Windows.Forms.Panel();
             this.bottomrightcorner = new System.Windows.Forms.Panel();
             this.bottomleftcorner = new System.Windows.Forms.Panel();
@@ -59,15 +57,16 @@
             this.updateText = new System.Windows.Forms.Timer(this.components);
             this.program.SuspendLayout();
             this.programContent.SuspendLayout();
-            this.startmenu.SuspendLayout();
-            this.startmenuitems.SuspendLayout();
-            this.ossidestartmenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.osimage)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VM_Height)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VM_Width)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.startbutton)).BeginInit();
+            this.startmenu.SuspendLayout();
+            this.startmenuitems.SuspendLayout();
+            this.ossidestartmenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.osimage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // vmModeTimer
@@ -85,167 +84,20 @@
             this.program.Dock = System.Windows.Forms.DockStyle.Fill;
             this.program.Location = new System.Drawing.Point(0, 0);
             this.program.Name = "program";
-            this.program.Size = new System.Drawing.Size(800, 600);
+            this.program.Size = new System.Drawing.Size(800, 450);
             this.program.TabIndex = 11;
             // 
             // programContent
             // 
             this.programContent.BackColor = System.Drawing.Color.Teal;
-            this.programContent.Controls.Add(this.startmenu);
             this.programContent.Controls.Add(this.panel2);
+            this.programContent.Controls.Add(this.startmenu);
+            this.programContent.Controls.Add(this.pictureBox2);
             this.programContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.programContent.Location = new System.Drawing.Point(0, 0);
             this.programContent.Name = "programContent";
-            this.programContent.Size = new System.Drawing.Size(800, 600);
+            this.programContent.Size = new System.Drawing.Size(800, 450);
             this.programContent.TabIndex = 9;
-            // 
-            // startmenu
-            // 
-            this.startmenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.startmenu.BackColor = System.Drawing.Color.Silver;
-            this.startmenu.Controls.Add(this.startmenuitems);
-            this.startmenu.Controls.Add(this.ossidestartmenu);
-            this.startmenu.Location = new System.Drawing.Point(0, 283);
-            this.startmenu.Name = "startmenu";
-            this.startmenu.Size = new System.Drawing.Size(174, 290);
-            this.startmenu.TabIndex = 11;
-            // 
-            // startmenuitems
-            // 
-            this.startmenuitems.BackColor = System.Drawing.Color.Silver;
-            this.startmenuitems.Dock = System.Windows.Forms.DockStyle.None;
-            this.startmenuitems.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.DocumentsToolStripMenuItem,
-            this.ProgramsToolStripMenuItem,
-            this.SettingsToolStripMenuItem,
-            this.HelpToolStripMenuItem,
-            this.ShutdownToolStripMenuItem});
-            this.startmenuitems.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.startmenuitems.Location = new System.Drawing.Point(28, 2);
-            this.startmenuitems.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.startmenuitems.Name = "startmenuitems";
-            this.startmenuitems.Padding = new System.Windows.Forms.Padding(6, 2, 0, 0);
-            this.startmenuitems.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.startmenuitems.Size = new System.Drawing.Size(145, 184);
-            this.startmenuitems.TabIndex = 0;
-            this.startmenuitems.Text = "StartMenu";
-            // 
-            // DocumentsToolStripMenuItem
-            // 
-            this.DocumentsToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.DocumentsToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
-            this.DocumentsToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicDocuments;
-            this.DocumentsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DocumentsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.DocumentsToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
-            this.DocumentsToolStripMenuItem.Name = "DocumentsToolStripMenuItem";
-            this.DocumentsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.DocumentsToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
-            this.DocumentsToolStripMenuItem.Text = "New Game";
-            this.DocumentsToolStripMenuItem.Click += new System.EventHandler(this.NewGame_Click);
-            // 
-            // ProgramsToolStripMenuItem
-            // 
-            this.ProgramsToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.ProgramsToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
-            this.ProgramsToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ProgramsToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicPrograms;
-            this.ProgramsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ProgramsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ProgramsToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
-            this.ProgramsToolStripMenuItem.Name = "ProgramsToolStripMenuItem";
-            this.ProgramsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.ProgramsToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
-            this.ProgramsToolStripMenuItem.Text = "Load Game";
-            this.ProgramsToolStripMenuItem.Click += new System.EventHandler(this.LoadGame_Click);
-            // 
-            // SettingsToolStripMenuItem
-            // 
-            this.SettingsToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.SettingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ControlPanelToolStripMenuItem,
-            this.PrintersToolStripMenuItem,
-            this.TaskbarToolStripMenuItem});
-            this.SettingsToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicSettings;
-            this.SettingsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SettingsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SettingsToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
-            this.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem";
-            this.SettingsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.SettingsToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
-            this.SettingsToolStripMenuItem.Text = "Settings";
-            // 
-            // ControlPanelToolStripMenuItem
-            // 
-            this.ControlPanelToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.ControlPanelToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ControlPanelToolStripMenuItem.BackgroundImage")));
-            this.ControlPanelToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ControlPanelToolStripMenuItem.Name = "ControlPanelToolStripMenuItem";
-            this.ControlPanelToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.ControlPanelToolStripMenuItem.Text = "Control Panel";
-            // 
-            // PrintersToolStripMenuItem
-            // 
-            this.PrintersToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.PrintersToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PrintersToolStripMenuItem.BackgroundImage")));
-            this.PrintersToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.PrintersToolStripMenuItem.Name = "PrintersToolStripMenuItem";
-            this.PrintersToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.PrintersToolStripMenuItem.Text = "Printers";
-            // 
-            // TaskbarToolStripMenuItem
-            // 
-            this.TaskbarToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.TaskbarToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("TaskbarToolStripMenuItem.BackgroundImage")));
-            this.TaskbarToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.TaskbarToolStripMenuItem.Name = "TaskbarToolStripMenuItem";
-            this.TaskbarToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.TaskbarToolStripMenuItem.Text = "Taskbar";
-            // 
-            // HelpToolStripMenuItem
-            // 
-            this.HelpToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.HelpToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicHelp;
-            this.HelpToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.HelpToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.HelpToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
-            this.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem";
-            this.HelpToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.HelpToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.HelpToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
-            this.HelpToolStripMenuItem.Text = "Help";
-            // 
-            // ShutdownToolStripMenuItem
-            // 
-            this.ShutdownToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.ShutdownToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicShutdown;
-            this.ShutdownToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ShutdownToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ShutdownToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
-            this.ShutdownToolStripMenuItem.Name = "ShutdownToolStripMenuItem";
-            this.ShutdownToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.ShutdownToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
-            this.ShutdownToolStripMenuItem.Text = "Shut Down...";
-            this.ShutdownToolStripMenuItem.Click += new System.EventHandler(this.Exit_Click);
-            // 
-            // ossidestartmenu
-            // 
-            this.ossidestartmenu.Controls.Add(this.osimage);
-            this.ossidestartmenu.Location = new System.Drawing.Point(0, 0);
-            this.ossidestartmenu.Name = "ossidestartmenu";
-            this.ossidestartmenu.Size = new System.Drawing.Size(26, 297);
-            this.ossidestartmenu.TabIndex = 4;
-            // 
-            // osimage
-            // 
-            this.osimage.BackColor = System.Drawing.Color.Gray;
-            this.osimage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.osimage.Location = new System.Drawing.Point(0, 0);
-            this.osimage.Name = "osimage";
-            this.osimage.Size = new System.Drawing.Size(26, 297);
-            this.osimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.osimage.TabIndex = 0;
-            this.osimage.TabStop = false;
             // 
             // panel2
             // 
@@ -257,7 +109,7 @@
             this.panel2.Controls.Add(this.gameversion);
             this.panel2.Controls.Add(this.startbutton);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 572);
+            this.panel2.Location = new System.Drawing.Point(0, 422);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 28);
             this.panel2.TabIndex = 10;
@@ -332,7 +184,7 @@
             this.gameversion.AutoSize = true;
             this.gameversion.BackColor = System.Drawing.Color.Transparent;
             this.gameversion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gameversion.Location = new System.Drawing.Point(25, 8);
+            this.gameversion.Location = new System.Drawing.Point(25, 6);
             this.gameversion.Name = "gameversion";
             this.gameversion.Size = new System.Drawing.Size(78, 13);
             this.gameversion.TabIndex = 0;
@@ -351,6 +203,136 @@
             this.startbutton.TabStop = false;
             this.startbutton.Click += new System.EventHandler(this.startbutton_Click);
             // 
+            // startmenu
+            // 
+            this.startmenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.startmenu.BackColor = System.Drawing.Color.Silver;
+            this.startmenu.Controls.Add(this.startmenuitems);
+            this.startmenu.Controls.Add(this.ossidestartmenu);
+            this.startmenu.Location = new System.Drawing.Point(0, 238);
+            this.startmenu.Name = "startmenu";
+            this.startmenu.Size = new System.Drawing.Size(165, 187);
+            this.startmenu.TabIndex = 11;
+            this.startmenu.Paint += (sender, args) => Engine.Paintbrush.paintClassicBorders(sender, args, 2);
+            // 
+            // startmenuitems
+            // 
+            this.startmenuitems.BackColor = System.Drawing.Color.Silver;
+            this.startmenuitems.Dock = System.Windows.Forms.DockStyle.None;
+            this.startmenuitems.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.DocumentsToolStripMenuItem,
+            this.ProgramsToolStripMenuItem,
+            this.SettingsToolStripMenuItem,
+            this.HelpToolStripMenuItem,
+            this.ShutdownToolStripMenuItem});
+            this.startmenuitems.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
+            this.startmenuitems.Location = new System.Drawing.Point(23, 2);
+            this.startmenuitems.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.startmenuitems.Name = "startmenuitems";
+            this.startmenuitems.Padding = new System.Windows.Forms.Padding(4, 2, 0, 0);
+            this.startmenuitems.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.startmenuitems.Size = new System.Drawing.Size(143, 184);
+            this.startmenuitems.TabIndex = 0;
+            this.startmenuitems.Text = "StartMenu";
+            // 
+            // DocumentsToolStripMenuItem
+            // 
+            this.DocumentsToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.DocumentsToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
+            this.DocumentsToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicPrograms;
+            this.DocumentsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DocumentsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.DocumentsToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
+            this.DocumentsToolStripMenuItem.Name = "DocumentsToolStripMenuItem";
+            this.DocumentsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
+            this.DocumentsToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
+            this.DocumentsToolStripMenuItem.Text = "New Game";
+            this.DocumentsToolStripMenuItem.Click += new System.EventHandler(this.NewGame_Click);
+            // 
+            // ProgramsToolStripMenuItem
+            // 
+            this.ProgramsToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.ProgramsToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
+            this.ProgramsToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ProgramsToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicDocuments;
+            this.ProgramsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ProgramsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ProgramsToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
+            this.ProgramsToolStripMenuItem.Name = "ProgramsToolStripMenuItem";
+            this.ProgramsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
+            this.ProgramsToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
+            this.ProgramsToolStripMenuItem.Text = "Load Game";
+            this.ProgramsToolStripMenuItem.Click += new System.EventHandler(this.LoadGame_Click);
+            // 
+            // SettingsToolStripMenuItem
+            // 
+            this.SettingsToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.SettingsToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicSettings;
+            this.SettingsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SettingsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.SettingsToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
+            this.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem";
+            this.SettingsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
+            this.SettingsToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
+            this.SettingsToolStripMenuItem.Text = "Settings";
+            // 
+            // HelpToolStripMenuItem
+            // 
+            this.HelpToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.HelpToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicHelp;
+            this.HelpToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.HelpToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.HelpToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
+            this.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem";
+            this.HelpToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
+            this.HelpToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.HelpToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
+            this.HelpToolStripMenuItem.Text = "Help";
+            // 
+            // ShutdownToolStripMenuItem
+            // 
+            this.ShutdownToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.ShutdownToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicShutdown;
+            this.ShutdownToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ShutdownToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ShutdownToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
+            this.ShutdownToolStripMenuItem.Name = "ShutdownToolStripMenuItem";
+            this.ShutdownToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
+            this.ShutdownToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
+            this.ShutdownToolStripMenuItem.Text = "Shut Down...";
+            this.ShutdownToolStripMenuItem.Click += new System.EventHandler(this.Exit_Click);
+            // 
+            // ossidestartmenu
+            // 
+            this.ossidestartmenu.Controls.Add(this.osimage);
+            this.ossidestartmenu.Location = new System.Drawing.Point(2, 2);
+            this.ossidestartmenu.Name = "ossidestartmenu";
+            this.ossidestartmenu.Size = new System.Drawing.Size(21, 184);
+            this.ossidestartmenu.TabIndex = 4;
+            // 
+            // osimage
+            // 
+            this.osimage.BackColor = System.Drawing.Color.Gray;
+            this.osimage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.osimage.Image = global::TimeHACK.Properties.Resources.LauncherSideBar;
+            this.osimage.Location = new System.Drawing.Point(0, 0);
+            this.osimage.Name = "osimage";
+            this.osimage.Size = new System.Drawing.Size(21, 184);
+            this.osimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.osimage.TabIndex = 0;
+            this.osimage.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::TimeHACK.Properties.Resources.TimeHACK_Logo;
+            this.pictureBox2.Location = new System.Drawing.Point(29, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(755, 350);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            // 
             // toprightcorner
             // 
             this.toprightcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -365,7 +347,7 @@
             this.bottomrightcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bottomrightcorner.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bottomrightcorner.BackgroundImage")));
             this.bottomrightcorner.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
-            this.bottomrightcorner.Location = new System.Drawing.Point(796, 596);
+            this.bottomrightcorner.Location = new System.Drawing.Point(796, 446);
             this.bottomrightcorner.Name = "bottomrightcorner";
             this.bottomrightcorner.Size = new System.Drawing.Size(4, 4);
             this.bottomrightcorner.TabIndex = 4;
@@ -374,7 +356,7 @@
             // 
             this.bottomleftcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.bottomleftcorner.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bottomleftcorner.BackgroundImage")));
-            this.bottomleftcorner.Location = new System.Drawing.Point(0, 596);
+            this.bottomleftcorner.Location = new System.Drawing.Point(0, 446);
             this.bottomleftcorner.Name = "bottomleftcorner";
             this.bottomleftcorner.Size = new System.Drawing.Size(4, 4);
             this.bottomleftcorner.TabIndex = 2;
@@ -397,27 +379,27 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.ClientSize = new System.Drawing.Size(800, 400);
             this.Controls.Add(this.program);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TitleScreen";
             this.Tag = "ignoreFormOnTaskbar";
             this.Text = "TimeHACK Launcher";
             this.Load += new System.EventHandler(this.TitleScreen_Load);
             this.program.ResumeLayout(false);
             this.programContent.ResumeLayout(false);
-            this.startmenu.ResumeLayout(false);
-            this.startmenu.PerformLayout();
-            this.startmenuitems.ResumeLayout(false);
-            this.startmenuitems.PerformLayout();
-            this.ossidestartmenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.osimage)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VM_Height)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VM_Width)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.startbutton)).EndInit();
+            this.startmenu.ResumeLayout(false);
+            this.startmenu.PerformLayout();
+            this.startmenuitems.ResumeLayout(false);
+            this.startmenuitems.PerformLayout();
+            this.ossidestartmenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.osimage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -435,9 +417,6 @@
         internal System.Windows.Forms.ToolStripMenuItem DocumentsToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem ProgramsToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem SettingsToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem ControlPanelToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem PrintersToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem TaskbarToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem HelpToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem ShutdownToolStripMenuItem;
         internal System.Windows.Forms.Panel ossidestartmenu;
@@ -450,5 +429,6 @@
         public System.Windows.Forms.Label gameversion;
         internal System.Windows.Forms.PictureBox startbutton;
         private System.Windows.Forms.Timer updateText;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

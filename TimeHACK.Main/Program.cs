@@ -84,13 +84,14 @@ namespace TimeHACK
 
         public static void ShutdownApplication(System.IO.UnmanagedMemoryStream audio)
         {
-            
+            System.Threading.Thread.Sleep(500);
             System.IO.Stream audioPlay = audio;
             stopsound = new System.Media.SoundPlayer(audioPlay);
-            stopsound.Play();
+            stopsound.PlaySync();
 
-            System.Threading.Thread.Sleep(1500);
-            Application.Exit();
+            System.Threading.Thread.Sleep(500);
+            Environment.Exit(0);
+            //Application.Exit();
         }
 
         public static void GetAppVeyor()

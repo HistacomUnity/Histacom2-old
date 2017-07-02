@@ -177,6 +177,7 @@
             this.startmenu.Name = "startmenu";
             this.startmenu.Size = new System.Drawing.Size(174, 300);
             this.startmenu.TabIndex = 4;
+            this.startmenu.Paint += (sender, args) => Engine.Paintbrush.paintClassicBorders(sender, args, 2);
             // 
             // startmenuitems
             // 
@@ -879,7 +880,7 @@
             // osimage
             // 
             this.osimage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.osimage.Image = global::TimeHACK.Properties.Resources.Win95SideBar;
+            this.osimage.Image = global::TimeHACK.Properties.Resources.Win98SideBar;
             this.osimage.Location = new System.Drawing.Point(0, 0);
             this.osimage.Name = "osimage";
             this.osimage.Size = new System.Drawing.Size(26, 297);
