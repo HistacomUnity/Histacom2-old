@@ -192,6 +192,7 @@ namespace TimeHACK.OS.Win95
             this.taskbartime.Size = new System.Drawing.Size(26, 13);
             this.taskbartime.TabIndex = 2;
             this.taskbartime.Text = "time";
+            this.taskbartime.Click += new System.EventHandler(this.taskbartime_Click);
             // 
             // taskbarItems
             // 
