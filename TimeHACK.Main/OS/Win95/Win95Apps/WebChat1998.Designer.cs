@@ -200,6 +200,7 @@
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.button1.Paint += (sender, args) => Engine.Paintbrush.paintClassicBorders(sender, args, 1, Engine.Paintbrush.BGStyle.Silver);
             // 
             // txtscreenname
             // 
