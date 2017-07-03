@@ -26,7 +26,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         public static string startupDir = $"{Engine.SaveSystem.ProfileMyComputerDirectory}";
         public string output = "";
 
-        public WinClassicTerminal()
+        public WinClassicTerminal(bool readOnly)
         {
             InitializeComponent();
 
@@ -43,10 +43,19 @@ namespace TimeHACK.OS.Win95.Win95Apps
             sizeSel.SelectedIndex = 0;
 
             // Set the font and append the prefix text
-            cmdPrompt.Font = new Font(TitleScreen.pfc.Families[1], 10F, System.Drawing.FontStyle.Regular);
-            cmdPrompt.AppendText(prefix);
+            cmdPrompt.Font = new Font(TitleScreen.pfc.Families[1], 10F, FontStyle.Regular);
 
             cmdPrompt.BringToFront();
+
+            if (readOnly)
+            {
+                actionPanel.Hide();
+                cmdPrompt.ReadOnly = true;
+            }
+            else
+            {
+                cmdPrompt.AppendText(prefix);
+            }
         }
         /// <summary>
         /// Write text to the Terminal and create a new line. Very similar to the Win32 Console.WriteLine Function.

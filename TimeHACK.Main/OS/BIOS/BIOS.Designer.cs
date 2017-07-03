@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BIOSConsole = new TimeHACK.OS.Win95.Win95Apps.WinClassicTerminal();
+            this.BIOSConsole = new TimeHACK.OS.Win95.Win95Apps.WinClassicTerminal(true);
             this.SuspendLayout();
             // 
             // BIOSConsole
