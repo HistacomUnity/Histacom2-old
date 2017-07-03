@@ -13,6 +13,8 @@ using TimeHACK.OS.Win95.Win95Apps.Story;
 
 namespace TimeHACK.OS.Win95
 {
+    
+   
     public partial class Windows95 : Form
     {
         private SoundPlayer startsound;
@@ -34,14 +36,17 @@ namespace TimeHACK.OS.Win95
         {
             InitializeComponent();
             startmenu.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            
         }
 
         //  When New Game is clicked in TitleScreen.cs
         private void Desktop_Load(object sender, EventArgs e)
         {
+            //Start Menu Color
+            startmenuitems.Renderer = new MyRenderer();
             // Make Font Mandatory
             fontLoad();
-
+            
             // Play Windows 95 Start Sound
             Stream audio = Properties.Resources.Win95Start;
             startsound = new SoundPlayer(audio);
@@ -363,5 +368,29 @@ namespace TimeHACK.OS.Win95
             startmenu.Hide();
         }
     }
-}
+    public class MyRenderer : ToolStripProfessionalRenderer
+    {
+        public MyRenderer() : base(new MyColors()) { }
+    }
+
+    public class MyColors : ProfessionalColorTable
+    {
+        public override Color MenuItemSelectedGradientBegin
+        {
+            get { return Color.Blue; }
+        }
+        public override Color MenuItemSelectedGradientEnd
+        {
+            get { return Color.Blue; }
+        }
+        public override Color MenuItemPressedGradientBegin
+        {
+            get { return Color.Blue; }
+        }
+        public override Color MenuItemPressedGradientEnd
+        {
+            get { return Color.Blue; }
+        }
+    }
+    }
 
