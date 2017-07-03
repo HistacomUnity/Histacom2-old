@@ -7,8 +7,8 @@
 ## The remake of the original hacking simulator!
 TimeHACK is a C# version of the PC game Histacom, released by 12padams in 2010. Here are some of our goals:
 * Get TimeHACK to the same playable state that Histacom's in and beyond.
-* Write a new engine and make an API so that you can easily develop your own applications.
-* Get HTML working
+* Add more applications to the operating systems.
+* Get HTML working.
 
 ## Building
 TimeHACK is currently being developed in Microsoft Visual Studio 2017. Visual Studio 2015 has also been proven to work. If you are using a different IDE, please do so with caution. We cannot guarantee the stability of other IDEs.
@@ -31,7 +31,7 @@ TimeHACK's documentation can be found on the TimeHACK Wiki: https://github.com/T
 * A completely discontinued project called "HistacomVB".
 The idea of it being that it was the old game except being built upon. In the end, however, we stopped it because having "HistacomVB" and "TimeHACK" was unnecessary. If you REALLY want to see the repo, click here: http://www.github.com/TimeHACKDevs/HistacomVB
 * An unofficial project called "Histacom.AU".
-This is a rewrite of Histacom in Python, and has a place [here](https://github.com/TimeHACKDevs/histacom-au)
+This is a rewrite of Histacom in Python, and has a place [here](https://github.com/TimeHACKDevs/histacom-au).
 
 ## License
 TimeHACK is licensed under the [MIT license](https://github.com/TimeHACKDevs/TimeHACK/blob/master/LICENSE). All code committed to the TimeHACK repository becomes the property of the TimeHACK Development Team, and will **not** be removed upon request.
