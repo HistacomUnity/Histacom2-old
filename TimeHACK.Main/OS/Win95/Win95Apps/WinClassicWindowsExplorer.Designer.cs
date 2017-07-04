@@ -117,7 +117,7 @@
             this.diskView.Size = new System.Drawing.Size(213, 444);
             this.diskView.TabIndex = 13;
             this.diskView.Visible = true;
-            this.diskView.DoubleClick += new System.EventHandler(this.diskView_DoubleClick);
+            this.diskView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(diskView_AfterSelect);
             // 
             // MenuStrip1
             // 

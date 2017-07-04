@@ -269,7 +269,6 @@ namespace TimeHACK.OS.Win95
             this.ProgramsToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicPrograms;
             this.ProgramsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ProgramsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ProgramsToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.ProgramsToolStripMenuItem.Name = "ProgramsToolStripMenuItem";
             this.ProgramsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
             this.ProgramsToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
@@ -296,7 +295,6 @@ namespace TimeHACK.OS.Win95
             this.AccessoriesToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicProgramItem;
             this.AccessoriesToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.AccessoriesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.AccessoriesToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.AccessoriesToolStripMenuItem.Name = "AccessoriesToolStripMenuItem";
             this.AccessoriesToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.AccessoriesToolStripMenuItem.Text = "Accessories";
@@ -550,7 +548,6 @@ namespace TimeHACK.OS.Win95
             this.StartUpToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicProgramItem;
             this.StartUpToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.StartUpToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.StartUpToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.StartUpToolStripMenuItem.Name = "StartUpToolStripMenuItem";
             this.StartUpToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.StartUpToolStripMenuItem.Text = "Online Services";
@@ -604,7 +601,6 @@ namespace TimeHACK.OS.Win95
             this.MSDOSPromptToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicProgramItem;
             this.MSDOSPromptToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.MSDOSPromptToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.MSDOSPromptToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.MSDOSPromptToolStripMenuItem.Name = "MSDOSPromptToolStripMenuItem";
             this.MSDOSPromptToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.MSDOSPromptToolStripMenuItem.Text = "StartUp";
@@ -626,7 +622,6 @@ namespace TimeHACK.OS.Win95
             this.InternetExplorerToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("InternetExplorerToolStripMenuItem.Image")));
             this.InternetExplorerToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.InternetExplorerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.InternetExplorerToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.InternetExplorerToolStripMenuItem.Name = "InternetExplorerToolStripMenuItem";
             this.InternetExplorerToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.InternetExplorerToolStripMenuItem.Text = "Internet Explorer";
@@ -640,7 +635,6 @@ namespace TimeHACK.OS.Win95
             this.MSDOSPromptToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("MSDOSPromptToolStripMenuItem1.Image")));
             this.MSDOSPromptToolStripMenuItem1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.MSDOSPromptToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.MSDOSPromptToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Silver;
             this.MSDOSPromptToolStripMenuItem1.Name = "MSDOSPromptToolStripMenuItem1";
             this.MSDOSPromptToolStripMenuItem1.Size = new System.Drawing.Size(181, 28);
             this.MSDOSPromptToolStripMenuItem1.Text = "MS-DOS Prompt";
@@ -654,7 +648,6 @@ namespace TimeHACK.OS.Win95
             this.OutlookExpressToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("OutlookExpressToolStripMenuItem.Image")));
             this.OutlookExpressToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.OutlookExpressToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.OutlookExpressToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.OutlookExpressToolStripMenuItem.Name = "OutlookExpressToolStripMenuItem";
             this.OutlookExpressToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.OutlookExpressToolStripMenuItem.Text = "Outlook Express";
@@ -667,7 +660,6 @@ namespace TimeHACK.OS.Win95
             this.WindowsExplorerToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("WindowsExplorerToolStripMenuItem1.Image")));
             this.WindowsExplorerToolStripMenuItem1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.WindowsExplorerToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.WindowsExplorerToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Silver;
             this.WindowsExplorerToolStripMenuItem1.Name = "WindowsExplorerToolStripMenuItem1";
             this.WindowsExplorerToolStripMenuItem1.Size = new System.Drawing.Size(181, 28);
             this.WindowsExplorerToolStripMenuItem1.Text = "Windows Explorer";
@@ -745,7 +737,6 @@ namespace TimeHACK.OS.Win95
             this.DocumentsToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicDocuments;
             this.DocumentsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DocumentsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.DocumentsToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.DocumentsToolStripMenuItem.Name = "DocumentsToolStripMenuItem";
             this.DocumentsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
             this.DocumentsToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
@@ -796,7 +787,6 @@ namespace TimeHACK.OS.Win95
             this.SettingsToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicSettings;
             this.SettingsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SettingsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SettingsToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem";
             this.SettingsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
             this.SettingsToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
@@ -841,7 +831,6 @@ namespace TimeHACK.OS.Win95
             this.FindToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicFind;
             this.FindToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.FindToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.FindToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.FindToolStripMenuItem.Name = "FindToolStripMenuItem";
             this.FindToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
             this.FindToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -890,7 +879,6 @@ namespace TimeHACK.OS.Win95
             this.HelpToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicHelp;
             this.HelpToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.HelpToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.HelpToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem";
             this.HelpToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
             this.HelpToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -903,7 +891,6 @@ namespace TimeHACK.OS.Win95
             this.RunToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicRun;
             this.RunToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RunToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.RunToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.RunToolStripMenuItem.Name = "RunToolStripMenuItem";
             this.RunToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
             this.RunToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -916,7 +903,6 @@ namespace TimeHACK.OS.Win95
             this.SuspendToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicSuspend;
             this.SuspendToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SuspendToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SuspendToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.SuspendToolStripMenuItem.Name = "SuspendToolStripMenuItem";
             this.SuspendToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
             this.SuspendToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
@@ -928,7 +914,6 @@ namespace TimeHACK.OS.Win95
             this.ShutdownToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicShutdown;
             this.ShutdownToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ShutdownToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ShutdownToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.ShutdownToolStripMenuItem.Name = "ShutdownToolStripMenuItem";
             this.ShutdownToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
             this.ShutdownToolStripMenuItem.Size = new System.Drawing.Size(138, 36);

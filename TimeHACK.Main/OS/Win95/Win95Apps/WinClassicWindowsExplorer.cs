@@ -32,9 +32,6 @@ namespace TimeHACK.OS.Win95.Win95Apps
             InitializeComponent();
         }
 
-
-
-
         //'Private Sub TreeView1_AfterSelect(ByVal sender As System.Object, ByVal e As System.Windows.Forms.TreeViewEventArgs)
         //'    mainView.Items.Clear()
         //'    Dim childamount As TreeNodeCollection
@@ -514,7 +511,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             }
         }
 
-        void diskView_DoubleClick(object sender, EventArgs e)
+        void diskView_AfterSelect(object sender, EventArgs e)
         {
             try
             {
