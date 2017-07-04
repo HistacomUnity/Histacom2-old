@@ -293,6 +293,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicWindowsExplorer.resx">
       <DependentUpon>WinClassicWindowsExplorer.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95SaveAs.resx">
       <DependentUpon>Win95SaveAs.cs</DependentUpon>
@@ -439,6 +440,11 @@
     <None Include="Resources\WinClassic\Win95IconNotepad.png" />
     <None Include="Resources\WinClassic\Win95DesktopIcon.png" />
     <None Include="Resources\WinClassic\Win95HardDiskIcon.png" />
+    <None Include="Resources\WinClassic\Win95ControlPanelIcon.png" />
+    <None Include="Resources\WinClassic\Win95PrintersFolder.png" />
+    <None Include="Resources\WinClassic\Win95ComputerIcon.png" />
+    <None Include="Resources\WinClassic\Win95NetworkIcon.png" />
+    <None Include="Resources\WinClassic\Win95RecycleIcon.png" />
     <Content Include="Resources\WinClassic\Win95SideBar.png" />
     <Content Include="Resources\WinClassic\Win95Start.wav" />
     <None Include="Resources\WinClassic\Win95Warning.png" />
@@ -462,6 +468,7 @@
     <Content Include="Resources\WinClassic\WinClassicNetworking.png" />
     <None Include="Resources\WinClassic\WinClassicNotepad.png" />
     <None Include="Resources\WinClassic\WinClassicNew.png" />
+    <None Include="Resources\WinClassic\WinClassicOpenFolderSmall.png" />
     <Content Include="Resources\WinClassic\WinClassicOutlook.png" />
     <None Include="Resources\WinClassic\WinClassicPaste.png" />
     <Content Include="Resources\WinClassic\WinClassicProgramItem.png" />

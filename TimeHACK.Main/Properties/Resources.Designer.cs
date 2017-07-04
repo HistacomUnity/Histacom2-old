@@ -437,6 +437,26 @@ namespace TimeHACK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Win95ComputerIcon {
+            get {
+                object obj = ResourceManager.GetObject("Win95ComputerIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Win95ControlPanelIcon {
+            get {
+                object obj = ResourceManager.GetObject("Win95ControlPanelIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Win95DesktopIcon {
             get {
                 object obj = ResourceManager.GetObject("Win95DesktopIcon", resourceCulture);
@@ -510,6 +530,36 @@ namespace TimeHACK.Properties {
         internal static System.Drawing.Bitmap Win95Info {
             get {
                 object obj = ResourceManager.GetObject("Win95Info", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Win95NetworkIcon {
+            get {
+                object obj = ResourceManager.GetObject("Win95NetworkIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Win95PrintersFolder {
+            get {
+                object obj = ResourceManager.GetObject("Win95PrintersFolder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Win95RecycleIcon {
+            get {
+                object obj = ResourceManager.GetObject("Win95RecycleIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -789,6 +839,16 @@ namespace TimeHACK.Properties {
         internal static System.Drawing.Bitmap WinClassicNotepad {
             get {
                 object obj = ResourceManager.GetObject("WinClassicNotepad", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WinClassicOpenFolderSmall {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicOpenFolderSmall", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -16,24 +16,21 @@ namespace TimeHACK.OS.Win95.Win95Apps
 {
     public partial class WinClassicWindowsExplorer : UserControl
     {
-        public Boolean IsFileOpenDialog = false;
-        public Boolean IsFileSaveDialog = false;
-        public String onlyViewExtension = "";
+        public bool IsFileOpenDialog = false;
+        public bool IsFileSaveDialog = false;
+        public string onlyViewExtension = "";
 
-        String ToReplaceWith = ProfileDirectory;
-        String currentDirectory = Path.Combine(ProfileDirectory, "folders");
-        String oldLabelText;
-        Int32 fileType = 6;
-        String attemptedDirectory = "";
+        string ToReplaceWith = ProfileDirectory;
+        string currentDirectory = Path.Combine(ProfileDirectory, "folders/computer");
+        string oldLabelText;
+        int fileType = 6;
+        string attemptedDirectory = "";
         WindowManager wm = new WindowManager();
 
         public WinClassicWindowsExplorer()
         {
             InitializeComponent();
         }
-
-
-
 
         //'Private Sub TreeView1_AfterSelect(ByVal sender As System.Object, ByVal e As System.Windows.Forms.TreeViewEventArgs)
         //'    mainView.Items.Clear()
@@ -72,10 +69,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         void RefreshAll() {
             try {
                 // Refresh the right listview
-                icons.Images.Clear();
                 this.mainView.Items.Clear();
-                diskView.ImageList = icons;
-                this.mainView.LargeImageList = icons;
                 // For Each drive As String In My.Computer.FileSystem.GetDirectories(GameMain.MyDocuments & "\HistacomVB\" & GameMain.SaveProfile & "\HistacomVB\Folders")
                 //    If GetPropetiesForDir(drive)(4) = "isMyDocuments" Then
                 //        diskView.Items.Add("", 0)
@@ -139,8 +133,8 @@ namespace TimeHACK.OS.Win95.Win95Apps
             }
         }
 
-        String ReturnType(String extension) {
-            String returnVal = "";
+        string ReturnType(string extension) {
+            string returnVal = "";
             fileType = 1;
             switch (extension) {
                 case ".txt":
@@ -435,13 +429,40 @@ namespace TimeHACK.OS.Win95.Win95Apps
     //    IsFileDialog = False
     //End Sub
         void WinClassicWindowsExplorer_Load(object sender, EventArgs e) {
-
-            diskView.ImageList.Images[0] = Properties.Resources.Win95DesktopIcon;
-            diskView.ImageList.Images[1] = Properties.Resources.Win95HardDiskIcon;
+            diskView.ImageList.Images.Add(Properties.Resources.Win95DesktopIcon);
+            diskView.ImageList.Images.Add(Properties.Resources.Win95HardDiskIcon);
+            diskView.ImageList.Images.Add(Properties.Resources.WinClassicFolderSmall);
+            diskView.ImageList.Images.Add(Properties.Resources.WinClassicOpenFolderSmall);
+            diskView.ImageList.Images.Add(Properties.Resources.Win95ControlPanelIcon);
+            diskView.ImageList.Images.Add(Properties.Resources.Win95PrintersFolder);
+            diskView.ImageList.Images.Add(Properties.Resources.Win95ComputerIcon);
+            diskView.ImageList.Images.Add(Properties.Resources.Win95NetworkIcon);
+            diskView.ImageList.Images.Add(Properties.Resources.Win95RecycleIcon);
             program.BringToFront();
-            TreeNode rootnode = new TreeNode("Desktop", 0, 0);
-            diskView.Nodes.Add(rootnode);
-            diskView.Nodes["Desktop"].Nodes.Add(new TreeNode("(C:)", 1, 1));
+            int loc = 0;
+            TreeNode[] folders = new TreeNode[new DirectoryInfo(currentDirectory).GetDirectories().Length];
+            foreach (DirectoryInfo folder in new DirectoryInfo(currentDirectory).GetDirectories())
+            {
+                if (folder.GetDirectories().Length > 0)
+                {
+                    TreeNode[] tn = createSubDirNodes(folder);
+                    folders[loc] = new TreeNode(folder.Name, 2, 3, tn);
+                }
+                else
+                {
+                    folders[loc] = new TreeNode(folder.Name, 2, 3);
+                }
+                loc++;
+            }
+            TreeNode[] mypcarray = new TreeNode[3];
+            mypcarray[0] = new TreeNode("(C:)", 1, 1, folders);
+            mypcarray[1] = new TreeNode("Control Panel", 4, 4);
+            mypcarray[2] = new TreeNode("Printers", 5, 5);
+            TreeNode[] desktoparray = new TreeNode[3];
+            desktoparray[0] = new TreeNode("My Computer", 6, 6, mypcarray);
+            desktoparray[1] = new TreeNode("Network Neighborhood", 7, 7);
+            desktoparray[2] = new TreeNode("Recycle Bin", 8, 8);
+            diskView.Nodes.Add(new TreeNode("Desktop", 0, 0, desktoparray));
             //diskView.Items.Add("My Computer", 0);
             Application.DoEvents();
             RefreshAll();
@@ -490,7 +511,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             }
         }
 
-        void diskView_DoubleClick(object sender, EventArgs e)
+        void diskView_AfterSelect(object sender, EventArgs e)
         {
             try
             {
@@ -630,6 +651,26 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 }
             }
             RefreshAll();
+        }
+
+        private TreeNode[] createSubDirNodes(DirectoryInfo folder)
+        {
+            TreeNode[] toReturn = new TreeNode[folder.GetDirectories().Length];
+            int loc = 0;
+            foreach (DirectoryInfo fold in folder.GetDirectories())
+            {
+                if (fold.GetDirectories().Length > 0)
+                {
+                    TreeNode[] tn = createSubDirNodes(fold);
+                    toReturn[loc] = new TreeNode(fold.Name, 2, 3, tn);
+                }
+                else
+                {
+                    toReturn[loc] = new TreeNode(fold.Name, 2, 3);
+                }
+                loc++;
+            }
+            return toReturn;
         }
     }
 }

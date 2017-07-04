@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WinClassicWindowsExplorer));
             this.program = new System.Windows.Forms.Panel();
             this.diskView = new System.Windows.Forms.TreeView();
-            this.icons = new System.Windows.Forms.ImageList(this.components);
             this.MenuStrip1 = new System.Windows.Forms.MenuStrip();
             this.FileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CreateShortcutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -88,7 +87,6 @@
             this.Label1 = new System.Windows.Forms.Label();
             this.txtSave = new System.Windows.Forms.TextBox();
             this.mainView = new System.Windows.Forms.ListView();
-            this.iconsList = new System.Windows.Forms.ImageList(this.components);
             this.program.SuspendLayout();
             this.MenuStrip1.SuspendLayout();
             this.pnlSave.SuspendLayout();
@@ -113,23 +111,13 @@
             // 
             // diskView
             // 
-            this.diskView.ImageList = this.icons;
+            this.diskView.ImageList = new System.Windows.Forms.ImageList();
             this.diskView.Location = new System.Drawing.Point(3, 27);
             this.diskView.Name = "diskView";
             this.diskView.Size = new System.Drawing.Size(213, 444);
             this.diskView.TabIndex = 13;
             this.diskView.Visible = true;
-            this.diskView.DoubleClick += new System.EventHandler(this.diskView_DoubleClick);
-            // 
-            // icons
-            // 
-            this.icons.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("icons.ImageStream")));
-            this.icons.TransparentColor = System.Drawing.Color.Transparent;
-            this.icons.Images.SetKeyName(0, "nwnp32_1_SERVER_ICON.png");
-            this.icons.Images.SetKeyName(1, "shell32_21.ico_16x16.png");
-            this.icons.Images.SetKeyName(2, "blank-file-Windows95Icon.gif");
-            this.icons.Images.SetKeyName(3, "WinClassicCalc.png");
-            this.icons.Images.SetKeyName(4, "WinClassicComputer.png");
+            this.diskView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(diskView_AfterSelect);
             // 
             // MenuStrip1
             // 
@@ -546,26 +534,13 @@
             this.mainView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainView.LargeImageList = this.iconsList;
             this.mainView.Location = new System.Drawing.Point(215, 27);
             this.mainView.Name = "mainView";
             this.mainView.Size = new System.Drawing.Size(486, 444);
-            this.mainView.SmallImageList = this.iconsList;
-            this.mainView.StateImageList = this.iconsList;
             this.mainView.TabIndex = 10;
             this.mainView.UseCompatibleStateImageBehavior = false;
             this.mainView.View = System.Windows.Forms.View.List;
             this.mainView.DoubleClick += new System.EventHandler(this.mainView_DoubleClick);
-            // 
-            // iconsList
-            // 
-            this.iconsList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("iconsList.ImageStream")));
-            this.iconsList.TransparentColor = System.Drawing.Color.Transparent;
-            this.iconsList.Images.SetKeyName(0, "nwnp32_1_SERVER_ICON.png");
-            this.iconsList.Images.SetKeyName(1, "shell32_21.ico_16x16.png");
-            this.iconsList.Images.SetKeyName(2, "blank-file-Windows95Icon.gif");
-            this.iconsList.Images.SetKeyName(3, "WinClassicCalc.png");
-            this.iconsList.Images.SetKeyName(4, "WinClassicComputer.png");
             // 
             // WinClassicWindowsExplorer
             // 
@@ -644,7 +619,5 @@
         internal System.Windows.Forms.Button Button1;
         internal System.Windows.Forms.Label Label1;
         internal System.Windows.Forms.TextBox txtSave;
-        internal System.Windows.Forms.ImageList icons;
-        private System.Windows.Forms.ImageList iconsList;
     }
 }

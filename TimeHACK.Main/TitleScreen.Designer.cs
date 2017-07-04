@@ -242,7 +242,6 @@
             this.DocumentsToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicPrograms;
             this.DocumentsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DocumentsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.DocumentsToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.DocumentsToolStripMenuItem.Name = "DocumentsToolStripMenuItem";
             this.DocumentsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
             this.DocumentsToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
@@ -257,7 +256,6 @@
             this.ProgramsToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicDocuments;
             this.ProgramsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ProgramsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ProgramsToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.ProgramsToolStripMenuItem.Name = "ProgramsToolStripMenuItem";
             this.ProgramsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
             this.ProgramsToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
@@ -270,7 +268,6 @@
             this.SettingsToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicSettings;
             this.SettingsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SettingsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SettingsToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem";
             this.SettingsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
             this.SettingsToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
@@ -282,7 +279,6 @@
             this.HelpToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicHelp;
             this.HelpToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.HelpToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.HelpToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem";
             this.HelpToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
             this.HelpToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -295,7 +291,6 @@
             this.ShutdownToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicShutdown;
             this.ShutdownToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ShutdownToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ShutdownToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.ShutdownToolStripMenuItem.Name = "ShutdownToolStripMenuItem";
             this.ShutdownToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
             this.ShutdownToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
