@@ -179,24 +179,6 @@
             this.googlebetalink = new System.Windows.Forms.LinkLabel();
             this.googleprototypelink = new System.Windows.Forms.LinkLabel();
             this.Label6 = new System.Windows.Forms.Label();
-            this.googleprototype = new System.Windows.Forms.Panel();
-            this.Label10 = new System.Windows.Forms.Label();
-            this.Panel3 = new System.Windows.Forms.Panel();
-            this.LinkLabel4 = new System.Windows.Forms.LinkLabel();
-            this.Button11 = new System.Windows.Forms.Button();
-            this.TextBox3 = new System.Windows.Forms.TextBox();
-            this.Label9 = new System.Windows.Forms.Label();
-            this.LinkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.LinkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.LinkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.Panel2 = new System.Windows.Forms.Panel();
-            this.Label8 = new System.Windows.Forms.Label();
-            this.Button10 = new System.Windows.Forms.Button();
-            this.GoogleSearchButton = new System.Windows.Forms.Button();
-            this.ComboBox1 = new System.Windows.Forms.ComboBox();
-            this.TextBox2 = new System.Windows.Forms.TextBox();
-            this.Label7 = new System.Windows.Forms.Label();
-            this.pboxgoogleprototypelogo = new System.Windows.Forms.PictureBox();
             this.Panel14 = new System.Windows.Forms.Panel();
             this.GoButton = new System.Windows.Forms.Button();
             this.addressbar = new System.Windows.Forms.ComboBox();
@@ -351,10 +333,6 @@
             this.skindows95advertisment.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox11)).BeginInit();
             this.googlemain.SuspendLayout();
-            this.googleprototype.SuspendLayout();
-            this.Panel3.SuspendLayout();
-            this.Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxgoogleprototypelogo)).BeginInit();
             this.Panel14.SuspendLayout();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
@@ -389,7 +367,6 @@
             this.browsingarea.Controls.Add(this.secretwebsite);
             this.browsingarea.Controls.Add(this.skindows95advertisment);
             this.browsingarea.Controls.Add(this.googlemain);
-            this.browsingarea.Controls.Add(this.googleprototype);
             this.browsingarea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.browsingarea.Location = new System.Drawing.Point(0, 111);
             this.browsingarea.Name = "browsingarea";
@@ -1978,205 +1955,6 @@
             this.Label6.TabIndex = 0;
             this.Label6.Text = "Welcome To Google";
             // 
-            // googleprototype
-            // 
-            this.googleprototype.AutoScroll = true;
-            this.googleprototype.Controls.Add(this.Label10);
-            this.googleprototype.Controls.Add(this.Panel3);
-            this.googleprototype.Controls.Add(this.LinkLabel3);
-            this.googleprototype.Controls.Add(this.LinkLabel2);
-            this.googleprototype.Controls.Add(this.LinkLabel1);
-            this.googleprototype.Controls.Add(this.Panel2);
-            this.googleprototype.Controls.Add(this.pboxgoogleprototypelogo);
-            this.googleprototype.Location = new System.Drawing.Point(6, 47);
-            this.googleprototype.Name = "googleprototype";
-            this.googleprototype.Size = new System.Drawing.Size(317, 260);
-            this.googleprototype.TabIndex = 2;
-            // 
-            // Label10
-            // 
-            this.Label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Label10.AutoSize = true;
-            this.Label10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label10.Location = new System.Drawing.Point(38, 405);
-            this.Label10.Name = "Label10";
-            this.Label10.Size = new System.Drawing.Size(215, 15);
-            this.Label10.TabIndex = 6;
-            this.Label10.Text = "Copyright ©1997-8 Stanford University";
-            // 
-            // Panel3
-            // 
-            this.Panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Panel3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Panel3.Controls.Add(this.LinkLabel4);
-            this.Panel3.Controls.Add(this.Button11);
-            this.Panel3.Controls.Add(this.TextBox3);
-            this.Panel3.Controls.Add(this.Label9);
-            this.Panel3.Location = new System.Drawing.Point(-83, 334);
-            this.Panel3.Name = "Panel3";
-            this.Panel3.Size = new System.Drawing.Size(430, 65);
-            this.Panel3.TabIndex = 5;
-            // 
-            // LinkLabel4
-            // 
-            this.LinkLabel4.AutoSize = true;
-            this.LinkLabel4.Location = new System.Drawing.Point(301, 44);
-            this.LinkLabel4.Name = "LinkLabel4";
-            this.LinkLabel4.Size = new System.Drawing.Size(43, 13);
-            this.LinkLabel4.TabIndex = 3;
-            this.LinkLabel4.TabStop = true;
-            this.LinkLabel4.Text = "Archive";
-            // 
-            // Button11
-            // 
-            this.Button11.BackColor = System.Drawing.Color.Silver;
-            this.Button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button11.Location = new System.Drawing.Point(198, 34);
-            this.Button11.Name = "Button11";
-            this.Button11.Size = new System.Drawing.Size(96, 26);
-            this.Button11.TabIndex = 2;
-            this.Button11.Text = "Subscribe";
-            this.Button11.UseVisualStyleBackColor = false;
-            // 
-            // TextBox3
-            // 
-            this.TextBox3.Location = new System.Drawing.Point(46, 36);
-            this.TextBox3.Name = "TextBox3";
-            this.TextBox3.Size = new System.Drawing.Size(146, 20);
-            this.TextBox3.TabIndex = 1;
-            this.TextBox3.Text = "your e-mail";
-            // 
-            // Label9
-            // 
-            this.Label9.AutoSize = true;
-            this.Label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label9.Location = new System.Drawing.Point(111, 9);
-            this.Label9.Name = "Label9";
-            this.Label9.Size = new System.Drawing.Size(212, 16);
-            this.Label9.TabIndex = 0;
-            this.Label9.Text = "Get Google! updates monthly!";
-            // 
-            // LinkLabel3
-            // 
-            this.LinkLabel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.LinkLabel3.AutoSize = true;
-            this.LinkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LinkLabel3.Location = new System.Drawing.Point(28, 309);
-            this.LinkLabel3.Name = "LinkLabel3";
-            this.LinkLabel3.Size = new System.Drawing.Size(115, 18);
-            this.LinkLabel3.TabIndex = 4;
-            this.LinkLabel3.TabStop = true;
-            this.LinkLabel3.Text = "Stanford Search";
-            // 
-            // LinkLabel2
-            // 
-            this.LinkLabel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.LinkLabel2.AutoSize = true;
-            this.LinkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LinkLabel2.Location = new System.Drawing.Point(141, 309);
-            this.LinkLabel2.Name = "LinkLabel2";
-            this.LinkLabel2.Size = new System.Drawing.Size(93, 18);
-            this.LinkLabel2.TabIndex = 3;
-            this.LinkLabel2.TabStop = true;
-            this.LinkLabel2.Text = "Linux Search";
-            // 
-            // LinkLabel1
-            // 
-            this.LinkLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.LinkLabel1.AutoSize = true;
-            this.LinkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LinkLabel1.Location = new System.Drawing.Point(50, 271);
-            this.LinkLabel1.Name = "LinkLabel1";
-            this.LinkLabel1.Size = new System.Drawing.Size(162, 25);
-            this.LinkLabel1.TabIndex = 2;
-            this.LinkLabel1.TabStop = true;
-            this.LinkLabel1.Text = "About Google!";
-            // 
-            // Panel2
-            // 
-            this.Panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Panel2.Controls.Add(this.Label8);
-            this.Panel2.Controls.Add(this.Button10);
-            this.Panel2.Controls.Add(this.GoogleSearchButton);
-            this.Panel2.Controls.Add(this.ComboBox1);
-            this.Panel2.Controls.Add(this.TextBox2);
-            this.Panel2.Controls.Add(this.Label7);
-            this.Panel2.Location = new System.Drawing.Point(-83, 135);
-            this.Panel2.Name = "Panel2";
-            this.Panel2.Size = new System.Drawing.Size(430, 117);
-            this.Panel2.TabIndex = 1;
-            // 
-            // Label8
-            // 
-            this.Label8.AutoSize = true;
-            this.Label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label8.Location = new System.Drawing.Point(18, 91);
-            this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(410, 16);
-            this.Label8.TabIndex = 5;
-            this.Label8.Text = "Index contains ~25 million pages (soon to be much bigger)";
-            // 
-            // Button10
-            // 
-            this.Button10.BackColor = System.Drawing.Color.Silver;
-            this.Button10.Location = new System.Drawing.Point(263, 65);
-            this.Button10.Name = "Button10";
-            this.Button10.Size = new System.Drawing.Size(104, 23);
-            this.Button10.TabIndex = 4;
-            this.Button10.Text = "I\'m Feeling Lucky";
-            this.Button10.UseVisualStyleBackColor = false;
-            // 
-            // GoogleSearchButton
-            // 
-            this.GoogleSearchButton.BackColor = System.Drawing.Color.Silver;
-            this.GoogleSearchButton.Location = new System.Drawing.Point(153, 65);
-            this.GoogleSearchButton.Name = "GoogleSearchButton";
-            this.GoogleSearchButton.Size = new System.Drawing.Size(104, 23);
-            this.GoogleSearchButton.TabIndex = 3;
-            this.GoogleSearchButton.Text = "Google Search";
-            this.GoogleSearchButton.UseVisualStyleBackColor = false;
-            this.GoogleSearchButton.Click += new System.EventHandler(this.Button9_Click);
-            // 
-            // ComboBox1
-            // 
-            this.ComboBox1.FormattingEnabled = true;
-            this.ComboBox1.Items.AddRange(new object[] {
-            "10 results",
-            "30 results",
-            "100 results"});
-            this.ComboBox1.Location = new System.Drawing.Point(54, 65);
-            this.ComboBox1.Name = "ComboBox1";
-            this.ComboBox1.Size = new System.Drawing.Size(92, 21);
-            this.ComboBox1.TabIndex = 2;
-            this.ComboBox1.Text = "10 results";
-            // 
-            // TextBox2
-            // 
-            this.TextBox2.Location = new System.Drawing.Point(83, 39);
-            this.TextBox2.Name = "TextBox2";
-            this.TextBox2.Size = new System.Drawing.Size(261, 20);
-            this.TextBox2.TabIndex = 1;
-            // 
-            // Label7
-            // 
-            this.Label7.AutoSize = true;
-            this.Label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label7.Location = new System.Drawing.Point(121, 15);
-            this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(186, 16);
-            this.Label7.TabIndex = 0;
-            this.Label7.Text = "Search the web using Google!";
-            // 
-            // pboxgoogleprototypelogo
-            // 
-            this.pboxgoogleprototypelogo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pboxgoogleprototypelogo.Location = new System.Drawing.Point(-49, 6);
-            this.pboxgoogleprototypelogo.Name = "pboxgoogleprototypelogo";
-            this.pboxgoogleprototypelogo.Size = new System.Drawing.Size(349, 116);
-            this.pboxgoogleprototypelogo.TabIndex = 0;
-            this.pboxgoogleprototypelogo.TabStop = false;
-            // 
             // Panel14
             // 
             this.Panel14.Controls.Add(this.GoButton);
@@ -3256,13 +3034,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox11)).EndInit();
             this.googlemain.ResumeLayout(false);
             this.googlemain.PerformLayout();
-            this.googleprototype.ResumeLayout(false);
-            this.googleprototype.PerformLayout();
-            this.Panel3.ResumeLayout(false);
-            this.Panel3.PerformLayout();
-            this.Panel2.ResumeLayout(false);
-            this.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxgoogleprototypelogo)).EndInit();
             this.Panel14.ResumeLayout(false);
             this.Panel14.PerformLayout();
             this.Panel1.ResumeLayout(false);
@@ -3424,24 +3195,6 @@
         internal System.Windows.Forms.LinkLabel googlebetalink;
         internal System.Windows.Forms.LinkLabel googleprototypelink;
         internal System.Windows.Forms.Label Label6;
-        internal System.Windows.Forms.Panel googleprototype;
-        internal System.Windows.Forms.Label Label10;
-        internal System.Windows.Forms.Panel Panel3;
-        internal System.Windows.Forms.LinkLabel LinkLabel4;
-        internal System.Windows.Forms.Button Button11;
-        internal System.Windows.Forms.TextBox TextBox3;
-        internal System.Windows.Forms.Label Label9;
-        internal System.Windows.Forms.LinkLabel LinkLabel3;
-        internal System.Windows.Forms.LinkLabel LinkLabel2;
-        internal System.Windows.Forms.LinkLabel LinkLabel1;
-        internal System.Windows.Forms.Panel Panel2;
-        internal System.Windows.Forms.Label Label8;
-        internal System.Windows.Forms.Button Button10;
-        internal System.Windows.Forms.Button GoogleSearchButton;
-        internal System.Windows.Forms.ComboBox ComboBox1;
-        internal System.Windows.Forms.TextBox TextBox2;
-        internal System.Windows.Forms.Label Label7;
-        internal System.Windows.Forms.PictureBox pboxgoogleprototypelogo;
         internal System.Windows.Forms.Panel Panel14;
         internal System.Windows.Forms.Button GoButton;
         internal System.Windows.Forms.ComboBox addressbar;
