@@ -13,6 +13,8 @@ using TimeHACK.OS.Win95.Win95Apps.Story;
 
 namespace TimeHACK.OS.Win95
 {
+    
+   
     public partial class Windows95 : Form
     {
         private SoundPlayer startsound;
@@ -34,14 +36,37 @@ namespace TimeHACK.OS.Win95
         {
             InitializeComponent();
             startmenu.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            foreach (ToolStripMenuItem item in startmenuitems.Items)
+            {
+                item.MouseEnter += new EventHandler(MenuItem_MouseEnter);
+                item.MouseLeave += new EventHandler(MenuItem_MouseLeave);
+            }
+            foreach (ToolStripMenuItem item in ProgramsToolStripMenuItem.DropDown.Items)
+            {
+                item.MouseEnter += new EventHandler(MenuItem_MouseEnter);
+                item.MouseLeave += new EventHandler(MenuItem_MouseLeave);
+            }
+        }
+
+        private void MenuItem_MouseEnter(object sender, EventArgs e)
+        {
+            ((ToolStripMenuItem)sender).ForeColor = Color.White;
+        }
+
+        private void MenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            ((ToolStripMenuItem)sender).ForeColor = Color.Black;
         }
 
         //  When New Game is clicked in TitleScreen.cs
         private void Desktop_Load(object sender, EventArgs e)
         {
+            //Start Menu Color
+            startmenuitems.Renderer = new MyRenderer();
+            ProgramsToolStripMenuItem.DropDown.Renderer = new MyRenderer();
             // Make Font Mandatory
             fontLoad();
-
+            
             // Play Windows 95 Start Sound
             Stream audio = Properties.Resources.Win95Start;
             startsound = new SoundPlayer(audio);
@@ -361,6 +386,30 @@ namespace TimeHACK.OS.Win95
             AddTaskBarItem(app, app.Tag.ToString(), "MS-DOS Prompt", Properties.Resources.MS_DOS);
             app.BringToFront();
             startmenu.Hide();
+        }
+    }
+    public class MyRenderer : ToolStripProfessionalRenderer
+    {
+        public MyRenderer() : base(new MyColors()) { }
+    }
+
+    public class MyColors : ProfessionalColorTable
+    {
+        public override Color MenuItemSelectedGradientBegin
+        {
+            get { return Color.Navy; }
+        }
+        public override Color MenuItemSelectedGradientEnd
+        {
+            get { return Color.Navy; }
+        }
+        public override Color MenuItemPressedGradientBegin
+        {
+            get { return Color.Navy; }
+        }
+        public override Color MenuItemPressedGradientEnd
+        {
+            get { return Color.Navy; }
         }
     }
 }
