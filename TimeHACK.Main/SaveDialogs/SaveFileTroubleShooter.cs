@@ -78,10 +78,10 @@ namespace TimeHACK.SaveDialogs
                     savedata.ExperiencedStories = new List<string>();
                 }
 
-                if (savedata.ExperiencedStories == null)
+                if (savedata.ThemeName == null || savedata.ThemeName == "")
                 {
-                    WriteToLog("ISSUE FOUND! Data for ExperiencedStories is null! Giving default value...");
-                    savedata.ExperiencedStories = new List<string>();
+                    WriteToLog("ISSUE FOUND! Data for ThemeName is null! Giving default value...");
+                    savedata.ThemeName = "95normal";
                 }
             }
 
@@ -95,7 +95,7 @@ namespace TimeHACK.SaveDialogs
 
         }
 
-        void EndScan(Boolean successful)
+        void EndScan(bool successful)
         {
             pnlResolved.Visible = true;
             if (successful == true)
