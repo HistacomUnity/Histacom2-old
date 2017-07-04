@@ -38,7 +38,6 @@ namespace TimeHACK.OS.Win95.Win95Apps
         private void hidePrograms()
         {
             googlemain.Hide();
-            googleprototype.Hide();
             googlealpha.Hide();
             padamsmain.Hide();
             hotmailmain.Hide();

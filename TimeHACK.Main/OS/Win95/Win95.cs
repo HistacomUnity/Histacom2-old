@@ -36,7 +36,26 @@ namespace TimeHACK.OS.Win95
         {
             InitializeComponent();
             startmenu.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
-            
+            foreach (ToolStripMenuItem item in startmenuitems.Items)
+            {
+                item.MouseEnter += new EventHandler(MenuItem_MouseEnter);
+                item.MouseLeave += new EventHandler(MenuItem_MouseLeave);
+            }
+            foreach (ToolStripMenuItem item in ProgramsToolStripMenuItem.DropDown.Items)
+            {
+                item.MouseEnter += new EventHandler(MenuItem_MouseEnter);
+                item.MouseLeave += new EventHandler(MenuItem_MouseLeave);
+            }
+        }
+
+        private void MenuItem_MouseEnter(object sender, EventArgs e)
+        {
+            ((ToolStripMenuItem)sender).ForeColor = Color.White;
+        }
+
+        private void MenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            ((ToolStripMenuItem)sender).ForeColor = Color.Black;
         }
 
         //  When New Game is clicked in TitleScreen.cs
@@ -44,6 +63,7 @@ namespace TimeHACK.OS.Win95
         {
             //Start Menu Color
             startmenuitems.Renderer = new MyRenderer();
+            ProgramsToolStripMenuItem.DropDown.Renderer = new MyRenderer();
             // Make Font Mandatory
             fontLoad();
             
@@ -377,20 +397,20 @@ namespace TimeHACK.OS.Win95
     {
         public override Color MenuItemSelectedGradientBegin
         {
-            get { return Color.Blue; }
+            get { return Color.Navy; }
         }
         public override Color MenuItemSelectedGradientEnd
         {
-            get { return Color.Blue; }
+            get { return Color.Navy; }
         }
         public override Color MenuItemPressedGradientBegin
         {
-            get { return Color.Blue; }
+            get { return Color.Navy; }
         }
         public override Color MenuItemPressedGradientEnd
         {
-            get { return Color.Blue; }
+            get { return Color.Navy; }
         }
     }
-    }
+}
 
