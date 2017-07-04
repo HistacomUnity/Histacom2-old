@@ -437,9 +437,29 @@ namespace TimeHACK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Win95DesktopIcon {
+            get {
+                object obj = ResourceManager.GetObject("Win95DesktopIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Win95Error {
             get {
                 object obj = ResourceManager.GetObject("Win95Error", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Win95HardDiskIcon {
+            get {
+                object obj = ResourceManager.GetObject("Win95HardDiskIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -31,9 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WinClassicWindowsExplorer));
             this.program = new System.Windows.Forms.Panel();
-            this.diskView = new System.Windows.Forms.ListView();
+            this.diskView = new System.Windows.Forms.TreeView();
             this.icons = new System.Windows.Forms.ImageList(this.components);
-            this.btnGo = new System.Windows.Forms.Button();
             this.MenuStrip1 = new System.Windows.Forms.MenuStrip();
             this.FileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CreateShortcutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,7 +80,6 @@
             this.HelpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.AboutWindows95ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toprightcorner = new System.Windows.Forms.Panel();
-            this.dirLbl = new System.Windows.Forms.ComboBox();
             this.bottomrightcorner = new System.Windows.Forms.Panel();
             this.bottomleftcorner = new System.Windows.Forms.Panel();
             this.topleftcorner = new System.Windows.Forms.Panel();
@@ -91,30 +89,22 @@
             this.txtSave = new System.Windows.Forms.TextBox();
             this.mainView = new System.Windows.Forms.ListView();
             this.iconsList = new System.Windows.Forms.ImageList(this.components);
-            this.pnlHidden = new System.Windows.Forms.Panel();
-            this.LinkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.Label3 = new System.Windows.Forms.Label();
-            this.Label2 = new System.Windows.Forms.Label();
             this.program.SuspendLayout();
             this.MenuStrip1.SuspendLayout();
             this.pnlSave.SuspendLayout();
-            this.pnlHidden.SuspendLayout();
             this.SuspendLayout();
             // 
             // program
             // 
             this.program.BackColor = System.Drawing.Color.Silver;
             this.program.Controls.Add(this.diskView);
-            this.program.Controls.Add(this.btnGo);
             this.program.Controls.Add(this.MenuStrip1);
             this.program.Controls.Add(this.toprightcorner);
-            this.program.Controls.Add(this.dirLbl);
             this.program.Controls.Add(this.bottomrightcorner);
             this.program.Controls.Add(this.bottomleftcorner);
             this.program.Controls.Add(this.topleftcorner);
             this.program.Controls.Add(this.pnlSave);
             this.program.Controls.Add(this.mainView);
-            this.program.Controls.Add(this.pnlHidden);
             this.program.Dock = System.Windows.Forms.DockStyle.Fill;
             this.program.Location = new System.Drawing.Point(0, 0);
             this.program.Name = "program";
@@ -123,14 +113,12 @@
             // 
             // diskView
             // 
-            this.diskView.Location = new System.Drawing.Point(3, 54);
+            this.diskView.ImageList = this.icons;
+            this.diskView.Location = new System.Drawing.Point(3, 27);
             this.diskView.Name = "diskView";
-            this.diskView.Size = new System.Drawing.Size(213, 417);
-            this.diskView.SmallImageList = this.icons;
+            this.diskView.Size = new System.Drawing.Size(213, 444);
             this.diskView.TabIndex = 13;
-            this.diskView.UseCompatibleStateImageBehavior = false;
-            this.diskView.View = System.Windows.Forms.View.List;
-            this.diskView.Visible = false;
+            this.diskView.Visible = true;
             this.diskView.DoubleClick += new System.EventHandler(this.diskView_DoubleClick);
             // 
             // icons
@@ -142,19 +130,6 @@
             this.icons.Images.SetKeyName(2, "blank-file-Windows95Icon.gif");
             this.icons.Images.SetKeyName(3, "WinClassicCalc.png");
             this.icons.Images.SetKeyName(4, "WinClassicComputer.png");
-            // 
-            // btnGo
-            // 
-            this.btnGo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGo.Location = new System.Drawing.Point(646, 22);
-            this.btnGo.Name = "btnGo";
-            this.btnGo.Size = new System.Drawing.Size(55, 28);
-            this.btnGo.TabIndex = 12;
-            this.btnGo.Text = "Go";
-            this.btnGo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnGo.UseVisualStyleBackColor = true;
-            this.btnGo.Click += new System.EventHandler(this.btnGo_Click);
             // 
             // MenuStrip1
             // 
@@ -501,26 +476,6 @@
             this.toprightcorner.Size = new System.Drawing.Size(4, 4);
             this.toprightcorner.TabIndex = 6;
             // 
-            // dirLbl
-            // 
-            this.dirLbl.FormattingEnabled = true;
-            this.dirLbl.Items.AddRange(new object[] {
-            "Desktop",
-            "My Computer",
-            "3 1/2 Floppy (a:)",
-            "(C:)",
-            "(D:)",
-            "Control Panel",
-            "Printers",
-            "Network Neightborhood",
-            "Recycle Bin",
-            "Online Services"});
-            this.dirLbl.Location = new System.Drawing.Point(11, 27);
-            this.dirLbl.Name = "dirLbl";
-            this.dirLbl.Size = new System.Drawing.Size(629, 21);
-            this.dirLbl.TabIndex = 7;
-            this.dirLbl.Text = "My Computer";
-            // 
             // bottomrightcorner
             // 
             this.bottomrightcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -592,9 +547,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mainView.LargeImageList = this.iconsList;
-            this.mainView.Location = new System.Drawing.Point(11, 54);
+            this.mainView.Location = new System.Drawing.Point(215, 27);
             this.mainView.Name = "mainView";
-            this.mainView.Size = new System.Drawing.Size(690, 417);
+            this.mainView.Size = new System.Drawing.Size(486, 444);
             this.mainView.SmallImageList = this.iconsList;
             this.mainView.StateImageList = this.iconsList;
             this.mainView.TabIndex = 10;
@@ -612,51 +567,6 @@
             this.iconsList.Images.SetKeyName(3, "WinClassicCalc.png");
             this.iconsList.Images.SetKeyName(4, "WinClassicComputer.png");
             // 
-            // pnlHidden
-            // 
-            this.pnlHidden.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlHidden.Controls.Add(this.LinkLabel1);
-            this.pnlHidden.Controls.Add(this.Label3);
-            this.pnlHidden.Controls.Add(this.Label2);
-            this.pnlHidden.Location = new System.Drawing.Point(9, 54);
-            this.pnlHidden.Name = "pnlHidden";
-            this.pnlHidden.Size = new System.Drawing.Size(461, 417);
-            this.pnlHidden.TabIndex = 14;
-            this.pnlHidden.Visible = false;
-            // 
-            // LinkLabel1
-            // 
-            this.LinkLabel1.AutoSize = true;
-            this.LinkLabel1.Location = new System.Drawing.Point(325, 50);
-            this.LinkLabel1.Name = "LinkLabel1";
-            this.LinkLabel1.Size = new System.Drawing.Size(54, 13);
-            this.LinkLabel1.TabIndex = 1;
-            this.LinkLabel1.TabStop = true;
-            this.LinkLabel1.Text = "Click here";
-            this.LinkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel1_LinkClicked);
-            // 
-            // Label3
-            // 
-            this.Label3.AutoSize = true;
-            this.Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.Label3.Location = new System.Drawing.Point(3, 45);
-            this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(330, 20);
-            this.Label3.TabIndex = 0;
-            this.Label3.Text = "If you want to view the contents of this folder, ";
-            // 
-            // Label2
-            // 
-            this.Label2.AutoSize = true;
-            this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.Location = new System.Drawing.Point(3, 14);
-            this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(293, 31);
-            this.Label2.TabIndex = 0;
-            this.Label2.Text = "This directory is hidden";
-            // 
             // WinClassicWindowsExplorer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -671,8 +581,6 @@
             this.MenuStrip1.PerformLayout();
             this.pnlSave.ResumeLayout(false);
             this.pnlSave.PerformLayout();
-            this.pnlHidden.ResumeLayout(false);
-            this.pnlHidden.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -680,8 +588,7 @@
         #endregion
 
         internal System.Windows.Forms.Panel program;
-        internal System.Windows.Forms.ListView diskView;
-        internal System.Windows.Forms.Button btnGo;
+        internal System.Windows.Forms.TreeView diskView;
         internal System.Windows.Forms.MenuStrip MenuStrip1;
         internal System.Windows.Forms.ToolStripMenuItem FileToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem CreateShortcutToolStripMenuItem;
@@ -729,15 +636,10 @@
         internal System.Windows.Forms.ToolStripMenuItem HelpToolStripMenuItem1;
         internal System.Windows.Forms.ToolStripMenuItem AboutWindows95ToolStripMenuItem;
         internal System.Windows.Forms.Panel toprightcorner;
-        internal System.Windows.Forms.ComboBox dirLbl;
         internal System.Windows.Forms.Panel bottomrightcorner;
         internal System.Windows.Forms.Panel bottomleftcorner;
         internal System.Windows.Forms.Panel topleftcorner;
         internal System.Windows.Forms.ListView mainView;
-        internal System.Windows.Forms.Panel pnlHidden;
-        internal System.Windows.Forms.LinkLabel LinkLabel1;
-        internal System.Windows.Forms.Label Label3;
-        internal System.Windows.Forms.Label Label2;
         internal System.Windows.Forms.Panel pnlSave;
         internal System.Windows.Forms.Button Button1;
         internal System.Windows.Forms.Label Label1;

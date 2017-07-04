@@ -48,21 +48,6 @@ namespace TimeHACK.OS.Win95.Win95Apps
         //'    Next
         //'End Sub
 
-        void CheckLbl() {
-            try
-            {
-                dirLbl.Text = dirLbl.Text.Replace(GameDirectory, "");
-                dirLbl.Text = dirLbl.Text.Replace("\\TimeHACK\\", "");
-                dirLbl.Text = dirLbl.Text.Replace(ProfileDirectory, "");
-                dirLbl.Text = dirLbl.Text.Replace("\\Profiles\\" + ProfileName + "\\", "");
-                dirLbl.Text = dirLbl.Text.Replace("folders", "My Computer");
-                //dirLbl.Text = dirLbl.Text.Substring(7, dirLbl.Text.Length - 7);
-            } catch
-            {
-
-            }
-        }
-
         String ReadDataFile(String reqDirectory, Boolean returnYesIfProtected = false) {
             String Val = "";
             String directoryFileInfo;
@@ -89,7 +74,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 // Refresh the right listview
                 icons.Images.Clear();
                 this.mainView.Items.Clear();
-                diskView.SmallImageList = icons;
+                diskView.ImageList = icons;
                 this.mainView.LargeImageList = icons;
                 // For Each drive As String In My.Computer.FileSystem.GetDirectories(GameMain.MyDocuments & "\HistacomVB\" & GameMain.SaveProfile & "\HistacomVB\Folders")
                 //    If GetPropetiesForDir(drive)(4) = "isMyDocuments" Then
@@ -148,8 +133,6 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         }
                     }
                 }
-                dirLbl.Text = currentDirectory;
-                CheckLbl();
             } catch (Exception ex) {
                 wm.StartInfobox95("Exploring - C:", "Error with the file explorer \n" + ex.Message, Properties.Resources.Win95Info);
                 ((Form)this.TopLevelControl).Close();
@@ -453,13 +436,14 @@ namespace TimeHACK.OS.Win95.Win95Apps
     //End Sub
         void WinClassicWindowsExplorer_Load(object sender, EventArgs e) {
 
-            //icons.Images.Add(Properties.Resources.WinClassicFolder);
-            //icons.Images.Add(Properties.Resources.WinClassicComputer);
+            diskView.ImageList.Images[0] = Properties.Resources.Win95DesktopIcon;
+            diskView.ImageList.Images[1] = Properties.Resources.Win95HardDiskIcon;
             program.BringToFront();
-            dirLbl.Text = "folders";
-            diskView.Items.Add("My Computer", 0);
+            TreeNode rootnode = new TreeNode("Desktop", 0, 0);
+            diskView.Nodes.Add(rootnode);
+            diskView.Nodes["Desktop"].Nodes.Add(new TreeNode("(C:)", 1, 1));
+            //diskView.Items.Add("My Computer", 0);
             Application.DoEvents();
-            CheckLbl();
             RefreshAll();
             if (FileDialogBoxManager.IsInOpenDialog)
             {
@@ -510,8 +494,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             try
             {
-                if (diskView.FocusedItem.Text == "My Computer") {
-
+                if (diskView.SelectedNode.Text == "My Computer") {
                     GoToDir(ProfileFileSystemDirectory);
                 }
 
@@ -519,30 +502,12 @@ namespace TimeHACK.OS.Win95.Win95Apps
             }
         }
 
-        void btnGo_Click(object sender, EventArgs e)
+        void GoToDir(string dir)
         {
-            GoToDir(ProfileDirectory + "\\" + dirLbl.Text.Replace("My Computer", "folders"));
-        }
-
-        void GoToDir(String dir, Boolean GoneThoughHidden = false)
-        {
-            if (ReadDataFile(dir, true) == "yes" && (GoneThoughHidden == false)) {
-                attemptedDirectory = dir;
-                mainView.Hide();
-                pnlHidden.BringToFront();
-                pnlHidden.Show();
-            } else {
-                pnlHidden.Hide();
-                mainView.Show();
-                mainView.BringToFront();
-                currentDirectory = dir;
-                RefreshAll();
-            }
-        }
-
-        private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            GoToDir(attemptedDirectory, true);
+            mainView.Show();
+            mainView.BringToFront();
+            currentDirectory = dir;
+            RefreshAll();
         }
 
         private void FolderToolStripMenuItem_Click(object sender, EventArgs e)

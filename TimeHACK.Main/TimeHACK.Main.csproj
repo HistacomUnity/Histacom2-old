@@ -152,6 +152,12 @@
     <Compile Include="OS\Win95\Win95Apps\WinClassicWindowsExplorer.Designer.cs">
       <DependentUpon>WinClassicWindowsExplorer.cs</DependentUpon>
     </Compile>
+    <Compile Include="OS\Win95\Win95SaveAs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95SaveAs.Designer.cs">
+      <DependentUpon>Win95SaveAs.cs</DependentUpon>
+    </Compile>
     <Compile Include="SaveDialogs\LoadGameDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -287,6 +293,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicWindowsExplorer.resx">
       <DependentUpon>WinClassicWindowsExplorer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95SaveAs.resx">
+      <DependentUpon>Win95SaveAs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SaveDialogs\LoadGameDialog.resx">
       <DependentUpon>LoadGameDialog.cs</DependentUpon>
@@ -428,6 +437,8 @@
     <None Include="Resources\WinClassic\Win95Info.png" />
     <None Include="Resources\WinClassic\Win95Error.png" />
     <None Include="Resources\WinClassic\Win95IconNotepad.png" />
+    <None Include="Resources\WinClassic\Win95DesktopIcon.png" />
+    <None Include="Resources\WinClassic\Win95HardDiskIcon.png" />
     <Content Include="Resources\WinClassic\Win95SideBar.png" />
     <Content Include="Resources\WinClassic\Win95Start.wav" />
     <None Include="Resources\WinClassic\Win95Warning.png" />
