@@ -437,6 +437,16 @@ namespace TimeHACK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Win95Computer {
+            get {
+                object obj = ResourceManager.GetObject("Win95Computer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Win95ComputerIcon {
             get {
                 object obj = ResourceManager.GetObject("Win95ComputerIcon", resourceCulture);
@@ -596,10 +606,38 @@ namespace TimeHACK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Win98Computer {
+            get {
+                object obj = ResourceManager.GetObject("Win98Computer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Win98SideBar {
             get {
                 object obj = ResourceManager.GetObject("Win98SideBar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Win98Start {
+            get {
+                return ResourceManager.GetStream("Win98Start", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Win98Stop {
+            get {
+                return ResourceManager.GetStream("Win98Stop", resourceCulture);
             }
         }
         
@@ -669,16 +707,6 @@ namespace TimeHACK.Properties {
         internal static System.Drawing.Bitmap WinClassicClock {
             get {
                 object obj = ResourceManager.GetObject("WinClassicClock", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap WinClassicComputer {
-            get {
-                object obj = ResourceManager.GetObject("WinClassicComputer", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
