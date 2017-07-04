@@ -158,6 +158,12 @@
     <Compile Include="OS\Win95\Win95SaveAs.Designer.cs">
       <DependentUpon>Win95SaveAs.cs</DependentUpon>
     </Compile>
+    <Compile Include="OS\Win98\Win98.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OS\Win98\Win98.Designer.cs">
+      <DependentUpon>Win98.cs</DependentUpon>
+    </Compile>
     <Compile Include="SaveDialogs\LoadGameDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,12 +260,6 @@
     <Compile Include="OS\Win95\Win95TaskBarItem.Designer.cs">
       <DependentUpon>Win95TaskBarItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win98\Win98.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OS\Win98\Win98.Designer.cs">
-      <DependentUpon>Win98.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -297,6 +297,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95SaveAs.resx">
       <DependentUpon>Win95SaveAs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win98\Win98.resx">
+      <DependentUpon>Win98.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="SaveDialogs\LoadGameDialog.resx">
       <DependentUpon>LoadGameDialog.cs</DependentUpon>
@@ -349,9 +353,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95TaskBarItem.resx">
       <DependentUpon>Win95TaskBarItem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win98\Win98.resx">
-      <DependentUpon>Win98.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -452,6 +453,9 @@
     <None Include="Resources\WinClassic\WinClassicAddressBookPropertiesIcon.png" />
     <None Include="Resources\WinClassic\WinClassicAddressBookDeleteIcon.png" />
     <None Include="Resources\WinClassic\WinClassicCalc.png" />
+    <None Include="Resources\WinClassic\Win98Computer.png" />
+    <None Include="Resources\WinClassic\Win98Start.wav" />
+    <None Include="Resources\WinClassic\Win98Stop.WAV" />
     <Content Include="Resources\WinClassic\WinClassicClock.png" />
     <Content Include="Resources\WinClassic\WinClassicComputer.png" />
     <None Include="Resources\WinClassic\WinClassicCopy.png" />

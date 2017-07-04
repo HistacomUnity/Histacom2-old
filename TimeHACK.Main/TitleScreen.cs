@@ -80,11 +80,11 @@ namespace TimeHACK
                         frm98.TopMost = true;
                         frm98.FormBorderStyle = FormBorderStyle.None;
                         frm98.WindowState = FormWindowState.Maximized;
-                        if (vm_mode.Checked == true)
-                        {
-                            frm98.Size = new Size(Convert.ToInt32(VM_Width.Text), Convert.ToInt32(VM_Height.Text));
-                            frm98.FormBorderStyle = FormBorderStyle.Fixed3D;
-                        }
+                        //if (vm_mode.Checked == true)
+                        //{
+                        //    frm98.Size = new Size(Convert.ToInt32(VM_Width.Text), Convert.ToInt32(VM_Height.Text));
+                        //    frm98.FormBorderStyle = FormBorderStyle.Fixed3D;
+                        //}
                         frm98.Show();
                         Hide();
 
@@ -99,25 +99,6 @@ namespace TimeHACK
                         break;
                 }
 
-            }
-        }
-
-        void TitleBarDrag(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left && max == false)
-            {
-                ReleaseCapture();
-                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
-            }
-        }
-
-        void MaximiseButton(object sender, MouseEventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Normal)
-            {
-                this.WindowState = FormWindowState.Maximized;
-            } else {
-                this.WindowState = FormWindowState.Normal;
             }
         }
 

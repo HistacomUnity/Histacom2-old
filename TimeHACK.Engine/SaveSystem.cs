@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using System.Diagnostics;
 
 namespace TimeHACK.Engine
 {
@@ -118,7 +119,15 @@ namespace TimeHACK.Engine
 
             var save = new Save();
             save.ExperiencedStories = new List<string>();
-            save.CurrentOS = "95";
+            if (DevMode == true)
+            {
+                if (ProfileName == "98")
+                {
+                    save.CurrentOS = "98";
+                }
+                else save.CurrentOS = "95";
+            }
+            else save.CurrentOS = "95";
             CurrentSave = save;
                       
             CheckFiles();
@@ -158,7 +167,7 @@ namespace TimeHACK.Engine
             SaveDirectoryInfo(Path.Combine(ProfileWindowsDirectory, "Help"), true, "Help", true);
             SaveDirectoryInfo(Path.Combine(ProfileWindowsDirectory, "Temp"), true, "Temp", true);
 
-            CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Calc.exe"), "Calculator");
+            CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "calc.exe"), "Calculator");
             CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "explorer.exe"), "windowsexplorer");
         }
 

@@ -50,20 +50,21 @@ namespace TimeHACK.OS.Win95
 
         private void MenuItem_MouseEnter(object sender, EventArgs e)
         {
-            ((ToolStripMenuItem)sender).ForeColor = Color.White;
+            //((ToolStripMenuItem)sender).ForeColor = Color.White;
         }
 
         private void MenuItem_MouseLeave(object sender, EventArgs e)
         {
-            ((ToolStripMenuItem)sender).ForeColor = Color.Black;
+            //((ToolStripMenuItem)sender).ForeColor = Color.Black;
         }
 
         //  When New Game is clicked in TitleScreen.cs
         private void Desktop_Load(object sender, EventArgs e)
         {
-            //Start Menu Color
-            startmenuitems.Renderer = new MyRenderer();
-            ProgramsToolStripMenuItem.DropDown.Renderer = new MyRenderer();
+            //Start Menu Color - Commented until it works reliably
+            //startmenuitems.Renderer = new MyRenderer();
+            //ProgramsToolStripMenuItem.DropDown.Renderer = new MyRenderer();
+
             // Make Font Mandatory
             fontLoad();
             
