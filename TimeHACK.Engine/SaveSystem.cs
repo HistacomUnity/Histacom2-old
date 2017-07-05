@@ -231,6 +231,9 @@ namespace TimeHACK.Engine
                 case "dangeranimals":
                     currentTheme = new DangerousCreaturesTheme();
                     break;
+                case "insidepc":
+                    currentTheme = new InsideComputerTheme();
+                    break;
             }
         }
     }

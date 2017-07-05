@@ -31,6 +31,9 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 case "Dangerous Creatures":
                     pictureBox2.BackgroundImage = Properties.Resources.DCTheme_BG;
                     break;
+                case "Inside Your Computer":
+                    pictureBox2.BackgroundImage = Properties.Resources.ICTheme_BG;
+                    break;
             }
         }
 
@@ -43,6 +46,9 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     break;
                 case "dangeranimals":
                     comboBox1.SelectedItem = "Dangerous Creatures";
+                    break;
+                case "insidepc":
+                    comboBox1.SelectedItem = "Inside Your Computer";
                     break;
             }
         }
@@ -60,11 +66,19 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     SaveSystem.CurrentSave.ThemeName = "default95";
                     SaveSystem.currentTheme = new Default95Theme();
                     TitleScreen.frm95.BackgroundImage = null;
+                    TitleScreen.frm95.desktopicons.BackgroundImage = null;
                     break;
                 case "Dangerous Creatures":
                     SaveSystem.CurrentSave.ThemeName = "dangeranimals";
                     SaveSystem.currentTheme = new DangerousCreaturesTheme();
                     TitleScreen.frm95.BackgroundImage = Properties.Resources.DCTheme_BG;
+                    TitleScreen.frm95.desktopicons.BackgroundImage = new Bitmap(Properties.Resources.DCTheme_BG, TitleScreen.frm95.desktopicons.Width, TitleScreen.frm95.desktopicons.Height);
+                    break;
+                case "Inside Your Computer":
+                    SaveSystem.CurrentSave.ThemeName = "insidepc";
+                    SaveSystem.currentTheme = new InsideComputerTheme();
+                    TitleScreen.frm95.BackgroundImage = Properties.Resources.ICTheme_BG;
+                    TitleScreen.frm95.desktopicons.BackgroundImage = new Bitmap(Properties.Resources.ICTheme_BG, TitleScreen.frm95.desktopicons.Width, TitleScreen.frm95.desktopicons.Height);
                     break;
             }
         }
@@ -83,6 +97,12 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     SaveSystem.CurrentSave.ThemeName = "dangeranimals";
                     SaveSystem.currentTheme = new DangerousCreaturesTheme();
                     TitleScreen.frm95.BackgroundImage = Properties.Resources.DCTheme_BG;
+                    TitleScreen.frm95.desktopicons.BackgroundImage = new Bitmap(Properties.Resources.DCTheme_BG, TitleScreen.frm95.desktopicons.Width, TitleScreen.frm95.desktopicons.Height);
+                    break;
+                case "Inside Your Computer":
+                    SaveSystem.CurrentSave.ThemeName = "insidepc";
+                    SaveSystem.currentTheme = new InsideComputerTheme();
+                    TitleScreen.frm95.BackgroundImage = Properties.Resources.ICTheme_BG;
                     TitleScreen.frm95.desktopicons.BackgroundImage = new Bitmap(Properties.Resources.DCTheme_BG, TitleScreen.frm95.desktopicons.Width, TitleScreen.frm95.desktopicons.Height);
                     break;
             }
