@@ -146,6 +146,12 @@
     <Compile Include="OS\Win95\Win95Apps\WinClassicTerminal.Designer.cs">
       <DependentUpon>WinClassicTerminal.cs</DependentUpon>
     </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicThemePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicThemePanel.Designer.cs">
+      <DependentUpon>WinClassicThemePanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\Win95\Win95Apps\WinClassicWindowsExplorer.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -290,6 +296,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicTerminal.resx">
       <DependentUpon>WinClassicTerminal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicThemePanel.resx">
+      <DependentUpon>WinClassicThemePanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicWindowsExplorer.resx">
       <DependentUpon>WinClassicWindowsExplorer.cs</DependentUpon>
@@ -460,6 +469,8 @@
     <Content Include="Resources\WinClassic\WinClassicComputer.png" />
     <None Include="Resources\WinClassic\WinClassicCopy.png" />
     <None Include="Resources\WinClassic\WinClassicCut.png" />
+    <None Include="Resources\WinClassic\WinClassicDisplayDummy.png" />
+    <None Include="Resources\WinClassic\WinClassicDisplayExample.png" />
     <Content Include="Resources\WinClassic\WinClassicDocuments.png" />
     <Content Include="Resources\WinClassic\WinClassicFind.png" />
     <Content Include="Resources\WinClassic\WinClassicFolder.png" />

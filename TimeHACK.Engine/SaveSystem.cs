@@ -124,10 +124,19 @@ namespace TimeHACK.Engine
                 if (ProfileName == "98")
                 {
                     save.CurrentOS = "98";
+                    save.ThemeName = "98normal";
                 }
-                else save.CurrentOS = "95";
+                else
+                {
+                    save.CurrentOS = "95";
+                    save.ThemeName = "95normal";
+                }
             }
-            else save.CurrentOS = "95";
+            else
+            {
+                save.CurrentOS = "95";
+                save.ThemeName = "95normal";
+            }
             CurrentSave = save;
                       
             CheckFiles();
@@ -217,12 +226,14 @@ namespace TimeHACK.Engine
         public string CurrentOS { get; set; }
         // public Dictionary<string, bool> InstalledPrograms { get; set; } InstallProgram is no longer needed... we have that data in the FileSystem
         public List<string> ExperiencedStories { get; set; }
+
+        public string ThemeName { get; set; }
     }
 
     public class FileSystemFolderInfo
     {
-        public Boolean Isprotected { get; set; }
-        public String label { get; set; }
-        public Boolean allowback { get; set; }
+        public bool Isprotected { get; set; }
+        public string label { get; set; }
+        public bool allowback { get; set; }
     }
 }
