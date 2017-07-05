@@ -152,6 +152,12 @@
     <Compile Include="OS\Win95\Win95Apps\WinClassicThemePanel.Designer.cs">
       <DependentUpon>WinClassicThemePanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicWelcome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicWelcome.Designer.cs">
+      <DependentUpon>WinClassicWelcome.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\Win95\Win95Apps\WinClassicWindowsExplorer.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -300,6 +306,9 @@
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicThemePanel.resx">
       <DependentUpon>WinClassicThemePanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicWelcome.resx">
+      <DependentUpon>WinClassicWelcome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicWindowsExplorer.resx">
       <DependentUpon>WinClassicWindowsExplorer.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -435,6 +444,8 @@
     <None Include="Resources\LeviWindows.ttf" />
     <None Include="Resources\WinClassicAbout95.png" />
     <None Include="Resources\Win98SideBar.png" />
+    <None Include="Resources\Win95Help.png" />
+    <None Include="Resources\WinAboutSeparator95.png" />
     <Content Include="Resources\WinClassic\16Color.png" />
     <Content Include="Resources\WinClassic\256Color.png" />
     <None Include="Resources\WinClassic\tada.wav" />
