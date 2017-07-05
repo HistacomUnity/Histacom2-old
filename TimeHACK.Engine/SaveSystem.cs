@@ -229,7 +229,7 @@ namespace TimeHACK.Engine
         public string CurrentOS { get; set; }
         // public Dictionary<string, bool> InstalledPrograms { get; set; } InstallProgram is no longer needed... we have that data in the FileSystem
         public List<string> ExperiencedStories { get; set; }
-
+        public bool FTime95 { get; set; }
         public string ThemeName { get; set; }
     }
 
