@@ -181,4 +181,19 @@
   <data name="CHORD" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\chord.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Win95PlusDangerousCreaturesStart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Win95PlusDangerousCreaturesStart.WAV;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95Start" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Win95Start.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95Stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Win95Stop.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win98Start" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Win98Start.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win98Stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Win98Stop.WAV;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
