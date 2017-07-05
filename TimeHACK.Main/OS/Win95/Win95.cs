@@ -47,6 +47,7 @@ namespace TimeHACK.OS.Win95
             SettingsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             FindToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+            BackgroundImage = currentTheme.defaultWallpaper;
             foreach (ToolStripMenuItem item in startmenuitems.Items)
             {
                 item.MouseEnter += new EventHandler(MenuItem_MouseEnter);
@@ -72,6 +73,7 @@ namespace TimeHACK.OS.Win95
         //  When New Game is clicked in TitleScreen.cs
         private void Desktop_Load(object sender, EventArgs e)
         {
+            if (currentTheme.defaultWallpaper != null) desktopicons.BackgroundImage = new Bitmap(currentTheme.defaultWallpaper, desktopicons.Width, desktopicons.Height);
             //Start Menu Color - Commented until it works reliably
             //startmenuitems.Renderer = new MyRenderer();
             //ProgramsToolStripMenuItem.DropDown.Renderer = new MyRenderer();
@@ -80,7 +82,7 @@ namespace TimeHACK.OS.Win95
             fontLoad();
             
             // Play Windows 95 Start Sound
-            Stream audio = Properties.Resources.Win95Start;
+            Stream audio = currentTheme.startSound;
             startsound = new SoundPlayer(audio);
             startsound.Play();
 
@@ -153,7 +155,8 @@ namespace TimeHACK.OS.Win95
         // Shutdown button
         private void ShutdownToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Program.ShutdownApplication(Properties.Resources.tada);
+            SaveGame();
+            Program.ShutdownApplication(currentTheme.stopSound);
         }
 
         #endregion //Region

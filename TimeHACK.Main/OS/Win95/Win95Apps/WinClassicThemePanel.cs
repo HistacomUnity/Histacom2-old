@@ -57,10 +57,12 @@ namespace TimeHACK.OS.Win95.Win95Apps
             switch ((string)comboBox1.SelectedItem)
             {
                 case "Default":
+                    SaveSystem.CurrentSave.ThemeName = "default95";
                     SaveSystem.currentTheme = new Default95Theme();
                     TitleScreen.frm95.BackgroundImage = null;
                     break;
                 case "Dangerous Creatures":
+                    SaveSystem.CurrentSave.ThemeName = "dangeranimals";
                     SaveSystem.currentTheme = new DangerousCreaturesTheme();
                     TitleScreen.frm95.BackgroundImage = Properties.Resources.DCTheme_BG;
                     break;
@@ -72,11 +74,13 @@ namespace TimeHACK.OS.Win95.Win95Apps
             switch ((string)comboBox1.SelectedItem)
             {
                 case "Default":
+                    SaveSystem.CurrentSave.ThemeName = "default95";
                     SaveSystem.currentTheme = new Default95Theme();
                     TitleScreen.frm95.BackgroundImage = null;
                     TitleScreen.frm95.desktopicons.BackgroundImage = null;
                     break;
                 case "Dangerous Creatures":
+                    SaveSystem.CurrentSave.ThemeName = "dangeranimals";
                     SaveSystem.currentTheme = new DangerousCreaturesTheme();
                     TitleScreen.frm95.BackgroundImage = Properties.Resources.DCTheme_BG;
                     TitleScreen.frm95.desktopicons.BackgroundImage = new Bitmap(Properties.Resources.DCTheme_BG, TitleScreen.frm95.desktopicons.Width, TitleScreen.frm95.desktopicons.Height);
