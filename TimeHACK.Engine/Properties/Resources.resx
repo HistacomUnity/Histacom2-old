@@ -199,4 +199,13 @@
   <data name="Win98Stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Win98Stop.WAV;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Win95PlusInsideComputerStart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Win95PlusInsideComputerStart.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusInsideComputerStop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Win95PlusInsideComputerStop.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusInsideComputerWallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Win95PlusInsideComputerWallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

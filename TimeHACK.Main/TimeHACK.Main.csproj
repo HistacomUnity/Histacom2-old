@@ -414,6 +414,7 @@
     <Content Include="Resources\12padams_EULA.txt" />
     <None Include="Resources\DCTheme_BG.JPG" />
     <Content Include="Resources\Icon128x.ico" />
+    <None Include="Resources\ICTheme_BG.jpg" />
     <Content Include="Resources\IE4\google.jpg" />
     <Content Include="Resources\IE4\googlehome.html" />
     <Content Include="Resources\IE4\googleprototype.html" />

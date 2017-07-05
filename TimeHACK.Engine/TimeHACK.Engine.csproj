@@ -118,6 +118,9 @@
     <None Include="Resources\Win98Start.wav" />
     <None Include="Resources\Win98Stop.WAV" />
     <None Include="Resources\Win95PlusDangerousCreaturesWallpaper.JPG" />
+    <None Include="Resources\Win95PlusInsideComputerWallpaper.jpg" />
+    <None Include="Resources\Win95PlusInsideComputerStop.wav" />
+    <None Include="Resources\Win95PlusInsideComputerStart.wav" />
     <Content Include="Resources\WinClassic\Window\BottomLeft.png" />
     <Content Include="Resources\WinClassic\Window\BottomRight.png" />
     <Content Include="Resources\WinClassic\Window\BottomSide.png" />

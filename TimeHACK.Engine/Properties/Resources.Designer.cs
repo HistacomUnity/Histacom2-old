@@ -221,6 +221,34 @@ namespace TimeHACK.Engine.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Win95PlusInsideComputerStart {
+            get {
+                return ResourceManager.GetStream("Win95PlusInsideComputerStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Win95PlusInsideComputerStop {
+            get {
+                return ResourceManager.GetStream("Win95PlusInsideComputerStop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Win95PlusInsideComputerWallpaper {
+            get {
+                object obj = ResourceManager.GetObject("Win95PlusInsideComputerWallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream Win95Start {
             get {
                 return ResourceManager.GetStream("Win95Start", resourceCulture);
