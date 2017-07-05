@@ -137,12 +137,12 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // cancelButton
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Location = new System.Drawing.Point(136, 20);
-            this.button2.Name = "button2";
+            this.button2.Name = "cancelButton";
             this.button2.Size = new System.Drawing.Size(109, 23);
             this.button2.TabIndex = 1;
             this.button2.Text = "No";

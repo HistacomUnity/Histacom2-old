@@ -78,6 +78,9 @@
       <DependentUpon>WinClassic.cs</DependentUpon>
     </Compile>
     <Compile Include="Theme.cs" />
+    <Compile Include="TranspCtrl.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="WindowManager.cs" />
     <Compile Include="MessageParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

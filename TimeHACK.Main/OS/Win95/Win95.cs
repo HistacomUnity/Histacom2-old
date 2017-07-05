@@ -36,6 +36,17 @@ namespace TimeHACK.OS.Win95
         {
             InitializeComponent();
             startmenu.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            ProgramsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            AccessoriesToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            CommunicationsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            MultimediaToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            SystemToolsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            StartUpToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            MSDOSPromptToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            DocumentsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            SettingsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            FindToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            SetStyle(ControlStyles.SupportsTransparentBackColor, true);
             foreach (ToolStripMenuItem item in startmenuitems.Items)
             {
                 item.MouseEnter += new EventHandler(MenuItem_MouseEnter);
@@ -402,6 +413,16 @@ namespace TimeHACK.OS.Win95
             WinClassic app = wm.StartWin95(msdos, "MS-DOS Prompt", Properties.Resources.MS_DOS, true, true, false);
 
             AddTaskBarItem(app, app.Tag.ToString(), "MS-DOS Prompt", Properties.Resources.MS_DOS);
+            app.BringToFront();
+            startmenu.Hide();
+        }
+
+        private void PropertiesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            WinClassicThemePanel theme = new WinClassicThemePanel();
+            WinClassic app = wm.StartWin95(theme, "Themes", null, false, true, false);
+
+            AddTaskBarItem(app, app.Tag.ToString(), "Themes", null);
             app.BringToFront();
             startmenu.Hide();
         }

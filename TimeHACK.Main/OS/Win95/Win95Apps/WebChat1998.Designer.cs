@@ -230,12 +230,12 @@
             this.label7.Text = "To speak, just type in the bottom textbox, then click the Speak button or press E" +
     "nter.";
             // 
-            // button2
+            // cancelButton
             // 
             this.button2.BackColor = System.Drawing.Color.Silver;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(422, 415);
-            this.button2.Name = "button2";
+            this.button2.Name = "cancelButton";
             this.button2.Size = new System.Drawing.Size(71, 23);
             this.button2.TabIndex = 8;
             this.button2.Text = "Speak";
