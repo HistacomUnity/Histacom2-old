@@ -101,6 +101,7 @@ namespace TimeHACK.OS.Win95
             if (CurrentSave.FTime95 == false)
             {
                 CurrentSave.FTime95 = true;
+                SaveSystem.SaveGame();
                 WinClassicWelcome welcome = new WinClassicWelcome();
                 WinClassic app = wm.StartWin95(welcome, "Welcome", null, false, false);
                 AddTaskBarItem(app, app.Tag.ToString(), "Welcome", null);
