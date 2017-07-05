@@ -15,11 +15,15 @@ namespace TimeHACK.OS.Win95.Win95Apps
         public WinClassicWelcome()
         {
             InitializeComponent();
+
+            btnTour.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            btnOnline.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            btnClose.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2); 
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.ParentForm.Close();
+            ParentForm.Close();
         }
     }
 }
