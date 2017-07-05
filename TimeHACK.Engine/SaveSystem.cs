@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using System.Diagnostics;
 
 namespace TimeHACK.Engine
 {
@@ -12,9 +13,11 @@ namespace TimeHACK.Engine
     {
         public static Save CurrentSave { get; set; }
         public static FileSystemFolderInfo filesystemflinfo { get; set; }
-        public static Boolean DevMode = false;
+        public static bool DevMode = false;
 
         public static FileAssociation IconChanger = new FileAssociation();
+
+        public static Theme currentTheme { get; set; }
 
         public static string GameDirectory
         {
@@ -113,12 +116,30 @@ namespace TimeHACK.Engine
 
         public static void NewGame()
         {
-
             //TODO: User must set a username....somehow            
 
             var save = new Save();
             save.ExperiencedStories = new List<string>();
-            save.CurrentOS = "95";
+            if (DevMode == true)
+            {
+                if (ProfileName == "98")
+                {
+                    save.CurrentOS = "98";
+                    save.ThemeName = "default98";
+                }
+                else
+                {
+                    save.CurrentOS = "95";
+                    save.ThemeName = "default95";
+                    currentTheme = new Default95Theme();
+                }
+            }
+            else
+            {
+                save.CurrentOS = "95";
+                save.ThemeName = "default95";
+                currentTheme = new Default95Theme();
+            }
             CurrentSave = save;
                       
             CheckFiles();
@@ -158,16 +179,16 @@ namespace TimeHACK.Engine
             SaveDirectoryInfo(Path.Combine(ProfileWindowsDirectory, "Help"), true, "Help", true);
             SaveDirectoryInfo(Path.Combine(ProfileWindowsDirectory, "Temp"), true, "Temp", true);
 
-            CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Calc.exe"), "Calculator");
+            CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "calc.exe"), "Calculator");
             CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "explorer.exe"), "windowsexplorer");
         }
 
-        public static void CreateWindowsFile(String filepath, String contents)
+        public static void CreateWindowsFile(string filepath, string contents)
         {
             File.WriteAllText(filepath, contents);
         }
 
-        public static void SaveDirectoryInfo(String directory, Boolean isProtected, String label, Boolean allowback)
+        public static void SaveDirectoryInfo(string directory, bool isProtected, string label, bool allowback)
         {
             if (!Directory.Exists(directory))
                 Directory.CreateDirectory(directory);
@@ -208,12 +229,14 @@ namespace TimeHACK.Engine
         public string CurrentOS { get; set; }
         // public Dictionary<string, bool> InstalledPrograms { get; set; } InstallProgram is no longer needed... we have that data in the FileSystem
         public List<string> ExperiencedStories { get; set; }
+        public bool FTime95 { get; set; }
+        public string ThemeName { get; set; }
     }
 
     public class FileSystemFolderInfo
     {
-        public Boolean Isprotected { get; set; }
-        public String label { get; set; }
-        public Boolean allowback { get; set; }
+        public bool Isprotected { get; set; }
+        public string label { get; set; }
+        public bool allowback { get; set; }
     }
 }

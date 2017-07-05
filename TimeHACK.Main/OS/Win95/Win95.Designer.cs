@@ -273,6 +273,7 @@ namespace TimeHACK.OS.Win95
             this.ProgramsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
             this.ProgramsToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
             this.ProgramsToolStripMenuItem.Text = "Programs";
+            this.ProgramsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             // 
             // AccessoriesToolStripMenuItem
             // 
@@ -298,6 +299,7 @@ namespace TimeHACK.OS.Win95
             this.AccessoriesToolStripMenuItem.Name = "AccessoriesToolStripMenuItem";
             this.AccessoriesToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.AccessoriesToolStripMenuItem.Text = "Accessories";
+            this.AccessoriesToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             // 
             // CommunicationsToolStripMenuItem
             // 
@@ -312,6 +314,7 @@ namespace TimeHACK.OS.Win95
             this.CommunicationsToolStripMenuItem.Name = "CommunicationsToolStripMenuItem";
             this.CommunicationsToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.CommunicationsToolStripMenuItem.Text = "Communications";
+            this.CommunicationsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             // 
             // InternetConnectionWizardToolStripMenuItem
             // 
@@ -352,6 +355,7 @@ namespace TimeHACK.OS.Win95
             this.MultimediaToolStripMenuItem.Name = "MultimediaToolStripMenuItem";
             this.MultimediaToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.MultimediaToolStripMenuItem.Text = "Multimedia";
+            this.MultimediaToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             // 
             // CDPlayerToolStripMenuItem
             // 
@@ -410,6 +414,7 @@ namespace TimeHACK.OS.Win95
             this.SystemToolsToolStripMenuItem.Name = "SystemToolsToolStripMenuItem";
             this.SystemToolsToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.SystemToolsToolStripMenuItem.Text = "System Tools";
+            this.SystemToolsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             // 
             // DiskDefragmenterToolStripMenuItem
             // 
@@ -551,6 +556,7 @@ namespace TimeHACK.OS.Win95
             this.StartUpToolStripMenuItem.Name = "StartUpToolStripMenuItem";
             this.StartUpToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.StartUpToolStripMenuItem.Text = "Online Services";
+            this.StartUpToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             // 
             // AOLInternetFREETrialToolStripMenuItem
             // 
@@ -604,6 +610,7 @@ namespace TimeHACK.OS.Win95
             this.MSDOSPromptToolStripMenuItem.Name = "MSDOSPromptToolStripMenuItem";
             this.MSDOSPromptToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.MSDOSPromptToolStripMenuItem.Text = "StartUp";
+            this.MSDOSPromptToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             // 
             // EmptyToolStripMenuItem
             // 
@@ -741,6 +748,7 @@ namespace TimeHACK.OS.Win95
             this.DocumentsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
             this.DocumentsToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
             this.DocumentsToolStripMenuItem.Text = "Documents";
+            this.DocumentsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             // 
             // windowManagerTestToolStripMenuItem
             // 
@@ -791,6 +799,7 @@ namespace TimeHACK.OS.Win95
             this.SettingsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
             this.SettingsToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
             this.SettingsToolStripMenuItem.Text = "Settings";
+            this.SettingsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             // 
             // ControlPanelToolStripMenuItem
             // 
@@ -836,6 +845,7 @@ namespace TimeHACK.OS.Win95
             this.FindToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.FindToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
             this.FindToolStripMenuItem.Text = "Find";
+            this.FindToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             // 
             // FilesOrFoldersToolStripMenuItem
             // 

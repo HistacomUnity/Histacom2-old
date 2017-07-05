@@ -1,4 +1,6 @@
-﻿namespace TimeHACK.OS.Win98
+﻿using TimeHACK.OS.Win95;
+
+namespace TimeHACK.OS.Win98
 {
     partial class Windows98
     {
@@ -28,6 +30,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Windows98));
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("My Computer", 0);
             System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Network Neighborhood", 5);
@@ -37,6 +40,8 @@
             System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("Online Services", 1);
             System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("Set Up The Microsoft Network", 4);
             System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("Outlook Express", 6);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.taskbar = new System.Windows.Forms.Panel();
             this.clockPanel = new System.Windows.Forms.Panel();
             this.taskbartime = new System.Windows.Forms.Label();
@@ -87,6 +92,7 @@
             this.windowManagerTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.downloaderTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.installerTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.storyTest1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ControlPanelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PrintersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -102,7 +108,29 @@
             this.ShutdownToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ossidestartmenu = new System.Windows.Forms.Panel();
             this.osimage = new System.Windows.Forms.PictureBox();
+            this.clockTimer = new System.Windows.Forms.Timer(this.components);
+            this.desktopImages = new System.Windows.Forms.ImageList(this.components);
             this.desktopicons = new System.Windows.Forms.ListView();
+            this.rightclickbackproperties = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.PropertiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ByNameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ByTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BySizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AutoArrangeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ByDateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.LineUpIconsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PasteShortcutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.NewToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.FolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ShortcutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.WaveSoundToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TextDocumentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.WordPadDocumentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BitmapImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MicrosoftDataLinkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PropertiesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1.SuspendLayout();
             this.taskbar.SuspendLayout();
             this.clockPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.startbutton)).BeginInit();
@@ -110,20 +138,39 @@
             this.startmenuitems.SuspendLayout();
             this.ossidestartmenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.osimage)).BeginInit();
+            this.rightclickbackproperties.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.AutoSize = true;
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Location = new System.Drawing.Point(0, 451);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(640, 29);
+            this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(3, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(54, 22);
+            this.panel2.TabIndex = 1;
             // 
             // taskbar
             // 
             this.taskbar.BackColor = System.Drawing.Color.Silver;
-            this.taskbar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("taskbar.BackgroundImage")));
-            this.taskbar.Controls.Add(this.startbutton);
+            this.taskbar.BackgroundImage = global::TimeHACK.Properties.Resources.WinClassicTaskBar;
             this.taskbar.Controls.Add(this.clockPanel);
             this.taskbar.Controls.Add(this.taskbarItems);
+            this.taskbar.Controls.Add(this.startbutton);
             this.taskbar.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.taskbar.Location = new System.Drawing.Point(0, 452);
             this.taskbar.Name = "taskbar";
             this.taskbar.Size = new System.Drawing.Size(640, 28);
-            this.taskbar.TabIndex = 3;
+            this.taskbar.TabIndex = 2;
             // 
             // clockPanel
             // 
@@ -145,27 +192,26 @@
             this.taskbartime.Size = new System.Drawing.Size(26, 13);
             this.taskbartime.TabIndex = 2;
             this.taskbartime.Text = "time";
+            this.taskbartime.Click += new System.EventHandler(this.taskbartime_Click);
             // 
             // taskbarItems
             // 
-            this.taskbarItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.taskbarItems.BackColor = System.Drawing.Color.Transparent;
             this.taskbarItems.Cursor = System.Windows.Forms.Cursors.Default;
-            this.taskbarItems.Location = new System.Drawing.Point(69, 4);
+            this.taskbarItems.Location = new System.Drawing.Point(63, 4);
             this.taskbarItems.Name = "taskbarItems";
-            this.taskbarItems.Size = new System.Drawing.Size(500, 22);
+            this.taskbarItems.Size = new System.Drawing.Size(3648, 22);
             this.taskbarItems.TabIndex = 5;
             // 
             // startbutton
             // 
-            this.startbutton.Image = ((System.Drawing.Image)(resources.GetObject("startbutton.Image")));
+            this.startbutton.Image = global::TimeHACK.Properties.Resources.WinClassicStart;
             this.startbutton.Location = new System.Drawing.Point(2, 4);
             this.startbutton.Name = "startbutton";
             this.startbutton.Size = new System.Drawing.Size(54, 22);
             this.startbutton.TabIndex = 3;
             this.startbutton.TabStop = false;
+            this.startbutton.Click += new System.EventHandler(this.startbutton_Click);
             // 
             // startmenu
             // 
@@ -176,8 +222,7 @@
             this.startmenu.Location = new System.Drawing.Point(0, 160);
             this.startmenu.Name = "startmenu";
             this.startmenu.Size = new System.Drawing.Size(174, 300);
-            this.startmenu.TabIndex = 4;
-            this.startmenu.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            this.startmenu.TabIndex = 3;
             // 
             // startmenuitems
             // 
@@ -198,7 +243,7 @@
             this.startmenuitems.Name = "startmenuitems";
             this.startmenuitems.Padding = new System.Windows.Forms.Padding(6, 2, 0, 0);
             this.startmenuitems.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.startmenuitems.Size = new System.Drawing.Size(141, 292);
+            this.startmenuitems.Size = new System.Drawing.Size(145, 292);
             this.startmenuitems.TabIndex = 0;
             this.startmenuitems.Text = "StartMenu";
             // 
@@ -224,10 +269,9 @@
             this.ProgramsToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicPrograms;
             this.ProgramsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ProgramsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ProgramsToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.ProgramsToolStripMenuItem.Name = "ProgramsToolStripMenuItem";
             this.ProgramsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.ProgramsToolStripMenuItem.Size = new System.Drawing.Size(134, 36);
+            this.ProgramsToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
             this.ProgramsToolStripMenuItem.Text = "Programs";
             // 
             // AccessoriesToolStripMenuItem
@@ -251,7 +295,6 @@
             this.AccessoriesToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicProgramItem;
             this.AccessoriesToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.AccessoriesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.AccessoriesToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.AccessoriesToolStripMenuItem.Name = "AccessoriesToolStripMenuItem";
             this.AccessoriesToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.AccessoriesToolStripMenuItem.Text = "Accessories";
@@ -280,6 +323,7 @@
             this.InternetConnectionWizardToolStripMenuItem.Name = "InternetConnectionWizardToolStripMenuItem";
             this.InternetConnectionWizardToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
             this.InternetConnectionWizardToolStripMenuItem.Text = "Internet Connection Wizard";
+            this.InternetConnectionWizardToolStripMenuItem.Click += new System.EventHandler(this.temp_for_std);
             // 
             // NetMeetingToolStripMenuItem
             // 
@@ -291,6 +335,7 @@
             this.NetMeetingToolStripMenuItem.Name = "NetMeetingToolStripMenuItem";
             this.NetMeetingToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
             this.NetMeetingToolStripMenuItem.Text = "NetMeeting";
+            this.NetMeetingToolStripMenuItem.Click += new System.EventHandler(this.WebChatToolStripMenuItem_Click);
             // 
             // MultimediaToolStripMenuItem
             // 
@@ -398,6 +443,7 @@
             this.AddressBookToolStripMenuItem.Name = "AddressBookToolStripMenuItem";
             this.AddressBookToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.AddressBookToolStripMenuItem.Text = "Address Book";
+            this.AddressBookToolStripMenuItem.Click += new System.EventHandler(this.AddressBookToolStripMenuItem_Click);
             // 
             // CalculatorToolStripMenuItem
             // 
@@ -441,7 +487,8 @@
             this.NotePadToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.NotePadToolStripMenuItem.Name = "NotePadToolStripMenuItem";
             this.NotePadToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
-            this.NotePadToolStripMenuItem.Text = "NotePad";
+            this.NotePadToolStripMenuItem.Text = "Notepad";
+            this.NotePadToolStripMenuItem.Click += new System.EventHandler(this.NotePadToolStripMenuItem_Click);
             // 
             // OnlineRegistrationToolStripMenuItem
             // 
@@ -463,7 +510,7 @@
             this.PaintToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.PaintToolStripMenuItem.Name = "PaintToolStripMenuItem";
             this.PaintToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
-            this.PaintToolStripMenuItem.Text = "Paint";
+            this.PaintToolStripMenuItem.Text = "Paintbrush";
             // 
             // PhoneDialerToolStripMenuItem
             // 
@@ -486,6 +533,7 @@
             this.WordPadToolStripMenuItem.Name = "WordPadToolStripMenuItem";
             this.WordPadToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.WordPadToolStripMenuItem.Text = "WordPad";
+            this.WordPadToolStripMenuItem.Click += new System.EventHandler(this.WordPadToolStripMenuItem_Click);
             // 
             // StartUpToolStripMenuItem
             // 
@@ -500,7 +548,6 @@
             this.StartUpToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicProgramItem;
             this.StartUpToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.StartUpToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.StartUpToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.StartUpToolStripMenuItem.Name = "StartUpToolStripMenuItem";
             this.StartUpToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.StartUpToolStripMenuItem.Text = "Online Services";
@@ -554,7 +601,6 @@
             this.MSDOSPromptToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicProgramItem;
             this.MSDOSPromptToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.MSDOSPromptToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.MSDOSPromptToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.MSDOSPromptToolStripMenuItem.Name = "MSDOSPromptToolStripMenuItem";
             this.MSDOSPromptToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.MSDOSPromptToolStripMenuItem.Text = "StartUp";
@@ -576,10 +622,10 @@
             this.InternetExplorerToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("InternetExplorerToolStripMenuItem.Image")));
             this.InternetExplorerToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.InternetExplorerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.InternetExplorerToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.InternetExplorerToolStripMenuItem.Name = "InternetExplorerToolStripMenuItem";
             this.InternetExplorerToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.InternetExplorerToolStripMenuItem.Text = "Internet Explorer";
+            this.InternetExplorerToolStripMenuItem.Click += new System.EventHandler(this.InternetExplorerToolStripMenuItem_Click);
             // 
             // MSDOSPromptToolStripMenuItem1
             // 
@@ -589,10 +635,10 @@
             this.MSDOSPromptToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("MSDOSPromptToolStripMenuItem1.Image")));
             this.MSDOSPromptToolStripMenuItem1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.MSDOSPromptToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.MSDOSPromptToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Silver;
             this.MSDOSPromptToolStripMenuItem1.Name = "MSDOSPromptToolStripMenuItem1";
             this.MSDOSPromptToolStripMenuItem1.Size = new System.Drawing.Size(181, 28);
             this.MSDOSPromptToolStripMenuItem1.Text = "MS-DOS Prompt";
+            this.MSDOSPromptToolStripMenuItem1.Click += new System.EventHandler(this.MSDOSPromptToolStripMenuItem1_Click);
             // 
             // OutlookExpressToolStripMenuItem
             // 
@@ -602,7 +648,6 @@
             this.OutlookExpressToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("OutlookExpressToolStripMenuItem.Image")));
             this.OutlookExpressToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.OutlookExpressToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.OutlookExpressToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.OutlookExpressToolStripMenuItem.Name = "OutlookExpressToolStripMenuItem";
             this.OutlookExpressToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.OutlookExpressToolStripMenuItem.Text = "Outlook Express";
@@ -615,10 +660,10 @@
             this.WindowsExplorerToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("WindowsExplorerToolStripMenuItem1.Image")));
             this.WindowsExplorerToolStripMenuItem1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.WindowsExplorerToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.WindowsExplorerToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Silver;
             this.WindowsExplorerToolStripMenuItem1.Name = "WindowsExplorerToolStripMenuItem1";
             this.WindowsExplorerToolStripMenuItem1.Size = new System.Drawing.Size(181, 28);
             this.WindowsExplorerToolStripMenuItem1.Text = "Windows Explorer";
+            this.WindowsExplorerToolStripMenuItem1.Click += new System.EventHandler(this.WindowsExplorerToolStripMenuItem1_Click);
             // 
             // GuessTheNumberToolStripMenuItem
             // 
@@ -687,14 +732,14 @@
             this.DocumentsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.windowManagerTestToolStripMenuItem,
             this.downloaderTestToolStripMenuItem,
-            this.installerTestToolStripMenuItem});
+            this.installerTestToolStripMenuItem,
+            this.storyTest1ToolStripMenuItem});
             this.DocumentsToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicDocuments;
             this.DocumentsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DocumentsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.DocumentsToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.DocumentsToolStripMenuItem.Name = "DocumentsToolStripMenuItem";
             this.DocumentsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.DocumentsToolStripMenuItem.Size = new System.Drawing.Size(134, 36);
+            this.DocumentsToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
             this.DocumentsToolStripMenuItem.Text = "Documents";
             // 
             // windowManagerTestToolStripMenuItem
@@ -704,6 +749,7 @@
             this.windowManagerTestToolStripMenuItem.Name = "windowManagerTestToolStripMenuItem";
             this.windowManagerTestToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.windowManagerTestToolStripMenuItem.Text = "WindowManagerTest";
+            this.windowManagerTestToolStripMenuItem.Click += new System.EventHandler(this.windowManagerTestToolStripMenuItem_Click);
             // 
             // downloaderTestToolStripMenuItem
             // 
@@ -712,6 +758,7 @@
             this.downloaderTestToolStripMenuItem.Name = "downloaderTestToolStripMenuItem";
             this.downloaderTestToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.downloaderTestToolStripMenuItem.Text = "DownloaderTest";
+            this.downloaderTestToolStripMenuItem.Click += new System.EventHandler(this.downloaderTestToolStripMenuItem_Click);
             // 
             // installerTestToolStripMenuItem
             // 
@@ -720,6 +767,15 @@
             this.installerTestToolStripMenuItem.Name = "installerTestToolStripMenuItem";
             this.installerTestToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.installerTestToolStripMenuItem.Text = "InstallerTest";
+            this.installerTestToolStripMenuItem.Click += new System.EventHandler(this.installerTestToolStripMenuItem_Click);
+            // 
+            // storyTest1ToolStripMenuItem
+            // 
+            this.storyTest1ToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
+            this.storyTest1ToolStripMenuItem.Name = "storyTest1ToolStripMenuItem";
+            this.storyTest1ToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.storyTest1ToolStripMenuItem.Text = "StoryTest1";
+            this.storyTest1ToolStripMenuItem.Click += new System.EventHandler(this.storyTest1ToolStripMenuItem_Click);
             // 
             // SettingsToolStripMenuItem
             // 
@@ -731,10 +787,9 @@
             this.SettingsToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicSettings;
             this.SettingsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SettingsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SettingsToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem";
             this.SettingsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.SettingsToolStripMenuItem.Size = new System.Drawing.Size(134, 36);
+            this.SettingsToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
             this.SettingsToolStripMenuItem.Text = "Settings";
             // 
             // ControlPanelToolStripMenuItem
@@ -776,11 +831,10 @@
             this.FindToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicFind;
             this.FindToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.FindToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.FindToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.FindToolStripMenuItem.Name = "FindToolStripMenuItem";
             this.FindToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
             this.FindToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.FindToolStripMenuItem.Size = new System.Drawing.Size(134, 36);
+            this.FindToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
             this.FindToolStripMenuItem.Text = "Find";
             // 
             // FilesOrFoldersToolStripMenuItem
@@ -825,11 +879,10 @@
             this.HelpToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicHelp;
             this.HelpToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.HelpToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.HelpToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem";
             this.HelpToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
             this.HelpToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.HelpToolStripMenuItem.Size = new System.Drawing.Size(134, 36);
+            this.HelpToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
             this.HelpToolStripMenuItem.Text = "Help";
             // 
             // RunToolStripMenuItem
@@ -838,11 +891,10 @@
             this.RunToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicRun;
             this.RunToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RunToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.RunToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.RunToolStripMenuItem.Name = "RunToolStripMenuItem";
             this.RunToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
             this.RunToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.RunToolStripMenuItem.Size = new System.Drawing.Size(134, 36);
+            this.RunToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
             this.RunToolStripMenuItem.Text = "Run...";
             // 
             // SuspendToolStripMenuItem
@@ -851,10 +903,9 @@
             this.SuspendToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicSuspend;
             this.SuspendToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SuspendToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SuspendToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.SuspendToolStripMenuItem.Name = "SuspendToolStripMenuItem";
             this.SuspendToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.SuspendToolStripMenuItem.Size = new System.Drawing.Size(134, 36);
+            this.SuspendToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
             this.SuspendToolStripMenuItem.Text = "Suspend";
             // 
             // ShutdownToolStripMenuItem
@@ -863,18 +914,18 @@
             this.ShutdownToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicShutdown;
             this.ShutdownToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ShutdownToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ShutdownToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Silver;
             this.ShutdownToolStripMenuItem.Name = "ShutdownToolStripMenuItem";
             this.ShutdownToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.ShutdownToolStripMenuItem.Size = new System.Drawing.Size(134, 36);
-            this.ShutdownToolStripMenuItem.Text = "Shutdown...";
+            this.ShutdownToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
+            this.ShutdownToolStripMenuItem.Text = "Shut Down...";
+            this.ShutdownToolStripMenuItem.Click += new System.EventHandler(this.ShutdownToolStripMenuItem_Click);
             // 
             // ossidestartmenu
             // 
             this.ossidestartmenu.Controls.Add(this.osimage);
             this.ossidestartmenu.Location = new System.Drawing.Point(0, 0);
             this.ossidestartmenu.Name = "ossidestartmenu";
-            this.ossidestartmenu.Size = new System.Drawing.Size(26, 297);
+            this.ossidestartmenu.Size = new System.Drawing.Size(22, 297);
             this.ossidestartmenu.TabIndex = 4;
             // 
             // osimage
@@ -883,20 +934,39 @@
             this.osimage.Image = global::TimeHACK.Properties.Resources.Win98SideBar;
             this.osimage.Location = new System.Drawing.Point(0, 0);
             this.osimage.Name = "osimage";
-            this.osimage.Size = new System.Drawing.Size(26, 297);
+            this.osimage.Size = new System.Drawing.Size(22, 297);
             this.osimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.osimage.TabIndex = 0;
             this.osimage.TabStop = false;
             // 
+            // clockTimer
+            // 
+            this.clockTimer.Tick += new System.EventHandler(this.clockTimer_Tick);
+            // 
+            // desktopImages
+            // 
+            this.desktopImages.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("desktopImages.ImageStream")));
+            this.desktopImages.TransparentColor = System.Drawing.Color.Transparent;
+            this.desktopImages.Images.SetKeyName(0, "");
+            this.desktopImages.Images.SetKeyName(1, "WinClassicFolder.png");
+            this.desktopImages.Images.SetKeyName(2, "WinClassicIE4.png");
+            this.desktopImages.Images.SetKeyName(3, "WinClassicInbox.png");
+            this.desktopImages.Images.SetKeyName(4, "WinClassicMSN.png");
+            this.desktopImages.Images.SetKeyName(5, "WinClassicNetworking.png");
+            this.desktopImages.Images.SetKeyName(6, "WinClassicOutlook.png");
+            this.desktopImages.Images.SetKeyName(7, "WinClassicRecycle.png");
+            this.desktopImages.Images.SetKeyName(8, "WinClassicSetup.png");
+            this.desktopImages.Images.SetKeyName(9, "WinClassicSetup.png");
+            this.desktopImages.Images.SetKeyName(10, "WinClassicSetup.png");
+            this.desktopImages.Images.SetKeyName(11, "WinClassicSetup.png");
+            // 
             // desktopicons
             // 
             this.desktopicons.Alignment = System.Windows.Forms.ListViewAlignment.Left;
-            this.desktopicons.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.desktopicons.BackColor = System.Drawing.Color.Teal;
             this.desktopicons.BackgroundImageTiled = true;
             this.desktopicons.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.desktopicons.Dock = System.Windows.Forms.DockStyle.Fill;
             this.desktopicons.ForeColor = System.Drawing.Color.White;
             this.desktopicons.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1,
@@ -907,11 +977,168 @@
             listViewItem6,
             listViewItem7,
             listViewItem8});
+            this.desktopicons.LargeImageList = this.desktopImages;
             this.desktopicons.Location = new System.Drawing.Point(0, 0);
             this.desktopicons.Name = "desktopicons";
             this.desktopicons.Size = new System.Drawing.Size(640, 480);
-            this.desktopicons.TabIndex = 7;
+            this.desktopicons.TabIndex = 6;
             this.desktopicons.UseCompatibleStateImageBehavior = false;
+            this.desktopicons.DoubleClick += new System.EventHandler(this.desktopicons_Click);
+            this.desktopicons.MouseDown += new System.Windows.Forms.MouseEventHandler(this.desktop_mousedown);
+            // 
+            // rightclickbackproperties
+            // 
+            this.rightclickbackproperties.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.PropertiesToolStripMenuItem,
+            this.LineUpIconsToolStripMenuItem,
+            this.PasteToolStripMenuItem,
+            this.PasteShortcutToolStripMenuItem,
+            this.NewToolStripMenuItem1,
+            this.PropertiesToolStripMenuItem1});
+            this.rightclickbackproperties.Name = "ContextMenuStrip1";
+            this.rightclickbackproperties.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.rightclickbackproperties.Size = new System.Drawing.Size(151, 136);
+            // 
+            // PropertiesToolStripMenuItem
+            // 
+            this.PropertiesToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.PropertiesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ByNameToolStripMenuItem,
+            this.ByTypeToolStripMenuItem,
+            this.BySizeToolStripMenuItem,
+            this.AutoArrangeToolStripMenuItem,
+            this.ByDateToolStripMenuItem});
+            this.PropertiesToolStripMenuItem.Name = "PropertiesToolStripMenuItem";
+            this.PropertiesToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.PropertiesToolStripMenuItem.Text = "Arrange Icons";
+            // 
+            // ByNameToolStripMenuItem
+            // 
+            this.ByNameToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.ByNameToolStripMenuItem.Name = "ByNameToolStripMenuItem";
+            this.ByNameToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.ByNameToolStripMenuItem.Text = "by Name";
+            // 
+            // ByTypeToolStripMenuItem
+            // 
+            this.ByTypeToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.ByTypeToolStripMenuItem.Name = "ByTypeToolStripMenuItem";
+            this.ByTypeToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.ByTypeToolStripMenuItem.Text = "by Type";
+            // 
+            // BySizeToolStripMenuItem
+            // 
+            this.BySizeToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.BySizeToolStripMenuItem.Name = "BySizeToolStripMenuItem";
+            this.BySizeToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.BySizeToolStripMenuItem.Text = "by Size";
+            // 
+            // AutoArrangeToolStripMenuItem
+            // 
+            this.AutoArrangeToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.AutoArrangeToolStripMenuItem.Name = "AutoArrangeToolStripMenuItem";
+            this.AutoArrangeToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.AutoArrangeToolStripMenuItem.Text = "Auto Arrange";
+            // 
+            // ByDateToolStripMenuItem
+            // 
+            this.ByDateToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.ByDateToolStripMenuItem.Name = "ByDateToolStripMenuItem";
+            this.ByDateToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.ByDateToolStripMenuItem.Text = "by Date";
+            // 
+            // LineUpIconsToolStripMenuItem
+            // 
+            this.LineUpIconsToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.LineUpIconsToolStripMenuItem.Name = "LineUpIconsToolStripMenuItem";
+            this.LineUpIconsToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.LineUpIconsToolStripMenuItem.Text = "Line Up Icons";
+            // 
+            // PasteToolStripMenuItem
+            // 
+            this.PasteToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem";
+            this.PasteToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.PasteToolStripMenuItem.Text = "Paste";
+            // 
+            // PasteShortcutToolStripMenuItem
+            // 
+            this.PasteShortcutToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.PasteShortcutToolStripMenuItem.Name = "PasteShortcutToolStripMenuItem";
+            this.PasteShortcutToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.PasteShortcutToolStripMenuItem.Text = "Paste Shortcut";
+            // 
+            // NewToolStripMenuItem1
+            // 
+            this.NewToolStripMenuItem1.BackColor = System.Drawing.Color.Silver;
+            this.NewToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.FolderToolStripMenuItem,
+            this.ShortcutToolStripMenuItem,
+            this.WaveSoundToolStripMenuItem,
+            this.TextDocumentToolStripMenuItem,
+            this.WordPadDocumentToolStripMenuItem,
+            this.BitmapImageToolStripMenuItem,
+            this.MicrosoftDataLinkToolStripMenuItem});
+            this.NewToolStripMenuItem1.Name = "NewToolStripMenuItem1";
+            this.NewToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
+            this.NewToolStripMenuItem1.Text = "New";
+            // 
+            // FolderToolStripMenuItem
+            // 
+            this.FolderToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.FolderToolStripMenuItem.Name = "FolderToolStripMenuItem";
+            this.FolderToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.FolderToolStripMenuItem.Text = "Folder";
+            this.FolderToolStripMenuItem.Click += new System.EventHandler(this.FolderToolStripMenuItem_Click);
+            // 
+            // ShortcutToolStripMenuItem
+            // 
+            this.ShortcutToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.ShortcutToolStripMenuItem.Name = "ShortcutToolStripMenuItem";
+            this.ShortcutToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.ShortcutToolStripMenuItem.Text = "Shortcut";
+            // 
+            // WaveSoundToolStripMenuItem
+            // 
+            this.WaveSoundToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.WaveSoundToolStripMenuItem.Name = "WaveSoundToolStripMenuItem";
+            this.WaveSoundToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.WaveSoundToolStripMenuItem.Text = "Wave Sound";
+            // 
+            // TextDocumentToolStripMenuItem
+            // 
+            this.TextDocumentToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.TextDocumentToolStripMenuItem.Name = "TextDocumentToolStripMenuItem";
+            this.TextDocumentToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.TextDocumentToolStripMenuItem.Text = "Text Document";
+            // 
+            // WordPadDocumentToolStripMenuItem
+            // 
+            this.WordPadDocumentToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.WordPadDocumentToolStripMenuItem.Name = "WordPadDocumentToolStripMenuItem";
+            this.WordPadDocumentToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.WordPadDocumentToolStripMenuItem.Text = "WordPad Document";
+            // 
+            // BitmapImageToolStripMenuItem
+            // 
+            this.BitmapImageToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.BitmapImageToolStripMenuItem.Name = "BitmapImageToolStripMenuItem";
+            this.BitmapImageToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.BitmapImageToolStripMenuItem.Text = "Bitmap Image";
+            // 
+            // MicrosoftDataLinkToolStripMenuItem
+            // 
+            this.MicrosoftDataLinkToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.MicrosoftDataLinkToolStripMenuItem.Name = "MicrosoftDataLinkToolStripMenuItem";
+            this.MicrosoftDataLinkToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.MicrosoftDataLinkToolStripMenuItem.Text = "Microsoft Data Link";
+            // 
+            // PropertiesToolStripMenuItem1
+            // 
+            this.PropertiesToolStripMenuItem1.BackColor = System.Drawing.Color.Silver;
+            this.PropertiesToolStripMenuItem1.Name = "PropertiesToolStripMenuItem1";
+            this.PropertiesToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
+            this.PropertiesToolStripMenuItem1.Text = "Properties";
             // 
             // Windows98
             // 
@@ -921,10 +1148,15 @@
             this.ClientSize = new System.Drawing.Size(640, 480);
             this.Controls.Add(this.taskbar);
             this.Controls.Add(this.startmenu);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.desktopicons);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Windows98";
-            this.Text = "Win98";
+            this.Tag = "ignoreFormOnTaskbar";
+            this.Text = "TimeHACKDesktop";
+            this.Load += new System.EventHandler(this.Desktop_Load);
+            this.panel1.ResumeLayout(false);
             this.taskbar.ResumeLayout(false);
             this.clockPanel.ResumeLayout(false);
             this.clockPanel.PerformLayout();
@@ -935,17 +1167,19 @@
             this.startmenuitems.PerformLayout();
             this.ossidestartmenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.osimage)).EndInit();
+            this.rightclickbackproperties.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
         internal System.Windows.Forms.Panel taskbar;
-        private System.Windows.Forms.Panel clockPanel;
-        internal System.Windows.Forms.Label taskbartime;
-        private System.Windows.Forms.Panel taskbarItems;
         internal System.Windows.Forms.PictureBox startbutton;
+        internal System.Windows.Forms.Label taskbartime;
         internal System.Windows.Forms.Panel startmenu;
         internal System.Windows.Forms.MenuStrip startmenuitems;
         internal System.Windows.Forms.ToolStripMenuItem ProgramsToolStripMenuItem;
@@ -988,9 +1222,6 @@
         internal System.Windows.Forms.ToolStripMenuItem WebChatToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem TimeDistorterToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem DocumentsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem windowManagerTestToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem downloaderTestToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem installerTestToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem SettingsToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem ControlPanelToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem PrintersToolStripMenuItem;
@@ -1002,10 +1233,38 @@
         internal System.Windows.Forms.ToolStripMenuItem PeopleToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem HelpToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem RunToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem SuspendToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem ShutdownToolStripMenuItem;
         internal System.Windows.Forms.Panel ossidestartmenu;
         internal System.Windows.Forms.PictureBox osimage;
+        internal System.Windows.Forms.ToolStripMenuItem ShutdownToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem SuspendToolStripMenuItem;
+        private System.Windows.Forms.Panel clockPanel;
+        private System.Windows.Forms.Timer clockTimer;
+        private System.Windows.Forms.ImageList desktopImages;
         internal System.Windows.Forms.ListView desktopicons;
+        internal System.Windows.Forms.ContextMenuStrip rightclickbackproperties;
+        internal System.Windows.Forms.ToolStripMenuItem PropertiesToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem ByNameToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem ByTypeToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem BySizeToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem AutoArrangeToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem ByDateToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem LineUpIconsToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem PasteToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem PasteShortcutToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem NewToolStripMenuItem1;
+        internal System.Windows.Forms.ToolStripMenuItem FolderToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem ShortcutToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem WaveSoundToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem TextDocumentToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem WordPadDocumentToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem BitmapImageToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem MicrosoftDataLinkToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem PropertiesToolStripMenuItem1;
+        internal System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Windows95));
+        private System.Windows.Forms.ToolStripMenuItem windowManagerTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem downloaderTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem installerTestToolStripMenuItem;
+        private System.Windows.Forms.Panel taskbarItems;
+        private System.Windows.Forms.ToolStripMenuItem storyTest1ToolStripMenuItem;
     }
 }
