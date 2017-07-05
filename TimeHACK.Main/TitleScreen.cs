@@ -276,6 +276,7 @@ namespace TimeHACK
             if (loadGameBox.successful == true)
             {
                 LoadSave();
+                SetTheme();
                 StartGame();
             }            
         }

@@ -82,7 +82,7 @@ namespace TimeHACK
             }           
         }
 
-        public static void ShutdownApplication(System.IO.UnmanagedMemoryStream audio)
+        public static void ShutdownApplication(System.IO.Stream audio)
         {
             System.Threading.Thread.Sleep(500);
             System.IO.Stream audioPlay = audio;

@@ -119,6 +119,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="TransparentListView">
+      <HintPath>..\..\..\..\Downloads\TransparentListView\TransparentListView.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="OS\BIOS\BIOS.cs">
@@ -409,6 +412,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\12padams_EULA.txt" />
+    <None Include="Resources\DCTheme_BG.JPG" />
     <Content Include="Resources\Icon128x.ico" />
     <Content Include="Resources\IE4\google.jpg" />
     <Content Include="Resources\IE4\googlehome.html" />

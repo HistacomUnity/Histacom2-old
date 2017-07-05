@@ -124,10 +124,10 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Emails:";
             // 
-            // button2
+            // cancelButton
             // 
             this.button2.Location = new System.Drawing.Point(13, 114);
-            this.button2.Name = "button2";
+            this.button2.Name = "cancelButton";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 5;
             this.button2.Text = "Add";

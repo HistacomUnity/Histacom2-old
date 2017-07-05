@@ -45,6 +45,7 @@ namespace TimeHACK.Engine
         public DangerousCreaturesTheme()
         {
             startSound = Properties.Resources.Win95PlusDangerousCreaturesStart;
+            stopSound = Properties.Resources.Win95PlusDangerousCreaturesStart;
 
             defaultWallpaper = Properties.Resources.Win95PlusDangerousCreaturesWallpaper;
             themeName = "dangeranimals";
