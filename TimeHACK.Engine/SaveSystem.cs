@@ -13,9 +13,11 @@ namespace TimeHACK.Engine
     {
         public static Save CurrentSave { get; set; }
         public static FileSystemFolderInfo filesystemflinfo { get; set; }
-        public static Boolean DevMode = false;
+        public static bool DevMode = false;
 
         public static FileAssociation IconChanger = new FileAssociation();
+
+        public static Theme currentTheme { get; set; }
 
         public static string GameDirectory
         {
@@ -114,7 +116,6 @@ namespace TimeHACK.Engine
 
         public static void NewGame()
         {
-
             //TODO: User must set a username....somehow            
 
             var save = new Save();
@@ -124,18 +125,20 @@ namespace TimeHACK.Engine
                 if (ProfileName == "98")
                 {
                     save.CurrentOS = "98";
-                    save.ThemeName = "98normal";
+                    save.ThemeName = "default98";
                 }
                 else
                 {
                     save.CurrentOS = "95";
-                    save.ThemeName = "95normal";
+                    save.ThemeName = "default95";
+                    currentTheme = new Default95Theme();
                 }
             }
             else
             {
                 save.CurrentOS = "95";
-                save.ThemeName = "95normal";
+                save.ThemeName = "default95";
+                currentTheme = new Default95Theme();
             }
             CurrentSave = save;
                       
@@ -180,12 +183,12 @@ namespace TimeHACK.Engine
             CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "explorer.exe"), "windowsexplorer");
         }
 
-        public static void CreateWindowsFile(String filepath, String contents)
+        public static void CreateWindowsFile(string filepath, string contents)
         {
             File.WriteAllText(filepath, contents);
         }
 
-        public static void SaveDirectoryInfo(String directory, Boolean isProtected, String label, Boolean allowback)
+        public static void SaveDirectoryInfo(string directory, bool isProtected, string label, bool allowback)
         {
             if (!Directory.Exists(directory))
                 Directory.CreateDirectory(directory);
