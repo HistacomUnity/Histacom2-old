@@ -18,7 +18,9 @@ namespace TimeHACK.Engine
         public Stream progErrorSound { get; set; }
         public Stream questionSound { get; set; }
 
-        public Image defaultWallpaper;
+        public Image defaultWallpaper { get; set; }
+
+        public string themeName { get; set; }
     }
 
     public class Default95Theme: Theme
@@ -34,6 +36,18 @@ namespace TimeHACK.Engine
             questionSound = Properties.Resources.CHORD;
 
             defaultWallpaper = null;
+            themeName = "default95";
+        }
+    }
+
+    public class DangerousCreaturesTheme: Theme
+    {
+        public DangerousCreaturesTheme()
+        {
+            startSound = Properties.Resources.Win95PlusDangerousCreaturesStart;
+
+            defaultWallpaper = Properties.Resources.Win95PlusDangerousCreaturesWallpaper;
+            themeName = "dangeranimals";
         }
     }
 }
