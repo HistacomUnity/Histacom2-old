@@ -209,11 +209,6 @@
             this.ftpFiles.Cursor = System.Windows.Forms.Cursors.Default;
             this.ftpFiles.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ftpFiles.ForeColor = System.Drawing.Color.White;
-            listViewItem1.StateImageIndex = 0;
-            listViewItem2.Checked = true;
-            listViewItem2.StateImageIndex = 1;
-            listViewItem3.Checked = true;
-            listViewItem3.StateImageIndex = 1;
             this.ftpFiles.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1,
             listViewItem2,
