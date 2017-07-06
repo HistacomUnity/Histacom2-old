@@ -40,9 +40,21 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.progressBar1 = new TimeHACK.UI.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.installPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // installPic
@@ -92,6 +104,7 @@
             this.cancelbutton1.TabIndex = 4;
             this.cancelbutton1.Text = "Cancel";
             this.cancelbutton1.UseVisualStyleBackColor = true;
+            this.cancelbutton1.Click += new System.EventHandler(this.cancelbutton1_Click);
             // 
             // nextbutton1
             // 
@@ -108,12 +121,13 @@
             // 
             this.backbutton1.Enabled = false;
             this.backbutton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backbutton1.Location = new System.Drawing.Point(235, 301);
+            this.backbutton1.Location = new System.Drawing.Point(237, 301);
             this.backbutton1.Name = "backbutton1";
             this.backbutton1.Size = new System.Drawing.Size(75, 23);
             this.backbutton1.TabIndex = 6;
             this.backbutton1.Text = "Back";
             this.backbutton1.UseVisualStyleBackColor = true;
+            this.backbutton1.Click += new System.EventHandler(this.backbutton1_Click);
             // 
             // label2
             // 
@@ -159,11 +173,106 @@
             this.panel1.TabIndex = 10;
             this.panel1.Visible = false;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Location = new System.Drawing.Point(150, 16);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(318, 260);
+            this.panel2.TabIndex = 11;
+            this.panel2.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(-3, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(268, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Setup will install GenericName in the following directory:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(23, 67);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(214, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "C:\\Program Files\\12padams\\GenericName\\";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(-3, 28);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(178, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "To install in this directory, click Next.";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.progressBar1);
+            this.panel3.Location = new System.Drawing.Point(150, 16);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(318, 260);
+            this.panel3.TabIndex = 12;
+            this.panel3.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(4, 12);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(57, 13);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Installing...";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label7);
+            this.panel4.Location = new System.Drawing.Point(150, 16);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(318, 260);
+            this.panel4.TabIndex = 13;
+            this.panel4.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(7, 12);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(205, 13);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "GenericName Setup has been completed.";
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.BlockSpacing = 5;
+            this.progressBar1.BlockWidth = 20;
+            this.progressBar1.Location = new System.Drawing.Point(3, 115);
+            this.progressBar1.MarqueeWidth = 125;
+            this.progressBar1.Maximum = 100D;
+            this.progressBar1.Minimum = 0D;
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.ProgressColor = System.Drawing.Color.Navy;
+            this.progressBar1.ShowText = false;
+            this.progressBar1.Size = new System.Drawing.Size(312, 28);
+            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Blocks;
+            this.progressBar1.TabIndex = 0;
+            this.progressBar1.Text = "progressBar1";
+            this.progressBar1.Value = 0D;
+            // 
             // Win95Installer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.backbutton1);
             this.Controls.Add(this.nextbutton1);
@@ -179,6 +288,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,5 +312,14 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel3;
+        private UI.ProgressBar progressBar1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label7;
     }
 }
