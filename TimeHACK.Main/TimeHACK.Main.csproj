@@ -179,6 +179,12 @@
     <Compile Include="OS\Win95\Win95SaveAs.Designer.cs">
       <DependentUpon>Win95SaveAs.cs</DependentUpon>
     </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicTimeDistorter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicTimeDistorter.Designer.cs">
+      <DependentUpon>WinClassicTimeDistorter.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\Win98\Win98.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -311,6 +317,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicThemePanel.resx">
       <DependentUpon>WinClassicThemePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicTimeDistorter.resx">
+      <DependentUpon>WinClassicTimeDistorter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicWelcome.resx">
       <DependentUpon>WinClassicWelcome.cs</DependentUpon>
