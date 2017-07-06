@@ -137,6 +137,12 @@
       <DependentUpon>SurviveTheDay.cs</DependentUpon>
     </Compile>
     <Compile Include="OS\Win95\Win95Apps\Story\Hack1.cs" />
+    <Compile Include="OS\Win95\Win95Apps\Win95Installer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\Win95Installer.Designer.cs">
+      <DependentUpon>Win95Installer.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\Win95\Win95Apps\WinClassicFTPClient.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -251,12 +257,6 @@
     <Compile Include="OS\Win95\Win95Apps\WinClassicIE4.Designer.cs">
       <DependentUpon>WinClassicIE4.cs</DependentUpon>
     </Compile>
-    <Compile Include="GlobalPrograms\WinClassicInstaller.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GlobalPrograms\WinClassicInstaller.Designer.cs">
-      <DependentUpon>WinClassicInstaller.cs</DependentUpon>
-    </Compile>
     <Compile Include="OS\Win95\Win95Apps\WinClassicNotepad.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -299,6 +299,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win2K\Win2KApps\SurviveTheDay.resx">
       <DependentUpon>SurviveTheDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\Win95Installer.resx">
+      <DependentUpon>Win95Installer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicFTPClient.resx">
       <DependentUpon>WinClassicFTPClient.cs</DependentUpon>
@@ -362,9 +365,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicIE4.resx">
       <DependentUpon>WinClassicIE4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GlobalPrograms\WinClassicInstaller.resx">
-      <DependentUpon>WinClassicInstaller.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicNotepad.resx">
       <DependentUpon>WinClassicNotepad.cs</DependentUpon>
@@ -498,6 +498,7 @@
     <None Include="Resources\WinClassic\WinClassicHWCV.png" />
     <Content Include="Resources\WinClassic\WinClassicIE4.png" />
     <Content Include="Resources\WinClassic\WinClassicInbox.png" />
+    <None Include="Resources\WinClassic\WinClassicInstallPic.png" />
     <Content Include="Resources\WinClassic\WinClassicMSN.png" />
     <Content Include="Resources\WinClassic\WinClassicNetworking.png" />
     <None Include="Resources\WinClassic\WinClassicNotepad.png" />
