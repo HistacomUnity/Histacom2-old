@@ -66,7 +66,7 @@
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Location = new System.Drawing.Point(358, 156);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(119, 23);
+            this.btnClose.Size = new System.Drawing.Size(115, 26);
             this.btnClose.TabIndex = 15;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -79,7 +79,7 @@
             this.btnOnline.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOnline.Location = new System.Drawing.Point(356, 78);
             this.btnOnline.Name = "btnOnline";
-            this.btnOnline.Size = new System.Drawing.Size(119, 23);
+            this.btnOnline.Size = new System.Drawing.Size(115, 26);
             this.btnOnline.TabIndex = 14;
             this.btnOnline.Text = "Online Registration";
             this.btnOnline.UseVisualStyleBackColor = false;
@@ -91,7 +91,7 @@
             this.btnTour.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTour.Location = new System.Drawing.Point(356, 49);
             this.btnTour.Name = "btnTour";
-            this.btnTour.Size = new System.Drawing.Size(119, 23);
+            this.btnTour.Size = new System.Drawing.Size(115, 26);
             this.btnTour.TabIndex = 12;
             this.btnTour.Text = "What\'s New";
             this.btnTour.UseVisualStyleBackColor = false;

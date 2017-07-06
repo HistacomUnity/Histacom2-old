@@ -16,8 +16,11 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             InitializeComponent();
 
+            btnTour.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             btnTour.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            btnOnline.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             btnOnline.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            btnClose.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             btnClose.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2); 
         }
 
