@@ -36,8 +36,13 @@
             this.cancelbutton1 = new System.Windows.Forms.Button();
             this.nextbutton1 = new System.Windows.Forms.Button();
             this.backbutton1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.installPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // installPic
@@ -97,23 +102,69 @@
             this.nextbutton1.TabIndex = 5;
             this.nextbutton1.Text = "Next";
             this.nextbutton1.UseVisualStyleBackColor = true;
+            this.nextbutton1.Click += new System.EventHandler(this.nextbutton1_Click);
             // 
             // backbutton1
             // 
             this.backbutton1.Enabled = false;
             this.backbutton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backbutton1.Location = new System.Drawing.Point(241, 301);
+            this.backbutton1.Location = new System.Drawing.Point(235, 301);
             this.backbutton1.Name = "backbutton1";
             this.backbutton1.Size = new System.Drawing.Size(75, 23);
             this.backbutton1.TabIndex = 6;
             this.backbutton1.Text = "Back";
             this.backbutton1.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(-3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(263, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Please read and agree to the EULA before continuing.";
+            // 
+            // textBox1
+            // 
+            this.textBox1.AcceptsReturn = true;
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(0, 28);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox1.Size = new System.Drawing.Size(318, 209);
+            this.textBox1.TabIndex = 8;
+            this.textBox1.Text = resources.GetString("textBox1.Text");
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(0, 243);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(215, 17);
+            this.checkBox1.TabIndex = 9;
+            this.checkBox1.Text = "I hereby agree to the terms in the EULA.";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.checkBox1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Location = new System.Drawing.Point(150, 16);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(318, 260);
+            this.panel1.TabIndex = 10;
+            this.panel1.Visible = false;
+            // 
             // Win95Installer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.backbutton1);
             this.Controls.Add(this.nextbutton1);
             this.Controls.Add(this.cancelbutton1);
@@ -122,10 +173,12 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.installPic);
             this.Name = "Win95Installer";
-            this.Size = new System.Drawing.Size(488, 340);
+            this.Size = new System.Drawing.Size(483, 340);
             this.Load += new System.EventHandler(this.Win95Installer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.installPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,5 +193,9 @@
         private System.Windows.Forms.Button cancelbutton1;
         private System.Windows.Forms.Button nextbutton1;
         private System.Windows.Forms.Button backbutton1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

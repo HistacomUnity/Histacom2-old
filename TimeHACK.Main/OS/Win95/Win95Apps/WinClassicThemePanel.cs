@@ -103,7 +103,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     SaveSystem.CurrentSave.ThemeName = "insidepc";
                     SaveSystem.currentTheme = new InsideComputerTheme();
                     TitleScreen.frm95.BackgroundImage = Properties.Resources.ICTheme_BG;
-                    TitleScreen.frm95.desktopicons.BackgroundImage = new Bitmap(Properties.Resources.DCTheme_BG, TitleScreen.frm95.desktopicons.Width, TitleScreen.frm95.desktopicons.Height);
+                    TitleScreen.frm95.desktopicons.BackgroundImage = new Bitmap(Properties.Resources.ICTheme_BG, TitleScreen.frm95.desktopicons.Width, TitleScreen.frm95.desktopicons.Height);
                     break;
             }
             ParentForm.Close();

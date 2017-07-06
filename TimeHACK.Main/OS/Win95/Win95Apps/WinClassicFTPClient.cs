@@ -33,6 +33,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         infoLabel.Text = "[200] OK";
                         welcomeLabel.Hide();
                         infoLabel.Show();
+                        ftpFiles.Show();
                     }
                     else
                     {
@@ -57,9 +58,13 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             Point objDrawingPoint = ftpFiles.PointToClient(Cursor.Position);
             ListViewItem objListViewItem = new ListViewItem();
-            if (objListViewItem.Text == "/software/")
+            if (objDrawingPoint != null)
             {
+                objListViewItem = ftpFiles.GetItemAt(objDrawingPoint.X, objDrawingPoint.Y);
+                if (objListViewItem.Text == "/software/")
+                {
 
+                }
             }
         }
     }

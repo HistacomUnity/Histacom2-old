@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            "/software/"}, -1, System.Drawing.Color.Black, System.Drawing.Color.Empty, null);
+            "/software/"}, 0, System.Drawing.Color.Black, System.Drawing.Color.Empty, null);
             System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
-            "index.html"}, -1, System.Drawing.Color.Black, System.Drawing.Color.Empty, null);
+            "index.html"}, 1, System.Drawing.Color.Black, System.Drawing.Color.Empty, null);
             System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
-            "???.html"}, -1, System.Drawing.Color.Black, System.Drawing.Color.Empty, null);
+            "???.html"}, 1, System.Drawing.Color.Black, System.Drawing.Color.Empty, null);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WinClassicFTPClient));
             this.topBar = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -180,10 +180,10 @@
             this.panel1.Size = new System.Drawing.Size(762, 30);
             this.panel1.TabIndex = 9;
             // 
-            // cancelButton
+            // button2
             // 
             this.button2.Location = new System.Drawing.Point(3, 2);
-            this.button2.Name = "cancelButton";
+            this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 0;
             this.button2.Text = "cancelButton";
