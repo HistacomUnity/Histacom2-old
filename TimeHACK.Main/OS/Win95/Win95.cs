@@ -238,7 +238,7 @@ namespace TimeHACK.OS.Win95
 
         private void installerTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Win95Installer openinstaller = new Win95Installer();
+            Win95Installer openinstaller = new Win95Installer("Testing");
             WinClassic app = wm.StartWin95(openinstaller, "Installer", null, false, true);
 
             AddTaskBarItem(app, app.Tag.ToString(), "Installer", null);
@@ -278,8 +278,8 @@ namespace TimeHACK.OS.Win95
                     }
                     else if (objListViewItem.Text == "Web Chat Setup")
                     {
-                        Win95Installer inst = new Win95Installer();
-                        inst.installname.Text = "Web Chat 1998";
+                        Win95Installer inst = new Win95Installer("Web Chat 1998");
+                        inst.InstallCompleted += (sendr, args) => WebChatToolStripMenuItem.Visible = true;
                         WinClassic app = wm.StartWin95(inst, "Web Chat Setup", null, true, true);
                         AddTaskBarItem(app, app.Tag.ToString(), "Web Chat Setup", null);
                         app.BringToFront();
