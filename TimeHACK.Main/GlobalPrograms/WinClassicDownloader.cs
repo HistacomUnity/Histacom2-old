@@ -67,6 +67,10 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 {
                     Windows95.desktopicons.Items.Add("Time Distorter Setup", imageIndex: 13);
                 }
+                if (appName.Text == "Downloading: FTP Client")
+                {
+                    TitleScreen.frm95.desktopicons.Items.Add("FTP Client Setup", imageIndex: 11);
+                }
                 ((Form)this.TopLevelControl).Close();
                 dlTimer.Stop();
             }

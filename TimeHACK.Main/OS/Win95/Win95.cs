@@ -285,6 +285,15 @@ namespace TimeHACK.OS.Win95
                         app.BringToFront();
                         startmenu.Hide();
                     }
+                    else if (objListViewItem.Text == "FTP Client Setup")
+                    {
+                        Win95Installer inst = new Win95Installer("FTP Client");
+                        inst.InstallCompleted += (sendr, args) => WebChatToolStripMenuItem.Visible = true;
+                        WinClassic app = wm.StartWin95(inst, "FTP Client Setup", null, true, true);
+                        AddTaskBarItem(app, app.Tag.ToString(), "FTP Client Setup", null);
+                        app.BringToFront();
+                        startmenu.Hide();
+                    }
                 }
             }
         }
@@ -435,6 +444,14 @@ namespace TimeHACK.OS.Win95
             WinClassic app = wm.StartWin95(new WinClassicTimeDistorter("2017", "20XX", 10), "Time Distorter", null, false, true);
 
             AddTaskBarItem(app, app.Tag.ToString(), "Time Distorter", null);
+            app.BringToFront();
+            startmenu.Hide();
+        }
+        private void FTPClientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WinClassic app = wm.StartWin95(new WinClassicFTPClient(), "FTP Client", null, true, true);
+
+            AddTaskBarItem(app, app.Tag.ToString(), "FTP Client", null);
             app.BringToFront();
             startmenu.Hide();
         }
