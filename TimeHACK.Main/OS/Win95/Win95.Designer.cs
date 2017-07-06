@@ -243,7 +243,7 @@ namespace TimeHACK.OS.Win95
             this.startmenuitems.Name = "startmenuitems";
             this.startmenuitems.Padding = new System.Windows.Forms.Padding(6, 2, 0, 0);
             this.startmenuitems.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.startmenuitems.Size = new System.Drawing.Size(145, 292);
+            this.startmenuitems.Size = new System.Drawing.Size(145, 311);
             this.startmenuitems.TabIndex = 0;
             this.startmenuitems.Text = "StartMenu";
             // 
@@ -723,7 +723,7 @@ namespace TimeHACK.OS.Win95
             this.TimeDistorterToolStripMenuItem.Name = "TimeDistorterToolStripMenuItem";
             this.TimeDistorterToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.TimeDistorterToolStripMenuItem.Text = "Time Distorter";
-            this.TimeDistorterToolStripMenuItem.Visible = false;
+            this.TimeDistorterToolStripMenuItem.Click += new System.EventHandler(this.TimeDistorterToolStripMenuItem_Click);
             // 
             // DocumentsToolStripMenuItem
             // 

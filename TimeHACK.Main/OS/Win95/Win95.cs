@@ -429,6 +429,15 @@ namespace TimeHACK.OS.Win95
             app.BringToFront();
             startmenu.Hide();
         }
+
+        private void TimeDistorterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WinClassic app = wm.StartWin95(new WinClassicTimeDistorter("2017", "20XX", 10), "Time Distorter", null, false, true);
+
+            AddTaskBarItem(app, app.Tag.ToString(), "Time Distorter", null);
+            app.BringToFront();
+            startmenu.Hide();
+        }
     }
     public class MyRenderer : ToolStripProfessionalRenderer
     {
