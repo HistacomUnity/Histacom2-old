@@ -130,6 +130,7 @@ namespace TimeHACK.OS.Win95
             this.BitmapImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MicrosoftDataLinkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PropertiesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.FTPClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.taskbar.SuspendLayout();
             this.clockPanel.SuspendLayout();
@@ -265,7 +266,8 @@ namespace TimeHACK.OS.Win95
             this.ErrorBlasterToolStripMenuItem,
             this.SkindowsToolStripMenuItem,
             this.WebChatToolStripMenuItem,
-            this.TimeDistorterToolStripMenuItem});
+            this.TimeDistorterToolStripMenuItem,
+            this.FTPClientToolStripMenuItem});
             this.ProgramsToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicPrograms;
             this.ProgramsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ProgramsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -724,6 +726,17 @@ namespace TimeHACK.OS.Win95
             this.TimeDistorterToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.TimeDistorterToolStripMenuItem.Text = "Time Distorter";
             this.TimeDistorterToolStripMenuItem.Click += new System.EventHandler(this.TimeDistorterToolStripMenuItem_Click);
+            // 
+            // FTPClientToolStripMenuItem
+            // 
+            this.FTPClientToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.FTPClientToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
+            this.FTPClientToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.FTPClientToolStripMenuItem.Name = "FTPClientToolStripMenuItem";
+            this.FTPClientToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
+            this.FTPClientToolStripMenuItem.Text = "FTP Client";
+            this.FTPClientToolStripMenuItem.Visible = false;
+            this.FTPClientToolStripMenuItem.Click += new System.EventHandler(this.FTPClientToolStripMenuItem_Click);
             // 
             // DocumentsToolStripMenuItem
             // 
@@ -1267,5 +1280,6 @@ namespace TimeHACK.OS.Win95
         private System.Windows.Forms.ToolStripMenuItem installerTestToolStripMenuItem;
         private System.Windows.Forms.Panel taskbarItems;
         private System.Windows.Forms.ToolStripMenuItem storyTest1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem FTPClientToolStripMenuItem;
     }
 }

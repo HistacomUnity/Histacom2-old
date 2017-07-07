@@ -13,9 +13,17 @@ namespace TimeHACK.OS.Win95.Win95Apps
     public partial class Win95Installer : UserControl
     {
         public int installStage = 0;
+        private string prog;
         private Timer installbar = new Timer();
 
-        public Win95Installer()
+        public event EventHandler InstallCompleted;
+
+        protected void OnInstallCompleted(EventArgs e)
+        {
+            if (InstallCompleted != null) InstallCompleted(this, e);
+        }
+
+        public Win95Installer(string progName)
         {
             InitializeComponent();
             label1.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
@@ -23,17 +31,21 @@ namespace TimeHACK.OS.Win95.Win95Apps
             label3.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             label4.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             label5.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            label6.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            label7.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             checkBox1.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             cancelbutton1.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             nextbutton1.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             backbutton1.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            prog = progName;
         }
 
         private void Win95Installer_Load(object sender, EventArgs e)
         {
-            label1.Text.Replace("GenericName", installname.Text);
-            label3.Text.Replace("GenericName", installname.Text);
-            label4.Text.Replace("GenericName", installname.Text);
+            label1.Text = label1.Text.Replace("GenericName", prog);
+            label3.Text = label3.Text.Replace("GenericName", prog);
+            label4.Text = label4.Text.Replace("GenericName", prog);
+            label7.Text = label7.Text.Replace("GenericName", prog);
             installbar.Tick += Installbar_Tick;
         }
 
@@ -45,6 +57,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             }
             else
             {
+                OnInstallCompleted(EventArgs.Empty);
                 panel3.Hide();
                 panel4.Show();
                 backbutton1.Hide();
