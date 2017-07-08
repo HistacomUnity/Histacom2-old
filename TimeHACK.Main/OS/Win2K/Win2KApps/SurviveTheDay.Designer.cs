@@ -78,13 +78,13 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.choice_click);
             // 
-            // button2
+            // cancelButton
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Courier New", 12F);
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(35, 261);
-            this.button2.Name = "button2";
+            this.button2.Name = "cancelButton";
             this.button2.Size = new System.Drawing.Size(568, 28);
             this.button2.TabIndex = 5;
             this.button2.Text = "--";

@@ -130,6 +130,7 @@ namespace TimeHACK.OS.Win95
             this.BitmapImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MicrosoftDataLinkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PropertiesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.FTPClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.taskbar.SuspendLayout();
             this.clockPanel.SuspendLayout();
@@ -143,7 +144,7 @@ namespace TimeHACK.OS.Win95
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoSize = true;
             this.panel1.Controls.Add(this.panel2);
@@ -265,7 +266,8 @@ namespace TimeHACK.OS.Win95
             this.ErrorBlasterToolStripMenuItem,
             this.SkindowsToolStripMenuItem,
             this.WebChatToolStripMenuItem,
-            this.TimeDistorterToolStripMenuItem});
+            this.TimeDistorterToolStripMenuItem,
+            this.FTPClientToolStripMenuItem});
             this.ProgramsToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicPrograms;
             this.ProgramsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ProgramsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -638,7 +640,7 @@ namespace TimeHACK.OS.Win95
             this.MSDOSPromptToolStripMenuItem1.Name = "MSDOSPromptToolStripMenuItem1";
             this.MSDOSPromptToolStripMenuItem1.Size = new System.Drawing.Size(181, 28);
             this.MSDOSPromptToolStripMenuItem1.Text = "MS-DOS Prompt";
-            this.MSDOSPromptToolStripMenuItem1.Click += new System.EventHandler(MSDOSPromptToolStripMenuItem1_Click);
+            this.MSDOSPromptToolStripMenuItem1.Click += new System.EventHandler(this.MSDOSPromptToolStripMenuItem1_Click);
             // 
             // OutlookExpressToolStripMenuItem
             // 
@@ -723,7 +725,18 @@ namespace TimeHACK.OS.Win95
             this.TimeDistorterToolStripMenuItem.Name = "TimeDistorterToolStripMenuItem";
             this.TimeDistorterToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.TimeDistorterToolStripMenuItem.Text = "Time Distorter";
-            this.TimeDistorterToolStripMenuItem.Visible = false;
+            this.TimeDistorterToolStripMenuItem.Click += new System.EventHandler(this.TimeDistorterToolStripMenuItem_Click);
+            // 
+            // FTPClientToolStripMenuItem
+            // 
+            this.FTPClientToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.FTPClientToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
+            this.FTPClientToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.FTPClientToolStripMenuItem.Name = "FTPClientToolStripMenuItem";
+            this.FTPClientToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
+            this.FTPClientToolStripMenuItem.Text = "FTP Client";
+            this.FTPClientToolStripMenuItem.Visible = false;
+            this.FTPClientToolStripMenuItem.Click += new System.EventHandler(this.FTPClientToolStripMenuItem_Click);
             // 
             // DocumentsToolStripMenuItem
             // 
@@ -1139,6 +1152,7 @@ namespace TimeHACK.OS.Win95
             this.PropertiesToolStripMenuItem1.Name = "PropertiesToolStripMenuItem1";
             this.PropertiesToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
             this.PropertiesToolStripMenuItem1.Text = "Properties";
+            this.PropertiesToolStripMenuItem1.Click += new System.EventHandler(this.PropertiesToolStripMenuItem1_Click);
             // 
             // Windows95
             // 
@@ -1266,5 +1280,6 @@ namespace TimeHACK.OS.Win95
         private System.Windows.Forms.ToolStripMenuItem installerTestToolStripMenuItem;
         private System.Windows.Forms.Panel taskbarItems;
         private System.Windows.Forms.ToolStripMenuItem storyTest1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem FTPClientToolStripMenuItem;
     }
 }

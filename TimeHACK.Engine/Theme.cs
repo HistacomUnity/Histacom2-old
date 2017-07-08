@@ -45,9 +45,22 @@ namespace TimeHACK.Engine
         public DangerousCreaturesTheme()
         {
             startSound = Properties.Resources.Win95PlusDangerousCreaturesStart;
+            stopSound = Properties.Resources.Win95PlusDangerousCreaturesStart;
 
             defaultWallpaper = Properties.Resources.Win95PlusDangerousCreaturesWallpaper;
             themeName = "dangeranimals";
+        }
+    }
+
+    public class InsideComputerTheme: Theme
+    {
+        public InsideComputerTheme()
+        {
+            startSound = Properties.Resources.Win95PlusInsideComputerStart;
+            stopSound = Properties.Resources.Win95PlusInsideComputerStop;
+
+            defaultWallpaper = Properties.Resources.Win95PlusInsideComputerWallpaper;
+            themeName = "insidepc";
         }
     }
 }

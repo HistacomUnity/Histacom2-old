@@ -206,6 +206,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         break;
                     case "12PADAMS":
                         webBrowser1.Document.GetElementById("wc_b").Click += new HtmlElementEventHandler(WCDownloadButton_Click);
+                        webBrowser1.Document.GetElementById("ftp_b").Click += new HtmlElementEventHandler(FTPDownloadButton_Click);
                         if (!TitleScreen.frm95.hiddenpadamsFound) webBrowser1.Document.GetElementById("distort").Style += "visibility:hidden;";
                         break;
                     case "GOOGLE":
@@ -219,6 +220,14 @@ namespace TimeHACK.OS.Win95.Win95Apps
             {
 
             }
+        }
+
+        private void FTPDownloadButton_Click(object sender, HtmlElementEventArgs e)
+        {
+            WinClassicDownloader opendownload = new WinClassicDownloader();
+            WindowManager wm = new WindowManager();
+            wm.StartWin95(opendownload, "Downloader", null, false, true);
+            opendownload.appName.Text = "Downloading: FTP Client";
         }
 
         //TODO: Add more websites

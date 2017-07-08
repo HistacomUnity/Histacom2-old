@@ -119,6 +119,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="TransparentListView">
+      <HintPath>..\..\..\..\Downloads\TransparentListView\TransparentListView.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="OS\BIOS\BIOS.cs">
@@ -134,6 +137,12 @@
       <DependentUpon>SurviveTheDay.cs</DependentUpon>
     </Compile>
     <Compile Include="OS\Win95\Win95Apps\Story\Hack1.cs" />
+    <Compile Include="OS\Win95\Win95Apps\Win95Installer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\Win95Installer.Designer.cs">
+      <DependentUpon>Win95Installer.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\Win95\Win95Apps\WinClassicFTPClient.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -169,6 +178,12 @@
     </Compile>
     <Compile Include="OS\Win95\Win95SaveAs.Designer.cs">
       <DependentUpon>Win95SaveAs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicTimeDistorter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicTimeDistorter.Designer.cs">
+      <DependentUpon>WinClassicTimeDistorter.cs</DependentUpon>
     </Compile>
     <Compile Include="OS\Win98\Win98.cs">
       <SubType>Form</SubType>
@@ -248,12 +263,6 @@
     <Compile Include="OS\Win95\Win95Apps\WinClassicIE4.Designer.cs">
       <DependentUpon>WinClassicIE4.cs</DependentUpon>
     </Compile>
-    <Compile Include="GlobalPrograms\WinClassicInstaller.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GlobalPrograms\WinClassicInstaller.Designer.cs">
-      <DependentUpon>WinClassicInstaller.cs</DependentUpon>
-    </Compile>
     <Compile Include="OS\Win95\Win95Apps\WinClassicNotepad.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -297,6 +306,9 @@
     <EmbeddedResource Include="OS\Win2K\Win2KApps\SurviveTheDay.resx">
       <DependentUpon>SurviveTheDay.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\Win95Installer.resx">
+      <DependentUpon>Win95Installer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicFTPClient.resx">
       <DependentUpon>WinClassicFTPClient.cs</DependentUpon>
     </EmbeddedResource>
@@ -305,6 +317,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicThemePanel.resx">
       <DependentUpon>WinClassicThemePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicTimeDistorter.resx">
+      <DependentUpon>WinClassicTimeDistorter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicWelcome.resx">
       <DependentUpon>WinClassicWelcome.cs</DependentUpon>
@@ -360,9 +375,6 @@
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicIE4.resx">
       <DependentUpon>WinClassicIE4.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GlobalPrograms\WinClassicInstaller.resx">
-      <DependentUpon>WinClassicInstaller.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicNotepad.resx">
       <DependentUpon>WinClassicNotepad.cs</DependentUpon>
     </EmbeddedResource>
@@ -409,7 +421,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\12padams_EULA.txt" />
+    <None Include="Resources\DCTheme_BG.JPG" />
     <Content Include="Resources\Icon128x.ico" />
+    <None Include="Resources\ICTheme_BG.jpg" />
     <Content Include="Resources\IE4\google.jpg" />
     <Content Include="Resources\IE4\googlehome.html" />
     <Content Include="Resources\IE4\googleprototype.html" />
@@ -446,6 +460,9 @@
     <None Include="Resources\Win98SideBar.png" />
     <None Include="Resources\Win95Help.png" />
     <None Include="Resources\WinAboutSeparator95.png" />
+    <None Include="Resources\win95_splitter.png" />
+    <None Include="Resources\win95_welcome.png" />
+    <None Include="Resources\win95_welcometip.png" />
     <Content Include="Resources\WinClassic\16Color.png" />
     <Content Include="Resources\WinClassic\256Color.png" />
     <None Include="Resources\WinClassic\tada.wav" />
@@ -490,6 +507,7 @@
     <None Include="Resources\WinClassic\WinClassicHWCV.png" />
     <Content Include="Resources\WinClassic\WinClassicIE4.png" />
     <Content Include="Resources\WinClassic\WinClassicInbox.png" />
+    <None Include="Resources\WinClassic\WinClassicInstallPic.png" />
     <Content Include="Resources\WinClassic\WinClassicMSN.png" />
     <Content Include="Resources\WinClassic\WinClassicNetworking.png" />
     <None Include="Resources\WinClassic\WinClassicNotepad.png" />

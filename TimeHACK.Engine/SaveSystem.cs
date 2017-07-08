@@ -220,6 +220,22 @@ namespace TimeHACK.Engine
             // CHANGE THE "JSON" TO "B64" ON A FINAL RELEASE!
             File.WriteAllText(Path.Combine(ProfileDirectory, ProfileFile), json);
         }
+
+        public static void SetTheme()
+        {
+            switch (CurrentSave.ThemeName)
+            {
+                case "default95":
+                    currentTheme = new Default95Theme();
+                    break;
+                case "dangeranimals":
+                    currentTheme = new DangerousCreaturesTheme();
+                    break;
+                case "insidepc":
+                    currentTheme = new InsideComputerTheme();
+                    break;
+            }
+        }
     }
 
     public class Save

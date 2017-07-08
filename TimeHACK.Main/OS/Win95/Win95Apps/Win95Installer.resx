@@ -117,22 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="look.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>200, 57</value>
-  </metadata>
-  <metadata name="pullbs.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>275, 57</value>
-  </metadata>
-  <metadata name="pullbottom.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>359, 57</value>
-  </metadata>
-  <metadata name="pullside.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>472, 57</value>
-  </metadata>
-  <metadata name="Timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>566, 57</value>
-  </metadata>
-  <data name="TextBox4.Text" xml:space="preserve">
+  <data name="label1.Text" xml:space="preserve">
+    <value>Welcome to the GenericName Setup program. This program will install GenericName on your computer.
+
+It is strongly recommended that you exit all Windows programs before running this setup program.
+
+Click Cancel to quit Setup and then close any programs you have running. Click Next to continue with the Setup program.
+
+
+WARNING: This program is protected by copyright law and international treaties.
+
+Unauthorized reproduction or distribution of this program, or any portion of it, may result in severe civil and criminal penalties, and will be prosecuted to the maximum extent possible under law.</value>
+  </data>
+  <data name="textBox1.Text" xml:space="preserve">
     <value>By installing this software you agree that you will not try to reverse engineer it in anyway or claim it as your own work. 
 
 You agree that you will not try to spread this software or any of its components to other companies without rightful permission from the owner. 

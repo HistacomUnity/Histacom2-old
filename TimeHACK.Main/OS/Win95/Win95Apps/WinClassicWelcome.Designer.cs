@@ -28,45 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.imgTip = new System.Windows.Forms.PictureBox();
+            this.imgPnl = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnOnline = new System.Windows.Forms.Button();
-            this.btnNew = new System.Windows.Forms.Button();
             this.btnTour = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.imgWelcome = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.imgTip)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPnl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgWelcome)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // imgTip
             // 
-            this.pictureBox1.Image = global::TimeHACK.Properties.Resources.Win95Help;
-            this.pictureBox1.Location = new System.Drawing.Point(27, 69);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(384, 248);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
+            this.imgTip.BackgroundImage = global::TimeHACK.Properties.Resources.win95_welcometip;
+            this.imgTip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.imgTip.Location = new System.Drawing.Point(16, 49);
+            this.imgTip.Name = "imgTip";
+            this.imgTip.Size = new System.Drawing.Size(330, 255);
+            this.imgTip.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgTip.TabIndex = 17;
+            this.imgTip.TabStop = false;
             // 
-            // pictureBox2
+            // imgPnl
             // 
-            this.pictureBox2.Image = global::TimeHACK.Properties.Resources.WinAboutSeparator95;
-            this.pictureBox2.Location = new System.Drawing.Point(445, 154);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(115, 10);
-            this.pictureBox2.TabIndex = 16;
-            this.pictureBox2.TabStop = false;
+            this.imgPnl.Image = global::TimeHACK.Properties.Resources.win95_splitter;
+            this.imgPnl.Location = new System.Drawing.Point(358, 142);
+            this.imgPnl.Name = "imgPnl";
+            this.imgPnl.Size = new System.Drawing.Size(112, 2);
+            this.imgPnl.TabIndex = 16;
+            this.imgPnl.TabStop = false;
             // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.Silver;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(443, 167);
+            this.btnClose.Location = new System.Drawing.Point(358, 156);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(117, 23);
+            this.btnClose.Size = new System.Drawing.Size(115, 26);
             this.btnClose.TabIndex = 15;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -75,99 +75,64 @@
             // btnOnline
             // 
             this.btnOnline.BackColor = System.Drawing.Color.Silver;
+            this.btnOnline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOnline.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOnline.Location = new System.Drawing.Point(443, 125);
+            this.btnOnline.Location = new System.Drawing.Point(356, 78);
             this.btnOnline.Name = "btnOnline";
-            this.btnOnline.Size = new System.Drawing.Size(117, 23);
+            this.btnOnline.Size = new System.Drawing.Size(115, 26);
             this.btnOnline.TabIndex = 14;
             this.btnOnline.Text = "Online Registration";
             this.btnOnline.UseVisualStyleBackColor = false;
             // 
-            // btnNew
-            // 
-            this.btnNew.BackColor = System.Drawing.Color.Silver;
-            this.btnNew.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNew.Location = new System.Drawing.Point(443, 96);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(117, 23);
-            this.btnNew.TabIndex = 13;
-            this.btnNew.Text = "What\'s new";
-            this.btnNew.UseVisualStyleBackColor = false;
-            // 
             // btnTour
             // 
             this.btnTour.BackColor = System.Drawing.Color.Silver;
+            this.btnTour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTour.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTour.Location = new System.Drawing.Point(445, 69);
+            this.btnTour.Location = new System.Drawing.Point(356, 49);
             this.btnTour.Name = "btnTour";
-            this.btnTour.Size = new System.Drawing.Size(117, 23);
+            this.btnTour.Size = new System.Drawing.Size(115, 26);
             this.btnTour.TabIndex = 12;
-            this.btnTour.Text = "Windows Tour";
+            this.btnTour.Text = "What\'s New";
             this.btnTour.UseVisualStyleBackColor = false;
             // 
-            // label3
+            // imgWelcome
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(378, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 50);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "95";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(209, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(184, 50);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Windows";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 50);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Welcome to";
+            this.imgWelcome.BackgroundImage = global::TimeHACK.Properties.Resources.win95_welcome;
+            this.imgWelcome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.imgWelcome.Location = new System.Drawing.Point(19, 17);
+            this.imgWelcome.Name = "imgWelcome";
+            this.imgWelcome.Size = new System.Drawing.Size(292, 19);
+            this.imgWelcome.TabIndex = 18;
+            this.imgWelcome.TabStop = false;
             // 
             // WinClassicWelcome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureBox2);
+            this.BackColor = System.Drawing.Color.Silver;
+            this.Controls.Add(this.imgWelcome);
+            this.Controls.Add(this.imgTip);
+            this.Controls.Add(this.imgPnl);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnOnline);
-            this.Controls.Add(this.btnNew);
             this.Controls.Add(this.btnTour);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Name = "WinClassicWelcome";
-            this.Size = new System.Drawing.Size(577, 344);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.Size = new System.Drawing.Size(483, 322);
+            ((System.ComponentModel.ISupportInitialize)(this.imgTip)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPnl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgWelcome)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox imgTip;
+        private System.Windows.Forms.PictureBox imgPnl;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnOnline;
-        private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button btnTour;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox imgWelcome;
     }
 }

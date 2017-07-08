@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            "/software/"}, -1, System.Drawing.Color.Black, System.Drawing.Color.Empty, null);
+            "/software/"}, 0, System.Drawing.Color.Black, System.Drawing.Color.Empty, null);
             System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
-            "index.html"}, -1, System.Drawing.Color.Black, System.Drawing.Color.Empty, null);
+            "index.html"}, 1, System.Drawing.Color.Black, System.Drawing.Color.Empty, null);
             System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
-            "???.html"}, -1, System.Drawing.Color.Black, System.Drawing.Color.Empty, null);
+            "???.html"}, 1, System.Drawing.Color.Black, System.Drawing.Color.Empty, null);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WinClassicFTPClient));
             this.topBar = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -186,7 +186,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 0;
-            this.button2.Text = "button2";
+            this.button2.Text = "cancelButton";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // welcomeLabel
@@ -209,11 +209,6 @@
             this.ftpFiles.Cursor = System.Windows.Forms.Cursors.Default;
             this.ftpFiles.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ftpFiles.ForeColor = System.Drawing.Color.White;
-            listViewItem1.StateImageIndex = 0;
-            listViewItem2.Checked = true;
-            listViewItem2.StateImageIndex = 1;
-            listViewItem3.Checked = true;
-            listViewItem3.StateImageIndex = 1;
             this.ftpFiles.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1,
             listViewItem2,

@@ -36,6 +36,18 @@ namespace TimeHACK.OS.Win95
         {
             InitializeComponent();
             startmenu.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            ProgramsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            AccessoriesToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            CommunicationsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            MultimediaToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            SystemToolsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            StartUpToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            MSDOSPromptToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            DocumentsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            SettingsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            FindToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+            BackgroundImage = currentTheme.defaultWallpaper;
             foreach (ToolStripMenuItem item in startmenuitems.Items)
             {
                 item.MouseEnter += new EventHandler(MenuItem_MouseEnter);
@@ -61,6 +73,7 @@ namespace TimeHACK.OS.Win95
         //  When New Game is clicked in TitleScreen.cs
         private void Desktop_Load(object sender, EventArgs e)
         {
+            if (currentTheme.defaultWallpaper != null) desktopicons.BackgroundImage = new Bitmap(currentTheme.defaultWallpaper, desktopicons.Width, desktopicons.Height);
             //Start Menu Color - Commented until it works reliably
             //startmenuitems.Renderer = new MyRenderer();
             //ProgramsToolStripMenuItem.DropDown.Renderer = new MyRenderer();
@@ -69,7 +82,7 @@ namespace TimeHACK.OS.Win95
             fontLoad();
             
             // Play Windows 95 Start Sound
-            Stream audio = Properties.Resources.Win95Start;
+            Stream audio = currentTheme.startSound;
             startsound = new SoundPlayer(audio);
             startsound.Play();
 
@@ -142,7 +155,8 @@ namespace TimeHACK.OS.Win95
         // Shutdown button
         private void ShutdownToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Program.ShutdownApplication(Properties.Resources.tada);
+            SaveGame();
+            Program.ShutdownApplication(currentTheme.stopSound);
         }
 
         #endregion //Region
@@ -224,7 +238,7 @@ namespace TimeHACK.OS.Win95
 
         private void installerTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            WinClassicInstaller openinstaller = new WinClassicInstaller();
+            Win95Installer openinstaller = new Win95Installer("Testing");
             WinClassic app = wm.StartWin95(openinstaller, "Installer", null, false, true);
 
             AddTaskBarItem(app, app.Tag.ToString(), "Installer", null);
@@ -264,10 +278,19 @@ namespace TimeHACK.OS.Win95
                     }
                     else if (objListViewItem.Text == "Web Chat Setup")
                     {
-                        WinClassicInstaller inst = new WinClassicInstaller();
-                        inst.installname.Text = "Web Chat 1998";
+                        Win95Installer inst = new Win95Installer("Web Chat 1998");
+                        inst.InstallCompleted += (sendr, args) => WebChatToolStripMenuItem.Visible = true;
                         WinClassic app = wm.StartWin95(inst, "Web Chat Setup", null, true, true);
                         AddTaskBarItem(app, app.Tag.ToString(), "Web Chat Setup", null);
+                        app.BringToFront();
+                        startmenu.Hide();
+                    }
+                    else if (objListViewItem.Text == "FTP Client Setup")
+                    {
+                        Win95Installer inst = new Win95Installer("FTP Client");
+                        inst.InstallCompleted += (sendr, args) => WebChatToolStripMenuItem.Visible = true;
+                        WinClassic app = wm.StartWin95(inst, "FTP Client Setup", null, true, true);
+                        AddTaskBarItem(app, app.Tag.ToString(), "FTP Client Setup", null);
                         app.BringToFront();
                         startmenu.Hide();
                     }
@@ -402,6 +425,33 @@ namespace TimeHACK.OS.Win95
             WinClassic app = wm.StartWin95(msdos, "MS-DOS Prompt", Properties.Resources.MS_DOS, true, true, false);
 
             AddTaskBarItem(app, app.Tag.ToString(), "MS-DOS Prompt", Properties.Resources.MS_DOS);
+            app.BringToFront();
+            startmenu.Hide();
+        }
+
+        private void PropertiesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            WinClassicThemePanel theme = new WinClassicThemePanel();
+            WinClassic app = wm.StartWin95(theme, "Themes", null, false, true, false);
+
+            AddTaskBarItem(app, app.Tag.ToString(), "Themes", null);
+            app.BringToFront();
+            startmenu.Hide();
+        }
+
+        private void TimeDistorterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WinClassic app = wm.StartWin95(new WinClassicTimeDistorter("2017", "20XX", 10), "Time Distorter", null, false, true);
+
+            AddTaskBarItem(app, app.Tag.ToString(), "Time Distorter", null);
+            app.BringToFront();
+            startmenu.Hide();
+        }
+        private void FTPClientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WinClassic app = wm.StartWin95(new WinClassicFTPClient(), "FTP Client", null, true, true);
+
+            AddTaskBarItem(app, app.Tag.ToString(), "FTP Client", null);
             app.BringToFront();
             startmenu.Hide();
         }
