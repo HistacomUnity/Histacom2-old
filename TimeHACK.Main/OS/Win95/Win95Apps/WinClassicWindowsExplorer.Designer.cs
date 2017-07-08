@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WinClassicWindowsExplorer));
             this.program = new System.Windows.Forms.Panel();
             this.diskView = new System.Windows.Forms.TreeView();
             this.MenuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -95,6 +94,7 @@
             // program
             // 
             this.program.BackColor = System.Drawing.Color.Silver;
+            this.program.Controls.Add(this.mainView);
             this.program.Controls.Add(this.diskView);
             this.program.Controls.Add(this.MenuStrip1);
             this.program.Controls.Add(this.toprightcorner);
@@ -102,7 +102,6 @@
             this.program.Controls.Add(this.bottomleftcorner);
             this.program.Controls.Add(this.topleftcorner);
             this.program.Controls.Add(this.pnlSave);
-            this.program.Controls.Add(this.mainView);
             this.program.Dock = System.Windows.Forms.DockStyle.Fill;
             this.program.Location = new System.Drawing.Point(0, 0);
             this.program.Name = "program";
@@ -111,13 +110,13 @@
             // 
             // diskView
             // 
-            this.diskView.ImageList = new System.Windows.Forms.ImageList();
+            this.diskView.ImageIndex = 0;
             this.diskView.Location = new System.Drawing.Point(3, 27);
             this.diskView.Name = "diskView";
+            this.diskView.SelectedImageIndex = 0;
             this.diskView.Size = new System.Drawing.Size(213, 444);
             this.diskView.TabIndex = 13;
-            this.diskView.Visible = true;
-            this.diskView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(diskView_AfterSelect);
+            this.diskView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.diskView_AfterSelect);
             // 
             // MenuStrip1
             // 

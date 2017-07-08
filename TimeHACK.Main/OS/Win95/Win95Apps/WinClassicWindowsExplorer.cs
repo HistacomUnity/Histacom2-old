@@ -11,6 +11,7 @@ using static TimeHACK.Engine.SaveSystem;
 using System.IO;
 using TimeHACK.Engine;
 using Newtonsoft.Json;
+using TimeHACK.Engine.Template;
 
 namespace TimeHACK.OS.Win95.Win95Apps
 {
@@ -132,6 +133,46 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 ((Form)this.TopLevelControl).Close();
             }
         }
+
+        void OpenFile(String filedir)
+        {
+            try
+            {
+                ReturnType(new FileInfo(filedir).Extension);
+                switch (fileType)
+                {
+                    case 1:
+                        WinClassicNotepad np = new WinClassicNotepad();
+                        np.mainText.Text = FileDialogBoxManager.ReadTextFile(filedir);
+                        WinClassic app = wm.StartWin95(new WinClassicNotepad(), "Notepad", Properties.Resources.Win95IconNotepad, true, true);
+
+                        Program.AddTaskbarItem(app, app.Tag.ToString(), "Notepad", Properties.Resources.Win95IconNotepad);
+
+                        break;
+                    case 12:
+                        OpenApplication(FileDialogBoxManager.ReadTextFile(filedir));
+                        break;
+                }
+            } catch {
+
+            }
+            
+        }
+
+        void OpenApplication(String appname)
+        {
+            switch (appname.ToLower())
+            {
+                case "windowsexplorer":
+                    WinClassicWindowsExplorer we = new WinClassicWindowsExplorer();
+                    Engine.Template.WinClassic app = wm.StartWin95(we, "Windows Explorer", Properties.Resources.Win95Computer, true, true);
+                    Program.AddTaskbarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.Win95Computer);
+
+                    break;
+                case "calculator":
+                    throw new NotImplementedException();
+            }
+            }
 
         string ReturnType(string extension) {
             string returnVal = "";
@@ -492,20 +533,31 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             try
             {
-                if ((String)mainView.FocusedItem.Tag != "") { // If it isn't a file
-                    GoToDir(currentDirectory + "\\" + mainView.FocusedItem.Tag);
-                } else { // If it is a file
-                    if (new FileInfo(Path.Combine(currentDirectory, txtSave.Text)).Extension == onlyViewExtension)
-                    {
-                        Program.WindowsExplorerReturnPath = currentDirectory + "\\" + txtSave.Text;
+                if (IsFileOpenDialog == true || IsFileSaveDialog == true)
+                {
+                    if ((String)mainView.FocusedItem.Tag != "")
+                    { // If it isn't a file
+                        GoToDir(currentDirectory + "\\" + mainView.FocusedItem.Tag);
                     }
+                    else
+                    { // If it is a file
+                        if (new FileInfo(Path.Combine(currentDirectory, txtSave.Text)).Extension == onlyViewExtension)
+                        {
+                            Program.WindowsExplorerReturnPath = currentDirectory + "\\" + txtSave.Text;
+                        }
 
 
-                    FileDialogBoxManager.IsInOpenDialog = false;
-                    FileDialogBoxManager.IsInSaveDialog = false;
+                        FileDialogBoxManager.IsInOpenDialog = false;
+                        FileDialogBoxManager.IsInSaveDialog = false;
 
-                    ((Form)this.TopLevelControl).Close();
+                        ((Form)this.TopLevelControl).Close();
+                    }
+                } else {
+                    // Open it if it's a recognized file
+
+                    
                 }
+                
             } catch {
 
             }
