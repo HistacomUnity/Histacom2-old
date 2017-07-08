@@ -144,7 +144,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     case 1:
                         WinClassicNotepad np = new WinClassicNotepad();
                         np.mainText.Text = FileDialogBoxManager.ReadTextFile(filedir);
-                        WinClassic app = wm.StartWin95(new WinClassicNotepad(), "Notepad", Properties.Resources.Win95IconNotepad, true, true);
+                        WinClassic app = wm.StartWin95(np, "Notepad", Properties.Resources.Win95IconNotepad, true, true);
 
                         Program.AddTaskbarItem(app, app.Tag.ToString(), "Notepad", Properties.Resources.Win95IconNotepad);
 
