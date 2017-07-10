@@ -221,12 +221,6 @@
     <Compile Include="OS\Win95\Win95Apps\AddressBook\FRMWinClassicAddressBookNewContact.Designer.cs">
       <DependentUpon>FRMWinClassicAddressBookNewContact.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\TestApp.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="OS\Win95\Win95Apps\TestApp.Designer.cs">
-      <DependentUpon>TestApp.cs</DependentUpon>
-    </Compile>
     <Compile Include="OS\Win95\Win95Apps\WebChat1998.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -353,9 +347,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\AddressBook\FRMWinClassicAddressBookNewContact.resx">
       <DependentUpon>FRMWinClassicAddressBookNewContact.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\TestApp.resx">
-      <DependentUpon>TestApp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WebChat1998.resx">
       <DependentUpon>WebChat1998.cs</DependentUpon>
