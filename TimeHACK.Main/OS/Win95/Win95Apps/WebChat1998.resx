@@ -693,7 +693,7 @@
     },
     {
       "user": "SkyHigh",
-      "delay": 7000,
+      "delay": 6000,
       "message": "hey! give me back my taskbar!",
       "special": null,
       "userchat": true
@@ -707,9 +707,51 @@
     },
     {
       "user": "12padams",
-      "delay": 2500,
+      "delay": 1500,
       "message": "and your icons are infected too so you dont need them",
       "special": "iconsgone",
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 3000,
+      "message": "please stop!",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 4000,
+      "message": "you want to know how to stop this?",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 3000,
+      "message": "please just let us go and forget this happened!",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 9000,
+      "message": "well first, i need your full attention.",
+      "special": "bigtext",
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 3500,
+      "message": "please this is enough! you've done everything to convince me that I won't illegally download your software again!",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 5000,
+      "message": "i've done everything? no, what about this?",
+      "special": "notopbar",
       "userchat": true
     }
   ]
