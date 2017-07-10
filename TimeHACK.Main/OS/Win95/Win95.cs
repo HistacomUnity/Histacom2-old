@@ -13,8 +13,6 @@ using TimeHACK.OS.Win95.Win95Apps.Story;
 using static TimeHACK.Engine.SaveSystem;
 namespace TimeHACK.OS.Win95
 {
-    
-   
     public partial class Windows95 : Form
     {
         private SoundPlayer startsound;
@@ -73,7 +71,7 @@ namespace TimeHACK.OS.Win95
         //  When New Game is clicked in TitleScreen.cs
         private void Desktop_Load(object sender, EventArgs e)
         {
-            if (currentTheme.defaultWallpaper != null) desktopicons.BackgroundImage = new Bitmap(currentTheme.defaultWallpaper, desktopicons.Width, desktopicons.Height);
+            if (currentTheme.defaultWallpaper != null) desktopicons.BackgroundImage = new Bitmap(currentTheme.defaultWallpaper, Width, Height);
             //Start Menu Color - Commented until it works reliably
             //startmenuitems.Renderer = new MyRenderer();
             //ProgramsToolStripMenuItem.DropDown.Renderer = new MyRenderer();
