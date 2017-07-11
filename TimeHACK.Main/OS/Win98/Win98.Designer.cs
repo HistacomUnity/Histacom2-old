@@ -89,7 +89,6 @@ namespace TimeHACK.OS.Win98
             this.WebChatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TimeDistorterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DocumentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.windowManagerTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.downloaderTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.installerTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.storyTest1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -730,7 +729,6 @@ namespace TimeHACK.OS.Win98
             this.DocumentsToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.DocumentsToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
             this.DocumentsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.windowManagerTestToolStripMenuItem,
             this.downloaderTestToolStripMenuItem,
             this.installerTestToolStripMenuItem,
             this.storyTest1ToolStripMenuItem});
@@ -741,15 +739,6 @@ namespace TimeHACK.OS.Win98
             this.DocumentsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
             this.DocumentsToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
             this.DocumentsToolStripMenuItem.Text = "Documents";
-            // 
-            // windowManagerTestToolStripMenuItem
-            // 
-            this.windowManagerTestToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.windowManagerTestToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("windowManagerTestToolStripMenuItem.BackgroundImage")));
-            this.windowManagerTestToolStripMenuItem.Name = "windowManagerTestToolStripMenuItem";
-            this.windowManagerTestToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.windowManagerTestToolStripMenuItem.Text = "WindowManagerTest";
-            this.windowManagerTestToolStripMenuItem.Click += new System.EventHandler(this.windowManagerTestToolStripMenuItem_Click);
             // 
             // downloaderTestToolStripMenuItem
             // 
@@ -1261,7 +1250,6 @@ namespace TimeHACK.OS.Win98
         internal System.Windows.Forms.ToolStripMenuItem MicrosoftDataLinkToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem PropertiesToolStripMenuItem1;
         internal System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Windows95));
-        private System.Windows.Forms.ToolStripMenuItem windowManagerTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem downloaderTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem installerTestToolStripMenuItem;
         private System.Windows.Forms.Panel taskbarItems;

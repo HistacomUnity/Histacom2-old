@@ -8,7 +8,6 @@ using TimeHACK.Engine;
 using TimeHACK.Engine.Template;
 using TimeHACK.Engine.Template.Taskbars;
 using TimeHACK.OS.Win95.Win95Apps;
-using TimeHACK.WinClassicForms;
 using TimeHACK.OS.Win95.Win95Apps.Story;
 
 namespace TimeHACK.OS.Win98
@@ -195,15 +194,6 @@ namespace TimeHACK.OS.Win98
             app.BringToFront();
             startmenu.Hide();
         }
-        private void windowManagerTestToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TestApp test = new TestApp();
-            WinClassic app = wm.StartWin95(test, "TestApp", null, true, true);
-            AddTaskBarItem(app, app.Tag.ToString(), "TestApp", null);
-            app.BringToFront();
-            startmenu.Hide();
-        }
-
         private void downloaderTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WinClassicDownloader opendownload = new WinClassicDownloader();
