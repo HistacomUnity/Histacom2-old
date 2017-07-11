@@ -15,11 +15,12 @@ namespace TimeHACK.OS.Win95.Win95Apps
         public WinClassicHWCV()
         {
             InitializeComponent();
+            Button1.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            if (TextBox1.Text == "www.12padams.com")
+            if (TextBox1.Text == "www.12padams.com" || TextBox1.Text == "http://www.12padams.com/")
             {
                 Label3.Show();
                 Label3.Text = "Hidden Content Found: Time Distorter";
