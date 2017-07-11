@@ -20,7 +20,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             InitializeComponent();
             foreach (ToolStripMenuItem item in menuStrip1.Items)
             {
-                item.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
+                item.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular);
                 item.BackColor = Color.Silver;
                 item.BackgroundImage = Properties.Resources.sliversilver;
                 item.BackgroundImageLayout = ImageLayout.Center;
@@ -91,8 +91,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             try
             {
                 ActivateSaveFileDialog(".txt");
-                String selectedPath;
-                selectedPath = Program.OpenFileExplorerAsDialogAndReturnGivenPath();
+                string selectedPath = Program.OpenFileExplorerAsDialogAndReturnGivenPath();
 
                 MessageBox.Show(selectedPath);
                 if (selectedPath != "")
@@ -110,8 +109,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             try
             {
                 ActivateSaveFileDialog(".txt");
-                String selectedPath;
-                selectedPath = Program.OpenFileExplorerAsDialogAndReturnGivenPath();
+                string selectedPath = Program.OpenFileExplorerAsDialogAndReturnGivenPath();
 
                 MessageBox.Show(selectedPath);
                 if (selectedPath != "")
