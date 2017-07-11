@@ -43,6 +43,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 comboFont.Items.Add(font.Name);
             }
 
+            // Handlers
             this.clearToolStripMenuItem.Click += (sender, args) => mainText.Text = mainText.Text.Remove(mainText.SelectionStart, mainText.SelectedText.Length);
             this.pasteToolStripMenuItem.Click += (sender, args) => mainText.Paste();
             this.btnPaste.Click += (sender, args) => mainText.Paste();
@@ -56,6 +57,14 @@ namespace TimeHACK.OS.Win95.Win95Apps
             this.toolbarToolStripMenuItem.Click += (sender, args) => pnlToolbar.Visible = toolbarToolStripMenuItem.Checked;
             this.formatBarToolStripMenuItem.Click += (sender, args) => pnlFormatBar.Visible = formatBarToolStripMenuItem.Checked;
             this.statusBarToolStripMenuItem.Click += (sender, args) => statusBar.Visible = statusBarToolStripMenuItem.Checked;
+            this.exitToolStripMenuItem.Click += (sender, args) => ((Form)this.TopLevelControl).Close();
+            this.aboutWordpadToolStripMenuItem.Click += (sender, args) => wm.StartAboutBox95("Wordpad", "Microsoft Wordpad", Properties.Resources.Win95IconWordpad);
+            this.btnNew.Click += (sender, args) => mainText.Text = "";
+            this.newToolStripMenuItem.Click += (sender, args) => mainText.Text = "";
+            this.sendToolStripMenuItem.Click += (sender, args) => wm.StartInfobox95("Wordpad", "An error occured opening send option.", null);
+            this.bulletStyleToolStripMenuItem.Click += (sender, args) => mainText.SelectionBullet = bulletStyleToolStripMenuItem.Checked;
+            this.comboFont.SelectedIndexChanged += (sender, args) => SetSelectedTextFont(comboFont.Text);
+            this.comboSize.SelectedIndexChanged += (sender, args) => SetSelectedTextSize(comboSize.Text);
         }
 
         #region Format_Buttons
@@ -110,46 +119,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         #endregion
 
         #region Designer-Stuff
-
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ((Form)this.TopLevelControl).Close();
-        }
-
-        private void aboutWordpadToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            wm.StartAboutBox95("Wordpad", "Microsoft Wordpad", Properties.Resources.Win95IconWordpad);
-        }
-
-        private void newToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            NewFile();
-        }
-
-        private void btnNew_Click(object sender, EventArgs e)
-        {
-            NewFile();
-        }
-
-        private void sendToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            wm.StartInfobox95("Wordpad", "An error occured opening send option.", null);
-        }
-
-        private void bulletStyleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            mainText.SelectionBullet = bulletStyleToolStripMenuItem.Checked;
-        }
-
-        private void comboFont_SelectedIndexChanged(object sender, EventArgs e)
-        {           
-            SetSelectedTextFont(comboFont.Text);
-        }
-
-        private void comboSize_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            SetSelectedTextSize(comboSize.Text);
-        }
+        
         private void btnBold_MouseEnter(object sender, EventArgs e)
         {
             lblStatus.Text = "Makes the selected text Bold. (toggle)";
@@ -181,14 +151,9 @@ namespace TimeHACK.OS.Win95.Win95Apps
         }
         #endregion
 
-        void NewFile()
-        {
-            mainText.Text = "";
-        }
-
         // Things for Cut/Copy/Paste have been placed in the "Designer-Stuff" region!
 
-        void SetSelectedTextFont(String font)
+        void SetSelectedTextFont(string font)
         {
             // The next two lines convert a String to a Font
             var cvt = new FontConverter();
@@ -197,7 +162,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             mainText.SelectionFont = f;
         }
 
-        void SetSelectedTextSize(String size)
+        void SetSelectedTextSize(string size)
         {
             //  The next few lines will ATTEMPT to convert a String to an Integer
             int SizeInt = Convert.ToInt32(size);
