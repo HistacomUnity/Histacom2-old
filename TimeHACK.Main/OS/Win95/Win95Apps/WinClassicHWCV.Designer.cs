@@ -81,11 +81,13 @@
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(148, 13);
             this.Label3.TabIndex = 3;
-            this.Label3.Text = "Content Found: Time Distortor";
+            this.Label3.Text = "Label3";
+            this.Label3.Visible = false;
             // 
             // Button1
             // 
             this.Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button1.Location = new System.Drawing.Point(278, 145);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(75, 20);

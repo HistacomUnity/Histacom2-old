@@ -42,6 +42,20 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
                 comboFont.Items.Add(font.Name);
             }
+
+            this.clearToolStripMenuItem.Click += (sender, args) => mainText.Text = mainText.Text.Remove(mainText.SelectionStart, mainText.SelectedText.Length);
+            this.pasteToolStripMenuItem.Click += (sender, args) => mainText.Paste();
+            this.btnPaste.Click += (sender, args) => mainText.Paste();
+            this.btnCopy.Click += (sender, args) => { if (mainText.SelectedText.Length >= 0) mainText.Copy(); };
+            this.copyToolStripMenuItem.Click += (sender, args) => { if (mainText.SelectedText.Length >= 0) mainText.Copy(); };
+            this.cutToolStripMenuItem.Click += (sender, args) => { if (mainText.SelectedText.Length >= 0) mainText.Cut(); };
+            this.btnCut.Click += (sender, args) => { if (mainText.SelectedText.Length >= 0) mainText.Cut(); };
+            this.undoToolStripMenuItem.Click += (sender, args) => mainText.Undo();
+            this.selectAllToolStripMenuItem.Click += (sender, args) => mainText.SelectAll();
+            this.dateTimeToolStripMenuItem.Click += (sender, args) => mainText.AppendText(DateTime.Now.ToString("HH:mm tt dd/MM/yyyy"));
+            this.toolbarToolStripMenuItem.Click += (sender, args) => pnlToolbar.Visible = toolbarToolStripMenuItem.Checked;
+            this.formatBarToolStripMenuItem.Click += (sender, args) => pnlFormatBar.Visible = formatBarToolStripMenuItem.Checked;
+            this.statusBarToolStripMenuItem.Click += (sender, args) => statusBar.Visible = statusBarToolStripMenuItem.Checked;
         }
 
         #region Format_Buttons
@@ -96,24 +110,6 @@ namespace TimeHACK.OS.Win95.Win95Apps
         #endregion
 
         #region Designer-Stuff
-        private void dateTimeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            InsertDateTime();
-        }
-        private void toolbarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            pnlToolbar.Visible = toolbarToolStripMenuItem.Checked;
-        }
-
-        private void formatBarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            pnlFormatBar.Visible = formatBarToolStripMenuItem.Checked;
-        }
-
-        private void statusBarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            statusBar.Visible = statusBarToolStripMenuItem.Checked;
-        }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -138,81 +134,6 @@ namespace TimeHACK.OS.Win95.Win95Apps
         private void sendToolStripMenuItem_Click(object sender, EventArgs e)
         {
             wm.StartInfobox95("Wordpad", "An error occured opening send option.", null);
-        }
-
-        void Cut()
-        {
-            if (mainText.SelectedText.Length >= 0) {
-                mainText.Cut();
-            }     
-        }
-
-        void Copy()
-        {
-            if (mainText.SelectedText.Length >= 0)
-            {
-                mainText.Copy();
-            }
-        }
-
-        void Paste()
-        {
-            mainText.Paste();
-        }
-
-        void Clear()
-        {
-            mainText.Text = mainText.Text.Remove(mainText.SelectionStart, mainText.SelectedText.Length);
-        }
-
-        void SelectAll()
-        {
-            mainText.SelectAll();
-        }
-
-        private void undoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Undo();
-        }
-
-        private void cutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Cut();
-        }
-
-        private void copyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Copy();
-        }
-
-        private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Paste();
-        }
-
-        private void selectAllToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SelectAll();
-        }
-
-        private void clearToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Clear();
-        }
-
-        private void btnCut_Click(object sender, EventArgs e)
-        {
-            Cut();
-        }
-
-        private void btnCopy_Click(object sender, EventArgs e)
-        {
-            Copy();
-        }
-
-        private void btnPaste_Click(object sender, EventArgs e)
-        {
-            Paste();
         }
 
         private void bulletStyleToolStripMenuItem_Click(object sender, EventArgs e)
@@ -265,17 +186,6 @@ namespace TimeHACK.OS.Win95.Win95Apps
             mainText.Text = "";
         }
 
-        void Undo()
-        {
-            mainText.Undo();
-        }
-
-        void InsertDateTime()
-        {
-            string DateTime = System.DateTime.Now.ToString("HH:mm tt dd/MM/yyyy");
-            mainText.AppendText(DateTime);
-        }
-
         // Things for Cut/Copy/Paste have been placed in the "Designer-Stuff" region!
 
         void SetSelectedTextFont(String font)
@@ -300,18 +210,9 @@ namespace TimeHACK.OS.Win95.Win95Apps
             FontStyle Bold = FontStyle.Regular;
             FontStyle Italic = FontStyle.Regular;
             FontStyle Underline = FontStyle.Regular;
-            if (doBold == true)
-            {
-                Bold = FontStyle.Bold;
-            }
-            if (doItalic == true)
-            {
-                Italic = FontStyle.Italic;
-            }
-            if (doUnderline == true)
-            {
-                Underline = FontStyle.Underline;
-            }
+            if (doBold == true) Bold = FontStyle.Bold;
+            if (doItalic == true) Italic = FontStyle.Italic;
+            if (doUnderline == true)Underline = FontStyle.Underline;
             mainText.SelectionFont = new Font(mainText.SelectionFont.FontFamily, mainText.SelectionFont.Size, Bold | Italic | Underline);
         }
     }

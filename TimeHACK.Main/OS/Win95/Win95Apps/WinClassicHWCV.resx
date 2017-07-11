@@ -118,9 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="TextBox1.Text" xml:space="preserve">
-    <value>This Program is a hacking tool which is able to view  hidden content on websites.
+    <value>This program is a hacking tool which is able to view hidden content on websites.
 
-To view hidden content just type the name of the website in the box below and this will enable you to see all the hidden features on a website.
+To view hidden content just type the URL of the website in the box below and this will enable you to see all the hidden features on a website.
 
 WARNING: This only displays hidden content which can not be accessed in anyway without this software.
 </value>

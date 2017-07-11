@@ -152,7 +152,6 @@
             this.undoToolStripMenuItem.Name = "undoToolStripMenuItem";
             this.undoToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.undoToolStripMenuItem.Text = "Undo";
-            this.undoToolStripMenuItem.Click += new System.EventHandler(this.undoToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
@@ -164,21 +163,18 @@
             this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
             this.cutToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.cutToolStripMenuItem.Text = "Cut";
-            this.cutToolStripMenuItem.Click += new System.EventHandler(this.cutToolStripMenuItem_Click);
             // 
             // copyToolStripMenuItem
             // 
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
             this.copyToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.copyToolStripMenuItem.Text = "Copy";
-            this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
             // pasteToolStripMenuItem
             // 
             this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
             this.pasteToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.pasteToolStripMenuItem.Text = "Paste";
-            this.pasteToolStripMenuItem.Click += new System.EventHandler(this.pasteToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
@@ -190,14 +186,12 @@
             this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
             this.clearToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.clearToolStripMenuItem.Text = "Clear";
-            this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
             // selectAllToolStripMenuItem
             // 
             this.selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
             this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.selectAllToolStripMenuItem.Text = "Select All";
-            this.selectAllToolStripMenuItem.Click += new System.EventHandler(this.selectAllToolStripMenuItem_Click);
             // 
             // viewToolStripMenuItem
             // 
@@ -217,7 +211,6 @@
             this.toolbarToolStripMenuItem.Name = "toolbarToolStripMenuItem";
             this.toolbarToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.toolbarToolStripMenuItem.Text = "Toolbar";
-            this.toolbarToolStripMenuItem.Click += new System.EventHandler(this.toolbarToolStripMenuItem_Click);
             // 
             // formatBarToolStripMenuItem
             // 
@@ -227,7 +220,6 @@
             this.formatBarToolStripMenuItem.Name = "formatBarToolStripMenuItem";
             this.formatBarToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.formatBarToolStripMenuItem.Text = "Format Bar";
-            this.formatBarToolStripMenuItem.Click += new System.EventHandler(this.formatBarToolStripMenuItem_Click);
             // 
             // statusBarToolStripMenuItem
             // 
@@ -237,7 +229,6 @@
             this.statusBarToolStripMenuItem.Name = "statusBarToolStripMenuItem";
             this.statusBarToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.statusBarToolStripMenuItem.Text = "Status Bar";
-            this.statusBarToolStripMenuItem.Click += new System.EventHandler(this.statusBarToolStripMenuItem_Click);
             // 
             // insertToolStripMenuItem
             // 
@@ -252,7 +243,6 @@
             this.dateTimeToolStripMenuItem.Name = "dateTimeToolStripMenuItem";
             this.dateTimeToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.dateTimeToolStripMenuItem.Text = "Date/Time";
-            this.dateTimeToolStripMenuItem.Click += new System.EventHandler(this.dateTimeToolStripMenuItem_Click);
             // 
             // formatToolStripMenuItem
             // 
@@ -330,7 +320,6 @@
             this.btnPaste.Size = new System.Drawing.Size(26, 23);
             this.btnPaste.TabIndex = 1;
             this.btnPaste.UseVisualStyleBackColor = true;
-            this.btnPaste.Click += new System.EventHandler(this.btnPaste_Click);
             // 
             // btnCopy
             // 
@@ -341,7 +330,6 @@
             this.btnCopy.Size = new System.Drawing.Size(26, 23);
             this.btnCopy.TabIndex = 1;
             this.btnCopy.UseVisualStyleBackColor = true;
-            this.btnCopy.Click += new System.EventHandler(this.btnCopy_Click);
             // 
             // btnCut
             // 
@@ -352,7 +340,6 @@
             this.btnCut.Size = new System.Drawing.Size(26, 23);
             this.btnCut.TabIndex = 1;
             this.btnCut.UseVisualStyleBackColor = true;
-            this.btnCut.Click += new System.EventHandler(this.btnCut_Click);
             // 
             // btnNew
             // 
@@ -507,7 +494,7 @@
             // 
             // WinClassicWordPad
             // 
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.Silver;
             this.Controls.Add(this.statusBar);
             this.Controls.Add(this.mainText);
             this.Controls.Add(this.pnlFormatBar);
