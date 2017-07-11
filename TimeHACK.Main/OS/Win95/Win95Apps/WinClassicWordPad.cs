@@ -188,7 +188,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         // Things for Cut/Copy/Paste have been placed in the "Designer-Stuff" region!
 
-        void SetSelectedTextFont(String font)
+        void SetSelectedTextFont(string font)
         {
             // The next two lines convert a String to a Font
             var cvt = new FontConverter();
@@ -197,7 +197,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             mainText.SelectionFont = f;
         }
 
-        void SetSelectedTextSize(String size)
+        void SetSelectedTextSize(string size)
         {
             //  The next few lines will ATTEMPT to convert a String to an Integer
             int SizeInt = Convert.ToInt32(size);
