@@ -443,6 +443,13 @@ namespace TimeHACK.OS.Win95
             app.BringToFront();
             startmenu.Hide();
         }
+
+        private void iE4TestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WinClassic app = wm.StartWin95(new TempIE4(), "IE4", null, true, true);
+            app.BringToFront();
+            startmenu.Hide();
+        }
     }
     public class MyRenderer : ToolStripProfessionalRenderer
     {

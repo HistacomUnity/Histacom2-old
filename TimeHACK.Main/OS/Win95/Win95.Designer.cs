@@ -88,6 +88,7 @@ namespace TimeHACK.OS.Win95
             this.SkindowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.WebChatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TimeDistorterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.FTPClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DocumentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.downloaderTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.installerTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -129,7 +130,7 @@ namespace TimeHACK.OS.Win95
             this.BitmapImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MicrosoftDataLinkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PropertiesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.FTPClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iE4TestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.taskbar.SuspendLayout();
             this.clockPanel.SuspendLayout();
@@ -744,7 +745,8 @@ namespace TimeHACK.OS.Win95
             this.DocumentsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.downloaderTestToolStripMenuItem,
             this.installerTestToolStripMenuItem,
-            this.storyTest1ToolStripMenuItem});
+            this.storyTest1ToolStripMenuItem,
+            this.iE4TestToolStripMenuItem});
             this.DocumentsToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicDocuments;
             this.DocumentsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DocumentsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -758,7 +760,7 @@ namespace TimeHACK.OS.Win95
             this.downloaderTestToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.downloaderTestToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("downloaderTestToolStripMenuItem.BackgroundImage")));
             this.downloaderTestToolStripMenuItem.Name = "downloaderTestToolStripMenuItem";
-            this.downloaderTestToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.downloaderTestToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.downloaderTestToolStripMenuItem.Text = "DownloaderTest";
             this.downloaderTestToolStripMenuItem.Click += new System.EventHandler(this.downloaderTestToolStripMenuItem_Click);
             // 
@@ -767,7 +769,7 @@ namespace TimeHACK.OS.Win95
             this.installerTestToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.installerTestToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("installerTestToolStripMenuItem.BackgroundImage")));
             this.installerTestToolStripMenuItem.Name = "installerTestToolStripMenuItem";
-            this.installerTestToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.installerTestToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.installerTestToolStripMenuItem.Text = "InstallerTest";
             this.installerTestToolStripMenuItem.Click += new System.EventHandler(this.installerTestToolStripMenuItem_Click);
             // 
@@ -775,7 +777,7 @@ namespace TimeHACK.OS.Win95
             // 
             this.storyTest1ToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
             this.storyTest1ToolStripMenuItem.Name = "storyTest1ToolStripMenuItem";
-            this.storyTest1ToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.storyTest1ToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.storyTest1ToolStripMenuItem.Text = "StoryTest1";
             this.storyTest1ToolStripMenuItem.Click += new System.EventHandler(this.storyTest1ToolStripMenuItem_Click);
             // 
@@ -1143,6 +1145,15 @@ namespace TimeHACK.OS.Win95
             this.PropertiesToolStripMenuItem1.Text = "Properties";
             this.PropertiesToolStripMenuItem1.Click += new System.EventHandler(this.PropertiesToolStripMenuItem1_Click);
             // 
+            // iE4TestToolStripMenuItem
+            // 
+            this.iE4TestToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
+            this.iE4TestToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
+            this.iE4TestToolStripMenuItem.Name = "iE4TestToolStripMenuItem";
+            this.iE4TestToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.iE4TestToolStripMenuItem.Text = "IE4Test";
+            this.iE4TestToolStripMenuItem.Click += new System.EventHandler(this.iE4TestToolStripMenuItem_Click);
+            // 
             // Windows95
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1269,5 +1280,6 @@ namespace TimeHACK.OS.Win95
         private System.Windows.Forms.Panel taskbarItems;
         private System.Windows.Forms.ToolStripMenuItem storyTest1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem FTPClientToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem iE4TestToolStripMenuItem;
     }
 }

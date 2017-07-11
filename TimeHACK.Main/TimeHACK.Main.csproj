@@ -119,9 +119,6 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="TransparentListView">
-      <HintPath>..\..\..\..\Downloads\TransparentListView\TransparentListView.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="OS\BIOS\BIOS.cs">
@@ -136,7 +133,25 @@
     <Compile Include="OS\Win2K\Win2KApps\SurviveTheDay.Designer.cs">
       <DependentUpon>SurviveTheDay.cs</DependentUpon>
     </Compile>
+    <Compile Include="OS\Win95\Win95Apps\IE4Sites\GoogleHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\IE4Sites\GoogleHome.Designer.cs">
+      <DependentUpon>GoogleHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\IE4Sites\GooglePrototype.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\IE4Sites\GooglePrototype.Designer.cs">
+      <DependentUpon>GooglePrototype.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\Win95\Win95Apps\Story\Hack1.cs" />
+    <Compile Include="OS\Win95\Win95Apps\TempIE4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\TempIE4.Designer.cs">
+      <DependentUpon>TempIE4.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\Win95\Win95Apps\Win95Installer.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -299,6 +314,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win2K\Win2KApps\SurviveTheDay.resx">
       <DependentUpon>SurviveTheDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\IE4Sites\GoogleHome.resx">
+      <DependentUpon>GoogleHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\IE4Sites\GooglePrototype.resx">
+      <DependentUpon>GooglePrototype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\TempIE4.resx">
+      <DependentUpon>TempIE4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\Win95Installer.resx">
       <DependentUpon>Win95Installer.cs</DependentUpon>
