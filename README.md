@@ -8,7 +8,7 @@
 TimeHACK is a C# version of the PC game Histacom, released by 12padams in 2010. Here are some of our goals:
 * Get TimeHACK to the same playable state that Histacom's in and beyond.
 * Add more applications to the operating systems.
-* Get HTML working.
+* Add more story elements.
 
 ## Building
 TimeHACK is currently being developed in Microsoft Visual Studio 2017. Visual Studio 2015 has also been proven to work. If you are using a different IDE, please do so with caution. We cannot guarantee the stability of other IDEs.
