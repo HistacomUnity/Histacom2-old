@@ -14,11 +14,13 @@ namespace TimeHACK.OS.Win95.Win95Apps
     public partial class TempIE4 : UserControl
     {
         public static Panel browsingArea = new Panel();
+        public static ComboBox addressbar = new ComboBox();
 
         public TempIE4()
         {
             InitializeComponent();
             browsingArea = _browsingArea;
+            addressbar = _addressbar;
         }
 
         public static void GoToPage(string url)
@@ -27,6 +29,9 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
             switch (url)
             {
+                case "www.microsoft.com/windows/ie/default.htm":
+                    uc = new IE4Start();
+                    break;
                 case "www.google.com":
                     uc = new GoogleHome();
                     break;
@@ -35,6 +40,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     break;
             }
 
+            addressbar.Text = url;
             uc.Dock = DockStyle.Fill;
             browsingArea.Controls.Clear();
             browsingArea.Controls.Add(uc);
@@ -42,7 +48,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void TempIE4_Load(object sender, EventArgs e)
         {
-            GoToPage("www.google.com");
+            GoToPage("www.microsoft.com/windows/ie/default.htm");
         }
 
         private void GoButton_Click(object sender, EventArgs e)
