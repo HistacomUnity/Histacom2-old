@@ -1979,13 +1979,13 @@
             this.GoButton.UseVisualStyleBackColor = true;
             this.GoButton.Click += new System.EventHandler(GoButton_Click);
             // 
-            // addressbar
+            // _addressbar
             // 
             this.addressbar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.addressbar.FormattingEnabled = true;
             this.addressbar.Location = new System.Drawing.Point(58, 9);
-            this.addressbar.Name = "addressbar";
+            this.addressbar.Name = "_addressbar";
             this.addressbar.Size = new System.Drawing.Size(812, 21);
             this.addressbar.TabIndex = 1;
             this.addressbar.Text = "www.microsoft.com/internetexplorer4/welcome";

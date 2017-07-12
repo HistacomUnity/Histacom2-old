@@ -30,7 +30,7 @@
         {
             this.Panel14 = new System.Windows.Forms.Panel();
             this.GoButton = new System.Windows.Forms.Button();
-            this.addressbar = new System.Windows.Forms.ComboBox();
+            this._addressbar = new System.Windows.Forms.ComboBox();
             this.Label1 = new System.Windows.Forms.Label();
             this.Button30 = new System.Windows.Forms.Button();
             this.Button29 = new System.Windows.Forms.Button();
@@ -150,7 +150,7 @@
             // 
             this.Panel14.BackColor = System.Drawing.Color.Silver;
             this.Panel14.Controls.Add(this.GoButton);
-            this.Panel14.Controls.Add(this.addressbar);
+            this.Panel14.Controls.Add(this._addressbar);
             this.Panel14.Controls.Add(this.Label1);
             this.Panel14.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel14.Location = new System.Drawing.Point(0, 73);
@@ -171,16 +171,16 @@
             this.GoButton.UseVisualStyleBackColor = true;
             this.GoButton.Click += new System.EventHandler(this.GoButton_Click);
             // 
-            // addressbar
+            // _addressbar
             // 
-            this.addressbar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this._addressbar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.addressbar.FormattingEnabled = true;
-            this.addressbar.Location = new System.Drawing.Point(58, 9);
-            this.addressbar.Name = "addressbar";
-            this.addressbar.Size = new System.Drawing.Size(812, 21);
-            this.addressbar.TabIndex = 1;
-            this.addressbar.Text = "www.microsoft.com/internetexplorer4/welcome";
+            this._addressbar.FormattingEnabled = true;
+            this._addressbar.Location = new System.Drawing.Point(58, 9);
+            this._addressbar.Name = "_addressbar";
+            this._addressbar.Size = new System.Drawing.Size(812, 21);
+            this._addressbar.TabIndex = 1;
+            this._addressbar.Text = "www.microsoft.com/internetexplorer4/welcome";
             // 
             // Label1
             // 
@@ -1176,7 +1176,7 @@
 
         internal System.Windows.Forms.Panel Panel14;
         internal System.Windows.Forms.Button GoButton;
-        internal System.Windows.Forms.ComboBox addressbar;
+        internal System.Windows.Forms.ComboBox _addressbar;
         internal System.Windows.Forms.Label Label1;
         internal System.Windows.Forms.Button Button30;
         internal System.Windows.Forms.Button Button29;
