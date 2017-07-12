@@ -93,6 +93,7 @@ namespace TimeHACK.OS.Win95
             this.downloaderTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.installerTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.storyTest1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iE4TestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ControlPanelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PrintersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -130,7 +131,6 @@ namespace TimeHACK.OS.Win95
             this.BitmapImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MicrosoftDataLinkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PropertiesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.iE4TestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.taskbar.SuspendLayout();
             this.clockPanel.SuspendLayout();
@@ -457,6 +457,7 @@ namespace TimeHACK.OS.Win95
             this.CalculatorToolStripMenuItem.Name = "CalculatorToolStripMenuItem";
             this.CalculatorToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.CalculatorToolStripMenuItem.Text = "Calculator";
+            this.CalculatorToolStripMenuItem.Click += new System.EventHandler(this.CalculatorToolStripMenuItem_Click);
             // 
             // HyperTerminalToolStripMenuItem
             // 
@@ -780,6 +781,15 @@ namespace TimeHACK.OS.Win95
             this.storyTest1ToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.storyTest1ToolStripMenuItem.Text = "StoryTest1";
             this.storyTest1ToolStripMenuItem.Click += new System.EventHandler(this.storyTest1ToolStripMenuItem_Click);
+            // 
+            // iE4TestToolStripMenuItem
+            // 
+            this.iE4TestToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
+            this.iE4TestToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
+            this.iE4TestToolStripMenuItem.Name = "iE4TestToolStripMenuItem";
+            this.iE4TestToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.iE4TestToolStripMenuItem.Text = "IE4Test";
+            this.iE4TestToolStripMenuItem.Click += new System.EventHandler(this.iE4TestToolStripMenuItem_Click);
             // 
             // SettingsToolStripMenuItem
             // 
@@ -1144,15 +1154,6 @@ namespace TimeHACK.OS.Win95
             this.PropertiesToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
             this.PropertiesToolStripMenuItem1.Text = "Properties";
             this.PropertiesToolStripMenuItem1.Click += new System.EventHandler(this.PropertiesToolStripMenuItem1_Click);
-            // 
-            // iE4TestToolStripMenuItem
-            // 
-            this.iE4TestToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
-            this.iE4TestToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
-            this.iE4TestToolStripMenuItem.Name = "iE4TestToolStripMenuItem";
-            this.iE4TestToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.iE4TestToolStripMenuItem.Text = "IE4Test";
-            this.iE4TestToolStripMenuItem.Click += new System.EventHandler(this.iE4TestToolStripMenuItem_Click);
             // 
             // Windows95
             // 

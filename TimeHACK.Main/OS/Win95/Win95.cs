@@ -450,6 +450,19 @@ namespace TimeHACK.OS.Win95
             app.BringToFront();
             startmenu.Hide();
         }
+
+        private void CalculatorToolStripMenuItem_Click(object sender, EventArgs e)
+        { 
+            WinClassic app = wm.StartWin95(new WinClassicCalculator(), "Calculator", Properties.Resources.WinClassicCalc, false, false);
+            AddTaskBarItem(app, app.Tag.ToString(), "Calculator", Properties.Resources.WinClassicCalc);
+
+            nonimportantapps.Add(app);
+            nonimportantapps[nonimportantapps.Count - 1].BringToFront();
+            nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
+
+            app.BringToFront();
+            startmenu.Hide();
+        }
     }
     public class MyRenderer : ToolStripProfessionalRenderer
     {
