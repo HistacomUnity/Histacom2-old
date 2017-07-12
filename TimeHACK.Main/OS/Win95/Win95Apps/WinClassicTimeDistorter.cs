@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using TimeHACK.Engine;
 using TimeHACK.Engine.Template;
@@ -8,9 +9,9 @@ namespace TimeHACK.OS.Win95
     public partial class WinClassicTimeDistorter : UserControl
     {
         private int _counter;
-        private Form _action;
+        private Action _action;
 
-        public WinClassicTimeDistorter(string currentYear, string yearToTravel, int counter, Form action = null)
+        public WinClassicTimeDistorter(string currentYear, string yearToTravel, int counter, Action action = null)
         {
             InitializeComponent();
             
@@ -25,6 +26,8 @@ namespace TimeHACK.OS.Win95
         {
             lblCountDown.Visible = true;
             btnGo.Enabled = false;
+
+            _action?.Invoke();
             countDownTimer.Start();
 
             lblCountDown.Text = $"Preparing to travel... ETA: {_counter.ToString()} seconds";
@@ -37,10 +40,8 @@ namespace TimeHACK.OS.Win95
             if (_counter == 0)
             {
                 countDownTimer.Stop();
-
-                if (_action != null)
-                    _action.ShowDialog();
             }
+
             lblCountDown.Text = $"Preparing to travel... ETA: {_counter.ToString()} seconds";
         }
     }

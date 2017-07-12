@@ -146,6 +146,7 @@
       <DependentUpon>GooglePrototype.cs</DependentUpon>
     </Compile>
     <Compile Include="OS\Win95\Win95Apps\Story\Hack1.cs" />
+    <Compile Include="OS\Win95\Win95Apps\Story\Hack2.cs" />
     <Compile Include="OS\Win95\Win95Apps\TempIE4.cs">
       <SubType>UserControl</SubType>
     </Compile>
