@@ -261,5 +261,10 @@ namespace TimeHACK.OS.Win95.Win95Apps
             a = Convert.ToDouble(txtNumbers.Text) / Convert.ToDouble(100);
             txtNumbers.Text = Convert.ToString(a);
         }
+
+        private void Button12_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
