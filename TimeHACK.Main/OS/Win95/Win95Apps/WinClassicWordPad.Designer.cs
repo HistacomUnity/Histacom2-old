@@ -111,7 +111,6 @@
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
             this.newToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.newToolStripMenuItem.Text = "New";
-            this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -123,14 +122,12 @@
             this.sendToolStripMenuItem.Name = "sendToolStripMenuItem";
             this.sendToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.sendToolStripMenuItem.Text = "Send...";
-            this.sendToolStripMenuItem.Click += new System.EventHandler(this.sendToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -258,7 +255,6 @@
             this.bulletStyleToolStripMenuItem.Name = "bulletStyleToolStripMenuItem";
             this.bulletStyleToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.bulletStyleToolStripMenuItem.Text = "Bullet style";
-            this.bulletStyleToolStripMenuItem.Click += new System.EventHandler(this.bulletStyleToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -286,7 +282,6 @@
             this.aboutWordpadToolStripMenuItem.Name = "aboutWordpadToolStripMenuItem";
             this.aboutWordpadToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.aboutWordpadToolStripMenuItem.Text = "About Wordpad";
-            this.aboutWordpadToolStripMenuItem.Click += new System.EventHandler(this.aboutWordpadToolStripMenuItem_Click);
             // 
             // mainText
             // 
@@ -350,7 +345,6 @@
             this.btnNew.Size = new System.Drawing.Size(26, 23);
             this.btnNew.TabIndex = 1;
             this.btnNew.UseVisualStyleBackColor = true;
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // pictureBox1
             // 
@@ -404,7 +398,6 @@
             this.comboSize.Size = new System.Drawing.Size(50, 21);
             this.comboSize.TabIndex = 1;
             this.comboSize.Text = "12";
-            this.comboSize.SelectedIndexChanged += new System.EventHandler(this.comboSize_SelectedIndexChanged);
             // 
             // comboFont
             // 
@@ -414,7 +407,6 @@
             this.comboFont.Size = new System.Drawing.Size(145, 21);
             this.comboFont.TabIndex = 1;
             this.comboFont.Text = "Arial";
-            this.comboFont.SelectedIndexChanged += new System.EventHandler(this.comboFont_SelectedIndexChanged);
             // 
             // pictureBox2
             // 
