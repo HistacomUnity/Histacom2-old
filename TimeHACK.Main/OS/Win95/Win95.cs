@@ -383,7 +383,7 @@ namespace TimeHACK.OS.Win95
 
         private void storyTest1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Hack1.startObjective();
+            Hack1.StartObjective();
         }
 
         private void temp_for_std(object sender, EventArgs e)
@@ -429,8 +429,7 @@ namespace TimeHACK.OS.Win95
 
         private void TimeDistorterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            WinClassic app = wm.StartWin95(new WinClassicTimeDistorter("2017", "20XX", 10), "Time Distorter", null, false, true);
-
+            WinClassic app = wm.StartWin95(new WinClassicTimeDistorter("1998", "1999", 160, Hack2.StartObjective), "Time Distorter", null, false, true);
             AddTaskBarItem(app, app.Tag.ToString(), "Time Distorter", null);
             app.BringToFront();
             startmenu.Hide();

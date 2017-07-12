@@ -356,7 +356,7 @@ namespace TimeHACK.OS.Win98
 
         private void storyTest1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Hack1.startObjective();
+            Hack1.StartObjective();
         }
 
         private void temp_for_std(object sender, EventArgs e)
