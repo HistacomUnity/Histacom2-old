@@ -158,6 +158,12 @@
     <Compile Include="OS\Win95\Win95Apps\Win95Installer.Designer.cs">
       <DependentUpon>Win95Installer.cs</DependentUpon>
     </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicCalculator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicCalculator.Designer.cs">
+      <DependentUpon>WinClassicCalculator.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\Win95\Win95Apps\WinClassicFTPClient.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -326,6 +332,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\Win95Installer.resx">
       <DependentUpon>Win95Installer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicCalculator.resx">
+      <DependentUpon>WinClassicCalculator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicFTPClient.resx">
       <DependentUpon>WinClassicFTPClient.cs</DependentUpon>
