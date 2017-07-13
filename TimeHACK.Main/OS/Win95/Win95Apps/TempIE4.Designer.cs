@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.Panel14 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.GoButton = new System.Windows.Forms.Button();
             this._addressbar = new System.Windows.Forms.ComboBox();
             this.Label1 = new System.Windows.Forms.Label();
             this.Button30 = new System.Windows.Forms.Button();
             this.Button29 = new System.Windows.Forms.Button();
-            this.Button28 = new System.Windows.Forms.Button();
             this.Button27 = new System.Windows.Forms.Button();
             this.Button7 = new System.Windows.Forms.Button();
             this.Button6 = new System.Windows.Forms.Button();
@@ -44,6 +44,11 @@
             this.ForwardButton = new System.Windows.Forms.Button();
             this.BackButton = new System.Windows.Forms.Button();
             this.Panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MenuStrip3 = new System.Windows.Forms.MenuStrip();
             this.ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -141,31 +146,62 @@
             this.ToolStripMenuItem94 = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem95 = new System.Windows.Forms.ToolStripMenuItem();
             this._browsingArea = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.Panel14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.MenuStrip3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel14
             // 
             this.Panel14.BackColor = System.Drawing.Color.Silver;
+            this.Panel14.Controls.Add(this.pictureBox10);
+            this.Panel14.Controls.Add(this.label2);
+            this.Panel14.Controls.Add(this.pictureBox9);
+            this.Panel14.Controls.Add(this.pictureBox3);
             this.Panel14.Controls.Add(this.GoButton);
             this.Panel14.Controls.Add(this._addressbar);
             this.Panel14.Controls.Add(this.Label1);
             this.Panel14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Panel14.Location = new System.Drawing.Point(0, 73);
+            this.Panel14.Location = new System.Drawing.Point(0, 71);
             this.Panel14.Name = "Panel14";
-            this.Panel14.Size = new System.Drawing.Size(959, 38);
+            this.Panel14.Size = new System.Drawing.Size(959, 31);
             this.Panel14.TabIndex = 16;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::TimeHACK.Properties.Resources.ie4_vsplitter2;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(2, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(3, 21);
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
             // 
             // GoButton
             // 
             this.GoButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.GoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GoButton.Location = new System.Drawing.Point(898, 5);
+            this.GoButton.Image = global::TimeHACK.Properties.Resources.ie4_go;
+            this.GoButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.GoButton.Location = new System.Drawing.Point(872, 2);
             this.GoButton.Name = "GoButton";
-            this.GoButton.Size = new System.Drawing.Size(55, 28);
-            this.GoButton.TabIndex = 2;
+            this.GoButton.Size = new System.Drawing.Size(44, 23);
+            this.GoButton.TabIndex = 0;
             this.GoButton.Text = "Go";
             this.GoButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.GoButton.UseVisualStyleBackColor = true;
@@ -176,30 +212,33 @@
             this._addressbar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._addressbar.FormattingEnabled = true;
-            this._addressbar.Location = new System.Drawing.Point(58, 9);
+            this._addressbar.Location = new System.Drawing.Point(58, 2);
             this._addressbar.Name = "_addressbar";
             this._addressbar.Size = new System.Drawing.Size(812, 21);
             this._addressbar.TabIndex = 1;
             this._addressbar.Text = "www.microsoft.com/internetexplorer4/welcome";
+            this._addressbar.KeyDown += new System.Windows.Forms.KeyEventHandler(this._addressbar_KeyDown);
             // 
             // Label1
             // 
             this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(4, 13);
+            this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Label1.Location = new System.Drawing.Point(12, 7);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(48, 13);
+            this.Label1.Size = new System.Drawing.Size(45, 13);
             this.Label1.TabIndex = 0;
-            this.Label1.Text = "Address:";
+            this.Label1.Text = "Address";
             // 
             // Button30
             // 
             this.Button30.Dock = System.Windows.Forms.DockStyle.Left;
             this.Button30.FlatAppearance.BorderSize = 0;
             this.Button30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button30.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Button30.Location = new System.Drawing.Point(750, 0);
+            this.Button30.Image = global::TimeHACK.Properties.Resources.ie4_print;
+            this.Button30.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Button30.Location = new System.Drawing.Point(591, 0);
             this.Button30.Name = "Button30";
-            this.Button30.Size = new System.Drawing.Size(75, 47);
+            this.Button30.Size = new System.Drawing.Size(49, 47);
             this.Button30.TabIndex = 10;
             this.Button30.Text = "Print";
             this.Button30.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -211,42 +250,29 @@
             this.Button29.Dock = System.Windows.Forms.DockStyle.Left;
             this.Button29.FlatAppearance.BorderSize = 0;
             this.Button29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button29.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Button29.Location = new System.Drawing.Point(675, 0);
+            this.Button29.Image = global::TimeHACK.Properties.Resources.ie4_mail;
+            this.Button29.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Button29.Location = new System.Drawing.Point(528, 0);
             this.Button29.Name = "Button29";
-            this.Button29.Size = new System.Drawing.Size(75, 47);
+            this.Button29.Size = new System.Drawing.Size(63, 47);
             this.Button29.TabIndex = 9;
             this.Button29.Text = "Mail";
             this.Button29.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Button29.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Button29.UseVisualStyleBackColor = true;
             // 
-            // Button28
-            // 
-            this.Button28.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Button28.FlatAppearance.BorderSize = 0;
-            this.Button28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button28.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Button28.Location = new System.Drawing.Point(600, 0);
-            this.Button28.Name = "Button28";
-            this.Button28.Size = new System.Drawing.Size(75, 47);
-            this.Button28.TabIndex = 8;
-            this.Button28.Text = "Full Screen";
-            this.Button28.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Button28.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Button28.UseVisualStyleBackColor = true;
-            // 
             // Button27
             // 
             this.Button27.Dock = System.Windows.Forms.DockStyle.Left;
             this.Button27.FlatAppearance.BorderSize = 0;
             this.Button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button27.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Button27.Location = new System.Drawing.Point(525, 0);
+            this.Button27.Image = global::TimeHACK.Properties.Resources.ie4_history;
+            this.Button27.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Button27.Location = new System.Drawing.Point(465, 0);
             this.Button27.Name = "Button27";
-            this.Button27.Size = new System.Drawing.Size(75, 47);
+            this.Button27.Size = new System.Drawing.Size(63, 47);
             this.Button27.TabIndex = 7;
-            this.Button27.Text = "Channels";
+            this.Button27.Text = "History";
             this.Button27.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Button27.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Button27.UseVisualStyleBackColor = true;
@@ -256,11 +282,14 @@
             this.Button7.Dock = System.Windows.Forms.DockStyle.Left;
             this.Button7.FlatAppearance.BorderSize = 0;
             this.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button7.Location = new System.Drawing.Point(450, 0);
+            this.Button7.Image = global::TimeHACK.Properties.Resources.ie4_favorites;
+            this.Button7.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Button7.Location = new System.Drawing.Point(402, 0);
             this.Button7.Name = "Button7";
-            this.Button7.Size = new System.Drawing.Size(75, 47);
+            this.Button7.Size = new System.Drawing.Size(63, 47);
             this.Button7.TabIndex = 6;
-            this.Button7.Text = "History";
+            this.Button7.Text = "Favorites";
+            this.Button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Button7.UseVisualStyleBackColor = true;
             // 
@@ -269,11 +298,14 @@
             this.Button6.Dock = System.Windows.Forms.DockStyle.Left;
             this.Button6.FlatAppearance.BorderSize = 0;
             this.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button6.Location = new System.Drawing.Point(375, 0);
+            this.Button6.Image = global::TimeHACK.Properties.Resources.ie4_search;
+            this.Button6.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Button6.Location = new System.Drawing.Point(339, 0);
             this.Button6.Name = "Button6";
-            this.Button6.Size = new System.Drawing.Size(75, 47);
+            this.Button6.Size = new System.Drawing.Size(63, 47);
             this.Button6.TabIndex = 5;
-            this.Button6.Text = "Favorites";
+            this.Button6.Text = "Search";
+            this.Button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Button6.UseVisualStyleBackColor = true;
             // 
@@ -282,11 +314,14 @@
             this.HomeButton.Dock = System.Windows.Forms.DockStyle.Left;
             this.HomeButton.FlatAppearance.BorderSize = 0;
             this.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HomeButton.Location = new System.Drawing.Point(300, 0);
+            this.HomeButton.Image = global::TimeHACK.Properties.Resources.ie4_home;
+            this.HomeButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.HomeButton.Location = new System.Drawing.Point(276, 0);
             this.HomeButton.Name = "HomeButton";
-            this.HomeButton.Size = new System.Drawing.Size(75, 47);
+            this.HomeButton.Size = new System.Drawing.Size(63, 47);
             this.HomeButton.TabIndex = 4;
             this.HomeButton.Text = "Home";
+            this.HomeButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.HomeButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.HomeButton.UseVisualStyleBackColor = true;
             // 
@@ -295,11 +330,14 @@
             this.Button4.Dock = System.Windows.Forms.DockStyle.Left;
             this.Button4.FlatAppearance.BorderSize = 0;
             this.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button4.Location = new System.Drawing.Point(225, 0);
+            this.Button4.Image = global::TimeHACK.Properties.Resources.ie4_refresh;
+            this.Button4.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Button4.Location = new System.Drawing.Point(213, 0);
             this.Button4.Name = "Button4";
-            this.Button4.Size = new System.Drawing.Size(75, 47);
+            this.Button4.Size = new System.Drawing.Size(63, 47);
             this.Button4.TabIndex = 3;
             this.Button4.Text = "Refresh";
+            this.Button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Button4.UseVisualStyleBackColor = true;
             // 
@@ -308,11 +346,14 @@
             this.Button3.Dock = System.Windows.Forms.DockStyle.Left;
             this.Button3.FlatAppearance.BorderSize = 0;
             this.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button3.Image = global::TimeHACK.Properties.Resources.ie4_stop;
+            this.Button3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Button3.Location = new System.Drawing.Point(150, 0);
             this.Button3.Name = "Button3";
-            this.Button3.Size = new System.Drawing.Size(75, 47);
+            this.Button3.Size = new System.Drawing.Size(63, 47);
             this.Button3.TabIndex = 2;
             this.Button3.Text = "Stop";
+            this.Button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Button3.UseVisualStyleBackColor = true;
             // 
@@ -321,11 +362,14 @@
             this.ForwardButton.Dock = System.Windows.Forms.DockStyle.Left;
             this.ForwardButton.FlatAppearance.BorderSize = 0;
             this.ForwardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ForwardButton.Image = global::TimeHACK.Properties.Resources.ie4_forward;
+            this.ForwardButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ForwardButton.Location = new System.Drawing.Point(75, 0);
             this.ForwardButton.Name = "ForwardButton";
             this.ForwardButton.Size = new System.Drawing.Size(75, 47);
             this.ForwardButton.TabIndex = 1;
             this.ForwardButton.Text = "Forward";
+            this.ForwardButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ForwardButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.ForwardButton.UseVisualStyleBackColor = true;
             // 
@@ -334,21 +378,27 @@
             this.BackButton.Dock = System.Windows.Forms.DockStyle.Left;
             this.BackButton.FlatAppearance.BorderSize = 0;
             this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackButton.Image = global::TimeHACK.Properties.Resources.ie4_back;
+            this.BackButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BackButton.Location = new System.Drawing.Point(0, 0);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(75, 47);
-            this.BackButton.TabIndex = 0;
+            this.BackButton.TabIndex = 1;
             this.BackButton.Text = "Back";
+            this.BackButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BackButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.BackButton.UseVisualStyleBackColor = true;
             // 
             // Panel1
             // 
             this.Panel1.BackColor = System.Drawing.Color.Silver;
-            this.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Panel1.Controls.Add(this.pictureBox8);
+            this.Panel1.Controls.Add(this.pictureBox6);
+            this.Panel1.Controls.Add(this.pictureBox5);
+            this.Panel1.Controls.Add(this.pictureBox2);
+            this.Panel1.Controls.Add(this.pictureBox1);
             this.Panel1.Controls.Add(this.Button30);
             this.Panel1.Controls.Add(this.Button29);
-            this.Panel1.Controls.Add(this.Button28);
             this.Panel1.Controls.Add(this.Button27);
             this.Panel1.Controls.Add(this.Button7);
             this.Panel1.Controls.Add(this.Button6);
@@ -360,8 +410,58 @@
             this.Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel1.Location = new System.Drawing.Point(0, 24);
             this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(959, 49);
+            this.Panel1.Size = new System.Drawing.Size(959, 47);
             this.Panel1.TabIndex = 14;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackgroundImage = global::TimeHACK.Properties.Resources.ie4_hsplitter;
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox8.Location = new System.Drawing.Point(0, 46);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(959, 2);
+            this.pictureBox8.TabIndex = 15;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImage = global::TimeHACK.Properties.Resources.ie4_hsplitter;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(959, 2);
+            this.pictureBox6.TabIndex = 14;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = global::TimeHACK.Properties.Resources.ie4_vsplitter3;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Location = new System.Drawing.Point(2, 5);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(3, 38);
+            this.pictureBox5.TabIndex = 13;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::TimeHACK.Properties.Resources.ie4_vsplitter;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(337, -1);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(2, 47);
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::TimeHACK.Properties.Resources.ie4_vsplitter;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(526, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(2, 47);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
             // 
             // MenuStrip3
             // 
@@ -1145,16 +1245,68 @@
             // 
             // _browsingArea
             // 
+            this._browsingArea.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this._browsingArea.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._browsingArea.Location = new System.Drawing.Point(0, 111);
-            this._browsingArea.Name = "browsingArea";
-            this._browsingArea.Size = new System.Drawing.Size(959, 483);
+            this._browsingArea.Location = new System.Drawing.Point(0, 102);
+            this._browsingArea.Name = "_browsingArea";
+            this._browsingArea.Size = new System.Drawing.Size(959, 492);
             this._browsingArea.TabIndex = 17;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::TimeHACK.Properties.Resources.ie4_vsplitter2;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(2, 4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(3, 19);
+            this.pictureBox4.TabIndex = 18;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackgroundImage = global::TimeHACK.Properties.Resources.ie4_hsplitter;
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox7.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(959, 2);
+            this.pictureBox7.TabIndex = 15;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackgroundImage = global::TimeHACK.Properties.Resources.ie4_hsplitter;
+            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox9.Location = new System.Drawing.Point(0, 26);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(959, 2);
+            this.pictureBox9.TabIndex = 16;
+            this.pictureBox9.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(924, 7);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(32, 13);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Links";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackgroundImage = global::TimeHACK.Properties.Resources.ie4_vsplitter2;
+            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox10.Location = new System.Drawing.Point(921, 4);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(3, 20);
+            this.pictureBox10.TabIndex = 19;
+            this.pictureBox10.TabStop = false;
             // 
             // TempIE4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this._browsingArea);
             this.Controls.Add(this.Panel14);
             this.Controls.Add(this.Panel1);
@@ -1164,9 +1316,19 @@
             this.Load += new System.EventHandler(this.TempIE4_Load);
             this.Panel14.ResumeLayout(false);
             this.Panel14.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.MenuStrip3.ResumeLayout(false);
             this.MenuStrip3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1180,7 +1342,6 @@
         internal System.Windows.Forms.Label Label1;
         internal System.Windows.Forms.Button Button30;
         internal System.Windows.Forms.Button Button29;
-        internal System.Windows.Forms.Button Button28;
         internal System.Windows.Forms.Button Button27;
         internal System.Windows.Forms.Button Button7;
         internal System.Windows.Forms.Button Button6;
@@ -1287,5 +1448,16 @@
         internal System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem94;
         internal System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem95;
         private System.Windows.Forms.Panel _browsingArea;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.Label label2;
     }
 }
