@@ -45,9 +45,9 @@ namespace TimeHACK.OS.Win95.Win95Apps
         //'    Next
         //'End Sub
 
-        String ReadDataFile(String reqDirectory, Boolean returnYesIfProtected = false) {
-            String Val = "";
-            String directoryFileInfo;
+        string ReadDataFile(string reqDirectory, bool returnYesIfProtected = false) {
+            string Val = "";
+            string directoryFileInfo;
             directoryFileInfo = File.ReadAllText(Path.Combine(reqDirectory, "_data.info"));
             FileSystemFolderInfo toRead = new FileSystemFolderInfo();
             toRead = JsonConvert.DeserializeObject<FileSystemFolderInfo>(directoryFileInfo);
@@ -70,14 +70,14 @@ namespace TimeHACK.OS.Win95.Win95Apps
             try {
                 // Refresh the right listview
                 this.mainView.Items.Clear();
-                // For Each drive As String In My.Computer.FileSystem.GetDirectories(GameMain.MyDocuments & "\HistacomVB\" & GameMain.SaveProfile & "\HistacomVB\Folders")
+                // For Each drive As string In My.Computer.FileSystem.GetDirectories(GameMain.MyDocuments & "\HistacomVB\" & GameMain.SaveProfile & "\HistacomVB\Folders")
                 //    If GetPropetiesForDir(drive)(4) = "isMyDocuments" Then
                 //        diskView.Items.Add("", 0)
                 //    End If
                 //Next
-                foreach (String str in Directory.GetDirectories(currentDirectory))
+                foreach (string str in Directory.GetDirectories(currentDirectory))
                 {
-                    String label = ReadDataFile(str, false);
+                    string label = ReadDataFile(str, false);
                     if (label == "")
                     {
                         this.mainView.Items.Add(Path.GetFileName(str));
@@ -87,7 +87,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         this.mainView.FindItemWithText(label).Tag = Path.GetFileName(str);
                     }
                 }
-                foreach (String str in Directory.GetFiles(currentDirectory))
+                foreach (string str in Directory.GetFiles(currentDirectory))
                 {
                     // Get app Icon
 
@@ -96,7 +96,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     switch (new FileInfo(str).Extension)
                     {
                         case ".exe":
-                            String contents;
+                            string contents;
 
                             contents = File.ReadAllText(str);
 
@@ -492,7 +492,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             try
             {
-                if ((String)mainView.FocusedItem.Tag != "") { // If it isn't a file
+                if ((string)mainView.FocusedItem.Tag != "") { // If it isn't a file
                     GoToDir(currentDirectory + "\\" + mainView.FocusedItem.Tag);
                 } else { // If it is a file
                     if (new FileInfo(Path.Combine(currentDirectory, txtSave.Text)).Extension == onlyViewExtension)
@@ -547,10 +547,10 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             try
             {
-                Boolean OpenFile = false;
+                bool OpenFile = false;
                 if (mainView.FocusedItem != null)
                 {
-                    if ((String)mainView.FocusedItem.Tag != "")
+                    if ((string)mainView.FocusedItem.Tag != "")
                     { // If it isn't a file
                         GoToDir(currentDirectory + "\\" + mainView.FocusedItem.Tag);
                     }
@@ -632,7 +632,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         private void mainView_AfterLabelEdit(object sender, LabelEditEventArgs e)
         {
 
-            String setText;
+            string setText;
             setText = mainView.FocusedItem.Text;
             if (setText == "")
             {

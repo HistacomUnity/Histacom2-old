@@ -51,7 +51,7 @@ namespace TimeHACK
             //TimeHACK.Engine.GameSave.SaveData MySaveData = new TimeHACK.Engine.GameSave.SaveData()
             //{
             //    OS = 60,
-            //    MyStringList = new List<string>
+            //    MystringList = new List<string>
             //    {
             //        "Item1",
             //        "Item2"
@@ -69,7 +69,7 @@ namespace TimeHACK
             Application.Run(title);
         }
 
-        public static String OpenFileExplorerAsDialogAndReturnGivenPath()
+        public static string OpenFileExplorerAsDialogAndReturnGivenPath()
         {
             WinClassicWindowsExplorer we = new WinClassicWindowsExplorer();
 

@@ -282,12 +282,12 @@ namespace TimeHACK.OS.Win95.Win95Apps
         public string FirstName;
         public string MiddleName;
         public string LastName;
-        public List<String> Emails = new List<String>();
+        public List<string> Emails = new List<string>();
     }
 
     public class AddressBookContactList
     {
-        public String AttachedNode;
+        public string AttachedNode;
         public List<AddressBookContact> Contacts = new List<AddressBookContact>();
     }
 }

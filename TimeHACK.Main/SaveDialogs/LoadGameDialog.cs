@@ -14,7 +14,7 @@ namespace TimeHACK
 {
     public partial class LoadGameDialog : Form
     {
-        public Boolean successful = false;
+        public bool successful = false;
         public LoadGameDialog()
         {
             InitializeComponent();

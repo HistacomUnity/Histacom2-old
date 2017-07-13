@@ -482,6 +482,7 @@
     <None Include="Resources\IE4\start_padamslink.png" />
     <Content Include="Resources\modem_dial.wav" />
     <None Include="Resources\MS-DOS-logo-1.png" />
+    <None Include="Resources\msdosprompt.png" />
     <Content Include="Resources\std_beep.wav" />
     <Content Include="Resources\std_gobeep.wav" />
     <None Include="Resources\termCopy.png" />

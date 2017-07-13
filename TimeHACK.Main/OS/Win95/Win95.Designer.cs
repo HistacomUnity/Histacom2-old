@@ -717,7 +717,7 @@ namespace TimeHACK.OS.Win95
             this.WebChatToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.WebChatToolStripMenuItem.Text = "Web Chat";
             this.WebChatToolStripMenuItem.Visible = false;
-            this.WebChatToolStripMenuItem.Click += new System.EventHandler(WebChatToolStripMenuItem_Click);
+            this.WebChatToolStripMenuItem.Click += new System.EventHandler(this.WebChatToolStripMenuItem_Click);
             // 
             // TimeDistorterToolStripMenuItem
             // 

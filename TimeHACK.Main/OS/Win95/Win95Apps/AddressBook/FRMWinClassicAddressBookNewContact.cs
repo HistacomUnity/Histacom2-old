@@ -57,7 +57,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 txtLast.Text = toSet.LastName;
                 if (toSet.Emails != null)
                 {
-                    foreach (String email in toSet.Emails)
+                    foreach (string email in toSet.Emails)
                     {
                         emails.Items.Add(email);
                     }

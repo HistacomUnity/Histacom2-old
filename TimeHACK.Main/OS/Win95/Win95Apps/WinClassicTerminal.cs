@@ -71,7 +71,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         /// Write text to the Terminal. Very similar to the Win32 Console.Write Function.
         /// </summary>
         /// <param name="Text"></param>
-        public void Write(String Text)
+        public void Write(string Text)
         {
             cmdPrompt.AppendText(Text);
             cmdPrompt.Update();
