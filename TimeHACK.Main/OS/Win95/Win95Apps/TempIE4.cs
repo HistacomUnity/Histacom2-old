@@ -23,7 +23,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             addressbar = _addressbar;
         }
 
-        public static void GoToPage(string url)
+        public static async void GoToPage(string url)
         {
             UserControl uc = new UserControl();
 
@@ -45,6 +45,9 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
             addressbar.Text = url;
             uc.Dock = DockStyle.Fill;
+
+            await Task.Delay(new Random().Next(500, 1500));
+
             browsingArea.Controls.Clear();
             browsingArea.Controls.Add(uc);
         }
@@ -52,11 +55,22 @@ namespace TimeHACK.OS.Win95.Win95Apps
         private void TempIE4_Load(object sender, EventArgs e)
         {
             GoToPage("www.microsoft.com/windows/ie/default.htm");
+            GoButton.Paint += (s, args) => Engine.Paintbrush.PaintClassicBorders(s, args, 2);
         }
 
         private void GoButton_Click(object sender, EventArgs e)
         {
             GoToPage(addressbar.Text);
+        }
+
+        private void _addressbar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                GoButton_Click(this, new EventArgs());
+                e.SuppressKeyPress = true;
+                browsingArea.Focus();
+            }
         }
     }
 }
