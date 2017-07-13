@@ -51,7 +51,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Profile Name:";
+            this.label1.Text = "Profile Name (username):";
             // 
             // btnOk
             // 
