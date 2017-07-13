@@ -13,7 +13,7 @@ namespace TimeHACK.OS.Win95.Win95Apps.Story
         {
             WinClassicTerminal Console = new WinClassicTerminal(true);
             WinClassic app = wm.StartWin95(Console, "MS-DOS Prompt", null, true, true);
-
+            
             Console.WriteLine("telnet> 185.152.46.51 Connecting...");
             await Task.Delay(2500);
             Console.WriteLine("telnet> 185.152.46.51 Connected.");
@@ -31,11 +31,21 @@ namespace TimeHACK.OS.Win95.Win95Apps.Story
             Console.WriteLine("12padams> Oh, and I know you activated it.");
             await Task.Delay(4000);
             Console.WriteLine("12padams> I can see your screen right now..");
-            await Task.Delay(3500);
-            Console.WriteLine("12padams> And to prove that I can see it, look at your timer. It says 130 seconds left.");
             await Task.Delay(4000);
-            Console.WriteLine("12padams> Now, in 2 minutes you think you're going to be able to travel to 1999.");
-            await Task.Delay(3250);
+            Console.WriteLine("12padams> And I will prove it to you.");
+            await Task.Delay(4000);
+            Console.WriteLine("12padams> That countdown will be at 130 seconds..");
+            await Task.Delay(4000);
+            Console.WriteLine("12padams> Right.");
+            await Task.Delay(1000);
+            Console.WriteLine("12padams> About.");
+            await Task.Delay(1000);
+            Console.WriteLine("12padams> Now.");
+            await Task.Delay(1000);
+            Console.WriteLine("12padams> See?");
+            await Task.Delay(5000);
+            Console.WriteLine("12padams> Now, in about 2 minutes you think you're going to be able to travel to 1999.");
+            await Task.Delay(3500);
             Console.WriteLine("12padams> Well, I am sorry but I just can't let you do that.");
             await Task.Delay(5000);
             Console.WriteLine("12padams> You see, I have LOTS of power over your computer.");
@@ -66,9 +76,9 @@ namespace TimeHACK.OS.Win95.Win95Apps.Story
             await Task.Delay(3500);
             Console.WriteLine($"The Hidden Hacker> Don't worry {SaveSystem.ProfileName}.");
             await Task.Delay(4500);
-            Console.WriteLine("The Hidden Hacker> I have to say, good job for getting the software.");
-            await Task.Delay(3900);
-            Console.WriteLine("12padams> The Hidden Hacker.. I thought my first punishment was enough to get you away.");
+            Console.WriteLine("The Hidden Hacker> I have to say, good job for getting the Time Distorter.");
+            await Task.Delay(4000);
+            Console.WriteLine("12padams> The Hidden Hacker.. I thought my first punishment was enough to keep you away.");
             await Task.Delay(4500);
             Console.WriteLine("The Hidden Hacker> Well, now that I have uncovered your secret, I'm not just gonna go away.");
             await Task.Delay(3600);
