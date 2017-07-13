@@ -289,7 +289,7 @@ namespace TimeHACK.OS.Win95
 
         private void infoboxTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            WinClassic app = wm.StartInfobox95("AShifter's Infobox", "This is the very first TimeHACK Infobox. It's really easy to call, too! \n Just use wm.startInfobox95(String title, String text, Image erroricon)!", Properties.Resources.Win95Info);
+            WinClassic app = wm.StartInfobox95("AShifter's Infobox", "This is the very first TimeHACK Infobox. It's really easy to call, too! \n Just use wm.startInfobox95(string title, string text, Image erroricon)!", Properties.Resources.Win95Info);
 
             app.BringToFront();
             startmenu.Hide();

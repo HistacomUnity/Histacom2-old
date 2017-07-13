@@ -14,9 +14,9 @@ namespace TimeHACK
 {
     public partial class LoadGameProfileItem : UserControl, IMessageFilter
     {
-        public Boolean OnceRemoveHeight = false;
-        public Boolean OnceAddHeight = false;
-        public Boolean RequestingNewName = false;
+        public bool OnceRemoveHeight = false;
+        public bool OnceAddHeight = false;
+        public bool RequestingNewName = false;
         public LoadGameProfileItem()
         {
             InitializeComponent();
