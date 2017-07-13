@@ -39,7 +39,7 @@ namespace TimeHACK.Engine.Template
             if (!closeDisabled) this.Close();
         }
 
-           public Boolean max = false;
+           public bool max = false;
 
         private void maximizebutton_Click(object sender, EventArgs e)
         {

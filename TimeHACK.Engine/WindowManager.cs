@@ -10,7 +10,7 @@ namespace TimeHACK.Engine
     {
         public static System.Drawing.Text.PrivateFontCollection pfc = new System.Drawing.Text.PrivateFontCollection();
 
-        public WinClassic StartWin95(UserControl content, String title, Image icon, Boolean MaxButton, Boolean MinButton, Boolean ShowApplicationAsDialog = false)
+        public WinClassic StartWin95(UserControl content, string title, Image icon, bool MaxButton, bool MinButton, bool ShowApplicationAsDialog = false)
         {
             // Setup Window
             WinClassic app = new WinClassic();
@@ -72,7 +72,7 @@ namespace TimeHACK.Engine
             return app;
         }
 
-        public WinClassic StartInfobox95(String title, String text, Image erroricon)
+        public WinClassic StartInfobox95(string title, string text, Image erroricon)
         {
             Infobox95 app = new Infobox95();
             app.infoText.Text = text;
@@ -82,7 +82,7 @@ namespace TimeHACK.Engine
             return StartWin95(app, title, null, false, false);
         }
 
-        public WinClassic StartAboutBox95(String shortname, String longname, Image appicon)
+        public WinClassic StartAboutBox95(string shortname, string longname, Image appicon)
         {
             AboutBox95 uc = new AboutBox95();
             uc.pictureBox1.Image = appicon;

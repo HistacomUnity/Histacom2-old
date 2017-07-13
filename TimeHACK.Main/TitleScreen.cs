@@ -31,7 +31,7 @@ namespace TimeHACK
 
         // Border stuff
 
-        public Boolean max = false;
+        public bool max = false;
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;

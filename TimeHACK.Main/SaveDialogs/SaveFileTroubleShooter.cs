@@ -14,9 +14,9 @@ namespace TimeHACK.SaveDialogs
 {
     public partial class SaveFileTroubleShooter : Form
     {
-        public String log;
+        public string log;
         Save savedata = new Save();
-        String json;
+        string json;
         public SaveFileTroubleShooter()
         {
             InitializeComponent();
@@ -32,7 +32,7 @@ namespace TimeHACK.SaveDialogs
             BeginScan();
         }
 
-        void WriteToLog(String toWrite)
+        void WriteToLog(string toWrite)
         {
             log += toWrite + Environment.NewLine;
         }

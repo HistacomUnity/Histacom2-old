@@ -155,7 +155,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         void SetSelectedTextFont(string font)
         {
-            // The next two lines convert a String to a Font
+            // The next two lines convert a string to a Font
             var cvt = new FontConverter();
             Font f = cvt.ConvertFromString(font) as Font;
 
@@ -164,7 +164,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         void SetSelectedTextSize(string size)
         {
-            //  The next few lines will ATTEMPT to convert a String to an Integer
+            //  The next few lines will ATTEMPT to convert a string to an Integer
             int SizeInt = Convert.ToInt32(size);
 
             mainText.SelectionFont = new Font(mainText.SelectionFont.FontFamily, SizeInt, mainText.SelectionFont.Style);
