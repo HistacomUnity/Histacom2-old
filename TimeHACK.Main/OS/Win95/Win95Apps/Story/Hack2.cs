@@ -5,7 +5,7 @@ using TimeHACK.Engine.Template;
 
 namespace TimeHACK.OS.Win95.Win95Apps.Story
 {
-    public class Hack2 : Object
+    public class Hack2 : object
     {
         static WindowManager wm = new WindowManager();
 
@@ -26,7 +26,9 @@ namespace TimeHACK.OS.Win95.Win95Apps.Story
             await Task.Delay(4500);
             Console.WriteLine("12padams> And use it to hack my website..");
             await Task.Delay(3500);
-            Console.WriteLine("12padams> Oh, and I know you pressed it.");
+            Console.WriteLine("12padams> Then you download my secret Time Distorter program?");
+            await Task.Delay(4000);
+            Console.WriteLine("12padams> Oh, and I know you activated it.");
             await Task.Delay(4000);
             Console.WriteLine("12padams> I can see your screen right now..");
             await Task.Delay(3500);
@@ -41,11 +43,15 @@ namespace TimeHACK.OS.Win95.Win95Apps.Story
             Console.WriteLine("12padams> Okay, let me show you how easy this is.");
             await Task.Delay(1500);
             Console.WriteLine("Command> Hide Start Button");
+            TitleScreen.frm95.startbutton.Hide();
             await Task.Delay(3500);
             Console.WriteLine("12padams> See how easy that was?");
             await Task.Delay(3700);
             Console.WriteLine("12padams> Now watch this..");
-            await Task.Delay(3500);
+            await Task.Delay(3000);
+            TitleScreen.frm95.desktopicons.BackgroundImage = Properties.Resources.Win95Error;
+            TitleScreen.frm95.BackgroundImage = null;
+            await Task.Delay(3000);
             Console.WriteLine("12padams> Hahaha, having a few errors are we?");
             await Task.Delay(2500);
             Console.WriteLine("telnet> 104.27.135.159 Connecting...");
@@ -73,10 +79,12 @@ namespace TimeHACK.OS.Win95.Win95Apps.Story
             Console.WriteLine("The Hidden Hacker> Let me fix this..");
             await Task.Delay(2500);
             Console.WriteLine("Command> Show Start Button");
+            TitleScreen.frm95.startbutton.Show();
             await Task.Delay(2900);
             Console.WriteLine("12padams> OKAY, NOW YOU'VE DONE IT!");
             await Task.Delay(2500);
             Console.WriteLine("Command> Stop Timer");
+            TitleScreen.frm95.distort.lblCountDown.Hide();
             await Task.Delay(3000);
             Console.WriteLine("12padams> I bet you didn't see that one coming..");
             await Task.Delay(3700);
@@ -89,6 +97,7 @@ namespace TimeHACK.OS.Win95.Win95Apps.Story
             Console.WriteLine("The Hidden Hacker> Oh, is it? Well, watch this!");
             await Task.Delay(2500);
             Console.WriteLine("Command> Show Timer");
+            TitleScreen.frm95.distort.lblCountDown.Show();
             await Task.Delay(3000);
             Console.WriteLine("The Hidden Hacker> And here's one more command for you to learn.");
             await Task.Delay(1700);
@@ -97,6 +106,8 @@ namespace TimeHACK.OS.Win95.Win95Apps.Story
             Console.WriteLine("telnet> 12padams Disconnected.");
             await Task.Delay(3000);
             Console.WriteLine($"The Hidden Hacker> Good luck {SaveSystem.ProfileName}! I'll see you in the future!");
+            await Task.Delay(3500);
+            app.Close();
         }
     }
 }

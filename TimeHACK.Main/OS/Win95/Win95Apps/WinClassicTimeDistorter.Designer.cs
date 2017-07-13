@@ -153,7 +153,7 @@
         private System.Windows.Forms.Label lblYear;
         private System.Windows.Forms.Label lblTo;
         private System.Windows.Forms.Button btnGo;
-        private System.Windows.Forms.Label lblCountDown;
+        internal System.Windows.Forms.Label lblCountDown;
         private System.Windows.Forms.Timer countDownTimer;
     }
 }

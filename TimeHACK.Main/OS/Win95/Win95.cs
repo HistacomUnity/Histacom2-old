@@ -20,6 +20,7 @@ namespace TimeHACK.OS.Win95
         public List<WinClassic> nonimportantapps = new List<WinClassic>();
         public WinClassic webchat;
         public WinClassic ie;
+        public WinClassicTimeDistorter distort;
         public TaskBarController tb = new TaskBarController();
 
         public int currentappcount = 0;
@@ -429,7 +430,8 @@ namespace TimeHACK.OS.Win95
 
         private void TimeDistorterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            WinClassic app = wm.StartWin95(new WinClassicTimeDistorter("1998", "1999", 160, Hack2.StartObjective), "Time Distorter", null, false, true);
+            distort = new WinClassicTimeDistorter("1998", "1999", 160, Hack2.StartObjective);
+            WinClassic app = wm.StartWin95(distort, "Time Distorter", null, false, true);
             AddTaskBarItem(app, app.Tag.ToString(), "Time Distorter", null);
             app.BringToFront();
             startmenu.Hide();
