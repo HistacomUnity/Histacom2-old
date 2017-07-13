@@ -145,6 +145,12 @@
     <Compile Include="OS\Win95\Win95Apps\IE4Sites\GooglePrototype.Designer.cs">
       <DependentUpon>GooglePrototype.cs</DependentUpon>
     </Compile>
+    <Compile Include="OS\Win95\Win95Apps\IE4Sites\IE4NoPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\IE4Sites\IE4NoPage.Designer.cs">
+      <DependentUpon>IE4NoPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\Win95\Win95Apps\IE4Sites\IE4Start.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -334,6 +340,10 @@
     <EmbeddedResource Include="OS\Win95\Win95Apps\IE4Sites\GooglePrototype.resx">
       <DependentUpon>GooglePrototype.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\IE4Sites\IE4NoPage.resx">
+      <DependentUpon>IE4NoPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\IE4Sites\IE4Start.resx">
       <DependentUpon>IE4Start.cs</DependentUpon>
     </EmbeddedResource>
@@ -462,6 +472,7 @@
     <Content Include="Resources\IE4\googlehome.html" />
     <Content Include="Resources\IE4\googleprototype.html" />
     <Content Include="Resources\IE4\ie4start.html" />
+    <None Include="Resources\IE4\nopage.bmp" />
     <Content Include="Resources\IE4\padams.html" />
     <None Include="Resources\wmsui32_1001.ico_16x16.png" />
     <None Include="Resources\shell32_21.ico_16x16.png" />

@@ -38,6 +38,9 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 case "www.google.stanford.edu":
                     uc = new GooglePrototype();
                     break;
+                default:
+                    uc = new IE4NoPage();
+                    break;
             }
 
             addressbar.Text = url;
