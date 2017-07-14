@@ -144,5 +144,32 @@ namespace TimeHACK.OS.Win95.Win95Apps
             WindowManager wm = new WindowManager();
             wm.StartAboutBox95("Calculator", "Microsoft Calculator", Properties.Resources.WinClassicCalc);
         }
+
+        private void Button15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CopyCtrlCToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            txtNumbers.Copy();
+        }
+
+        private void PasteCtrlVToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            string pasteText = Clipboard.GetText();
+            string strippedText = "";
+            for (int i = 0; i < pasteText.Length; i++)
+            {
+                if (char.IsDigit(pasteText[i]))
+                    strippedText += pasteText[i].ToString();
+                MessageBox.Show("Test");
+            }
+            if (strippedText!=pasteText)
+            {
+                txtNumbers.Text = pasteText;
+            }
+        }
+
     }
 }

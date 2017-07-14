@@ -119,15 +119,17 @@
             // 
             this.PasteCtrlVToolStripMenuItem1.BackColor = System.Drawing.Color.Silver;
             this.PasteCtrlVToolStripMenuItem1.Name = "PasteCtrlVToolStripMenuItem1";
-            this.PasteCtrlVToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
+            this.PasteCtrlVToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.PasteCtrlVToolStripMenuItem1.Text = "Paste       Ctrl+V";
+            this.PasteCtrlVToolStripMenuItem1.Click += new System.EventHandler(this.PasteCtrlVToolStripMenuItem1_Click);
             // 
             // CopyCtrlCToolStripMenuItem1
             // 
             this.CopyCtrlCToolStripMenuItem1.BackColor = System.Drawing.Color.Silver;
             this.CopyCtrlCToolStripMenuItem1.Name = "CopyCtrlCToolStripMenuItem1";
-            this.CopyCtrlCToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
+            this.CopyCtrlCToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.CopyCtrlCToolStripMenuItem1.Text = "Copy       Ctrl+C";
+            this.CopyCtrlCToolStripMenuItem1.Click += new System.EventHandler(this.CopyCtrlCToolStripMenuItem1_Click);
             // 
             // EditToolStripMenuItem1
             // 
@@ -388,6 +390,7 @@
             this.Button15.TabIndex = 72;
             this.Button15.Text = "+/-";
             this.Button15.UseVisualStyleBackColor = true;
+            this.Button15.Click += new System.EventHandler(this.Button15_Click);
             // 
             // Button17
             // 
