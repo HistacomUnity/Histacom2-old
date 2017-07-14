@@ -471,6 +471,7 @@
     <Content Include="Resources\IE4\google.jpg" />
     <Content Include="Resources\IE4\googlehome.html" />
     <Content Include="Resources\IE4\googleprototype.html" />
+    <None Include="Resources\IE4\ie4about.png" />
     <Content Include="Resources\IE4\ie4start.html" />
     <None Include="Resources\IE4\nopage.bmp" />
     <Content Include="Resources\IE4\padams.html" />

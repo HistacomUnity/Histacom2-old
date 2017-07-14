@@ -16,6 +16,19 @@ namespace TimeHACK.OS.Win95.Win95Apps
         public WinClassicCalculator()
         {
             InitializeComponent();
+            foreach (Control c in Controls)
+            {
+                if (c is Button)
+                {
+                    c.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
+                    c.Paint += (sender, args) => Paintbrush.PaintClassicBorders(sender, args, 2);
+                }
+                else
+                {
+                    c.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+                }
+            }
+            txtNumbers.Paint += (sender, args) => Paintbrush.PaintClassicBordersIndented(sender, args, 2);
         }
         public double prevnum = 0;
         public bool iszero = true;
@@ -180,6 +193,10 @@ namespace TimeHACK.OS.Win95.Win95Apps
             switch (coperator)
             {
                 case "+":
+                    if (prevnum == 0)
+                    {
+                        break;
+                    }
                     txtNumbers.Text = (prevnum + double.Parse(txtNumbers.Text)).ToString();
                     prevnum = double.Parse(txtNumbers.Text);
                     break;
@@ -221,7 +238,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             coperator = "+";
             Calculate();
             prevnum = double.Parse(txtNumbers.Text);
-            txtNumbers.Text = "0";
+            iszero = true;
         }
 
         private void Button19_Click(object sender, EventArgs e)

@@ -26,6 +26,7 @@ namespace TimeHACK.OS.Win95
         {
             lblCountDown.Visible = true;
             btnGo.Enabled = false;
+            ((WinClassic)ParentForm).closeDisabled = true;
 
             _action?.Invoke();
             countDownTimer.Start();
