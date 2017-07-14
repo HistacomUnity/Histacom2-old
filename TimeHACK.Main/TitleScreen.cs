@@ -46,6 +46,7 @@ namespace TimeHACK
         public TitleScreen()
         {
             InitializeComponent();
+            this.startmenu.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
         }
 
         public void StartGame()

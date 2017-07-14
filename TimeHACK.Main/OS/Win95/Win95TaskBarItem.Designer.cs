@@ -40,10 +40,10 @@
             // 
             this.progName.AutoSize = true;
             this.progName.BackColor = System.Drawing.Color.Transparent;
-            this.progName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.progName.Location = new System.Drawing.Point(18, 2);
+            this.progName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.progName.Location = new System.Drawing.Point(21, 2);
             this.progName.Name = "progName";
-            this.progName.Size = new System.Drawing.Size(60, 24);
+            this.progName.Size = new System.Drawing.Size(35, 13);
             this.progName.TabIndex = 1;
             this.progName.Text = "label1";
             this.progName.Click += new System.EventHandler(this.Win95TaskBarItem_Click);
@@ -51,7 +51,7 @@
             // progPic
             // 
             this.progPic.BackColor = System.Drawing.Color.Transparent;
-            this.progPic.Location = new System.Drawing.Point(3, 3);
+            this.progPic.Location = new System.Drawing.Point(4, 3);
             this.progPic.Name = "progPic";
             this.progPic.Size = new System.Drawing.Size(16, 16);
             this.progPic.TabIndex = 0;
