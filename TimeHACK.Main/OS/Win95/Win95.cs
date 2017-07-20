@@ -277,7 +277,7 @@ namespace TimeHACK.OS.Win95
                     else if (objListViewItem.Text == "FTP Client Setup")
                     {
                         Win95Installer inst = new Win95Installer("FTP Client");
-                        inst.InstallCompleted += (sendr, args) => WebChatToolStripMenuItem.Visible = true;
+                        inst.InstallCompleted += (sendr, args) => FTPClientToolStripMenuItem.Visible = true;
                         WinClassic app = wm.StartWin95(inst, "FTP Client Setup", null, true, true);
                         AddTaskBarItem(app, app.Tag.ToString(), "FTP Client Setup", null);
                         app.BringToFront();
