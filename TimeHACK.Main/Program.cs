@@ -21,7 +21,6 @@ namespace TimeHACK
         static System.Media.SoundPlayer stopsound;
 
         internal static bool nightly = true;
-        internal static string gameID;
         internal static TitleScreen title;
         public static string AddressBookSelectedFolderName;
         public static AddressBookContact AddressBookSelectedContact;
@@ -41,12 +40,6 @@ namespace TimeHACK
             Application.SetCompatibleTextRenderingDefault(false);
 
             title = new TitleScreen();
-
-            gameID = "Getting AppVeyor...";
-            System.Threading.Thread getAppVeyor = new System.Threading.Thread(GetAppVeyor);
-
-            getAppVeyor.Start();
-            System.Threading.Thread.Sleep(500);
 
             //TimeHACK.Engine.GameSave.SaveData MySaveData = new TimeHACK.Engine.GameSave.SaveData()
             //{
@@ -92,31 +85,6 @@ namespace TimeHACK
             System.Threading.Thread.Sleep(500);
             Environment.Exit(0);
             //Application.Exit();
-        }
-
-        public static void GetAppVeyor()
-        {
-            if (nightly == true)
-            {
-                try
-                {
-                    WebClient wc = new WebClient();
-
-                    // Set the GameID
-                    string json = wc.DownloadString("http://ci.appveyor.com/api/projects/timehack/timehack");
-                    JObject j = JObject.Parse(JObject.Parse(json)["build"].ToString());
-                    gameID = "AppVeyor-" + j["buildNumber"].ToString();
-                }
-                catch (WebException)
-                {
-                    gameID = "AppVeyor";
-                }
-            }
-            else
-            {
-                gameID = "TimeHACK 1.1";
-            }
-
         }
 
         public static void AddTaskbarItem(Form Application, string ApplicationID, string ApplicationName, Image ApplicationIcon)
