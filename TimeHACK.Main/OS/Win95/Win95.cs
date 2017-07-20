@@ -389,13 +389,6 @@ namespace TimeHACK.OS.Win95
 
         private void temp_for_std(object sender, EventArgs e)
         {
-            System.Threading.Thread thread = new System.Threading.Thread(StartSurviveTheDay);
-
-            thread.Start();
-        }
-
-        void StartSurviveTheDay()
-        {
             Win2K.Win2KApps.SurviveTheDay std = new Win2K.Win2KApps.SurviveTheDay();
             WinClassic app = wm.StartWin95(std, "Survive The Day", null, false, false);
             AddTaskBarItem(app, app.Tag.ToString(), "Survive The Day", null);
