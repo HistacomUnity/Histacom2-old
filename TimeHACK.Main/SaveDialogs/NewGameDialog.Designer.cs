@@ -39,9 +39,9 @@
             // 
             // txtProfName
             // 
-            this.txtProfName.Location = new System.Drawing.Point(87, 12);
+            this.txtProfName.Location = new System.Drawing.Point(143, 12);
             this.txtProfName.Name = "txtProfName";
-            this.txtProfName.Size = new System.Drawing.Size(370, 20);
+            this.txtProfName.Size = new System.Drawing.Size(314, 20);
             this.txtProfName.TabIndex = 0;
             // 
             // label1
@@ -49,9 +49,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
+            this.label1.Size = new System.Drawing.Size(125, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Profile Name:";
+            this.label1.Text = "Profile Name (username):";
             // 
             // btnOk
             // 

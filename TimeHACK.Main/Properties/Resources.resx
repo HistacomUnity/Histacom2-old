@@ -522,7 +522,7 @@
   <data name="Win95IconIE4" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAAJVJREFUOE+VkQsSxCAMQj16bu4GFU3YdO2+Gaqi0F/7j96zfqKHqYiuByYBFfYJ
+        vgAADr4B6kKxwAAAAJVJREFUOE+VkQsSxCAMQj16bu4GFU3YdO2+Gaqi0F/7j96zfqKHqYiuByYBFfYJ
         1okT9uuef4slmG9gWjdzN4Wnf9bRT1RhaCN+KriGieyvkjr8Rl7AMMbywE0zCBiIBS9Awbn7tUD29xME
         Q0rM8IHhPbziKRhMU0pqjVIfcgHAfB2oiugnuEnG/EkZ/4fLZEksutHaB6sGQO/gf7MbAAAAAElFTkSu
         QmCC
@@ -593,5 +593,65 @@
   </data>
   <data name="WinClassicInstallPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WinClassic\WinClassicInstallPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="start" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE4\start.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="start_googlink" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE4\start_googlink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="start_padamslink" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE4\start_padamslink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nopage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE4\nopage.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ie4_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ie4_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ie4_favorites" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ie4_favorites.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ie4_forward" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ie4_forward.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ie4_go" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ie4_go.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ie4_history" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ie4_history.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ie4_home" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ie4_home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ie4_hsplitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ie4_hsplitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ie4_mail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ie4_mail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ie4_print" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ie4_print.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ie4_refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ie4_refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ie4_search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ie4_search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ie4_stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ie4_stop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ie4_vsplitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ie4_vsplitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ie4_vsplitter2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ie4_hsplitter1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ie4_vsplitter3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ie4_hsplitter2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ie4about" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE4\ie4about.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

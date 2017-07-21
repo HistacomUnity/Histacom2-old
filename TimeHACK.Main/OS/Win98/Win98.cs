@@ -8,7 +8,6 @@ using TimeHACK.Engine;
 using TimeHACK.Engine.Template;
 using TimeHACK.Engine.Template.Taskbars;
 using TimeHACK.OS.Win95.Win95Apps;
-using TimeHACK.WinClassicForms;
 using TimeHACK.OS.Win95.Win95Apps.Story;
 
 namespace TimeHACK.OS.Win98
@@ -195,15 +194,6 @@ namespace TimeHACK.OS.Win98
             app.BringToFront();
             startmenu.Hide();
         }
-        private void windowManagerTestToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TestApp test = new TestApp();
-            WinClassic app = wm.StartWin95(test, "TestApp", null, true, true);
-            AddTaskBarItem(app, app.Tag.ToString(), "TestApp", null);
-            app.BringToFront();
-            startmenu.Hide();
-        }
-
         private void downloaderTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WinClassicDownloader opendownload = new WinClassicDownloader();
@@ -271,7 +261,7 @@ namespace TimeHACK.OS.Win98
 
         private void infoboxTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            WinClassic app = wm.StartInfobox95("AShifter's Infobox", "This is the very first TimeHACK Infobox. It's really easy to call, too! \n Just use wm.startInfobox95(String title, String text, Image erroricon)!", Properties.Resources.Win95Info);
+            WinClassic app = wm.StartInfobox95("AShifter's Infobox", "This is the very first TimeHACK Infobox. It's really easy to call, too! \n Just use wm.startInfobox95(string title, string text, Image erroricon)!", Properties.Resources.Win95Info);
 
             app.BringToFront();
             startmenu.Hide();
@@ -366,7 +356,7 @@ namespace TimeHACK.OS.Win98
 
         private void storyTest1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Hack1.startObjective();
+            Hack1.StartObjective();
         }
 
         private void temp_for_std(object sender, EventArgs e)

@@ -91,8 +91,7 @@
     <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>Icon128x.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
@@ -119,9 +118,6 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="TransparentListView">
-      <HintPath>..\..\..\..\Downloads\TransparentListView\TransparentListView.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="OS\BIOS\BIOS.cs">
@@ -136,12 +132,49 @@
     <Compile Include="OS\Win2K\Win2KApps\SurviveTheDay.Designer.cs">
       <DependentUpon>SurviveTheDay.cs</DependentUpon>
     </Compile>
+    <Compile Include="OS\Win95\Win95Apps\IE4Sites\GoogleHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\IE4Sites\GoogleHome.Designer.cs">
+      <DependentUpon>GoogleHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\IE4Sites\GooglePrototype.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\IE4Sites\GooglePrototype.Designer.cs">
+      <DependentUpon>GooglePrototype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\IE4Sites\IE4NoPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\IE4Sites\IE4NoPage.Designer.cs">
+      <DependentUpon>IE4NoPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\IE4Sites\IE4Start.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\IE4Sites\IE4Start.Designer.cs">
+      <DependentUpon>IE4Start.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\Win95\Win95Apps\Story\Hack1.cs" />
+    <Compile Include="OS\Win95\Win95Apps\Story\Hack2.cs" />
+    <Compile Include="OS\Win95\Win95Apps\TempIE4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\TempIE4.Designer.cs">
+      <DependentUpon>TempIE4.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\Win95\Win95Apps\Win95Installer.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="OS\Win95\Win95Apps\Win95Installer.Designer.cs">
       <DependentUpon>Win95Installer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicCalculator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicCalculator.Designer.cs">
+      <DependentUpon>WinClassicCalculator.cs</DependentUpon>
     </Compile>
     <Compile Include="OS\Win95\Win95Apps\WinClassicFTPClient.cs">
       <SubType>UserControl</SubType>
@@ -221,12 +254,6 @@
     <Compile Include="OS\Win95\Win95Apps\AddressBook\FRMWinClassicAddressBookNewContact.Designer.cs">
       <DependentUpon>FRMWinClassicAddressBookNewContact.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\TestApp.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="OS\Win95\Win95Apps\TestApp.Designer.cs">
-      <DependentUpon>TestApp.cs</DependentUpon>
-    </Compile>
     <Compile Include="OS\Win95\Win95Apps\WebChat1998.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -250,12 +277,6 @@
     </Compile>
     <Compile Include="GlobalPrograms\WinClassicDownloader.Designer.cs">
       <DependentUpon>WinClassicDownloader.cs</DependentUpon>
-    </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicHWCV.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicHWCV.Designer.cs">
-      <DependentUpon>WinClassicHWCV.cs</DependentUpon>
     </Compile>
     <Compile Include="OS\Win95\Win95Apps\WinClassicIE4.cs">
       <SubType>UserControl</SubType>
@@ -306,8 +327,27 @@
     <EmbeddedResource Include="OS\Win2K\Win2KApps\SurviveTheDay.resx">
       <DependentUpon>SurviveTheDay.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\IE4Sites\GoogleHome.resx">
+      <DependentUpon>GoogleHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\IE4Sites\GooglePrototype.resx">
+      <DependentUpon>GooglePrototype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\IE4Sites\IE4NoPage.resx">
+      <DependentUpon>IE4NoPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\IE4Sites\IE4Start.resx">
+      <DependentUpon>IE4Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\TempIE4.resx">
+      <DependentUpon>TempIE4.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\Win95Installer.resx">
       <DependentUpon>Win95Installer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicCalculator.resx">
+      <DependentUpon>WinClassicCalculator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicFTPClient.resx">
       <DependentUpon>WinClassicFTPClient.cs</DependentUpon>
@@ -354,9 +394,6 @@
     <EmbeddedResource Include="OS\Win95\Win95Apps\AddressBook\FRMWinClassicAddressBookNewContact.resx">
       <DependentUpon>FRMWinClassicAddressBookNewContact.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\TestApp.resx">
-      <DependentUpon>TestApp.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WebChat1998.resx">
       <DependentUpon>WebChat1998.cs</DependentUpon>
     </EmbeddedResource>
@@ -368,9 +405,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GlobalPrograms\WinClassicDownloader.resx">
       <DependentUpon>WinClassicDownloader.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicHWCV.resx">
-      <DependentUpon>WinClassicHWCV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicIE4.resx">
       <DependentUpon>WinClassicIE4.cs</DependentUpon>
@@ -420,6 +454,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Icon128x.ico" />
     <Content Include="Resources\12padams_EULA.txt" />
     <None Include="Resources\DCTheme_BG.JPG" />
     <Content Include="Resources\Icon128x.ico" />
@@ -427,13 +462,34 @@
     <Content Include="Resources\IE4\google.jpg" />
     <Content Include="Resources\IE4\googlehome.html" />
     <Content Include="Resources\IE4\googleprototype.html" />
+    <None Include="Resources\IE4\ie4about.png" />
     <Content Include="Resources\IE4\ie4start.html" />
+    <None Include="Resources\IE4\nopage.bmp" />
     <Content Include="Resources\IE4\padams.html" />
     <None Include="Resources\wmsui32_1001.ico_16x16.png" />
     <None Include="Resources\shell32_21.ico_16x16.png" />
     <None Include="Resources\LauncherSideBar.png" />
+    <None Include="Resources\IE4\start.png" />
+    <None Include="Resources\IE4\start_googlink.png" />
+    <None Include="Resources\IE4\start_padamslink.png" />
+    <None Include="Resources\ie4_history.png" />
+    <None Include="Resources\ie4_home.png" />
+    <None Include="Resources\ie4_hsplitter1.png" />
+    <None Include="Resources\ie4_hsplitter2.png" />
+    <None Include="Resources\ie4_mail.png" />
+    <None Include="Resources\ie4_print.png" />
+    <None Include="Resources\ie4_refresh.png" />
+    <None Include="Resources\ie4_search.png" />
+    <None Include="Resources\ie4_stop.png" />
+    <None Include="Resources\ie4_vsplitter.png" />
+    <None Include="Resources\ie4_favorites.png" />
+    <None Include="Resources\ie4_go.png" />
+    <None Include="Resources\ie4_hsplitter.png" />
+    <None Include="Resources\ie4_forward.png" />
+    <None Include="Resources\ie4_back.png" />
     <Content Include="Resources\modem_dial.wav" />
     <None Include="Resources\MS-DOS-logo-1.png" />
+    <None Include="Resources\msdosprompt.png" />
     <Content Include="Resources\std_beep.wav" />
     <Content Include="Resources\std_gobeep.wav" />
     <None Include="Resources\termCopy.png" />

@@ -1,6 +1,6 @@
-﻿namespace TimeHACK.WinClassicForms
+﻿namespace TimeHACK.OS.Win95.Win95Apps.IE4Sites
 {
-    partial class TestApp
+    partial class IE4NoPage
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,34 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // pictureBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 91);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(237, 65);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "If you are reading this, you are reading a window\r\nwith borders that are being re" +
-    "ndered by the\r\nWindowManager. All you need is 3 lines of code.\r\n\r\nTHIS IS AWESOM" +
-    "E!";
+            this.pictureBox1.Image = global::TimeHACK.Properties.Resources.nopage;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(406, 538);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
-            // TestApp
+            // IE4NoPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label1);
-            this.Name = "TestApp";
-            this.Size = new System.Drawing.Size(292, 274);
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.pictureBox1);
+            this.Name = "IE4NoPage";
+            this.Size = new System.Drawing.Size(959, 541);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -8,13 +8,10 @@ using TimeHACK.Engine;
 using TimeHACK.Engine.Template;
 using TimeHACK.Engine.Template.Taskbars;
 using TimeHACK.OS.Win95.Win95Apps;
-using TimeHACK.WinClassicForms;
 using TimeHACK.OS.Win95.Win95Apps.Story;
 using static TimeHACK.Engine.SaveSystem;
 namespace TimeHACK.OS.Win95
 {
-    
-   
     public partial class Windows95 : Form
     {
         private SoundPlayer startsound;
@@ -23,6 +20,7 @@ namespace TimeHACK.OS.Win95
         public List<WinClassic> nonimportantapps = new List<WinClassic>();
         public WinClassic webchat;
         public WinClassic ie;
+        public WinClassicTimeDistorter distort;
         public TaskBarController tb = new TaskBarController();
 
         public int currentappcount = 0;
@@ -73,7 +71,7 @@ namespace TimeHACK.OS.Win95
         //  When New Game is clicked in TitleScreen.cs
         private void Desktop_Load(object sender, EventArgs e)
         {
-            if (currentTheme.defaultWallpaper != null) desktopicons.BackgroundImage = new Bitmap(currentTheme.defaultWallpaper, desktopicons.Width, desktopicons.Height);
+            if (currentTheme.defaultWallpaper != null) desktopicons.BackgroundImage = new Bitmap(currentTheme.defaultWallpaper, Width, Height);
             //Start Menu Color - Commented until it works reliably
             //startmenuitems.Renderer = new MyRenderer();
             //ProgramsToolStripMenuItem.DropDown.Renderer = new MyRenderer();
@@ -216,15 +214,6 @@ namespace TimeHACK.OS.Win95
             app.BringToFront();
             startmenu.Hide();
         }
-        private void windowManagerTestToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TestApp test = new TestApp();
-            WinClassic app = wm.StartWin95(test, "TestApp", null, true, true);
-            AddTaskBarItem(app, app.Tag.ToString(), "TestApp", null);
-            app.BringToFront();
-            startmenu.Hide();
-        }
-
         private void downloaderTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WinClassicDownloader opendownload = new WinClassicDownloader();
@@ -289,7 +278,7 @@ namespace TimeHACK.OS.Win95
                     else if (objListViewItem.Text == "FTP Client Setup")
                     {
                         Win95Installer inst = new Win95Installer("FTP Client");
-                        inst.InstallCompleted += (sendr, args) => WebChatToolStripMenuItem.Visible = true;
+                        inst.InstallCompleted += (sendr, args) => FTPClientToolStripMenuItem.Visible = true;
                         WinClassic app = wm.StartWin95(inst, "FTP Client Setup", null, true, true);
                         AddTaskBarItem(app, app.Tag.ToString(), "FTP Client Setup", null);
                         app.BringToFront();
@@ -301,7 +290,7 @@ namespace TimeHACK.OS.Win95
 
         private void infoboxTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            WinClassic app = wm.StartInfobox95("AShifter's Infobox", "This is the very first TimeHACK Infobox. It's really easy to call, too! \n Just use wm.startInfobox95(String title, String text, Image erroricon)!", Properties.Resources.Win95Info);
+            WinClassic app = wm.StartInfobox95("AShifter's Infobox", "This is the very first TimeHACK Infobox. It's really easy to call, too! \n Just use wm.startInfobox95(string title, string text, Image erroricon)!", Properties.Resources.Win95Info);
 
             app.BringToFront();
             startmenu.Hide();
@@ -396,17 +385,10 @@ namespace TimeHACK.OS.Win95
 
         private void storyTest1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Hack1.startObjective();
+            Hack1.StartObjective();
         }
 
         private void temp_for_std(object sender, EventArgs e)
-        {
-            System.Threading.Thread thread = new System.Threading.Thread(StartSurviveTheDay);
-
-            thread.Start();
-        }
-
-        void StartSurviveTheDay()
         {
             Win2K.Win2KApps.SurviveTheDay std = new Win2K.Win2KApps.SurviveTheDay();
             WinClassic app = wm.StartWin95(std, "Survive The Day", null, false, false);
@@ -442,8 +424,8 @@ namespace TimeHACK.OS.Win95
 
         private void TimeDistorterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            WinClassic app = wm.StartWin95(new WinClassicTimeDistorter("2017", "20XX", 10), "Time Distorter", null, false, true);
-
+            distort = new WinClassicTimeDistorter("1998", "1999", 150, Hack2.StartObjective);
+            WinClassic app = wm.StartWin95(distort, "Time Distorter", null, false, true);
             AddTaskBarItem(app, app.Tag.ToString(), "Time Distorter", null);
             app.BringToFront();
             startmenu.Hide();
@@ -453,6 +435,26 @@ namespace TimeHACK.OS.Win95
             WinClassic app = wm.StartWin95(new WinClassicFTPClient(), "FTP Client", null, true, true);
 
             AddTaskBarItem(app, app.Tag.ToString(), "FTP Client", null);
+            app.BringToFront();
+            startmenu.Hide();
+        }
+
+        private void iE4TestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WinClassic app = wm.StartWin95(new TempIE4(), "IE4", null, true, true);
+            app.BringToFront();
+            startmenu.Hide();
+        }
+
+        private void CalculatorToolStripMenuItem_Click(object sender, EventArgs e)
+        { 
+            WinClassic app = wm.StartWin95(new WinClassicCalculator(), "Calculator", Properties.Resources.WinClassicCalc, false, false);
+            AddTaskBarItem(app, app.Tag.ToString(), "Calculator", Properties.Resources.WinClassicCalc);
+
+            nonimportantapps.Add(app);
+            nonimportantapps[nonimportantapps.Count - 1].BringToFront();
+            nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
+
             app.BringToFront();
             startmenu.Hide();
         }

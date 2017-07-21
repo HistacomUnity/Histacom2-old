@@ -114,7 +114,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     break;
                 case "www.12padams.com":
                     hidePrograms();
-                    Story.Hack1.startObjective();
+                    Story.Hack1.StartObjective();
                     webBrowser1.DocumentText = resources.GetString("padams_HTML");
                     break;
                 case "www.microsoft.com/internetexplorer4/welcome":

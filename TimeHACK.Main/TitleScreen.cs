@@ -31,7 +31,7 @@ namespace TimeHACK
 
         // Border stuff
 
-        public Boolean max = false;
+        public bool max = false;
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -46,6 +46,7 @@ namespace TimeHACK
         public TitleScreen()
         {
             InitializeComponent();
+            this.startmenu.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
         }
 
         public void StartGame()
@@ -148,7 +149,7 @@ namespace TimeHACK
 
 
             // Set GameVersion
-            gameversion.Text = Program.gameID;
+            gameversion.Text = "Alpha 1.0.3";
 
             // Initialize Font
             File.WriteAllBytes(Data + "\\LeviWindows.ttf", Resources.LeviWindows);
@@ -298,7 +299,7 @@ namespace TimeHACK
 
         private void gameversion_MouseLeave(object sender, EventArgs e)
         {
-            gameversion.Text = Program.gameID;
+            gameversion.Text = "Alpha 1.0.3";
         }
 
         private void startbutton_Click(object sender, EventArgs e)
@@ -321,9 +322,9 @@ namespace TimeHACK
 
         private void updateText_Tick(object sender, EventArgs e)
         {
-            if (gameversion.Text != Program.gameID)
+            if (gameversion.Text != "Alpha 1.0.3")
             {
-                gameversion.Text = Program.gameID;
+                gameversion.Text = "Alpha 1.0.3";
                 updateText.Stop();
             }
         }

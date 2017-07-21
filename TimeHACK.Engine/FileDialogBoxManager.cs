@@ -10,24 +10,24 @@ namespace TimeHACK.Engine
 {
     public static class FileDialogBoxManager
     {
-        public static Boolean IsInOpenDialog = false;
-        public static Boolean IsInSaveDialog = false;
-        public static String OnlyViewExtension = "";
-        public static void ActivateOpenFileDialog(String ExtensionToView)
+        public static bool IsInOpenDialog = false;
+        public static bool IsInSaveDialog = false;
+        public static string OnlyViewExtension = "";
+        public static void ActivateOpenFileDialog(string ExtensionToView)
         {
             IsInOpenDialog = true;
             IsInSaveDialog = false;
             OnlyViewExtension = ExtensionToView;
         }
 
-        public static void ActivateSaveFileDialog(String ExtensionToView)
+        public static void ActivateSaveFileDialog(string ExtensionToView)
         {
             IsInOpenDialog = false;
             IsInSaveDialog = true;
             OnlyViewExtension = ExtensionToView;
         }
 
-        public static String ReadTextFile(String path)
+        public static string ReadTextFile(string path)
         {
             try
             {
