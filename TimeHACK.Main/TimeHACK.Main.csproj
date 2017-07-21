@@ -396,6 +396,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WebChat1998.resx">
       <DependentUpon>WebChat1998.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WebChat19981.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\AddressBook\FRMWinClassicAddressBookNewFolder.resx">
       <DependentUpon>FRMWinClassicAddressBookNewFolder.cs</DependentUpon>

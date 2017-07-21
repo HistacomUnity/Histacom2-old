@@ -68,6 +68,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             listBox1.Items.Add(TitleScreen.username);
             history.AppendText("System: " + TitleScreen.username + " has joined the chat." + Environment.NewLine);
             join.Play();
+            if (TitleScreen.username == "devspeed") Chat.Interval = 100;
             Chat.Start();
         }
 
@@ -135,6 +136,17 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         history.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
                         ((WinClassic)this.ParentForm).maximizebutton.Enabled = false;
                         ((WinClassic)this.ParentForm).WindowState = FormWindowState.Maximized;
+                        ((WinClassic)this.ParentForm).right.Hide();
+                        ((WinClassic)this.ParentForm).left.Hide();
+                        ((WinClassic)this.ParentForm).bottom.Hide();
+                        ((WinClassic)this.ParentForm).top.Hide();
+                        ((WinClassic)this.ParentForm).bottomleftcorner.Hide();
+                        ((WinClassic)this.ParentForm).bottomrightcorner.Hide();
+                        ((WinClassic)this.ParentForm).topleftcorner.Hide();
+                        ((WinClassic)this.ParentForm).toprightcorner.Hide();
+                        ((WinClassic)this.ParentForm).Dock = DockStyle.Fill;
+                        ((WinClassic)this.ParentForm).max = true;
+                        ((WinClassic)this.ParentForm).maximizebutton.Image = Engine.Properties.Resources.WinClassicRestore;
                         receive.Play();
                         break;
                     case "notopbar":
