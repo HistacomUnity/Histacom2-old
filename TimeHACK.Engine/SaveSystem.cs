@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Diagnostics;
+using System.Windows.Forms;
 
 namespace TimeHACK.Engine
 {
@@ -14,6 +15,7 @@ namespace TimeHACK.Engine
         public static Save CurrentSave { get; set; }
         public static FileSystemFolderInfo filesystemflinfo { get; set; }
         public static bool DevMode = false;
+        public static Form troubleshooter;
 
         public static Theme currentTheme { get; set; }
 
@@ -94,21 +96,31 @@ namespace TimeHACK.Engine
 
         public static bool LoadSave()
         {
-            // ON A FINAL RELEASE USE THE "FINAL RELEASE THINGS"
-            #region Final Release Things
-            //Read base64 string from file
-            //string b64 = File.ReadAllText(Path.Combine(ProfileDirectory, ProfileFile));
-            //Get Unicode byte array
-            //byte[] bytes = Convert.FromBase64String(b64);
-            //Decode the Unicode
-            //string json = Encoding.UTF8.GetString(bytes);
-            //Deserialize save object.
-            #endregion
-            // USE THE THINGS IN THE "DEVELOPER THINGS" FOR A DEVELOPMENT RELEASE
-            #region Developer Things
-            string json = File.ReadAllText(Path.Combine(ProfileDirectory, ProfileFile));
-            #endregion
-            CurrentSave = JsonConvert.DeserializeObject<Save>(json);
+            try
+            {
+                // ON A FINAL RELEASE USE THE "FINAL RELEASE THINGS"
+                #region Final Release Things
+                //Read base64 string from file
+                //string b64 = File.ReadAllText(Path.Combine(ProfileDirectory, ProfileFile));
+                //Get Unicode byte array
+                //byte[] bytes = Convert.FromBase64String(b64);
+                //Decode the Unicode
+                //string json = Encoding.UTF8.GetString(bytes);
+                //Deserialize save object.
+                #endregion
+                // USE THE THINGS IN THE "DEVELOPER THINGS" FOR A DEVELOPMENT RELEASE
+                #region Developer Things
+                string json = File.ReadAllText(Path.Combine(ProfileDirectory, ProfileFile));
+                #endregion
+                CurrentSave = JsonConvert.DeserializeObject<Save>(json);
+                
+            } catch
+            {
+                MessageBox.Show("WARNING! It looks like this save is corrupt!");
+                MessageBox.Show("We will now open the Save troubleshooter");
+
+                troubleshooter.ShowDialog();
+            }
             return true;
         }
 
@@ -162,6 +174,9 @@ namespace TimeHACK.Engine
             SaveDirectoryInfo(ProfileMyComputerDirectory, false, "Win95 (C:)", true);
             if (CurrentSave.CurrentOS == "95") SaveDirectoryInfo(ProfileDocumentsDirectory, false, "My Documents", true);
             if (CurrentSave.CurrentOS != "95") SaveDirectoryInfo(ProfileSettingsDirectory, false, "Documents and Settings", true);
+            SaveDirectoryInfo(Path.Combine(ProfileProgramsDirectory, "Accessories"), false, "Accessories", true);
+            CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Accessories", "wordpad.exe"), "wordpad");
+            CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Accessories", "mspaint.exe"), "mspaint");
             SaveDirectoryInfo(ProfileProgramsDirectory, true, "Program Files", true);
             SaveDirectoryInfo(ProfileWindowsDirectory, true, "Windows", true);
 

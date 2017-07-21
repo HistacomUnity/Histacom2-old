@@ -25,7 +25,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         string currentDirectory = Path.Combine(ProfileDirectory, "folders", "Computer");
         string oldLabelText;
         int fileType = 6;
-        string attemptedDirectory = "";
+        //string attemptedDirectory = "";
         WindowManager wm = new WindowManager();
 
         public WinClassicWindowsExplorer()
@@ -169,11 +169,14 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 case "explorer":
                     Engine.Template.WinClassic app = wm.StartWin95(new WinClassicWindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
                     Program.AddTaskbarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
-
                     break;
                 case "calc":
-                    Engine.Template.WinClassic appCalc = wm.StartWin95(new WinClassicCalculator(), "Windows Explorer", Properties.Resources.WinClassicCalc, true, true);
-                    Program.AddTaskbarItem(appCalc, appCalc.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicCalc);
+                    Engine.Template.WinClassic appCalc = wm.StartWin95(new WinClassicCalculator(), "Calculator", Properties.Resources.WinClassicCalc, true, true);
+                    Program.AddTaskbarItem(appCalc, appCalc.Tag.ToString(), "Calculator", Properties.Resources.WinClassicCalc);
+                    break;
+                case "wordpad":
+                    Engine.Template.WinClassic appWP = wm.StartWin95(new WinClassicWordPad(), "Wordpad", Properties.Resources.WinClassicWordpad, true, true);
+                    Program.AddTaskbarItem(appWP, appWP.Tag.ToString(), "Wordpad", Properties.Resources.WinClassicWordpad);
                     break;
             }
             }
@@ -679,21 +682,27 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             try
             {
-                if (!File.Exists(Path.Combine(currentDirectory, mainView.FocusedItem.Text)))
+                if (!FileOrDirectoryExists(Path.Combine(currentDirectory, mainView.FocusedItem.Text)))
                 {
                     wm.StartInfobox95("Windows Explorer", "This directory doesn't exist", Properties.Resources.Win95Info);
                 }
                 else
                 {
-                    Directory.Delete(currentDirectory + mainView.FocusedItem.Text, true);
+                    if (Directory.Exists(Path.Combine(currentDirectory, mainView.FocusedItem.Text))) Directory.Delete(Path.Combine(currentDirectory, mainView.FocusedItem.Text), true);
+                        else File.Delete(Path.Combine(currentDirectory, mainView.FocusedItem.Text));
 
                     RefreshAll();
                 }
             } catch
             {
-
+                RefreshAll();
             }
             
+        }
+
+        internal static bool FileOrDirectoryExists(string path)
+        {
+             return (Directory.Exists(path) || File.Exists(path));
         }
 
         private void CloseToolStripMenuItem_Click(object sender, EventArgs e)

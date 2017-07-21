@@ -61,7 +61,30 @@ namespace TimeHACK.SaveDialogs
                 // Read the main.save file
                 json = File.ReadAllText(Path.Combine(SaveSystem.ProfileDirectory, "main.save"));
 
-                savedata = Newtonsoft.Json.JsonConvert.DeserializeObject<Save>(json);
+                try
+                {
+                    savedata = Newtonsoft.Json.JsonConvert.DeserializeObject<Save>(json);
+
+                } catch
+                {
+                    WriteToLog("ISSUE FOUND! File main.save is unreadable");
+
+                    WriteToLog("Sorry, there is no repairing it easily, your data will be lost");
+
+                    if (Directory.Exists(Path.Combine(SaveSystem.ProfileDirectory, "main.backup"))) Directory.Delete(Path.Combine(SaveSystem.ProfileDirectory, "main.backup"));
+
+                    File.Copy(Path.Combine(SaveSystem.ProfileDirectory, "main.save"), Path.Combine(SaveSystem.ProfileDirectory, "main.backup"));
+                    SaveSystem.NewGame();
+
+                    // Make sure the username is set
+
+                    SaveSystem.CurrentSave.Username = SaveSystem.ProfileName;
+
+                    WriteToLog($"The corrupt file has been stored in {Path.Combine(SaveSystem.ProfileDirectory, "main.backup")}");
+
+                    EndScan(true);
+                }
+                
 
                 // Check the values
 
@@ -107,7 +130,7 @@ namespace TimeHACK.SaveDialogs
 
                 // Set the main.save file to the resolved one
 
-                File.WriteAllText(Path.Combine(SaveSystem.ProfileDirectory, "main.save"), Newtonsoft.Json.JsonConvert.SerializeObject(savedata));
+                File.WriteAllText(Path.Combine(SaveSystem.ProfileDirectory, "main.save"), Newtonsoft.Json.JsonConvert.SerializeObject(savedata, Newtonsoft.Json.Formatting.Indented));
 
                 textBox1.Text = log;
             } else {

@@ -103,7 +103,10 @@ namespace TimeHACK.OS.Win95
             this.SendToBack();
 
             // Update the taskbar
-            UpdateTaskbar();           
+            UpdateTaskbar();
+
+            // Bring to this the front
+            this.BringToFront();
 
             //Check if it is the first time
             if (CurrentSave.FTime95 == false)
@@ -118,8 +121,7 @@ namespace TimeHACK.OS.Win95
                 nonimportantapps[nonimportantapps.Count - 1].BringToFront();
                 nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
 
-                // Bring to this the front
-                this.BringToFront();
+                
 
                 app.BringToFront();
                 

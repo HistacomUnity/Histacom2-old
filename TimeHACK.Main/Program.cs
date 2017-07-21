@@ -13,6 +13,7 @@ using TimeHACK.OS.Win95.Win95Apps;
 using TimeHACK.Engine;
 using TimeHACK.Engine.Template;
 using System.Drawing;
+using TimeHACK.SaveDialogs;
 
 namespace TimeHACK
 {
@@ -58,6 +59,8 @@ namespace TimeHACK
 
             //MySaveData = (TimeHACK.Engine.GameSave.SaveData)JsonConvert.DeserializeObject(TheJSON, MySaveData.GetType());
             //MessageBox.Show(MySaveData.OS.ToString());
+
+            Engine.SaveSystem.troubleshooter = new SaveFileTroubleShooter();
             Application.EnableVisualStyles();           
             Application.Run(title);
         }
