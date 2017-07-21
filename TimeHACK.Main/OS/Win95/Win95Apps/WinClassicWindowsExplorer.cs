@@ -22,7 +22,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         public string onlyViewExtension = "";
 
         string ToReplaceWith = ProfileDirectory;
-        string currentDirectory = Path.Combine(ProfileDirectory, "folders/computer");
+        string currentDirectory = Path.Combine(ProfileDirectory, "folders", "Computer");
         string oldLabelText;
         int fileType = 6;
         string attemptedDirectory = "";
@@ -84,7 +84,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         this.mainView.Items.Add(Path.GetFileName(str));
                         this.mainView.FindItemWithText(Path.GetFileName(str)).Tag = Path.GetFileName(str);
                     } else {
-                        this.mainView.Items.Add(label, 1).ImageIndex = 1;
+                        this.mainView.Items.Add(label);
                         this.mainView.FindItemWithText(label).Tag = Path.GetFileName(str);
                     }
                 }
@@ -119,12 +119,12 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         {
                             if (new FileInfo(str).Extension == onlyViewExtension)
                             {
-                                this.mainView.Items.Add(Path.GetFileName(str), AppIcon);                               
+                                this.mainView.Items.Add(Path.GetFileName(str));                               
                             }
                         }
                     } else {
                         if (!(Path.GetFileName(str) == "_data.info")) {
-                            this.mainView.Items.Add(Path.GetFileName(str), AppIcon);
+                            this.mainView.Items.Add(Path.GetFileName(str));
                         }
                     }
                 }
@@ -139,6 +139,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             try
             {
                 ReturnType(new FileInfo(filedir).Extension);
+                MessageBox.Show(fileType.ToString());
                 switch (fileType)
                 {
                     case 1:
@@ -154,7 +155,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         break;
                 }
             } catch {
-
+                MessageBox.Show("failed!");
             }
             
         }
@@ -470,6 +471,8 @@ namespace TimeHACK.OS.Win95.Win95Apps
     //    IsFileDialog = False
     //End Sub
         void WinClassicWindowsExplorer_Load(object sender, EventArgs e) {
+            diskView.ImageList = new ImageList();
+
             diskView.ImageList.Images.Add(Properties.Resources.Win95DesktopIcon);
             diskView.ImageList.Images.Add(Properties.Resources.Win95HardDiskIcon);
             diskView.ImageList.Images.Add(Properties.Resources.WinClassicFolderSmall);
@@ -479,7 +482,9 @@ namespace TimeHACK.OS.Win95.Win95Apps
             diskView.ImageList.Images.Add(Properties.Resources.Win95ComputerIcon);
             diskView.ImageList.Images.Add(Properties.Resources.Win95NetworkIcon);
             diskView.ImageList.Images.Add(Properties.Resources.Win95RecycleIcon);
+
             program.BringToFront();
+
             int loc = 0;
             TreeNode[] folders = new TreeNode[new DirectoryInfo(currentDirectory).GetDirectories().Length];
             foreach (DirectoryInfo folder in new DirectoryInfo(currentDirectory).GetDirectories())
@@ -506,11 +511,15 @@ namespace TimeHACK.OS.Win95.Win95Apps
             diskView.Nodes.Add(new TreeNode("Desktop", 0, 0, desktoparray));
             //diskView.Items.Add("My Computer", 0);
             Application.DoEvents();
+
             RefreshAll();
+
             if (FileDialogBoxManager.IsInOpenDialog)
             {
                 IsFileOpenDialog = true;
-            } else if (FileDialogBoxManager.IsInSaveDialog) {
+            }
+            else if (FileDialogBoxManager.IsInSaveDialog)
+            {
                 IsFileSaveDialog = true;
             }
 
@@ -518,12 +527,14 @@ namespace TimeHACK.OS.Win95.Win95Apps
             {
                 pnlSave.Show();
                 Button1.Text = "Open";
-            } else {
+            }
+            else
+            {
                 if (IsFileSaveDialog == true)
                 {
                     pnlSave.Show();
                     Button1.Text = "Save";
-                }       
+                }
             }
 
             onlyViewExtension = FileDialogBoxManager.OnlyViewExtension;
@@ -533,14 +544,15 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             try
             {
-                if (IsFileOpenDialog == true || IsFileSaveDialog == true)
-                {
                     if ((String)mainView.FocusedItem.Tag != "")
                     { // If it isn't a file
                         GoToDir(currentDirectory + "\\" + mainView.FocusedItem.Tag);
                     }
                     else
                     { // If it is a file
+                    if (IsFileOpenDialog == true || IsFileSaveDialog == true)
+                    {
+                        MessageBox.Show("Nope!");
                         if (new FileInfo(Path.Combine(currentDirectory, txtSave.Text)).Extension == onlyViewExtension)
                         {
                             Program.WindowsExplorerReturnPath = currentDirectory + "\\" + txtSave.Text;
@@ -551,12 +563,11 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         FileDialogBoxManager.IsInSaveDialog = false;
 
                         ((Form)this.TopLevelControl).Close();
+                    } else {
+                        MessageBox.Show("Yep!");
+                        OpenFile((String)mainView.FocusedItem.Tag);
                     }
-                } else {
-                    // Open it if it's a recognized file
-
-                    
-                }
+            }
                 
             } catch {
 
