@@ -81,37 +81,39 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     string label = ReadDataFile(str, false);
                     if (label == "")
                     {
-                        this.mainView.Items.Add(Path.GetFileName(str));
-                        this.mainView.FindItemWithText(Path.GetFileName(str)).Tag = Path.GetFileName(str);
+                        ListViewItem itm = this.mainView.Items.Add(Path.GetFileName(str));
+                        itm.ImageKey = str;
                     } else {
-                        this.mainView.Items.Add(label);
-                        this.mainView.FindItemWithText(label).Tag = Path.GetFileName(str);
+                        ListViewItem itm = this.mainView.Items.Add(label);
+                        itm.ImageKey = str;
                     }
                 }
                 foreach (string str in Directory.GetFiles(currentDirectory))
                 {
-                    // Get app Icon
+                    // Get the app Icon
 
-                    int AppIcon = 2;
+                    //int AppIcon = 2;
 
-                    switch (new FileInfo(str).Extension)
-                    {
-                        case ".exe":
-                            string contents;
+                    //switch (new FileInfo(str).Extension)
+                    //{
+                    //    case ".exe":
+                    //        string contents;
 
-                            contents = File.ReadAllText(str);
+                    //        contents = File.ReadAllText(str);
 
-                            switch (contents.ToLower())
-                            {
-                                case "calculator":
-                                    AppIcon = 3;
-                                    break;
-                                case "windowsexplorer":
-                                    AppIcon = 4;
-                                    break;
-                            }
-                            break;
-                    }
+                    //        switch (contents.ToLower())
+                    //        {
+                    //            case "calc":
+                    //                AppIcon = 3;
+                    //                break;
+                    //            case "explorer":
+                    //                AppIcon = 4;
+                    //                break;
+                    //        }
+                    //        break;
+                    //}
+
+
 
                     if (IsFileOpenDialog == true || IsFileSaveDialog == true)
                     {
@@ -119,12 +121,14 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         {
                             if (new FileInfo(str).Extension == onlyViewExtension)
                             {
-                                this.mainView.Items.Add(Path.GetFileName(str));                               
+                                ListViewItem itm = this.mainView.Items.Add(Path.GetFileName(str));
+                                itm.Tag = str;
                             }
                         }
                     } else {
                         if (!(Path.GetFileName(str) == "_data.info")) {
-                            this.mainView.Items.Add(Path.GetFileName(str));
+                            ListViewItem itm = this.mainView.Items.Add(Path.GetFileName(str));
+                            itm.Tag = str;
                         }
                     }
                 }
@@ -134,23 +138,23 @@ namespace TimeHACK.OS.Win95.Win95Apps
             }
         }
 
-        void OpenFile(String filedir)
+        void OpenFile(string fileDir)
         {
             try
             {
-                ReturnType(new FileInfo(filedir).Extension);
+                ReturnType(new FileInfo(fileDir).Extension);
                 switch (fileType)
                 {
                     case 1:
                         WinClassicNotepad np = new WinClassicNotepad();
-                        np.mainText.Text = FileDialogBoxManager.ReadTextFile(filedir);
+                        np.mainText.Text = FileDialogBoxManager.ReadTextFile(fileDir);
                         WinClassic app = wm.StartWin95(np, "Notepad", Properties.Resources.Win95IconNotepad, true, true);
 
                         Program.AddTaskbarItem(app, app.Tag.ToString(), "Notepad", Properties.Resources.Win95IconNotepad);
 
                         break;
                     case 12:
-                        OpenApplication(FileDialogBoxManager.ReadTextFile(filedir));
+                        OpenApplication(FileDialogBoxManager.ReadTextFile(fileDir));
                         break;
                 }
             } catch {
@@ -158,18 +162,19 @@ namespace TimeHACK.OS.Win95.Win95Apps
             
         }
 
-        void OpenApplication(String appname)
+        void OpenApplication(string appname)
         {
             switch (appname.ToLower())
-            {
-                case "windowsexplorer":
-                    WinClassicWindowsExplorer we = new WinClassicWindowsExplorer();
-                    Engine.Template.WinClassic app = wm.StartWin95(we, "Windows Explorer", Properties.Resources.Win95Computer, true, true);
-                    Program.AddTaskbarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.Win95Computer);
+            {               
+                case "explorer":
+                    Engine.Template.WinClassic app = wm.StartWin95(new WinClassicWindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
+                    Program.AddTaskbarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
 
                     break;
-                case "calculator":
-                    throw new NotImplementedException();
+                case "calc":
+                    Engine.Template.WinClassic appCalc = wm.StartWin95(new WinClassicCalculator(), "Windows Explorer", Properties.Resources.WinClassicCalc, true, true);
+                    Program.AddTaskbarItem(appCalc, appCalc.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicCalc);
+                    break;
             }
             }
 
@@ -489,13 +494,15 @@ namespace TimeHACK.OS.Win95.Win95Apps
             {
                 if (folder.GetDirectories().Length > 0)
                 {
+                    string label = ReadDataFile(folder.FullName, false);
                     TreeNode[] tn = createSubDirNodes(folder);
-                    folders[loc] = new TreeNode(folder.Name, 2, 3, tn);
+                    folders[loc] = new TreeNode(label ?? folder.Name, 2, 3, tn);
                     folders[loc].Tag = folder.FullName;
                 }
                 else
                 {
-                    folders[loc] = new TreeNode(folder.Name, 2, 3);
+                    string label = ReadDataFile(folder.FullName, false);
+                    folders[loc] = new TreeNode(label ?? folder.Name, 2, 3);
                     folders[loc].Tag = folder.FullName;
                 }
                 loc++;
@@ -546,23 +553,17 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             try
             {
-                if ((string)mainView.FocusedItem.Tag != "")
+                if (mainView.FocusedItem.Tag == null)
                 { // If it isn't a file
-                    GoToDir(currentDirectory + "\\" + mainView.FocusedItem.Tag);
+                    GoToDir(Path.Combine(currentDirectory, mainView.FocusedItem.ImageKey.ToString()));
                 }
                 else
                 { // If it is a file
-                    if (new FileInfo(Path.Combine(currentDirectory, txtSave.Text)).Extension == onlyViewExtension)
-                    {
-                        Program.WindowsExplorerReturnPath = currentDirectory + "\\" + txtSave.Text;
-                    }
-                    else
-                    { // If it is a file
                         if (IsFileOpenDialog == true || IsFileSaveDialog == true)
                         {
                             if (new FileInfo(Path.Combine(currentDirectory, txtSave.Text)).Extension == onlyViewExtension)
                             {
-                                Program.WindowsExplorerReturnPath = currentDirectory + "\\" + txtSave.Text;
+                                Program.WindowsExplorerReturnPath = Path.Combine(currentDirectory, txtSave.Text);
                             }
 
 
@@ -573,12 +574,11 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         }
                         else
                         {
-                            OpenFile((String)mainView.FocusedItem.Tag);
+                            OpenFile((string)mainView.FocusedItem.Tag);
                         }
-                    }
                 }
-            } catch {
-
+            } catch (Exception ex) {
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -641,9 +641,9 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 bool OpenFile = false;
                 if (mainView.FocusedItem != null)
                 {
-                    if ((string)mainView.FocusedItem.Tag != "")
+                    if ((string)mainView.FocusedItem.Tag == "")
                     { // If it isn't a file
-                        GoToDir(currentDirectory + "\\" + mainView.FocusedItem.Tag);
+                        GoToDir(Path.Combine(currentDirectory, mainView.FocusedItem.Tag.ToString()));
                     }
                     else OpenFile = true; // If it is a file
                 }
@@ -656,10 +656,10 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     }
                     else
                     {
-                        if (new FileInfo(currentDirectory + "\\" + txtSave.Text).Extension == onlyViewExtension)
+                        if (new FileInfo(Path.Combine(currentDirectory, txtSave.Text)).Extension == onlyViewExtension)
                         {
 
-                            Program.WindowsExplorerReturnPath = currentDirectory + "\\" + txtSave.Text;
+                            Program.WindowsExplorerReturnPath = Path.Combine(currentDirectory, txtSave.Text);
 
                         }
 
@@ -752,13 +752,15 @@ namespace TimeHACK.OS.Win95.Win95Apps
             {
                 if (fold.GetDirectories().Length > 0)
                 {
+                    string label = ReadDataFile(fold.FullName, false);
                     TreeNode[] tn = createSubDirNodes(fold);
-                    toReturn[loc] = new TreeNode(fold.Name, 2, 3, tn);
+                    toReturn[loc] = new TreeNode(label ?? fold.Name, 2, 3, tn);
                     toReturn[loc].Tag = fold.FullName;
                 }
                 else
                 {
-                    toReturn[loc] = new TreeNode(fold.Name, 2, 3);
+                    string label = ReadDataFile(fold.FullName, false);
+                    toReturn[loc] = new TreeNode(label ?? fold.Name, 2, 3);
                     toReturn[loc].Tag = fold.FullName;
                 }
                 loc++;

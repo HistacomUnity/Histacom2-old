@@ -15,8 +15,6 @@ namespace TimeHACK.Engine
         public static FileSystemFolderInfo filesystemflinfo { get; set; }
         public static bool DevMode = false;
 
-        public static FileAssociation IconChanger = new FileAssociation();
-
         public static Theme currentTheme { get; set; }
 
         public static string GameDirectory
@@ -161,7 +159,7 @@ namespace TimeHACK.Engine
                 Directory.CreateDirectory(ProfileFileSystemDirectory);
 
             SaveDirectoryInfo(ProfileFileSystemDirectory, false, "My Computer", false);            
-            SaveDirectoryInfo(ProfileMyComputerDirectory, false, "Win95", true);
+            SaveDirectoryInfo(ProfileMyComputerDirectory, false, "Win95 (C:)", true);
             if (CurrentSave.CurrentOS == "95") SaveDirectoryInfo(ProfileDocumentsDirectory, false, "My Documents", true);
             if (CurrentSave.CurrentOS != "95") SaveDirectoryInfo(ProfileSettingsDirectory, false, "Documents and Settings", true);
             SaveDirectoryInfo(ProfileProgramsDirectory, true, "Program Files", true);
@@ -179,8 +177,8 @@ namespace TimeHACK.Engine
             SaveDirectoryInfo(Path.Combine(ProfileWindowsDirectory, "Help"), true, "Help", true);
             SaveDirectoryInfo(Path.Combine(ProfileWindowsDirectory, "Temp"), true, "Temp", true);
 
-            CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "calc.exe"), "Calculator");
-            CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "explorer.exe"), "windowsexplorer");
+            CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "calc.exe"), "calc");
+            CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "explorer.exe"), "explorer");
         }
 
         public static void CreateWindowsFile(string filepath, string contents)
