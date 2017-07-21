@@ -931,16 +931,177 @@
     },
     {
       "user": "12padams",
-      "delay": 4000,
+      "delay": 3000,
       "message": "hmm, this is going to be tricky..",
       "special": null,
       "userchat": true
     },
     {
       "user": "12padams",
-      "delay": 4000,
+      "delay": 3000,
       "message": "i hope youre not scared of the dark!",
       "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 4000,
+      "message": "",
+      "special": ".blackout",
+      "userchat": false
+    },
+    {
+      "user": "12padams",
+      "delay": 3000,
+      "message": "and, we didnt even have sound back then!",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 6000,
+      "message": "so now, the sound is gone.",
+      "special": "nosound",
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 3500,
+      "message": "i think i almost got your computer converted, early 1980s should be enough of a punishment",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 3000,
+      "message": "but there are still quite a few things missing...",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 2000,
+      "message": "for example, the text needs to be fullscreen.",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 4000,
+      "message": "",
+      "special": ".fulltext",
+      "userchat": false
+    },
+    {
+      "user": "12padams",
+      "delay": 4000,
+      "message": "and, theres also the scrollbar, which didnt exist back then..",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 3000,
+      "message": "this looks great! i really should add this to skindows 98..",
+      "special": "noscroll",
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 3000,
+      "message": "oh dear, this is embarassing..",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 5000,
+      "message": "i forgot to remove the mouse!",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 3000,
+      "message": "well then, enjoy it while you can, because im going to remove it",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 1000,
+      "message": "removing in 10",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 1000,
+      "message": "9",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 1000,
+      "message": "8",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 1000,
+      "message": "7",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 1000,
+      "message": "6",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 1000,
+      "message": "5",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 1000,
+      "message": "4",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 1000,
+      "message": "3",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 1000,
+      "message": "2",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 1000,
+      "message": "1",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 5000,
+      "message": "goodbye mouse!",
+      "special": "nomouse",
       "userchat": true
     }
   ]

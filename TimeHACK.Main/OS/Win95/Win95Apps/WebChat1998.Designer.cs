@@ -40,13 +40,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.typechat = new System.Windows.Forms.TextBox();
             this.login = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtscreenname = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.txtscreenname = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -62,6 +62,8 @@
             // 
             // listBox1
             // 
+            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(504, 32);
             this.listBox1.Name = "listBox1";
@@ -80,17 +82,21 @@
             // 
             // history
             // 
+            this.history.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.history.BackColor = System.Drawing.Color.White;
             this.history.Location = new System.Drawing.Point(22, 32);
             this.history.Multiline = true;
             this.history.Name = "history";
             this.history.ReadOnly = true;
+            this.history.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.history.Size = new System.Drawing.Size(471, 377);
             this.history.TabIndex = 2;
-            this.history.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.button5);
@@ -104,7 +110,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(13, 18);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 13);
+            this.label5.Size = new System.Drawing.Size(84, 13);
             this.label5.TabIndex = 1;
             this.label5.Text = "skin95setup.exe";
             // 
@@ -119,6 +125,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(504, 374);
             this.label6.Name = "label6";
@@ -128,6 +135,7 @@
             // 
             // typechat
             // 
+            this.typechat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.typechat.Location = new System.Drawing.Point(20, 415);
             this.typechat.Name = "typechat";
             this.typechat.Size = new System.Drawing.Size(395, 20);
@@ -146,6 +154,52 @@
             this.login.Name = "login";
             this.login.Size = new System.Drawing.Size(497, 251);
             this.login.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(328, 161);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(149, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Please type in a screen name.";
+            // 
+            // txtscreenname
+            // 
+            this.txtscreenname.Location = new System.Drawing.Point(331, 181);
+            this.txtscreenname.Name = "txtscreenname";
+            this.txtscreenname.Size = new System.Drawing.Size(151, 20);
+            this.txtscreenname.TabIndex = 5;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Silver;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(331, 208);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(151, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Login";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(196, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(112, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Welcome to WebChat";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(118, 56);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(93, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Chat Room Rules:";
             // 
             // textBox1
             // 
@@ -173,52 +227,6 @@
     "ame. To keep your identity safe, please do not enter your real name in this chat" +
     "room.";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(118, 56);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Chat Room Rules:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(196, 16);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Welcome to WebChat";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Silver;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(331, 208);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(151, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
-            // 
-            // txtscreenname
-            // 
-            this.txtscreenname.Location = new System.Drawing.Point(331, 181);
-            this.txtscreenname.Name = "txtscreenname";
-            this.txtscreenname.Size = new System.Drawing.Size(151, 20);
-            this.txtscreenname.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(328, 161);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Please type in a screen name.";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -229,12 +237,14 @@
             this.label7.Text = "To speak, just type in the bottom textbox, then click the Speak button or press E" +
     "nter.";
             // 
-            // cancelButton
+            // button2
             // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.BackColor = System.Drawing.Color.Silver;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(422, 415);
-            this.button2.Name = "cancelButton";
+            this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(71, 23);
             this.button2.TabIndex = 8;
             this.button2.Text = "Speak";

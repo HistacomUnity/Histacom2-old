@@ -22,6 +22,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         MessageParser wcmp = new MessageParser();
         bool correctname = false;
         bool guessing = false;
+        bool msgsound = true;
 
         bool wimponclose = false;
 
@@ -74,7 +75,8 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             if (!guessing)
             {
-                history.AppendText(wcmp.ParseMessage(resources.GetString("convo"), chat_index, TitleScreen.username));
+                if (history.ScrollBars != ScrollBars.None) history.AppendText(wcmp.ParseMessage(resources.GetString("convo"), chat_index, TitleScreen.username));
+                else history.Text = wcmp.ParseMessage(resources.GetString("convo"), chat_index, TitleScreen.username);
                 switch (wcmp.GetSpecial(resources.GetString("convo"), chat_index))
                 {
                     case "addsh":
@@ -136,7 +138,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         receive.Play();
                         break;
                     case "notopbar":
-                        ((WinClassic)this.ParentForm).programtopbar = null;
+                        ((WinClassic)this.ParentForm).programtopbar.Hide();
                         receive.Play();
                         break; // TODO: Finish WebChat 1998
                     case "filepoof":
@@ -148,13 +150,46 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         listBox1.Items.Remove("SkyHigh");
                         leave.Play();
                         break;
+                    case "notype":
+                        typechat.Hide();
+                        button2.Hide();
+                        receive.Play();
+                        break;
                     case ".labelgone":
                         label1.Hide();
                         label6.Hide();
                         label7.Hide();
                         break;
+                    case ".blackout":
+                        BackColor = Color.Black;
+                        history.BackColor = Color.Black;
+                        history.ForeColor = Color.White;
+                        break;
+                    case "nosound":
+                        msgsound = false;
+                        break;
+                    case ".fulltext":
+                        foreach (Control c in ((WinClassic)this.ParentForm).program.Controls)
+                        {
+                            if (c.Name != "programContent")
+                            {
+                                c.Hide();
+                                ((WinClassic)this.ParentForm).program.Controls.Remove(c);
+                            }
+                        }
+                        ((WinClassic)this.ParentForm).programContent.Location = new Point(0, 0);
+                        ((WinClassic)this.ParentForm).programContent.Size = ((WinClassic)this.ParentForm).ClientSize;
+                        panel1.Hide();
+                        history.Dock = DockStyle.Fill;
+                        break;
+                    case "noscroll":
+                        history.ScrollBars = ScrollBars.None;
+                        break;
+                    case "nomouse":
+                        Cursor.Hide();
+                        break;
                     default:
-                        receive.Play();
+                        if (msgsound) receive.Play();
                         break;
                 }
                 if (TitleScreen.username == "devspeed") Chat.Interval = wcmp.GetMessageDelay(resources.GetString("convo"), chat_index) / 2;
@@ -192,7 +227,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             if (typechat.Text != "") history.AppendText(TitleScreen.username + ": " + typechat.Text + Environment.NewLine);
             typechat.Text = "";
-            send.Play();
+            if (msgsound) send.Play();
         }
 
         private void Button3_Click(object sender, EventArgs e)
