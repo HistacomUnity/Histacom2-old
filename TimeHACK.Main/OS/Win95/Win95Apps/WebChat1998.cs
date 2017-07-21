@@ -251,4 +251,3 @@ namespace TimeHACK.OS.Win95.Win95Apps
         }
     }
 }
->>>>>>> refs/remotes/TimeHACKDevs/master
