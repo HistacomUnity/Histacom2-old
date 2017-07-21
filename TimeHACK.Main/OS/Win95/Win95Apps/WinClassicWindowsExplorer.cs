@@ -46,9 +46,9 @@ namespace TimeHACK.OS.Win95.Win95Apps
         //'    Next
         //'End Sub
 
-        String ReadDataFile(String reqDirectory, Boolean returnYesIfProtected = false) {
-            String Val = "";
-            String directoryFileInfo;
+        string ReadDataFile(string reqDirectory, bool returnYesIfProtected = false) {
+            string Val = "";
+            string directoryFileInfo;
             directoryFileInfo = File.ReadAllText(Path.Combine(reqDirectory, "_data.info"));
             FileSystemFolderInfo toRead = new FileSystemFolderInfo();
             toRead = JsonConvert.DeserializeObject<FileSystemFolderInfo>(directoryFileInfo);
@@ -71,14 +71,14 @@ namespace TimeHACK.OS.Win95.Win95Apps
             try {
                 // Refresh the right listview
                 this.mainView.Items.Clear();
-                // For Each drive As String In My.Computer.FileSystem.GetDirectories(GameMain.MyDocuments & "\HistacomVB\" & GameMain.SaveProfile & "\HistacomVB\Folders")
+                // For Each drive As string In My.Computer.FileSystem.GetDirectories(GameMain.MyDocuments & "\HistacomVB\" & GameMain.SaveProfile & "\HistacomVB\Folders")
                 //    If GetPropetiesForDir(drive)(4) = "isMyDocuments" Then
                 //        diskView.Items.Add("", 0)
                 //    End If
                 //Next
-                foreach (String str in Directory.GetDirectories(currentDirectory))
+                foreach (string str in Directory.GetDirectories(currentDirectory))
                 {
-                    String label = ReadDataFile(str, false);
+                    string label = ReadDataFile(str, false);
                     if (label == "")
                     {
                         this.mainView.Items.Add(Path.GetFileName(str));
@@ -88,7 +88,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         this.mainView.FindItemWithText(label).Tag = Path.GetFileName(str);
                     }
                 }
-                foreach (String str in Directory.GetFiles(currentDirectory))
+                foreach (string str in Directory.GetFiles(currentDirectory))
                 {
                     // Get app Icon
 
@@ -97,7 +97,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     switch (new FileInfo(str).Extension)
                     {
                         case ".exe":
-                            String contents;
+                            string contents;
 
                             contents = File.ReadAllText(str);
 
@@ -139,7 +139,6 @@ namespace TimeHACK.OS.Win95.Win95Apps
             try
             {
                 ReturnType(new FileInfo(filedir).Extension);
-                MessageBox.Show(fileType.ToString());
                 switch (fileType)
                 {
                     case 1:
@@ -155,7 +154,6 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         break;
                 }
             } catch {
-                MessageBox.Show("failed!");
             }
             
         }
@@ -493,10 +491,12 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 {
                     TreeNode[] tn = createSubDirNodes(folder);
                     folders[loc] = new TreeNode(folder.Name, 2, 3, tn);
+                    folders[loc].Tag = folder.FullName;
                 }
                 else
                 {
                     folders[loc] = new TreeNode(folder.Name, 2, 3);
+                    folders[loc].Tag = folder.FullName;
                 }
                 loc++;
             }
@@ -509,6 +509,8 @@ namespace TimeHACK.OS.Win95.Win95Apps
             desktoparray[1] = new TreeNode("Network Neighborhood", 7, 7);
             desktoparray[2] = new TreeNode("Recycle Bin", 8, 8);
             diskView.Nodes.Add(new TreeNode("Desktop", 0, 0, desktoparray));
+            
+
             //diskView.Items.Add("My Computer", 0);
             Application.DoEvents();
 
@@ -544,31 +546,37 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             try
             {
-                    if ((String)mainView.FocusedItem.Tag != "")
-                    { // If it isn't a file
-                        GoToDir(currentDirectory + "\\" + mainView.FocusedItem.Tag);
+                if ((string)mainView.FocusedItem.Tag != "")
+                { // If it isn't a file
+                    GoToDir(currentDirectory + "\\" + mainView.FocusedItem.Tag);
+                }
+                else
+                { // If it is a file
+                    if (new FileInfo(Path.Combine(currentDirectory, txtSave.Text)).Extension == onlyViewExtension)
+                    {
+                        Program.WindowsExplorerReturnPath = currentDirectory + "\\" + txtSave.Text;
                     }
                     else
                     { // If it is a file
-                    if (IsFileOpenDialog == true || IsFileSaveDialog == true)
-                    {
-                        MessageBox.Show("Nope!");
-                        if (new FileInfo(Path.Combine(currentDirectory, txtSave.Text)).Extension == onlyViewExtension)
+                        if (IsFileOpenDialog == true || IsFileSaveDialog == true)
                         {
-                            Program.WindowsExplorerReturnPath = currentDirectory + "\\" + txtSave.Text;
+                            if (new FileInfo(Path.Combine(currentDirectory, txtSave.Text)).Extension == onlyViewExtension)
+                            {
+                                Program.WindowsExplorerReturnPath = currentDirectory + "\\" + txtSave.Text;
+                            }
+
+
+                            FileDialogBoxManager.IsInOpenDialog = false;
+                            FileDialogBoxManager.IsInSaveDialog = false;
+
+                            ((Form)this.TopLevelControl).Close();
                         }
-
-
-                        FileDialogBoxManager.IsInOpenDialog = false;
-                        FileDialogBoxManager.IsInSaveDialog = false;
-
-                        ((Form)this.TopLevelControl).Close();
-                    } else {
-                        MessageBox.Show("Yep!");
-                        OpenFile((String)mainView.FocusedItem.Tag);
+                        else
+                        {
+                            OpenFile((String)mainView.FocusedItem.Tag);
+                        }
                     }
-            }
-                
+                }
             } catch {
 
             }
@@ -578,10 +586,30 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             try
             {
-                if (diskView.SelectedNode.Text == "My Computer") {
-                    GoToDir(ProfileFileSystemDirectory);
-                }
+                if (diskView.SelectedNode != null)
+                {
+                    if (diskView.SelectedNode.Text == "My Computer")
+                    {
+                        GoToDir(ProfileFileSystemDirectory);
+                    }
+                    else if (diskView.SelectedNode.Text == "(C:)")
+                    {
+                        GoToDir(ProfileMyComputerDirectory);
+                    }
+                    else
+                    {
+                        if (diskView.SelectedNode.Tag != null)
+                        {
+                            // It is a directory:
 
+                            try
+                            {
+                                GoToDir(diskView.SelectedNode.Tag.ToString());
+                            }
+                            catch { }
+                        }
+                    }
+                }
             } catch {
             }
         }
@@ -610,10 +638,10 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             try
             {
-                Boolean OpenFile = false;
+                bool OpenFile = false;
                 if (mainView.FocusedItem != null)
                 {
-                    if ((String)mainView.FocusedItem.Tag != "")
+                    if ((string)mainView.FocusedItem.Tag != "")
                     { // If it isn't a file
                         GoToDir(currentDirectory + "\\" + mainView.FocusedItem.Tag);
                     }
@@ -695,7 +723,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         private void mainView_AfterLabelEdit(object sender, LabelEditEventArgs e)
         {
 
-            String setText;
+            string setText;
             setText = mainView.FocusedItem.Text;
             if (setText == "")
             {
@@ -726,10 +754,12 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 {
                     TreeNode[] tn = createSubDirNodes(fold);
                     toReturn[loc] = new TreeNode(fold.Name, 2, 3, tn);
+                    toReturn[loc].Tag = fold.FullName;
                 }
                 else
                 {
                     toReturn[loc] = new TreeNode(fold.Name, 2, 3);
+                    toReturn[loc].Tag = fold.FullName;
                 }
                 loc++;
             }
