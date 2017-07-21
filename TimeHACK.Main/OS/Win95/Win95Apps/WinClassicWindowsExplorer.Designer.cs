@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.program = new System.Windows.Forms.Panel();
+            this.mainView = new System.Windows.Forms.ListView();
             this.diskView = new System.Windows.Forms.TreeView();
             this.MenuStrip1 = new System.Windows.Forms.MenuStrip();
             this.FileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,7 +40,6 @@
             this.BitmapImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DeleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RenameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PropertiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CloseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.EditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.UndoCtrlZToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -85,7 +84,6 @@
             this.Button1 = new System.Windows.Forms.Button();
             this.Label1 = new System.Windows.Forms.Label();
             this.txtSave = new System.Windows.Forms.TextBox();
-            this.mainView = new System.Windows.Forms.ListView();
             this.program.SuspendLayout();
             this.MenuStrip1.SuspendLayout();
             this.pnlSave.SuspendLayout();
@@ -108,12 +106,23 @@
             this.program.Size = new System.Drawing.Size(704, 517);
             this.program.TabIndex = 13;
             // 
+            // mainView
+            // 
+            this.mainView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainView.Location = new System.Drawing.Point(215, 27);
+            this.mainView.Name = "mainView";
+            this.mainView.Size = new System.Drawing.Size(486, 444);
+            this.mainView.TabIndex = 10;
+            this.mainView.UseCompatibleStateImageBehavior = false;
+            this.mainView.View = System.Windows.Forms.View.List;
+            this.mainView.DoubleClick += new System.EventHandler(this.mainView_DoubleClick);
+            // 
             // diskView
             // 
-            this.diskView.ImageIndex = 0;
             this.diskView.Location = new System.Drawing.Point(3, 27);
             this.diskView.Name = "diskView";
-            this.diskView.SelectedImageIndex = 0;
             this.diskView.Size = new System.Drawing.Size(213, 444);
             this.diskView.TabIndex = 13;
             this.diskView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.diskView_AfterSelect);
@@ -139,7 +148,6 @@
             this.CreateShortcutToolStripMenuItem,
             this.DeleteToolStripMenuItem,
             this.RenameToolStripMenuItem,
-            this.PropertiesToolStripMenuItem,
             this.CloseToolStripMenuItem});
             this.FileToolStripMenuItem.Name = "FileToolStripMenuItem";
             this.FileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
@@ -153,7 +161,7 @@
             this.TextDocumentToolStripMenuItem,
             this.BitmapImageToolStripMenuItem});
             this.CreateShortcutToolStripMenuItem.Name = "CreateShortcutToolStripMenuItem";
-            this.CreateShortcutToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.CreateShortcutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.CreateShortcutToolStripMenuItem.Text = "New";
             // 
             // FolderToolStripMenuItem
@@ -184,26 +192,21 @@
             // DeleteToolStripMenuItem
             // 
             this.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem";
-            this.DeleteToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.DeleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.DeleteToolStripMenuItem.Text = "Delete";
             this.DeleteToolStripMenuItem.Click += new System.EventHandler(this.DeleteToolStripMenuItem_Click);
             // 
             // RenameToolStripMenuItem
             // 
             this.RenameToolStripMenuItem.Name = "RenameToolStripMenuItem";
-            this.RenameToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.RenameToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.RenameToolStripMenuItem.Text = "Rename";
-            // 
-            // PropertiesToolStripMenuItem
-            // 
-            this.PropertiesToolStripMenuItem.Name = "PropertiesToolStripMenuItem";
-            this.PropertiesToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
-            this.PropertiesToolStripMenuItem.Text = "Properties";
+            this.RenameToolStripMenuItem.Click += new System.EventHandler(this.RenameToolStripMenuItem_Click);
             // 
             // CloseToolStripMenuItem
             // 
             this.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem";
-            this.CloseToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.CloseToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.CloseToolStripMenuItem.Text = "Close";
             this.CloseToolStripMenuItem.Click += new System.EventHandler(this.CloseToolStripMenuItem_Click);
             // 
@@ -528,19 +531,6 @@
             this.txtSave.Size = new System.Drawing.Size(542, 20);
             this.txtSave.TabIndex = 15;
             // 
-            // mainView
-            // 
-            this.mainView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainView.Location = new System.Drawing.Point(215, 27);
-            this.mainView.Name = "mainView";
-            this.mainView.Size = new System.Drawing.Size(486, 444);
-            this.mainView.TabIndex = 10;
-            this.mainView.UseCompatibleStateImageBehavior = false;
-            this.mainView.View = System.Windows.Forms.View.List;
-            this.mainView.DoubleClick += new System.EventHandler(this.mainView_DoubleClick);
-            // 
             // WinClassicWindowsExplorer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -572,7 +562,6 @@
         internal System.Windows.Forms.ToolStripMenuItem BitmapImageToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem DeleteToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem RenameToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem PropertiesToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem CloseToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem EditToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem UndoCtrlZToolStripMenuItem;
