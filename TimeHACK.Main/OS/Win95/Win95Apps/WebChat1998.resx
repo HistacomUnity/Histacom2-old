@@ -753,6 +753,195 @@
       "message": "i've done everything? no, what about this?",
       "special": "notopbar",
       "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 5000,
+      "message": "damn it! he removed the buttons at the top so we cant get out...",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 3000,
+      "message": "please just STOP! me and @user didn't even upload the file!",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 5000,
+      "message": "rain uploaded it, not us!",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 4000,
+      "message": "and do you see him here now?",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 2000,
+      "message": "no, you got rid of him!",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 5000,
+      "message": "exactly.",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 5000,
+      "message": "speaking of, i need to remove that file which has been sitting here all this time!",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 3000,
+      "message": "there. now i can deal with you two...",
+      "special": "filepoof",
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 5000,
+      "message": "STOP PLEASE!!",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 3000,
+      "message": "stop? why you have been able to stop this whole time! just turn off your computer!",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "SkyHigh",
+      "delay": 5000,
+      "message": "but i cant!",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 1500,
+      "message": "do you not know how? well then, let me do it for you.",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "System",
+      "delay": 2500,
+      "message": "SkyHigh has left the chat.",
+      "special": "removesky",
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 3000,
+      "message": "now, we just have @user...",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 3500,
+      "message": "hmm, i dont remember you saying much",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 5000,
+      "message": "well, since you dont talk, you wont need this",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 4000,
+      "message": "you probably want to say \"WHY CANT I TALK!!1!\"",
+      "special": "notype",
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 5000,
+      "message": "but you cant, and i bet you dont know how",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 4000,
+      "message": "now lets see... it appears youre running windows 95 which you only got a week ago",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 5000,
+      "message": "so you must be new to computers",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 3000,
+      "message": "this is cool! i get to punish you, AND i get to teach you about computer history!",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 4000,
+      "message": "well, let us go back to 1982..",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 2500,
+      "message": "back then, we didnt have labels, so ill remove those...",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 4000,
+      "message": "",
+      "special": ".labelgone",
+      "userchat": false
+    },
+    {
+      "user": "12padams",
+      "delay": 4000,
+      "message": "also, we didnt have wallpapers, or even color for that matter",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 4000,
+      "message": "hmm, this is going to be tricky..",
+      "special": null,
+      "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 4000,
+      "message": "i hope youre not scared of the dark!",
+      "special": null,
+      "userchat": true
     }
   ]
 }</value>

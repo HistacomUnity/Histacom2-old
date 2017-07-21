@@ -13,6 +13,7 @@ namespace TimeHACK.Engine
         {
             JObject message = JObject.Parse(JObject.Parse(json)["messages"][index].ToString());
             string newmsg = message["message"].ToString().Replace("@user", user);
+            if (!message["special"].ToString().StartsWith(".")) newmsg += Environment.NewLine;
             if (message["userchat"].ToObject<bool>()) return message["user"].ToString() + ": " + newmsg;
             else return newmsg;
         }

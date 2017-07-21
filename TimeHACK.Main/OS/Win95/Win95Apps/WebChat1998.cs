@@ -42,6 +42,11 @@ namespace TimeHACK.OS.Win95.Win95Apps
             bsod2 = bc.throw9XBSOD(false, BSODCreator.BSODCauses.PiracyEnding);
             bsod.Hide();
             bsod2.Hide();
+
+            this.button1.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            this.button2.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            this.button3.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            this.button4.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
         }
         private void WebChat1998_Load(object sender, EventArgs e)
         {
@@ -69,7 +74,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             if (!guessing)
             {
-                history.AppendText(wcmp.ParseMessage(resources.GetString("convo"), chat_index, TitleScreen.username) + Environment.NewLine);
+                history.AppendText(wcmp.ParseMessage(resources.GetString("convo"), chat_index, TitleScreen.username));
                 switch (wcmp.GetSpecial(resources.GetString("convo"), chat_index))
                 {
                     case "addsh":
@@ -134,6 +139,20 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         ((WinClassic)this.ParentForm).programtopbar = null;
                         receive.Play();
                         break; // TODO: Finish WebChat 1998
+                    case "filepoof":
+                        label5.Hide();
+                        button5.Hide();
+                        receive.Play();
+                        break;
+                    case "removesky":
+                        listBox1.Items.Remove("SkyHigh");
+                        leave.Play();
+                        break;
+                    case ".labelgone":
+                        label1.Hide();
+                        label6.Hide();
+                        label7.Hide();
+                        break;
                     default:
                         receive.Play();
                         break;
