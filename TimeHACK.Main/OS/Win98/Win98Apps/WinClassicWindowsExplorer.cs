@@ -22,8 +22,8 @@ namespace TimeHACK.OS.Win95.Win95Apps
         public string onlyViewExtension = "";
 
         string ToReplaceWith = ProfileDirectory;
-        string currentDirectory = Path.Combine(ProfileDirectory, "folders", "Computer");
-        string oldLabelText;
+        string CurrentDirectory = Path.Combine(ProfileDirectory, "folders", "Computer");
+        string OldLabelText;
         int fileType = 6;
         //string attemptedDirectory = "";
         WindowManager wm = new WindowManager();
@@ -31,6 +31,89 @@ namespace TimeHACK.OS.Win95.Win95Apps
         public WinClassicWindowsExplorer()
         {
             InitializeComponent();
+        }
+
+        void WinClassicWindowsExplorer_Load(object sender, EventArgs e)
+        {
+            if (SaveSystem.CurrentSave.CurrentOS == "2000")
+            {
+                pnlInfo.Width = 200;
+                txtInfoTitle.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
+            }
+
+            diskView.ImageList = new ImageList();
+
+            diskView.ImageList.Images.Add(Properties.Resources.Win95DesktopIcon);
+            diskView.ImageList.Images.Add(Properties.Resources.Win95HardDiskIcon);
+            diskView.ImageList.Images.Add(Properties.Resources.WinClassicFolderSmall);
+            diskView.ImageList.Images.Add(Properties.Resources.WinClassicOpenFolderSmall);
+            diskView.ImageList.Images.Add(Properties.Resources.Win95ControlPanelIcon);
+            diskView.ImageList.Images.Add(Properties.Resources.Win95PrintersFolder);
+            diskView.ImageList.Images.Add(Properties.Resources.Win95ComputerIcon);
+            diskView.ImageList.Images.Add(Properties.Resources.Win95NetworkIcon);
+            diskView.ImageList.Images.Add(Properties.Resources.Win95RecycleIcon);
+
+            program.BringToFront();
+
+            int loc = 0;
+            TreeNode[] folders = new TreeNode[new DirectoryInfo(CurrentDirectory).GetDirectories().Length];
+            foreach (DirectoryInfo folder in new DirectoryInfo(CurrentDirectory).GetDirectories())
+            {
+                if (folder.GetDirectories().Length > 0)
+                {
+                    string label = ReadDataFile(folder.FullName, false);
+                    TreeNode[] tn = createSubDirNodes(folder);
+                    folders[loc] = new TreeNode(label ?? folder.Name, 2, 3, tn);
+                    folders[loc].Tag = folder.FullName;
+                }
+                else
+                {
+                    string label = ReadDataFile(folder.FullName, false);
+                    folders[loc] = new TreeNode(label ?? folder.Name, 2, 3);
+                    folders[loc].Tag = folder.FullName;
+                }
+                loc++;
+            }
+            TreeNode[] mypcarray = new TreeNode[3];
+            mypcarray[0] = new TreeNode("(C:)", 1, 1, folders);
+            mypcarray[1] = new TreeNode("Control Panel", 4, 4);
+            mypcarray[2] = new TreeNode("Printers", 5, 5);
+            TreeNode[] desktoparray = new TreeNode[3];
+            desktoparray[0] = new TreeNode("My Computer", 6, 6, mypcarray);
+            desktoparray[1] = new TreeNode("Network Neighborhood", 7, 7);
+            desktoparray[2] = new TreeNode("Recycle Bin", 8, 8);
+            diskView.Nodes.Add(new TreeNode("Desktop", 0, 0, desktoparray));
+
+
+            //diskView.Items.Add("My Computer", 0);
+            Application.DoEvents();
+
+            RefreshAll();
+
+            if (FileDialogBoxManager.IsInOpenDialog)
+            {
+                IsFileOpenDialog = true;
+            }
+            else if (FileDialogBoxManager.IsInSaveDialog)
+            {
+                IsFileSaveDialog = true;
+            }
+
+            if (IsFileOpenDialog == true)
+            {
+                pnlSave.Show();
+                Button1.Text = "Open";
+            }
+            else
+            {
+                if (IsFileSaveDialog == true)
+                {
+                    pnlSave.Show();
+                    Button1.Text = "Save";
+                }
+            }
+
+            onlyViewExtension = FileDialogBoxManager.OnlyViewExtension;
         }
 
         //'Private Sub TreeView1_AfterSelect(ByVal sender As System.Object, ByVal e As System.Windows.Forms.TreeViewEventArgs)
@@ -79,12 +162,12 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
                 // Update the WebView
 
-                if (Directory.Exists(currentDirectory))
+                if (Directory.Exists(CurrentDirectory))
                 {
-                    if (currentDirectory == SaveSystem.ProfileMyComputerDirectory)
+                    if (CurrentDirectory == SaveSystem.ProfileMyComputerDirectory)
                     {
                         pictureBox1.Image = Properties.Resources.Win95HardDiskIcon;
-                    } else if (currentDirectory == SaveSystem.ProfileFileSystemDirectory) {
+                    } else if (CurrentDirectory == SaveSystem.ProfileFileSystemDirectory) {
                         pictureBox1.Image = Properties.Resources.Win95Computer;
                     } else {
                         pictureBox1.Image = Properties.Resources.WinClassicFolder;
@@ -96,22 +179,16 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     
                 }
 
-                string weblabel = ReadDataFile(currentDirectory, false);
+                string weblabel = ReadDataFile(CurrentDirectory, false);
 
-                txtInfoTitle.Text = weblabel ?? new FileInfo(currentDirectory).Name;
-                foreach (string str in Directory.GetDirectories(currentDirectory))
+                txtInfoTitle.Text = weblabel ?? new FileInfo(CurrentDirectory).Name;
+                foreach (string str in Directory.GetDirectories(CurrentDirectory))
                 {
                     string label = ReadDataFile(str, false);
-                    if (label == "")
-                    {
-                        ListViewItem itm = this.mainView.Items.Add(Path.GetFileName(str));
-                        itm.ImageKey = str;
-                    } else {
-                        ListViewItem itm = this.mainView.Items.Add(label);
-                        itm.ImageKey = str;
-                    }
+                    ListViewItem itm = this.mainView.Items.Add(label ?? Path.GetFileName(str));
+                    itm.ImageKey = str;
                 }
-                foreach (string str in Directory.GetFiles(currentDirectory))
+                foreach (string str in Directory.GetFiles(CurrentDirectory))
                 {
                     // Get the app Icon
 
@@ -518,87 +595,6 @@ namespace TimeHACK.OS.Win95.Win95Apps
     //Private Sub windows_explorer_Closed(sender As Object, e As EventArgs) Handles Me.Closed
     //    IsFileDialog = False
     //End Sub
-        void WinClassicWindowsExplorer_Load(object sender, EventArgs e) {
-            if (SaveSystem.CurrentSave.CurrentOS == "2000")
-            {
-                pnlInfo.Width = 200;
-                txtInfoTitle.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
-            }
-
-            diskView.ImageList = new ImageList();
-
-            diskView.ImageList.Images.Add(Properties.Resources.Win95DesktopIcon);
-            diskView.ImageList.Images.Add(Properties.Resources.Win95HardDiskIcon);
-            diskView.ImageList.Images.Add(Properties.Resources.WinClassicFolderSmall);
-            diskView.ImageList.Images.Add(Properties.Resources.WinClassicOpenFolderSmall);
-            diskView.ImageList.Images.Add(Properties.Resources.Win95ControlPanelIcon);
-            diskView.ImageList.Images.Add(Properties.Resources.Win95PrintersFolder);
-            diskView.ImageList.Images.Add(Properties.Resources.Win95ComputerIcon);
-            diskView.ImageList.Images.Add(Properties.Resources.Win95NetworkIcon);
-            diskView.ImageList.Images.Add(Properties.Resources.Win95RecycleIcon);
-
-            program.BringToFront();
-
-            int loc = 0;
-            TreeNode[] folders = new TreeNode[new DirectoryInfo(currentDirectory).GetDirectories().Length];
-            foreach (DirectoryInfo folder in new DirectoryInfo(currentDirectory).GetDirectories())
-            {
-                if (folder.GetDirectories().Length > 0)
-                {
-                    string label = ReadDataFile(folder.FullName, false);
-                    TreeNode[] tn = createSubDirNodes(folder);
-                    folders[loc] = new TreeNode(label ?? folder.Name, 2, 3, tn);
-                    folders[loc].Tag = folder.FullName;
-                }
-                else
-                {
-                    string label = ReadDataFile(folder.FullName, false);
-                    folders[loc] = new TreeNode(label ?? folder.Name, 2, 3);
-                    folders[loc].Tag = folder.FullName;
-                }
-                loc++;
-            }
-            TreeNode[] mypcarray = new TreeNode[3];
-            mypcarray[0] = new TreeNode("(C:)", 1, 1, folders);
-            mypcarray[1] = new TreeNode("Control Panel", 4, 4);
-            mypcarray[2] = new TreeNode("Printers", 5, 5);
-            TreeNode[] desktoparray = new TreeNode[3];
-            desktoparray[0] = new TreeNode("My Computer", 6, 6, mypcarray);
-            desktoparray[1] = new TreeNode("Network Neighborhood", 7, 7);
-            desktoparray[2] = new TreeNode("Recycle Bin", 8, 8);
-            diskView.Nodes.Add(new TreeNode("Desktop", 0, 0, desktoparray));
-            
-
-            //diskView.Items.Add("My Computer", 0);
-            Application.DoEvents();
-
-            RefreshAll();
-
-            if (FileDialogBoxManager.IsInOpenDialog)
-            {
-                IsFileOpenDialog = true;
-            }
-            else if (FileDialogBoxManager.IsInSaveDialog)
-            {
-                IsFileSaveDialog = true;
-            }
-
-            if (IsFileOpenDialog == true)
-            {
-                pnlSave.Show();
-                Button1.Text = "Open";
-            }
-            else
-            {
-                if (IsFileSaveDialog == true)
-                {
-                    pnlSave.Show();
-                    Button1.Text = "Save";
-                }
-            }
-
-            onlyViewExtension = FileDialogBoxManager.OnlyViewExtension;
-        }
 
         void mainView_DoubleClick(object sender, EventArgs e)
         {
@@ -606,15 +602,15 @@ namespace TimeHACK.OS.Win95.Win95Apps
             {
                 if (mainView.FocusedItem.Tag == null)
                 { // If it isn't a file
-                    GoToDir(Path.Combine(currentDirectory, mainView.FocusedItem.ImageKey.ToString()));
+                    GoToDir(Path.Combine(CurrentDirectory, mainView.FocusedItem.ImageKey.ToString()));
                 }
                 else
                 { // If it is a file
                         if (IsFileOpenDialog == true || IsFileSaveDialog == true)
                         {
-                            if (new FileInfo(Path.Combine(currentDirectory, txtSave.Text)).Extension == onlyViewExtension)
+                            if (new FileInfo(Path.Combine(CurrentDirectory, txtSave.Text)).Extension == onlyViewExtension)
                             {
-                                Program.WindowsExplorerReturnPath = Path.Combine(currentDirectory, txtSave.Text);
+                                Program.WindowsExplorerReturnPath = Path.Combine(CurrentDirectory, txtSave.Text);
                             }
 
 
@@ -669,17 +665,17 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             mainView.Show();
             mainView.BringToFront();
-            currentDirectory = dir;
+            CurrentDirectory = dir;
             RefreshAll();
         }
 
         private void FolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (File.Exists(currentDirectory + "\\New Folder")) {
+            if (File.Exists(CurrentDirectory + "\\New Folder")) {
                 wm.StartInfobox95("Windows Explorer", "This directory already exists", Properties.Resources.Win95Info);
             } else {
-                Directory.CreateDirectory(currentDirectory + "\\New Folder");
-                SaveDirectoryInfo(currentDirectory + "\\New Folder", false, "New Folder", true);
+                Directory.CreateDirectory(CurrentDirectory + "\\New Folder");
+                SaveDirectoryInfo(CurrentDirectory + "\\New Folder", false, "New Folder", true);
                 
                 RefreshAll();
             }
@@ -694,7 +690,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 {
                     if ((string)mainView.FocusedItem.Tag == "")
                     { // If it isn't a file
-                        GoToDir(Path.Combine(currentDirectory, mainView.FocusedItem.Tag.ToString()));
+                        GoToDir(Path.Combine(CurrentDirectory, mainView.FocusedItem.Tag.ToString()));
                     }
                     else OpenFile = true; // If it is a file
                 }
@@ -707,10 +703,10 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     }
                     else
                     {
-                        if (new FileInfo(Path.Combine(currentDirectory, txtSave.Text)).Extension == onlyViewExtension)
+                        if (new FileInfo(Path.Combine(CurrentDirectory, txtSave.Text)).Extension == onlyViewExtension)
                         {
 
-                            Program.WindowsExplorerReturnPath = Path.Combine(currentDirectory, txtSave.Text);
+                            Program.WindowsExplorerReturnPath = Path.Combine(CurrentDirectory, txtSave.Text);
 
                         }
 
@@ -730,14 +726,14 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             try
             {
-                if (!FileOrDirectoryExists(Path.Combine(currentDirectory, mainView.FocusedItem.Text)))
+                if (!FileOrDirectoryExists(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text)))
                 {
                     wm.StartInfobox95("Windows Explorer", "This directory doesn't exist", Properties.Resources.Win95Info);
                 }
                 else
                 {
-                    if (Directory.Exists(Path.Combine(currentDirectory, mainView.FocusedItem.Text))) Directory.Delete(Path.Combine(currentDirectory, mainView.FocusedItem.Text), true);
-                        else File.Delete(Path.Combine(currentDirectory, mainView.FocusedItem.Text));
+                    if (Directory.Exists(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text))) Directory.Delete(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text), true);
+                        else File.Delete(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text));
 
                     RefreshAll();
                 }
@@ -760,7 +756,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         private void AboutWindows95ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WindowManager wm = new WindowManager();
-            wm.StartAboutBox95("Windows 95", "Microsoft Windows 95 Rev B", Properties.Resources.WinClassicAbout95);
+            wm.StartAboutBox95("Windows 95", "Microsoft Windows 98", Properties.Resources.WinClassicAbout95);
         }
 
         private void RenameToolStripMenuItem_Click(object sender, EventArgs e)
@@ -768,7 +764,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             try
             {
                 // The AfterLabelEdit event will kick in after this
-                oldLabelText = mainView.FocusedItem.Text;
+                OldLabelText = mainView.FocusedItem.Text;
                 mainView.LabelEdit = true;
                 mainView.FocusedItem.BeginEdit();
             } catch
@@ -794,8 +790,30 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 }
                 else
                 {
-                    Directory.Delete(Path.Combine(currentDirectory, oldLabelText), true);
-                    Directory.CreateDirectory(Path.Combine(currentDirectory, setText));
+                    if (File.Exists(setText))
+                    {
+                        wm.StartInfobox95("Windows Explorer", "That file already exists.", Properties.Resources.Win95Info);
+                    }
+                    else
+                    {
+                        if (File.Exists(OldLabelText))
+                        {
+                            // It was a file
+
+                            File.Copy(Path.Combine(CurrentDirectory, OldLabelText), Path.Combine(CurrentDirectory, setText));
+                            File.Delete(Path.Combine(CurrentDirectory, OldLabelText));
+
+                        }
+                        else
+                        {
+                            // It was a directory
+
+                            Directory.CreateDirectory(Path.Combine(CurrentDirectory, setText));
+                            //File.Copy(Path.Combine(CurrentDirectory, OldLabelText, "*"), Path.Combine(CurrentDirectory, setText));
+                            Directory.Delete(Path.Combine(CurrentDirectory, OldLabelText));
+                        }
+                    }
+
                 }
             }
             RefreshAll();
@@ -869,7 +887,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             } else {
                 txtInfoTip.Hide();
 
-                if (File.Exists(Path.Combine(currentDirectory, mainView.FocusedItem.Text)))
+                if (File.Exists(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text)))
                 {
                     // Check if it is a regonized file - if so then in Windows 2000/ME it gives a fancy description
 
@@ -878,7 +896,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
                     if (SaveSystem.CurrentSave.CurrentOS == "2000" || SaveSystem.CurrentSave.CurrentOS == "ME")
                     {
-                        switch (File.ReadAllText(Path.Combine(currentDirectory, mainView.FocusedItem.Text)))
+                        switch (File.ReadAllText(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text)))
                         {
                             case "explorer":
                                 recognized = true;
@@ -893,7 +911,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     } else {
                         InfoDesc.Show();
 
-                        FileInfo fi = new FileInfo(Path.Combine(currentDirectory, mainView.FocusedItem.Text));
+                        FileInfo fi = new FileInfo(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text));
                         txtInfoDescName.Text = mainView.FocusedItem.Text;
                         txtInfoDescType.Text = ReturnType(fi.Extension).Split('\n')[0];
                         txtInfoDescModified.Text = fi.CreationTime.ToString();
@@ -902,11 +920,11 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         txtInfoDescSize.Text = $"Size: {fi.Length} bytes.";
                     }
 
-                } else if (Directory.Exists(Path.Combine(currentDirectory, mainView.FocusedItem.Text))) {
+                } else if (Directory.Exists(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text))) {
                     txtInfoTip.Hide();
                     InfoDesc.Show();
 
-                    DirectoryInfo fi = new DirectoryInfo(Path.Combine(currentDirectory, mainView.FocusedItem.Text));
+                    DirectoryInfo fi = new DirectoryInfo(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text));
 
                     txtInfoDescName.Text = mainView.FocusedItem.Text;
                     txtInfoDescType.Text = "File Folder";
