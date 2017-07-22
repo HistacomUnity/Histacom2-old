@@ -795,5 +795,10 @@ namespace TimeHACK.OS.Win95.Win95Apps
             }
             return toReturn;
         }
+
+        private void RefreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RefreshAll();
+        }
     }
 }

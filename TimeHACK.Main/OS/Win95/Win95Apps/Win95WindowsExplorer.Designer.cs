@@ -48,29 +48,7 @@
             this.PasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SellectAllCtrlAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolbarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.StatusBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.LargeIconsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.SmallIconsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.DetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ArrangeIconsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ByDriveLetterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ByTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.BySizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ByFreeSpaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.LineUpIconsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RefreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.OptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.FindToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.FilesOrFoldersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ComputerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.OnTheInternetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PeopleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.MapNetworkDriveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.DisconnectNetworkDriveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.GoToToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.AboutWindows95ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -133,7 +111,6 @@
             this.FileToolStripMenuItem,
             this.EditToolStripMenuItem,
             this.ViewToolStripMenuItem,
-            this.ToolsToolStripMenuItem,
             this.HelpToolStripMenuItem});
             this.MenuStrip1.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip1.Name = "MenuStrip1";
@@ -254,172 +231,17 @@
             // ViewToolStripMenuItem
             // 
             this.ViewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolbarToolStripMenuItem,
-            this.StatusBarToolStripMenuItem,
-            this.LargeIconsToolStripMenuItem,
-            this.SmallIconsToolStripMenuItem,
-            this.ListToolStripMenuItem,
-            this.DetailsToolStripMenuItem,
-            this.ArrangeIconsToolStripMenuItem,
-            this.LineUpIconsToolStripMenuItem,
-            this.RefreshToolStripMenuItem,
-            this.OptionsToolStripMenuItem});
+            this.RefreshToolStripMenuItem});
             this.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem";
             this.ViewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.ViewToolStripMenuItem.Text = "View";
             // 
-            // ToolbarToolStripMenuItem
-            // 
-            this.ToolbarToolStripMenuItem.Name = "ToolbarToolStripMenuItem";
-            this.ToolbarToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.ToolbarToolStripMenuItem.Text = "Toolbar";
-            // 
-            // StatusBarToolStripMenuItem
-            // 
-            this.StatusBarToolStripMenuItem.Name = "StatusBarToolStripMenuItem";
-            this.StatusBarToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.StatusBarToolStripMenuItem.Text = "Status Bar";
-            // 
-            // LargeIconsToolStripMenuItem
-            // 
-            this.LargeIconsToolStripMenuItem.Name = "LargeIconsToolStripMenuItem";
-            this.LargeIconsToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.LargeIconsToolStripMenuItem.Text = "Large Icons";
-            // 
-            // SmallIconsToolStripMenuItem
-            // 
-            this.SmallIconsToolStripMenuItem.Name = "SmallIconsToolStripMenuItem";
-            this.SmallIconsToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.SmallIconsToolStripMenuItem.Text = "Small Icons";
-            // 
-            // ListToolStripMenuItem
-            // 
-            this.ListToolStripMenuItem.Name = "ListToolStripMenuItem";
-            this.ListToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.ListToolStripMenuItem.Text = "List";
-            // 
-            // DetailsToolStripMenuItem
-            // 
-            this.DetailsToolStripMenuItem.Name = "DetailsToolStripMenuItem";
-            this.DetailsToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.DetailsToolStripMenuItem.Text = "Details";
-            // 
-            // ArrangeIconsToolStripMenuItem
-            // 
-            this.ArrangeIconsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ByDriveLetterToolStripMenuItem,
-            this.ByTypeToolStripMenuItem,
-            this.BySizeToolStripMenuItem,
-            this.ByFreeSpaceToolStripMenuItem});
-            this.ArrangeIconsToolStripMenuItem.Name = "ArrangeIconsToolStripMenuItem";
-            this.ArrangeIconsToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.ArrangeIconsToolStripMenuItem.Text = "Arrange Icons";
-            // 
-            // ByDriveLetterToolStripMenuItem
-            // 
-            this.ByDriveLetterToolStripMenuItem.Name = "ByDriveLetterToolStripMenuItem";
-            this.ByDriveLetterToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.ByDriveLetterToolStripMenuItem.Text = "by Drive Letter";
-            // 
-            // ByTypeToolStripMenuItem
-            // 
-            this.ByTypeToolStripMenuItem.Name = "ByTypeToolStripMenuItem";
-            this.ByTypeToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.ByTypeToolStripMenuItem.Text = "by Type";
-            // 
-            // BySizeToolStripMenuItem
-            // 
-            this.BySizeToolStripMenuItem.Name = "BySizeToolStripMenuItem";
-            this.BySizeToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.BySizeToolStripMenuItem.Text = "by Size";
-            // 
-            // ByFreeSpaceToolStripMenuItem
-            // 
-            this.ByFreeSpaceToolStripMenuItem.Name = "ByFreeSpaceToolStripMenuItem";
-            this.ByFreeSpaceToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.ByFreeSpaceToolStripMenuItem.Text = "by Free Space";
-            // 
-            // LineUpIconsToolStripMenuItem
-            // 
-            this.LineUpIconsToolStripMenuItem.Name = "LineUpIconsToolStripMenuItem";
-            this.LineUpIconsToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.LineUpIconsToolStripMenuItem.Text = "Line up Icons";
-            // 
             // RefreshToolStripMenuItem
             // 
             this.RefreshToolStripMenuItem.Name = "RefreshToolStripMenuItem";
-            this.RefreshToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.RefreshToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.RefreshToolStripMenuItem.Text = "Refresh";
-            // 
-            // OptionsToolStripMenuItem
-            // 
-            this.OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem";
-            this.OptionsToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.OptionsToolStripMenuItem.Text = "Options...";
-            // 
-            // ToolsToolStripMenuItem
-            // 
-            this.ToolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.FindToolStripMenuItem,
-            this.MapNetworkDriveToolStripMenuItem,
-            this.DisconnectNetworkDriveToolStripMenuItem,
-            this.GoToToolStripMenuItem});
-            this.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem";
-            this.ToolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
-            this.ToolsToolStripMenuItem.Text = "Tools";
-            // 
-            // FindToolStripMenuItem
-            // 
-            this.FindToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.FilesOrFoldersToolStripMenuItem,
-            this.ComputerToolStripMenuItem,
-            this.OnTheInternetToolStripMenuItem,
-            this.PeopleToolStripMenuItem});
-            this.FindToolStripMenuItem.Name = "FindToolStripMenuItem";
-            this.FindToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
-            this.FindToolStripMenuItem.Text = "Find";
-            // 
-            // FilesOrFoldersToolStripMenuItem
-            // 
-            this.FilesOrFoldersToolStripMenuItem.Name = "FilesOrFoldersToolStripMenuItem";
-            this.FilesOrFoldersToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.FilesOrFoldersToolStripMenuItem.Text = "Files or Folders...";
-            // 
-            // ComputerToolStripMenuItem
-            // 
-            this.ComputerToolStripMenuItem.Name = "ComputerToolStripMenuItem";
-            this.ComputerToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.ComputerToolStripMenuItem.Text = "Computer...";
-            // 
-            // OnTheInternetToolStripMenuItem
-            // 
-            this.OnTheInternetToolStripMenuItem.Name = "OnTheInternetToolStripMenuItem";
-            this.OnTheInternetToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.OnTheInternetToolStripMenuItem.Text = "On the Internet";
-            // 
-            // PeopleToolStripMenuItem
-            // 
-            this.PeopleToolStripMenuItem.Name = "PeopleToolStripMenuItem";
-            this.PeopleToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.PeopleToolStripMenuItem.Text = "People...";
-            // 
-            // MapNetworkDriveToolStripMenuItem
-            // 
-            this.MapNetworkDriveToolStripMenuItem.Name = "MapNetworkDriveToolStripMenuItem";
-            this.MapNetworkDriveToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
-            this.MapNetworkDriveToolStripMenuItem.Text = "Map Network Drive...";
-            // 
-            // DisconnectNetworkDriveToolStripMenuItem
-            // 
-            this.DisconnectNetworkDriveToolStripMenuItem.Name = "DisconnectNetworkDriveToolStripMenuItem";
-            this.DisconnectNetworkDriveToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
-            this.DisconnectNetworkDriveToolStripMenuItem.Text = "Disconnect Network Drive...";
-            // 
-            // GoToToolStripMenuItem
-            // 
-            this.GoToToolStripMenuItem.Name = "GoToToolStripMenuItem";
-            this.GoToToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
-            this.GoToToolStripMenuItem.Text = "Go to...";
+            this.RefreshToolStripMenuItem.Click += new System.EventHandler(this.RefreshToolStripMenuItem_Click);
             // 
             // HelpToolStripMenuItem
             // 
@@ -555,29 +377,7 @@
         internal System.Windows.Forms.ToolStripMenuItem PasteToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem SellectAllCtrlAToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem ViewToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem ToolbarToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem StatusBarToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem LargeIconsToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem SmallIconsToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem ListToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem DetailsToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem ArrangeIconsToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem ByDriveLetterToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem ByTypeToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem BySizeToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem ByFreeSpaceToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem LineUpIconsToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem RefreshToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem OptionsToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem ToolsToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem FindToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem FilesOrFoldersToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem ComputerToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem OnTheInternetToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem PeopleToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem MapNetworkDriveToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem DisconnectNetworkDriveToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem GoToToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem HelpToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem HelpToolStripMenuItem1;
         internal System.Windows.Forms.ToolStripMenuItem AboutWindows95ToolStripMenuItem;

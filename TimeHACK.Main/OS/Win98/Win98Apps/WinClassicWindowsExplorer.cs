@@ -496,6 +496,12 @@ namespace TimeHACK.OS.Win95.Win95Apps
     //    IsFileDialog = False
     //End Sub
         void WinClassicWindowsExplorer_Load(object sender, EventArgs e) {
+            if (SaveSystem.CurrentSave.CurrentOS == "2000")
+            {
+                pnlInfo.Width = 200;
+                txtInfoTitle.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
+            }
+
             diskView.ImageList = new ImageList();
 
             diskView.ImageList.Images.Add(Properties.Resources.Win95DesktopIcon);
@@ -808,7 +814,81 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void btnFolderClose_Click(object sender, EventArgs e)
         {
+            FoldersToolStripMenuItem.Checked = false;
             pnlFolders.Hide();
+        }
+
+        private void FoldersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (FoldersToolStripMenuItem.Checked == true)
+            {
+                FoldersToolStripMenuItem.Checked = false;
+                pnlFolders.Hide();
+            } else {
+                FoldersToolStripMenuItem.Checked = true;
+                pnlFolders.Show();
+            }
+        }
+
+        private void RefreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RefreshAll();
+        }
+
+        private void mainView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // This will change the web view!
+
+            if (mainView.FocusedItem == null)
+            {
+                txtInfoTip.Show();
+                InfoDesc.Hide();
+            } else {
+                txtInfoTip.Hide();
+
+                if (File.Exists(Path.Combine(currentDirectory, mainView.FocusedItem.Text)))
+                {
+                    // Check if it is a regonized file - if so then in Windows 2000/ME it gives a fancy description
+
+                    bool recognized = false;
+                    string description = "";
+
+                    if (SaveSystem.CurrentSave.CurrentOS == "2000" || SaveSystem.CurrentSave.CurrentOS == "ME")
+                    {
+                        switch (File.ReadAllText(Path.Combine(currentDirectory, mainView.FocusedItem.Text)))
+                        {
+                            case "explorer":
+                                recognized = true;
+                                description = "Insert a description here...";
+                                break;
+                        }
+                    }
+
+                    if (recognized == true)
+                    {
+                        // TODO:
+                    } else {
+                        InfoDesc.Show();
+
+                        FileInfo fi = new FileInfo(Path.Combine(currentDirectory, mainView.FocusedItem.Text));
+                        txtInfoDescName.Text = mainView.FocusedItem.Text;
+                        txtInfoDescType.Text = ReturnType(fi.Extension).Split('\n')[0];
+                        txtInfoDescModified.Text = fi.CreationTime.ToString();
+
+                        txtInfoDescSize.Text = $"{fi.Length} bytes.";
+                    }
+
+                } else if (Directory.Exists(Path.Combine(currentDirectory, mainView.FocusedItem.Text))) {
+                    txtInfoTip.Hide();
+                    InfoDesc.Show();
+
+                    DirectoryInfo fi = new DirectoryInfo(Path.Combine(currentDirectory, mainView.FocusedItem.Text));
+
+                    txtInfoDescName.Text = mainView.FocusedItem.Text;
+                    txtInfoDescType.Text = "File Folder";
+                    txtInfoDescModified.Text = fi.CreationTime.ToString();
+                }
+            }
         }
     }
 }

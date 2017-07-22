@@ -31,6 +31,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WinClassicWindowsExplorer));
             this.program = new System.Windows.Forms.Panel();
             this.mainView = new System.Windows.Forms.ListView();
+            this.pnlInfo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtInfoTitle = new System.Windows.Forms.Label();
+            this.pnlInfoContent = new System.Windows.Forms.Panel();
+            this.InfoDesc = new System.Windows.Forms.Panel();
+            this.txtInfoDescModified = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtInfoDescType = new System.Windows.Forms.Label();
+            this.txtInfoDescName = new System.Windows.Forms.Label();
+            this.txtInfoTip = new System.Windows.Forms.Label();
+            this.pnlFolders = new System.Windows.Forms.Panel();
+            this.diskView = new System.Windows.Forms.TreeView();
+            this.pnlFoldersTop = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnFolderClose = new System.Windows.Forms.PictureBox();
             this.toprightcorner = new System.Windows.Forms.Panel();
             this.bottomrightcorner = new System.Windows.Forms.Panel();
             this.bottomleftcorner = new System.Windows.Forms.Panel();
@@ -39,12 +54,6 @@
             this.Button1 = new System.Windows.Forms.Button();
             this.Label1 = new System.Windows.Forms.Label();
             this.txtSave = new System.Windows.Forms.TextBox();
-            this.pnlInfo = new System.Windows.Forms.Panel();
-            this.pnlFolders = new System.Windows.Forms.Panel();
-            this.pnlFoldersTop = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnFolderClose = new System.Windows.Forms.PictureBox();
-            this.diskView = new System.Windows.Forms.TreeView();
             this.MenuStrip1 = new System.Windows.Forms.MenuStrip();
             this.FileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CreateShortcutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,38 +70,21 @@
             this.PasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SellectAllCtrlAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolbarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.StatusBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.LargeIconsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.SmallIconsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.DetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ArrangeIconsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ByDriveLetterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ByTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.BySizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ByFreeSpaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.LineUpIconsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.FoldersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RefreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.OptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.FindToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.FilesOrFoldersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ComputerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.OnTheInternetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PeopleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.MapNetworkDriveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.DisconnectNetworkDriveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.GoToToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.AboutWindows95ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtInfoDescSize = new System.Windows.Forms.Label();
             this.program.SuspendLayout();
-            this.pnlSave.SuspendLayout();
             this.pnlInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlInfoContent.SuspendLayout();
+            this.InfoDesc.SuspendLayout();
             this.pnlFolders.SuspendLayout();
             this.pnlFoldersTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFolderClose)).BeginInit();
+            this.pnlSave.SuspendLayout();
             this.MenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,12 +92,13 @@
             // 
             this.program.BackColor = System.Drawing.Color.Silver;
             this.program.Controls.Add(this.mainView);
+            this.program.Controls.Add(this.pnlInfo);
+            this.program.Controls.Add(this.pnlFolders);
             this.program.Controls.Add(this.toprightcorner);
             this.program.Controls.Add(this.bottomrightcorner);
             this.program.Controls.Add(this.bottomleftcorner);
             this.program.Controls.Add(this.topleftcorner);
             this.program.Controls.Add(this.pnlSave);
-            this.program.Controls.Add(this.pnlInfo);
             this.program.Controls.Add(this.MenuStrip1);
             this.program.Dock = System.Windows.Forms.DockStyle.Fill;
             this.program.Location = new System.Drawing.Point(0, 0);
@@ -115,14 +108,177 @@
             // 
             // mainView
             // 
-            this.mainView.Dock = System.Windows.Forms.DockStyle.Right;
-            this.mainView.Location = new System.Drawing.Point(403, 24);
+            this.mainView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mainView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainView.Location = new System.Drawing.Point(396, 24);
             this.mainView.Name = "mainView";
-            this.mainView.Size = new System.Drawing.Size(301, 458);
+            this.mainView.Size = new System.Drawing.Size(308, 458);
             this.mainView.TabIndex = 10;
             this.mainView.UseCompatibleStateImageBehavior = false;
             this.mainView.View = System.Windows.Forms.View.List;
+            this.mainView.SelectedIndexChanged += new System.EventHandler(this.mainView_SelectedIndexChanged);
             this.mainView.DoubleClick += new System.EventHandler(this.mainView_DoubleClick);
+            // 
+            // pnlInfo
+            // 
+            this.pnlInfo.BackColor = System.Drawing.Color.White;
+            this.pnlInfo.BackgroundImage = global::TimeHACK.Properties.Resources.Win98WebBackground;
+            this.pnlInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlInfo.Controls.Add(this.pictureBox1);
+            this.pnlInfo.Controls.Add(this.txtInfoTitle);
+            this.pnlInfo.Controls.Add(this.pnlInfoContent);
+            this.pnlInfo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlInfo.Location = new System.Drawing.Point(196, 24);
+            this.pnlInfo.Name = "pnlInfo";
+            this.pnlInfo.Size = new System.Drawing.Size(200, 458);
+            this.pnlInfo.TabIndex = 19;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Location = new System.Drawing.Point(15, 18);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
+            // 
+            // txtInfoTitle
+            // 
+            this.txtInfoTitle.AutoSize = true;
+            this.txtInfoTitle.BackColor = System.Drawing.Color.Transparent;
+            this.txtInfoTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInfoTitle.Location = new System.Drawing.Point(3, 51);
+            this.txtInfoTitle.Name = "txtInfoTitle";
+            this.txtInfoTitle.Size = new System.Drawing.Size(192, 29);
+            this.txtInfoTitle.TabIndex = 0;
+            this.txtInfoTitle.Text = "FOLDER_NAME";
+            // 
+            // pnlInfoContent
+            // 
+            this.pnlInfoContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlInfoContent.BackColor = System.Drawing.Color.Transparent;
+            this.pnlInfoContent.Controls.Add(this.InfoDesc);
+            this.pnlInfoContent.Controls.Add(this.txtInfoTip);
+            this.pnlInfoContent.Location = new System.Drawing.Point(0, 95);
+            this.pnlInfoContent.Name = "pnlInfoContent";
+            this.pnlInfoContent.Size = new System.Drawing.Size(199, 362);
+            this.pnlInfoContent.TabIndex = 22;
+            // 
+            // InfoDesc
+            // 
+            this.InfoDesc.Controls.Add(this.txtInfoDescSize);
+            this.InfoDesc.Controls.Add(this.txtInfoDescModified);
+            this.InfoDesc.Controls.Add(this.label5);
+            this.InfoDesc.Controls.Add(this.txtInfoDescType);
+            this.InfoDesc.Controls.Add(this.txtInfoDescName);
+            this.InfoDesc.Dock = System.Windows.Forms.DockStyle.Top;
+            this.InfoDesc.Location = new System.Drawing.Point(0, 25);
+            this.InfoDesc.Name = "InfoDesc";
+            this.InfoDesc.Size = new System.Drawing.Size(199, 94);
+            this.InfoDesc.TabIndex = 22;
+            this.InfoDesc.Visible = false;
+            // 
+            // txtInfoDescModified
+            // 
+            this.txtInfoDescModified.AutoSize = true;
+            this.txtInfoDescModified.Location = new System.Drawing.Point(12, 54);
+            this.txtInfoDescModified.Name = "txtInfoDescModified";
+            this.txtInfoDescModified.Size = new System.Drawing.Size(92, 13);
+            this.txtInfoDescModified.TabIndex = 0;
+            this.txtInfoDescModified.Text = "LAST_MODIFIED";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 41);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Last Modified:";
+            // 
+            // txtInfoDescType
+            // 
+            this.txtInfoDescType.AutoSize = true;
+            this.txtInfoDescType.Location = new System.Drawing.Point(12, 18);
+            this.txtInfoDescType.Name = "txtInfoDescType";
+            this.txtInfoDescType.Size = new System.Drawing.Size(63, 13);
+            this.txtInfoDescType.TabIndex = 0;
+            this.txtInfoDescType.Text = "FILE_TYPE";
+            // 
+            // txtInfoDescName
+            // 
+            this.txtInfoDescName.AutoSize = true;
+            this.txtInfoDescName.Location = new System.Drawing.Point(12, 5);
+            this.txtInfoDescName.Name = "txtInfoDescName";
+            this.txtInfoDescName.Size = new System.Drawing.Size(66, 13);
+            this.txtInfoDescName.TabIndex = 0;
+            this.txtInfoDescName.Text = "FILE_NAME";
+            // 
+            // txtInfoTip
+            // 
+            this.txtInfoTip.BackColor = System.Drawing.Color.Transparent;
+            this.txtInfoTip.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtInfoTip.Location = new System.Drawing.Point(0, 0);
+            this.txtInfoTip.Name = "txtInfoTip";
+            this.txtInfoTip.Size = new System.Drawing.Size(199, 25);
+            this.txtInfoTip.TabIndex = 21;
+            this.txtInfoTip.Text = "Select an item to view its description.";
+            this.txtInfoTip.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnlFolders
+            // 
+            this.pnlFolders.Controls.Add(this.diskView);
+            this.pnlFolders.Controls.Add(this.pnlFoldersTop);
+            this.pnlFolders.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlFolders.Location = new System.Drawing.Point(0, 24);
+            this.pnlFolders.Name = "pnlFolders";
+            this.pnlFolders.Size = new System.Drawing.Size(196, 458);
+            this.pnlFolders.TabIndex = 0;
+            // 
+            // diskView
+            // 
+            this.diskView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.diskView.Location = new System.Drawing.Point(0, 22);
+            this.diskView.Name = "diskView";
+            this.diskView.Size = new System.Drawing.Size(196, 436);
+            this.diskView.TabIndex = 13;
+            this.diskView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.diskView_AfterSelect);
+            // 
+            // pnlFoldersTop
+            // 
+            this.pnlFoldersTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
+            this.pnlFoldersTop.Controls.Add(this.label2);
+            this.pnlFoldersTop.Controls.Add(this.btnFolderClose);
+            this.pnlFoldersTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlFoldersTop.Location = new System.Drawing.Point(0, 0);
+            this.pnlFoldersTop.Name = "pnlFoldersTop";
+            this.pnlFoldersTop.Size = new System.Drawing.Size(196, 22);
+            this.pnlFoldersTop.TabIndex = 20;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Folders";
+            // 
+            // btnFolderClose
+            // 
+            this.btnFolderClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
+            this.btnFolderClose.Image = ((System.Drawing.Image)(resources.GetObject("btnFolderClose.Image")));
+            this.btnFolderClose.Location = new System.Drawing.Point(172, 3);
+            this.btnFolderClose.Name = "btnFolderClose";
+            this.btnFolderClose.Size = new System.Drawing.Size(21, 16);
+            this.btnFolderClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnFolderClose.TabIndex = 20;
+            this.btnFolderClose.TabStop = false;
+            this.btnFolderClose.Click += new System.EventHandler(this.btnFolderClose_Click);
+            this.btnFolderClose.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
+            this.btnFolderClose.MouseLeave += new System.EventHandler(this.btnFolderClose_MouseLeave);
             // 
             // toprightcorner
             // 
@@ -198,68 +354,6 @@
             this.txtSave.Size = new System.Drawing.Size(560, 20);
             this.txtSave.TabIndex = 15;
             // 
-            // pnlInfo
-            // 
-            this.pnlInfo.Controls.Add(this.pnlFolders);
-            this.pnlInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlInfo.Location = new System.Drawing.Point(0, 24);
-            this.pnlInfo.Name = "pnlInfo";
-            this.pnlInfo.Size = new System.Drawing.Size(704, 493);
-            this.pnlInfo.TabIndex = 19;
-            // 
-            // pnlFolders
-            // 
-            this.pnlFolders.Controls.Add(this.pnlFoldersTop);
-            this.pnlFolders.Controls.Add(this.diskView);
-            this.pnlFolders.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlFolders.Location = new System.Drawing.Point(0, 0);
-            this.pnlFolders.Name = "pnlFolders";
-            this.pnlFolders.Size = new System.Drawing.Size(168, 493);
-            this.pnlFolders.TabIndex = 0;
-            // 
-            // pnlFoldersTop
-            // 
-            this.pnlFoldersTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
-            this.pnlFoldersTop.Controls.Add(this.label2);
-            this.pnlFoldersTop.Controls.Add(this.btnFolderClose);
-            this.pnlFoldersTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlFoldersTop.Location = new System.Drawing.Point(0, 0);
-            this.pnlFoldersTop.Name = "pnlFoldersTop";
-            this.pnlFoldersTop.Size = new System.Drawing.Size(168, 22);
-            this.pnlFoldersTop.TabIndex = 20;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 3);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Folders";
-            // 
-            // btnFolderClose
-            // 
-            this.btnFolderClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
-            this.btnFolderClose.Image = ((System.Drawing.Image)(resources.GetObject("btnFolderClose.Image")));
-            this.btnFolderClose.Location = new System.Drawing.Point(144, 3);
-            this.btnFolderClose.Name = "btnFolderClose";
-            this.btnFolderClose.Size = new System.Drawing.Size(21, 16);
-            this.btnFolderClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnFolderClose.TabIndex = 20;
-            this.btnFolderClose.TabStop = false;
-            this.btnFolderClose.Click += new System.EventHandler(this.btnFolderClose_Click);
-            this.btnFolderClose.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
-            this.btnFolderClose.MouseLeave += new System.EventHandler(this.btnFolderClose_MouseLeave);
-            // 
-            // diskView
-            // 
-            this.diskView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.diskView.Location = new System.Drawing.Point(0, 0);
-            this.diskView.Name = "diskView";
-            this.diskView.Size = new System.Drawing.Size(168, 493);
-            this.diskView.TabIndex = 13;
-            this.diskView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.diskView_AfterSelect);
-            // 
             // MenuStrip1
             // 
             this.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
@@ -267,7 +361,6 @@
             this.FileToolStripMenuItem,
             this.EditToolStripMenuItem,
             this.ViewToolStripMenuItem,
-            this.ToolsToolStripMenuItem,
             this.HelpToolStripMenuItem});
             this.MenuStrip1.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip1.Name = "MenuStrip1";
@@ -381,172 +474,27 @@
             // ViewToolStripMenuItem
             // 
             this.ViewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolbarToolStripMenuItem,
-            this.StatusBarToolStripMenuItem,
-            this.LargeIconsToolStripMenuItem,
-            this.SmallIconsToolStripMenuItem,
-            this.ListToolStripMenuItem,
-            this.DetailsToolStripMenuItem,
-            this.ArrangeIconsToolStripMenuItem,
-            this.LineUpIconsToolStripMenuItem,
-            this.RefreshToolStripMenuItem,
-            this.OptionsToolStripMenuItem});
+            this.FoldersToolStripMenuItem,
+            this.RefreshToolStripMenuItem});
             this.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem";
             this.ViewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.ViewToolStripMenuItem.Text = "View";
             // 
-            // ToolbarToolStripMenuItem
+            // FoldersToolStripMenuItem
             // 
-            this.ToolbarToolStripMenuItem.Name = "ToolbarToolStripMenuItem";
-            this.ToolbarToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.ToolbarToolStripMenuItem.Text = "Toolbar";
-            // 
-            // StatusBarToolStripMenuItem
-            // 
-            this.StatusBarToolStripMenuItem.Name = "StatusBarToolStripMenuItem";
-            this.StatusBarToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.StatusBarToolStripMenuItem.Text = "Status Bar";
-            // 
-            // LargeIconsToolStripMenuItem
-            // 
-            this.LargeIconsToolStripMenuItem.Name = "LargeIconsToolStripMenuItem";
-            this.LargeIconsToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.LargeIconsToolStripMenuItem.Text = "Large Icons";
-            // 
-            // SmallIconsToolStripMenuItem
-            // 
-            this.SmallIconsToolStripMenuItem.Name = "SmallIconsToolStripMenuItem";
-            this.SmallIconsToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.SmallIconsToolStripMenuItem.Text = "Small Icons";
-            // 
-            // ListToolStripMenuItem
-            // 
-            this.ListToolStripMenuItem.Name = "ListToolStripMenuItem";
-            this.ListToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.ListToolStripMenuItem.Text = "List";
-            // 
-            // DetailsToolStripMenuItem
-            // 
-            this.DetailsToolStripMenuItem.Name = "DetailsToolStripMenuItem";
-            this.DetailsToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.DetailsToolStripMenuItem.Text = "Details";
-            // 
-            // ArrangeIconsToolStripMenuItem
-            // 
-            this.ArrangeIconsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ByDriveLetterToolStripMenuItem,
-            this.ByTypeToolStripMenuItem,
-            this.BySizeToolStripMenuItem,
-            this.ByFreeSpaceToolStripMenuItem});
-            this.ArrangeIconsToolStripMenuItem.Name = "ArrangeIconsToolStripMenuItem";
-            this.ArrangeIconsToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.ArrangeIconsToolStripMenuItem.Text = "Arrange Icons";
-            // 
-            // ByDriveLetterToolStripMenuItem
-            // 
-            this.ByDriveLetterToolStripMenuItem.Name = "ByDriveLetterToolStripMenuItem";
-            this.ByDriveLetterToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.ByDriveLetterToolStripMenuItem.Text = "by Drive Letter";
-            // 
-            // ByTypeToolStripMenuItem
-            // 
-            this.ByTypeToolStripMenuItem.Name = "ByTypeToolStripMenuItem";
-            this.ByTypeToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.ByTypeToolStripMenuItem.Text = "by Type";
-            // 
-            // BySizeToolStripMenuItem
-            // 
-            this.BySizeToolStripMenuItem.Name = "BySizeToolStripMenuItem";
-            this.BySizeToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.BySizeToolStripMenuItem.Text = "by Size";
-            // 
-            // ByFreeSpaceToolStripMenuItem
-            // 
-            this.ByFreeSpaceToolStripMenuItem.Name = "ByFreeSpaceToolStripMenuItem";
-            this.ByFreeSpaceToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.ByFreeSpaceToolStripMenuItem.Text = "by Free Space";
-            // 
-            // LineUpIconsToolStripMenuItem
-            // 
-            this.LineUpIconsToolStripMenuItem.Name = "LineUpIconsToolStripMenuItem";
-            this.LineUpIconsToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.LineUpIconsToolStripMenuItem.Text = "Line up Icons";
+            this.FoldersToolStripMenuItem.Checked = true;
+            this.FoldersToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.FoldersToolStripMenuItem.Name = "FoldersToolStripMenuItem";
+            this.FoldersToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.FoldersToolStripMenuItem.Text = "Folders";
+            this.FoldersToolStripMenuItem.Click += new System.EventHandler(this.FoldersToolStripMenuItem_Click);
             // 
             // RefreshToolStripMenuItem
             // 
             this.RefreshToolStripMenuItem.Name = "RefreshToolStripMenuItem";
-            this.RefreshToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.RefreshToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.RefreshToolStripMenuItem.Text = "Refresh";
-            // 
-            // OptionsToolStripMenuItem
-            // 
-            this.OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem";
-            this.OptionsToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.OptionsToolStripMenuItem.Text = "Options...";
-            // 
-            // ToolsToolStripMenuItem
-            // 
-            this.ToolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.FindToolStripMenuItem,
-            this.MapNetworkDriveToolStripMenuItem,
-            this.DisconnectNetworkDriveToolStripMenuItem,
-            this.GoToToolStripMenuItem});
-            this.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem";
-            this.ToolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
-            this.ToolsToolStripMenuItem.Text = "Tools";
-            // 
-            // FindToolStripMenuItem
-            // 
-            this.FindToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.FilesOrFoldersToolStripMenuItem,
-            this.ComputerToolStripMenuItem,
-            this.OnTheInternetToolStripMenuItem,
-            this.PeopleToolStripMenuItem});
-            this.FindToolStripMenuItem.Name = "FindToolStripMenuItem";
-            this.FindToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
-            this.FindToolStripMenuItem.Text = "Find";
-            // 
-            // FilesOrFoldersToolStripMenuItem
-            // 
-            this.FilesOrFoldersToolStripMenuItem.Name = "FilesOrFoldersToolStripMenuItem";
-            this.FilesOrFoldersToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.FilesOrFoldersToolStripMenuItem.Text = "Files or Folders...";
-            // 
-            // ComputerToolStripMenuItem
-            // 
-            this.ComputerToolStripMenuItem.Name = "ComputerToolStripMenuItem";
-            this.ComputerToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.ComputerToolStripMenuItem.Text = "Computer...";
-            // 
-            // OnTheInternetToolStripMenuItem
-            // 
-            this.OnTheInternetToolStripMenuItem.Name = "OnTheInternetToolStripMenuItem";
-            this.OnTheInternetToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.OnTheInternetToolStripMenuItem.Text = "On the Internet";
-            // 
-            // PeopleToolStripMenuItem
-            // 
-            this.PeopleToolStripMenuItem.Name = "PeopleToolStripMenuItem";
-            this.PeopleToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.PeopleToolStripMenuItem.Text = "People...";
-            // 
-            // MapNetworkDriveToolStripMenuItem
-            // 
-            this.MapNetworkDriveToolStripMenuItem.Name = "MapNetworkDriveToolStripMenuItem";
-            this.MapNetworkDriveToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
-            this.MapNetworkDriveToolStripMenuItem.Text = "Map Network Drive...";
-            // 
-            // DisconnectNetworkDriveToolStripMenuItem
-            // 
-            this.DisconnectNetworkDriveToolStripMenuItem.Name = "DisconnectNetworkDriveToolStripMenuItem";
-            this.DisconnectNetworkDriveToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
-            this.DisconnectNetworkDriveToolStripMenuItem.Text = "Disconnect Network Drive...";
-            // 
-            // GoToToolStripMenuItem
-            // 
-            this.GoToToolStripMenuItem.Name = "GoToToolStripMenuItem";
-            this.GoToToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
-            this.GoToToolStripMenuItem.Text = "Go to...";
+            this.RefreshToolStripMenuItem.Click += new System.EventHandler(this.RefreshToolStripMenuItem_Click);
             // 
             // HelpToolStripMenuItem
             // 
@@ -570,6 +518,15 @@
             this.AboutWindows95ToolStripMenuItem.Text = "About Windows 95";
             this.AboutWindows95ToolStripMenuItem.Click += new System.EventHandler(this.AboutWindows95ToolStripMenuItem_Click);
             // 
+            // txtInfoDescSize
+            // 
+            this.txtInfoDescSize.AutoSize = true;
+            this.txtInfoDescSize.Location = new System.Drawing.Point(12, 81);
+            this.txtInfoDescSize.Name = "txtInfoDescSize";
+            this.txtInfoDescSize.Size = new System.Drawing.Size(59, 13);
+            this.txtInfoDescSize.TabIndex = 0;
+            this.txtInfoDescSize.Text = "FILE_SIZE";
+            // 
             // WinClassicWindowsExplorer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -580,13 +537,18 @@
             this.Load += new System.EventHandler(this.WinClassicWindowsExplorer_Load);
             this.program.ResumeLayout(false);
             this.program.PerformLayout();
-            this.pnlSave.ResumeLayout(false);
-            this.pnlSave.PerformLayout();
             this.pnlInfo.ResumeLayout(false);
+            this.pnlInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlInfoContent.ResumeLayout(false);
+            this.InfoDesc.ResumeLayout(false);
+            this.InfoDesc.PerformLayout();
             this.pnlFolders.ResumeLayout(false);
             this.pnlFoldersTop.ResumeLayout(false);
             this.pnlFoldersTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFolderClose)).EndInit();
+            this.pnlSave.ResumeLayout(false);
+            this.pnlSave.PerformLayout();
             this.MenuStrip1.ResumeLayout(false);
             this.MenuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -613,29 +575,8 @@
         internal System.Windows.Forms.ToolStripMenuItem PasteToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem SellectAllCtrlAToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem ViewToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem ToolbarToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem StatusBarToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem LargeIconsToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem SmallIconsToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem ListToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem DetailsToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem ArrangeIconsToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem ByDriveLetterToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem ByTypeToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem BySizeToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem ByFreeSpaceToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem LineUpIconsToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem FoldersToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem RefreshToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem OptionsToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem ToolsToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem FindToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem FilesOrFoldersToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem ComputerToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem OnTheInternetToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem PeopleToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem MapNetworkDriveToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem DisconnectNetworkDriveToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem GoToToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem HelpToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem HelpToolStripMenuItem1;
         internal System.Windows.Forms.ToolStripMenuItem AboutWindows95ToolStripMenuItem;
@@ -653,5 +594,15 @@
         private System.Windows.Forms.Panel pnlFoldersTop;
         private System.Windows.Forms.PictureBox btnFolderClose;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label txtInfoTitle;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label txtInfoTip;
+        private System.Windows.Forms.Panel pnlInfoContent;
+        private System.Windows.Forms.Panel InfoDesc;
+        private System.Windows.Forms.Label txtInfoDescModified;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label txtInfoDescType;
+        private System.Windows.Forms.Label txtInfoDescName;
+        private System.Windows.Forms.Label txtInfoDescSize;
     }
 }
