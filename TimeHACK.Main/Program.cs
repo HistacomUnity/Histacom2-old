@@ -93,6 +93,7 @@ namespace TimeHACK
         public static void AddTaskbarItem(Form Application, string ApplicationID, string ApplicationName, Image ApplicationIcon)
         {
             TitleScreen.frm95.AddTaskBarItem(Application, ApplicationID, ApplicationName, ApplicationIcon);
+            TitleScreen.frm98.AddTaskBarItem(Application, ApplicationID, ApplicationName, ApplicationIcon);
         }
 
         public static void NonImportantApp_Closing(object sender, FormClosingEventArgs e)
