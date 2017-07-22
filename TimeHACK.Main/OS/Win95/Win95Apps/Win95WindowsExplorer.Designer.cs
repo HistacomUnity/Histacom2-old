@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.program = new System.Windows.Forms.Panel();
             this.mainView = new System.Windows.Forms.ListView();
             this.diskView = new System.Windows.Forms.TreeView();
@@ -42,7 +43,6 @@
             this.RenameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CloseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.EditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.UndoCtrlZToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CutCtrlXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CopyCtrlCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,6 +60,7 @@
             this.Button1 = new System.Windows.Forms.Button();
             this.Label1 = new System.Windows.Forms.Label();
             this.txtSave = new System.Windows.Forms.TextBox();
+            this.refresh = new System.Windows.Forms.Timer(this.components);
             this.program.SuspendLayout();
             this.MenuStrip1.SuspendLayout();
             this.pnlSave.SuspendLayout();
@@ -189,7 +190,6 @@
             // EditToolStripMenuItem
             // 
             this.EditToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.UndoCtrlZToolStripMenuItem,
             this.CutCtrlXToolStripMenuItem,
             this.CopyCtrlCToolStripMenuItem,
             this.PasteToolStripMenuItem,
@@ -198,35 +198,33 @@
             this.EditToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.EditToolStripMenuItem.Text = "Edit";
             // 
-            // UndoCtrlZToolStripMenuItem
-            // 
-            this.UndoCtrlZToolStripMenuItem.Name = "UndoCtrlZToolStripMenuItem";
-            this.UndoCtrlZToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.UndoCtrlZToolStripMenuItem.Text = "Undo                    Ctrl+Z";
-            // 
             // CutCtrlXToolStripMenuItem
             // 
             this.CutCtrlXToolStripMenuItem.Name = "CutCtrlXToolStripMenuItem";
             this.CutCtrlXToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.CutCtrlXToolStripMenuItem.Text = "Cut                       Ctrl+X";
+            this.CutCtrlXToolStripMenuItem.Click += new System.EventHandler(this.CutCtrlXToolStripMenuItem_Click);
             // 
             // CopyCtrlCToolStripMenuItem
             // 
             this.CopyCtrlCToolStripMenuItem.Name = "CopyCtrlCToolStripMenuItem";
             this.CopyCtrlCToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.CopyCtrlCToolStripMenuItem.Text = "Copy                    Ctrl+C";
+            this.CopyCtrlCToolStripMenuItem.Click += new System.EventHandler(this.CopyCtrlCToolStripMenuItem_Click);
             // 
             // PasteToolStripMenuItem
             // 
             this.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem";
             this.PasteToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.PasteToolStripMenuItem.Text = "Paste                    Ctrl+V";
+            this.PasteToolStripMenuItem.Click += new System.EventHandler(this.PasteToolStripMenuItem_Click);
             // 
             // SellectAllCtrlAToolStripMenuItem
             // 
             this.SellectAllCtrlAToolStripMenuItem.Name = "SellectAllCtrlAToolStripMenuItem";
             this.SellectAllCtrlAToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.SellectAllCtrlAToolStripMenuItem.Text = "Select All            Ctrl+A";
+            this.SellectAllCtrlAToolStripMenuItem.Click += new System.EventHandler(this.SellectAllCtrlAToolStripMenuItem_Click);
             // 
             // ViewToolStripMenuItem
             // 
@@ -239,7 +237,7 @@
             // RefreshToolStripMenuItem
             // 
             this.RefreshToolStripMenuItem.Name = "RefreshToolStripMenuItem";
-            this.RefreshToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.RefreshToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.RefreshToolStripMenuItem.Text = "Refresh";
             this.RefreshToolStripMenuItem.Click += new System.EventHandler(this.RefreshToolStripMenuItem_Click);
             // 
@@ -338,6 +336,11 @@
             this.txtSave.Size = new System.Drawing.Size(542, 20);
             this.txtSave.TabIndex = 15;
             // 
+            // refresh
+            // 
+            this.refresh.Interval = 15000;
+            this.refresh.Tick += new System.EventHandler(this.refresh_Tick);
+            // 
             // Win95WindowsExplorer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -371,7 +374,6 @@
         internal System.Windows.Forms.ToolStripMenuItem RenameToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem CloseToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem EditToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem UndoCtrlZToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem CutCtrlXToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem CopyCtrlCToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem PasteToolStripMenuItem;
@@ -390,5 +392,6 @@
         internal System.Windows.Forms.Button Button1;
         internal System.Windows.Forms.Label Label1;
         internal System.Windows.Forms.TextBox txtSave;
+        private System.Windows.Forms.Timer refresh;
     }
 }

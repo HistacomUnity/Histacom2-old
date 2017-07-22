@@ -24,6 +24,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         string ToReplaceWith = ProfileDirectory;
         string CurrentDirectory = ProfileMyComputerDirectory;
         string OldLabelText;
+        string CurrentCopyFile;
         int fileType = 6;
         //string attemptedDirectory = "";
         WindowManager wm = new WindowManager();
@@ -55,40 +56,11 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
             program.BringToFront();
 
-            int loc = 0;
-            TreeNode[] folders = new TreeNode[new DirectoryInfo(CurrentDirectory).GetDirectories().Length];
-            foreach (DirectoryInfo folder in new DirectoryInfo(CurrentDirectory).GetDirectories())
-            {
-                if (folder.GetDirectories().Length > 0)
-                {
-                    string label = ReadDataFile(folder.FullName, false);
-                    TreeNode[] tn = createSubDirNodes(folder);
-                    folders[loc] = new TreeNode(label ?? folder.Name, 2, 3, tn);
-                    folders[loc].Tag = folder.FullName;
-                }
-                else
-                {
-                    string label = ReadDataFile(folder.FullName, false);
-                    folders[loc] = new TreeNode(label ?? folder.Name, 2, 3);
-                    folders[loc].Tag = folder.FullName;
-                }
-                loc++;
-            }
-            TreeNode[] mypcarray = new TreeNode[3];
-            mypcarray[0] = new TreeNode("(C:)", 1, 1, folders);
-            mypcarray[1] = new TreeNode("Control Panel", 4, 4);
-            mypcarray[2] = new TreeNode("Printers", 5, 5);
-            TreeNode[] desktoparray = new TreeNode[3];
-            desktoparray[0] = new TreeNode("My Computer", 6, 6, mypcarray);
-            desktoparray[1] = new TreeNode("Network Neighborhood", 7, 7);
-            desktoparray[2] = new TreeNode("Recycle Bin", 8, 8);
-            diskView.Nodes.Add(new TreeNode("Desktop", 0, 0, desktoparray));
-
-
             //diskView.Items.Add("My Computer", 0);
             Application.DoEvents();
 
             RefreshAll();
+            RefreshTreeNode();
 
             if (FileDialogBoxManager.IsInOpenDialog)
             {
@@ -152,13 +124,8 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         void RefreshAll() {
             try {
-                // Refresh the right listview
+
                 this.mainView.Items.Clear();
-                // For Each drive As string In My.Computer.FileSystem.GetDirectories(GameMain.MyDocuments & "\HistacomVB\" & GameMain.SaveProfile & "\HistacomVB\Folders")
-                //    If GetPropetiesForDir(drive)(4) = "isMyDocuments" Then
-                //        diskView.Items.Add("", 0)
-                //    End If
-                //Next
 
                 // Update the WebView
 
@@ -231,6 +198,42 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 wm.StartInfobox95("Exploring - C:", "Error with the file explorer \n" + ex.Message, Properties.Resources.Win95Info);
                 ((Form)this.TopLevelControl).Close();
             }
+        }
+
+        void RefreshTreeNode()
+        {
+            // Refresh the TreeView
+
+            diskView.Nodes.Clear();
+
+            int loc = 0;
+            TreeNode[] folders = new TreeNode[new DirectoryInfo(ProfileMyComputerDirectory).GetDirectories().Length];
+            foreach (DirectoryInfo folder in new DirectoryInfo(ProfileMyComputerDirectory).GetDirectories())
+            {
+                if (folder.GetDirectories().Length > 0)
+                {
+                    string label = ReadDataFile(folder.FullName, false);
+                    TreeNode[] tn = createSubDirNodes(folder);
+                    folders[loc] = new TreeNode(label ?? folder.Name, 2, 3, tn);
+                    folders[loc].Tag = folder.FullName;
+                }
+                else
+                {
+                    string label = ReadDataFile(folder.FullName, false);
+                    folders[loc] = new TreeNode(label ?? folder.Name, 2, 3);
+                    folders[loc].Tag = folder.FullName;
+                }
+                loc++;
+            }
+            TreeNode[] mypcarray = new TreeNode[3];
+            mypcarray[0] = new TreeNode("(C:)", 1, 1, folders);
+            mypcarray[1] = new TreeNode("Control Panel", 4, 4);
+            mypcarray[2] = new TreeNode("Printers", 5, 5);
+            TreeNode[] desktoparray = new TreeNode[3];
+            desktoparray[0] = new TreeNode("My Computer", 6, 6, mypcarray);
+            desktoparray[1] = new TreeNode("Network Neighborhood", 7, 7);
+            desktoparray[2] = new TreeNode("Recycle Bin", 8, 8);
+            diskView.Nodes.Add(new TreeNode("Desktop", 0, 0, desktoparray));
         }
 
         void OpenFile(string fileDir)
@@ -669,11 +672,13 @@ namespace TimeHACK.OS.Win95.Win95Apps
             if (File.Exists(CurrentDirectory + "\\New Folder")) {
                 wm.StartInfobox95("Windows Explorer", "This directory already exists", Properties.Resources.Win95Info);
             } else {
-                Directory.CreateDirectory(CurrentDirectory + "\\New Folder");
-                SaveDirectoryInfo(CurrentDirectory + "\\New Folder", false, "New Folder", true);
+                Directory.CreateDirectory(Path.Combine(CurrentDirectory, "New Folder"));
+                SaveDirectoryInfo(Path.Combine(CurrentDirectory, "New Folder"), false, "New Folder", true);
                 
                 RefreshAll();
             }
+
+            RefreshTreeNode();
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -721,16 +726,17 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             try
             {
-                if (!FileOrDirectoryExists(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text)))
+                if (!FileOrDirectoryExists(mainView.FocusedItem.ImageKey))
                 {
                     wm.StartInfobox95("Windows Explorer", "This directory doesn't exist", Properties.Resources.Win95Info);
                 }
                 else
                 {
-                    if (Directory.Exists(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text))) Directory.Delete(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text), true);
-                        else File.Delete(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text));
+                    if (Directory.Exists(mainView.FocusedItem.ImageKey)) Directory.Delete(mainView.FocusedItem.ImageKey, true);
+                        else File.Delete(mainView.FocusedItem.ImageKey);
 
                     RefreshAll();
+                    RefreshTreeNode();
                 }
             } catch
             {
@@ -770,48 +776,53 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void mainView_AfterLabelEdit(object sender, LabelEditEventArgs e)
         {
-
-            string setText;
-            setText = mainView.FocusedItem.Text;
-            if (setText == "")
-            {
-                wm.StartInfobox95("Windows Explorer", "Please enter a new directory name", Properties.Resources.Win95Info);
-            }
-            else
-            {
-                if (Directory.Exists(setText))
+            try {
+                string setText;
+                setText = e.Label;
+                if (setText == "")
                 {
-                    wm.StartInfobox95("Windows Explorer", "That directory already exists.", Properties.Resources.Win95Info);
+                    wm.StartInfobox95("Windows Explorer", "Please enter a new directory name", Properties.Resources.Win95Info);
                 }
                 else
                 {
-                    if (File.Exists(setText))
+                    if (Directory.Exists(setText))
                     {
-                        wm.StartInfobox95("Windows Explorer", "That file already exists.", Properties.Resources.Win95Info);
+                        wm.StartInfobox95("Windows Explorer", "That directory already exists.", Properties.Resources.Win95Info);
                     }
                     else
                     {
-                        if (File.Exists(OldLabelText))
+                        if (File.Exists(setText))
                         {
-                            // It was a file
-
-                            File.Copy(Path.Combine(CurrentDirectory, OldLabelText), Path.Combine(CurrentDirectory, setText));
-                            File.Delete(Path.Combine(CurrentDirectory, OldLabelText));
-
+                            wm.StartInfobox95("Windows Explorer", "That file already exists.", Properties.Resources.Win95Info);
                         }
                         else
                         {
-                            // It was a directory
+                            if (Directory.Exists(mainView.FocusedItem.ImageKey))
+                            {
+                                // It was a directory
 
-                            Directory.CreateDirectory(Path.Combine(CurrentDirectory, setText));
-                            //File.Copy(Path.Combine(CurrentDirectory, OldLabelText, "*"), Path.Combine(CurrentDirectory, setText));
-                            Directory.Delete(Path.Combine(CurrentDirectory, OldLabelText));
+                                Directory.Move(mainView.FocusedItem.ImageKey, Path.Combine(CurrentDirectory, setText));
+
+                                File.Delete(Path.Combine(CurrentDirectory, setText, "_data.info"));
+
+                                SaveDirectoryInfo(Path.Combine(CurrentDirectory, setText), false, $"{setText}", true);
+                            }
+                            else
+                            {
+                                // It was a file
+
+                                File.Copy(mainView.FocusedItem.ImageKey, Path.Combine(CurrentDirectory, setText));
+                                File.Delete(mainView.FocusedItem.ImageKey);
+                            }
                         }
-                    }
 
+                    }
                 }
+                RefreshAll();
+                RefreshTreeNode();
+            } catch {
             }
-            RefreshAll();
+            
         }
 
         private TreeNode[] createSubDirNodes(DirectoryInfo folder)
@@ -927,6 +938,141 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
                     txtInfoDescSize.Hide();
                 }
+            }
+        }
+
+        private void CutCtrlXToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (mainView.FocusedItem != null && mainView.FocusedItem.ImageKey != "")
+                {
+
+                    // It is a directory
+                    string oldLocation;
+                    oldLocation = mainView.FocusedItem.ImageKey;
+
+                    CurrentCopyFile = Path.Combine(GameDirectory, "Data", Path.GetFileName(mainView.FocusedItem.ImageKey));
+
+                    if (Directory.Exists(CurrentCopyFile)) Directory.Delete(CurrentCopyFile);
+                    if (File.Exists(CurrentCopyFile)) File.Delete(CurrentCopyFile);
+
+                    Directory.Move(mainView.FocusedItem.ImageKey, Path.Combine(GameDirectory, "Data", Path.GetDirectoryName(mainView.FocusedItem.ImageKey)));
+
+                    
+                    DirectoryCopy(CurrentCopyFile, oldLocation, true);
+                }
+                else if (mainView.FocusedItem != null)
+                {
+                    // It is a file
+
+                    CurrentCopyFile = Path.Combine(GameDirectory, "Data", Path.GetFileName(mainView.FocusedItem.Tag.ToString()));
+
+                    if (Directory.Exists(CurrentCopyFile)) Directory.Delete(CurrentCopyFile);
+                    if (File.Exists(CurrentCopyFile)) File.Delete(CurrentCopyFile);
+
+                    File.Move(mainView.FocusedItem.Tag.ToString(), Path.Combine(GameDirectory, "Data", Path.GetFileName(mainView.FocusedItem.Tag.ToString())));
+
+                    
+                }
+                RefreshAll();
+            } catch {
+            }           
+        }
+
+        private void CopyCtrlCToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (mainView.FocusedItem != null && mainView.FocusedItem.ImageKey != "")
+                {
+                    // It is a directory
+                    string oldLocation;
+                    oldLocation = mainView.FocusedItem.ImageKey;
+                    CurrentCopyFile = Path.Combine(GameDirectory, "Data", Path.GetFileName(mainView.FocusedItem.ImageKey));
+
+                    if (Directory.Exists(CurrentCopyFile)) Directory.Delete(CurrentCopyFile);
+                    if (File.Exists(CurrentCopyFile)) File.Delete(CurrentCopyFile);
+
+                    DirectoryCopy(CurrentCopyFile, oldLocation, true);
+                }
+                else if (mainView.FocusedItem != null)
+                {
+                    // It is a file
+
+                    CurrentCopyFile = Path.Combine(GameDirectory, "Data", Path.GetFileName(mainView.FocusedItem.Tag.ToString()));
+
+                    if (Directory.Exists(CurrentCopyFile)) Directory.Delete(CurrentCopyFile);
+                    if (File.Exists(CurrentCopyFile)) File.Delete(CurrentCopyFile);
+
+                    File.Copy(mainView.FocusedItem.Tag.ToString(), Path.Combine(GameDirectory, "Data", Path.GetFileName(mainView.FocusedItem.Tag.ToString())));
+
+
+                }
+                RefreshAll();
+            } catch {
+            }
+        }
+
+        private void PasteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Directory.Exists(CurrentCopyFile))
+            {
+                // It is a directory
+
+                DirectoryCopy(CurrentCopyFile, CurrentDirectory, true);
+            } else if (File.Exists(CurrentCopyFile)) {
+                // It is a file
+
+                File.Copy(CurrentCopyFile, Path.Combine(CurrentDirectory, Path.GetFileName(CurrentCopyFile)));
+            }
+            RefreshAll();
+        }
+
+        private static void DirectoryCopy(string sourceDirName, string destDirName, bool copySubDirs)
+        {
+            // Get the subdirectories for the specified directory.
+            DirectoryInfo dir = new DirectoryInfo(sourceDirName);
+
+            if (dir.Exists)
+            {
+                DirectoryInfo[] dirs = dir.GetDirectories();
+                // If the destination directory doesn't exist, create it.
+                if (!Directory.Exists(destDirName))
+                {
+                    Directory.CreateDirectory(destDirName);
+                }
+
+                // Get the files in the directory and copy them to the new location.
+                FileInfo[] files = dir.GetFiles();
+                foreach (FileInfo file in files)
+                {
+                    string temppath = Path.Combine(destDirName, file.Name);
+                    file.CopyTo(temppath, false);
+                }
+
+                // If copying subdirectories, copy them and their contents to new location.
+                if (copySubDirs)
+                {
+                    foreach (DirectoryInfo subdir in dirs)
+                    {
+                        string temppath = Path.Combine(destDirName, subdir.Name);
+                        DirectoryCopy(subdir.FullName, temppath, copySubDirs);
+                    }
+                }
+            }            
+        }
+
+        private void refresh_Tick(object sender, EventArgs e)
+        {
+            RefreshAll();
+        }
+
+        private void SellectAllCtrlAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem item in mainView.Items)
+            {
+                item.Selected = true;
             }
         }
     }

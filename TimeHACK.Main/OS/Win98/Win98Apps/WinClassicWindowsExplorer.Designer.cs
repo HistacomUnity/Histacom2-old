@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WinClassicWindowsExplorer));
             this.program = new System.Windows.Forms.Panel();
             this.mainView = new System.Windows.Forms.ListView();
@@ -76,6 +77,7 @@
             this.HelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.AboutWindows95ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.refresh = new System.Windows.Forms.Timer(this.components);
             this.program.SuspendLayout();
             this.pnlInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -116,6 +118,7 @@
             this.mainView.TabIndex = 10;
             this.mainView.UseCompatibleStateImageBehavior = false;
             this.mainView.View = System.Windows.Forms.View.List;
+            this.mainView.AfterLabelEdit += new System.Windows.Forms.LabelEditEventHandler(this.mainView_AfterLabelEdit);
             this.mainView.SelectedIndexChanged += new System.EventHandler(this.mainView_SelectedIndexChanged);
             this.mainView.DoubleClick += new System.EventHandler(this.mainView_DoubleClick);
             // 
@@ -462,24 +465,28 @@
             this.CutCtrlXToolStripMenuItem.Name = "CutCtrlXToolStripMenuItem";
             this.CutCtrlXToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.CutCtrlXToolStripMenuItem.Text = "Cut                       Ctrl+X";
+            this.CutCtrlXToolStripMenuItem.Click += new System.EventHandler(this.CutCtrlXToolStripMenuItem_Click);
             // 
             // CopyCtrlCToolStripMenuItem
             // 
             this.CopyCtrlCToolStripMenuItem.Name = "CopyCtrlCToolStripMenuItem";
             this.CopyCtrlCToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.CopyCtrlCToolStripMenuItem.Text = "Copy                    Ctrl+C";
+            this.CopyCtrlCToolStripMenuItem.Click += new System.EventHandler(this.CopyCtrlCToolStripMenuItem_Click);
             // 
             // PasteToolStripMenuItem
             // 
             this.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem";
             this.PasteToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.PasteToolStripMenuItem.Text = "Paste                    Ctrl+V";
+            this.PasteToolStripMenuItem.Click += new System.EventHandler(this.PasteToolStripMenuItem_Click);
             // 
             // SellectAllCtrlAToolStripMenuItem
             // 
             this.SellectAllCtrlAToolStripMenuItem.Name = "SellectAllCtrlAToolStripMenuItem";
             this.SellectAllCtrlAToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.SellectAllCtrlAToolStripMenuItem.Text = "Select All            Ctrl+A";
+            this.SellectAllCtrlAToolStripMenuItem.Text = "Select All             Ctrl+A";
+            this.SellectAllCtrlAToolStripMenuItem.Click += new System.EventHandler(this.SellectAllCtrlAToolStripMenuItem_Click);
             // 
             // ViewToolStripMenuItem
             // 
@@ -527,6 +534,12 @@
             this.AboutWindows95ToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.AboutWindows95ToolStripMenuItem.Text = "About Windows 95";
             this.AboutWindows95ToolStripMenuItem.Click += new System.EventHandler(this.AboutWindows95ToolStripMenuItem_Click);
+            // 
+            // refresh
+            // 
+            this.refresh.Enabled = true;
+            this.refresh.Interval = 15000;
+            this.refresh.Tick += new System.EventHandler(this.refresh_Tick);
             // 
             // WinClassicWindowsExplorer
             // 
@@ -605,5 +618,6 @@
         private System.Windows.Forms.Label txtInfoDescType;
         private System.Windows.Forms.Label txtInfoDescName;
         private System.Windows.Forms.Label txtInfoDescSize;
+        private System.Windows.Forms.Timer refresh;
     }
 }

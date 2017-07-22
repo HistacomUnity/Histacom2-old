@@ -110,25 +110,6 @@ namespace TimeHACK.OS.Win98
             // Bring to this the front
             this.BringToFront();
 
-            //Check if it is the first time
-            if (CurrentSave.FTime95 == false)
-            {
-                CurrentSave.FTime95 = true;
-                SaveSystem.SaveGame();
-                WinClassicWelcome welcome = new WinClassicWelcome();
-                WinClassic app = wm.StartWin95(welcome, "Welcome", null, false, false);
-                AddTaskBarItem(app, app.Tag.ToString(), "Welcome", null);
-
-                nonimportantapps.Add(app);
-                nonimportantapps[nonimportantapps.Count - 1].BringToFront();
-                nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
-
-
-
-                app.BringToFront();
-
-            }
-
         }
 
         private void fontLoad()

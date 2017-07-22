@@ -67,9 +67,13 @@ namespace TimeHACK
 
         public static string OpenFileExplorerAsDialogAndReturnGivenPath()
         {
-            Win95WindowsExplorer we = new Win95WindowsExplorer();
-
-            WinClassic app = wm.StartWin95(we, "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true, true);
+            if (SaveSystem.CurrentSave.CurrentOS == "95")
+            {
+                WinClassic app = wm.StartWin95(new Win95WindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true, true);
+            } else {
+                WinClassic app = wm.StartWin95(new WinClassicWindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true, true);
+            }
+            
             try
             {
                 return WindowsExplorerReturnPath;
