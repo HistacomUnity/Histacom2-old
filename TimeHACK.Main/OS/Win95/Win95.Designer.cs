@@ -62,7 +62,6 @@ namespace TimeHACK.OS.Win95
             this.SystemToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DiskDefragmenterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ScanDiskToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.AddressBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CalculatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HyperTerminalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ImagingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -244,7 +243,7 @@ namespace TimeHACK.OS.Win95
             this.startmenuitems.Name = "startmenuitems";
             this.startmenuitems.Padding = new System.Windows.Forms.Padding(6, 2, 0, 0);
             this.startmenuitems.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.startmenuitems.Size = new System.Drawing.Size(145, 311);
+            this.startmenuitems.Size = new System.Drawing.Size(145, 292);
             this.startmenuitems.TabIndex = 0;
             this.startmenuitems.Text = "StartMenu";
             // 
@@ -285,7 +284,6 @@ namespace TimeHACK.OS.Win95
             this.CommunicationsToolStripMenuItem,
             this.MultimediaToolStripMenuItem,
             this.SystemToolsToolStripMenuItem,
-            this.AddressBookToolStripMenuItem,
             this.CalculatorToolStripMenuItem,
             this.HyperTerminalToolStripMenuItem,
             this.ImagingToolStripMenuItem,
@@ -434,18 +432,6 @@ namespace TimeHACK.OS.Win95
             this.ScanDiskToolStripMenuItem.Name = "ScanDiskToolStripMenuItem";
             this.ScanDiskToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.ScanDiskToolStripMenuItem.Text = "ScanDisk";
-            // 
-            // AddressBookToolStripMenuItem
-            // 
-            this.AddressBookToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.AddressBookToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
-            this.AddressBookToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.AddressBookToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("AddressBookToolStripMenuItem.Image")));
-            this.AddressBookToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.AddressBookToolStripMenuItem.Name = "AddressBookToolStripMenuItem";
-            this.AddressBookToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
-            this.AddressBookToolStripMenuItem.Text = "Address Book";
-            this.AddressBookToolStripMenuItem.Click += new System.EventHandler(this.AddressBookToolStripMenuItem_Click);
             // 
             // CalculatorToolStripMenuItem
             // 
@@ -1211,7 +1197,6 @@ namespace TimeHACK.OS.Win95
         internal System.Windows.Forms.ToolStripMenuItem SystemToolsToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem DiskDefragmenterToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem ScanDiskToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem AddressBookToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem CalculatorToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem HyperTerminalToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem ImagingToolStripMenuItem;

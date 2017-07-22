@@ -174,12 +174,11 @@ namespace TimeHACK.Engine
             SaveDirectoryInfo(ProfileMyComputerDirectory, false, "Win95 (C:)", true);
             if (CurrentSave.CurrentOS == "95") SaveDirectoryInfo(ProfileDocumentsDirectory, false, "My Documents", true);
             if (CurrentSave.CurrentOS != "95") SaveDirectoryInfo(ProfileSettingsDirectory, false, "Documents and Settings", true);
-            SaveDirectoryInfo(Path.Combine(ProfileProgramsDirectory, "Accessories"), false, "Accessories", true);
-            CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Accessories", "wordpad.exe"), "wordpad");
-            CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Accessories", "mspaint.exe"), "mspaint");
+            SaveDirectoryInfo(Path.Combine(ProfileProgramsDirectory, "Accessories"), false, "Accessories", true);            
             SaveDirectoryInfo(ProfileProgramsDirectory, true, "Program Files", true);
             SaveDirectoryInfo(ProfileWindowsDirectory, true, "Windows", true);
 
+            CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Accessories", "wordpad.exe"), "wordpad");
             CreateWindowsDirectory();
         }
 
