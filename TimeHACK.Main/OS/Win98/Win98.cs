@@ -363,7 +363,7 @@ namespace TimeHACK.OS.Win98
         {
             FileDialogBoxManager.IsInOpenDialog = false;
             FileDialogBoxManager.IsInSaveDialog = false;
-            WinClassicWindowsExplorer we = new WinClassicWindowsExplorer();
+            Win95WindowsExplorer we = new Win95WindowsExplorer();
             WinClassic app = wm.StartWin95(we, "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
             AddTaskBarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
 

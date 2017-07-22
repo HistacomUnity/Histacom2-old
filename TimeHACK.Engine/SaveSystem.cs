@@ -200,6 +200,24 @@ namespace TimeHACK.Engine
             File.WriteAllText(filepath, contents);
         }
 
+        public static void UpgradeFileSystem(string oldOS, string newOS)
+        {
+            switch (oldOS)
+            {
+                case "95":
+                    if (newOS == "98" || newOS == "2000" || newOS == "ME")
+                    {
+                        // We are upgrading from the old WinClassic file System to the new WinClassic filesystem!
+                        // All the above OSes share basically the same file layout!
+                        // (Excluding Documents And Settings) which is 2000 and ME only
+
+                        SaveDirectoryInfo(Path.Combine(ProfileProgramsDirectory, "Outlook Express"), false, "Outlook Express", true);
+                        CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Outlook Express", "WAB.exe"), "addressbook");
+                    }
+                    break;
+            }
+        }
+
         public static void SaveDirectoryInfo(string directory, bool isProtected, string label, bool allowback)
         {
             if (!Directory.Exists(directory))

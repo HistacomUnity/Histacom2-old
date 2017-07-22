@@ -67,7 +67,7 @@ namespace TimeHACK
 
         public static string OpenFileExplorerAsDialogAndReturnGivenPath()
         {
-            WinClassicWindowsExplorer we = new WinClassicWindowsExplorer();
+            Win95WindowsExplorer we = new Win95WindowsExplorer();
 
             WinClassic app = wm.StartWin95(we, "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true, true);
             try

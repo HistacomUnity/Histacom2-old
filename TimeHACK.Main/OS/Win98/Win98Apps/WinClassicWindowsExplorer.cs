@@ -167,7 +167,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             switch (appname.ToLower())
             {               
                 case "explorer":
-                    Engine.Template.WinClassic app = wm.StartWin95(new WinClassicWindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
+                    Engine.Template.WinClassic app = wm.StartWin95(new Win95WindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
                     Program.AddTaskbarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
                     break;
                 case "calc":

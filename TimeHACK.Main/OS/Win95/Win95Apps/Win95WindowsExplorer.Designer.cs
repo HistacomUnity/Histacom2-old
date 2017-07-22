@@ -1,6 +1,6 @@
 ﻿namespace TimeHACK.OS.Win95.Win95Apps
 {
-    partial class WinClassicWindowsExplorer
+    partial class Win95WindowsExplorer
     {
         /// <summary> 
         /// Required designer variable.
