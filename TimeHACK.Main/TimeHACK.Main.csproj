@@ -540,6 +540,7 @@
     <None Include="Resources\win95_splitter.png" />
     <None Include="Resources\win95_welcome.png" />
     <None Include="Resources\win95_welcometip.png" />
+    <None Include="Resources\WinClassicGENERALApplicationToolBoxBackground.png" />
     <Content Include="Resources\WinClassic\16Color.png" />
     <Content Include="Resources\WinClassic\256Color.png" />
     <None Include="Resources\WinClassic\tada.wav" />

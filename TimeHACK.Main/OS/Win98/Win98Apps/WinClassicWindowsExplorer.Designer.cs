@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WinClassicWindowsExplorer));
             this.program = new System.Windows.Forms.Panel();
-            this.mainView = new System.Windows.Forms.ListView();
-            this.diskView = new System.Windows.Forms.TreeView();
             this.MenuStrip1 = new System.Windows.Forms.MenuStrip();
             this.FileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CreateShortcutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,13 +41,10 @@
             this.RenameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CloseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.EditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.UndoCtrlZToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CutCtrlXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CopyCtrlCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PasteShortcutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SellectAllCtrlAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.InvertSelectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolbarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.StatusBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -76,6 +72,7 @@
             this.HelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.AboutWindows95ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mainView = new System.Windows.Forms.ListView();
             this.toprightcorner = new System.Windows.Forms.Panel();
             this.bottomrightcorner = new System.Windows.Forms.Panel();
             this.bottomleftcorner = new System.Windows.Forms.Panel();
@@ -84,48 +81,37 @@
             this.Button1 = new System.Windows.Forms.Button();
             this.Label1 = new System.Windows.Forms.Label();
             this.txtSave = new System.Windows.Forms.TextBox();
+            this.pnlInfo = new System.Windows.Forms.Panel();
+            this.pnlFolders = new System.Windows.Forms.Panel();
+            this.pnlFoldersTop = new System.Windows.Forms.Panel();
+            this.diskView = new System.Windows.Forms.TreeView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.program.SuspendLayout();
             this.MenuStrip1.SuspendLayout();
             this.pnlSave.SuspendLayout();
+            this.pnlInfo.SuspendLayout();
+            this.pnlFolders.SuspendLayout();
+            this.pnlFoldersTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // program
             // 
             this.program.BackColor = System.Drawing.Color.Silver;
             this.program.Controls.Add(this.mainView);
-            this.program.Controls.Add(this.diskView);
-            this.program.Controls.Add(this.MenuStrip1);
             this.program.Controls.Add(this.toprightcorner);
             this.program.Controls.Add(this.bottomrightcorner);
             this.program.Controls.Add(this.bottomleftcorner);
             this.program.Controls.Add(this.topleftcorner);
             this.program.Controls.Add(this.pnlSave);
+            this.program.Controls.Add(this.pnlInfo);
+            this.program.Controls.Add(this.MenuStrip1);
             this.program.Dock = System.Windows.Forms.DockStyle.Fill;
             this.program.Location = new System.Drawing.Point(0, 0);
             this.program.Name = "program";
             this.program.Size = new System.Drawing.Size(704, 517);
             this.program.TabIndex = 13;
-            // 
-            // mainView
-            // 
-            this.mainView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainView.Location = new System.Drawing.Point(215, 27);
-            this.mainView.Name = "mainView";
-            this.mainView.Size = new System.Drawing.Size(486, 444);
-            this.mainView.TabIndex = 10;
-            this.mainView.UseCompatibleStateImageBehavior = false;
-            this.mainView.View = System.Windows.Forms.View.List;
-            this.mainView.DoubleClick += new System.EventHandler(this.mainView_DoubleClick);
-            // 
-            // diskView
-            // 
-            this.diskView.Location = new System.Drawing.Point(3, 27);
-            this.diskView.Name = "diskView";
-            this.diskView.Size = new System.Drawing.Size(213, 444);
-            this.diskView.TabIndex = 13;
-            this.diskView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.diskView_AfterSelect);
             // 
             // MenuStrip1
             // 
@@ -161,7 +147,7 @@
             this.TextDocumentToolStripMenuItem,
             this.BitmapImageToolStripMenuItem});
             this.CreateShortcutToolStripMenuItem.Name = "CreateShortcutToolStripMenuItem";
-            this.CreateShortcutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.CreateShortcutToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.CreateShortcutToolStripMenuItem.Text = "New";
             // 
             // FolderToolStripMenuItem
@@ -192,43 +178,34 @@
             // DeleteToolStripMenuItem
             // 
             this.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem";
-            this.DeleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.DeleteToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.DeleteToolStripMenuItem.Text = "Delete";
             this.DeleteToolStripMenuItem.Click += new System.EventHandler(this.DeleteToolStripMenuItem_Click);
             // 
             // RenameToolStripMenuItem
             // 
             this.RenameToolStripMenuItem.Name = "RenameToolStripMenuItem";
-            this.RenameToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.RenameToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.RenameToolStripMenuItem.Text = "Rename";
             this.RenameToolStripMenuItem.Click += new System.EventHandler(this.RenameToolStripMenuItem_Click);
             // 
             // CloseToolStripMenuItem
             // 
             this.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem";
-            this.CloseToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.CloseToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.CloseToolStripMenuItem.Text = "Close";
             this.CloseToolStripMenuItem.Click += new System.EventHandler(this.CloseToolStripMenuItem_Click);
             // 
             // EditToolStripMenuItem
             // 
             this.EditToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.UndoCtrlZToolStripMenuItem,
             this.CutCtrlXToolStripMenuItem,
             this.CopyCtrlCToolStripMenuItem,
             this.PasteToolStripMenuItem,
-            this.PasteShortcutToolStripMenuItem,
-            this.SellectAllCtrlAToolStripMenuItem,
-            this.InvertSelectionToolStripMenuItem});
+            this.SellectAllCtrlAToolStripMenuItem});
             this.EditToolStripMenuItem.Name = "EditToolStripMenuItem";
             this.EditToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.EditToolStripMenuItem.Text = "Edit";
-            // 
-            // UndoCtrlZToolStripMenuItem
-            // 
-            this.UndoCtrlZToolStripMenuItem.Name = "UndoCtrlZToolStripMenuItem";
-            this.UndoCtrlZToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.UndoCtrlZToolStripMenuItem.Text = "Undo                    Ctrl+Z";
             // 
             // CutCtrlXToolStripMenuItem
             // 
@@ -248,23 +225,11 @@
             this.PasteToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.PasteToolStripMenuItem.Text = "Paste                    Ctrl+V";
             // 
-            // PasteShortcutToolStripMenuItem
-            // 
-            this.PasteShortcutToolStripMenuItem.Name = "PasteShortcutToolStripMenuItem";
-            this.PasteShortcutToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.PasteShortcutToolStripMenuItem.Text = "Paste Shortcut";
-            // 
             // SellectAllCtrlAToolStripMenuItem
             // 
             this.SellectAllCtrlAToolStripMenuItem.Name = "SellectAllCtrlAToolStripMenuItem";
             this.SellectAllCtrlAToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.SellectAllCtrlAToolStripMenuItem.Text = "Sellect All            Ctrl+A";
-            // 
-            // InvertSelectionToolStripMenuItem
-            // 
-            this.InvertSelectionToolStripMenuItem.Name = "InvertSelectionToolStripMenuItem";
-            this.InvertSelectionToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.InvertSelectionToolStripMenuItem.Text = "Invert Selection";
+            this.SellectAllCtrlAToolStripMenuItem.Text = "Select All            Ctrl+A";
             // 
             // ViewToolStripMenuItem
             // 
@@ -458,6 +423,17 @@
             this.AboutWindows95ToolStripMenuItem.Text = "About Windows 95";
             this.AboutWindows95ToolStripMenuItem.Click += new System.EventHandler(this.AboutWindows95ToolStripMenuItem_Click);
             // 
+            // mainView
+            // 
+            this.mainView.Dock = System.Windows.Forms.DockStyle.Right;
+            this.mainView.Location = new System.Drawing.Point(403, 24);
+            this.mainView.Name = "mainView";
+            this.mainView.Size = new System.Drawing.Size(301, 458);
+            this.mainView.TabIndex = 10;
+            this.mainView.UseCompatibleStateImageBehavior = false;
+            this.mainView.View = System.Windows.Forms.View.List;
+            this.mainView.DoubleClick += new System.EventHandler(this.mainView_DoubleClick);
+            // 
             // toprightcorner
             // 
             this.toprightcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -495,17 +471,18 @@
             this.pnlSave.Controls.Add(this.Button1);
             this.pnlSave.Controls.Add(this.Label1);
             this.pnlSave.Controls.Add(this.txtSave);
-            this.pnlSave.Location = new System.Drawing.Point(3, 474);
+            this.pnlSave.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlSave.Location = new System.Drawing.Point(0, 482);
             this.pnlSave.Name = "pnlSave";
-            this.pnlSave.Size = new System.Drawing.Size(850, 35);
+            this.pnlSave.Size = new System.Drawing.Size(704, 35);
             this.pnlSave.TabIndex = 18;
             this.pnlSave.Visible = false;
             // 
             // Button1
             // 
-            this.Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button1.Location = new System.Drawing.Point(608, 1);
+            this.Button1.Location = new System.Drawing.Point(626, 3);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(75, 23);
             this.Button1.TabIndex = 17;
@@ -524,12 +501,70 @@
             // 
             // txtSave
             // 
-            this.txtSave.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.txtSave.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSave.Location = new System.Drawing.Point(60, 3);
             this.txtSave.Name = "txtSave";
-            this.txtSave.Size = new System.Drawing.Size(542, 20);
+            this.txtSave.Size = new System.Drawing.Size(560, 20);
             this.txtSave.TabIndex = 15;
+            // 
+            // pnlInfo
+            // 
+            this.pnlInfo.Controls.Add(this.pnlFolders);
+            this.pnlInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlInfo.Location = new System.Drawing.Point(0, 24);
+            this.pnlInfo.Name = "pnlInfo";
+            this.pnlInfo.Size = new System.Drawing.Size(704, 493);
+            this.pnlInfo.TabIndex = 19;
+            // 
+            // pnlFolders
+            // 
+            this.pnlFolders.Controls.Add(this.pnlFoldersTop);
+            this.pnlFolders.Controls.Add(this.diskView);
+            this.pnlFolders.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlFolders.Location = new System.Drawing.Point(0, 0);
+            this.pnlFolders.Name = "pnlFolders";
+            this.pnlFolders.Size = new System.Drawing.Size(168, 493);
+            this.pnlFolders.TabIndex = 0;
+            // 
+            // pnlFoldersTop
+            // 
+            this.pnlFoldersTop.Controls.Add(this.label2);
+            this.pnlFoldersTop.Controls.Add(this.pictureBox1);
+            this.pnlFoldersTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlFoldersTop.Location = new System.Drawing.Point(0, 0);
+            this.pnlFoldersTop.Name = "pnlFoldersTop";
+            this.pnlFoldersTop.Size = new System.Drawing.Size(168, 22);
+            this.pnlFoldersTop.TabIndex = 20;
+            // 
+            // diskView
+            // 
+            this.diskView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.diskView.Location = new System.Drawing.Point(0, 0);
+            this.diskView.Name = "diskView";
+            this.diskView.Size = new System.Drawing.Size(168, 493);
+            this.diskView.TabIndex = 13;
+            this.diskView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.diskView_AfterSelect);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(144, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(21, 16);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Folders";
             // 
             // WinClassicWindowsExplorer
             // 
@@ -545,6 +580,11 @@
             this.MenuStrip1.PerformLayout();
             this.pnlSave.ResumeLayout(false);
             this.pnlSave.PerformLayout();
+            this.pnlInfo.ResumeLayout(false);
+            this.pnlFolders.ResumeLayout(false);
+            this.pnlFoldersTop.ResumeLayout(false);
+            this.pnlFoldersTop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -564,13 +604,10 @@
         internal System.Windows.Forms.ToolStripMenuItem RenameToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem CloseToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem EditToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem UndoCtrlZToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem CutCtrlXToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem CopyCtrlCToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem PasteToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem PasteShortcutToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem SellectAllCtrlAToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem InvertSelectionToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem ViewToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem ToolbarToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem StatusBarToolStripMenuItem;
@@ -607,5 +644,10 @@
         internal System.Windows.Forms.Button Button1;
         internal System.Windows.Forms.Label Label1;
         internal System.Windows.Forms.TextBox txtSave;
+        private System.Windows.Forms.Panel pnlInfo;
+        private System.Windows.Forms.Panel pnlFolders;
+        private System.Windows.Forms.Panel pnlFoldersTop;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
     }
 }

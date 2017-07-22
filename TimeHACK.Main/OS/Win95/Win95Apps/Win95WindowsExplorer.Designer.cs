@@ -46,9 +46,7 @@
             this.CutCtrlXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CopyCtrlCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PasteShortcutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SellectAllCtrlAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.InvertSelectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolbarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.StatusBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -161,7 +159,7 @@
             this.TextDocumentToolStripMenuItem,
             this.BitmapImageToolStripMenuItem});
             this.CreateShortcutToolStripMenuItem.Name = "CreateShortcutToolStripMenuItem";
-            this.CreateShortcutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.CreateShortcutToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.CreateShortcutToolStripMenuItem.Text = "New";
             // 
             // FolderToolStripMenuItem
@@ -192,21 +190,21 @@
             // DeleteToolStripMenuItem
             // 
             this.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem";
-            this.DeleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.DeleteToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.DeleteToolStripMenuItem.Text = "Delete";
             this.DeleteToolStripMenuItem.Click += new System.EventHandler(this.DeleteToolStripMenuItem_Click);
             // 
             // RenameToolStripMenuItem
             // 
             this.RenameToolStripMenuItem.Name = "RenameToolStripMenuItem";
-            this.RenameToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.RenameToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.RenameToolStripMenuItem.Text = "Rename";
             this.RenameToolStripMenuItem.Click += new System.EventHandler(this.RenameToolStripMenuItem_Click);
             // 
             // CloseToolStripMenuItem
             // 
             this.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem";
-            this.CloseToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.CloseToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.CloseToolStripMenuItem.Text = "Close";
             this.CloseToolStripMenuItem.Click += new System.EventHandler(this.CloseToolStripMenuItem_Click);
             // 
@@ -217,9 +215,7 @@
             this.CutCtrlXToolStripMenuItem,
             this.CopyCtrlCToolStripMenuItem,
             this.PasteToolStripMenuItem,
-            this.PasteShortcutToolStripMenuItem,
-            this.SellectAllCtrlAToolStripMenuItem,
-            this.InvertSelectionToolStripMenuItem});
+            this.SellectAllCtrlAToolStripMenuItem});
             this.EditToolStripMenuItem.Name = "EditToolStripMenuItem";
             this.EditToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.EditToolStripMenuItem.Text = "Edit";
@@ -248,23 +244,11 @@
             this.PasteToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.PasteToolStripMenuItem.Text = "Paste                    Ctrl+V";
             // 
-            // PasteShortcutToolStripMenuItem
-            // 
-            this.PasteShortcutToolStripMenuItem.Name = "PasteShortcutToolStripMenuItem";
-            this.PasteShortcutToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.PasteShortcutToolStripMenuItem.Text = "Paste Shortcut";
-            // 
             // SellectAllCtrlAToolStripMenuItem
             // 
             this.SellectAllCtrlAToolStripMenuItem.Name = "SellectAllCtrlAToolStripMenuItem";
             this.SellectAllCtrlAToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.SellectAllCtrlAToolStripMenuItem.Text = "Sellect All            Ctrl+A";
-            // 
-            // InvertSelectionToolStripMenuItem
-            // 
-            this.InvertSelectionToolStripMenuItem.Name = "InvertSelectionToolStripMenuItem";
-            this.InvertSelectionToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.InvertSelectionToolStripMenuItem.Text = "Invert Selection";
+            this.SellectAllCtrlAToolStripMenuItem.Text = "Select All            Ctrl+A";
             // 
             // ViewToolStripMenuItem
             // 
@@ -531,12 +515,12 @@
             this.txtSave.Size = new System.Drawing.Size(542, 20);
             this.txtSave.TabIndex = 15;
             // 
-            // WinClassicWindowsExplorer
+            // Win95WindowsExplorer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.program);
-            this.Name = "WinClassicWindowsExplorer";
+            this.Name = "Win95WindowsExplorer";
             this.Size = new System.Drawing.Size(704, 517);
             this.Load += new System.EventHandler(this.WinClassicWindowsExplorer_Load);
             this.program.ResumeLayout(false);
@@ -568,9 +552,7 @@
         internal System.Windows.Forms.ToolStripMenuItem CutCtrlXToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem CopyCtrlCToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem PasteToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem PasteShortcutToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem SellectAllCtrlAToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem InvertSelectionToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem ViewToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem ToolbarToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem StatusBarToolStripMenuItem;
