@@ -9,11 +9,9 @@ using TimeHACK.Engine.Template;
 using TimeHACK.Engine.Template.Taskbars;
 using TimeHACK.OS.Win95.Win95Apps;
 using TimeHACK.OS.Win95.Win95Apps.Story;
-
+using static TimeHACK.Engine.SaveSystem;
 namespace TimeHACK.OS.Win98
 {
-    
-   
     public partial class Windows98 : Form
     {
         private SoundPlayer startsound;
@@ -22,6 +20,7 @@ namespace TimeHACK.OS.Win98
         public List<WinClassic> nonimportantapps = new List<WinClassic>();
         public WinClassic webchat;
         public WinClassic ie;
+
         public TaskBarController tb = new TaskBarController();
 
         public int currentappcount = 0;
@@ -45,6 +44,8 @@ namespace TimeHACK.OS.Win98
             DocumentsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             SettingsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             FindToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+            BackgroundImage = currentTheme.defaultWallpaper;
             foreach (ToolStripMenuItem item in startmenuitems.Items)
             {
                 item.MouseEnter += new EventHandler(MenuItem_MouseEnter);
@@ -55,7 +56,6 @@ namespace TimeHACK.OS.Win98
                 item.MouseEnter += new EventHandler(MenuItem_MouseEnter);
                 item.MouseLeave += new EventHandler(MenuItem_MouseLeave);
             }
-            desktopImages.Images[0] = Properties.Resources.Win98Computer;
         }
 
         private void MenuItem_MouseEnter(object sender, EventArgs e)
@@ -71,15 +71,18 @@ namespace TimeHACK.OS.Win98
         //  When New Game is clicked in TitleScreen.cs
         private void Desktop_Load(object sender, EventArgs e)
         {
+            UpgradeFileSystem("95", "98");
+
+            if (currentTheme.defaultWallpaper != null) desktopicons.BackgroundImage = new Bitmap(currentTheme.defaultWallpaper, Width, Height);
             //Start Menu Color - Commented until it works reliably
             //startmenuitems.Renderer = new MyRenderer();
             //ProgramsToolStripMenuItem.DropDown.Renderer = new MyRenderer();
 
             // Make Font Mandatory
             fontLoad();
-            
+
             // Play Windows 95 Start Sound
-            Stream audio = Properties.Resources.Win98Start;
+            Stream audio = currentTheme.startSound;
             startsound = new SoundPlayer(audio);
             startsound.Play();
 
@@ -106,6 +109,7 @@ namespace TimeHACK.OS.Win98
 
             // Bring to this the front
             this.BringToFront();
+
         }
 
         private void fontLoad()
@@ -135,7 +139,8 @@ namespace TimeHACK.OS.Win98
         // Shutdown button
         private void ShutdownToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Program.ShutdownApplication(Properties.Resources.Win98Stop);
+            SaveGame();
+            Program.ShutdownApplication(currentTheme.stopSound);
         }
 
         #endregion //Region
@@ -208,12 +213,12 @@ namespace TimeHACK.OS.Win98
 
         private void installerTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Win95Installer openinstaller = new Win95Installer();
-            //WinClassic app = wm.StartWin95(openinstaller, "Installer", null, false, true);
+            Win95Installer openinstaller = new Win95Installer("Testing");
+            WinClassic app = wm.StartWin95(openinstaller, "Installer", null, false, true);
 
-            //AddTaskBarItem(app, app.Tag.ToString(), "Installer", null);
+            AddTaskBarItem(app, app.Tag.ToString(), "Installer", null);
 
-            //app.BringToFront();
+            app.BringToFront();
             startmenu.Hide();
         }
 
@@ -248,11 +253,11 @@ namespace TimeHACK.OS.Win98
                     }
                     else if (objListViewItem.Text == "Web Chat Setup")
                     {
-                        //Win95Installer inst = new Win95Installer();
-                        //inst.installname.Text = "Web Chat 1998";
-                        //WinClassic app = wm.StartWin95(inst, "Web Chat Setup", null, true, true);
-                        //AddTaskBarItem(app, app.Tag.ToString(), "Web Chat Setup", null);
-                        //app.BringToFront();
+                        Win95Installer inst = new Win95Installer("Web Chat 1998");
+                        inst.InstallCompleted += (sendr, args) => WebChatToolStripMenuItem.Visible = true;
+                        WinClassic app = wm.StartWin95(inst, "Web Chat Setup", null, true, true);
+                        AddTaskBarItem(app, app.Tag.ToString(), "Web Chat Setup", null);
+                        app.BringToFront();
                         startmenu.Hide();
                     }
                 }
@@ -326,24 +331,22 @@ namespace TimeHACK.OS.Win98
 
         private void AddressBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            WinClassicAddressBook ab = new WinClassicAddressBook();
-            WinClassic app = wm.StartWin95(ab, "Address Book", Properties.Resources.WinClassicAddressBook, true, true);
-            AddTaskBarItem(app, app.Tag.ToString(), "Address Book", Properties.Resources.WinClassicAddressBook);
 
-            nonimportantapps.Add(app);
-            nonimportantapps[nonimportantapps.Count - 1].BringToFront();
-            nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
+            WinClassic app = wm.StartWin95(new WinClassicAddressBook(), "Address Book", Properties.Resources.WinClassicAddressBook, true, true);
+            Program.AddTaskbarItem(app, app.Tag.ToString(), "Address Book", Properties.Resources.WinClassicAddressBook);
+
+            Program.nonimportantapps.Add(app);
+            Program.nonimportantapps[Program.nonimportantapps.Count - 1].BringToFront();
+            Program.nonimportantapps[Program.nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(Program.NonImportantApp_Closing);
 
             app.BringToFront();
-            startmenu.Hide();
         }
 
         private void WindowsExplorerToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             FileDialogBoxManager.IsInOpenDialog = false;
             FileDialogBoxManager.IsInSaveDialog = false;
-            WinClassicWindowsExplorer we = new WinClassicWindowsExplorer();
-            WinClassic app = wm.StartWin95(we, "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
+            WinClassic app = wm.StartWin95(new WinClassicWindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
             AddTaskBarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
 
             nonimportantapps.Add(app);
@@ -361,13 +364,6 @@ namespace TimeHACK.OS.Win98
 
         private void temp_for_std(object sender, EventArgs e)
         {
-            System.Threading.Thread thread = new System.Threading.Thread(StartSurviveTheDay);
-
-            thread.Start();
-        }
-
-        void StartSurviveTheDay()
-        {
             Win2K.Win2KApps.SurviveTheDay std = new Win2K.Win2KApps.SurviveTheDay();
             WinClassic app = wm.StartWin95(std, "Survive The Day", null, false, false);
             AddTaskBarItem(app, app.Tag.ToString(), "Survive The Day", null);
@@ -380,12 +376,60 @@ namespace TimeHACK.OS.Win98
             startmenu.Hide();
         }
 
-        private void MSDOSPromptToolStripMenuItem1_Click (object sender, EventArgs e)
+        private void MSDOSPromptToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             WinClassicTerminal msdos = new WinClassicTerminal(false);
             WinClassic app = wm.StartWin95(msdos, "MS-DOS Prompt", Properties.Resources.MS_DOS, true, true, false);
 
             AddTaskBarItem(app, app.Tag.ToString(), "MS-DOS Prompt", Properties.Resources.MS_DOS);
+            app.BringToFront();
+            startmenu.Hide();
+        }
+
+        private void PropertiesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            WinClassicThemePanel theme = new WinClassicThemePanel();
+            WinClassic app = wm.StartWin95(theme, "Themes", null, false, true, false);
+
+            AddTaskBarItem(app, app.Tag.ToString(), "Themes", null);
+            app.BringToFront();
+            startmenu.Hide();
+        }
+
+        private void TimeDistorterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //distort = new TimeHACKWinClassicTimeDistorter("1998", "1999", 150, Hack2.StartObjective);
+            //WinClassic app = wm.StartWin95(distort, "Time Distorter", null, false, true);
+            //AddTaskBarItem(app, app.Tag.ToString(), "Time Distorter", null);
+            //app.BringToFront();
+            //startmenu.Hide();
+        }
+
+        private void FTPClientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WinClassic app = wm.StartWin95(new WinClassicFTPClient(), "FTP Client", null, true, true);
+
+            AddTaskBarItem(app, app.Tag.ToString(), "FTP Client", null);
+            app.BringToFront();
+            startmenu.Hide();
+        }
+
+        private void iE4TestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WinClassic app = wm.StartWin95(new TempIE4(), "IE4", null, true, true);
+            app.BringToFront();
+            startmenu.Hide();
+        }
+
+        private void CalculatorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WinClassic app = wm.StartWin95(new WinClassicCalculator(), "Calculator", Properties.Resources.WinClassicCalc, false, false);
+            AddTaskBarItem(app, app.Tag.ToString(), "Calculator", Properties.Resources.WinClassicCalc);
+
+            nonimportantapps.Add(app);
+            nonimportantapps[nonimportantapps.Count - 1].BringToFront();
+            nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
+
             app.BringToFront();
             startmenu.Hide();
         }

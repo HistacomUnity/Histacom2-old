@@ -111,7 +111,6 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 ActivateSaveFileDialog(".txt");
                 string selectedPath = Program.OpenFileExplorerAsDialogAndReturnGivenPath();
 
-                MessageBox.Show(selectedPath);
                 if (selectedPath != "")
                 {
                     File.WriteAllText(selectedPath, mainText.Text);

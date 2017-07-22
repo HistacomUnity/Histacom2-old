@@ -121,9 +121,12 @@ namespace TimeHACK.OS.Win95
                 nonimportantapps[nonimportantapps.Count - 1].BringToFront();
                 nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
 
+                
+
                 app.BringToFront();
                 
             }
+            
         }
 
         private void fontLoad()
@@ -354,23 +357,14 @@ namespace TimeHACK.OS.Win95
 
         private void AddressBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            WinClassicAddressBook ab = new WinClassicAddressBook();
-            WinClassic app = wm.StartWin95(ab, "Address Book", Properties.Resources.WinClassicAddressBook, true, true);
-            AddTaskBarItem(app, app.Tag.ToString(), "Address Book", Properties.Resources.WinClassicAddressBook);
 
-            nonimportantapps.Add(app);
-            nonimportantapps[nonimportantapps.Count - 1].BringToFront();
-            nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
-
-            app.BringToFront();
-            startmenu.Hide();
         }
 
         private void WindowsExplorerToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             FileDialogBoxManager.IsInOpenDialog = false;
             FileDialogBoxManager.IsInSaveDialog = false;
-            WinClassicWindowsExplorer we = new WinClassicWindowsExplorer();
+            Win95WindowsExplorer we = new Win95WindowsExplorer();
             WinClassic app = wm.StartWin95(we, "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
             AddTaskBarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
 

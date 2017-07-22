@@ -13,6 +13,7 @@ using TimeHACK.OS.Win95.Win95Apps;
 using TimeHACK.Engine;
 using TimeHACK.Engine.Template;
 using System.Drawing;
+using TimeHACK.SaveDialogs;
 
 namespace TimeHACK
 {
@@ -58,15 +59,21 @@ namespace TimeHACK
 
             //MySaveData = (TimeHACK.Engine.GameSave.SaveData)JsonConvert.DeserializeObject(TheJSON, MySaveData.GetType());
             //MessageBox.Show(MySaveData.OS.ToString());
+
+            Engine.SaveSystem.troubleshooter = new SaveFileTroubleShooter();
             Application.EnableVisualStyles();           
             Application.Run(title);
         }
 
         public static string OpenFileExplorerAsDialogAndReturnGivenPath()
         {
-            WinClassicWindowsExplorer we = new WinClassicWindowsExplorer();
-
-            WinClassic app = wm.StartWin95(we, "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true, true);
+            if (SaveSystem.CurrentSave.CurrentOS == "95")
+            {
+                WinClassic app = wm.StartWin95(new Win95WindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true, true);
+            } else {
+                WinClassic app = wm.StartWin95(new WinClassicWindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true, true);
+            }
+            
             try
             {
                 return WindowsExplorerReturnPath;
@@ -90,6 +97,7 @@ namespace TimeHACK
         public static void AddTaskbarItem(Form Application, string ApplicationID, string ApplicationName, Image ApplicationIcon)
         {
             TitleScreen.frm95.AddTaskBarItem(Application, ApplicationID, ApplicationName, ApplicationIcon);
+            TitleScreen.frm98.AddTaskBarItem(Application, ApplicationID, ApplicationName, ApplicationIcon);
         }
 
         public static void NonImportantApp_Closing(object sender, FormClosingEventArgs e)

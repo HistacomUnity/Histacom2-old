@@ -50,7 +50,7 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -206,11 +206,11 @@
     <Compile Include="OS\Win95\Win95Apps\WinClassicWelcome.Designer.cs">
       <DependentUpon>WinClassicWelcome.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicWindowsExplorer.cs">
+    <Compile Include="OS\Win95\Win95Apps\Win95WindowsExplorer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicWindowsExplorer.Designer.cs">
-      <DependentUpon>WinClassicWindowsExplorer.cs</DependentUpon>
+    <Compile Include="OS\Win95\Win95Apps\Win95WindowsExplorer.Designer.cs">
+      <DependentUpon>Win95WindowsExplorer.cs</DependentUpon>
     </Compile>
     <Compile Include="OS\Win95\Win95SaveAs.cs">
       <SubType>UserControl</SubType>
@@ -229,6 +229,12 @@
     </Compile>
     <Compile Include="OS\Win98\Win98.Designer.cs">
       <DependentUpon>Win98.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win98\Win98Apps\WinClassicWindowsExplorer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win98\Win98Apps\WinClassicWindowsExplorer.Designer.cs">
+      <DependentUpon>WinClassicWindowsExplorer.cs</DependentUpon>
     </Compile>
     <Compile Include="SaveDialogs\LoadGameDialog.cs">
       <SubType>Form</SubType>
@@ -254,10 +260,10 @@
     <Compile Include="OS\Win95\Win95.Designer.cs">
       <DependentUpon>Win95.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\AddressBook\FRMWinClassicAddressBookNewContact.cs">
+    <Compile Include="OS\Win98\Win98Apps\AddressBook\FRMWinClassicAddressBookNewContact.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\AddressBook\FRMWinClassicAddressBookNewContact.Designer.cs">
+    <Compile Include="OS\Win98\Win98Apps\AddressBook\FRMWinClassicAddressBookNewContact.Designer.cs">
       <DependentUpon>FRMWinClassicAddressBookNewContact.cs</DependentUpon>
     </Compile>
     <Compile Include="OS\Win95\Win95Apps\WebChat1998.cs">
@@ -266,16 +272,16 @@
     <Compile Include="OS\Win95\Win95Apps\WebChat1998.Designer.cs">
       <DependentUpon>WebChat1998.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\AddressBook\FRMWinClassicAddressBookNewFolder.cs">
+    <Compile Include="OS\Win98\Win98Apps\AddressBook\FRMWinClassicAddressBookNewFolder.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\AddressBook\FRMWinClassicAddressBookNewFolder.Designer.cs">
+    <Compile Include="OS\Win98\Win98Apps\AddressBook\FRMWinClassicAddressBookNewFolder.Designer.cs">
       <DependentUpon>FRMWinClassicAddressBookNewFolder.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\AddressBook\WinClassicAddressBook.cs">
+    <Compile Include="OS\Win98\Win98Apps\AddressBook\WinClassicAddressBook.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\AddressBook\WinClassicAddressBook.Designer.cs">
+    <Compile Include="OS\Win98\Win98Apps\AddressBook\WinClassicAddressBook.Designer.cs">
       <DependentUpon>WinClassicAddressBook.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalPrograms\WinClassicDownloader.cs">
@@ -373,8 +379,8 @@
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicWelcome.resx">
       <DependentUpon>WinClassicWelcome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicWindowsExplorer.resx">
-      <DependentUpon>WinClassicWindowsExplorer.cs</DependentUpon>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\Win95WindowsExplorer.resx">
+      <DependentUpon>Win95WindowsExplorer.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95SaveAs.resx">
@@ -382,6 +388,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win98\Win98.resx">
       <DependentUpon>Win98.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win98\Win98Apps\WinClassicWindowsExplorer.resx">
+      <DependentUpon>WinClassicWindowsExplorer.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="SaveDialogs\LoadGameDialog.resx">
@@ -400,7 +410,7 @@
       <DependentUpon>Win95.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\AddressBook\FRMWinClassicAddressBookNewContact.resx">
+    <EmbeddedResource Include="OS\Win98\Win98Apps\AddressBook\FRMWinClassicAddressBookNewContact.resx">
       <DependentUpon>FRMWinClassicAddressBookNewContact.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WebChat1998.resx">
@@ -408,10 +418,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>WebChat19981.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\AddressBook\FRMWinClassicAddressBookNewFolder.resx">
+    <EmbeddedResource Include="OS\Win98\Win98Apps\AddressBook\FRMWinClassicAddressBookNewFolder.resx">
       <DependentUpon>FRMWinClassicAddressBookNewFolder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\AddressBook\WinClassicAddressBook.resx">
+    <EmbeddedResource Include="OS\Win98\Win98Apps\AddressBook\WinClassicAddressBook.resx">
       <DependentUpon>WinClassicAddressBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GlobalPrograms\WinClassicDownloader.resx">
@@ -467,6 +477,8 @@
   <ItemGroup>
     <Content Include="Icon128x.ico" />
     <Content Include="Resources\12padams_EULA.txt" />
+    <None Include="Resources\XCross.png" />
+    <None Include="Resources\XCross_highlighted.png" />
     <None Include="Resources\DCTheme_BG.JPG" />
     <Content Include="Resources\Icon128x.ico" />
     <None Include="Resources\ICTheme_BG.jpg" />
@@ -530,6 +542,9 @@
     <None Include="Resources\win95_splitter.png" />
     <None Include="Resources\win95_welcome.png" />
     <None Include="Resources\win95_welcometip.png" />
+    <None Include="Resources\WinClassicGENERALApplicationToolBoxBackground.png" />
+    <None Include="Resources\Win2000WebBackground.png" />
+    <None Include="Resources\Win98WebBackground.png" />
     <Content Include="Resources\WinClassic\16Color.png" />
     <Content Include="Resources\WinClassic\256Color.png" />
     <None Include="Resources\WinClassic\tada.wav" />
