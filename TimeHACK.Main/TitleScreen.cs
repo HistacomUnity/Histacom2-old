@@ -328,5 +328,10 @@ namespace TimeHACK
                 updateText.Stop();
             }
         }
+
+        private void achievementsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

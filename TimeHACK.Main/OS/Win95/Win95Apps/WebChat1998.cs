@@ -200,6 +200,12 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     case "nomouse":
                         Cursor.Hide();
                         break;
+                    case "type":
+                        history.ReadOnly = false;
+                        break;
+                    case "notyper":
+                        history.ReadOnly = true;
+                        break;
                     default:
                         if (msgsound) receive.Play();
                         break;
