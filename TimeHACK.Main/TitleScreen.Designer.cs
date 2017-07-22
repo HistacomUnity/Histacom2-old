@@ -46,6 +46,7 @@
             this.ProgramsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.achievementsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ShutdownToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ossidestartmenu = new System.Windows.Forms.Panel();
             this.osimage = new System.Windows.Forms.PictureBox();
@@ -84,7 +85,7 @@
             this.program.Dock = System.Windows.Forms.DockStyle.Fill;
             this.program.Location = new System.Drawing.Point(0, 0);
             this.program.Name = "program";
-            this.program.Size = new System.Drawing.Size(800, 400);
+            this.program.Size = new System.Drawing.Size(791, 424);
             this.program.TabIndex = 11;
             // 
             // programContent
@@ -96,7 +97,7 @@
             this.programContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.programContent.Location = new System.Drawing.Point(0, 0);
             this.programContent.Name = "programContent";
-            this.programContent.Size = new System.Drawing.Size(800, 400);
+            this.programContent.Size = new System.Drawing.Size(791, 424);
             this.programContent.TabIndex = 9;
             // 
             // panel2
@@ -109,9 +110,9 @@
             this.panel2.Controls.Add(this.gameversion);
             this.panel2.Controls.Add(this.startbutton);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 372);
+            this.panel2.Location = new System.Drawing.Point(0, 396);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 28);
+            this.panel2.Size = new System.Drawing.Size(791, 28);
             this.panel2.TabIndex = 10;
             // 
             // VM_Height
@@ -209,9 +210,9 @@
             this.startmenu.BackColor = System.Drawing.Color.Silver;
             this.startmenu.Controls.Add(this.startmenuitems);
             this.startmenu.Controls.Add(this.ossidestartmenu);
-            this.startmenu.Location = new System.Drawing.Point(0, 188);
+            this.startmenu.Location = new System.Drawing.Point(0, 176);
             this.startmenu.Name = "startmenu";
-            this.startmenu.Size = new System.Drawing.Size(165, 187);
+            this.startmenu.Size = new System.Drawing.Size(165, 223);
             this.startmenu.TabIndex = 11;
             // 
             // startmenuitems
@@ -222,6 +223,7 @@
             this.DocumentsToolStripMenuItem,
             this.ProgramsToolStripMenuItem,
             this.SettingsToolStripMenuItem,
+            this.achievementsToolStripMenuItem,
             this.HelpToolStripMenuItem,
             this.ShutdownToolStripMenuItem});
             this.startmenuitems.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
@@ -230,7 +232,7 @@
             this.startmenuitems.Name = "startmenuitems";
             this.startmenuitems.Padding = new System.Windows.Forms.Padding(4, 2, 0, 0);
             this.startmenuitems.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.startmenuitems.Size = new System.Drawing.Size(152, 184);
+            this.startmenuitems.Size = new System.Drawing.Size(143, 239);
             this.startmenuitems.TabIndex = 0;
             this.startmenuitems.Text = "StartMenu";
             // 
@@ -243,7 +245,7 @@
             this.DocumentsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.DocumentsToolStripMenuItem.Name = "DocumentsToolStripMenuItem";
             this.DocumentsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.DocumentsToolStripMenuItem.Size = new System.Drawing.Size(147, 36);
+            this.DocumentsToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
             this.DocumentsToolStripMenuItem.Text = "New Game";
             this.DocumentsToolStripMenuItem.Click += new System.EventHandler(this.NewGame_Click);
             // 
@@ -257,7 +259,7 @@
             this.ProgramsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ProgramsToolStripMenuItem.Name = "ProgramsToolStripMenuItem";
             this.ProgramsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.ProgramsToolStripMenuItem.Size = new System.Drawing.Size(147, 36);
+            this.ProgramsToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
             this.ProgramsToolStripMenuItem.Text = "Load Game";
             this.ProgramsToolStripMenuItem.Click += new System.EventHandler(this.LoadGame_Click);
             // 
@@ -269,7 +271,7 @@
             this.SettingsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem";
             this.SettingsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.SettingsToolStripMenuItem.Size = new System.Drawing.Size(147, 36);
+            this.SettingsToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
             this.SettingsToolStripMenuItem.Text = "Settings";
             // 
             // HelpToolStripMenuItem
@@ -281,8 +283,18 @@
             this.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem";
             this.HelpToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
             this.HelpToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.HelpToolStripMenuItem.Size = new System.Drawing.Size(147, 36);
+            this.HelpToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
             this.HelpToolStripMenuItem.Text = "Help";
+            // 
+            // achievementsToolStripMenuItem
+            // 
+            this.achievementsToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicEndings;
+            this.achievementsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.achievementsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.achievementsToolStripMenuItem.Name = "achievementsToolStripMenuItem";
+            this.achievementsToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
+            this.achievementsToolStripMenuItem.Text = "Achievements";
+            this.achievementsToolStripMenuItem.Click += new System.EventHandler(this.achievementsToolStripMenuItem_Click);
             // 
             // ShutdownToolStripMenuItem
             // 
@@ -292,7 +304,7 @@
             this.ShutdownToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ShutdownToolStripMenuItem.Name = "ShutdownToolStripMenuItem";
             this.ShutdownToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.ShutdownToolStripMenuItem.Size = new System.Drawing.Size(147, 36);
+            this.ShutdownToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
             this.ShutdownToolStripMenuItem.Text = "Shut Down...";
             this.ShutdownToolStripMenuItem.Click += new System.EventHandler(this.Exit_Click);
             // 
@@ -301,17 +313,17 @@
             this.ossidestartmenu.Controls.Add(this.osimage);
             this.ossidestartmenu.Location = new System.Drawing.Point(2, 2);
             this.ossidestartmenu.Name = "ossidestartmenu";
-            this.ossidestartmenu.Size = new System.Drawing.Size(21, 184);
+            this.ossidestartmenu.Size = new System.Drawing.Size(21, 216);
             this.ossidestartmenu.TabIndex = 4;
             // 
             // osimage
             // 
             this.osimage.BackColor = System.Drawing.Color.Gray;
             this.osimage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.osimage.Image = global::TimeHACK.Properties.Resources.LauncherSideBar;
+            this.osimage.Image = ((System.Drawing.Image)(resources.GetObject("osimage.Image")));
             this.osimage.Location = new System.Drawing.Point(0, 0);
             this.osimage.Name = "osimage";
-            this.osimage.Size = new System.Drawing.Size(21, 184);
+            this.osimage.Size = new System.Drawing.Size(21, 216);
             this.osimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.osimage.TabIndex = 0;
             this.osimage.TabStop = false;
@@ -331,7 +343,7 @@
             // 
             this.toprightcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.toprightcorner.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("toprightcorner.BackgroundImage")));
-            this.toprightcorner.Location = new System.Drawing.Point(796, 0);
+            this.toprightcorner.Location = new System.Drawing.Point(787, 0);
             this.toprightcorner.Name = "toprightcorner";
             this.toprightcorner.Size = new System.Drawing.Size(4, 4);
             this.toprightcorner.TabIndex = 6;
@@ -341,7 +353,7 @@
             this.bottomrightcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bottomrightcorner.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bottomrightcorner.BackgroundImage")));
             this.bottomrightcorner.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
-            this.bottomrightcorner.Location = new System.Drawing.Point(796, 396);
+            this.bottomrightcorner.Location = new System.Drawing.Point(787, 420);
             this.bottomrightcorner.Name = "bottomrightcorner";
             this.bottomrightcorner.Size = new System.Drawing.Size(4, 4);
             this.bottomrightcorner.TabIndex = 4;
@@ -350,7 +362,7 @@
             // 
             this.bottomleftcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.bottomleftcorner.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bottomleftcorner.BackgroundImage")));
-            this.bottomleftcorner.Location = new System.Drawing.Point(0, 396);
+            this.bottomleftcorner.Location = new System.Drawing.Point(0, 420);
             this.bottomleftcorner.Name = "bottomleftcorner";
             this.bottomleftcorner.Size = new System.Drawing.Size(4, 4);
             this.bottomleftcorner.TabIndex = 2;
@@ -373,7 +385,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(800, 400);
+            this.ClientSize = new System.Drawing.Size(791, 424);
             this.Controls.Add(this.program);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TitleScreen";
@@ -425,5 +437,6 @@
         internal System.Windows.Forms.PictureBox startbutton;
         private System.Windows.Forms.Timer updateText;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ToolStripMenuItem achievementsToolStripMenuItem;
     }
 }

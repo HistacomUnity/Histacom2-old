@@ -1024,6 +1024,26 @@ namespace TimeHACK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap WinClassicEndings {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicEndings", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WinClassicEndingsLocked {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicEndingsLocked", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WinClassicFileExplorer {
             get {
                 object obj = ResourceManager.GetObject("WinClassicFileExplorer", resourceCulture);

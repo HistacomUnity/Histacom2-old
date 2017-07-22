@@ -120,6 +120,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AchievementScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AchievementScreen.Designer.cs">
+      <DependentUpon>AchievementScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\BIOS\BIOS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -321,6 +327,9 @@
     <Compile Include="TitleScreen.Designer.cs">
       <DependentUpon>TitleScreen.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AchievementScreen.resx">
+      <DependentUpon>AchievementScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OS\BIOS\BIOS.resx">
       <DependentUpon>BIOS.cs</DependentUpon>
     </EmbeddedResource>
@@ -530,6 +539,7 @@
     <None Include="Resources\WinClassic\AIMbuddyjoin.wav" />
     <None Include="Resources\WinClassic\AIMbuddyleave.wav" />
     <None Include="Resources\WinClassic\AIMfile.wav" />
+    <None Include="Resources\WinClassic\LauncherSideBar.png" />
     <Content Include="Resources\WinClassic\TrueColor.png" />
     <None Include="Resources\WinClassic\Win95Info.png" />
     <None Include="Resources\WinClassic\Win95Error.png" />
@@ -558,6 +568,8 @@
     <None Include="Resources\WinClassic\WinClassicDisplayDummy.png" />
     <None Include="Resources\WinClassic\WinClassicDisplayExample.png" />
     <Content Include="Resources\WinClassic\WinClassicDocuments.png" />
+    <None Include="Resources\WinClassic\WinClassicEndings.png" />
+    <None Include="Resources\WinClassic\WinClassicEndingsLocked.png" />
     <Content Include="Resources\WinClassic\WinClassicFind.png" />
     <Content Include="Resources\WinClassic\WinClassicFolder.png" />
     <None Include="Resources\WinClassic\WinClassicGENERALApplicationToolbarBackground.png" />
