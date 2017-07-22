@@ -30,6 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WinClassicWindowsExplorer));
             this.program = new System.Windows.Forms.Panel();
+            this.mainView = new System.Windows.Forms.ListView();
+            this.toprightcorner = new System.Windows.Forms.Panel();
+            this.bottomrightcorner = new System.Windows.Forms.Panel();
+            this.bottomleftcorner = new System.Windows.Forms.Panel();
+            this.topleftcorner = new System.Windows.Forms.Panel();
+            this.pnlSave = new System.Windows.Forms.Panel();
+            this.Button1 = new System.Windows.Forms.Button();
+            this.Label1 = new System.Windows.Forms.Label();
+            this.txtSave = new System.Windows.Forms.TextBox();
+            this.pnlInfo = new System.Windows.Forms.Panel();
+            this.pnlFolders = new System.Windows.Forms.Panel();
+            this.pnlFoldersTop = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnFolderClose = new System.Windows.Forms.PictureBox();
+            this.diskView = new System.Windows.Forms.TreeView();
             this.MenuStrip1 = new System.Windows.Forms.MenuStrip();
             this.FileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CreateShortcutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,28 +87,13 @@
             this.HelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.AboutWindows95ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mainView = new System.Windows.Forms.ListView();
-            this.toprightcorner = new System.Windows.Forms.Panel();
-            this.bottomrightcorner = new System.Windows.Forms.Panel();
-            this.bottomleftcorner = new System.Windows.Forms.Panel();
-            this.topleftcorner = new System.Windows.Forms.Panel();
-            this.pnlSave = new System.Windows.Forms.Panel();
-            this.Button1 = new System.Windows.Forms.Button();
-            this.Label1 = new System.Windows.Forms.Label();
-            this.txtSave = new System.Windows.Forms.TextBox();
-            this.pnlInfo = new System.Windows.Forms.Panel();
-            this.pnlFolders = new System.Windows.Forms.Panel();
-            this.pnlFoldersTop = new System.Windows.Forms.Panel();
-            this.diskView = new System.Windows.Forms.TreeView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.program.SuspendLayout();
-            this.MenuStrip1.SuspendLayout();
             this.pnlSave.SuspendLayout();
             this.pnlInfo.SuspendLayout();
             this.pnlFolders.SuspendLayout();
             this.pnlFoldersTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFolderClose)).BeginInit();
+            this.MenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // program
@@ -113,9 +113,156 @@
             this.program.Size = new System.Drawing.Size(704, 517);
             this.program.TabIndex = 13;
             // 
+            // mainView
+            // 
+            this.mainView.Dock = System.Windows.Forms.DockStyle.Right;
+            this.mainView.Location = new System.Drawing.Point(403, 24);
+            this.mainView.Name = "mainView";
+            this.mainView.Size = new System.Drawing.Size(301, 458);
+            this.mainView.TabIndex = 10;
+            this.mainView.UseCompatibleStateImageBehavior = false;
+            this.mainView.View = System.Windows.Forms.View.List;
+            this.mainView.DoubleClick += new System.EventHandler(this.mainView_DoubleClick);
+            // 
+            // toprightcorner
+            // 
+            this.toprightcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.toprightcorner.Location = new System.Drawing.Point(700, 0);
+            this.toprightcorner.Name = "toprightcorner";
+            this.toprightcorner.Size = new System.Drawing.Size(4, 4);
+            this.toprightcorner.TabIndex = 6;
+            // 
+            // bottomrightcorner
+            // 
+            this.bottomrightcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bottomrightcorner.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.bottomrightcorner.Location = new System.Drawing.Point(700, 513);
+            this.bottomrightcorner.Name = "bottomrightcorner";
+            this.bottomrightcorner.Size = new System.Drawing.Size(4, 4);
+            this.bottomrightcorner.TabIndex = 4;
+            // 
+            // bottomleftcorner
+            // 
+            this.bottomleftcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.bottomleftcorner.Location = new System.Drawing.Point(0, 513);
+            this.bottomleftcorner.Name = "bottomleftcorner";
+            this.bottomleftcorner.Size = new System.Drawing.Size(4, 4);
+            this.bottomleftcorner.TabIndex = 2;
+            // 
+            // topleftcorner
+            // 
+            this.topleftcorner.Location = new System.Drawing.Point(0, 0);
+            this.topleftcorner.Name = "topleftcorner";
+            this.topleftcorner.Size = new System.Drawing.Size(4, 4);
+            this.topleftcorner.TabIndex = 1;
+            // 
+            // pnlSave
+            // 
+            this.pnlSave.Controls.Add(this.Button1);
+            this.pnlSave.Controls.Add(this.Label1);
+            this.pnlSave.Controls.Add(this.txtSave);
+            this.pnlSave.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlSave.Location = new System.Drawing.Point(0, 482);
+            this.pnlSave.Name = "pnlSave";
+            this.pnlSave.Size = new System.Drawing.Size(704, 35);
+            this.pnlSave.TabIndex = 18;
+            this.pnlSave.Visible = false;
+            // 
+            // Button1
+            // 
+            this.Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button1.Location = new System.Drawing.Point(626, 3);
+            this.Button1.Name = "Button1";
+            this.Button1.Size = new System.Drawing.Size(75, 23);
+            this.Button1.TabIndex = 17;
+            this.Button1.Text = "Save";
+            this.Button1.UseVisualStyleBackColor = true;
+            this.Button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // Label1
+            // 
+            this.Label1.AutoSize = true;
+            this.Label1.Location = new System.Drawing.Point(3, 6);
+            this.Label1.Name = "Label1";
+            this.Label1.Size = new System.Drawing.Size(57, 13);
+            this.Label1.TabIndex = 16;
+            this.Label1.Text = "File Name:";
+            // 
+            // txtSave
+            // 
+            this.txtSave.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSave.Location = new System.Drawing.Point(60, 3);
+            this.txtSave.Name = "txtSave";
+            this.txtSave.Size = new System.Drawing.Size(560, 20);
+            this.txtSave.TabIndex = 15;
+            // 
+            // pnlInfo
+            // 
+            this.pnlInfo.Controls.Add(this.pnlFolders);
+            this.pnlInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlInfo.Location = new System.Drawing.Point(0, 24);
+            this.pnlInfo.Name = "pnlInfo";
+            this.pnlInfo.Size = new System.Drawing.Size(704, 493);
+            this.pnlInfo.TabIndex = 19;
+            // 
+            // pnlFolders
+            // 
+            this.pnlFolders.Controls.Add(this.pnlFoldersTop);
+            this.pnlFolders.Controls.Add(this.diskView);
+            this.pnlFolders.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlFolders.Location = new System.Drawing.Point(0, 0);
+            this.pnlFolders.Name = "pnlFolders";
+            this.pnlFolders.Size = new System.Drawing.Size(168, 493);
+            this.pnlFolders.TabIndex = 0;
+            // 
+            // pnlFoldersTop
+            // 
+            this.pnlFoldersTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
+            this.pnlFoldersTop.Controls.Add(this.label2);
+            this.pnlFoldersTop.Controls.Add(this.btnFolderClose);
+            this.pnlFoldersTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlFoldersTop.Location = new System.Drawing.Point(0, 0);
+            this.pnlFoldersTop.Name = "pnlFoldersTop";
+            this.pnlFoldersTop.Size = new System.Drawing.Size(168, 22);
+            this.pnlFoldersTop.TabIndex = 20;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Folders";
+            // 
+            // btnFolderClose
+            // 
+            this.btnFolderClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
+            this.btnFolderClose.Image = ((System.Drawing.Image)(resources.GetObject("btnFolderClose.Image")));
+            this.btnFolderClose.Location = new System.Drawing.Point(144, 3);
+            this.btnFolderClose.Name = "btnFolderClose";
+            this.btnFolderClose.Size = new System.Drawing.Size(21, 16);
+            this.btnFolderClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnFolderClose.TabIndex = 20;
+            this.btnFolderClose.TabStop = false;
+            this.btnFolderClose.Click += new System.EventHandler(this.btnFolderClose_Click);
+            this.btnFolderClose.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
+            this.btnFolderClose.MouseLeave += new System.EventHandler(this.btnFolderClose_MouseLeave);
+            // 
+            // diskView
+            // 
+            this.diskView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.diskView.Location = new System.Drawing.Point(0, 0);
+            this.diskView.Name = "diskView";
+            this.diskView.Size = new System.Drawing.Size(168, 493);
+            this.diskView.TabIndex = 13;
+            this.diskView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.diskView_AfterSelect);
+            // 
             // MenuStrip1
             // 
-            this.MenuStrip1.BackColor = System.Drawing.Color.Silver;
+            this.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
             this.MenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FileToolStripMenuItem,
             this.EditToolStripMenuItem,
@@ -423,149 +570,6 @@
             this.AboutWindows95ToolStripMenuItem.Text = "About Windows 95";
             this.AboutWindows95ToolStripMenuItem.Click += new System.EventHandler(this.AboutWindows95ToolStripMenuItem_Click);
             // 
-            // mainView
-            // 
-            this.mainView.Dock = System.Windows.Forms.DockStyle.Right;
-            this.mainView.Location = new System.Drawing.Point(403, 24);
-            this.mainView.Name = "mainView";
-            this.mainView.Size = new System.Drawing.Size(301, 458);
-            this.mainView.TabIndex = 10;
-            this.mainView.UseCompatibleStateImageBehavior = false;
-            this.mainView.View = System.Windows.Forms.View.List;
-            this.mainView.DoubleClick += new System.EventHandler(this.mainView_DoubleClick);
-            // 
-            // toprightcorner
-            // 
-            this.toprightcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.toprightcorner.Location = new System.Drawing.Point(700, 0);
-            this.toprightcorner.Name = "toprightcorner";
-            this.toprightcorner.Size = new System.Drawing.Size(4, 4);
-            this.toprightcorner.TabIndex = 6;
-            // 
-            // bottomrightcorner
-            // 
-            this.bottomrightcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bottomrightcorner.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
-            this.bottomrightcorner.Location = new System.Drawing.Point(700, 513);
-            this.bottomrightcorner.Name = "bottomrightcorner";
-            this.bottomrightcorner.Size = new System.Drawing.Size(4, 4);
-            this.bottomrightcorner.TabIndex = 4;
-            // 
-            // bottomleftcorner
-            // 
-            this.bottomleftcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.bottomleftcorner.Location = new System.Drawing.Point(0, 513);
-            this.bottomleftcorner.Name = "bottomleftcorner";
-            this.bottomleftcorner.Size = new System.Drawing.Size(4, 4);
-            this.bottomleftcorner.TabIndex = 2;
-            // 
-            // topleftcorner
-            // 
-            this.topleftcorner.Location = new System.Drawing.Point(0, 0);
-            this.topleftcorner.Name = "topleftcorner";
-            this.topleftcorner.Size = new System.Drawing.Size(4, 4);
-            this.topleftcorner.TabIndex = 1;
-            // 
-            // pnlSave
-            // 
-            this.pnlSave.Controls.Add(this.Button1);
-            this.pnlSave.Controls.Add(this.Label1);
-            this.pnlSave.Controls.Add(this.txtSave);
-            this.pnlSave.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlSave.Location = new System.Drawing.Point(0, 482);
-            this.pnlSave.Name = "pnlSave";
-            this.pnlSave.Size = new System.Drawing.Size(704, 35);
-            this.pnlSave.TabIndex = 18;
-            this.pnlSave.Visible = false;
-            // 
-            // Button1
-            // 
-            this.Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button1.Location = new System.Drawing.Point(626, 3);
-            this.Button1.Name = "Button1";
-            this.Button1.Size = new System.Drawing.Size(75, 23);
-            this.Button1.TabIndex = 17;
-            this.Button1.Text = "Save";
-            this.Button1.UseVisualStyleBackColor = true;
-            this.Button1.Click += new System.EventHandler(this.Button1_Click);
-            // 
-            // Label1
-            // 
-            this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(3, 6);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(57, 13);
-            this.Label1.TabIndex = 16;
-            this.Label1.Text = "File Name:";
-            // 
-            // txtSave
-            // 
-            this.txtSave.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSave.Location = new System.Drawing.Point(60, 3);
-            this.txtSave.Name = "txtSave";
-            this.txtSave.Size = new System.Drawing.Size(560, 20);
-            this.txtSave.TabIndex = 15;
-            // 
-            // pnlInfo
-            // 
-            this.pnlInfo.Controls.Add(this.pnlFolders);
-            this.pnlInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlInfo.Location = new System.Drawing.Point(0, 24);
-            this.pnlInfo.Name = "pnlInfo";
-            this.pnlInfo.Size = new System.Drawing.Size(704, 493);
-            this.pnlInfo.TabIndex = 19;
-            // 
-            // pnlFolders
-            // 
-            this.pnlFolders.Controls.Add(this.pnlFoldersTop);
-            this.pnlFolders.Controls.Add(this.diskView);
-            this.pnlFolders.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlFolders.Location = new System.Drawing.Point(0, 0);
-            this.pnlFolders.Name = "pnlFolders";
-            this.pnlFolders.Size = new System.Drawing.Size(168, 493);
-            this.pnlFolders.TabIndex = 0;
-            // 
-            // pnlFoldersTop
-            // 
-            this.pnlFoldersTop.Controls.Add(this.label2);
-            this.pnlFoldersTop.Controls.Add(this.pictureBox1);
-            this.pnlFoldersTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlFoldersTop.Location = new System.Drawing.Point(0, 0);
-            this.pnlFoldersTop.Name = "pnlFoldersTop";
-            this.pnlFoldersTop.Size = new System.Drawing.Size(168, 22);
-            this.pnlFoldersTop.TabIndex = 20;
-            // 
-            // diskView
-            // 
-            this.diskView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.diskView.Location = new System.Drawing.Point(0, 0);
-            this.diskView.Name = "diskView";
-            this.diskView.Size = new System.Drawing.Size(168, 493);
-            this.diskView.TabIndex = 13;
-            this.diskView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.diskView_AfterSelect);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(144, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(21, 16);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 3);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Folders";
-            // 
             // WinClassicWindowsExplorer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -576,15 +580,15 @@
             this.Load += new System.EventHandler(this.WinClassicWindowsExplorer_Load);
             this.program.ResumeLayout(false);
             this.program.PerformLayout();
-            this.MenuStrip1.ResumeLayout(false);
-            this.MenuStrip1.PerformLayout();
             this.pnlSave.ResumeLayout(false);
             this.pnlSave.PerformLayout();
             this.pnlInfo.ResumeLayout(false);
             this.pnlFolders.ResumeLayout(false);
             this.pnlFoldersTop.ResumeLayout(false);
             this.pnlFoldersTop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFolderClose)).EndInit();
+            this.MenuStrip1.ResumeLayout(false);
+            this.MenuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -647,7 +651,7 @@
         private System.Windows.Forms.Panel pnlInfo;
         private System.Windows.Forms.Panel pnlFolders;
         private System.Windows.Forms.Panel pnlFoldersTop;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox btnFolderClose;
         private System.Windows.Forms.Label label2;
     }
 }

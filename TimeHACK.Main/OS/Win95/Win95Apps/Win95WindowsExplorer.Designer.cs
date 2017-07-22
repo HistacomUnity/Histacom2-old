@@ -127,7 +127,8 @@
             // 
             // MenuStrip1
             // 
-            this.MenuStrip1.BackColor = System.Drawing.Color.Silver;
+            this.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
+            this.MenuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.MenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FileToolStripMenuItem,
             this.EditToolStripMenuItem,

@@ -40,6 +40,23 @@ namespace TimeHACK.Engine
         }
     }
 
+    public class Default98Theme : Theme
+    {
+        public Default98Theme()
+        {
+            startSound = Properties.Resources.Win95Start;
+            stopSound = Properties.Resources.Win95Stop;
+
+            asteriskSound = Properties.Resources.CHORD;
+            critStopSound = Properties.Resources.CHORD;
+            progErrorSound = Properties.Resources.CHORD;
+            questionSound = Properties.Resources.CHORD;
+
+            defaultWallpaper = null;
+            themeName = "default98";
+        }
+    }
+
     public class DangerousCreaturesTheme: Theme
     {
         public DangerousCreaturesTheme()

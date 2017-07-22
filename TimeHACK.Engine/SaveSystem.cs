@@ -125,9 +125,7 @@ namespace TimeHACK.Engine
         }
 
         public static void NewGame()
-        {
-            //TODO: User must set a username....somehow            
-
+        {        
             var save = new Save();
             save.ExperiencedStories = new List<string>();
             if (DevMode == true)
@@ -136,6 +134,7 @@ namespace TimeHACK.Engine
                 {
                     save.CurrentOS = "98";
                     save.ThemeName = "default98";
+                    currentTheme = new Default98Theme();
                 }
                 else
                 {
@@ -257,6 +256,9 @@ namespace TimeHACK.Engine
             {
                 case "default95":
                     currentTheme = new Default95Theme();
+                    break;
+                case "default98":
+                    currentTheme = new Default98Theme();
                     break;
                 case "dangeranimals":
                     currentTheme = new DangerousCreaturesTheme();

@@ -795,5 +795,20 @@ namespace TimeHACK.OS.Win95.Win95Apps
             }
             return toReturn;
         }
+
+        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            btnFolderClose.Image = Properties.Resources.XCross_highlighted;
+        }
+
+        private void btnFolderClose_MouseLeave(object sender, EventArgs e)
+        {
+            btnFolderClose.Image = Properties.Resources.XCross;
+        }
+
+        private void btnFolderClose_Click(object sender, EventArgs e)
+        {
+            pnlFolders.Hide();
+        }
     }
 }

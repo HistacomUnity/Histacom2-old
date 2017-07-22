@@ -477,6 +477,8 @@
   <ItemGroup>
     <Content Include="Icon128x.ico" />
     <Content Include="Resources\12padams_EULA.txt" />
+    <None Include="Resources\XCross.png" />
+    <None Include="Resources\XCross_highlighted.png" />
     <None Include="Resources\DCTheme_BG.JPG" />
     <Content Include="Resources\Icon128x.ico" />
     <None Include="Resources\ICTheme_BG.jpg" />
