@@ -76,6 +76,29 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 //        diskView.Items.Add("", 0)
                 //    End If
                 //Next
+
+                // Update the WebView
+
+                if (Directory.Exists(currentDirectory))
+                {
+                    if (currentDirectory == SaveSystem.ProfileMyComputerDirectory)
+                    {
+                        pictureBox1.Image = Properties.Resources.Win95HardDiskIcon;
+                    } else if (currentDirectory == SaveSystem.ProfileFileSystemDirectory) {
+                        pictureBox1.Image = Properties.Resources.Win95Computer;
+                    } else {
+                        pictureBox1.Image = Properties.Resources.WinClassicFolder;
+                    }
+                    
+                } else {
+                    // If it is the drive give it that icon
+
+                    
+                }
+
+                string weblabel = ReadDataFile(currentDirectory, false);
+
+                txtInfoTitle.Text = weblabel ?? new FileInfo(currentDirectory).Name;
                 foreach (string str in Directory.GetDirectories(currentDirectory))
                 {
                     string label = ReadDataFile(str, false);
@@ -875,7 +898,8 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         txtInfoDescType.Text = ReturnType(fi.Extension).Split('\n')[0];
                         txtInfoDescModified.Text = fi.CreationTime.ToString();
 
-                        txtInfoDescSize.Text = $"{fi.Length} bytes.";
+                        txtInfoDescSize.Show();
+                        txtInfoDescSize.Text = $"Size: {fi.Length} bytes.";
                     }
 
                 } else if (Directory.Exists(Path.Combine(currentDirectory, mainView.FocusedItem.Text))) {
@@ -887,6 +911,8 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     txtInfoDescName.Text = mainView.FocusedItem.Text;
                     txtInfoDescType.Text = "File Folder";
                     txtInfoDescModified.Text = fi.CreationTime.ToString();
+
+                    txtInfoDescSize.Hide();
                 }
             }
         }

@@ -36,6 +36,7 @@
             this.txtInfoTitle = new System.Windows.Forms.Label();
             this.pnlInfoContent = new System.Windows.Forms.Panel();
             this.InfoDesc = new System.Windows.Forms.Panel();
+            this.txtInfoDescSize = new System.Windows.Forms.Label();
             this.txtInfoDescModified = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtInfoDescType = new System.Windows.Forms.Label();
@@ -75,7 +76,6 @@
             this.HelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.AboutWindows95ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtInfoDescSize = new System.Windows.Forms.Label();
             this.program.SuspendLayout();
             this.pnlInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -139,6 +139,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(15, 18);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             // 
@@ -179,6 +180,15 @@
             this.InfoDesc.Size = new System.Drawing.Size(199, 94);
             this.InfoDesc.TabIndex = 22;
             this.InfoDesc.Visible = false;
+            // 
+            // txtInfoDescSize
+            // 
+            this.txtInfoDescSize.AutoSize = true;
+            this.txtInfoDescSize.Location = new System.Drawing.Point(12, 81);
+            this.txtInfoDescSize.Name = "txtInfoDescSize";
+            this.txtInfoDescSize.Size = new System.Drawing.Size(59, 13);
+            this.txtInfoDescSize.TabIndex = 0;
+            this.txtInfoDescSize.Text = "FILE_SIZE";
             // 
             // txtInfoDescModified
             // 
@@ -517,15 +527,6 @@
             this.AboutWindows95ToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.AboutWindows95ToolStripMenuItem.Text = "About Windows 95";
             this.AboutWindows95ToolStripMenuItem.Click += new System.EventHandler(this.AboutWindows95ToolStripMenuItem_Click);
-            // 
-            // txtInfoDescSize
-            // 
-            this.txtInfoDescSize.AutoSize = true;
-            this.txtInfoDescSize.Location = new System.Drawing.Point(12, 81);
-            this.txtInfoDescSize.Name = "txtInfoDescSize";
-            this.txtInfoDescSize.Size = new System.Drawing.Size(59, 13);
-            this.txtInfoDescSize.TabIndex = 0;
-            this.txtInfoDescSize.Text = "FILE_SIZE";
             // 
             // WinClassicWindowsExplorer
             // 
