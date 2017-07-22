@@ -159,6 +159,7 @@ namespace TimeHACK
             gameversion.Font = new Font(pfc.Families[0], 16F, FontStyle.Bold, GraphicsUnit.Point, (0));
             ProgramsToolStripMenuItem.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             DocumentsToolStripMenuItem.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            achievementsToolStripMenuItem.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             SettingsToolStripMenuItem.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             HelpToolStripMenuItem.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             ShutdownToolStripMenuItem.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
@@ -269,11 +270,6 @@ namespace TimeHACK
             loadGameBox = new LoadGameDialog();
             loadGameBox.ShowDialog();
 
-            //var result = LoadSave();
-            //if(result == false)
-            //{
-            //    MessageBox.Show(caption: "No save found.", text: "No save was found on your system. However, we have created a new one, and we will start it up for you.");
-            //}
             if (loadGameBox.successful == true)
             {
                 LoadSave();
@@ -331,7 +327,8 @@ namespace TimeHACK
 
         private void achievementsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            AchievementScreen achievelist = new AchievementScreen();
+            achievelist.ShowDialog();
         }
     }
 }

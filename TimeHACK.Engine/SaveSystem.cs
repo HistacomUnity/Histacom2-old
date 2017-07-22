@@ -27,6 +27,14 @@ namespace TimeHACK.Engine
             }
         }
 
+        public static string DataDirectory
+        {
+            get
+            {
+                return Path.Combine(GameDirectory, "Data");
+            }
+        }
+
         public static string AllProfilesDirectory
         {
             get
@@ -254,6 +262,17 @@ namespace TimeHACK.Engine
 
             // CHANGE THE "JSON" TO "B64" ON A FINAL RELEASE!
             File.WriteAllText(Path.Combine(ProfileDirectory, ProfileFile), json);
+        }
+
+        public static byte[] GetAchievements()
+        {
+            byte[] byt = new byte[] { 0, 0 };
+            if (DevMode) File.WriteAllBytes(Path.Combine(DataDirectory, "achieved.thack"), byt);
+
+            if (File.Exists(Path.Combine(DataDirectory, "achieved.thack"))) byt = File.ReadAllBytes(Path.Combine(DataDirectory, "achieved.thack"));
+            else File.WriteAllBytes(Path.Combine(DataDirectory, "achieved.thack"), byt);
+
+            return byt;
         }
 
         public static void SetTheme()
