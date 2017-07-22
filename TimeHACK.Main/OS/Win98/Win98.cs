@@ -71,6 +71,8 @@ namespace TimeHACK.OS.Win98
         //  When New Game is clicked in TitleScreen.cs
         private void Desktop_Load(object sender, EventArgs e)
         {
+            UpgradeFileSystem("95", "98");
+
             if (currentTheme.defaultWallpaper != null) desktopicons.BackgroundImage = new Bitmap(currentTheme.defaultWallpaper, Width, Height);
             //Start Menu Color - Commented until it works reliably
             //startmenuitems.Renderer = new MyRenderer();

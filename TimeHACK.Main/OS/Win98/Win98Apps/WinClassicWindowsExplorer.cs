@@ -22,7 +22,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         public string onlyViewExtension = "";
 
         string ToReplaceWith = ProfileDirectory;
-        string CurrentDirectory = Path.Combine(ProfileDirectory, "folders", "Computer");
+        string CurrentDirectory = ProfileMyComputerDirectory;
         string OldLabelText;
         int fileType = 6;
         //string attemptedDirectory = "";
@@ -162,22 +162,17 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
                 // Update the WebView
 
-                if (Directory.Exists(CurrentDirectory))
+                if (CurrentDirectory == SaveSystem.ProfileMyComputerDirectory)
                 {
-                    if (CurrentDirectory == SaveSystem.ProfileMyComputerDirectory)
-                    {
-                        pictureBox1.Image = Properties.Resources.Win95HardDiskIcon;
-                    } else if (CurrentDirectory == SaveSystem.ProfileFileSystemDirectory) {
-                        pictureBox1.Image = Properties.Resources.Win95Computer;
-                    } else {
-                        pictureBox1.Image = Properties.Resources.WinClassicFolder;
-                    }
-                    
+                    pictureBox1.Image = Properties.Resources.Win95HardDiskIcon;
+                } else if (CurrentDirectory == SaveSystem.ProfileFileSystemDirectory) {
+                    pictureBox1.Image = Properties.Resources.Win95Computer;
                 } else {
-                    // If it is the drive give it that icon
-
-                    
+                    pictureBox1.Image = Properties.Resources.WinClassicFolder;
                 }
+
+                txtInfoTip.Show();
+                InfoDesc.Hide();
 
                 string weblabel = ReadDataFile(CurrentDirectory, false);
 
@@ -621,7 +616,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         }
                         else
                         {
-                            OpenFile((string)mainView.FocusedItem.Tag);
+                            OpenFile(mainView.FocusedItem.Tag.ToString());
                         }
                 }
             } catch (Exception ex) {
@@ -756,7 +751,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         private void AboutWindows95ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WindowManager wm = new WindowManager();
-            wm.StartAboutBox95("Windows 95", "Microsoft Windows 98", Properties.Resources.WinClassicAbout95);
+            wm.StartAboutBox95("Windows 98", "Microsoft Windows 98", Properties.Resources.WinClassicAbout95);
         }
 
         private void RenameToolStripMenuItem_Click(object sender, EventArgs e)

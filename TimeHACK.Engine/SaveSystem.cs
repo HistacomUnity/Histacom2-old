@@ -171,8 +171,8 @@ namespace TimeHACK.Engine
 
             SaveDirectoryInfo(ProfileFileSystemDirectory, false, "My Computer", false);            
             SaveDirectoryInfo(ProfileMyComputerDirectory, false, "Win95 (C:)", true);
-            if (CurrentSave.CurrentOS == "95") SaveDirectoryInfo(ProfileDocumentsDirectory, false, "My Documents", true);
-            if (CurrentSave.CurrentOS != "95") SaveDirectoryInfo(ProfileSettingsDirectory, false, "Documents and Settings", true);
+            if (CurrentSave.CurrentOS == "95" || CurrentSave.CurrentOS == "98") SaveDirectoryInfo(ProfileDocumentsDirectory, false, "My Documents", true);
+            if (CurrentSave.CurrentOS == "2000" || CurrentSave.CurrentOS == "ME") SaveDirectoryInfo(ProfileSettingsDirectory, false, "Documents and Settings", true);
             SaveDirectoryInfo(Path.Combine(ProfileProgramsDirectory, "Accessories"), false, "Accessories", true);            
             SaveDirectoryInfo(ProfileProgramsDirectory, true, "Program Files", true);
             SaveDirectoryInfo(ProfileWindowsDirectory, true, "Windows", true);
@@ -209,6 +209,12 @@ namespace TimeHACK.Engine
                         // We are upgrading from the old WinClassic file System to the new WinClassic filesystem!
                         // All the above OSes share basically the same file layout!
                         // (Excluding Documents And Settings) which is 2000 and ME only
+
+                        // Rename the C Drive to Win98
+
+                        SaveDirectoryInfo(ProfileMyComputerDirectory, false, "Win98 (C:)", true);
+
+                        // Add Address Book into existance!
 
                         SaveDirectoryInfo(Path.Combine(ProfileProgramsDirectory, "Outlook Express"), false, "Outlook Express", true);
                         CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Outlook Express", "WAB.exe"), "addressbook");

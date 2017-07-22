@@ -22,7 +22,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         public string onlyViewExtension = "";
 
         string ToReplaceWith = ProfileDirectory;
-        string CurrentDirectory = Path.Combine(ProfileDirectory, "folders", "Computer");
+        string CurrentDirectory = ProfileMyComputerDirectory;
         string OldLabelText;
         int fileType = 6;
         //string attemptedDirectory = "";
