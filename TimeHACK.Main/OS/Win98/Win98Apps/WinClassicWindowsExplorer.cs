@@ -286,6 +286,10 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     Program.nonimportantapps[Program.nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(Program.NonImportantApp_Closing);
 
                     break;
+                case "iebrokeninstaller":
+                    wm.StartInfobox95("Internet Explorer Installation", "Installation Failed: The INF file was not found", Properties.Resources.Win95Error);
+
+                    break;
                 case "addressbook":
                     WinClassic appAdBk = wm.StartWin95(new WinClassicAddressBook(), "Address Book", Properties.Resources.WinClassicAddressBook, true, true);
                     Program.AddTaskbarItem(appAdBk, appAdBk.Tag.ToString(), "Address Book", Properties.Resources.WinClassicAddressBook);

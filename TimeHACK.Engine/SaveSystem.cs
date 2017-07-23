@@ -180,12 +180,18 @@ namespace TimeHACK.Engine
             SaveDirectoryInfo(ProfileFileSystemDirectory, false, "My Computer", false);            
             SaveDirectoryInfo(ProfileMyComputerDirectory, false, "Win95 (C:)", true);
             if (CurrentSave.CurrentOS == "95" || CurrentSave.CurrentOS == "98") SaveDirectoryInfo(ProfileDocumentsDirectory, false, "My Documents", true);
-            if (CurrentSave.CurrentOS == "2000" || CurrentSave.CurrentOS == "ME") SaveDirectoryInfo(ProfileSettingsDirectory, false, "Documents and Settings", true);
-            SaveDirectoryInfo(Path.Combine(ProfileProgramsDirectory, "Accessories"), false, "Accessories", true);            
+            if (CurrentSave.CurrentOS == "2000" || CurrentSave.CurrentOS == "ME") SaveDirectoryInfo(ProfileSettingsDirectory, false, "Documents and Settings", true);                    
             SaveDirectoryInfo(ProfileProgramsDirectory, true, "Program Files", true);
+            SaveDirectoryInfo(Path.Combine(ProfileProgramsDirectory, "Accessories"), false, "Accessories", true);
+            SaveDirectoryInfo(Path.Combine(ProfileProgramsDirectory, "Internet Explorer"), true, "Internet Explorer", true);
+            SaveDirectoryInfo(Path.Combine(ProfileProgramsDirectory, "The Microsoft Network"), true, "The Microsoft Network", true);
             SaveDirectoryInfo(ProfileWindowsDirectory, true, "Windows", true);
 
             CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Accessories", "wordpad.exe"), "wordpad");
+            CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Internet Explorer", "ie20.exe"), "ie");
+            CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Internet Explorer", "lnfinst.exe"), "iebrokeninstaller");
+            CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "The Microsoft Network", "msnver.txt"), "5900");
+            
             CreateWindowsDirectory();
         }
 
@@ -226,6 +232,10 @@ namespace TimeHACK.Engine
 
                         SaveDirectoryInfo(Path.Combine(ProfileProgramsDirectory, "Outlook Express"), false, "Outlook Express", true);
                         CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Outlook Express", "WAB.exe"), "addressbook");
+
+                        // There is no "The Microsoft Network" folder!
+
+                        if (Directory.Exists(Path.Combine(ProfileProgramsDirectory, "The Microsoft Network"))) Directory.Delete(Path.Combine(ProfileProgramsDirectory, "The Microsoft Network"));
                     }
                     break;
             }
