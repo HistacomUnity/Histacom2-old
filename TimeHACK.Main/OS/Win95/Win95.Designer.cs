@@ -32,14 +32,6 @@ namespace TimeHACK.OS.Win95
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Windows95));
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("My Computer", 0);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Network Neighborhood", 5);
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Inbox", 3);
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("Recycle Bin", 7);
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("Internet Explorer", 2);
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("Online Services", 1);
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("Set Up The Microsoft Network", 4);
-            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("Outlook Express", 6);
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.taskbar = new System.Windows.Forms.Panel();
@@ -961,6 +953,7 @@ namespace TimeHACK.OS.Win95
             this.desktopImages.Images.SetKeyName(9, "WinClassicSetup.png");
             this.desktopImages.Images.SetKeyName(10, "WinClassicSetup.png");
             this.desktopImages.Images.SetKeyName(11, "WinClassicSetup.png");
+            this.desktopImages.Images.SetKeyName(12, "blank-file-Windows95Icon.gif");
             // 
             // desktopicons
             // 
@@ -970,15 +963,6 @@ namespace TimeHACK.OS.Win95
             this.desktopicons.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.desktopicons.Dock = System.Windows.Forms.DockStyle.Fill;
             this.desktopicons.ForeColor = System.Drawing.Color.White;
-            this.desktopicons.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3,
-            listViewItem4,
-            listViewItem5,
-            listViewItem6,
-            listViewItem7,
-            listViewItem8});
             this.desktopicons.LargeImageList = this.desktopImages;
             this.desktopicons.Location = new System.Drawing.Point(0, 0);
             this.desktopicons.Name = "desktopicons";
@@ -1145,6 +1129,7 @@ namespace TimeHACK.OS.Win95
             // 
             // desktopupdate
             // 
+            this.desktopupdate.Enabled = true;
             this.desktopupdate.Interval = 5000;
             this.desktopupdate.Tick += new System.EventHandler(this.desktopupdate_Tick);
             // 

@@ -23,8 +23,6 @@ namespace TimeHACK.OS.Win95
         public WinClassicTimeDistorter distort;
         public TaskBarController tb = new TaskBarController();
 
-        public ListView BaseIcons;
-
         public int CurrentAppCount = 0;
 
         public bool WebChatInstalled = false;
@@ -58,8 +56,6 @@ namespace TimeHACK.OS.Win95
                 item.MouseEnter += new EventHandler(MenuItem_MouseEnter);
                 item.MouseLeave += new EventHandler(MenuItem_MouseLeave);
             }
-
-            BaseIcons = desktopicons;
         }
 
         private void MenuItem_MouseEnter(object sender, EventArgs e)
@@ -130,7 +126,17 @@ namespace TimeHACK.OS.Win95
                 app.BringToFront();
                 
             }
-            
+
+            // Update the Desktop icons
+
+            DesktopController.RefreshDesktopIcons(new ListViewItem[] { new System.Windows.Forms.ListViewItem("My Computer", 0),
+            new System.Windows.Forms.ListViewItem("Network Neighborhood", 5),
+            new System.Windows.Forms.ListViewItem("Inbox", 3),
+            new System.Windows.Forms.ListViewItem("Recycle Bin", 7),
+            new System.Windows.Forms.ListViewItem("Internet Explorer", 2),
+            new System.Windows.Forms.ListViewItem("Online Services", 1),
+            new System.Windows.Forms.ListViewItem("Set Up The Microsoft Network", 4),
+            new System.Windows.Forms.ListViewItem("Outlook Express", 6) }, ref desktopicons, Path.Combine(ProfileWindowsDirectory, "Desktop"));
         }
 
         private void fontLoad()
@@ -359,11 +365,6 @@ namespace TimeHACK.OS.Win95
             }
         }
 
-        private void AddressBookToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void WindowsExplorerToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             FileDialogBoxManager.IsInOpenDialog = false;
@@ -460,7 +461,14 @@ namespace TimeHACK.OS.Win95
         {
             // Update the Desktop icons
 
-            DesktopController.ViewDesktopIcons(BaseIcons, ref desktopicons, Path.Combine(ProfileWindowsDirectory, "Desktop"));
+            DesktopController.RefreshDesktopIcons(new ListViewItem[] { new System.Windows.Forms.ListViewItem("My Computer", 0),
+            new System.Windows.Forms.ListViewItem("Network Neighborhood", 5),
+            new System.Windows.Forms.ListViewItem("Inbox", 3),
+            new System.Windows.Forms.ListViewItem("Recycle Bin", 7),
+            new System.Windows.Forms.ListViewItem("Internet Explorer", 2),
+            new System.Windows.Forms.ListViewItem("Online Services", 1),
+            new System.Windows.Forms.ListViewItem("Set Up The Microsoft Network", 4),
+            new System.Windows.Forms.ListViewItem("Outlook Express", 6) }, ref desktopicons, Path.Combine(ProfileWindowsDirectory, "Desktop"));
         }
     }
     public class MyRenderer : ToolStripProfessionalRenderer

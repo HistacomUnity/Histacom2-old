@@ -74,7 +74,7 @@ namespace TimeHACK.Engine
         {
             get
             {
-                    return Path.Combine(ProfileMyComputerDirectory, "Settings");
+                return Path.Combine(ProfileMyComputerDirectory, "Settings");
             }
         }
 
@@ -203,6 +203,7 @@ namespace TimeHACK.Engine
             SaveDirectoryInfo(Path.Combine(ProfileWindowsDirectory, "Fonts"), true, "Fonts", true);
             SaveDirectoryInfo(Path.Combine(ProfileWindowsDirectory, "Help"), true, "Help", true);
             SaveDirectoryInfo(Path.Combine(ProfileWindowsDirectory, "Temp"), true, "Temp", true);
+            SaveDirectoryInfo(Path.Combine(ProfileWindowsDirectory, "Desktop"), true, "Desktop", true);
 
             CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "calc.exe"), "calc");
             CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "explorer.exe"), "explorer");
