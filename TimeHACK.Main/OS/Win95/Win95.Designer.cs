@@ -130,6 +130,7 @@ namespace TimeHACK.OS.Win95
             this.BitmapImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MicrosoftDataLinkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PropertiesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.desktopupdate = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.taskbar.SuspendLayout();
             this.clockPanel.SuspendLayout();
@@ -1142,6 +1143,11 @@ namespace TimeHACK.OS.Win95
             this.PropertiesToolStripMenuItem1.Text = "Properties";
             this.PropertiesToolStripMenuItem1.Click += new System.EventHandler(this.PropertiesToolStripMenuItem1_Click);
             // 
+            // desktopupdate
+            // 
+            this.desktopupdate.Interval = 5000;
+            this.desktopupdate.Tick += new System.EventHandler(this.desktopupdate_Tick);
+            // 
             // Windows95
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1268,5 +1274,6 @@ namespace TimeHACK.OS.Win95
         private System.Windows.Forms.ToolStripMenuItem storyTest1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem FTPClientToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem iE4TestToolStripMenuItem;
+        private System.Windows.Forms.Timer desktopupdate;
     }
 }

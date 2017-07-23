@@ -23,11 +23,13 @@ namespace TimeHACK.OS.Win95
         public WinClassicTimeDistorter distort;
         public TaskBarController tb = new TaskBarController();
 
-        public int currentappcount = 0;
+        public ListView BaseIcons;
 
-        public bool webchatInstalled = false;
+        public int CurrentAppCount = 0;
 
-        public bool hiddenpadamsFound = false;
+        public bool WebChatInstalled = false;
+
+        public bool HiddenPadamsFound = false;
 
         // Init the form
         public Windows95()
@@ -56,6 +58,8 @@ namespace TimeHACK.OS.Win95
                 item.MouseEnter += new EventHandler(MenuItem_MouseEnter);
                 item.MouseLeave += new EventHandler(MenuItem_MouseLeave);
             }
+
+            BaseIcons = desktopicons;
         }
 
         private void MenuItem_MouseEnter(object sender, EventArgs e)
@@ -450,6 +454,13 @@ namespace TimeHACK.OS.Win95
 
             app.BringToFront();
             startmenu.Hide();
+        }
+
+        private void desktopupdate_Tick(object sender, EventArgs e)
+        {
+            // Update the Desktop icons
+
+            DesktopController.ViewDesktopIcons(BaseIcons, ref desktopicons, Path.Combine(ProfileWindowsDirectory, "Desktop"));
         }
     }
     public class MyRenderer : ToolStripProfessionalRenderer
