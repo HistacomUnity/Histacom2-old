@@ -22,7 +22,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         public string onlyViewExtension = "";
 
         string ToReplaceWith = ProfileDirectory;
-        string CurrentDirectory = ProfileMyComputerDirectory;
+        public string CurrentDirectory = ProfileMyComputerDirectory;
         string OldLabelText;
         string CurrentCopyFile;
 
@@ -200,7 +200,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             diskView.Nodes.Add(new TreeNode("Desktop", 0, 0, desktoparray));
         }
 
-        void OpenFile(string fileDir)
+        public void OpenFile(string fileDir)
         {
             try
             {
@@ -256,6 +256,22 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     Program.AddTaskbarItem(TitleScreen.frm95.ie, TitleScreen.frm95.ie.Tag.ToString(), "Internet Explorer 4", Properties.Resources.Win95IconIE4);
                     TitleScreen.frm95.ie.BringToFront();
                     TitleScreen.frm95.ie.FormClosing += new FormClosingEventHandler(TitleScreen.frm95.InternetExplorer4_Closing);
+
+                    break;
+                case "web chat setup":
+                    Win95Installer inst = new Win95Installer("Web Chat 1998");
+                    inst.InstallCompleted += (sendr, args) => TitleScreen.frm95.WebChatToolStripMenuItem.Visible = true;
+                    WinClassic appInstaller = wm.StartWin95(inst, "Web Chat Setup", null, true, true);
+                    Program.AddTaskbarItem(appInstaller, appInstaller.Tag.ToString(), "Web Chat Setup", null);
+                    appInstaller.BringToFront();
+
+                    break;
+                case "ftp client setup":
+                    Win95Installer instFtp = new Win95Installer("FTP Client");
+                    instFtp.InstallCompleted += (sendr, args) => TitleScreen.frm95.FTPClientToolStripMenuItem.Visible = true;
+                    WinClassic appFtp = wm.StartWin95(instFtp, "FTP Client Setup", null, true, true);
+                    Program.AddTaskbarItem(appFtp, appFtp.Tag.ToString(), "FTP Client Setup", null);
+                    appFtp.BringToFront();
 
                     break;
                 case "iebrokeninstaller":

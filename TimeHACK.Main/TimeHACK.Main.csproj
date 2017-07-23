@@ -212,12 +212,6 @@
     <Compile Include="OS\Win95\Win95Apps\Win95WindowsExplorer.Designer.cs">
       <DependentUpon>Win95WindowsExplorer.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95SaveAs.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="OS\Win95\Win95SaveAs.Designer.cs">
-      <DependentUpon>Win95SaveAs.cs</DependentUpon>
-    </Compile>
     <Compile Include="OS\Win95\Win95Apps\WinClassicTimeDistorter.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -382,9 +376,6 @@
     <EmbeddedResource Include="OS\Win95\Win95Apps\Win95WindowsExplorer.resx">
       <DependentUpon>Win95WindowsExplorer.cs</DependentUpon>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95SaveAs.resx">
-      <DependentUpon>Win95SaveAs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win98\Win98.resx">
       <DependentUpon>Win98.cs</DependentUpon>

@@ -969,7 +969,7 @@ namespace TimeHACK.OS.Win95
             this.desktopicons.Size = new System.Drawing.Size(640, 480);
             this.desktopicons.TabIndex = 6;
             this.desktopicons.UseCompatibleStateImageBehavior = false;
-            this.desktopicons.DoubleClick += new System.EventHandler(this.desktopicons_Click);
+            this.desktopicons.DoubleClick += new System.EventHandler(this.desktopicons_DoubleClick);
             this.desktopicons.MouseDown += new System.Windows.Forms.MouseEventHandler(this.desktop_mousedown);
             // 
             // rightclickbackproperties
@@ -1257,7 +1257,7 @@ namespace TimeHACK.OS.Win95
         private System.Windows.Forms.ToolStripMenuItem installerTestToolStripMenuItem;
         private System.Windows.Forms.Panel taskbarItems;
         private System.Windows.Forms.ToolStripMenuItem storyTest1ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem FTPClientToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem FTPClientToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem iE4TestToolStripMenuItem;
         private System.Windows.Forms.Timer desktopupdate;
     }

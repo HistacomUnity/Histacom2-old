@@ -22,7 +22,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         public string onlyViewExtension = "";
 
         string ToReplaceWith = ProfileDirectory;
-        string CurrentDirectory = ProfileMyComputerDirectory;
+        public string CurrentDirectory = ProfileMyComputerDirectory;
         string OldLabelText;
         string CurrentCopyFile;
         int fileType = 6;
@@ -236,7 +236,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             diskView.Nodes.Add(new TreeNode("Desktop", 0, 0, desktoparray));
         }
 
-        void OpenFile(string fileDir)
+        public void OpenFile(string fileDir)
         {
             try
             {

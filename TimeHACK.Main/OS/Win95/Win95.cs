@@ -259,7 +259,7 @@ namespace TimeHACK.OS.Win95
             startmenu.Hide();
         }
 
-        private void desktopicons_Click(object sender, EventArgs e)
+        private void desktopicons_DoubleClick(object sender, EventArgs e)
         {
             Point objDrawingPoint = desktopicons.PointToClient(Cursor.Position);
             ListViewItem objListViewItem;
@@ -278,23 +278,37 @@ namespace TimeHACK.OS.Win95
                         ie.FormClosing += new FormClosingEventHandler(InternetExplorer4_Closing);
                         startmenu.Hide();
                     }
-                    else if (objListViewItem.Text == "Web Chat Setup")
+                    else if (objListViewItem.Text == "My Computer")
                     {
-                        Win95Installer inst = new Win95Installer("Web Chat 1998");
-                        inst.InstallCompleted += (sendr, args) => WebChatToolStripMenuItem.Visible = true;
-                        WinClassic app = wm.StartWin95(inst, "Web Chat Setup", null, true, true);
-                        AddTaskBarItem(app, app.Tag.ToString(), "Web Chat Setup", null);
+                        WinClassic app = wm.StartWin95(new Win95WindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
+                        AddTaskBarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
                         app.BringToFront();
                         startmenu.Hide();
                     }
-                    else if (objListViewItem.Text == "FTP Client Setup")
+                    else
                     {
-                        Win95Installer inst = new Win95Installer("FTP Client");
-                        inst.InstallCompleted += (sendr, args) => FTPClientToolStripMenuItem.Visible = true;
-                        WinClassic app = wm.StartWin95(inst, "FTP Client Setup", null, true, true);
-                        AddTaskBarItem(app, app.Tag.ToString(), "FTP Client Setup", null);
-                        app.BringToFront();
-                        startmenu.Hide();
+                        // It is an actual file on the disk
+
+                        Win95WindowsExplorer we = new Win95WindowsExplorer();
+
+                        // If it is a directory
+
+                        if (Directory.Exists(objListViewItem.Tag.ToString()))
+                        {
+                            we.CurrentDirectory = objListViewItem.Tag.ToString();
+
+                            WinClassic app = wm.StartWin95(we, "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
+                            AddTaskBarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
+                            app.BringToFront();
+                            startmenu.Hide();
+                        }
+                        else
+                        {
+                            // Just open the file...
+
+                            we.OpenFile(objListViewItem.Tag.ToString());
+                        }
+
                     }
                 }
             }
