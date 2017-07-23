@@ -15,7 +15,7 @@ namespace TimeHACK.SaveDialogs
     public partial class SaveFileTroubleShooter : Form
     {
         public string log;
-        Save savedata = new Save();
+        Save savedata;
         string json;
         public SaveFileTroubleShooter()
         {
@@ -43,7 +43,9 @@ namespace TimeHACK.SaveDialogs
 
             // Check if the main.save file exists
 
-            if (!File.Exists(Path.Combine(SaveSystem.ProfileDirectory, "main.save")))
+            string savefile = Path.Combine(SaveSystem.ProfileDirectory, "main.save");
+
+            if (!File.Exists(savefile))
             {
                 WriteToLog("ISSUE FOUND! File main.save doesn't exist");
 
@@ -58,12 +60,9 @@ namespace TimeHACK.SaveDialogs
             } else {
                 WriteToLog("File main.save does exist - checking contents");
 
-                // Read the main.save file
-                json = File.ReadAllText(Path.Combine(SaveSystem.ProfileDirectory, "main.save"));
-
                 try
                 {
-                    savedata = Newtonsoft.Json.JsonConvert.DeserializeObject<Save>(json);
+                    savedata = SaveSystem.ReadSave(savefile);
 
                 } catch
                 {
@@ -71,16 +70,18 @@ namespace TimeHACK.SaveDialogs
 
                     WriteToLog("Sorry, there is no repairing it easily, your data will be lost");
 
-                    if (Directory.Exists(Path.Combine(SaveSystem.ProfileDirectory, "main.backup"))) Directory.Delete(Path.Combine(SaveSystem.ProfileDirectory, "main.backup"));
+                    string backupfile = Path.Combine(SaveSystem.ProfileDirectory, "main.backup");
 
-                    File.Copy(Path.Combine(SaveSystem.ProfileDirectory, "main.save"), Path.Combine(SaveSystem.ProfileDirectory, "main.backup"));
+                    if (Directory.Exists(backupfile)) Directory.Delete(backupfile);
+
+                    File.Copy(savefile, backupfile);
                     SaveSystem.NewGame();
 
                     // Make sure the username is set
 
                     SaveSystem.CurrentSave.Username = SaveSystem.ProfileName;
 
-                    WriteToLog($"The corrupt file has been stored in {Path.Combine(SaveSystem.ProfileDirectory, "main.backup")}");
+                    WriteToLog($"The corrupt file has been stored in {backupfile}");
 
                     EndScan(true);
                 }
@@ -108,10 +109,12 @@ namespace TimeHACK.SaveDialogs
                 }
             }
 
-            if (!Directory.Exists(Path.Combine(SaveSystem.ProfileDirectory, "folders")))
+            string folderspath = Path.Combine(SaveSystem.ProfileDirectory, "folders");
+
+            if (!Directory.Exists(folderspath))
             {
                 WriteToLog("ISSUE FOUND! Directory 'folders' doesn't exist! Creating one...");
-                Directory.CreateDirectory(Path.Combine(SaveSystem.ProfileDirectory, "folders"));
+                Directory.CreateDirectory(folderspath);
                 SaveSystem.CheckFiles();
             }
 
@@ -130,7 +133,7 @@ namespace TimeHACK.SaveDialogs
 
                 // Set the main.save file to the resolved one
 
-                File.WriteAllText(Path.Combine(SaveSystem.ProfileDirectory, "main.save"), Newtonsoft.Json.JsonConvert.SerializeObject(savedata, Newtonsoft.Json.Formatting.Indented));
+                SaveSystem.WriteSave(Path.Combine(SaveSystem.ProfileDirectory, "main.save"), savedata);
 
                 textBox1.Text = log;
             } else {
