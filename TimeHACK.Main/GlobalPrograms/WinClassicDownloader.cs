@@ -1,5 +1,7 @@
 ﻿using System;
+using System.IO;
 using System.Windows.Forms;
+using static TimeHACK.Engine.SaveSystem;
 
 namespace TimeHACK.OS.Win95.Win95Apps
 {
@@ -41,35 +43,35 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
                 if (appName.Text == "Downloading: Guess The Number")
                 {
-                    Windows95.desktopicons.Items.Add("Guess The Number Setup", imageIndex: 8);
+                    CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop", "Guess The Number Setup.exe"), "GuessTheNumber");
                 }
                 if (appName.Text == "Downloading: Start Runner")
                 {
-                    Windows95.desktopicons.Items.Add("Start Runner Setup", imageIndex: 9);
+                    CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop", "Start Runner Setup.exe"), "StartRunner");
                 }
                 if (appName.Text == "Downloading: Error Blaster")
                 {
-                    Windows95.desktopicons.Items.Add("Error Blaster Setup", imageIndex: 10);
+                    CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop", "Error Blaster Setup.exe"), "ErrorBlaster");
                 }
                 if (appName.Text == "Downloading: Skindows 95")
                 {
-                    Windows95.desktopicons.Items.Add("Skindows 95 Setup", imageIndex: 12);
+                    CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop", "Skindows 95 Setup.exe"), "Skindows95Setup");
                 }
                 if (appName.Text == "Downloading: Web Chat")
                 {
-                    TitleScreen.frm95.desktopicons.Items.Add("Web Chat Setup", imageIndex: 11);
+                    CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop", "Web Chat Setup.exe"), "web chat setup");
                 }
                 if (appName.Text == "Downloading: hwcv.exe")
                 {
-                    Windows95.desktopicons.Items.Add("hwcv.exe", imageIndex: 14);
+                    CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop", "hwcv.exe"), "hwcv");
                 }
                 if (appName.Text == "Downloading: Time Distorter")
                 {
-                    Windows95.desktopicons.Items.Add("Time Distorter Setup", imageIndex: 13);
+                    CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop", "Time Distorter Setup.exe"), "time distorter setup");
                 }
                 if (appName.Text == "Downloading: FTP Client")
                 {
-                    TitleScreen.frm95.desktopicons.Items.Add("FTP Client Setup", imageIndex: 11);
+                    CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop", "FTP Client setup.exe"), "ftp client setup");
                 }
                 ((Form)this.TopLevelControl).Close();
                 dlTimer.Stop();

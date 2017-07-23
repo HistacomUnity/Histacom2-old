@@ -23,11 +23,11 @@ namespace TimeHACK.OS.Win95
         public WinClassicTimeDistorter distort;
         public TaskBarController tb = new TaskBarController();
 
-        public int currentappcount = 0;
+        public int CurrentAppCount = 0;
 
-        public bool webchatInstalled = false;
+        public bool WebChatInstalled = false;
 
-        public bool hiddenpadamsFound = false;
+        public bool HiddenPadamsFound = false;
 
         // Init the form
         public Windows95()
@@ -126,7 +126,17 @@ namespace TimeHACK.OS.Win95
                 app.BringToFront();
                 
             }
-            
+
+            // Update the Desktop icons
+
+            DesktopController.RefreshDesktopIcons(new ListViewItem[] { new System.Windows.Forms.ListViewItem("My Computer", 0),
+            new System.Windows.Forms.ListViewItem("Network Neighborhood", 5),
+            new System.Windows.Forms.ListViewItem("Inbox", 3),
+            new System.Windows.Forms.ListViewItem("Recycle Bin", 7),
+            new System.Windows.Forms.ListViewItem("Internet Explorer", 2),
+            new System.Windows.Forms.ListViewItem("Online Services", 1),
+            new System.Windows.Forms.ListViewItem("Set Up The Microsoft Network", 4),
+            new System.Windows.Forms.ListViewItem("Outlook Express", 6) }, ref desktopicons, Path.Combine(ProfileWindowsDirectory, "Desktop"));
         }
 
         private void fontLoad()
@@ -162,12 +172,6 @@ namespace TimeHACK.OS.Win95
 
         #endregion //Region
 
-        // When add new folder is clicked
-        private void FolderToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            desktopicons.Items.Add("New Folder");
-        }
-
         // Give Year Code - NYI
         private void taskbartime_Click(object sender, EventArgs e)
         {
@@ -185,6 +189,17 @@ namespace TimeHACK.OS.Win95
         {
             if (e.Button == MouseButtons.Right)
             {
+                // Check if an item is selected and if so show the Delete option
+
+                if (desktopicons.FocusedItem != null)
+                {
+                    deleteToolStripMenuItem.Visible = true;
+                } else {
+                    deleteToolStripMenuItem.Visible = false;
+                }
+
+                desktopupdate_Tick(null, null); // Update the Desktop Icons
+
                 rightclickbackproperties.Show();
                 rightclickbackproperties.BringToFront();
                 rightclickbackproperties.Location = MousePosition;
@@ -249,7 +264,7 @@ namespace TimeHACK.OS.Win95
             startmenu.Hide();
         }
 
-        private void desktopicons_Click(object sender, EventArgs e)
+        private void desktopicons_DoubleClick(object sender, EventArgs e)
         {
             Point objDrawingPoint = desktopicons.PointToClient(Cursor.Position);
             ListViewItem objListViewItem;
@@ -268,23 +283,56 @@ namespace TimeHACK.OS.Win95
                         ie.FormClosing += new FormClosingEventHandler(InternetExplorer4_Closing);
                         startmenu.Hide();
                     }
-                    else if (objListViewItem.Text == "Web Chat Setup")
+                    else if (objListViewItem.Text == "My Computer")
                     {
-                        Win95Installer inst = new Win95Installer("Web Chat 1998");
-                        inst.InstallCompleted += (sendr, args) => WebChatToolStripMenuItem.Visible = true;
-                        WinClassic app = wm.StartWin95(inst, "Web Chat Setup", null, true, true);
-                        AddTaskBarItem(app, app.Tag.ToString(), "Web Chat Setup", null);
+                        WinClassic app = wm.StartWin95(new Win95WindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
+                        AddTaskBarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
                         app.BringToFront();
                         startmenu.Hide();
                     }
-                    else if (objListViewItem.Text == "FTP Client Setup")
+                    else if (objListViewItem.Text == "Network Neighborhood")
                     {
-                        Win95Installer inst = new Win95Installer("FTP Client");
-                        inst.InstallCompleted += (sendr, args) => FTPClientToolStripMenuItem.Visible = true;
-                        WinClassic app = wm.StartWin95(inst, "FTP Client Setup", null, true, true);
-                        AddTaskBarItem(app, app.Tag.ToString(), "FTP Client Setup", null);
-                        app.BringToFront();
-                        startmenu.Hide();
+                        // Alex's TODO here
+
+                    }
+                    else if (objListViewItem.Text == "Recycle Bin")
+                    {
+                        // Another thing you may need to digital poke Alex about doing.
+
+                    }
+                    else if (objListViewItem.Text == "Set Up The Microsoft Network") {
+                        wm.StartInfobox95("Microsoft Network", "The Microsoft Network is already set up!", Properties.Resources.Win95Info);
+                    } else if (objListViewItem.Text == "Outlook Express") {
+                        wm.StartInfobox95("Win32 Application", "That is not a valid Win32 Application.", Properties.Resources.Win95Error);
+                    }
+                    else if (objListViewItem.Text == "Inbox")
+                    {
+                        wm.StartInfobox95("Win32 Application", "That is not a valid Win32 Application.", Properties.Resources.Win95Error);
+                    }
+                    else
+                    {
+                        // It is an actual file on the disk
+
+                        Win95WindowsExplorer we = new Win95WindowsExplorer();
+
+                        // If it is a directory
+
+                        if (Directory.Exists(objListViewItem.Tag.ToString()))
+                        {
+                            we.CurrentDirectory = objListViewItem.Tag.ToString();
+
+                            WinClassic app = wm.StartWin95(we, "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
+                            AddTaskBarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
+                            app.BringToFront();
+                            startmenu.Hide();
+                        }
+                        else
+                        {
+                            // Just open the file...
+
+                            we.OpenFile(objListViewItem.Tag.ToString());
+                        }
+
                     }
                 }
             }
@@ -311,7 +359,7 @@ namespace TimeHACK.OS.Win95
         {
             nonimportantapps.Remove((WinClassic)sender);
         }
-        private void InternetExplorer4_Closing(object sender, FormClosingEventArgs e)
+        public void InternetExplorer4_Closing(object sender, FormClosingEventArgs e)
         {
             ie = null;
         }
@@ -353,11 +401,6 @@ namespace TimeHACK.OS.Win95
                 // Calls that "AddToTaskbar" thing
                 taskbarItems = tb.AddTaskbarItem95(form.Tag.ToString(), form.Text.ToString(), (Image)form.Icon.ToBitmap(), (UserControl)new Win95TaskBarItem(), taskbarItems);
             }
-        }
-
-        private void AddressBookToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void WindowsExplorerToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -450,6 +493,83 @@ namespace TimeHACK.OS.Win95
 
             app.BringToFront();
             startmenu.Hide();
+        }
+
+        private void desktopupdate_Tick(object sender, EventArgs e)
+        {
+            // Update the Desktop icons
+
+            DesktopController.RefreshDesktopIcons(new ListViewItem[] { new System.Windows.Forms.ListViewItem("My Computer", 0),
+            new System.Windows.Forms.ListViewItem("Network Neighborhood", 5),
+            new System.Windows.Forms.ListViewItem("Inbox", 3),
+            new System.Windows.Forms.ListViewItem("Recycle Bin", 7),
+            new System.Windows.Forms.ListViewItem("Internet Explorer", 2),
+            new System.Windows.Forms.ListViewItem("Online Services", 1),
+            new System.Windows.Forms.ListViewItem("Set Up The Microsoft Network", 4),
+            new System.Windows.Forms.ListViewItem("Outlook Express", 6) }, ref desktopicons, Path.Combine(ProfileWindowsDirectory, "Desktop"));
+        }
+
+        // When add new folder is clicked
+        private void FolderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Directory.Exists(Path.Combine(ProfileWindowsDirectory, "Desktop", "New Folder")))
+            {
+                wm.StartInfobox95("Windows Explorer", "A folder called New Folder already exists - please rename it.", Properties.Resources.Win95Error);
+            }
+            else
+            {
+                SaveDirectoryInfo(Path.Combine(ProfileWindowsDirectory, "Desktop", "New Folder"), false, "New folder", true);
+                desktopupdate_Tick(null, null); // Update the desktop Icons
+            }
+        }
+
+        private void TextDocumentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (File.Exists(Path.Combine(ProfileWindowsDirectory, "Desktop", "New Text Document.txt")))
+            {
+                wm.StartInfobox95("Windows Explorer", "A folder called New Text Document already exists - please rename it.", Properties.Resources.Win95Error);
+            }
+            else
+            {
+                File.Create(Path.Combine(ProfileWindowsDirectory, "Desktop", "New Text Document.txt"));
+                desktopupdate_Tick(null, null); // Update the desktop Icons
+            }
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Point objDrawingPoint = desktopicons.PointToClient(Cursor.Position);
+            ListViewItem objListViewItem;
+
+            if (objDrawingPoint != null)
+            {
+                objListViewItem = desktopicons.GetItemAt(objDrawingPoint.X, objDrawingPoint.Y);
+                if (objListViewItem != null)
+                {
+                    if (objListViewItem.Tag != null)
+                    {
+                        if (Directory.Exists(objListViewItem.Tag.ToString()))
+                        {
+                            Directory.Delete(objListViewItem.Tag.ToString(), true);
+                            desktopupdate_Tick(null, null); // Update the desktop Icons
+                        }
+                        else
+                        {
+                            if (File.Exists(objListViewItem.Tag.ToString()))
+                            {
+                                File.Delete(objListViewItem.Tag.ToString());
+                                desktopupdate_Tick(null, null); // Update the desktop Icons
+                            }
+                            else
+                            {
+                                wm.StartInfobox95("Windows Explorer", "This object cannot be deleted.", Properties.Resources.Win95Error);
+                            }
+                        }
+                    } else {
+                        wm.StartInfobox95("Windows Explorer", "This object cannot be deleted.", Properties.Resources.Win95Error);
+                    }                 
+                }
+            }
         }
     }
     public class MyRenderer : ToolStripProfessionalRenderer

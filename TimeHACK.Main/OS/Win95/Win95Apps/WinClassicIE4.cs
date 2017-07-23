@@ -207,7 +207,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     case "12PADAMS":
                         webBrowser1.Document.GetElementById("wc_b").Click += new HtmlElementEventHandler(WCDownloadButton_Click);
                         webBrowser1.Document.GetElementById("ftp_b").Click += new HtmlElementEventHandler(FTPDownloadButton_Click);
-                        if (!TitleScreen.frm95.hiddenpadamsFound) webBrowser1.Document.GetElementById("distort").Style += "visibility:hidden;";
+                        if (!TitleScreen.frm95.HiddenPadamsFound) webBrowser1.Document.GetElementById("distort").Style += "visibility:hidden;";
                         break;
                     case "GOOGLE":
                         webBrowser1.Document.GetElementById("prototype").Click += new HtmlElementEventHandler(googleprototypelink_LinkClicked);

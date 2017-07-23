@@ -32,14 +32,6 @@ namespace TimeHACK.OS.Win95
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Windows95));
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("My Computer", 0);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Network Neighborhood", 5);
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Inbox", 3);
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("Recycle Bin", 7);
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("Internet Explorer", 2);
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("Online Services", 1);
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("Set Up The Microsoft Network", 4);
-            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("Outlook Express", 6);
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.taskbar = new System.Windows.Forms.Panel();
@@ -112,24 +104,12 @@ namespace TimeHACK.OS.Win95
             this.desktopImages = new System.Windows.Forms.ImageList(this.components);
             this.desktopicons = new System.Windows.Forms.ListView();
             this.rightclickbackproperties = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.PropertiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ByNameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ByTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.BySizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.AutoArrangeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ByDateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.LineUpIconsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PasteShortcutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.NewToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.FolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ShortcutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.WaveSoundToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TextDocumentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.WordPadDocumentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.BitmapImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.MicrosoftDataLinkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PropertiesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.desktopupdate = new System.Windows.Forms.Timer(this.components);
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.taskbar.SuspendLayout();
             this.clockPanel.SuspendLayout();
@@ -960,6 +940,7 @@ namespace TimeHACK.OS.Win95
             this.desktopImages.Images.SetKeyName(9, "WinClassicSetup.png");
             this.desktopImages.Images.SetKeyName(10, "WinClassicSetup.png");
             this.desktopImages.Images.SetKeyName(11, "WinClassicSetup.png");
+            this.desktopImages.Images.SetKeyName(12, "blank-file-Windows95Icon.gif");
             // 
             // desktopicons
             // 
@@ -969,178 +950,72 @@ namespace TimeHACK.OS.Win95
             this.desktopicons.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.desktopicons.Dock = System.Windows.Forms.DockStyle.Fill;
             this.desktopicons.ForeColor = System.Drawing.Color.White;
-            this.desktopicons.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3,
-            listViewItem4,
-            listViewItem5,
-            listViewItem6,
-            listViewItem7,
-            listViewItem8});
             this.desktopicons.LargeImageList = this.desktopImages;
             this.desktopicons.Location = new System.Drawing.Point(0, 0);
             this.desktopicons.Name = "desktopicons";
             this.desktopicons.Size = new System.Drawing.Size(640, 480);
             this.desktopicons.TabIndex = 6;
             this.desktopicons.UseCompatibleStateImageBehavior = false;
-            this.desktopicons.DoubleClick += new System.EventHandler(this.desktopicons_Click);
+            this.desktopicons.DoubleClick += new System.EventHandler(this.desktopicons_DoubleClick);
             this.desktopicons.MouseDown += new System.Windows.Forms.MouseEventHandler(this.desktop_mousedown);
             // 
             // rightclickbackproperties
             // 
             this.rightclickbackproperties.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.PropertiesToolStripMenuItem,
-            this.LineUpIconsToolStripMenuItem,
-            this.PasteToolStripMenuItem,
-            this.PasteShortcutToolStripMenuItem,
             this.NewToolStripMenuItem1,
+            this.deleteToolStripMenuItem,
             this.PropertiesToolStripMenuItem1});
             this.rightclickbackproperties.Name = "ContextMenuStrip1";
             this.rightclickbackproperties.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.rightclickbackproperties.Size = new System.Drawing.Size(151, 136);
-            // 
-            // PropertiesToolStripMenuItem
-            // 
-            this.PropertiesToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.PropertiesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ByNameToolStripMenuItem,
-            this.ByTypeToolStripMenuItem,
-            this.BySizeToolStripMenuItem,
-            this.AutoArrangeToolStripMenuItem,
-            this.ByDateToolStripMenuItem});
-            this.PropertiesToolStripMenuItem.Name = "PropertiesToolStripMenuItem";
-            this.PropertiesToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.PropertiesToolStripMenuItem.Text = "Arrange Icons";
-            // 
-            // ByNameToolStripMenuItem
-            // 
-            this.ByNameToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.ByNameToolStripMenuItem.Name = "ByNameToolStripMenuItem";
-            this.ByNameToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
-            this.ByNameToolStripMenuItem.Text = "by Name";
-            // 
-            // ByTypeToolStripMenuItem
-            // 
-            this.ByTypeToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.ByTypeToolStripMenuItem.Name = "ByTypeToolStripMenuItem";
-            this.ByTypeToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
-            this.ByTypeToolStripMenuItem.Text = "by Type";
-            // 
-            // BySizeToolStripMenuItem
-            // 
-            this.BySizeToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.BySizeToolStripMenuItem.Name = "BySizeToolStripMenuItem";
-            this.BySizeToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
-            this.BySizeToolStripMenuItem.Text = "by Size";
-            // 
-            // AutoArrangeToolStripMenuItem
-            // 
-            this.AutoArrangeToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.AutoArrangeToolStripMenuItem.Name = "AutoArrangeToolStripMenuItem";
-            this.AutoArrangeToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
-            this.AutoArrangeToolStripMenuItem.Text = "Auto Arrange";
-            // 
-            // ByDateToolStripMenuItem
-            // 
-            this.ByDateToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.ByDateToolStripMenuItem.Name = "ByDateToolStripMenuItem";
-            this.ByDateToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
-            this.ByDateToolStripMenuItem.Text = "by Date";
-            // 
-            // LineUpIconsToolStripMenuItem
-            // 
-            this.LineUpIconsToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.LineUpIconsToolStripMenuItem.Name = "LineUpIconsToolStripMenuItem";
-            this.LineUpIconsToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.LineUpIconsToolStripMenuItem.Text = "Line Up Icons";
-            // 
-            // PasteToolStripMenuItem
-            // 
-            this.PasteToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem";
-            this.PasteToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.PasteToolStripMenuItem.Text = "Paste";
-            // 
-            // PasteShortcutToolStripMenuItem
-            // 
-            this.PasteShortcutToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.PasteShortcutToolStripMenuItem.Name = "PasteShortcutToolStripMenuItem";
-            this.PasteShortcutToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.PasteShortcutToolStripMenuItem.Text = "Paste Shortcut";
+            this.rightclickbackproperties.Size = new System.Drawing.Size(128, 70);
             // 
             // NewToolStripMenuItem1
             // 
             this.NewToolStripMenuItem1.BackColor = System.Drawing.Color.Silver;
             this.NewToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FolderToolStripMenuItem,
-            this.ShortcutToolStripMenuItem,
-            this.WaveSoundToolStripMenuItem,
-            this.TextDocumentToolStripMenuItem,
-            this.WordPadDocumentToolStripMenuItem,
-            this.BitmapImageToolStripMenuItem,
-            this.MicrosoftDataLinkToolStripMenuItem});
+            this.TextDocumentToolStripMenuItem});
             this.NewToolStripMenuItem1.Name = "NewToolStripMenuItem1";
-            this.NewToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
+            this.NewToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.NewToolStripMenuItem1.Text = "New";
             // 
             // FolderToolStripMenuItem
             // 
             this.FolderToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.FolderToolStripMenuItem.Name = "FolderToolStripMenuItem";
-            this.FolderToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.FolderToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.FolderToolStripMenuItem.Text = "Folder";
             this.FolderToolStripMenuItem.Click += new System.EventHandler(this.FolderToolStripMenuItem_Click);
-            // 
-            // ShortcutToolStripMenuItem
-            // 
-            this.ShortcutToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.ShortcutToolStripMenuItem.Name = "ShortcutToolStripMenuItem";
-            this.ShortcutToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.ShortcutToolStripMenuItem.Text = "Shortcut";
-            // 
-            // WaveSoundToolStripMenuItem
-            // 
-            this.WaveSoundToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.WaveSoundToolStripMenuItem.Name = "WaveSoundToolStripMenuItem";
-            this.WaveSoundToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.WaveSoundToolStripMenuItem.Text = "Wave Sound";
             // 
             // TextDocumentToolStripMenuItem
             // 
             this.TextDocumentToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.TextDocumentToolStripMenuItem.Name = "TextDocumentToolStripMenuItem";
-            this.TextDocumentToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.TextDocumentToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.TextDocumentToolStripMenuItem.Text = "Text Document";
-            // 
-            // WordPadDocumentToolStripMenuItem
-            // 
-            this.WordPadDocumentToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.WordPadDocumentToolStripMenuItem.Name = "WordPadDocumentToolStripMenuItem";
-            this.WordPadDocumentToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.WordPadDocumentToolStripMenuItem.Text = "WordPad Document";
-            // 
-            // BitmapImageToolStripMenuItem
-            // 
-            this.BitmapImageToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.BitmapImageToolStripMenuItem.Name = "BitmapImageToolStripMenuItem";
-            this.BitmapImageToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.BitmapImageToolStripMenuItem.Text = "Bitmap Image";
-            // 
-            // MicrosoftDataLinkToolStripMenuItem
-            // 
-            this.MicrosoftDataLinkToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.MicrosoftDataLinkToolStripMenuItem.Name = "MicrosoftDataLinkToolStripMenuItem";
-            this.MicrosoftDataLinkToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.MicrosoftDataLinkToolStripMenuItem.Text = "Microsoft Data Link";
+            this.TextDocumentToolStripMenuItem.Click += new System.EventHandler(this.TextDocumentToolStripMenuItem_Click);
             // 
             // PropertiesToolStripMenuItem1
             // 
             this.PropertiesToolStripMenuItem1.BackColor = System.Drawing.Color.Silver;
             this.PropertiesToolStripMenuItem1.Name = "PropertiesToolStripMenuItem1";
-            this.PropertiesToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
+            this.PropertiesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.PropertiesToolStripMenuItem1.Text = "Properties";
             this.PropertiesToolStripMenuItem1.Click += new System.EventHandler(this.PropertiesToolStripMenuItem1_Click);
+            // 
+            // desktopupdate
+            // 
+            this.desktopupdate.Enabled = true;
+            this.desktopupdate.Interval = 10000;
+            this.desktopupdate.Tick += new System.EventHandler(this.desktopupdate_Tick);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // Windows95
             // 
@@ -1243,30 +1118,18 @@ namespace TimeHACK.OS.Win95
         private System.Windows.Forms.ImageList desktopImages;
         internal System.Windows.Forms.ListView desktopicons;
         internal System.Windows.Forms.ContextMenuStrip rightclickbackproperties;
-        internal System.Windows.Forms.ToolStripMenuItem PropertiesToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem ByNameToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem ByTypeToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem BySizeToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem AutoArrangeToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem ByDateToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem LineUpIconsToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem PasteToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem PasteShortcutToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem NewToolStripMenuItem1;
         internal System.Windows.Forms.ToolStripMenuItem FolderToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem ShortcutToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem WaveSoundToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem TextDocumentToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem WordPadDocumentToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem BitmapImageToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem MicrosoftDataLinkToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem PropertiesToolStripMenuItem1;
         internal System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Windows95));
         private System.Windows.Forms.ToolStripMenuItem downloaderTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem installerTestToolStripMenuItem;
         private System.Windows.Forms.Panel taskbarItems;
         private System.Windows.Forms.ToolStripMenuItem storyTest1ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem FTPClientToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem FTPClientToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem iE4TestToolStripMenuItem;
+        private System.Windows.Forms.Timer desktopupdate;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
     }
 }

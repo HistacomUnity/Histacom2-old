@@ -22,7 +22,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         public string onlyViewExtension = "";
 
         string ToReplaceWith = ProfileDirectory;
-        string CurrentDirectory = ProfileMyComputerDirectory;
+        public string CurrentDirectory = ProfileMyComputerDirectory;
         string OldLabelText;
         string CurrentCopyFile;
 
@@ -200,7 +200,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             diskView.Nodes.Add(new TreeNode("Desktop", 0, 0, desktoparray));
         }
 
-        void OpenFile(string fileDir)
+        public void OpenFile(string fileDir)
         {
             try
             {
@@ -227,7 +227,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         void OpenApplication(string appname)
         {
             switch (appname.ToLower())
-            {               
+            {
                 case "explorer":
                     Engine.Template.WinClassic app = wm.StartWin95(new Win95WindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
                     Program.AddTaskbarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
@@ -250,17 +250,40 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     Program.nonimportantapps[Program.nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(Program.NonImportantApp_Closing);
 
                     break;
-                case "addressbook":
-                    WinClassic appAdBk = wm.StartWin95(new WinClassicAddressBook(), "Address Book", Properties.Resources.WinClassicAddressBook, true, true);
-                    Program.AddTaskbarItem(appAdBk, appAdBk.Tag.ToString(), "Address Book", Properties.Resources.WinClassicAddressBook);
+                case "ie":
+                    if (TitleScreen.frm95.ie != null) { wm.StartInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", Properties.Resources.Win95Warning); return; }
+                    TitleScreen.frm95.ie = wm.StartWin95(new WinClassicIE4(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
+                    Program.AddTaskbarItem(TitleScreen.frm95.ie, TitleScreen.frm95.ie.Tag.ToString(), "Internet Explorer 4", Properties.Resources.Win95IconIE4);
+                    TitleScreen.frm95.ie.BringToFront();
+                    TitleScreen.frm95.ie.FormClosing += new FormClosingEventHandler(TitleScreen.frm95.InternetExplorer4_Closing);
 
-                    Program.nonimportantapps.Add(appAdBk);
-                    Program.nonimportantapps[Program.nonimportantapps.Count - 1].BringToFront();
-                    Program.nonimportantapps[Program.nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(Program.NonImportantApp_Closing);
+                    break;
+                case "web chat setup":
+                    Win95Installer inst = new Win95Installer("Web Chat 1998");
+                    inst.InstallCompleted += (sendr, args) => TitleScreen.frm95.WebChatToolStripMenuItem.Visible = true;
+                    WinClassic appInstaller = wm.StartWin95(inst, "Web Chat Setup", null, true, true);
+                    Program.AddTaskbarItem(appInstaller, appInstaller.Tag.ToString(), "Web Chat Setup", null);
+                    appInstaller.BringToFront();
+
+                    break;
+                case "ftp client setup":
+                    Win95Installer instFtp = new Win95Installer("FTP Client");
+                    instFtp.InstallCompleted += (sendr, args) => TitleScreen.frm95.FTPClientToolStripMenuItem.Visible = true;
+                    WinClassic appFtp = wm.StartWin95(instFtp, "FTP Client Setup", null, true, true);
+                    Program.AddTaskbarItem(appFtp, appFtp.Tag.ToString(), "FTP Client Setup", null);
+                    appFtp.BringToFront();
+
+                    break;
+                case "iebrokeninstaller":
+                    wm.StartInfobox95("Internet Explorer Installation", "Installation Failed: The INF file was not found", Properties.Resources.Win95Error);
+
+                    break;
+                case "addressbook":
+                    wm.StartInfobox95("Win32 Error", "This is not a valid Win32 Application.", Properties.Resources.Win95Error);
 
                     break;
             }
-            }
+        }
 
         string ReturnType(string extension) {
             string returnVal = "";

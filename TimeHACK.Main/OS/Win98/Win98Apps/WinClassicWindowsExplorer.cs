@@ -22,7 +22,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         public string onlyViewExtension = "";
 
         string ToReplaceWith = ProfileDirectory;
-        string CurrentDirectory = ProfileMyComputerDirectory;
+        public string CurrentDirectory = ProfileMyComputerDirectory;
         string OldLabelText;
         string CurrentCopyFile;
         int fileType = 6;
@@ -236,7 +236,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             diskView.Nodes.Add(new TreeNode("Desktop", 0, 0, desktoparray));
         }
 
-        void OpenFile(string fileDir)
+        public void OpenFile(string fileDir)
         {
             try
             {
@@ -284,6 +284,10 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     Program.nonimportantapps.Add(appWP);
                     Program.nonimportantapps[Program.nonimportantapps.Count - 1].BringToFront();
                     Program.nonimportantapps[Program.nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(Program.NonImportantApp_Closing);
+
+                    break;
+                case "iebrokeninstaller":
+                    wm.StartInfobox95("Internet Explorer Installation", "Installation Failed: The INF file was not found", Properties.Resources.Win95Error);
 
                     break;
                 case "addressbook":
