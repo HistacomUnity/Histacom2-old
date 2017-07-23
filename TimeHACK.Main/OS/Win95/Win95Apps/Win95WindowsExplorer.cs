@@ -227,7 +227,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         void OpenApplication(string appname)
         {
             switch (appname.ToLower())
-            {               
+            {
                 case "explorer":
                     Engine.Template.WinClassic app = wm.StartWin95(new Win95WindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
                     Program.AddTaskbarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
@@ -283,7 +283,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
                     break;
             }
-            }
+        }
 
         string ReturnType(string extension) {
             string returnVal = "";

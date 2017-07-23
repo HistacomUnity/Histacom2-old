@@ -49,7 +49,11 @@ namespace TimeHACK.Engine
             {
                 if (Path.GetFileName(dir) != "_data.info")
                 {
-                    theView.Items.Add(Path.GetFileName(dir), 12);
+                    int appIcon = 12;
+
+                    if (new FileInfo(dir).Extension == ".exe") appIcon = 8;
+
+                    theView.Items.Add(Path.GetFileName(dir), appIcon);
                     theView.FindItemWithText(Path.GetFileName(dir)).Tag = dir;
                 }              
             }
