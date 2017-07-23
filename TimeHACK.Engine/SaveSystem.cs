@@ -236,7 +236,7 @@ namespace TimeHACK.Engine
 
                         // There is no "The Microsoft Network" folder!
 
-                        if (Directory.Exists(Path.Combine(ProfileProgramsDirectory, "The Microsoft Network"))) Directory.Delete(Path.Combine(ProfileProgramsDirectory, "The Microsoft Network"));
+                        if (Directory.Exists(Path.Combine(ProfileProgramsDirectory, "The Microsoft Network"))) Directory.Delete(Path.Combine(ProfileProgramsDirectory, "The Microsoft Network"), true);
                     }
                     break;
             }
