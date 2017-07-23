@@ -301,7 +301,7 @@ namespace TimeHACK.OS.Win98
                     {
                         // It is an actual file on the disk
 
-                        Win95WindowsExplorer we = new Win95WindowsExplorer();
+                        WinClassicWindowsExplorer we = new WinClassicWindowsExplorer();
 
                         // If it is a directory
 
