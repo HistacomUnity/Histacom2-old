@@ -51,9 +51,11 @@ namespace TimeHACK.OS.Win95
             this.SoundRecorderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.VolumeControlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.WindowsMediaPlayerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.SystemToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.DiskDefragmenterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ScanDiskToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.GamesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MinsweeperToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CalculatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HyperTerminalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ImagingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -107,9 +109,9 @@ namespace TimeHACK.OS.Win95
             this.NewToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.FolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TextDocumentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PropertiesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.desktopupdate = new System.Windows.Forms.Timer(this.components);
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.taskbar.SuspendLayout();
             this.clockPanel.SuspendLayout();
@@ -223,7 +225,7 @@ namespace TimeHACK.OS.Win95
             this.startmenuitems.Name = "startmenuitems";
             this.startmenuitems.Padding = new System.Windows.Forms.Padding(6, 2, 0, 0);
             this.startmenuitems.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.startmenuitems.Size = new System.Drawing.Size(145, 292);
+            this.startmenuitems.Size = new System.Drawing.Size(145, 311);
             this.startmenuitems.TabIndex = 0;
             this.startmenuitems.Text = "StartMenu";
             // 
@@ -263,7 +265,8 @@ namespace TimeHACK.OS.Win95
             this.AccessoriesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CommunicationsToolStripMenuItem,
             this.MultimediaToolStripMenuItem,
-            this.SystemToolsToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.GamesToolStripMenuItem,
             this.CalculatorToolStripMenuItem,
             this.HyperTerminalToolStripMenuItem,
             this.ImagingToolStripMenuItem,
@@ -377,41 +380,65 @@ namespace TimeHACK.OS.Win95
             this.WindowsMediaPlayerToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.WindowsMediaPlayerToolStripMenuItem.Text = "Windows Media Player";
             // 
-            // SystemToolsToolStripMenuItem
+            // toolStripMenuItem1
             // 
-            this.SystemToolsToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.SystemToolsToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
-            this.SystemToolsToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.SystemToolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.DiskDefragmenterToolStripMenuItem,
-            this.ScanDiskToolStripMenuItem});
-            this.SystemToolsToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicProgramItem;
-            this.SystemToolsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SystemToolsToolStripMenuItem.Name = "SystemToolsToolStripMenuItem";
-            this.SystemToolsToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
-            this.SystemToolsToolStripMenuItem.Text = "System Tools";
+            this.toolStripMenuItem1.BackColor = System.Drawing.Color.Silver;
+            this.toolStripMenuItem1.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
+            this.toolStripMenuItem1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem2,
+            this.toolStripMenuItem3});
+            this.toolStripMenuItem1.Image = global::TimeHACK.Properties.Resources.WinClassicProgramItem;
+            this.toolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(181, 28);
+            this.toolStripMenuItem1.Text = "System Tools";
             // 
-            // DiskDefragmenterToolStripMenuItem
+            // toolStripMenuItem2
             // 
-            this.DiskDefragmenterToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.DiskDefragmenterToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
-            this.DiskDefragmenterToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.DiskDefragmenterToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("DiskDefragmenterToolStripMenuItem.Image")));
-            this.DiskDefragmenterToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.DiskDefragmenterToolStripMenuItem.Name = "DiskDefragmenterToolStripMenuItem";
-            this.DiskDefragmenterToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
-            this.DiskDefragmenterToolStripMenuItem.Text = "Disk Defragmenter";
+            this.toolStripMenuItem2.BackColor = System.Drawing.Color.Silver;
+            this.toolStripMenuItem2.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
+            this.toolStripMenuItem2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.toolStripMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem2.Image")));
+            this.toolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(172, 22);
+            this.toolStripMenuItem2.Text = "Disk Defragmenter";
             // 
-            // ScanDiskToolStripMenuItem
+            // toolStripMenuItem3
             // 
-            this.ScanDiskToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.ScanDiskToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
-            this.ScanDiskToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ScanDiskToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ScanDiskToolStripMenuItem.Image")));
-            this.ScanDiskToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ScanDiskToolStripMenuItem.Name = "ScanDiskToolStripMenuItem";
-            this.ScanDiskToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
-            this.ScanDiskToolStripMenuItem.Text = "ScanDisk";
+            this.toolStripMenuItem3.BackColor = System.Drawing.Color.Silver;
+            this.toolStripMenuItem3.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
+            this.toolStripMenuItem3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.toolStripMenuItem3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem3.Image")));
+            this.toolStripMenuItem3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(172, 22);
+            this.toolStripMenuItem3.Text = "ScanDisk";
+            // 
+            // GamesToolStripMenuItem
+            // 
+            this.GamesToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.GamesToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
+            this.GamesToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.GamesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MinsweeperToolStripMenuItem});
+            this.GamesToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicProgramItem;
+            this.GamesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.GamesToolStripMenuItem.Name = "GamesToolStripMenuItem";
+            this.GamesToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
+            this.GamesToolStripMenuItem.Text = "Games";
+            // 
+            // MinsweeperToolStripMenuItem
+            // 
+            this.MinsweeperToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.MinsweeperToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
+            this.MinsweeperToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.MinsweeperToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.minsweeper_logo;
+            this.MinsweeperToolStripMenuItem.Name = "MinsweeperToolStripMenuItem";
+            this.MinsweeperToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.MinsweeperToolStripMenuItem.Text = "Minesweeper";
+            this.MinsweeperToolStripMenuItem.Click += new System.EventHandler(this.MinsweeperToolStripMenuItem_Click);
             // 
             // CalculatorToolStripMenuItem
             // 
@@ -976,7 +1003,7 @@ namespace TimeHACK.OS.Win95
             this.FolderToolStripMenuItem,
             this.TextDocumentToolStripMenuItem});
             this.NewToolStripMenuItem1.Name = "NewToolStripMenuItem1";
-            this.NewToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.NewToolStripMenuItem1.Size = new System.Drawing.Size(127, 22);
             this.NewToolStripMenuItem1.Text = "New";
             // 
             // FolderToolStripMenuItem
@@ -995,11 +1022,19 @@ namespace TimeHACK.OS.Win95
             this.TextDocumentToolStripMenuItem.Text = "Text Document";
             this.TextDocumentToolStripMenuItem.Click += new System.EventHandler(this.TextDocumentToolStripMenuItem_Click);
             // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
             // PropertiesToolStripMenuItem1
             // 
             this.PropertiesToolStripMenuItem1.BackColor = System.Drawing.Color.Silver;
             this.PropertiesToolStripMenuItem1.Name = "PropertiesToolStripMenuItem1";
-            this.PropertiesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.PropertiesToolStripMenuItem1.Size = new System.Drawing.Size(127, 22);
             this.PropertiesToolStripMenuItem1.Text = "Properties";
             this.PropertiesToolStripMenuItem1.Click += new System.EventHandler(this.PropertiesToolStripMenuItem1_Click);
             // 
@@ -1008,14 +1043,6 @@ namespace TimeHACK.OS.Win95
             this.desktopupdate.Enabled = true;
             this.desktopupdate.Interval = 10000;
             this.desktopupdate.Tick += new System.EventHandler(this.desktopupdate_Tick);
-            // 
-            // deleteToolStripMenuItem
-            // 
-            this.deleteToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.deleteToolStripMenuItem.Text = "Delete";
-            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // Windows95
             // 
@@ -1069,9 +1096,8 @@ namespace TimeHACK.OS.Win95
         internal System.Windows.Forms.ToolStripMenuItem SoundRecorderToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem VolumeControlToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem WindowsMediaPlayerToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem SystemToolsToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem DiskDefragmenterToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem ScanDiskToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem GamesToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem MinsweeperToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem CalculatorToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem HyperTerminalToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem ImagingToolStripMenuItem;
@@ -1131,5 +1157,8 @@ namespace TimeHACK.OS.Win95
         private System.Windows.Forms.ToolStripMenuItem iE4TestToolStripMenuItem;
         private System.Windows.Forms.Timer desktopupdate;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        internal System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        internal System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
     }
 }

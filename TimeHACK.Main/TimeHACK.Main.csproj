@@ -162,6 +162,8 @@
     <Compile Include="OS\Win95\Win95Apps\IE4Sites\IE4Start.Designer.cs">
       <DependentUpon>IE4Start.cs</DependentUpon>
     </Compile>
+    <Compile Include="OS\Win95\Win95Apps\MineSweeper\Game.cs" />
+    <Compile Include="OS\Win95\Win95Apps\MineSweeper\Square.cs" />
     <Compile Include="OS\Win95\Win95Apps\Story\Hack1.cs" />
     <Compile Include="OS\Win95\Win95Apps\Story\Hack2.cs" />
     <Compile Include="OS\Win95\Win95Apps\TempIE4.cs">
@@ -187,6 +189,12 @@
     </Compile>
     <Compile Include="OS\Win95\Win95Apps\WinClassicFTPClient.Designer.cs">
       <DependentUpon>WinClassicFTPClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\MineSweeper\WinClassicMinesweeper.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\MineSweeper\WinClassicMinesweeper.Designer.cs">
+      <DependentUpon>WinClassicMinesweeper.cs</DependentUpon>
     </Compile>
     <Compile Include="OS\Win95\Win95Apps\WinClassicTerminal.cs">
       <SubType>UserControl</SubType>
@@ -361,6 +369,9 @@
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicFTPClient.resx">
       <DependentUpon>WinClassicFTPClient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\MineSweeper\WinClassicMinesweeper.resx">
+      <DependentUpon>WinClassicMinesweeper.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicTerminal.resx">
       <DependentUpon>WinClassicTerminal.cs</DependentUpon>
     </EmbeddedResource>
@@ -501,6 +512,10 @@
     <None Include="Resources\ie4_hsplitter.png" />
     <None Include="Resources\ie4_forward.png" />
     <None Include="Resources\ie4_back.png" />
+    <None Include="Resources\minsweeper smile.PNG" />
+    <None Include="Resources\minsweeper flag.PNG" />
+    <None Include="Resources\minsweeper sad.PNG" />
+    <None Include="Resources\minsweeper logo.jpg" />
     <Content Include="Resources\modem_dial.wav" />
     <None Include="Resources\MS-DOS-logo-1.png" />
     <None Include="Resources\msdosprompt.png" />
