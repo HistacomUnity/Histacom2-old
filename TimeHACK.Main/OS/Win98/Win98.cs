@@ -516,7 +516,7 @@ namespace TimeHACK.OS.Win98
             }
             else
             {
-                SaveDirectoryInfo(Path.Combine(ProfileWindowsDirectory, "Desktop", "New Folder"), false, "New folder", true);
+                SaveDirectoryInfo(Path.Combine(ProfileWindowsDirectory, "Desktop"), "New Folder", false, "New folder", true);
             }
         }
 

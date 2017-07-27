@@ -655,7 +655,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             else
             {
                 Directory.CreateDirectory(Path.Combine(CurrentDirectory, "New Folder"));
-                SaveDirectoryInfo(Path.Combine(CurrentDirectory, "New Folder"), false, "New Folder", true);
+                SaveDirectoryInfo(CurrentDirectory, "New Folder", false, "New Folder", true);
 
                 RefreshAll();
             }
@@ -789,7 +789,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
                                 File.Delete(Path.Combine(CurrentDirectory, setText, "_data.info"));
 
-                                SaveDirectoryInfo(Path.Combine(CurrentDirectory, setText), false, $"{setText}", true);
+                                SaveDirectoryInfo(CurrentDirectory, setText, false, $"{setText}", true);
                             }
                             else
                             {

@@ -105,7 +105,7 @@ namespace TimeHACK.Engine
         {
             get
             {
-                return Path.Combine(ProfileMyComputerDirectory, "Program Files");
+                return Path.Combine(ProfileMyComputerDirectory, "Prog");
             }
         }
 
@@ -162,15 +162,15 @@ namespace TimeHACK.Engine
             if (!Directory.Exists(ProfileFileSystemDirectory))
                 Directory.CreateDirectory(ProfileFileSystemDirectory);
 
-            SaveDirectoryInfo(ProfileFileSystemDirectory, false, "My Computer", false);            
-            SaveDirectoryInfo(ProfileMyComputerDirectory, false, "Win95 (C:)", true);
-            if (CurrentSave.CurrentOS == "95" || CurrentSave.CurrentOS == "98") SaveDirectoryInfo(ProfileDocumentsDirectory, false, "My Documents", true);
-            if (CurrentSave.CurrentOS == "2000" || CurrentSave.CurrentOS == "ME") SaveDirectoryInfo(ProfileSettingsDirectory, false, "Documents and Settings", true);                    
-            SaveDirectoryInfo(ProfileProgramsDirectory, true, "Program Files", true);
-            SaveDirectoryInfo(Path.Combine(ProfileProgramsDirectory, "Accessories"), false, "Accessories", true);
-            SaveDirectoryInfo(Path.Combine(ProfileProgramsDirectory, "Internet Explorer"), true, "Internet Explorer", true);
-            SaveDirectoryInfo(Path.Combine(ProfileProgramsDirectory, "The Microsoft Network"), true, "The Microsoft Network", true);
-            SaveDirectoryInfo(ProfileWindowsDirectory, true, "Windows", true);
+            SaveDirectoryInfo(ProfileDirectory, "folders", false, "My Computer", false);            
+            SaveDirectoryInfo(ProfileFileSystemDirectory, "CDrive", false, "Win95 (C:)", true);
+            if (CurrentSave.CurrentOS == "95" || CurrentSave.CurrentOS == "98") SaveDirectoryInfo(ProfileMyComputerDirectory, "Doc", false, "My Documents", true);
+            if (CurrentSave.CurrentOS == "2000" || CurrentSave.CurrentOS == "ME") SaveDirectoryInfo(ProfileMyComputerDirectory, "Settings", false, "Documents and Settings", true);                    
+            SaveDirectoryInfo(ProfileMyComputerDirectory, "Prog", true, "Program Files", true);
+            SaveDirectoryInfo(ProfileProgramsDirectory, "Accessories", false, "Accessories", true);
+            SaveDirectoryInfo(ProfileProgramsDirectory, "Internet Explorer", true, "Internet Explorer", true);
+            SaveDirectoryInfo(ProfileProgramsDirectory, "The Microsoft Network", true, "The Microsoft Network", true);
+            SaveDirectoryInfo(ProfileMyComputerDirectory, "Win", true, "Windows", true);
 
             CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Accessories"), "wordpad.exe", "wordpad");
             CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Internet Explorer"), "ie20.exe", "ie");
@@ -182,13 +182,13 @@ namespace TimeHACK.Engine
 
         public static void CreateWindowsDirectory()
         {
-            SaveDirectoryInfo(Path.Combine(ProfileWindowsDirectory, "System"), true, "System", true);
-            SaveDirectoryInfo(Path.Combine(ProfileWindowsDirectory, "Config"), true, "Config", true);
-            SaveDirectoryInfo(Path.Combine(ProfileWindowsDirectory, "Cursors"), true, "Cursors", true);
-            SaveDirectoryInfo(Path.Combine(ProfileWindowsDirectory, "Fonts"), true, "Fonts", true);
-            SaveDirectoryInfo(Path.Combine(ProfileWindowsDirectory, "Help"), true, "Help", true);
-            SaveDirectoryInfo(Path.Combine(ProfileWindowsDirectory, "Temp"), true, "Temp", true);
-            SaveDirectoryInfo(Path.Combine(ProfileWindowsDirectory, "Desktop"), true, "Desktop", true);
+            SaveDirectoryInfo(ProfileWindowsDirectory, "System", true, "System", true);
+            SaveDirectoryInfo(ProfileWindowsDirectory, "Config", true, "Config", true);
+            SaveDirectoryInfo(ProfileWindowsDirectory, "Cursors", true, "Cursors", true);
+            SaveDirectoryInfo(ProfileWindowsDirectory, "Fonts", true, "Fonts", true);
+            SaveDirectoryInfo(ProfileWindowsDirectory, "Help", true, "Help", true);
+            SaveDirectoryInfo(ProfileWindowsDirectory, "Temp", true, "Temp", true);
+            SaveDirectoryInfo(ProfileWindowsDirectory, "Desktop", true, "Desktop", true);
 
             CreateWindowsFile(ProfileWindowsDirectory, "calc.exe", "calc");
             CreateWindowsFile(ProfileWindowsDirectory, "explorer.exe", "explorer");
@@ -215,11 +215,7 @@ namespace TimeHACK.Engine
                 dos = dosb.ToArray();
             }
             dos[1] = dos[1].Substring(0, 3);
-            Debug.Print(dos[0].Length.ToString());
-            if (dos[0].Length > 8)
-            {
-                dos[0] = dos[0].Substring(0, 6) + "~1";
-            }
+            if (dos[0].Length > 8) dos[0] = dos[0].Substring(0, 6) + "~1";
 
             newfile.DOSName = dos[0] + "." + dos[1];
 
@@ -245,11 +241,11 @@ namespace TimeHACK.Engine
 
                         // Rename the C Drive to Win98
 
-                        SaveDirectoryInfo(ProfileMyComputerDirectory, false, "Win98 (C:)", true);
+                        SaveDirectoryInfo(ProfileFileSystemDirectory, "CDrive", false, "Win98 (C:)", true);
 
                         // Add Address Book into existance!
 
-                        SaveDirectoryInfo(Path.Combine(ProfileProgramsDirectory, "Outlook Express"), false, "Outlook Express", true);
+                        SaveDirectoryInfo(ProfileProgramsDirectory, "Outlook Express", false, "Outlook Express", true);
                         CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Outlook Express"), "WAB.exe", "addressbook");
 
                         // There is no "The Microsoft Network" folder!
@@ -260,10 +256,10 @@ namespace TimeHACK.Engine
             }
         }
 
-        public static void SaveDirectoryInfo(string directory, bool isProtected, string label, bool allowback)
+        public static void SaveDirectoryInfo(string parent, string dirname, bool isProtected, string label, bool allowback)
         {
-            if (!Directory.Exists(directory))
-                Directory.CreateDirectory(directory);
+            if (!Directory.Exists(Path.Combine(parent, dirname)))
+                Directory.CreateDirectory(Path.Combine(parent, dirname));
 
             FileSystemFolderInfo info = new FileSystemFolderInfo();
 
@@ -274,10 +270,22 @@ namespace TimeHACK.Engine
             if (info.DOSLabel.Length > 8) info.DOSLabel = info.DOSLabel.Substring(0, 6) + "~1";
             info.AllowBack = allowback;
             info.Files = new List<THFileInfo>(256);
+            info.SubDirs = new List<THDirInfo>(256);
+
+            if (parent != ProfileDirectory)
+            {
+                FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(parent, "_data.info")));
+                THDirInfo thd = new THDirInfo();
+                thd.Name = info.Label;
+                thd.DOSName = info.DOSLabel;
+                fsfi.SubDirs.Add(thd);
+
+                File.WriteAllText(Path.Combine(parent, "_data.info"), JsonConvert.SerializeObject(fsfi, Formatting.Indented));
+            }
 
             string toWrite = JsonConvert.SerializeObject(info, Formatting.Indented);
 
-            File.WriteAllText(Path.Combine(directory, "_data.info"), toWrite);
+            File.WriteAllText(Path.Combine(Path.Combine(parent, dirname), "_data.info"), toWrite);
         }
 
 #if BINARY_SAVE
@@ -648,6 +656,7 @@ namespace TimeHACK.Engine
         public string DOSLabel { get; set; }
         public bool AllowBack { get; set; }
         public List<THFileInfo> Files { get; set; }
+        public List<THDirInfo> SubDirs { get; set; }
     }
 
     public class THFileInfo
@@ -655,5 +664,11 @@ namespace TimeHACK.Engine
         public string Name { get; set; }
         public string DOSName { get; set; }
         public int FileIcon { get; set; }
+    }
+
+    public class THDirInfo
+    {
+        public string Name { get; set; }
+        public string DOSName { get; set; }
     }
 }

@@ -32,24 +32,24 @@ namespace TimeHACK.Engine
             return Val;
         }
 
-        public static void RefreshDesktopIcons(ListViewItem[] baseIcons, ref ListView theView, string theDirectory)
+        public static void RefreshDesktopIcons(ListViewItem[] baseIcons, ref ListView view, string folder)
         {
-            theView.Items.Clear(); // This resets it to it's default
-            theView.Items.AddRange(baseIcons);
+            view.Items.Clear(); // This resets it to it's default
+            view.Items.AddRange(baseIcons);
 
-            foreach (string dir in Directory.GetDirectories(theDirectory))
+            foreach (string dir in Directory.GetDirectories(folder))
             {
                 string label = ReadDataFile(dir);
-                theView.Items.Add(label ?? Path.GetFileName(dir), 1);
-                theView.FindItemWithText(Path.GetFileName(dir)).Tag = dir;
+                view.Items.Add(label ?? Path.GetFileName(dir), 1);
+                view.FindItemWithText(Path.GetFileName(dir)).Tag = dir;
             }
 
-            foreach (string dir in Directory.GetFiles(theDirectory))
+            foreach (string dir in Directory.GetFiles(folder))
             {
                 if (Path.GetFileName(dir) != "_data.info")
                 {
                     THFileInfo file = new THFileInfo();
-                    FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(theDirectory, "_data.info")));
+                    FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(folder, "_data.info")));
                     foreach (THFileInfo f in fsfi.Files)
                     {
                         if (f.Name.ToLower() == Path.GetFileName(dir).ToLower())
@@ -60,8 +60,11 @@ namespace TimeHACK.Engine
 
                     if (new FileInfo(dir).Extension == ".exe" && file.FileIcon == 8) file.FileIcon = 10;
 
-                    theView.Items.Add(Path.GetFileName(dir), file.FileIcon);
-                    theView.FindItemWithText(Path.GetFileName(dir)).Tag = dir;
+                    view.Items.Add(Path.GetFileName(dir), file.FileIcon);
+                    view.FindItemWithText(Path.GetFileName(dir)).Tag = dir;
+                    string toWrite = JsonConvert.SerializeObject(fsfi, Formatting.Indented);
+
+                    File.WriteAllText(Path.Combine(folder, "_data.info"), toWrite);
                 }              
             }
         }

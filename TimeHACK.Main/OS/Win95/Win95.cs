@@ -518,7 +518,7 @@ namespace TimeHACK.OS.Win95
             }
             else
             {
-                SaveDirectoryInfo(Path.Combine(ProfileWindowsDirectory, "Desktop", "New Folder"), false, "New folder", true);
+                SaveDirectoryInfo(Path.Combine(ProfileWindowsDirectory, "Desktop"), "New Folder", false, "New folder", true);
                 desktopupdate_Tick(null, null); // Update the desktop Icons
             }
         }
