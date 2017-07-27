@@ -203,18 +203,29 @@ namespace TimeHACK.Engine
             UpdateDirectoryInfo(filepath, info);
         }
 
-        [DllImport("kernel32.dll", SetLastError = true)]
-        private static extern int GetShortPathName(String pathName, StringBuilder shortName, int cbShortName);
-
         public static void UpdateDirectoryInfo(string path, THFileInfo newfile)
         {
-            StringBuilder sb = new StringBuilder(300);
-            GetShortPathName(newfile.Name, sb, 300);
-            Regex rgx = new Regex(".{8}\\.[A-Z]{3}");
-            newfile.DOSName = Regex.Match(sb.ToString(), rgx.ToString(), RegexOptions.RightToLeft).ToString();
+            newfile.DOSName = newfile.Name.ToUpper().Replace("*", "").Replace("+", "").Replace(":", "").Replace(";", "").Replace(" ", "");
+            string[] dos = newfile.DOSName.Split('.');
+
+            if (dos.Count() > 2)
+            {
+                List<string> dosb = dos.ToList();
+                dosb.RemoveRange(1, dos.Count() - 2);
+                dos = dosb.ToArray();
+            }
+            dos[1] = dos[1].Substring(0, 3);
+            Debug.Print(dos[0].Length.ToString());
+            if (dos[0].Length > 8)
+            {
+                dos[0] = dos[0].Substring(0, 6) + "~1";
+            }
+
+            newfile.DOSName = dos[0] + "." + dos[1];
+
             if (File.ReadAllText(Path.Combine(path, "_data.info")).Contains(newfile.DOSName)) return;
             FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(path, "_data.info")));
-            fsfi.Files[fsfi.Files.Count()] = newfile;
+            fsfi.Files.Add(newfile);
 
             string toWrite = JsonConvert.SerializeObject(fsfi, Formatting.Indented);
 
@@ -259,7 +270,7 @@ namespace TimeHACK.Engine
             info.IsProtected = isProtected;
             info.Label = label;
             info.AllowBack = allowback;
-            info.Files = new THFileInfo[200];
+            info.Files = new List<THFileInfo>(256);
 
             string toWrite = JsonConvert.SerializeObject(info, Formatting.Indented);
 
@@ -632,7 +643,7 @@ namespace TimeHACK.Engine
         public bool IsProtected { get; set; }
         public string Label { get; set; }
         public bool AllowBack { get; set; }
-        public THFileInfo[] Files { get; set; }
+        public List<THFileInfo> Files { get; set; }
     }
 
     public class THFileInfo

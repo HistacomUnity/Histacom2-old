@@ -225,7 +225,7 @@ namespace TimeHACK.OS.Win95
             this.startmenuitems.Name = "startmenuitems";
             this.startmenuitems.Padding = new System.Windows.Forms.Padding(6, 2, 0, 0);
             this.startmenuitems.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.startmenuitems.Size = new System.Drawing.Size(145, 311);
+            this.startmenuitems.Size = new System.Drawing.Size(145, 292);
             this.startmenuitems.TabIndex = 0;
             this.startmenuitems.Text = "StartMenu";
             // 
@@ -436,7 +436,7 @@ namespace TimeHACK.OS.Win95
             this.MinsweeperToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.MinsweeperToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicMinesweeper;
             this.MinsweeperToolStripMenuItem.Name = "MinsweeperToolStripMenuItem";
-            this.MinsweeperToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.MinsweeperToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.MinsweeperToolStripMenuItem.Text = "Minesweeper";
             this.MinsweeperToolStripMenuItem.Click += new System.EventHandler(this.MinsweeperToolStripMenuItem_Click);
             // 
@@ -967,7 +967,6 @@ namespace TimeHACK.OS.Win95
             this.desktopImages.Images.SetKeyName(9, "WinClassicFolder.png");
             this.desktopImages.Images.SetKeyName(10, "WinClassicApp.png");
             this.desktopImages.Images.SetKeyName(11, "WinClassicSetup.png");
-            this.desktopImages.Images.SetKeyName(12, "blank-file-Windows95Icon.gif");
             // 
             // desktopicons
             // 
