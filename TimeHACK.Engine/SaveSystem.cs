@@ -269,6 +269,9 @@ namespace TimeHACK.Engine
 
             info.IsProtected = isProtected;
             info.Label = label;
+
+            info.DOSLabel = info.Label.ToUpper().Replace("*", "").Replace("+", "").Replace(":", "").Replace(";", "").Replace(".", "").Replace(" ", "");
+            if (info.DOSLabel.Length > 8) info.DOSLabel = info.DOSLabel.Substring(0, 6) + "~1";
             info.AllowBack = allowback;
             info.Files = new List<THFileInfo>(256);
 
@@ -642,6 +645,7 @@ namespace TimeHACK.Engine
     {
         public bool IsProtected { get; set; }
         public string Label { get; set; }
+        public string DOSLabel { get; set; }
         public bool AllowBack { get; set; }
         public List<THFileInfo> Files { get; set; }
     }
