@@ -14,21 +14,20 @@ namespace TimeHACK.Engine
         public static string ReadDataFile(string reqDirectory, bool returnYesIfProtected = false)
         {
             string Val = "";
-            string directoryFileInfo;
-            directoryFileInfo = File.ReadAllText(Path.Combine(reqDirectory, "_data.info"));
+            string directoryFileInfo = File.ReadAllText(Path.Combine(reqDirectory, "_data.info"));
             FileSystemFolderInfo toRead = new FileSystemFolderInfo();
             toRead = JsonConvert.DeserializeObject<FileSystemFolderInfo>(directoryFileInfo);
 
             if (returnYesIfProtected == true)
             {
-                if (toRead.Isprotected == true)
+                if (toRead.IsProtected == true)
                 {
                     return "yes";
                 }
             }
             else
             {
-                return toRead.label;
+                return toRead.Label;
             }
             return Val;
         }
@@ -49,11 +48,19 @@ namespace TimeHACK.Engine
             {
                 if (Path.GetFileName(dir) != "_data.info")
                 {
-                    int appIcon = 12;
+                    THFileInfo file = new THFileInfo();
+                    FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(theDirectory, "_data.info")));
+                    foreach (THFileInfo f in fsfi.Files)
+                    {
+                        if (f.Name.ToLower() == Path.GetFileName(dir).ToLower())
+                        {
+                            file = f; break;
+                        }
+                    }
 
-                    if (new FileInfo(dir).Extension == ".exe") appIcon = 8;
+                    if (new FileInfo(dir).Extension == ".exe" && file.FileIcon == 8) file.FileIcon = 10;
 
-                    theView.Items.Add(Path.GetFileName(dir), appIcon);
+                    theView.Items.Add(Path.GetFileName(dir), file.FileIcon);
                     theView.FindItemWithText(Path.GetFileName(dir)).Tag = dir;
                 }              
             }

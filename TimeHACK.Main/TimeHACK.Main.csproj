@@ -572,6 +572,7 @@
     <None Include="Resources\WinClassic\Win95ComputerIcon.png" />
     <None Include="Resources\WinClassic\Win95NetworkIcon.png" />
     <None Include="Resources\WinClassic\Win95RecycleIcon.png" />
+    <None Include="Resources\WinClassic\Win95File.png" />
     <Content Include="Resources\WinClassic\Win95SideBar.png" />
     <Content Include="Resources\WinClassic\Win95Start.wav" />
     <None Include="Resources\WinClassic\Win95Warning.png" />
@@ -582,6 +583,7 @@
     <None Include="Resources\WinClassic\Win98Computer.png" />
     <None Include="Resources\WinClassic\Win98Start.wav" />
     <None Include="Resources\WinClassic\Win98Stop.WAV" />
+    <None Include="Resources\WinClassic\WinClassicApp.png" />
     <Content Include="Resources\WinClassic\WinClassicClock.png" />
     <Content Include="Resources\WinClassic\WinClassicComputer.png" />
     <None Include="Resources\WinClassic\WinClassicCopy.png" />
@@ -599,6 +601,7 @@
     <Content Include="Resources\WinClassic\WinClassicIE4.png" />
     <Content Include="Resources\WinClassic\WinClassicInbox.png" />
     <None Include="Resources\WinClassic\WinClassicInstallPic.png" />
+    <None Include="Resources\WinClassic\WinClassicMinesweeper.png" />
     <Content Include="Resources\WinClassic\WinClassicMSN.png" />
     <Content Include="Resources\WinClassic\WinClassicNetworking.png" />
     <None Include="Resources\WinClassic\WinClassicNotepad.png" />

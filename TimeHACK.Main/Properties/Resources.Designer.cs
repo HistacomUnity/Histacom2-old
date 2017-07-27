@@ -378,16 +378,6 @@ namespace TimeHACK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap minsweeper_logo {
-            get {
-                object obj = ResourceManager.GetObject("minsweeper logo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap minsweeper_sad {
             get {
                 object obj = ResourceManager.GetObject("minsweeper_sad", resourceCulture);
@@ -400,7 +390,7 @@ namespace TimeHACK.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap minsweeper_smile {
             get {
-                object obj = ResourceManager.GetObject("minsweeper smile", resourceCulture);
+                object obj = ResourceManager.GetObject("minsweeper_smile", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -787,6 +777,16 @@ namespace TimeHACK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Win95File {
+            get {
+                object obj = ResourceManager.GetObject("Win95File", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Win95HardDiskIcon {
             get {
                 object obj = ResourceManager.GetObject("Win95HardDiskIcon", resourceCulture);
@@ -1024,6 +1024,16 @@ namespace TimeHACK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap WinClassicApp {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicApp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WinClassicCalc {
             get {
                 object obj = ResourceManager.GetObject("WinClassicCalc", resourceCulture);
@@ -1197,6 +1207,16 @@ namespace TimeHACK.Properties {
         internal static System.Drawing.Bitmap WinClassicInstallPic {
             get {
                 object obj = ResourceManager.GetObject("WinClassicInstallPic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WinClassicMinesweeper {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicMinesweeper", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -93,14 +93,14 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
             if (returnYesIfProtected == true)
             {
-                if (toRead.Isprotected == true)
+                if (toRead.IsProtected == true)
                 {
                     return "yes";
                 }
             }
             else
             {
-                return toRead.label;
+                return toRead.Label;
             }
             return Val;
         }

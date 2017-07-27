@@ -14,6 +14,9 @@ using Newtonsoft.Json;
 using System.Diagnostics;
 using System.Windows.Forms;
 using System.Runtime.CompilerServices;
+using System.Drawing;
+using System.Text.RegularExpressions;
+using System.Runtime.InteropServices;
 
 namespace TimeHACK.Engine
 {
@@ -102,7 +105,7 @@ namespace TimeHACK.Engine
         {
             get
             {
-                return Path.Combine(ProfileMyComputerDirectory, "Prog");
+                return Path.Combine(ProfileMyComputerDirectory, "Program Files");
             }
         }
 
@@ -169,10 +172,10 @@ namespace TimeHACK.Engine
             SaveDirectoryInfo(Path.Combine(ProfileProgramsDirectory, "The Microsoft Network"), true, "The Microsoft Network", true);
             SaveDirectoryInfo(ProfileWindowsDirectory, true, "Windows", true);
 
-            CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Accessories", "wordpad.exe"), "wordpad");
-            CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Internet Explorer", "ie20.exe"), "ie");
-            CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Internet Explorer", "lnfinst.exe"), "iebrokeninstaller");
-            CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "The Microsoft Network", "msnver.txt"), "5900");
+            CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Accessories"), "wordpad.exe", "wordpad");
+            CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Internet Explorer"), "ie20.exe", "ie");
+            CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Internet Explorer"), "lnfinst.exe", "iebrokeninstaller");
+            CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "The Microsoft Network"), "msnver.txt", "5900");
             
             CreateWindowsDirectory();
         }
@@ -187,13 +190,35 @@ namespace TimeHACK.Engine
             SaveDirectoryInfo(Path.Combine(ProfileWindowsDirectory, "Temp"), true, "Temp", true);
             SaveDirectoryInfo(Path.Combine(ProfileWindowsDirectory, "Desktop"), true, "Desktop", true);
 
-            CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "calc.exe"), "calc");
-            CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "explorer.exe"), "explorer");
+            CreateWindowsFile(ProfileWindowsDirectory, "calc.exe", "calc");
+            CreateWindowsFile(ProfileWindowsDirectory, "explorer.exe", "explorer");
         }
 
-        public static void CreateWindowsFile(string filepath, string contents)
+        public static void CreateWindowsFile(string filepath, string filename, string contents, int fileicon = 8)
         {
-            File.WriteAllText(filepath, contents);
+            File.WriteAllText(Path.Combine(filepath, filename), contents);
+            THFileInfo info = new THFileInfo();
+            info.Name = filename;
+            info.FileIcon = fileicon;
+            UpdateDirectoryInfo(filepath, info);
+        }
+
+        [DllImport("kernel32.dll", SetLastError = true)]
+        private static extern int GetShortPathName(String pathName, StringBuilder shortName, int cbShortName);
+
+        public static void UpdateDirectoryInfo(string path, THFileInfo newfile)
+        {
+            StringBuilder sb = new StringBuilder(300);
+            GetShortPathName(newfile.Name, sb, 300);
+            Regex rgx = new Regex(".{8}\\.[A-Z]{3}");
+            newfile.DOSName = Regex.Match(sb.ToString(), rgx.ToString(), RegexOptions.RightToLeft).ToString();
+            if (File.ReadAllText(Path.Combine(path, "_data.info")).Contains(newfile.DOSName)) return;
+            FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(path, "_data.info")));
+            fsfi.Files[fsfi.Files.Count()] = newfile;
+
+            string toWrite = JsonConvert.SerializeObject(fsfi, Formatting.Indented);
+
+            File.WriteAllText(Path.Combine(path, "_data.info"), toWrite);
         }
 
         public static void UpgradeFileSystem(string oldOS, string newOS)
@@ -214,7 +239,7 @@ namespace TimeHACK.Engine
                         // Add Address Book into existance!
 
                         SaveDirectoryInfo(Path.Combine(ProfileProgramsDirectory, "Outlook Express"), false, "Outlook Express", true);
-                        CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Outlook Express", "WAB.exe"), "addressbook");
+                        CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Outlook Express"), "WAB.exe", "addressbook");
 
                         // There is no "The Microsoft Network" folder!
 
@@ -231,9 +256,10 @@ namespace TimeHACK.Engine
 
             FileSystemFolderInfo info = new FileSystemFolderInfo();
 
-            info.Isprotected = isProtected;
-            info.label = label;
-            info.allowback = allowback;
+            info.IsProtected = isProtected;
+            info.Label = label;
+            info.AllowBack = allowback;
+            info.Files = new THFileInfo[200];
 
             string toWrite = JsonConvert.SerializeObject(info, Formatting.Indented);
 
@@ -603,8 +629,16 @@ namespace TimeHACK.Engine
 
     public class FileSystemFolderInfo
     {
-        public bool Isprotected { get; set; }
-        public string label { get; set; }
-        public bool allowback { get; set; }
+        public bool IsProtected { get; set; }
+        public string Label { get; set; }
+        public bool AllowBack { get; set; }
+        public THFileInfo[] Files { get; set; }
+    }
+
+    public class THFileInfo
+    {
+        public string Name { get; set; }
+        public string DOSName { get; set; }
+        public int FileIcon { get; set; }
     }
 }

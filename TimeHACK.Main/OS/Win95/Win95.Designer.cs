@@ -434,7 +434,7 @@ namespace TimeHACK.OS.Win95
             this.MinsweeperToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.MinsweeperToolStripMenuItem.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
             this.MinsweeperToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.MinsweeperToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.minsweeper_logo;
+            this.MinsweeperToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicMinesweeper;
             this.MinsweeperToolStripMenuItem.Name = "MinsweeperToolStripMenuItem";
             this.MinsweeperToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.MinsweeperToolStripMenuItem.Text = "Minesweeper";
@@ -963,9 +963,9 @@ namespace TimeHACK.OS.Win95
             this.desktopImages.Images.SetKeyName(5, "WinClassicNetworking.png");
             this.desktopImages.Images.SetKeyName(6, "WinClassicOutlook.png");
             this.desktopImages.Images.SetKeyName(7, "WinClassicRecycle.png");
-            this.desktopImages.Images.SetKeyName(8, "WinClassicSetup.png");
-            this.desktopImages.Images.SetKeyName(9, "WinClassicSetup.png");
-            this.desktopImages.Images.SetKeyName(10, "WinClassicSetup.png");
+            this.desktopImages.Images.SetKeyName(8, "Win95File.png");
+            this.desktopImages.Images.SetKeyName(9, "WinClassicFolder.png");
+            this.desktopImages.Images.SetKeyName(10, "WinClassicApp.png");
             this.desktopImages.Images.SetKeyName(11, "WinClassicSetup.png");
             this.desktopImages.Images.SetKeyName(12, "blank-file-Windows95Icon.gif");
             // 
