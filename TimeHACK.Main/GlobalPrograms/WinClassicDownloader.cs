@@ -10,23 +10,16 @@ namespace TimeHACK.OS.Win95.Win95Apps
         public WinClassicDownloader()
         {
             InitializeComponent();
-
         }
 
-        private string DownloadSpeed(string str)
+        private string downloadSpeed()
         {
             Random rnd = new Random();
-            int dl1 = rnd.Next(7, 9);
-            int dl2 = rnd.Next(1, 9);
-            int dl3 = rnd.Next(1, 9);
-            string speed = dl1.ToString() + "." + dl2.ToString() + dl3.ToString();
-            return speed;
+            return rnd.Next(7, 9).ToString() + "." + rnd.Next(7, 9).ToString() + rnd.Next(7, 9).ToString();
         }
 
         int amountToDL = 100;
         int amountDLed = 0;
-        Windows95 Windows95 = new Windows95();
-
 
         private void WinClassicDownloader_Load(object sender, EventArgs e)
         {
@@ -37,11 +30,21 @@ namespace TimeHACK.OS.Win95.Win95Apps
         private void dlTimer_Tick(object sender, EventArgs e)
         {
             amountDLed = amountDLed + 8;
-            if(8 > amountToDL - amountDLed){
+            if (8 > amountToDL - amountDLed)
+            {
                 progBar.Value = 100;
-                amountLbl.Text = ("Downloaded " + amountDLed + " KB out of " + amountToDL + " KB");
+                amountLbl.Text = $"Downloaded {amountDLed} KB out of {amountToDL}";
 
-                if (appName.Text == "Downloading: Guess The Number")
+                switch (appName.Text)
+                {
+                    case "Downloading: FTP Client":
+                        CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop", "FTP Client setup.exe"), "ftp client setup");
+                        break;
+                    case "Downloading: Web Chat 1998":
+                        CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop", "Web Chat Setup.exe"), "web chat setup");
+                        break;
+                }
+                /* if (appName.Text == "Downloading: Guess The Number")
                 {
                     CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop", "Guess The Number Setup.exe"), "GuessTheNumber");
                 }
@@ -72,7 +75,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 if (appName.Text == "Downloading: FTP Client")
                 {
                     CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop", "FTP Client setup.exe"), "ftp client setup");
-                }
+                } */
                 ((Form)this.TopLevelControl).Close();
                 dlTimer.Stop();
             }
@@ -81,12 +84,12 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 progBar.Maximum = amountToDL;
                 progBar.Value = amountDLed;
             }
-            amountLbl.Text = ("Downloaded " + amountDLed + " KB out of " + amountToDL);
+            amountLbl.Text = $"Downloaded {amountDLed} KB out of {amountToDL}";
         }
 
         private void dlSpeed_Tick(object sender, EventArgs e)
         {
-            transferLbl.Text = ("Transfer speed: " + DownloadSpeed("") + " KB/s");
+            transferLbl.Text = $"Transfer speed: {downloadSpeed()} KB/s";
         }
     }
 }

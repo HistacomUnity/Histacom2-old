@@ -29,27 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.progBar = new TimeHACK.UI.ProgressBar();
             this.amountLbl = new System.Windows.Forms.Label();
             this.appName = new System.Windows.Forms.Label();
             this.locationLbl = new System.Windows.Forms.Label();
             this.transferLbl = new System.Windows.Forms.Label();
             this.dlTimer = new System.Windows.Forms.Timer(this.components);
             this.dlSpeed = new System.Windows.Forms.Timer(this.components);
+            this.progBar = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
-            // 
-            // progBar
-            // 
-            this.progBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.progBar.Location = new System.Drawing.Point(5, 29);
-            this.progBar.Name = "progBar";
-            this.progBar.Size = new System.Drawing.Size(290, 23);
-            this.progBar.ProgressColor = System.Drawing.Color.FromArgb(19, 36, 105);
-            this.progBar.Style = System.Windows.Forms.ProgressBarStyle.Blocks;
-            this.progBar.BlockWidth = 14;
-            this.progBar.BlockSpacing = 2;
-            this.progBar.TabIndex = 15;
             // 
             // amountLbl
             // 
@@ -98,10 +85,20 @@
             this.dlSpeed.Interval = 750;
             this.dlSpeed.Tick += new System.EventHandler(this.dlSpeed_Tick);
             // 
+            // progBar
+            // 
+            this.progBar.BackColor = System.Drawing.Color.Silver;
+            this.progBar.ForeColor = System.Drawing.Color.Navy;
+            this.progBar.Location = new System.Drawing.Point(6, 32);
+            this.progBar.Name = "progBar";
+            this.progBar.Size = new System.Drawing.Size(399, 23);
+            this.progBar.TabIndex = 15;
+            // 
             // WinClassicDownloader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Silver;
             this.Controls.Add(this.progBar);
             this.Controls.Add(this.amountLbl);
             this.Controls.Add(this.appName);
@@ -116,13 +113,12 @@
         }
 
         #endregion
-
-        internal TimeHACK.UI.ProgressBar progBar;
         internal System.Windows.Forms.Label amountLbl;
         internal System.Windows.Forms.Label appName;
         internal System.Windows.Forms.Label locationLbl;
         internal System.Windows.Forms.Label transferLbl;
         private System.Windows.Forms.Timer dlTimer;
         private System.Windows.Forms.Timer dlSpeed;
+        private System.Windows.Forms.ProgressBar progBar;
     }
 }
