@@ -38,7 +38,7 @@ namespace TimeHACK.OS.Win95
             AccessoriesToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             CommunicationsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             MultimediaToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
-            SystemToolsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            GamesToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             StartUpToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             MSDOSPromptToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             DocumentsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
@@ -570,6 +570,19 @@ namespace TimeHACK.OS.Win95
                     }                 
                 }
             }
+        }
+
+        private void MinsweeperToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WinClassic app = wm.StartWin95(new WinClassicMinesweeper(), "Minesweeper", Properties.Resources.minsweeper_logo, false, false);
+            AddTaskBarItem(app, app.Tag.ToString(), "Calculator", Properties.Resources.WinClassicCalc);
+
+            nonimportantapps.Add(app);
+            nonimportantapps[nonimportantapps.Count - 1].BringToFront();
+            nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
+
+            app.BringToFront();
+            startmenu.Hide();
         }
     }
     public class MyRenderer : ToolStripProfessionalRenderer
