@@ -10,6 +10,7 @@ namespace TimeHACK.Engine.Template
         public WinClassic()
         {
             InitializeComponent();
+            DoubleBuffered = true;
         }
 
         public System.Drawing.Font fnt;
@@ -17,7 +18,18 @@ namespace TimeHACK.Engine.Template
         public bool closeDisabled = false;
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int WM_SYSCOMMAND = 0x0112;
         public const int HT_CAPTION = 0x2;
+
+        private const int
+            HTLEFT = 10,
+            HTRIGHT = 11,
+            HTTOP = 12,
+            HTTOPLEFT = 13,
+            HTTOPRIGHT = 14,
+            HTBOTTOM = 15,
+            HTBOTTOMLEFT = 16,
+            HTBOTTOMRIGHT = 17;
 
         [DllImportAttribute("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd,
@@ -39,7 +51,7 @@ namespace TimeHACK.Engine.Template
             if (!closeDisabled) this.Close();
         }
 
-           public bool max = false;
+        public bool max = false;
 
         private void maximizebutton_Click(object sender, EventArgs e)
         {
@@ -113,6 +125,21 @@ namespace TimeHACK.Engine.Template
         {
             var c = (Button)sender;
             c.UseVisualStyleBackColor = true;
+        }
+
+        private void border_MouseDown(object sender, EventArgs e)
+        {
+            var cursor = this.PointToClient(Cursor.Position);
+
+            if (topleftcorner.ClientRectangle.Contains(cursor)) SendMessage(Handle, WM_SYSCOMMAND, 0xF004, 0);
+            else if (toprightcorner.ClientRectangle.Contains(cursor)) SendMessage(Handle, WM_SYSCOMMAND, 0xF005, 0);
+            else if (bottomleftcorner.ClientRectangle.Contains(cursor)) SendMessage(Handle, WM_SYSCOMMAND, 0xF007, 0);
+            else if (bottomrightcorner.ClientRectangle.Contains(cursor)) SendMessage(Handle, WM_SYSCOMMAND, 0xF008, 0);
+
+            else if (top.ClientRectangle.Contains(cursor)) SendMessage(Handle, WM_SYSCOMMAND, 0xF003, 0);
+            else if (left.ClientRectangle.Contains(cursor)) SendMessage(Handle, WM_SYSCOMMAND, 0xF001, 0);
+            else if (right.ClientRectangle.Contains(cursor)) SendMessage(Handle, WM_SYSCOMMAND, 0xF002, 0);
+            else if (bottom.ClientRectangle.Contains(cursor)) SendMessage(Handle, WM_SYSCOMMAND, 0xF006, 0);
         }
     }
 }
