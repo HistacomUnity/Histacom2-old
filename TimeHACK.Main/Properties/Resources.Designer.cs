@@ -467,6 +467,16 @@ namespace TimeHACK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SeizureWarning {
+            get {
+                object obj = ResourceManager.GetObject("SeizureWarning", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sliversilver {
             get {
                 object obj = ResourceManager.GetObject("sliversilver", resourceCulture);

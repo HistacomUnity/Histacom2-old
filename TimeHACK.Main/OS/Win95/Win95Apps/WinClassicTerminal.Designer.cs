@@ -46,9 +46,10 @@
             this.cmdPrompt.BackColor = System.Drawing.Color.Black;
             this.cmdPrompt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cmdPrompt.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdPrompt.ForeColor = System.Drawing.Color.White;
+            this.cmdPrompt.ForeColor = System.Drawing.Color.Silver;
             this.cmdPrompt.Location = new System.Drawing.Point(0, 0);
             this.cmdPrompt.Name = "cmdPrompt";
+            this.cmdPrompt.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedBoth;
             this.cmdPrompt.ShowSelectionMargin = true;
             this.cmdPrompt.Size = new System.Drawing.Size(459, 262);
             this.cmdPrompt.TabIndex = 0;

@@ -47,6 +47,13 @@ namespace TimeHACK
         {
             InitializeComponent();
             this.startmenu.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            if (!File.Exists(Path.Combine(DataDirectory, "o.k")))
+            {
+                SeizureWarning sw = new SeizureWarning();
+                sw.Size = programContent.Size;
+                programContent.Controls.Add(sw);
+                sw.BringToFront();
+            }
         }
 
         public void StartGame()
