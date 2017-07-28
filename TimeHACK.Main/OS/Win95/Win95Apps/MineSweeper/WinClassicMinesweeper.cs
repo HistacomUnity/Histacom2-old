@@ -15,6 +15,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
     {
         private Game _game;
         public int currentface = 1;
+        public string level = "easy";
         public WinClassicMinesweeper()
         {
             InitializeComponent();
@@ -28,14 +29,65 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             labelBombs.Text = (_game.Mines - _game.DismantledMines).ToString();
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void begginnerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-                Cursor.Current = Cursors.WaitCursor;
-                _game = new Game(this.panel1, 8, 8, 10);
-                _game.Tick += new EventHandler(GameTick);
-                _game.DismantledMinesChanged += new EventHandler(GameDismantledMinesChanged);
-                _game.Start();
+            level = "easy";
+            panel1.Size = new Size(200, 200);
+            this.ParentForm.Size = new Size(240, 275);
+            button1.Location = new Point(108, 32);
+            labelTime.Location = new Point(162, 34);
+            button1.PerformClick();
+        }
+        private void intermediateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            level = "medium";
+            panel1.Size = new Size(400,400);
+            this.ParentForm.Size = new Size(440, 480);
+            button1.Location = new Point(208, 32);
+            labelTime.Location = new Point(362, 34);
+            button1.PerformClick();
+        }
+        private void expertToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            level = "hard";
+            panel1.Size = new Size(740, 400);
+            this.ParentForm.Size = new Size(776, 480);
+            button1.Location = new Point(381, 32);
+            labelTime.Location = new Point(702, 34);
+            button1.PerformClick();
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            switch (level)
+            {
+                case ("easy"):
+                    Cursor.Current = Cursors.WaitCursor;
+                    _game = new Game(this.panel1, 8, 8, 10);
+                    _game.Tick += new EventHandler(GameTick);
+                    _game.DismantledMinesChanged += new EventHandler(GameDismantledMinesChanged);
+                    _game.Start();
+                    return;
+                case ("medium"):
+                    Cursor.Current = Cursors.WaitCursor;
+                    _game = new Game(this.panel1, 16, 16, 46);
+                    _game.Tick += new EventHandler(GameTick);
+                    _game.DismantledMinesChanged += new EventHandler(GameDismantledMinesChanged);
+                    _game.Start();
+                    return;
+                case ("hard"):
+                    Cursor.Current = Cursors.WaitCursor;
+                    _game = new Game(this.panel1, 30, 16, 99);
+                    _game.Tick += new EventHandler(GameTick);
+                    _game.DismantledMinesChanged += new EventHandler(GameDismantledMinesChanged);
+                    _game.Start();
+                    return;
+            }
+
+        }
+
+        private void WinClassicMinesweeper_Load(object sender, EventArgs e)
+        {
+            button1.PerformClick();
         }
     }
 }

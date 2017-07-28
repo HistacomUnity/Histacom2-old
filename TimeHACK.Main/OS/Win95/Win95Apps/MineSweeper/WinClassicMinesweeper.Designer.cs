@@ -50,9 +50,8 @@
             this.helpTopicsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutMinesweeperToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelBombs
@@ -74,7 +73,7 @@
             this.labelTime.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTime.ForeColor = System.Drawing.Color.Red;
-            this.labelTime.Location = new System.Drawing.Point(116, 34);
+            this.labelTime.Location = new System.Drawing.Point(162, 34);
             this.labelTime.Name = "labelTime";
             this.labelTime.Size = new System.Drawing.Size(56, 23);
             this.labelTime.TabIndex = 6;
@@ -83,9 +82,9 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(18, 66);
+            this.panel1.Location = new System.Drawing.Point(18, 63);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(256, 224);
+            this.panel1.Size = new System.Drawing.Size(200, 200);
             this.panel1.TabIndex = 4;
             // 
             // menuStrip1
@@ -96,7 +95,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(302, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(240, 24);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -125,7 +124,7 @@
             // 
             this.newToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.newToolStripMenuItem.Text = "New";
             this.newToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.newToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -133,40 +132,43 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(138, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
             // 
             // begginnerToolStripMenuItem
             // 
             this.begginnerToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.begginnerToolStripMenuItem.Name = "begginnerToolStripMenuItem";
-            this.begginnerToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.begginnerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.begginnerToolStripMenuItem.Text = "Begginner";
             this.begginnerToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.begginnerToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.begginnerToolStripMenuItem.Click += new System.EventHandler(this.begginnerToolStripMenuItem_Click);
             // 
             // intermediateToolStripMenuItem
             // 
             this.intermediateToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.intermediateToolStripMenuItem.Name = "intermediateToolStripMenuItem";
-            this.intermediateToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.intermediateToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.intermediateToolStripMenuItem.Text = "Intermediate";
             this.intermediateToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.intermediateToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.intermediateToolStripMenuItem.Click += new System.EventHandler(this.intermediateToolStripMenuItem_Click);
             // 
             // expertToolStripMenuItem
             // 
             this.expertToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.expertToolStripMenuItem.Name = "expertToolStripMenuItem";
-            this.expertToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.expertToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.expertToolStripMenuItem.Text = "Expert";
             this.expertToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.expertToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.expertToolStripMenuItem.Click += new System.EventHandler(this.expertToolStripMenuItem_Click);
             // 
             // customToolStripMenuItem
             // 
             this.customToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.customToolStripMenuItem.Name = "customToolStripMenuItem";
-            this.customToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.customToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.customToolStripMenuItem.Text = "Custom";
             this.customToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.customToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -174,13 +176,13 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(138, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
             // 
             // marksToolStripMenuItem
             // 
             this.marksToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.marksToolStripMenuItem.Name = "marksToolStripMenuItem";
-            this.marksToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.marksToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.marksToolStripMenuItem.Text = "Marks {?}";
             this.marksToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.marksToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -189,7 +191,7 @@
             // 
             this.colorToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.colorToolStripMenuItem.Name = "colorToolStripMenuItem";
-            this.colorToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.colorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.colorToolStripMenuItem.Text = "Color";
             this.colorToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.colorToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -197,13 +199,13 @@
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(138, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(149, 6);
             // 
             // bestTimesToolStripMenuItem
             // 
             this.bestTimesToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.bestTimesToolStripMenuItem.Name = "bestTimesToolStripMenuItem";
-            this.bestTimesToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.bestTimesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.bestTimesToolStripMenuItem.Text = "Best Times";
             this.bestTimesToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bestTimesToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -211,13 +213,13 @@
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(138, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(149, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.exitToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -252,31 +254,30 @@
             this.aboutMinesweeperToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutMinesweeperToolStripMenuItem.Text = "About Minesweeper";
             // 
-            // pictureBox1
+            // button1
             // 
-            this.pictureBox1.Image = global::TimeHACK.Properties.Resources.minsweeper_smile;
-            this.pictureBox1.Location = new System.Drawing.Point(80, 34);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 26);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.button1.BackgroundImage = global::TimeHACK.Properties.Resources.minsweeper_smile;
+            this.button1.Location = new System.Drawing.Point(108, 32);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(25, 25);
+            this.button1.TabIndex = 9;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // WinClassicMinesweeper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.labelBombs);
             this.Controls.Add(this.labelTime);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "WinClassicMinesweeper";
-            this.Size = new System.Drawing.Size(302, 306);
+            this.Size = new System.Drawing.Size(240, 275);
+            this.Load += new System.EventHandler(this.WinClassicMinesweeper_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,6 +307,6 @@
         private System.Windows.Forms.ToolStripMenuItem helpTopicsToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem aboutMinesweeperToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

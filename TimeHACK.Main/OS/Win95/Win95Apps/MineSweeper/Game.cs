@@ -18,7 +18,7 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
         private Square[,] _squares;
         private Timer _timer;
         private int _width;
-
+        public bool  ftime = true;
         public int Time;
 
         public Game(Panel panel, int width, int height, int mines)
@@ -31,6 +31,11 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
 
         private void Dismantle(object sender, EventArgs e)
         {
+            if(ftime == true)
+            {
+                ftime = false;
+                OnTick();
+            }
             Square s = (Square)sender;
             if (s.Dismantled)
             {
@@ -146,7 +151,6 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
             Time = 0;
             _dismantledMines = 0;
             _incorrectdismantledMines = 0;
-            OnTick();
             Panel.Enabled = true;
             Panel.Controls.Clear();
 
