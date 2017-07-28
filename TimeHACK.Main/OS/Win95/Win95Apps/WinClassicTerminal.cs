@@ -22,11 +22,11 @@ namespace TimeHACK.OS.Win95.Win95Apps
 {
     public partial class WinClassicTerminal : UserControl
     {
-        public Engine.WindowManager wm = new Engine.WindowManager();
+        public WindowManager wm = new WindowManager();
 
         public int currentLine = 4;
         public static string prefix = @"C:\WINDOWS>";
-        public static string workingDir = $"{Engine.SaveSystem.ProfileWindowsDirectory}";
+        public static string workingDir = $"{SaveSystem.ProfileWindowsDirectory}";
         public string output = "";
 
         public WinClassicTerminal(bool readOnly)
@@ -34,13 +34,13 @@ namespace TimeHACK.OS.Win95.Win95Apps
             InitializeComponent();
 
             // Paint the classic borders
-            btnCopy.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
-            btnFont.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
-            btnMark.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
-            btnNothing.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
-            btnPaste.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
-            btnSettings.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
-            sizeSel.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            btnCopy.Paint += (sender, args) => Paintbrush.PaintClassicBorders(sender, args, 2);
+            btnFont.Paint += (sender, args) => Paintbrush.PaintClassicBorders(sender, args, 2);
+            btnMark.Paint += (sender, args) => Paintbrush.PaintClassicBorders(sender, args, 2);
+            btnNothing.Paint += (sender, args) => Paintbrush.PaintClassicBorders(sender, args, 2);
+            btnPaste.Paint += (sender, args) => Paintbrush.PaintClassicBorders(sender, args, 2);
+            btnSettings.Paint += (sender, args) => Paintbrush.PaintClassicBorders(sender, args, 2);
+            sizeSel.Paint += (sender, args) => Paintbrush.PaintClassicBorders(sender, args, 2);
 
             // Set the default index to "Auto"
             sizeSel.SelectedIndex = 0;
@@ -117,17 +117,18 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 switch (cmd[0])
                 {
                     case "dir":
+                        FileSystemFolderInfo dirinfo = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(workingDir, "_data.info")));
                         NumberFormatInfo nfi = new CultureInfo("en-US", false).NumberFormat;
                         nfi.NumberDecimalDigits = 0;
                         output = $" Volume in drive C has no label\n Volume Serial Number is 0000-0000\n Directory of {prefix.Replace(">", "")}\n\n";
-                        foreach (THDirInfo thd in JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(workingDir, "_data.info"))).SubDirs)
+                        foreach (THDirInfo thd in dirinfo.SubDirs)
                         {
                             string dirline = new string(' ', 50);
                             dirline = dirline.Insert(0, thd.DOSName);
                             dirline = dirline.Insert(15, "<DIR>");
                             output += dirline + Environment.NewLine;
                         }
-                        foreach (THFileInfo thfi in JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(workingDir, "_data.info"))).Files)
+                        foreach (THFileInfo thfi in dirinfo.Files)
                         {
                             string[] dosname = thfi.DOSName.Split('.');
                             string dirline = new string(' ', 50);
@@ -136,7 +137,20 @@ namespace TimeHACK.OS.Win95.Win95Apps
                             dirline = dirline.Insert(26 - thfi.ByteSize.ToString("N", nfi).Length, thfi.ByteSize.ToString("N", nfi));
                             output += dirline + Environment.NewLine;
                         }
-                        
+                        string fline = new string(' ', 50);
+                        fline = fline.Insert(10 - dirinfo.Files.Count.ToString("N", nfi).Length, dirinfo.Files.Count.ToString("N", nfi));
+                        fline = fline.Insert(11, "file(s)");
+                        fline = fline.Insert(33 - dirinfo.ByteSize.ToString("N", nfi).Length, dirinfo.ByteSize.ToString("N", nfi));
+                        fline = fline.Insert(34, "bytes");
+                        output += fline + Environment.NewLine;
+
+                        string dline = new string(' ', 50);
+                        dline = dline.Insert(10 - dirinfo.SubDirs.Count.ToString("N", nfi).Length, dirinfo.SubDirs.Count.ToString("N", nfi));
+                        dline = dline.Insert(11, "dir(s)");
+                        dline = dline.Insert(33 - SaveSystem.CurrentSave.BytesLeft.ToString("N", nfi).Length, SaveSystem.CurrentSave.BytesLeft.ToString("N", nfi));
+                        dline = dline.Insert(34, "bytes free");
+                        output += dline;
+
                         break;
                     default:
                         // Temporary CMD redirect

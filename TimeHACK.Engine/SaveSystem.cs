@@ -133,6 +133,7 @@ namespace TimeHACK.Engine
                 {
                     save.CurrentOS = "95";
                     save.ThemeName = "default95";
+                    save.BytesLeft = 536870912;
                     currentTheme = new Default95Theme();
                 }
             }
@@ -140,6 +141,7 @@ namespace TimeHACK.Engine
             {
                 save.CurrentOS = "95";
                 save.ThemeName = "default95";
+                save.BytesLeft = 536870912;
                 currentTheme = new Default95Theme();
             }
             CurrentSave = save;
@@ -150,17 +152,10 @@ namespace TimeHACK.Engine
 
         public static void CheckFiles()
         {
-            if (!Directory.Exists(GameDirectory))
-                Directory.CreateDirectory(GameDirectory);
-
-            if (!Directory.Exists(AllProfilesDirectory))
-                Directory.CreateDirectory(AllProfilesDirectory);
-
-            if (!Directory.Exists(ProfileDirectory))
-                Directory.CreateDirectory(ProfileDirectory);
-
-            if (!Directory.Exists(ProfileFileSystemDirectory))
-                Directory.CreateDirectory(ProfileFileSystemDirectory);
+            Directory.CreateDirectory(GameDirectory);
+            Directory.CreateDirectory(AllProfilesDirectory);
+            Directory.CreateDirectory(ProfileDirectory);
+            Directory.CreateDirectory(ProfileFileSystemDirectory);
 
             SaveDirectoryInfo(ProfileDirectory, "folders", false, "My Computer", false);            
             SaveDirectoryInfo(ProfileFileSystemDirectory, "CDrive", false, "C:", true);
@@ -201,6 +196,7 @@ namespace TimeHACK.Engine
             info.Name = filename;
             info.FileIcon = fileicon;
             info.ByteSize = bytes;
+            CurrentSave.BytesLeft -= bytes;
             UpdateDirectoryInfo(filepath, info);
         }
 
@@ -647,6 +643,9 @@ namespace TimeHACK.Engine
 
         [Order]
         public string ThemeName { get; set; }
+
+        [Order]
+        public int BytesLeft { get; set; }
     }
 
     public class FileSystemFolderInfo
