@@ -163,7 +163,7 @@ namespace TimeHACK.Engine
                 Directory.CreateDirectory(ProfileFileSystemDirectory);
 
             SaveDirectoryInfo(ProfileDirectory, "folders", false, "My Computer", false);            
-            SaveDirectoryInfo(ProfileFileSystemDirectory, "CDrive", false, "Win95 (C:)", true);
+            SaveDirectoryInfo(ProfileFileSystemDirectory, "CDrive", false, "C:", true);
             if (CurrentSave.CurrentOS == "95" || CurrentSave.CurrentOS == "98") SaveDirectoryInfo(ProfileMyComputerDirectory, "Doc", false, "My Documents", true);
             if (CurrentSave.CurrentOS == "2000" || CurrentSave.CurrentOS == "ME") SaveDirectoryInfo(ProfileMyComputerDirectory, "Settings", false, "Documents and Settings", true);                    
             SaveDirectoryInfo(ProfileMyComputerDirectory, "Prog", true, "Program Files", true);
@@ -194,12 +194,13 @@ namespace TimeHACK.Engine
             CreateWindowsFile(ProfileWindowsDirectory, "explorer.exe", "explorer");
         }
 
-        public static void CreateWindowsFile(string filepath, string filename, string contents, int fileicon = 8)
+        public static void CreateWindowsFile(string filepath, string filename, string contents, int fileicon = 8, int bytes = 512)
         {
             File.WriteAllText(Path.Combine(filepath, filename), contents);
             THFileInfo info = new THFileInfo();
             info.Name = filename;
             info.FileIcon = fileicon;
+            info.ByteSize = bytes;
             UpdateDirectoryInfo(filepath, info);
         }
 
@@ -222,6 +223,7 @@ namespace TimeHACK.Engine
             if (File.ReadAllText(Path.Combine(path, "_data.info")).Contains(newfile.DOSName)) return;
             FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(path, "_data.info")));
             fsfi.Files.Add(newfile);
+            fsfi.ByteSize += newfile.ByteSize;
 
             string toWrite = JsonConvert.SerializeObject(fsfi, Formatting.Indented);
 
@@ -239,10 +241,6 @@ namespace TimeHACK.Engine
                         // All the above OSes share basically the same file layout!
                         // (Excluding Documents And Settings) which is 2000 and ME only
 
-                        // Rename the C Drive to Win98
-
-                        SaveDirectoryInfo(ProfileFileSystemDirectory, "CDrive", false, "Win98 (C:)", true);
-
                         // Add Address Book into existance!
 
                         SaveDirectoryInfo(ProfileProgramsDirectory, "Outlook Express", false, "Outlook Express", true);
@@ -258,8 +256,8 @@ namespace TimeHACK.Engine
 
         public static void SaveDirectoryInfo(string parent, string dirname, bool isProtected, string label, bool allowback)
         {
-            if (!Directory.Exists(Path.Combine(parent, dirname)))
-                Directory.CreateDirectory(Path.Combine(parent, dirname));
+            if (Directory.Exists(Path.Combine(parent, dirname)) && Path.Combine(parent, dirname) != ProfileFileSystemDirectory) return;
+            Directory.CreateDirectory(Path.Combine(parent, dirname));
 
             FileSystemFolderInfo info = new FileSystemFolderInfo();
 
@@ -268,9 +266,11 @@ namespace TimeHACK.Engine
 
             info.DOSLabel = info.Label.ToUpper().Replace("*", "").Replace("+", "").Replace(":", "").Replace(";", "").Replace(".", "").Replace(" ", "");
             if (info.DOSLabel.Length > 8) info.DOSLabel = info.DOSLabel.Substring(0, 6) + "~1";
+            if (dirname == "C:") info.DOSLabel = "C:";
             info.AllowBack = allowback;
             info.Files = new List<THFileInfo>(256);
             info.SubDirs = new List<THDirInfo>(256);
+            info.ByteSize = 0;
 
             if (parent != ProfileDirectory)
             {
@@ -655,6 +655,7 @@ namespace TimeHACK.Engine
         public string Label { get; set; }
         public string DOSLabel { get; set; }
         public bool AllowBack { get; set; }
+        public int ByteSize { get; set; }
         public List<THFileInfo> Files { get; set; }
         public List<THDirInfo> SubDirs { get; set; }
     }
@@ -664,6 +665,7 @@ namespace TimeHACK.Engine
         public string Name { get; set; }
         public string DOSName { get; set; }
         public int FileIcon { get; set; }
+        public int ByteSize { get; set; }
     }
 
     public class THDirInfo

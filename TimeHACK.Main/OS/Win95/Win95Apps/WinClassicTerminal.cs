@@ -14,6 +14,9 @@ using System.Reflection;
 using System.Linq.Expressions;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
+using Newtonsoft.Json;
+using TimeHACK.Engine;
+using System.Globalization;
 
 namespace TimeHACK.OS.Win95.Win95Apps
 {
@@ -21,9 +24,9 @@ namespace TimeHACK.OS.Win95.Win95Apps
     {
         public Engine.WindowManager wm = new Engine.WindowManager();
 
-        public int currentLine = 0;
-        public static string prefix = @"C:\>";
-        public static string startupDir = $"{Engine.SaveSystem.ProfileMyComputerDirectory}";
+        public int currentLine = 4;
+        public static string prefix = @"C:\WINDOWS>";
+        public static string workingDir = $"{Engine.SaveSystem.ProfileWindowsDirectory}";
         public string output = "";
 
         public WinClassicTerminal(bool readOnly)
@@ -43,7 +46,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             sizeSel.SelectedIndex = 0;
 
             // Set the font and append the prefix text
-            cmdPrompt.Font = new Font(TitleScreen.pfc.Families[1], 10F, FontStyle.Regular);
+            cmdPrompt.Font = new Font(TitleScreen.pfc.Families[1], 12F, FontStyle.Regular);
 
             cmdPrompt.BringToFront();
 
@@ -54,6 +57,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             }
             else
             {
+                cmdPrompt.AppendText("\nMicrosoft<R> Windows 95\n   <C>Copyright Microsoft Corp 1981-1995.\n\n");
                 cmdPrompt.AppendText(prefix);
             }
         }
@@ -108,18 +112,51 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             if (e.KeyData == Keys.Return)
             {
-                // Temporary CMD redirect
-                Process p = new Process();
+                string[] cmd = cmdPrompt.Lines[currentLine].Substring(prefix.Length).Split(' ');
 
-                p.StartInfo.UseShellExecute = false;
-                p.StartInfo.RedirectStandardOutput = true;
-                p.StartInfo.CreateNoWindow = true;
-                p.StartInfo.WorkingDirectory = startupDir;
-                p.StartInfo.FileName = "cmd.exe";
-                p.StartInfo.Arguments = $"/C {cmdPrompt.Lines[currentLine].Substring(prefix.Length)}";
-                p.Start();
+                switch (cmd[0])
+                {
+                    case "dir":
+                        NumberFormatInfo nfi = new CultureInfo("en-US", false).NumberFormat;
+                        nfi.NumberDecimalDigits = 0;
+                        output = $" Volume in drive C has no label\n Volume Serial Number is 0000-0000\n Directory of {prefix.Replace(">", "")}\n\n";
+                        foreach (THDirInfo thd in JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(workingDir, "_data.info"))).SubDirs)
+                        {
+                            string dirline = new string(' ', 50);
+                            dirline = dirline.Insert(0, thd.DOSName);
+                            dirline = dirline.Insert(15, "<DIR>");
+                            output += dirline + Environment.NewLine;
+                        }
+                        foreach (THFileInfo thfi in JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(workingDir, "_data.info"))).Files)
+                        {
+                            string[] dosname = thfi.DOSName.Split('.');
+                            string dirline = new string(' ', 50);
+                            dirline = dirline.Insert(0, dosname[0]);
+                            dirline = dirline.Insert(9, dosname[1]);
+                            dirline = dirline.Insert(26 - thfi.ByteSize.ToString("N", nfi).Length, thfi.ByteSize.ToString("N", nfi));
+                            output += dirline + Environment.NewLine;
+                        }
+                        
+                        break;
+                    default:
+                        // Temporary CMD redirect
+                        /*
+                        Process p = new Process();
 
-                output = p.StandardOutput.ReadToEnd();
+                        p.StartInfo.UseShellExecute = false;
+                        p.StartInfo.RedirectStandardOutput = true;
+                        p.StartInfo.CreateNoWindow = true;
+                        p.StartInfo.WorkingDirectory = startupDir;
+                        p.StartInfo.FileName = "cmd.exe";
+                        p.StartInfo.Arguments = $"/C {cmdPrompt.Lines[currentLine].Substring(prefix.Length)}";
+                        p.Start();
+
+                        output = p.StandardOutput.ReadToEnd();
+                        */
+                        output = "Bad command or file name";
+
+                        break;
+                }
 
                 cmdPrompt.Focus();
                 cmdPrompt.AppendText($"\n{output}"); // Append the command output
@@ -127,7 +164,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 int numLines = output.Split('\n').Length; // Get the number of lines from the command output
                 currentLine = currentLine + 2 + numLines; // Set the current line to equals the previous line plus 2 plus the number of lines from the command
 
-                cmdPrompt.AppendText($"\n{prefix}"); // Append the text to the RichTextBox
+                cmdPrompt.AppendText($"\n\n{prefix}"); // Append the text to the RichTextBox
             }  
         }
     }
