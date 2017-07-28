@@ -190,8 +190,8 @@ namespace TimeHACK.Engine
             SaveDirectoryInfo(ProfileWindowsDirectory, "Temp", true, "Temp", true);
             SaveDirectoryInfo(ProfileWindowsDirectory, "Desktop", true, "Desktop", true);
 
-            CreateWindowsFile(ProfileWindowsDirectory, "calc.exe", "calc");
-            CreateWindowsFile(ProfileWindowsDirectory, "explorer.exe", "explorer");
+            CreateWindowsFile(ProfileWindowsDirectory, "calc.exe", "calc", bytes: 59392);
+            CreateWindowsFile(ProfileWindowsDirectory, "explorer.exe", "explorer", bytes:204288);
         }
 
         public static void CreateWindowsFile(string filepath, string filename, string contents, int fileicon = 8, int bytes = 512)
