@@ -603,6 +603,7 @@
     <Content Include="Resources\WinClassic\WinClassicDocuments.png" />
     <None Include="Resources\WinClassic\WinClassicEndings.png" />
     <None Include="Resources\WinClassic\WinClassicEndingsLocked.png" />
+    <None Include="Resources\WinClassic\WinClassicEndingsIcon.png" />
     <Content Include="Resources\WinClassic\WinClassicFind.png" />
     <Content Include="Resources\WinClassic\WinClassicFolder.png" />
     <None Include="Resources\WinClassic\WinClassicGENERALApplicationToolbarBackground.png" />

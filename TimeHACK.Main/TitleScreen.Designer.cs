@@ -288,7 +288,7 @@
             // 
             // achievementsToolStripMenuItem
             // 
-            this.achievementsToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicEndings;
+            this.achievementsToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.WinClassicEndingsIcon;
             this.achievementsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.achievementsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.achievementsToolStripMenuItem.Name = "achievementsToolStripMenuItem";
