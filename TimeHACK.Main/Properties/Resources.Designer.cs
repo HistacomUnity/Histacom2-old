@@ -366,36 +366,6 @@ namespace TimeHACK.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap minsweeper_flag {
-            get {
-                object obj = ResourceManager.GetObject("minsweeper_flag", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap minsweeper_sad {
-            get {
-                object obj = ResourceManager.GetObject("minsweeper_sad", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap minsweeper_smile {
-            get {
-                object obj = ResourceManager.GetObject("minsweeper_smile", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream modem_dial {
@@ -1237,6 +1207,36 @@ namespace TimeHACK.Properties {
         internal static System.Drawing.Bitmap WinClassicMinesweeper {
             get {
                 object obj = ResourceManager.GetObject("WinClassicMinesweeper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WinClassicMinesweeperFlag {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicMinesweeperFlag", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WinClassicMinesweeperSad {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicMinesweeperSad", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WinClassicMinesweeperSmile {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicMinesweeperSmile", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
