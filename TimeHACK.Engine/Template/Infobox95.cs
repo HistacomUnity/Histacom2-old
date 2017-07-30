@@ -45,9 +45,9 @@ namespace TimeHACK.Engine.Template
             switch (btns)
             {
                 case InfoboxButtons.OK:
-                    button1.Hide();
+                    button1.Text = "OK";
                     button2.Hide();
-                    button3.Text = "OK";
+                    button3.Hide();
                     break;
             }
         }
@@ -58,6 +58,11 @@ namespace TimeHACK.Engine.Template
         }
 
         private void button3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             if (btnStatus == 0) this.ParentForm.Close();
         }

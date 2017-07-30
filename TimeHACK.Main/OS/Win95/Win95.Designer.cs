@@ -817,7 +817,7 @@ namespace TimeHACK.OS.Win95
             this.PrintersToolStripMenuItem.Name = "PrintersToolStripMenuItem";
             this.PrintersToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.PrintersToolStripMenuItem.Text = "Printers";
-            this.PrintersToolStripMenuItem.Click += new System.EventHandler(infoboxTestToolStripMenuItem_Click);
+            this.PrintersToolStripMenuItem.Click += new System.EventHandler(this.infoboxTestToolStripMenuItem_Click);
             // 
             // TaskbarToolStripMenuItem
             // 
