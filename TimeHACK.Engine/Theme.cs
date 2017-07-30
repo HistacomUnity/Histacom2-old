@@ -15,6 +15,7 @@ namespace TimeHACK.Engine
 
         public Stream asteriskSound { get; set; }
         public Stream critStopSound { get; set; }
+        public Stream exclamationSound { get; set; }
         public Stream progErrorSound { get; set; }
         public Stream questionSound { get; set; }
 
@@ -32,6 +33,7 @@ namespace TimeHACK.Engine
 
             asteriskSound = Properties.Resources.CHORD;
             critStopSound = Properties.Resources.CHORD;
+            exclamationSound = Properties.Resources.CHORD;
             progErrorSound = Properties.Resources.CHORD;
             questionSound = Properties.Resources.CHORD;
 
@@ -44,11 +46,12 @@ namespace TimeHACK.Engine
     {
         public Default98Theme()
         {
-            startSound = Properties.Resources.Win95Start;
-            stopSound = Properties.Resources.Win95Stop;
+            startSound = Properties.Resources.Win98Start;
+            stopSound = Properties.Resources.Win98Stop;
 
             asteriskSound = Properties.Resources.CHORD;
             critStopSound = Properties.Resources.CHORD;
+            exclamationSound = Properties.Resources.CHORD;
             progErrorSound = Properties.Resources.CHORD;
             questionSound = Properties.Resources.CHORD;
 
@@ -63,6 +66,12 @@ namespace TimeHACK.Engine
         {
             startSound = Properties.Resources.Win95PlusDangerousCreaturesStart;
             stopSound = Properties.Resources.Win95PlusDangerousCreaturesStart;
+
+            asteriskSound = Properties.Resources.Win95PlusDangerousCreaturesAsterisk;
+            critStopSound = Properties.Resources.Win95PlusDangerousCreaturesCritStop;
+            exclamationSound = Properties.Resources.Win95PlusDangerousCreaturesExclamation;
+            progErrorSound = Properties.Resources.Win95PlusDangerousCreaturesProgError;
+            questionSound = Properties.Resources.Win95PlusDangerousCreaturesQuestion;
 
             defaultWallpaper = Properties.Resources.Win95PlusDangerousCreaturesWallpaper;
             themeName = "dangeranimals";

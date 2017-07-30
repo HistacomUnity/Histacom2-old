@@ -72,13 +72,13 @@ namespace TimeHACK.Engine
             return app;
         }
 
-        public WinClassic StartInfobox95(string title, string text, Image erroricon)
+        public WinClassic StartInfobox95(string title, string text, InfoboxType type, InfoboxButtons btns)
         {
-            Infobox95 app = new Infobox95();
+            pfc.AddFontFile(SaveSystem.GameDirectory + "\\Data\\LeviWindows.ttf");
+            Infobox95 app = new Infobox95(type, btns);
             app.infoText.Text = text;
+            app.infoText.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
 
-            SoundPlayer sp = new SoundPlayer(Properties.Resources.CHORD);
-            sp.Play();
             return StartWin95(app, title, null, false, false);
         }
 

@@ -202,6 +202,51 @@ namespace TimeHACK.Engine.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusDangerousCreaturesAsterisk {
+            get {
+                return ResourceManager.GetStream("Win95PlusDangerousCreaturesAsterisk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusDangerousCreaturesCritStop {
+            get {
+                return ResourceManager.GetStream("Win95PlusDangerousCreaturesCritStop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusDangerousCreaturesExclamation {
+            get {
+                return ResourceManager.GetStream("Win95PlusDangerousCreaturesExclamation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusDangerousCreaturesProgError {
+            get {
+                return ResourceManager.GetStream("Win95PlusDangerousCreaturesProgError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusDangerousCreaturesQuestion {
+            get {
+                return ResourceManager.GetStream("Win95PlusDangerousCreaturesQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         public static System.IO.UnmanagedMemoryStream Win95PlusDangerousCreaturesStart {
             get {
                 return ResourceManager.GetStream("Win95PlusDangerousCreaturesStart", resourceCulture);
@@ -242,6 +287,16 @@ namespace TimeHACK.Engine.Properties {
         public static System.Drawing.Bitmap Win95PlusInsideComputerWallpaper {
             get {
                 object obj = ResourceManager.GetObject("Win95PlusInsideComputerWallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Win95Question {
+            get {
+                object obj = ResourceManager.GetObject("Win95Question", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

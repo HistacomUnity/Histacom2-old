@@ -160,7 +160,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     }
                 }
             } catch (Exception ex) {
-                wm.StartInfobox95("Exploring - C:", "Error with the file explorer \n" + ex.Message, Properties.Resources.Win95Info);
+                //wm.StartInfobox95("Exploring - C:", "Error with the file explorer \n" + ex.Message, Properties.Resources.Win95Info); add illegal operation dialog here later
                 ((Form)this.TopLevelControl).Close();
             }
         }
@@ -216,7 +216,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
                         break;
                     case 12:
-                        OpenApplication(FileDialogBoxManager.ReadTextFile(fileDir));
+                        OpenApplication(FileDialogBoxManager.ReadTextFile(fileDir), fileDir);
                         break;
                 }
             } catch {
@@ -224,7 +224,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             
         }
 
-        void OpenApplication(string appname)
+        void OpenApplication(string appname, string path)
         {
             switch (appname.ToLower())
             {
@@ -251,7 +251,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
                     break;
                 case "ie":
-                    if (TitleScreen.frm95.ie != null) { wm.StartInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", Properties.Resources.Win95Warning); return; }
+                    if (TitleScreen.frm95.ie != null) { wm.StartInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", InfoboxType.Warning, InfoboxButtons.OK); return; }
                     TitleScreen.frm95.ie = wm.StartWin95(new WinClassicIE4(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
                     Program.AddTaskbarItem(TitleScreen.frm95.ie, TitleScreen.frm95.ie.Tag.ToString(), "Internet Explorer 4", Properties.Resources.Win95IconIE4);
                     TitleScreen.frm95.ie.BringToFront();
@@ -275,12 +275,11 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
                     break;
                 case "iebrokeninstaller":
-                    wm.StartInfobox95("Internet Explorer Installation", "Installation Failed: The INF file was not found", Properties.Resources.Win95Error);
+                    wm.StartInfobox95("Internet Explorer Installer", "Installation Failed: The INF file was not found", InfoboxType.Error, InfoboxButtons.OK);
 
                     break;
-                case "addressbook":
-                    wm.StartInfobox95("Win32 Error", "This is not a valid Win32 Application.", Properties.Resources.Win95Error);
-
+                default:
+                    wm.StartInfobox95(path.Replace(ProfileMyComputerDirectory, "C:"), $"{path.Replace(ProfileMyComputerDirectory, "C:")} is not a valid Win32 application.", InfoboxType.Error, InfoboxButtons.OK);
                     break;
             }
         }
@@ -650,7 +649,8 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             if (File.Exists(CurrentDirectory + "\\New Folder"))
             {
-                wm.StartInfobox95("Windows Explorer", "This directory already exists", Properties.Resources.Win95Info);
+                //wm.StartInfobox95("Windows Explorer", "This directory already exists", Properties.Resources.Win95Info);
+                //TODO: add making "New Folder (2)"
             }
             else
             {
@@ -681,7 +681,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 {
                     if (txtSave.Text == "")
                     {
-                        wm.StartInfobox95("Windows Explorer", "Please enter a filename", Properties.Resources.Win95Info);
+                        wm.StartInfobox95("Windows Explorer", "Please enter a filename", InfoboxType.Info, InfoboxButtons.OK);
                     }
                     else
                     {
@@ -710,7 +710,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             {
                 if (!FileOrDirectoryExists(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text)))
                 {
-                    wm.StartInfobox95("Windows Explorer", "This directory doesn't exist", Properties.Resources.Win95Info);
+                    wm.StartInfobox95("Windows Explorer", "This directory doesn't exist", InfoboxType.Info, InfoboxButtons.OK);
                 }
                 else
                 {
@@ -765,19 +765,19 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 setText = e.Label;
                 if (setText == "")
                 {
-                    wm.StartInfobox95("Windows Explorer", "Please enter a new directory name", Properties.Resources.Win95Info);
+                    wm.StartInfobox95("Windows Explorer", "Please enter a new directory name", InfoboxType.Info, InfoboxButtons.OK);
                 }
                 else
                 {
                     if (Directory.Exists(setText))
                     {
-                        wm.StartInfobox95("Windows Explorer", "That directory already exists.", Properties.Resources.Win95Info);
+                        wm.StartInfobox95("Windows Explorer", "That directory already exists.", InfoboxType.Info, InfoboxButtons.OK);
                     }
                     else
                     {
                         if (File.Exists(setText))
                         {
-                            wm.StartInfobox95("Windows Explorer", "That file already exists.", Properties.Resources.Win95Info);
+                            wm.StartInfobox95("Windows Explorer", "That file already exists.", InfoboxType.Info, InfoboxButtons.OK);
                         }
                         else
                         {

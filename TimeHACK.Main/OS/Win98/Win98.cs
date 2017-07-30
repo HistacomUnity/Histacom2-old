@@ -158,7 +158,7 @@ namespace TimeHACK.OS.Win98
         // Give Year Code - NYI
         private void taskbartime_Click(object sender, EventArgs e)
         {
-            //TODO: Set Up Save System
+            
         }
 
         // Set the Clock
@@ -241,7 +241,7 @@ namespace TimeHACK.OS.Win98
 
         private void InternetExplorerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (ie != null) { wm.StartInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", Properties.Resources.Win95Warning); return; }
+            if (ie != null) { wm.StartInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", InfoboxType.Warning, InfoboxButtons.OK); return; }
             ie = wm.StartWin95(new WinClassicIE4(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
             AddTaskBarItem(ie, ie.Tag.ToString(), "Internet Explorer 4", Properties.Resources.Win95IconIE4);
             ie.BringToFront();
@@ -261,7 +261,7 @@ namespace TimeHACK.OS.Win98
                 {
                     if (objListViewItem.Text == "Internet Explorer")
                     {
-                        if (ie != null) { wm.StartInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", Properties.Resources.Win95Warning); return; }
+                        if (ie != null) { wm.StartInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", InfoboxType.Warning, InfoboxButtons.OK); return; }
                         ie = wm.StartWin95(new WinClassicIE4(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
                         AddTaskBarItem(ie, ie.Tag.ToString(), "Internet Explorer 4", Properties.Resources.Win95IconIE4);
                         ie.BringToFront();
@@ -287,15 +287,15 @@ namespace TimeHACK.OS.Win98
                     }
                     else if (objListViewItem.Text == "Set Up The Microsoft Network")
                     {
-                        wm.StartInfobox95("Microsoft Network", "The Microsoft Network is already set up!", Properties.Resources.Win95Info);
+                        wm.StartInfobox95("Microsoft Network", "The Microsoft Network is already set up!", InfoboxType.Info, InfoboxButtons.OK);
                     }
                     else if (objListViewItem.Text == "Outlook Express")
                     {
-                        wm.StartInfobox95("Win32 Application", "That is not a valid Win32 Application.", Properties.Resources.Win95Error);
+                        //wm.StartInfobox95("Win32 Application", "That is not a valid Win32 Application.", Properties.Resources.Win95Error);
                     }
                     else if (objListViewItem.Text == "Inbox")
                     {
-                        wm.StartInfobox95("Win32 Application", "That is not a valid Win32 Application.", Properties.Resources.Win95Error);
+                        //wm.StartInfobox95("Win32 Application", "That is not a valid Win32 Application.", Properties.Resources.Win95Error);
                     }
                     else
                     {
@@ -328,7 +328,7 @@ namespace TimeHACK.OS.Win98
 
         private void infoboxTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            WinClassic app = wm.StartInfobox95("AShifter's Infobox", "This is the very first TimeHACK Infobox. It's really easy to call, too! \n Just use wm.startInfobox95(string title, string text, Image erroricon)!", Properties.Resources.Win95Info);
+            WinClassic app = wm.StartInfobox95("AShifter's Infobox", "This is the very first TimeHACK Infobox. It's really easy to call, too! \n Just use wm.startInfobox95(string title, string text, InfoboxType type, InfoboxButtons btns)!", InfoboxType.Info, InfoboxButtons.OK);
 
             app.BringToFront();
             startmenu.Hide();
@@ -560,13 +560,13 @@ namespace TimeHACK.OS.Win98
                             }
                             else
                             {
-                                wm.StartInfobox95("Windows Explorer", "This object cannot be deleted.", Properties.Resources.Win95Error);
+                                wm.StartInfobox95("Windows Explorer", "This object cannot be deleted.", InfoboxType.Error, InfoboxButtons.OK);
                             }
                         }
                     }
                     else
                     {
-                        wm.StartInfobox95("Windows Explorer", "This object cannot be deleted.", Properties.Resources.Win95Error);
+                        wm.StartInfobox95("Windows Explorer", "This object cannot be deleted.", InfoboxType.Error, InfoboxButtons.OK);
                     }
                 }
             }

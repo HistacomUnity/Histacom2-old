@@ -86,7 +86,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             if (cmdPrompt.SelectedText.Length > 0)
                 Clipboard.SetText(cmdPrompt.SelectedText); // Set the clipboard text to the selection of the RichTextBox
             else
-                wm.StartInfobox95("ERROR", "You need to select something to copy.", Properties.Resources.Win95Error); // Display an error message if the length is 0 
+                wm.StartInfobox95("ERROR", "You need to select something to copy.", Engine.Template.InfoboxType.Error, Engine.Template.InfoboxButtons.OK); // Display an error message if the length is 0 
         }
 
         private void btnPaste_Click(object sender, EventArgs e)
@@ -94,12 +94,12 @@ namespace TimeHACK.OS.Win95.Win95Apps
             if (Clipboard.GetText() != "")
                 Write(Clipboard.GetText()); // Write the contents of the Clipboard text in the RichTextBox
             else
-                wm.StartInfobox95("ERROR", "You need to have something in your clipboard to paste.", Properties.Resources.Win95Error); // Display an error message if the clipboard is null/empty
+                wm.StartInfobox95("ERROR", "You need to have something in your clipboard to paste.", Engine.Template.InfoboxType.Error, Engine.Template.InfoboxButtons.OK); // Display an error message if the clipboard is null/empty
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            wm.StartInfobox95("INFO", "This feature has not been implemented yet. Stay tuned! -Jason", Properties.Resources.Win95Info);
+            wm.StartInfobox95("INFO", "This feature has not been implemented yet. Stay tuned! -Jason", Engine.Template.InfoboxType.Info, Engine.Template.InfoboxButtons.OK);
             //TODO: Well, add the settings...
         }
 

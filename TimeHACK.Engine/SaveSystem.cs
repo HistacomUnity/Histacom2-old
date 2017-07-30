@@ -153,6 +153,7 @@ namespace TimeHACK.Engine
         public static void CheckFiles()
         {
             Directory.CreateDirectory(GameDirectory);
+            Directory.CreateDirectory(DataDirectory);
             Directory.CreateDirectory(AllProfilesDirectory);
             Directory.CreateDirectory(ProfileDirectory);
             Directory.CreateDirectory(ProfileFileSystemDirectory);

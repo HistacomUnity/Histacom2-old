@@ -208,4 +208,22 @@
   <data name="Win95PlusInsideComputerWallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Win95PlusInsideComputerWallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Win95PlusDangerousCreaturesAsterisk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Win95PlusDangerousCreaturesAsterisk.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusDangerousCreaturesCritStop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Win95PlusDangerousCreaturesCritStop.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusDangerousCreaturesExclamation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Win95PlusDangerousCreaturesExclamation.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusDangerousCreaturesProgError" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Win95PlusDangerousCreaturesProgError.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusDangerousCreaturesQuestion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Win95PlusDangerousCreaturesQuestion.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95Question" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\Window\Win95Question.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

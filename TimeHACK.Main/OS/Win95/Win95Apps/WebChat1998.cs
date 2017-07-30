@@ -58,10 +58,10 @@ namespace TimeHACK.OS.Win95.Win95Apps
         }
         private void Button1_Click(object sender, EventArgs e)
         {
-            if (txtscreenname.Text == "") { wm.StartInfobox95("Invalid Username", "Your username cannot be blank.", Properties.Resources.Win95Warning); return; }
-            if (txtscreenname.Text.Length > 12) { wm.StartInfobox95("Invalid Username", "Your username needs to be less than 12 characters.", Properties.Resources.Win95Warning); return; }
-            if (txtscreenname.Text.Contains(" ")) { wm.StartInfobox95("Invalid Username", "Your username cannot contain spaces.", Properties.Resources.Win95Warning); return; }
-            if (txtscreenname.Text == "SkyHigh" | txtscreenname.Text == "rain49" | txtscreenname.Text == "12padams") { wm.StartInfobox95("Invalid Username", "That username is already taken.", Properties.Resources.Win95Warning); return; }
+            if (txtscreenname.Text == "") { wm.StartInfobox95("Invalid Username", "Your username cannot be blank.", InfoboxType.Warning, InfoboxButtons.OK); return; }
+            if (txtscreenname.Text.Length > 12) { wm.StartInfobox95("Invalid Username", "Your username needs to be less than 12 characters.", InfoboxType.Warning, InfoboxButtons.OK); return; }
+            if (txtscreenname.Text.Contains(" ")) { wm.StartInfobox95("Invalid Username", "Your username cannot contain spaces.", InfoboxType.Warning, InfoboxButtons.OK); return; }
+            if (txtscreenname.Text == "SkyHigh" | txtscreenname.Text == "rain49" | txtscreenname.Text == "12padams") { wm.StartInfobox95("Invalid Username", "That username is already taken.", InfoboxType.Warning, InfoboxButtons.OK); return; }
             ParentForm.AcceptButton = button2;
             TitleScreen.username = txtscreenname.Text;
             login.Hide();

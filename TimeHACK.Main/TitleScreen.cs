@@ -22,10 +22,7 @@ namespace TimeHACK
         public static Windows98 frm98;
         public static string username;
         public static string progress = "95";
-
-        public static DirectoryInfo thfolder;
-        public static DirectoryInfo datafolder;
-        public static DirectoryInfo profilefolder;
+        
         public static NewGameDialog newGameBox;
         public static LoadGameDialog loadGameBox;
 
@@ -138,31 +135,20 @@ namespace TimeHACK
         // When the TitleScreen Loads
         private void TitleScreen_Load(object sender, EventArgs e)
         {
-            if (!Directory.Exists(GameDirectory))
-                Directory.CreateDirectory(GameDirectory);
-            thfolder = new DirectoryInfo(GameDirectory);
+            Directory.CreateDirectory(GameDirectory);
+            Directory.CreateDirectory(DataDirectory);
+            Directory.CreateDirectory(AllProfilesDirectory);
 
-            string Data = Path.Combine(thfolder.FullName, "Data");
-            if (!Directory.Exists(Data))
-                Directory.CreateDirectory(Data);
-
-            string Profiles = Path.Combine(thfolder.FullName, "Profiles");
-            if (!Directory.Exists(Profiles))
-                Directory.CreateDirectory(Profiles);
-
-            Resources.google.Save(Path.Combine(Data, "google.jpg"));
-            profilefolder = Directory.CreateDirectory(Path.Combine(thfolder.FullName, "\\Profiles"));
-
-
+            Resources.google.Save(Path.Combine(DataDirectory, "google.jpg"));
 
             // Set GameVersion
             gameversion.Text = "Alpha 1.0.3";
 
             // Initialize Font
-            File.WriteAllBytes(Data + "\\LeviWindows.ttf", Resources.LeviWindows);
-            File.WriteAllBytes(Data + "\\windows_command_prompt.ttf", Resources.windows_command_prompt);
-            pfc.AddFontFile(Data + "\\LeviWindows.ttf");
-            pfc.AddFontFile(Data + "\\windows_command_prompt.ttf");
+            File.WriteAllBytes(DataDirectory + "\\LeviWindows.ttf", Resources.LeviWindows);
+            File.WriteAllBytes(DataDirectory + "\\windows_command_prompt.ttf", Resources.windows_command_prompt);
+            pfc.AddFontFile(DataDirectory + "\\LeviWindows.ttf");
+            pfc.AddFontFile(DataDirectory + "\\windows_command_prompt.ttf");
             gameversion.Font = new Font(pfc.Families[0], 16F, FontStyle.Bold, GraphicsUnit.Point, (0));
             ProgramsToolStripMenuItem.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             DocumentsToolStripMenuItem.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));

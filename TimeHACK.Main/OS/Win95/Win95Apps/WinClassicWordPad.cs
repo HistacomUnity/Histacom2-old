@@ -61,7 +61,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             this.aboutWordpadToolStripMenuItem.Click += (sender, args) => wm.StartAboutBox95("Wordpad", "Microsoft Wordpad", Properties.Resources.Win95IconWordpad);
             this.btnNew.Click += (sender, args) => mainText.Text = "";
             this.newToolStripMenuItem.Click += (sender, args) => mainText.Text = "";
-            this.sendToolStripMenuItem.Click += (sender, args) => wm.StartInfobox95("Wordpad", "An error occured opening send option.", null);
+            this.sendToolStripMenuItem.Click += (sender, args) => wm.StartInfobox95("Wordpad", "An error occured opening send option.", Engine.Template.InfoboxType.Error, Engine.Template.InfoboxButtons.OK);
             this.bulletStyleToolStripMenuItem.Click += (sender, args) => mainText.SelectionBullet = bulletStyleToolStripMenuItem.Checked;
             this.comboFont.SelectedIndexChanged += (sender, args) => SetSelectedTextFont(comboFont.Text);
             this.comboSize.SelectedIndexChanged += (sender, args) => SetSelectedTextSize(comboSize.Text);

@@ -195,7 +195,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     }
                 }
             } catch (Exception ex) {
-                wm.StartInfobox95("Exploring - C:", "Error with the file explorer \n" + ex.Message, Properties.Resources.Win95Info);
+                //wm.StartInfobox95("Exploring - C:", "Error with the file explorer \n" + ex.Message, Properties.Resources.Win95Info); add illegal operation dialog here later
                 ((Form)this.TopLevelControl).Close();
             }
         }
@@ -287,7 +287,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
                     break;
                 case "iebrokeninstaller":
-                    wm.StartInfobox95("Internet Explorer Installation", "Installation Failed: The INF file was not found", Properties.Resources.Win95Error);
+                    wm.StartInfobox95("Internet Explorer Installer", "Installation Failed: The INF file was not found", InfoboxType.Error, InfoboxButtons.OK);
 
                     break;
                 case "addressbook":
@@ -674,7 +674,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         private void FolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (File.Exists(CurrentDirectory + "\\New Folder")) {
-                wm.StartInfobox95("Windows Explorer", "This directory already exists", Properties.Resources.Win95Info);
+                wm.StartInfobox95("Windows Explorer", "This directory already exists", InfoboxType.Info, InfoboxButtons.OK);
             } else {
                 Directory.CreateDirectory(Path.Combine(CurrentDirectory, "New Folder"));
                 SaveDirectoryInfo(CurrentDirectory, "New Folder", false, "New Folder", true);
@@ -703,7 +703,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 {
                     if (txtSave.Text == "")
                     {
-                        wm.StartInfobox95("Windows Explorer", "Please enter a filename", Properties.Resources.Win95Info);
+                        wm.StartInfobox95("Windows Explorer", "Please enter a filename", InfoboxType.Info, InfoboxButtons.OK);
                     }
                     else
                     {
@@ -732,7 +732,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             {
                 if (!FileOrDirectoryExists(mainView.FocusedItem.ImageKey))
                 {
-                    wm.StartInfobox95("Windows Explorer", "This directory doesn't exist", Properties.Resources.Win95Info);
+                    wm.StartInfobox95("Windows Explorer", "This directory doesn't exist", InfoboxType.Info, InfoboxButtons.OK);
                 }
                 else
                 {
@@ -785,19 +785,19 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 setText = e.Label;
                 if (setText == "")
                 {
-                    wm.StartInfobox95("Windows Explorer", "Please enter a new directory name", Properties.Resources.Win95Info);
+                    wm.StartInfobox95("Windows Explorer", "Please enter a new directory name", InfoboxType.Info, InfoboxButtons.OK);
                 }
                 else
                 {
                     if (Directory.Exists(setText))
                     {
-                        wm.StartInfobox95("Windows Explorer", "That directory already exists.", Properties.Resources.Win95Info);
+                        wm.StartInfobox95("Windows Explorer", "That directory already exists.", InfoboxType.Info, InfoboxButtons.OK);
                     }
                     else
                     {
                         if (File.Exists(setText))
                         {
-                            wm.StartInfobox95("Windows Explorer", "That file already exists.", Properties.Resources.Win95Info);
+                            wm.StartInfobox95("Windows Explorer", "That file already exists.", InfoboxType.Info, InfoboxButtons.OK);
                         }
                         else
                         {

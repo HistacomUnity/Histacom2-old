@@ -133,7 +133,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 }
                 else
                 {
-                    wm.StartInfobox95("Address Book - New Folder", "You must enter a folder name!", Properties.Resources.Win95Error);
+                    wm.StartInfobox95("Address Book - New Folder", "You must enter a folder name!", InfoboxType.Error, InfoboxButtons.OK);
                 }
             }
         }
