@@ -19,6 +19,11 @@ namespace TimeHACK.Engine
         public Stream progErrorSound { get; set; }
         public Stream questionSound { get; set; }
 
+        public Color activeTitleBarColor { get; set; }
+        public Color activeTitleTextColor { get; set; }
+        public Color inactiveTitleBarColor { get; set; }
+        public Color inactiveTitleTextColor { get; set; }
+
         public Image defaultWallpaper { get; set; }
 
         public string themeName { get; set; }
@@ -36,6 +41,11 @@ namespace TimeHACK.Engine
             exclamationSound = Properties.Resources.CHORD;
             progErrorSound = Properties.Resources.CHORD;
             questionSound = Properties.Resources.CHORD;
+
+            activeTitleBarColor = Color.Navy;
+            activeTitleTextColor = Color.White;
+            inactiveTitleBarColor = Color.Gray;
+            inactiveTitleTextColor = Color.Silver;
 
             defaultWallpaper = null;
             themeName = "default95";
@@ -73,6 +83,11 @@ namespace TimeHACK.Engine
             progErrorSound = Properties.Resources.Win95PlusDangerousCreaturesProgError;
             questionSound = Properties.Resources.Win95PlusDangerousCreaturesQuestion;
 
+            activeTitleBarColor = Color.Teal;
+            activeTitleTextColor = Color.White;
+            inactiveTitleBarColor = Color.FromArgb(72, 72, 72);
+            inactiveTitleTextColor = Color.Gray;
+
             defaultWallpaper = Properties.Resources.Win95PlusDangerousCreaturesWallpaper;
             themeName = "dangeranimals";
         }
@@ -84,6 +99,13 @@ namespace TimeHACK.Engine
         {
             startSound = Properties.Resources.Win95PlusInsideComputerStart;
             stopSound = Properties.Resources.Win95PlusInsideComputerStop;
+
+            asteriskSound = Properties.Resources.Win95PlusInsideComputerAsterisk;
+
+            activeTitleBarColor = Color.FromArgb(224, 0, 0);
+            activeTitleTextColor = Color.White;
+            inactiveTitleBarColor = Color.FromArgb(96, 168, 128);
+            inactiveTitleTextColor = Color.FromArgb(216, 224, 216);
 
             defaultWallpaper = Properties.Resources.Win95PlusInsideComputerWallpaper;
             themeName = "insidepc";

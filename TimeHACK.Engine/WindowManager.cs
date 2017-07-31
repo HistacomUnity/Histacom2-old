@@ -51,7 +51,8 @@ namespace TimeHACK.Engine
                 app.minimizebutton.Location = new Point(app.minimizebutton.Location.X, app.minimizebutton.Location.Y);
             }
 
-            // Time for the taskbar
+            // Time for the colors
+            app.programtopbar.BackColor = SaveSystem.currentTheme.activeTitleBarColor;
 
             // Convert an image to an icon (for the taskbar)
             if (icon != null)

@@ -13,9 +13,10 @@ namespace TimeHACK.Engine.Template
             DoubleBuffered = true;
         }
 
-        public System.Drawing.Font fnt;
+        public Font fnt;
 
         public bool closeDisabled = false;
+        public bool isActive = true;
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int WM_SYSCOMMAND = 0x0112;
@@ -49,6 +50,20 @@ namespace TimeHACK.Engine.Template
         private void closebutton_Click(object sender, EventArgs e)
         {
             if (!closeDisabled) this.Close();
+        }
+
+        private void WinClassic_Activated(object sender, EventArgs e)
+        {
+            isActive = true;
+            programtopbar.BackColor = SaveSystem.currentTheme.activeTitleBarColor;
+            Title.ForeColor = SaveSystem.currentTheme.activeTitleTextColor;
+        }
+
+        private void WinClassic_Deactivate(object sender, EventArgs e)
+        {
+            isActive = false;
+            programtopbar.BackColor = SaveSystem.currentTheme.inactiveTitleBarColor;
+            Title.ForeColor = SaveSystem.currentTheme.inactiveTitleTextColor;
         }
 
         public bool max = false;

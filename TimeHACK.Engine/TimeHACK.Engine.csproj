@@ -123,6 +123,7 @@
     <None Include="Resources\Win95PlusDangerousCreaturesExclamation.wav" />
     <None Include="Resources\Win95PlusDangerousCreaturesProgError.wav" />
     <None Include="Resources\Win95PlusDangerousCreaturesQuestion.wav" />
+    <None Include="Resources\Win95PlusInsideComputerAsterisk.wav" />
     <Content Include="Resources\WinClassic\Window\BottomLeft.png" />
     <Content Include="Resources\WinClassic\Window\BottomRight.png" />
     <Content Include="Resources\WinClassic\Window\BottomSide.png" />

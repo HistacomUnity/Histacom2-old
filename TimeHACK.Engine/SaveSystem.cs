@@ -647,6 +647,9 @@ namespace TimeHACK.Engine
 
         [Order]
         public int BytesLeft { get; set; }
+
+        [Order]
+        public Theme customTheme { get; set; }
     }
 
     public class FileSystemFolderInfo

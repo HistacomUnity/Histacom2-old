@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TimeHACK.Engine;
+using TimeHACK.Engine.Template;
 
 namespace TimeHACK.OS.Win95.Win95Apps
 {
@@ -80,6 +81,21 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     TitleScreen.frm95.BackgroundImage = Properties.Resources.ICTheme_BG;
                     TitleScreen.frm95.desktopicons.BackgroundImage = new Bitmap(Properties.Resources.ICTheme_BG, TitleScreen.frm95.Width, TitleScreen.frm95.Height);
                     break;
+            }
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f is WinClassic)
+                {
+                    if (((WinClassic)f).isActive)
+                    {
+                        ((WinClassic)f).programtopbar.BackColor = SaveSystem.currentTheme.activeTitleBarColor;
+                        ((WinClassic)f).Title.ForeColor = SaveSystem.currentTheme.activeTitleTextColor;
+                    } else
+                    {
+                        ((WinClassic)f).programtopbar.BackColor = SaveSystem.currentTheme.inactiveTitleBarColor;
+                        ((WinClassic)f).Title.ForeColor = SaveSystem.currentTheme.inactiveTitleTextColor;
+                    }
+                }
             }
         }
 

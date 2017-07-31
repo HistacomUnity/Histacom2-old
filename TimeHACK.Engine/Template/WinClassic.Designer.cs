@@ -82,7 +82,7 @@
             // 
             // programtopbar
             // 
-            this.programtopbar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(170)))));
+            this.programtopbar.BackColor = System.Drawing.Color.Navy;
             this.programtopbar.Controls.Add(this.programIcon);
             this.programtopbar.Controls.Add(this.maximizebutton);
             this.programtopbar.Controls.Add(this.minimizebutton);
@@ -159,7 +159,7 @@
             this.toprightcorner.Name = "toprightcorner";
             this.toprightcorner.Size = new System.Drawing.Size(4, 4);
             this.toprightcorner.TabIndex = 6;
-            this.toprightcorner.MouseDown += new System.Windows.Forms.MouseEventHandler(border_MouseDown);
+            this.toprightcorner.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
             // 
             // bottomrightcorner
             // 
@@ -170,7 +170,7 @@
             this.bottomrightcorner.Name = "bottomrightcorner";
             this.bottomrightcorner.Size = new System.Drawing.Size(4, 4);
             this.bottomrightcorner.TabIndex = 4;
-            this.bottomrightcorner.MouseDown += new System.Windows.Forms.MouseEventHandler(border_MouseDown);
+            this.bottomrightcorner.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
             // 
             // bottomleftcorner
             // 
@@ -180,7 +180,7 @@
             this.bottomleftcorner.Name = "bottomleftcorner";
             this.bottomleftcorner.Size = new System.Drawing.Size(4, 4);
             this.bottomleftcorner.TabIndex = 2;
-            this.bottomleftcorner.MouseDown += new System.Windows.Forms.MouseEventHandler(border_MouseDown);
+            this.bottomleftcorner.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
             // 
             // topleftcorner
             // 
@@ -189,7 +189,7 @@
             this.topleftcorner.Name = "topleftcorner";
             this.topleftcorner.Size = new System.Drawing.Size(4, 4);
             this.topleftcorner.TabIndex = 1;
-            this.topleftcorner.MouseDown += new System.Windows.Forms.MouseEventHandler(border_MouseDown);
+            this.topleftcorner.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
             // 
             // left
             // 
@@ -199,7 +199,7 @@
             this.left.Name = "left";
             this.left.Size = new System.Drawing.Size(4, 292);
             this.left.TabIndex = 3;
-            this.left.MouseDown += new System.Windows.Forms.MouseEventHandler(border_MouseDown);
+            this.left.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
             // 
             // bottom
             // 
@@ -211,7 +211,7 @@
             this.bottom.Name = "bottom";
             this.bottom.Size = new System.Drawing.Size(296, 4);
             this.bottom.TabIndex = 5;
-            this.bottom.MouseDown += new System.Windows.Forms.MouseEventHandler(border_MouseDown);
+            this.bottom.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
             // 
             // right
             // 
@@ -222,7 +222,7 @@
             this.right.Name = "right";
             this.right.Size = new System.Drawing.Size(4, 296);
             this.right.TabIndex = 7;
-            this.right.MouseDown += new System.Windows.Forms.MouseEventHandler(border_MouseDown);
+            this.right.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
             // 
             // top
             // 
@@ -233,7 +233,7 @@
             this.top.Name = "top";
             this.top.Size = new System.Drawing.Size(300, 4);
             this.top.TabIndex = 8;
-            this.top.MouseDown += new System.Windows.Forms.MouseEventHandler(border_MouseDown);
+            this.top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
             // 
             // WinClassic
             // 
@@ -244,6 +244,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "WinClassic";
             this.Text = "WinClassic";
+            this.Activated += new System.EventHandler(this.WinClassic_Activated);
+            this.Deactivate += new System.EventHandler(this.WinClassic_Deactivate);
             this.program.ResumeLayout(false);
             this.programtopbar.ResumeLayout(false);
             this.programtopbar.PerformLayout();
