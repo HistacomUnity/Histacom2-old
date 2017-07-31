@@ -53,6 +53,7 @@ namespace TimeHACK.Engine
 
             // Time for the colors
             app.programtopbar.BackColor = SaveSystem.currentTheme.activeTitleBarColor;
+            app.Title.ForeColor = SaveSystem.currentTheme.activeTitleTextColor;
 
             // Convert an image to an icon (for the taskbar)
             if (icon != null)
