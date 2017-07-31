@@ -407,9 +407,9 @@ namespace TimeHACK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MS_DOS {
+        internal static System.Drawing.Bitmap MSDOSPromptToolStripMenuItem1_Image {
             get {
-                object obj = ResourceManager.GetObject("MS_DOS", resourceCulture);
+                object obj = ResourceManager.GetObject("MSDOSPromptToolStripMenuItem1_Image", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

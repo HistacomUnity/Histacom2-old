@@ -174,7 +174,6 @@ namespace TimeHACK.OS.Win95
             this.taskbartime.Size = new System.Drawing.Size(26, 13);
             this.taskbartime.TabIndex = 2;
             this.taskbartime.Text = "time";
-            this.taskbartime.Click += new System.EventHandler(this.taskbartime_Click);
             // 
             // taskbarItems
             // 
@@ -804,18 +803,20 @@ namespace TimeHACK.OS.Win95
             // 
             this.ControlPanelToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.ControlPanelToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ControlPanelToolStripMenuItem.BackgroundImage")));
+            this.ControlPanelToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.Win95ControlPanelIcon;
             this.ControlPanelToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ControlPanelToolStripMenuItem.Name = "ControlPanelToolStripMenuItem";
-            this.ControlPanelToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.ControlPanelToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.ControlPanelToolStripMenuItem.Text = "Control Panel";
             // 
             // PrintersToolStripMenuItem
             // 
             this.PrintersToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.PrintersToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PrintersToolStripMenuItem.BackgroundImage")));
+            this.PrintersToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.Win95PrintersFolder;
             this.PrintersToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.PrintersToolStripMenuItem.Name = "PrintersToolStripMenuItem";
-            this.PrintersToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.PrintersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.PrintersToolStripMenuItem.Text = "Printers";
             this.PrintersToolStripMenuItem.Click += new System.EventHandler(this.infoboxTestToolStripMenuItem_Click);
             // 
@@ -1049,6 +1050,7 @@ namespace TimeHACK.OS.Win95
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(640, 480);
             this.Controls.Add(this.taskbar);
             this.Controls.Add(this.startmenu);

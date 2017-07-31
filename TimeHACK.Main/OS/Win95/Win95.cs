@@ -129,14 +129,14 @@ namespace TimeHACK.OS.Win95
 
             // Update the Desktop icons
 
-            DesktopController.RefreshDesktopIcons(new ListViewItem[] { new System.Windows.Forms.ListViewItem("My Computer", 0),
-            new System.Windows.Forms.ListViewItem("Network Neighborhood", 5),
-            new System.Windows.Forms.ListViewItem("Inbox", 3),
-            new System.Windows.Forms.ListViewItem("Recycle Bin", 7),
-            new System.Windows.Forms.ListViewItem("Internet Explorer", 2),
-            new System.Windows.Forms.ListViewItem("Online Services", 1),
-            new System.Windows.Forms.ListViewItem("Set Up The Microsoft Network", 4),
-            new System.Windows.Forms.ListViewItem("Outlook Express", 6) }, ref desktopicons, Path.Combine(ProfileWindowsDirectory, "Desktop"));
+            DesktopController.RefreshDesktopIcons(new ListViewItem[] { new ListViewItem("My Computer", 0),
+            new ListViewItem("Network Neighborhood", 5),
+            new ListViewItem("Inbox", 3),
+            new ListViewItem("Recycle Bin", 7),
+            new ListViewItem("Internet Explorer", 2),
+            new ListViewItem("Online Services", 1),
+            new ListViewItem("Set Up The Microsoft Network", 4),
+            new ListViewItem("Outlook Express", 6) }, ref desktopicons, Path.Combine(ProfileWindowsDirectory, "Desktop"));
         }
 
         private void fontLoad()
@@ -171,12 +171,6 @@ namespace TimeHACK.OS.Win95
         }
 
         #endregion //Region
-
-        // Give Year Code - NYI
-        private void taskbartime_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         // Set the Clock
         private void clockTimer_Tick(object sender, EventArgs e)
@@ -441,9 +435,9 @@ namespace TimeHACK.OS.Win95
         private void MSDOSPromptToolStripMenuItem1_Click (object sender, EventArgs e)
         {
             WinClassicTerminal msdos = new WinClassicTerminal(false);
-            WinClassic app = wm.StartWin95(msdos, "MS-DOS Prompt", Properties.Resources.MS_DOS, true, true, false);
+            WinClassic app = wm.StartWin95(msdos, "MS-DOS Prompt", Properties.Resources.MSDOSPromptToolStripMenuItem1_Image, true, true, false);
 
-            AddTaskBarItem(app, app.Tag.ToString(), "MS-DOS Prompt", Properties.Resources.MS_DOS);
+            AddTaskBarItem(app, app.Tag.ToString(), "MS-DOS Prompt", Properties.Resources.MSDOSPromptToolStripMenuItem1_Image);
             app.BringToFront();
             startmenu.Hide();
         }
@@ -575,7 +569,7 @@ namespace TimeHACK.OS.Win95
         private void MinsweeperToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WinClassic app = wm.StartWin95(new WinClassicMinesweeper(), "Minesweeper", Properties.Resources.WinClassicMinesweeper, false, false);
-            AddTaskBarItem(app, app.Tag.ToString(), "Calculator", Properties.Resources.WinClassicCalc);
+            AddTaskBarItem(app, app.Tag.ToString(), "Minesweeper", Properties.Resources.WinClassicMinesweeper);
 
             nonimportantapps.Add(app);
             nonimportantapps[nonimportantapps.Count - 1].BringToFront();

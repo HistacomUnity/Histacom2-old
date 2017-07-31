@@ -441,9 +441,9 @@ namespace TimeHACK.OS.Win98
         private void MSDOSPromptToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             WinClassicTerminal msdos = new WinClassicTerminal(false);
-            WinClassic app = wm.StartWin95(msdos, "MS-DOS Prompt", Properties.Resources.MS_DOS, true, true, false);
+            WinClassic app = wm.StartWin95(msdos, "MS-DOS Prompt", Properties.Resources.MSDOSPromptToolStripMenuItem1_Image, true, true, false);
 
-            AddTaskBarItem(app, app.Tag.ToString(), "MS-DOS Prompt", Properties.Resources.MS_DOS);
+            AddTaskBarItem(app, app.Tag.ToString(), "MS-DOS Prompt", Properties.Resources.MSDOSPromptToolStripMenuItem1_Image);
             app.BringToFront();
             startmenu.Hide();
         }

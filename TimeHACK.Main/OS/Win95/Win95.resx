@@ -117,13 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="startmenuitems.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="startmenuitems.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="startmenuitems.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>17, 17</value>
+  </data>
+  <data name="FindToolStripMenuItem.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xMzQDW3oAAAAMSURBVBhXYzhw
+        4AAABIQCQUtXaBsAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="InternetConnectionWizardToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAALRJREFUOE+N
@@ -270,14 +274,9 @@
         QmCC
 </value>
   </data>
-  <data name="MSDOSPromptToolStripMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAALtJREFUOE91TwESBCEI6un9vBPRYqljhtEIyUZhzTkXKo8J1ZI4P3xjlAjsqpoN
-        upcBf0zA6+7r8QAxA9170IEPm6l7PWu9A1CLwNaVpSfWNEKLWCECDnkvAdFtMgBDLeHFaNaXEpQu22B9
-        NsFA96i2yQlo00wejQG9VfuSCQ0IXAFAVAb468AVwJB3AHpsBFKn2uYkemh9hllezf4KcDKwtqkBpX5j
-        Dyj5DRIeDDh3wD3c5AYkh2QwOMYPtAJqglssjE8AAAAASUVORK5CYII=
-</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="MSDOSPromptToolStripMenuItem1.Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\Resources\MSDOSPromptToolStripMenuItem1.Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="OutlookExpressToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -331,13 +330,6 @@
         4AAABIQCQUtXaBsAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="FindToolStripMenuItem.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xMzQDW3oAAAAMSURBVBhXYzhw
-        4AAABIQCQUtXaBsAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="FilesOrFoldersToolStripMenuItem.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -366,18 +358,18 @@
         4AAABIQCQUtXaBsAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="clockTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="clockTimer.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>153, 17</value>
-  </metadata>
-  <metadata name="desktopImages.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="desktopImages.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>263, 17</value>
-  </metadata>
+  </data>
   <data name="desktopImages.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABC
-        fgAAAk1TRnQBSQFMAgEBDAIAAQIBAAECASABAAEgAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoAwABgAMA
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABE
+        fgAAAk1TRnQBSQFMAgEBDAIAAQIBBAECASABAAEgAQAE/wEhARAI/wFCAU0BNgcAATYDAAEoAwABgAMA
         AYADAAEBAQABIAcAAQH/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A
         /wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A
         /wD/AP8A/wD/AP8A/wD/AP8A/wD/AGQAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMA
@@ -915,18 +907,19 @@
         AQcEAAHwAQEB4AEDAfADAAH+AgABBwQAAfACAAEDAfgCAAEBAf4CAAEHBAAB+AIAAQcB+AIAAQEB/gIA
         AQcEAAH8AgABBwH8AgABAwH+AgABBwMAAQEB/gIAAQ4B/AIAAQMB/gIAAQcBgAEAA/8CAAEeAfwCAAEH
         Af4CAAEHAcABAQP/AcABAAF+AfwCAAEPAf4CAAEHAeABAwP/AfgBAQH+AfwCAAEfAf8CAAEHAfABBwT/
-        AeEC/AIAAT8B/wGAAQABBwb/AfwBeQH/AgAC/wHAAQABDwf/AQMB/wHEAQMB/ws=
+        AeEC/AIAAT8B/wGAAQABBwb/AfwBeQH/AgAC/wHAAQABDwf/AQMB/wHEAQMB/xYACw==
 </value>
   </data>
-  <metadata name="rightclickbackproperties.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="rightclickbackproperties.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>401, 8</value>
-  </metadata>
-  <metadata name="desktopupdate.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="desktopupdate.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>580, 17</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.TrayHeight" type="System.Int32, mscorlib">
     <value>63</value>
-  </metadata>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAUAEBAAAAAAIABoBAAAVgAAACAgAAAAACAAqBAAAL4EAAAwMAAAAAAgAKglAABmFQAAQEAAAAAA

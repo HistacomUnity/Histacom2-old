@@ -25,7 +25,12 @@ namespace TimeHACK.Engine.Template.Taskbars
         private void Win95TaskBarItem_Load(object sender, EventArgs e)
         {
             progName.Text = (string)this.Tag;
-            progPic.Image = this.BackgroundImage;
+            if (BackgroundImage == null)
+            {
+                progName.Location = new Point(4, 2);
+                progPic.Hide();
+            }
+            else progPic.Image = this.BackgroundImage;
             ApplicationID = (TaskBarController.AvalibleApplicationID - 1).ToString();
             this.BackgroundImage = null;
         }
