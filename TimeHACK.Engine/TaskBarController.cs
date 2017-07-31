@@ -6,8 +6,8 @@ namespace TimeHACK.Engine
 {
     public class TaskBarController
     {
-        
-        public static int AvalibleApplicationID;
+
+        public static int AvalibleApplicationID = 0;
 
         public Panel AddTaskbarItem95(string ApplicationID, string ApplicationName, Image ApplicationIcon, UserControl taskbar_item, Panel oldPanel)
         {
@@ -17,7 +17,8 @@ namespace TimeHACK.Engine
 
             taskbar_item.BackgroundImage = ApplicationIcon;
             taskbar_item.Tag = ApplicationName;
-            taskbar_item.Dock = DockStyle.Left;
+            if (AvalibleApplicationID == 1) taskbar_item.Dock = DockStyle.Left;
+            taskbar_item.Location = new Point(160 * returnPanel.Controls.Count, 0);
             returnPanel.Controls.Add(taskbar_item);
 
             return returnPanel;
