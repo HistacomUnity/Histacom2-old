@@ -117,7 +117,7 @@ namespace TimeHACK.OS.Win95
                 CurrentSave.FTime95 = true;
                 SaveSystem.SaveGame();
                 WinClassicWelcome welcome = new WinClassicWelcome();
-                WinClassic app = wm.StartWin95(welcome, "Welcome", null, false, false);
+                WinClassic app = wm.StartWin95(welcome, "Welcome", null, false, false, resize: false);
                 AddTaskBarItem(app, app.Tag.ToString(), "Welcome", null);
 
                 nonimportantapps.Add(app);
@@ -239,7 +239,7 @@ namespace TimeHACK.OS.Win95
         private void downloaderTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WinClassicDownloader opendownload = new WinClassicDownloader();
-            WinClassic app = wm.StartWin95(opendownload, "Downloader", null, false, true);
+            WinClassic app = wm.StartWin95(opendownload, "Downloader", null, false, true, resize: false);
             opendownload.appName.Text = "Downloading: Survive The Day";
 
             AddTaskBarItem(app, app.Tag.ToString(), "Downloader", null);
@@ -251,7 +251,7 @@ namespace TimeHACK.OS.Win95
         private void installerTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Win95Installer openinstaller = new Win95Installer("Testing");
-            WinClassic app = wm.StartWin95(openinstaller, "Installer", null, false, true);
+            WinClassic app = wm.StartWin95(openinstaller, "Installer", null, false, true, resize: false);
 
             AddTaskBarItem(app, app.Tag.ToString(), "Installer", null);
 
@@ -456,7 +456,7 @@ namespace TimeHACK.OS.Win95
         private void PropertiesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             WinClassicThemePanel theme = new WinClassicThemePanel();
-            WinClassic app = wm.StartWin95(theme, "Themes", null, false, true, false);
+            WinClassic app = wm.StartWin95(theme, "Themes", null, false, true, false, resize: false);
 
             AddTaskBarItem(app, app.Tag.ToString(), "Themes", null);
             app.BringToFront();
@@ -489,7 +489,7 @@ namespace TimeHACK.OS.Win95
 
         private void CalculatorToolStripMenuItem_Click(object sender, EventArgs e)
         { 
-            WinClassic app = wm.StartWin95(new WinClassicCalculator(), "Calculator", Properties.Resources.WinClassicCalc, false, false);
+            WinClassic app = wm.StartWin95(new WinClassicCalculator(), "Calculator", Properties.Resources.WinClassicCalc, false, false, resize: false);
             AddTaskBarItem(app, app.Tag.ToString(), "Calculator", Properties.Resources.WinClassicCalc);
 
             nonimportantapps.Add(app);

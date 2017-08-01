@@ -15,6 +15,7 @@ namespace TimeHACK.Engine.Template
 
         public Font fnt;
 
+        public bool resizable = true;
         public bool closeDisabled = false;
         public bool isActive = true;
 
@@ -70,7 +71,7 @@ namespace TimeHACK.Engine.Template
         {
             if (e.Button == MouseButtons.Left)
             {
-                this.Size = new Size(MousePosition.X - this.Location.X, this.Size.Height);
+                if (resizable) this.Size = new Size(MousePosition.X - this.Location.X, this.Size.Height);
             }
         }
 
@@ -78,15 +79,15 @@ namespace TimeHACK.Engine.Template
         {
             if (e.Button == MouseButtons.Left)
             {
-                this.Size = new Size(this.Size.Width + (this.Location.X - MousePosition.X), this.Size.Height);
-                this.Location = new Point(MousePosition.X, this.Location.Y);
+                if (resizable) this.Size = new Size(this.Size.Width + (this.Location.X - MousePosition.X), this.Size.Height);
+                if (resizable) this.Location = new Point(MousePosition.X, this.Location.Y);
             }
         }
 
         private void bottom_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left) {
-                this.Size = new Size(this.Size.Width, MousePosition.Y - this.Location.Y);
+                if (resizable) this.Size = new Size(this.Size.Width, MousePosition.Y - this.Location.Y);
             }
         }
 
