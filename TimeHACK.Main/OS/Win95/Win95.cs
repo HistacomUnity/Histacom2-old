@@ -29,6 +29,9 @@ namespace TimeHACK.OS.Win95
 
         public bool HiddenPadamsFound = false;
 
+        ListViewItem heldDownItem;
+        Point heldDownPoint;
+
         // Init the form
         public Windows95()
         {
@@ -137,6 +140,7 @@ namespace TimeHACK.OS.Win95
             new ListViewItem("Online Services", 1),
             new ListViewItem("Set Up The Microsoft Network", 4),
             new ListViewItem("Outlook Express", 6) }, ref desktopicons, Path.Combine(ProfileWindowsDirectory, "Desktop"));
+            desktopicons.AutoArrange = false;
         }
 
         private void fontLoad()
@@ -204,6 +208,13 @@ namespace TimeHACK.OS.Win95
             {
                 rightclickbackproperties.Hide();
                 startmenu.Hide();
+
+                heldDownItem = desktopicons.GetItemAt(e.X, e.Y);
+                if (heldDownItem != null)
+                {
+                    heldDownPoint = new Point(e.X - heldDownItem.Position.X,
+                                              e.Y - heldDownItem.Position.Y);
+                }
             }
 
             else if (e.Button == MouseButtons.Middle)
@@ -577,6 +588,20 @@ namespace TimeHACK.OS.Win95
 
             app.BringToFront();
             startmenu.Hide();
+        }
+
+        private void desktopicons_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (heldDownItem != null)
+            {
+                heldDownItem.Position = new Point(e.Location.X - heldDownPoint.X,
+                                                  e.Location.Y - heldDownPoint.Y);
+            }
+        }
+
+        private void desktopicons_MouseUp(object sender, MouseEventArgs e)
+        {
+            heldDownItem = null;
         }
     }
     public class MyRenderer : ToolStripProfessionalRenderer

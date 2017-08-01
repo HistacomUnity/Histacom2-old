@@ -987,6 +987,8 @@ namespace TimeHACK.OS.Win95
             this.desktopicons.UseCompatibleStateImageBehavior = false;
             this.desktopicons.DoubleClick += new System.EventHandler(this.desktopicons_DoubleClick);
             this.desktopicons.MouseDown += new System.Windows.Forms.MouseEventHandler(this.desktop_mousedown);
+            this.desktopicons.MouseMove += new System.Windows.Forms.MouseEventHandler(this.desktopicons_MouseMove);
+            this.desktopicons.MouseUp += new System.Windows.Forms.MouseEventHandler(this.desktopicons_MouseUp);
             // 
             // rightclickbackproperties
             // 
