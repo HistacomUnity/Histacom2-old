@@ -49,6 +49,24 @@ namespace TimeHACK.OS.Win95.Win95Apps
             diskView.ImageList.Images.Add(Properties.Resources.Win95NetworkIcon);
             diskView.ImageList.Images.Add(Properties.Resources.Win95RecycleIcon);
 
+            mainView.LargeImageList = new ImageList();
+            mainView.LargeImageList.ImageSize = new Size(32, 32);
+
+            mainView.LargeImageList.Images.Add(Properties.Resources.Win95Computer);
+            mainView.LargeImageList.Images.Add(Properties.Resources.WinClassicFolder);
+            mainView.LargeImageList.Images.Add(Properties.Resources.WinClassicIE4);
+            mainView.LargeImageList.Images.Add(Properties.Resources.WinClassicInbox);
+            mainView.LargeImageList.Images.Add(Properties.Resources.WinClassicMSN);
+            mainView.LargeImageList.Images.Add(Properties.Resources.WinClassicNetworking);
+            mainView.LargeImageList.Images.Add(Properties.Resources.WinClassicOutlook);
+            mainView.LargeImageList.Images.Add(Properties.Resources.WinClassicRecycle);
+            mainView.LargeImageList.Images.Add(Properties.Resources.Win95File);
+            mainView.LargeImageList.Images.Add(Properties.Resources.WinClassicFolder);
+            mainView.LargeImageList.Images.Add(Properties.Resources.WinClassicApp);
+            mainView.LargeImageList.Images.Add(Properties.Resources.WinClassicSetup);
+            mainView.LargeImageList.Images.Add(Properties.Resources.WinClassicNotepad);
+            mainView.LargeImageList.Images.Add(Properties.Resources.WinClassicCalcBig);
+
             program.BringToFront();
 
 
@@ -113,34 +131,11 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 {
                     string label = ReadDataFile(str, false);
                     ListViewItem itm = this.mainView.Items.Add(label ?? Path.GetFileName(str));
-                    itm.ImageKey = str;
+                    itm.ImageIndex = 1;
                 }
                 foreach (string str in Directory.GetFiles(CurrentDirectory))
                 {
-                    // Get the app Icon
-
-                    //int AppIcon = 2;
-
-                    //switch (new FileInfo(str).Extension)
-                    //{
-                    //    case ".exe":
-                    //        string contents;
-
-                    //        contents = File.ReadAllText(str);
-
-                    //        switch (contents.ToLower())
-                    //        {
-                    //            case "calc":
-                    //                AppIcon = 3;
-                    //                break;
-                    //            case "explorer":
-                    //                AppIcon = 4;
-                    //                break;
-                    //        }
-                    //        break;
-                    //}
-
-
+                    ListViewItem itm;
 
                     if (IsFileOpenDialog == true || IsFileSaveDialog == true)
                     {
@@ -148,15 +143,50 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         {
                             if (new FileInfo(str).Extension == onlyViewExtension)
                             {
-                                ListViewItem itm = this.mainView.Items.Add(Path.GetFileName(str));
+                                itm = this.mainView.Items.Add(Path.GetFileName(str));
                                 itm.Tag = str;
                             }
+                            else return;
                         }
+                        else return;
                     } else {
-                        if (!(Path.GetFileName(str) == "_data.info")) {
-                            ListViewItem itm = this.mainView.Items.Add(Path.GetFileName(str));
+                        if (!(Path.GetFileName(str) == "_data.info"))
+                        {
+                            itm = this.mainView.Items.Add(Path.GetFileName(str));
                             itm.Tag = str;
                         }
+                        else return;
+                    }
+
+                    switch (new FileInfo(str).Extension)
+                    {
+                        case ".exe":
+                            string contents;
+
+                            contents = File.ReadAllText(str);
+
+                            switch (contents.ToLower())
+                            {
+                                case "calc":
+                                    itm.ImageIndex = 13;
+                                    break;
+                                case "explorer":
+                                    itm.ImageIndex = 0;
+                                    break;
+                                case "notepad":
+                                    itm.ImageIndex = 12;
+                                    break;
+                                default:
+                                    itm.ImageIndex = 10;
+                                    break;
+                            }
+                            break;
+                        case ".txt":
+                            itm.ImageIndex = 12;
+                            break;
+                        default:
+                            itm.ImageIndex = 8;
+                            break;
                     }
                 }
             } catch (Exception ex) {
@@ -229,11 +259,11 @@ namespace TimeHACK.OS.Win95.Win95Apps
             switch (appname.ToLower())
             {
                 case "explorer":
-                    Engine.Template.WinClassic app = wm.StartWin95(new Win95WindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
+                    WinClassic app = wm.StartWin95(new Win95WindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
                     Program.AddTaskbarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
                     break;
                 case "calc":
-                    Engine.Template.WinClassic appCalc = wm.StartWin95(new WinClassicCalculator(), "Calculator", Properties.Resources.WinClassicCalc, true, true);
+                    WinClassic appCalc = wm.StartWin95(new WinClassicCalculator(), "Calculator", Properties.Resources.WinClassicCalc, true, true);
                     Program.AddTaskbarItem(appCalc, appCalc.Tag.ToString(), "Calculator", Properties.Resources.WinClassicCalc);
 
                     Program.nonimportantapps.Add(appCalc);
@@ -242,7 +272,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
                     break;
                 case "wordpad":
-                    Engine.Template.WinClassic appWP = wm.StartWin95(new WinClassicWordPad(), "Wordpad", Properties.Resources.WinClassicWordpad, true, true);
+                    WinClassic appWP = wm.StartWin95(new WinClassicWordPad(), "Wordpad", Properties.Resources.WinClassicWordpad, true, true);
                     Program.AddTaskbarItem(appWP, appWP.Tag.ToString(), "Wordpad", Properties.Resources.WinClassicWordpad);
 
                     Program.nonimportantapps.Add(appWP);

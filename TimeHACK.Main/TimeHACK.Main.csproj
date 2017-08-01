@@ -530,6 +530,7 @@
     <None Include="Resources\msdosprompt.png" />
     <None Include="Resources\SeizureWarning.png" />
     <None Include="Resources\MSDOSPromptToolStripMenuItem1.Image.png" />
+    <None Include="Resources\regedit_100.ico" />
     <Content Include="Resources\std_beep.wav" />
     <Content Include="Resources\std_gobeep.wav" />
     <None Include="Resources\termCopy.png" />
@@ -595,6 +596,7 @@
     <None Include="Resources\WinClassic\Win98Start.wav" />
     <None Include="Resources\WinClassic\Win98Stop.WAV" />
     <None Include="Resources\WinClassic\WinClassicApp.png" />
+    <None Include="Resources\WinClassic\WinClassicCalcBig.png" />
     <Content Include="Resources\WinClassic\WinClassicClock.png" />
     <Content Include="Resources\WinClassic\WinClassicComputer.png" />
     <None Include="Resources\WinClassic\WinClassicCopy.png" />

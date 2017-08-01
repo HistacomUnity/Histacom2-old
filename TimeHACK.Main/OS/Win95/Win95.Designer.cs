@@ -806,7 +806,7 @@ namespace TimeHACK.OS.Win95
             this.ControlPanelToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.Win95ControlPanelIcon;
             this.ControlPanelToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ControlPanelToolStripMenuItem.Name = "ControlPanelToolStripMenuItem";
-            this.ControlPanelToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ControlPanelToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.ControlPanelToolStripMenuItem.Text = "Control Panel";
             // 
             // PrintersToolStripMenuItem
@@ -816,7 +816,7 @@ namespace TimeHACK.OS.Win95
             this.PrintersToolStripMenuItem.Image = global::TimeHACK.Properties.Resources.Win95PrintersFolder;
             this.PrintersToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.PrintersToolStripMenuItem.Name = "PrintersToolStripMenuItem";
-            this.PrintersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.PrintersToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.PrintersToolStripMenuItem.Text = "Printers";
             this.PrintersToolStripMenuItem.Click += new System.EventHandler(this.infoboxTestToolStripMenuItem_Click);
             // 
@@ -969,6 +969,7 @@ namespace TimeHACK.OS.Win95
             this.desktopImages.Images.SetKeyName(9, "WinClassicFolder.png");
             this.desktopImages.Images.SetKeyName(10, "WinClassicApp.png");
             this.desktopImages.Images.SetKeyName(11, "WinClassicSetup.png");
+            this.desktopImages.Images.SetKeyName(12, "WinClassicNotepad.png");
             // 
             // desktopicons
             // 

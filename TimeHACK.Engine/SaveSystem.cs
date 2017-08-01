@@ -186,8 +186,9 @@ namespace TimeHACK.Engine
             SaveDirectoryInfo(ProfileWindowsDirectory, "Temp", true, "Temp", true);
             SaveDirectoryInfo(ProfileWindowsDirectory, "Desktop", true, "Desktop", true);
 
-            CreateWindowsFile(ProfileWindowsDirectory, "calc.exe", "calc", bytes: 59392);
-            CreateWindowsFile(ProfileWindowsDirectory, "explorer.exe", "explorer", bytes:204288);
+            CreateWindowsFile(ProfileWindowsDirectory, "calc.exe", "calc", 10, 59392);
+            CreateWindowsFile(ProfileWindowsDirectory, "explorer.exe", "explorer", 10, 204288);
+            CreateWindowsFile(ProfileWindowsDirectory, "notepad.exe", "notepad", 12, 34034);
         }
 
         public static void CreateWindowsFile(string filepath, string filename, string contents, int fileicon = 8, int bytes = 512)
@@ -263,7 +264,7 @@ namespace TimeHACK.Engine
 
             info.DOSLabel = info.Label.ToUpper().Replace("*", "").Replace("+", "").Replace(":", "").Replace(";", "").Replace(".", "").Replace(" ", "");
             if (info.DOSLabel.Length > 8) info.DOSLabel = info.DOSLabel.Substring(0, 6) + "~1";
-            if (dirname == "C:") info.DOSLabel = "C:";
+            if (label == "C:") info.DOSLabel = "C:";
             info.AllowBack = allowback;
             info.Files = new List<THFileInfo>(256);
             info.SubDirs = new List<THDirInfo>(256);

@@ -93,7 +93,6 @@
             this.mainView.Size = new System.Drawing.Size(486, 444);
             this.mainView.TabIndex = 10;
             this.mainView.UseCompatibleStateImageBehavior = false;
-            this.mainView.View = System.Windows.Forms.View.List;
             this.mainView.DoubleClick += new System.EventHandler(this.mainView_DoubleClick);
             // 
             // diskView

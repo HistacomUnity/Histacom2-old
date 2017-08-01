@@ -59,6 +59,7 @@ namespace TimeHACK.Engine
                     }
 
                     if (new FileInfo(dir).Extension == ".exe" && file.FileIcon == 8) file.FileIcon = 10;
+                    if (new FileInfo(dir).Extension == ".txt" && file.FileIcon == 8) file.FileIcon = 12;
 
                     view.Items.Add(Path.GetFileName(dir), file.FileIcon);
                     view.FindItemWithText(Path.GetFileName(dir)).Tag = dir;
