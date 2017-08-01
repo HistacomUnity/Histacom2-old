@@ -29,32 +29,30 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             labelBombs.Text = (_game.Mines - _game.DismantledMines).ToString();
         }
+        public void calculateFormSize(int x, int y)
+        {
+            panel1.Size = new Size(x * 25, y * 25);
+            this.ParentForm.Size = new Size(x * 25 + 45, y * 25 + 100);
+            labelTime.Location = new Point(x * 25 - 38, button1.Location.Y);
+            button1.PerformClick();
+        }
         private void begginnerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             level = "easy";
-            panel1.Size = new Size(200, 200);
-            this.ParentForm.Size = new Size(240, 275);
             button1.Location = new Point(108, 32);
-            labelTime.Location = new Point(162, 34);
-            button1.PerformClick();
+            calculateFormSize(8, 8);
         }
         private void intermediateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             level = "medium";
-            panel1.Size = new Size(400,400);
-            this.ParentForm.Size = new Size(440, 480);
             button1.Location = new Point(208, 32);
-            labelTime.Location = new Point(362, 34);
-            button1.PerformClick();
+            calculateFormSize(16, 16);
         }
         private void expertToolStripMenuItem_Click(object sender, EventArgs e)
         {
             level = "hard";
-            panel1.Size = new Size(740, 400);
-            this.ParentForm.Size = new Size(776, 480);
             button1.Location = new Point(381, 32);
-            labelTime.Location = new Point(702, 34);
-            button1.PerformClick();
+            calculateFormSize(30, 16);
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -87,7 +85,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void WinClassicMinesweeper_Load(object sender, EventArgs e)
         {
-            button1.PerformClick();
+            begginnerToolStripMenuItem.PerformClick();
         }
     }
 }

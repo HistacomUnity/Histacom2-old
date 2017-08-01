@@ -521,10 +521,11 @@
     <None Include="Resources\ie4_hsplitter.png" />
     <None Include="Resources\ie4_forward.png" />
     <None Include="Resources\ie4_back.png" />
-    <None Include="Resources\minsweeper smile.PNG" />
+    <None Include="Resources\minsweeper logo.jpg" />
     <None Include="Resources\minsweeper flag.PNG" />
     <None Include="Resources\minsweeper sad.PNG" />
-    <None Include="Resources\minsweeper logo.jpg" />
+    <None Include="Resources\minsweeper smile.PNG" />
+    <None Include="Resources\minesweepeprlogo.PNG" />
     <Content Include="Resources\modem_dial.wav" />
     <None Include="Resources\MS-DOS-logo-1.png" />
     <None Include="Resources\msdosprompt.png" />
