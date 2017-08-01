@@ -200,6 +200,7 @@
             this.left.Size = new System.Drawing.Size(4, 292);
             this.left.TabIndex = 3;
             this.left.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
+            this.left.MouseMove += new System.Windows.Forms.MouseEventHandler(this.left_MouseMove);
             // 
             // bottom
             // 
@@ -212,6 +213,7 @@
             this.bottom.Size = new System.Drawing.Size(296, 4);
             this.bottom.TabIndex = 5;
             this.bottom.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
+            this.bottom.MouseMove += new System.Windows.Forms.MouseEventHandler(this.bottom_MouseMove);
             // 
             // right
             // 
@@ -223,6 +225,7 @@
             this.right.Size = new System.Drawing.Size(4, 296);
             this.right.TabIndex = 7;
             this.right.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
+            this.right.MouseMove += new System.Windows.Forms.MouseEventHandler(this.right_MouseMove);
             // 
             // top
             // 

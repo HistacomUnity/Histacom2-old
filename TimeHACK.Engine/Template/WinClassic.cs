@@ -66,6 +66,30 @@ namespace TimeHACK.Engine.Template
             Title.ForeColor = SaveSystem.currentTheme.inactiveTitleTextColor;
         }
 
+        private void right_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Size = new Size(MousePosition.X - this.Location.X, this.Size.Height);
+            }
+        }
+
+        private void left_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Size = new Size(this.Size.Width + (this.Location.X - MousePosition.X), this.Size.Height);
+                this.Location = new Point(MousePosition.X, this.Location.Y);
+            }
+        }
+
+        private void bottom_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left) {
+                this.Size = new Size(this.Size.Width, MousePosition.Y - this.Location.Y);
+            }
+        }
+
         public bool max = false;
 
         private void maximizebutton_Click(object sender, EventArgs e)
