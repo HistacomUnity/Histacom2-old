@@ -15,8 +15,7 @@ namespace TimeHACK.Engine
         {
             string Val = "";
             string directoryFileInfo = File.ReadAllText(Path.Combine(reqDirectory, "_data.info"));
-            FileSystemFolderInfo toRead = new FileSystemFolderInfo();
-            toRead = JsonConvert.DeserializeObject<FileSystemFolderInfo>(directoryFileInfo);
+            FileSystemFolderInfo toRead = JsonConvert.DeserializeObject<FileSystemFolderInfo>(directoryFileInfo);
 
             if (returnYesIfProtected == true)
             {

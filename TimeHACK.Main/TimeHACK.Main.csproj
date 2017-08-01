@@ -622,11 +622,13 @@
     <None Include="Resources\WinClassic\WinClassicNotepad.png" />
     <None Include="Resources\WinClassic\WinClassicNew.png" />
     <None Include="Resources\WinClassic\WinClassicOpenFolderSmall.png" />
+    <None Include="Resources\WinClassic\WinClassicNotepadBig.png" />
     <Content Include="Resources\WinClassic\WinClassicOutlook.png" />
     <None Include="Resources\WinClassic\WinClassicPaste.png" />
     <Content Include="Resources\WinClassic\WinClassicProgramItem.png" />
     <Content Include="Resources\WinClassic\WinClassicPrograms.png" />
     <Content Include="Resources\WinClassic\WinClassicRecycle.png" />
+    <None Include="Resources\WinClassic\WinClassicRegedit.png" />
     <Content Include="Resources\WinClassic\WinClassicRun.png" />
     <Content Include="Resources\WinClassic\WinClassicSettings.png" />
     <None Include="Resources\WinClassic\WinClassicSetup.png" />

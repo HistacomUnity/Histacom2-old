@@ -89,7 +89,7 @@ namespace TimeHACK.Engine
         {
             get
             {
-                return Path.Combine(ProfileMyComputerDirectory, "Settings");
+                return Path.Combine(ProfileMyComputerDirectory, "Documents and Settings");
             }
         }
 
@@ -97,7 +97,7 @@ namespace TimeHACK.Engine
         {
             get
             {
-                return Path.Combine(ProfileMyComputerDirectory, "Doc");                
+                return Path.Combine(ProfileMyComputerDirectory, "My Documents");                
             }
         }
 
@@ -105,7 +105,7 @@ namespace TimeHACK.Engine
         {
             get
             {
-                return Path.Combine(ProfileMyComputerDirectory, "Prog");
+                return Path.Combine(ProfileMyComputerDirectory, "Program Files");
             }
         }
 
@@ -113,7 +113,7 @@ namespace TimeHACK.Engine
         {
             get
             {
-                return Path.Combine(ProfileMyComputerDirectory, "Win");
+                return Path.Combine(ProfileMyComputerDirectory, "Windows");
             }
         }
 
@@ -160,13 +160,13 @@ namespace TimeHACK.Engine
 
             SaveDirectoryInfo(ProfileDirectory, "folders", false, "My Computer", false);            
             SaveDirectoryInfo(ProfileFileSystemDirectory, "CDrive", false, "C:", true);
-            if (CurrentSave.CurrentOS == "95" || CurrentSave.CurrentOS == "98") SaveDirectoryInfo(ProfileMyComputerDirectory, "Doc", false, "My Documents", true);
-            if (CurrentSave.CurrentOS == "2000" || CurrentSave.CurrentOS == "ME") SaveDirectoryInfo(ProfileMyComputerDirectory, "Settings", false, "Documents and Settings", true);                    
-            SaveDirectoryInfo(ProfileMyComputerDirectory, "Prog", true, "Program Files", true);
+            if (CurrentSave.CurrentOS == "95" || CurrentSave.CurrentOS == "98") SaveDirectoryInfo(ProfileMyComputerDirectory, "My Documents", false, "My Documents", true);
+            if (CurrentSave.CurrentOS == "2000" || CurrentSave.CurrentOS == "ME") SaveDirectoryInfo(ProfileMyComputerDirectory, "Documents and Settings", false, "Documents and Settings", true);                    
+            SaveDirectoryInfo(ProfileMyComputerDirectory, "Program Files", true, "Program Files", true);
             SaveDirectoryInfo(ProfileProgramsDirectory, "Accessories", false, "Accessories", true);
             SaveDirectoryInfo(ProfileProgramsDirectory, "Internet Explorer", true, "Internet Explorer", true);
             SaveDirectoryInfo(ProfileProgramsDirectory, "The Microsoft Network", true, "The Microsoft Network", true);
-            SaveDirectoryInfo(ProfileMyComputerDirectory, "Win", true, "Windows", true);
+            SaveDirectoryInfo(ProfileMyComputerDirectory, "Windows", true, "Windows", true);
 
             CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Accessories"), "wordpad.exe", "wordpad");
             CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Internet Explorer"), "ie20.exe", "ie");
@@ -186,9 +186,10 @@ namespace TimeHACK.Engine
             SaveDirectoryInfo(ProfileWindowsDirectory, "Temp", true, "Temp", true);
             SaveDirectoryInfo(ProfileWindowsDirectory, "Desktop", true, "Desktop", true);
 
-            CreateWindowsFile(ProfileWindowsDirectory, "calc.exe", "calc", 10, 59392);
-            CreateWindowsFile(ProfileWindowsDirectory, "explorer.exe", "explorer", 10, 204288);
-            CreateWindowsFile(ProfileWindowsDirectory, "notepad.exe", "notepad", 12, 34034);
+            CreateWindowsFile(ProfileWindowsDirectory, "calc.exe", "calc", 13, 59392);
+            CreateWindowsFile(ProfileWindowsDirectory, "explorer.exe", "explorer", 0, 204288);
+            CreateWindowsFile(ProfileWindowsDirectory, "notepad.exe", "notepad", 14, 34034);
+            CreateWindowsFile(ProfileWindowsDirectory, "regedit.exe", "regedit", 15, 120320);
         }
 
         public static void CreateWindowsFile(string filepath, string filename, string contents, int fileicon = 8, int bytes = 512)

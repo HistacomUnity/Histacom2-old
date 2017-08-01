@@ -66,6 +66,8 @@ namespace TimeHACK.OS.Win95.Win95Apps
             mainView.LargeImageList.Images.Add(Properties.Resources.WinClassicSetup);
             mainView.LargeImageList.Images.Add(Properties.Resources.WinClassicNotepad);
             mainView.LargeImageList.Images.Add(Properties.Resources.WinClassicCalcBig);
+            mainView.LargeImageList.Images.Add(Properties.Resources.WinClassicNotepadBig);
+            mainView.LargeImageList.Images.Add(Properties.Resources.WinClassicRegedit);
 
             program.BringToFront();
 
@@ -157,8 +159,13 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         }
                         else return;
                     }
+                    FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(CurrentDirectory, "_data.info")));
+                    foreach(var item in fsfi.Files)
+                    {
+                        if (item.Name == Path.GetFileName(str)) { itm.ImageIndex = item.FileIcon; break; }
+                    }
 
-                    switch (new FileInfo(str).Extension)
+                    /*switch (new FileInfo(str).Extension)
                     {
                         case ".exe":
                             string contents;
@@ -187,7 +194,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         default:
                             itm.ImageIndex = 8;
                             break;
-                    }
+                    }*/
                 }
             } catch (Exception ex) {
                 //wm.StartInfobox95("Exploring - C:", "Error with the file explorer \n" + ex.Message, Properties.Resources.Win95Info); add illegal operation dialog here later
@@ -267,6 +274,15 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     Program.AddTaskbarItem(appCalc, appCalc.Tag.ToString(), "Calculator", Properties.Resources.WinClassicCalc);
 
                     Program.nonimportantapps.Add(appCalc);
+                    Program.nonimportantapps[Program.nonimportantapps.Count - 1].BringToFront();
+                    Program.nonimportantapps[Program.nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(Program.NonImportantApp_Closing);
+
+                    break;
+                case "notepad":
+                    WinClassic appNP = wm.StartWin95(new WinClassicNotepad(), "Notepad", Properties.Resources.Win95IconNotepad_2, true, true);
+                    Program.AddTaskbarItem(appNP, appNP.Tag.ToString(), "Notepad", Properties.Resources.Win95IconNotepad_2);
+
+                    Program.nonimportantapps.Add(appNP);
                     Program.nonimportantapps[Program.nonimportantapps.Count - 1].BringToFront();
                     Program.nonimportantapps[Program.nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(Program.NonImportantApp_Closing);
 
@@ -608,7 +624,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             {
                 if (mainView.FocusedItem.Tag == null)
                 { // If it isn't a file
-                    GoToDir(Path.Combine(CurrentDirectory, mainView.FocusedItem.ImageKey.ToString()));
+                    GoToDir(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text));
                 }
                 else
                 { // If it is a file
