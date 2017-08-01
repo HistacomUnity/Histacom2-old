@@ -37,6 +37,9 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
             _button.Click += new EventHandler(Click);
             _button.Paint += (sender, args) => Paintbrush.PaintClassicBorders(sender,args,2);
             _button.MouseDown += new MouseEventHandler(DismantleClick);
+            _button.FlatStyle = FlatStyle.Flat;
+            _button.FlatAppearance.BorderSize = 1;
+            _button.BackgroundImageLayout = ImageLayout.Stretch;
 
             _game.Panel.Controls.Add(Button);
         }
@@ -69,13 +72,13 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
                 if (Dismantled)
                 {
                     _dismantled = false;
-                    Button.BackColor = SystemColors.Control;
+                    Button.BackgroundImage = null;
                     Button.Text = "?";
                 }
                 else
                 {
                     _dismantled = true;
-                    Button.BackgroundImage = Properties.Resources.minsweeper_flag;
+                    Button.BackgroundImage = Properties.Resources.WinClassicMinesweeperFlag;
                 }
                 OnDismantle();
             }

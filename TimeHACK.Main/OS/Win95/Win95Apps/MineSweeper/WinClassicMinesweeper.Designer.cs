@@ -256,7 +256,7 @@
             // 
             // button1
             // 
-            this.button1.BackgroundImage = global::TimeHACK.Properties.Resources.minsweeper_smile;
+            this.button1.BackgroundImage = global::TimeHACK.Properties.Resources.WinClassicMinesweeperSmile;
             this.button1.Location = new System.Drawing.Point(108, 32);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(25, 25);
