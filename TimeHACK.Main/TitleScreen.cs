@@ -56,10 +56,7 @@ namespace TimeHACK
         public void StartGame()
         {
             //TODO: You may want to handle story stuff to decide what OS to boot here.
-            if (Convert.ToInt32(VM_Width.Text) == 1337 && Convert.ToInt32(VM_Height.Text) == 1337)
-            {
-                leet();
-            }
+            if (Convert.ToInt32(VM_Width.Text) == 1337 && Convert.ToInt32(VM_Height.Text) == 1337) leet();
             else
             {
                 // Time to decide which OS to start up!
@@ -105,16 +102,6 @@ namespace TimeHACK
                 }
 
             }
-        }
-
-        void closeButton(object sender, MouseEventArgs e)
-        {
-            Close();
-        }
-
-        private void closebutton_Click(object sender, EventArgs e)
-        {
-            Close();
         }
 
         private void VM_WidthHeight_KeyPress(object sender, KeyPressEventArgs e)

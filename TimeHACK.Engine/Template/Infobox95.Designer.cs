@@ -51,7 +51,7 @@
             this.programContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.programContent.Location = new System.Drawing.Point(0, 0);
             this.programContent.Name = "programContent";
-            this.programContent.Size = new System.Drawing.Size(413, 138);
+            this.programContent.Size = new System.Drawing.Size(413, 118);
             this.programContent.TabIndex = 10;
             this.programContent.Tag = "gnoreFormOnTaskbar";
             // 
@@ -61,7 +61,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(150, 104);
+            this.button1.Location = new System.Drawing.Point(150, 84);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(80, 23);
             this.button1.TabIndex = 5;
@@ -75,7 +75,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Location = new System.Drawing.Point(323, 104);
+            this.button3.Location = new System.Drawing.Point(323, 84);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(80, 23);
             this.button3.TabIndex = 4;
@@ -99,7 +99,7 @@
             this.panel1.Controls.Add(this.infoText);
             this.panel1.Location = new System.Drawing.Point(62, 16);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(341, 82);
+            this.panel1.Size = new System.Drawing.Size(341, 62);
             this.panel1.TabIndex = 2;
             // 
             // infoText
@@ -107,7 +107,7 @@
             this.infoText.Dock = System.Windows.Forms.DockStyle.Fill;
             this.infoText.Location = new System.Drawing.Point(0, 0);
             this.infoText.Name = "infoText";
-            this.infoText.Size = new System.Drawing.Size(341, 82);
+            this.infoText.Size = new System.Drawing.Size(341, 62);
             this.infoText.TabIndex = 0;
             this.infoText.Text = "label1";
             // 
@@ -117,7 +117,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Location = new System.Drawing.Point(236, 104);
+            this.button2.Location = new System.Drawing.Point(236, 84);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(80, 23);
             this.button2.TabIndex = 1;
@@ -131,7 +131,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.programContent);
             this.Name = "Infobox95";
-            this.Size = new System.Drawing.Size(413, 138);
+            this.Size = new System.Drawing.Size(413, 118);
             this.programContent.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);

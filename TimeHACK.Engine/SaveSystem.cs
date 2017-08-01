@@ -186,10 +186,14 @@ namespace TimeHACK.Engine
             SaveDirectoryInfo(ProfileWindowsDirectory, "Temp", true, "Temp", true);
             SaveDirectoryInfo(ProfileWindowsDirectory, "Desktop", true, "Desktop", true);
 
+            CreateWindowsFile(ProfileWindowsDirectory, "c", "", 8, 515);
             CreateWindowsFile(ProfileWindowsDirectory, "calc.exe", "calc", 13, 59392);
+            CreateWindowsFile(ProfileWindowsDirectory, "emm386.exe", "emm386", 10, 125495);
             CreateWindowsFile(ProfileWindowsDirectory, "explorer.exe", "explorer", 0, 204288);
             CreateWindowsFile(ProfileWindowsDirectory, "notepad.exe", "notepad", 14, 34034);
             CreateWindowsFile(ProfileWindowsDirectory, "regedit.exe", "regedit", 15, 120320);
+            CreateWindowsFile(ProfileWindowsDirectory, "win.com", "", 10, 22679);
+            CreateWindowsFile(ProfileWindowsDirectory, "write.exe", "wordpad", 16, 5120);
         }
 
         public static void CreateWindowsFile(string filepath, string filename, string contents, int fileicon = 8, int bytes = 512)
@@ -206,18 +210,22 @@ namespace TimeHACK.Engine
         public static void UpdateDirectoryInfo(string path, THFileInfo newfile)
         {
             newfile.DOSName = newfile.Name.ToUpper().Replace("*", "").Replace("+", "").Replace(":", "").Replace(";", "").Replace(" ", "");
-            string[] dos = newfile.DOSName.Split('.');
-
-            if (dos.Count() > 2)
+            if (newfile.DOSName.Contains("."))
             {
-                List<string> dosb = dos.ToList();
-                dosb.RemoveRange(1, dos.Count() - 2);
-                dos = dosb.ToArray();
-            }
-            dos[1] = dos[1].Substring(0, 3);
-            if (dos[0].Length > 8) dos[0] = dos[0].Substring(0, 6) + "~1";
+                string[] dos = newfile.DOSName.Split('.');
 
-            newfile.DOSName = dos[0] + "." + dos[1];
+                if (dos.Count() > 2)
+                {
+                    List<string> dosb = dos.ToList();
+                    dosb.RemoveRange(1, dos.Count() - 2);
+                    dos = dosb.ToArray();
+                }
+                dos[1] = dos[1].Substring(0, 3);
+                if (dos[0].Length > 8) dos[0] = dos[0].Substring(0, 6) + "~1";
+
+                newfile.DOSName = dos[0] + "." + dos[1];
+            }
+            else if (newfile.DOSName.Length > 8) newfile.DOSName = newfile.DOSName.Substring(0, 6) + "~1";
 
             if (File.ReadAllText(Path.Combine(path, "_data.info")).Contains(newfile.DOSName)) return;
             FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(path, "_data.info")));
