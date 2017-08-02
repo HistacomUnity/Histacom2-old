@@ -155,11 +155,13 @@
             // 
             this.toprightcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.toprightcorner.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("toprightcorner.BackgroundImage")));
+            this.toprightcorner.Cursor = System.Windows.Forms.Cursors.SizeNESW;
             this.toprightcorner.Location = new System.Drawing.Point(296, 0);
             this.toprightcorner.Name = "toprightcorner";
             this.toprightcorner.Size = new System.Drawing.Size(4, 4);
             this.toprightcorner.TabIndex = 6;
             this.toprightcorner.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
+            this.toprightcorner.MouseMove += new System.Windows.Forms.MouseEventHandler(this.toprightcorner_MouseMove);
             // 
             // bottomrightcorner
             // 
@@ -171,29 +173,35 @@
             this.bottomrightcorner.Size = new System.Drawing.Size(4, 4);
             this.bottomrightcorner.TabIndex = 4;
             this.bottomrightcorner.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
+            this.bottomrightcorner.MouseMove += new System.Windows.Forms.MouseEventHandler(this.bottomrightcorner_MouseMove);
             // 
             // bottomleftcorner
             // 
             this.bottomleftcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.bottomleftcorner.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bottomleftcorner.BackgroundImage")));
+            this.bottomleftcorner.Cursor = System.Windows.Forms.Cursors.SizeNESW;
             this.bottomleftcorner.Location = new System.Drawing.Point(0, 296);
             this.bottomleftcorner.Name = "bottomleftcorner";
             this.bottomleftcorner.Size = new System.Drawing.Size(4, 4);
             this.bottomleftcorner.TabIndex = 2;
             this.bottomleftcorner.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
+            this.bottomleftcorner.MouseMove += new System.Windows.Forms.MouseEventHandler(this.bottomleftcorner_MouseMove);
             // 
             // topleftcorner
             // 
             this.topleftcorner.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("topleftcorner.BackgroundImage")));
+            this.topleftcorner.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
             this.topleftcorner.Location = new System.Drawing.Point(0, 0);
             this.topleftcorner.Name = "topleftcorner";
             this.topleftcorner.Size = new System.Drawing.Size(4, 4);
             this.topleftcorner.TabIndex = 1;
             this.topleftcorner.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
+            this.topleftcorner.MouseMove += new System.Windows.Forms.MouseEventHandler(this.topleftcorner_MouseMove);
             // 
             // left
             // 
             this.left.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("left.BackgroundImage")));
+            this.left.Cursor = System.Windows.Forms.Cursors.SizeWE;
             this.left.Dock = System.Windows.Forms.DockStyle.Left;
             this.left.Location = new System.Drawing.Point(0, 4);
             this.left.Name = "left";
@@ -231,12 +239,14 @@
             // 
             this.top.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("top.BackgroundImage")));
             this.top.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.top.Cursor = System.Windows.Forms.Cursors.SizeNS;
             this.top.Dock = System.Windows.Forms.DockStyle.Top;
             this.top.Location = new System.Drawing.Point(0, 0);
             this.top.Name = "top";
             this.top.Size = new System.Drawing.Size(300, 4);
             this.top.TabIndex = 8;
             this.top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
+            this.top.MouseMove += new System.Windows.Forms.MouseEventHandler(this.top_MouseMove);
             // 
             // WinClassic
             // 
