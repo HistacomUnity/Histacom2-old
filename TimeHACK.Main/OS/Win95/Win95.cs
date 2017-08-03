@@ -20,6 +20,7 @@ namespace TimeHACK.OS.Win95
         public List<WinClassic> nonimportantapps = new List<WinClassic>();
         public WinClassic webchat;
         public WinClassic ie;
+        public WinClassic welcome;
         public WinClassicTimeDistorter distort;
         public TaskBarController tb = new TaskBarController();
 
@@ -115,19 +116,16 @@ namespace TimeHACK.OS.Win95
             if (CurrentSave.FTime95 == false)
             {
                 CurrentSave.FTime95 = true;
-                SaveSystem.SaveGame();
-                WinClassicWelcome welcome = new WinClassicWelcome();
-                WinClassic app = wm.StartWin95(welcome, "Welcome", null, false, false, resize: false);
-                AddTaskBarItem(app, app.Tag.ToString(), "Welcome", null);
+                SaveGame();
+                welcome = wm.StartWin95(new WinClassicWelcome(), "Welcome", null, false, false, resize: false);
+                AddTaskBarItem(welcome, welcome.Tag.ToString(), "Welcome", null);
 
-                nonimportantapps.Add(app);
+                nonimportantapps.Add(welcome);
                 nonimportantapps[nonimportantapps.Count - 1].BringToFront();
                 nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
 
-                
-
-                app.BringToFront();
-                
+                welcome.BringToFront();
+                welcome.Activate();
             }
 
             // Update the Desktop icons
@@ -288,7 +286,7 @@ namespace TimeHACK.OS.Win95
                         ie.FormClosing += new FormClosingEventHandler(InternetExplorer4_Closing);
                         startmenu.Hide();
                     }
-                    else if (objListViewItem.Text == "My Computer")
+                    else if (objListViewItem.Text == "My Computer") // TODO: Implement slightly limited explorer (with no treeview and a new window each time ya go into a dir)
                     {
                         WinClassic app = wm.StartWin95(new Win95WindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
                         AddTaskBarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
@@ -352,12 +350,11 @@ namespace TimeHACK.OS.Win95
         }
         private void WebChatToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            WebChat1998 wc = new WebChat1998();
-            WinClassic app = wm.StartWin95(wc, "Web Chat 1998", null, true, true);
+            webchat = wm.StartWin95(new WebChat1998(), "Web Chat 1998", null, true, true);
 
-            AddTaskBarItem(app, app.Tag.ToString(), "Web Chat 1998", null);
+            AddTaskBarItem(webchat, webchat.Tag.ToString(), "Web Chat 1998", null);
 
-            app.BringToFront();
+            webchat.BringToFront();
             startmenu.Hide();
         }
         public void NonImportantApp_Closing(object sender, FormClosingEventArgs e)
