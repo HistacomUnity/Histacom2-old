@@ -644,6 +644,15 @@ namespace TimeHACK.Engine
         public bool FTime95 { get; set; }
 
         [Order]
+        public int mineSweepE { get; set; } = 999;
+
+        [Order]
+        public int mineSweepI { get; set; } = 999;
+
+        [Order]
+        public int mineSweepH { get; set; } = 999;
+
+        [Order]
         public string ThemeName { get; set; }
 
         [Order]

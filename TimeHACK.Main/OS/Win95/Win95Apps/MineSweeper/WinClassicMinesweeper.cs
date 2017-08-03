@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TimeHACK.OS.Win95.Win95Apps.MineSweeper;
+using TimeHACK.Engine;
 
 namespace TimeHACK.OS.Win95.Win95Apps
 {
@@ -56,36 +57,60 @@ namespace TimeHACK.OS.Win95.Win95Apps
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            labelTime.Text = "0";
             switch (level)
             {
                 case ("easy"):
                     Cursor.Current = Cursors.WaitCursor;
                     _game = new Game(this.panel1, 8, 8, 10);
-                    _game.Tick += new EventHandler(GameTick);
-                    _game.DismantledMinesChanged += new EventHandler(GameDismantledMinesChanged);
-                    _game.Start();
-                    return;
+                    break;
                 case ("medium"):
                     Cursor.Current = Cursors.WaitCursor;
-                    _game = new Game(this.panel1, 16, 16, 46);
-                    _game.Tick += new EventHandler(GameTick);
-                    _game.DismantledMinesChanged += new EventHandler(GameDismantledMinesChanged);
-                    _game.Start();
-                    return;
+                    _game = new Game(this.panel1, 16, 16, 40);
+                    break;
                 case ("hard"):
                     Cursor.Current = Cursors.WaitCursor;
                     _game = new Game(this.panel1, 30, 16, 99);
-                    _game.Tick += new EventHandler(GameTick);
-                    _game.DismantledMinesChanged += new EventHandler(GameDismantledMinesChanged);
-                    _game.Start();
-                    return;
+                    break;
             }
+            _game.Tick += new EventHandler(GameTick);
+            _game.DismantledMinesChanged += new EventHandler(GameDismantledMinesChanged);
+            _game.Start();
 
         }
 
         private void WinClassicMinesweeper_Load(object sender, EventArgs e)
         {
             begginnerToolStripMenuItem.PerformClick();
+            timer1.Start();
+        }
+
+        private void bestTimesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WindowManager wm = new WindowManager();
+            wm.StartWin95(new MineBestTimes(), "Best Times", null, false, false, true, false);
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if(_game.win == true)
+            {
+                switch (level)
+                {
+                    case ("easy"):
+                        SaveSystem.CurrentSave.mineSweepE = _game.Time;
+                        break;
+                    case ("medium"):
+                        SaveSystem.CurrentSave.mineSweepI = _game.Time;
+                        break;
+                    case ("hard"):
+                        SaveSystem.CurrentSave.mineSweepH = _game.Time;
+                        break;
+
+                }
+                SaveSystem.SaveGame();
+            }
         }
     }
 }
