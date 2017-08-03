@@ -226,6 +226,7 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.exitToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 

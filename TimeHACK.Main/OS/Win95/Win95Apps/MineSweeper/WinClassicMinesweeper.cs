@@ -112,5 +112,10 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 SaveSystem.SaveGame();
             }
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.ParentForm.Close();
+        }
     }
 }
