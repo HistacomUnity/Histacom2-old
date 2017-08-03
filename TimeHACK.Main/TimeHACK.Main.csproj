@@ -172,11 +172,11 @@
     <Compile Include="OS\Win95\Win95Apps\MineSweeper\Square.cs" />
     <Compile Include="OS\Win95\Win95Apps\Story\Hack1.cs" />
     <Compile Include="OS\Win95\Win95Apps\Story\Hack2.cs" />
-    <Compile Include="OS\Win95\Win95Apps\TempIE4.cs">
+    <Compile Include="OS\Win95\Win95Apps\WinClassicIE4.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\TempIE4.Designer.cs">
-      <DependentUpon>TempIE4.cs</DependentUpon>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicIE4.Designer.cs">
+      <DependentUpon>WinClassicIE4.cs</DependentUpon>
     </Compile>
     <Compile Include="OS\Win95\Win95Apps\Win95Installer.cs">
       <SubType>UserControl</SubType>
@@ -298,12 +298,6 @@
     <Compile Include="GlobalPrograms\WinClassicDownloader.Designer.cs">
       <DependentUpon>WinClassicDownloader.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicIE4.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicIE4.Designer.cs">
-      <DependentUpon>WinClassicIE4.cs</DependentUpon>
-    </Compile>
     <Compile Include="OS\Win95\Win95Apps\WinClassicNotepad.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -372,8 +366,8 @@
     <EmbeddedResource Include="OS\Win95\Win95Apps\MineSweeper\MineBestTimes.resx">
       <DependentUpon>MineBestTimes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\TempIE4.resx">
-      <DependentUpon>TempIE4.cs</DependentUpon>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicIE4.resx">
+      <DependentUpon>WinClassicIE4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\Win95Installer.resx">
       <DependentUpon>Win95Installer.cs</DependentUpon>
@@ -443,9 +437,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GlobalPrograms\WinClassicDownloader.resx">
       <DependentUpon>WinClassicDownloader.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicIE4.resx">
-      <DependentUpon>WinClassicIE4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicNotepad.resx">
       <DependentUpon>WinClassicNotepad.cs</DependentUpon>
@@ -631,11 +622,13 @@
     <None Include="Resources\WinClassic\WinClassicNotepad.png" />
     <None Include="Resources\WinClassic\WinClassicNew.png" />
     <None Include="Resources\WinClassic\WinClassicOpenFolderSmall.png" />
+    <None Include="Resources\WinClassic\WinClassicNotepadBig.png" />
     <Content Include="Resources\WinClassic\WinClassicOutlook.png" />
     <None Include="Resources\WinClassic\WinClassicPaste.png" />
     <Content Include="Resources\WinClassic\WinClassicProgramItem.png" />
     <Content Include="Resources\WinClassic\WinClassicPrograms.png" />
     <Content Include="Resources\WinClassic\WinClassicRecycle.png" />
+    <None Include="Resources\WinClassic\WinClassicRegedit.png" />
     <Content Include="Resources\WinClassic\WinClassicRun.png" />
     <Content Include="Resources\WinClassic\WinClassicSettings.png" />
     <None Include="Resources\WinClassic\WinClassicSetup.png" />
