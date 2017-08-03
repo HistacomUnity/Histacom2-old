@@ -28,8 +28,6 @@ TimeHACK has a YouTube channel at https://www.youtube.com/channel/UCU3uiIgHdLaNv
 TimeHACK's documentation can be found on the TimeHACK Wiki: https://github.com/TimeHACKDevs/TimeHACK/wiki 
 
 ## Other Repositories
-* A completely discontinued project called "HistacomVB".
-The idea of it being that it was the old game except being built upon. In the end, however, we stopped it because having "HistacomVB" and "TimeHACK" was unnecessary. If you REALLY want to see the repo, click here: http://www.github.com/TimeHACKDevs/HistacomVB
 * An unofficial project called "Histacom.AU".
 This is a rewrite of Histacom in Python, and has a place [here](https://github.com/TimeHACKDevs/histacom-au).
 
