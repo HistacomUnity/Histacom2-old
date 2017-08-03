@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using TimeHACK.Engine;
 
@@ -51,6 +52,7 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
 
         private void Click(object sender, System.EventArgs e)
         {
+
             if (!Dismantled)
             {
                 if (Minded)
@@ -62,6 +64,14 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
                 {
                     this.Open();
                 }
+            }
+            if (_game.ftime == true)
+            {
+                _game.ftime = false;
+                _game._timer = new Timer();
+                _game._timer.Interval = 1000;
+                _game._timer.Tick += new EventHandler(_game.TimerTick);
+                _game._timer.Enabled = true;
             }
         }
 
@@ -75,9 +85,17 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
                     Button.BackgroundImage = null;
                     Button.Text = "?";
                 }
+                else if(Button.Text == "?")
+                {
+                    _dismantled = false;
+                    Button.BackgroundImage = null;
+                    Button.Text = "";
+                    return;
+                }
                 else
                 {
                     _dismantled = true;
+                    Button.Text = "";
                     Button.BackgroundImage = Properties.Resources.WinClassicMinesweeperFlag;
                 }
                 OnDismantle();

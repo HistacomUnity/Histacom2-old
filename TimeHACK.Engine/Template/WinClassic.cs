@@ -67,6 +67,7 @@ namespace TimeHACK.Engine.Template
             Title.ForeColor = SaveSystem.currentTheme.inactiveTitleTextColor;
         }
 
+
         private void right_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)

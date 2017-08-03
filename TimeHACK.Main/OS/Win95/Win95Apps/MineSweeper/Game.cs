@@ -16,10 +16,11 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
         private int _mines;
         private Panel _panel;
         private Square[,] _squares;
-        private Timer _timer;
+        public Timer _timer;
         private int _width;
         public bool  ftime = true;
         public int Time;
+        public bool win = false;
 
         public Game(Panel panel, int width, int height, int mines)
         {
@@ -27,15 +28,12 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
             _width = width;
             _height = height;
             _mines = mines;
+            win = false;
         }
 
         private void Dismantle(object sender, EventArgs e)
         {
-            if(ftime == true)
-            {
-                ftime = false;
-                OnTick();
-            }
+
             Square s = (Square)sender;
             if (s.Dismantled)
             {
@@ -66,6 +64,7 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
             {
                 _timer.Enabled = false;
                 Panel.Enabled = false;
+                win = true;
             }
         }
 
@@ -77,7 +76,6 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
         private void Explode(object sender, EventArgs e)
         {
             _timer.Enabled = false;
-
             foreach (Square s in _squares)
             {
                 s.RemoveEvents();
@@ -114,6 +112,7 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
 
         protected void OnDismantledMinesChanged()
         {
+
             if (DismantledMinesChanged != null)
             {
                 DismantledMinesChanged(this, new EventArgs());
@@ -184,14 +183,9 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
             }
 
             OnDismantledMinesChanged();
-
-            _timer = new Timer();
-            _timer.Interval = 1000;
-            _timer.Tick += new EventHandler(TimerTick);
-            _timer.Enabled = true;
         }
 
-        private void TimerTick(object sender, EventArgs e)
+        public void TimerTick(object sender, EventArgs e)
         {
             Time++;
             OnTick();
