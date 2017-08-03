@@ -471,6 +471,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\Lemon%27s LCD.ttf" />
     <None Include="Resources\windows_command_prompt.ttf" />
   </ItemGroup>
   <ItemGroup>
@@ -526,6 +527,7 @@
     <None Include="Resources\minsweeper sad.PNG" />
     <None Include="Resources\minsweeper smile.PNG" />
     <None Include="Resources\minesweepeprlogo.PNG" />
+    <None Include="Resources\MinesweepNumBox.png" />
     <Content Include="Resources\modem_dial.wav" />
     <None Include="Resources\MS-DOS-logo-1.png" />
     <None Include="Resources\msdosprompt.png" />

@@ -20,6 +20,9 @@ namespace TimeHACK.OS.Win95.Win95Apps
         public WinClassicMinesweeper()
         {
             InitializeComponent();
+            labelBombs.Font = new Font(TitleScreen.pfc.Families[2], 15, GraphicsUnit.Point);
+            labelTime.Font = new Font(TitleScreen.pfc.Families[2], 15, GraphicsUnit.Point);
+            panel1.Paint += (sender, args) => Paintbrush.PaintClassicBordersIndented(sender, args, 3);
         }
         private void GameTick(object sender, EventArgs e)
         {
@@ -94,18 +97,27 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if(_game.win == true)
+            if (_game.win == true)
             {
                 switch (level)
                 {
                     case ("easy"):
-                        SaveSystem.CurrentSave.mineSweepE = _game.Time;
+                        if (SaveSystem.CurrentSave.mineSweepE > _game.Time)
+                        {
+                            SaveSystem.CurrentSave.mineSweepE = _game.Time;
+                        }
                         break;
                     case ("medium"):
-                        SaveSystem.CurrentSave.mineSweepI = _game.Time;
+                        if (SaveSystem.CurrentSave.mineSweepI > _game.Time)
+                        {
+                            SaveSystem.CurrentSave.mineSweepI = _game.Time;
+                        }
                         break;
                     case ("hard"):
-                        SaveSystem.CurrentSave.mineSweepH = _game.Time;
+                        if (SaveSystem.CurrentSave.mineSweepH > _game.Time)
+                        {
+                            SaveSystem.CurrentSave.mineSweepH = _game.Time;
+                        }
                         break;
 
                 }

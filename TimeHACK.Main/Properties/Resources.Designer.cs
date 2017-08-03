@@ -348,6 +348,16 @@ namespace TimeHACK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] Lemon_s_LCD {
+            get {
+                object obj = ResourceManager.GetObject("Lemon_s_LCD", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] LeviWindows {
             get {
                 object obj = ResourceManager.GetObject("LeviWindows", resourceCulture);
@@ -361,6 +371,16 @@ namespace TimeHACK.Properties {
         internal static System.Drawing.Bitmap LoadGame {
             get {
                 object obj = ResourceManager.GetObject("LoadGame", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MinesweepNumBox {
+            get {
+                object obj = ResourceManager.GetObject("MinesweepNumBox", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

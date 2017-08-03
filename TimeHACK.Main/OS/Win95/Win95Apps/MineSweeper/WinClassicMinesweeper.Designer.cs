@@ -58,29 +58,31 @@
             // 
             // labelBombs
             // 
-            this.labelBombs.BackColor = System.Drawing.Color.Black;
-            this.labelBombs.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelBombs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBombs.BackColor = System.Drawing.Color.Silver;
+            this.labelBombs.Font = new System.Drawing.Font("Lemon\'s LCD", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBombs.ForeColor = System.Drawing.Color.Red;
-            this.labelBombs.Location = new System.Drawing.Point(18, 34);
+            this.labelBombs.Image = global::TimeHACK.Properties.Resources.MinesweepNumBox;
+            this.labelBombs.Location = new System.Drawing.Point(20, 32);
             this.labelBombs.Name = "labelBombs";
-            this.labelBombs.Size = new System.Drawing.Size(56, 23);
+            this.labelBombs.Size = new System.Drawing.Size(56, 25);
             this.labelBombs.TabIndex = 7;
-            this.labelBombs.Text = "0";
-            this.labelBombs.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelBombs.Text = "000";
+            this.labelBombs.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelTime
             // 
-            this.labelTime.BackColor = System.Drawing.Color.Black;
-            this.labelTime.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTime.BackColor = System.Drawing.Color.Silver;
+            this.labelTime.Font = new System.Drawing.Font("Lemon\'s LCD", 15F);
             this.labelTime.ForeColor = System.Drawing.Color.Red;
-            this.labelTime.Location = new System.Drawing.Point(162, 34);
+            this.labelTime.Image = global::TimeHACK.Properties.Resources.MinesweepNumBox;
+            this.labelTime.Location = new System.Drawing.Point(162, 32);
+            this.labelTime.Margin = new System.Windows.Forms.Padding(0);
             this.labelTime.Name = "labelTime";
-            this.labelTime.Size = new System.Drawing.Size(56, 23);
+            this.labelTime.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelTime.Size = new System.Drawing.Size(56, 25);
             this.labelTime.TabIndex = 6;
-            this.labelTime.Text = "0";
-            this.labelTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelTime.Text = "000";
+            this.labelTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // panel1
             // 
@@ -91,6 +93,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Silver;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(0, 0);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gameToolStripMenuItem,
@@ -126,7 +129,7 @@
             // 
             this.newToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.newToolStripMenuItem.Text = "New";
             this.newToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.newToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -134,13 +137,13 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(138, 6);
             // 
             // begginnerToolStripMenuItem
             // 
             this.begginnerToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.begginnerToolStripMenuItem.Name = "begginnerToolStripMenuItem";
-            this.begginnerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.begginnerToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.begginnerToolStripMenuItem.Text = "Begginner";
             this.begginnerToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.begginnerToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -150,7 +153,7 @@
             // 
             this.intermediateToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.intermediateToolStripMenuItem.Name = "intermediateToolStripMenuItem";
-            this.intermediateToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.intermediateToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.intermediateToolStripMenuItem.Text = "Intermediate";
             this.intermediateToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.intermediateToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -160,7 +163,7 @@
             // 
             this.expertToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.expertToolStripMenuItem.Name = "expertToolStripMenuItem";
-            this.expertToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.expertToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.expertToolStripMenuItem.Text = "Expert";
             this.expertToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.expertToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -170,7 +173,7 @@
             // 
             this.customToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.customToolStripMenuItem.Name = "customToolStripMenuItem";
-            this.customToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.customToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.customToolStripMenuItem.Text = "Custom";
             this.customToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.customToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -178,13 +181,13 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(138, 6);
             // 
             // marksToolStripMenuItem
             // 
             this.marksToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.marksToolStripMenuItem.Name = "marksToolStripMenuItem";
-            this.marksToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.marksToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.marksToolStripMenuItem.Text = "Marks {?}";
             this.marksToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.marksToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -193,7 +196,7 @@
             // 
             this.colorToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.colorToolStripMenuItem.Name = "colorToolStripMenuItem";
-            this.colorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.colorToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.colorToolStripMenuItem.Text = "Color";
             this.colorToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.colorToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -201,13 +204,13 @@
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(138, 6);
             // 
             // bestTimesToolStripMenuItem
             // 
             this.bestTimesToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.bestTimesToolStripMenuItem.Name = "bestTimesToolStripMenuItem";
-            this.bestTimesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.bestTimesToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.bestTimesToolStripMenuItem.Text = "Best Times";
             this.bestTimesToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bestTimesToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -216,13 +219,13 @@
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(138, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.exitToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -260,12 +263,13 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Silver;
             this.button1.BackgroundImage = global::TimeHACK.Properties.Resources.WinClassicMinesweeperSmile;
             this.button1.Location = new System.Drawing.Point(108, 32);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(25, 25);
             this.button1.TabIndex = 9;
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // timer1
@@ -277,6 +281,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Silver;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.labelBombs);
             this.Controls.Add(this.labelTime);

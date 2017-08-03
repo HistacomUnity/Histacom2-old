@@ -134,8 +134,10 @@ namespace TimeHACK
             // Initialize Font
             File.WriteAllBytes(DataDirectory + "\\LeviWindows.ttf", Resources.LeviWindows);
             File.WriteAllBytes(DataDirectory + "\\windows_command_prompt.ttf", Resources.windows_command_prompt);
+            File.WriteAllBytes(DataDirectory + "\\lemon-lcd.ttf", Resources.Lemon_s_LCD);
             pfc.AddFontFile(DataDirectory + "\\LeviWindows.ttf");
             pfc.AddFontFile(DataDirectory + "\\windows_command_prompt.ttf");
+            pfc.AddFontFile(DataDirectory + "\\lemon-lcd.ttf");
             gameversion.Font = new Font(pfc.Families[0], 16F, FontStyle.Bold, GraphicsUnit.Point, (0));
             ProgramsToolStripMenuItem.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             DocumentsToolStripMenuItem.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
