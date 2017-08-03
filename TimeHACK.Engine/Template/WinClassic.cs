@@ -67,6 +67,7 @@ namespace TimeHACK.Engine.Template
             Title.ForeColor = SaveSystem.currentTheme.inactiveTitleTextColor;
         }
 
+
         private void right_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -79,15 +80,64 @@ namespace TimeHACK.Engine.Template
         {
             if (e.Button == MouseButtons.Left)
             {
-                if (resizable) this.Size = new Size(this.Size.Width + (this.Location.X - MousePosition.X), this.Size.Height);
-                if (resizable) this.Location = new Point(MousePosition.X, this.Location.Y);
+                if (resizable) this.Width = ((this.Width + this.Location.X) - Cursor.Position.X);
+                if (resizable)this.Location = new Point(Cursor.Position.X, this.Location.Y);
             }
         }
 
         private void bottom_MouseMove(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left) {
+            if (e.Button == MouseButtons.Left)
+            {
                 if (resizable) this.Size = new Size(this.Size.Width, MousePosition.Y - this.Location.Y);
+            }
+        }
+
+        private void bottomrightcorner_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                if (resizable) this.Size = new Size(MousePosition.X - this.Location.X, MousePosition.Y - this.Location.Y);
+            }
+        }
+
+        private void bottomleftcorner_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                if (resizable) this.Width = ((this.Width + this.Location.X) - Cursor.Position.X);
+                if (resizable) this.Height = (Cursor.Position.Y - this.Location.Y);
+                if (resizable) this.Location = new Point(Cursor.Position.X, this.Location.Y);
+            }
+        }
+
+        private void topleftcorner_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                if (resizable) this.Width = ((this.Width + this.Location.X) - Cursor.Position.X);
+                if (resizable) this.Location = new Point(Cursor.Position.X, this.Location.Y);
+                if (resizable) this.Height = ((this.Height + this.Location.Y) - Cursor.Position.Y);
+                if (resizable) this.Location = new Point(this.Location.X, Cursor.Position.Y);
+            }
+        }
+
+        private void top_MouseMove(object sender, MouseEventArgs e)
+        {
+            if(e.Button == MouseButtons.Left)
+            {
+                if(resizable) this.Height = ((this.Height + this.Location.Y) - Cursor.Position.Y);
+                if(resizable) this.Location = new Point(this.Location.X, Cursor.Position.Y);
+            }
+        }
+
+        private void toprightcorner_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                if (resizable) this.Width = (Cursor.Position.X - this.Location.X);
+                if (resizable) this.Height = ((this.Location.Y - Cursor.Position.Y) + this.Height);
+                if (resizable) this.Location = new Point(this.Location.X, Cursor.Position.Y);
             }
         }
 
