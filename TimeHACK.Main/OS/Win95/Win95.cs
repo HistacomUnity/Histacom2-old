@@ -480,13 +480,6 @@ namespace TimeHACK.OS.Win95
             startmenu.Hide();
         }
 
-        private void iE4TestToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            WinClassic app = wm.StartWin95(new TempIE4(), "IE4", null, true, true);
-            app.BringToFront();
-            startmenu.Hide();
-        }
-
         private void CalculatorToolStripMenuItem_Click(object sender, EventArgs e)
         { 
             WinClassic app = wm.StartWin95(new WinClassicCalculator(), "Calculator", Properties.Resources.WinClassicCalc, false, false, resize: false);

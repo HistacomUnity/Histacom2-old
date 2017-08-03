@@ -19,7 +19,7 @@ namespace TimeHACK.OS.Win95.Win95Apps.IE4Sites
 
         private void linkLabel1_Click(object sender, EventArgs e)
         {
-            TempIE4.GoToPage("www.google.com");
+            WinClassicIE4.GoToPage("www.google.com");
         }
     }
 }

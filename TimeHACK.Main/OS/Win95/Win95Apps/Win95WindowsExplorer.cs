@@ -12,6 +12,7 @@ using System.IO;
 using TimeHACK.Engine;
 using Newtonsoft.Json;
 using TimeHACK.Engine.Template;
+using System.Diagnostics;
 
 namespace TimeHACK.OS.Win95.Win95Apps
 {
@@ -52,20 +53,23 @@ namespace TimeHACK.OS.Win95.Win95Apps
             mainView.LargeImageList = new ImageList();
             mainView.LargeImageList.ImageSize = new Size(32, 32);
 
-            mainView.LargeImageList.Images.Add(Properties.Resources.Win95Computer);
-            mainView.LargeImageList.Images.Add(Properties.Resources.WinClassicFolder);
-            mainView.LargeImageList.Images.Add(Properties.Resources.WinClassicIE4);
-            mainView.LargeImageList.Images.Add(Properties.Resources.WinClassicInbox);
-            mainView.LargeImageList.Images.Add(Properties.Resources.WinClassicMSN);
-            mainView.LargeImageList.Images.Add(Properties.Resources.WinClassicNetworking);
-            mainView.LargeImageList.Images.Add(Properties.Resources.WinClassicOutlook);
-            mainView.LargeImageList.Images.Add(Properties.Resources.WinClassicRecycle);
-            mainView.LargeImageList.Images.Add(Properties.Resources.Win95File);
-            mainView.LargeImageList.Images.Add(Properties.Resources.WinClassicFolder);
-            mainView.LargeImageList.Images.Add(Properties.Resources.WinClassicApp);
-            mainView.LargeImageList.Images.Add(Properties.Resources.WinClassicSetup);
-            mainView.LargeImageList.Images.Add(Properties.Resources.WinClassicNotepad);
-            mainView.LargeImageList.Images.Add(Properties.Resources.WinClassicCalcBig);
+            mainView.LargeImageList.Images.AddRange(new Bitmap[] { Properties.Resources.Win95Computer, // 0
+                                                    Properties.Resources.WinClassicFolder,
+                                                    Properties.Resources.WinClassicIE4,
+                                                    Properties.Resources.WinClassicInbox,
+                                                    Properties.Resources.WinClassicMSN,
+                                                    Properties.Resources.WinClassicNetworking, // 5
+                                                    Properties.Resources.WinClassicOutlook,
+                                                    Properties.Resources.WinClassicRecycle,
+                                                    Properties.Resources.Win95File,
+                                                    Properties.Resources.WinClassicFolder,
+                                                    Properties.Resources.WinClassicApp, // 10
+                                                    Properties.Resources.WinClassicSetup,
+                                                    Properties.Resources.WinClassicNotepad,
+                                                    Properties.Resources.WinClassicCalcBig,
+                                                    Properties.Resources.WinClassicNotepadBig,
+                                                    Properties.Resources.WinClassicRegedit, // 15
+                                                    Properties.Resources.WinClassicWordpad });
 
             program.BringToFront();
 
@@ -157,37 +161,13 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         }
                         else return;
                     }
-
-                    switch (new FileInfo(str).Extension)
+                    FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(CurrentDirectory, "_data.info")));
+                    foreach(var item in fsfi.Files)
                     {
-                        case ".exe":
-                            string contents;
-
-                            contents = File.ReadAllText(str);
-
-                            switch (contents.ToLower())
-                            {
-                                case "calc":
-                                    itm.ImageIndex = 13;
-                                    break;
-                                case "explorer":
-                                    itm.ImageIndex = 0;
-                                    break;
-                                case "notepad":
-                                    itm.ImageIndex = 12;
-                                    break;
-                                default:
-                                    itm.ImageIndex = 10;
-                                    break;
-                            }
-                            break;
-                        case ".txt":
-                            itm.ImageIndex = 12;
-                            break;
-                        default:
-                            itm.ImageIndex = 8;
-                            break;
+                        Debug.Print(item.Name + " " + Path.GetFileName(str));
+                        if (item.Name == Path.GetFileName(str)) { itm.ImageIndex = item.FileIcon; return; }
                     }
+                    itm.ImageIndex = 8;
                 }
             } catch (Exception ex) {
                 //wm.StartInfobox95("Exploring - C:", "Error with the file explorer \n" + ex.Message, Properties.Resources.Win95Info); add illegal operation dialog here later
@@ -271,6 +251,15 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     Program.nonimportantapps[Program.nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(Program.NonImportantApp_Closing);
 
                     break;
+                case "notepad":
+                    WinClassic appNP = wm.StartWin95(new WinClassicNotepad(), "Notepad", Properties.Resources.Win95IconNotepad_2, true, true);
+                    Program.AddTaskbarItem(appNP, appNP.Tag.ToString(), "Notepad", Properties.Resources.Win95IconNotepad_2);
+
+                    Program.nonimportantapps.Add(appNP);
+                    Program.nonimportantapps[Program.nonimportantapps.Count - 1].BringToFront();
+                    Program.nonimportantapps[Program.nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(Program.NonImportantApp_Closing);
+
+                    break;
                 case "wordpad":
                     WinClassic appWP = wm.StartWin95(new WinClassicWordPad(), "Wordpad", Properties.Resources.WinClassicWordpad, true, true);
                     Program.AddTaskbarItem(appWP, appWP.Tag.ToString(), "Wordpad", Properties.Resources.WinClassicWordpad);
@@ -315,8 +304,8 @@ namespace TimeHACK.OS.Win95.Win95Apps
         }
 
         string ReturnType(string extension) {
-            string returnVal = "";
-            fileType = 1;
+            string returnVal = "File";
+            fileType = 0;
             switch (extension) {
                 case ".txt":
                     fileType = 1;
@@ -608,7 +597,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             {
                 if (mainView.FocusedItem.Tag == null)
                 { // If it isn't a file
-                    GoToDir(Path.Combine(CurrentDirectory, mainView.FocusedItem.ImageKey.ToString()));
+                    GoToDir(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text));
                 }
                 else
                 { // If it is a file
@@ -709,19 +698,10 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 else OpenFile = true;
                 if (OpenFile == true)
                 {
-                    if (txtSave.Text == "")
-                    {
-                        wm.StartInfobox95("Windows Explorer", "Please enter a filename", InfoboxType.Info, InfoboxButtons.OK);
-                    }
+                    if (txtSave.Text == "") wm.StartInfobox95("Windows Explorer", "Please enter a filename", InfoboxType.Info, InfoboxButtons.OK);
                     else
                     {
-                        if (new FileInfo(Path.Combine(CurrentDirectory, txtSave.Text)).Extension == onlyViewExtension)
-                        {
-
-                            Program.WindowsExplorerReturnPath = Path.Combine(CurrentDirectory, txtSave.Text);
-
-                        }
-
+                        if (new FileInfo(Path.Combine(CurrentDirectory, txtSave.Text)).Extension == onlyViewExtension) Program.WindowsExplorerReturnPath = Path.Combine(CurrentDirectory, txtSave.Text);
 
                         FileDialogBoxManager.IsInOpenDialog = false;
                         FileDialogBoxManager.IsInSaveDialog = false;
@@ -793,22 +773,13 @@ namespace TimeHACK.OS.Win95.Win95Apps
             {
                 string setText;
                 setText = e.Label;
-                if (setText == "")
-                {
-                    wm.StartInfobox95("Windows Explorer", "Please enter a new directory name", InfoboxType.Info, InfoboxButtons.OK);
-                }
+                if (setText == "") wm.StartInfobox95("Windows Explorer", "Please enter a new directory name", InfoboxType.Info, InfoboxButtons.OK);
                 else
                 {
-                    if (Directory.Exists(setText))
-                    {
-                        wm.StartInfobox95("Windows Explorer", "That directory already exists.", InfoboxType.Info, InfoboxButtons.OK);
-                    }
+                    if (Directory.Exists(setText)) wm.StartInfobox95("Windows Explorer", "That directory already exists.", InfoboxType.Info, InfoboxButtons.OK);
                     else
                     {
-                        if (File.Exists(setText))
-                        {
-                            wm.StartInfobox95("Windows Explorer", "That file already exists.", InfoboxType.Info, InfoboxButtons.OK);
-                        }
+                        if (File.Exists(setText)) wm.StartInfobox95("Windows Explorer", "That file already exists.", InfoboxType.Info, InfoboxButtons.OK);
                         else
                         {
                             if (Directory.Exists(mainView.FocusedItem.ImageKey))
@@ -1003,10 +974,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void SellectAllCtrlAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            foreach (ListViewItem item in mainView.Items)
-            {
-                item.Selected = true;
-            }
+            foreach (ListViewItem item in mainView.Items) item.Selected = true;
         }
     }
 }

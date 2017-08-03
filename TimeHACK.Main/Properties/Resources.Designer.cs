@@ -1294,6 +1294,16 @@ namespace TimeHACK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap WinClassicNotepadBig {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicNotepadBig", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WinClassicOpenFolderSmall {
             get {
                 object obj = ResourceManager.GetObject("WinClassicOpenFolderSmall", resourceCulture);
@@ -1347,6 +1357,16 @@ namespace TimeHACK.Properties {
         internal static System.Drawing.Bitmap WinClassicRecycle {
             get {
                 object obj = ResourceManager.GetObject("WinClassicRecycle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WinClassicRegedit {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicRegedit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
