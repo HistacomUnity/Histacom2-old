@@ -168,10 +168,10 @@ namespace TimeHACK.Engine
             SaveDirectoryInfo(ProfileProgramsDirectory, "The Microsoft Network", true, "The Microsoft Network", true);
             SaveDirectoryInfo(ProfileMyComputerDirectory, "Windows", true, "Windows", true);
 
-            CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Accessories"), "wordpad.exe", "wordpad");
-            CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Internet Explorer"), "ie20.exe", "ie");
-            CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Internet Explorer"), "lnfinst.exe", "iebrokeninstaller");
-            CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "The Microsoft Network"), "msnver.txt", "5900");
+            CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Accessories"), "wordpad.exe", "wordpad", 16, 183296);
+            CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Internet Explorer"), "ie20.exe", "ie", 8, 512);
+            CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Internet Explorer"), "lnfinst.exe", "iebrokeninstaller", 8, 512);
+            CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "The Microsoft Network"), "msnver.txt", "5900", 12, 4);
             
             CreateWindowsDirectory();
         }
@@ -185,8 +185,7 @@ namespace TimeHACK.Engine
             SaveDirectoryInfo(ProfileWindowsDirectory, "Help", true, "Help", true);
             SaveDirectoryInfo(ProfileWindowsDirectory, "Temp", true, "Temp", true);
             SaveDirectoryInfo(ProfileWindowsDirectory, "Desktop", true, "Desktop", true);
-
-            CreateWindowsFile(ProfileWindowsDirectory, "c", "", 8, 515);
+            
             CreateWindowsFile(ProfileWindowsDirectory, "calc.exe", "calc", 13, 59392);
             CreateWindowsFile(ProfileWindowsDirectory, "emm386.exe", "emm386", 10, 125495);
             CreateWindowsFile(ProfileWindowsDirectory, "explorer.exe", "explorer", 0, 204288);
@@ -196,7 +195,7 @@ namespace TimeHACK.Engine
             CreateWindowsFile(ProfileWindowsDirectory, "write.exe", "wordpad", 16, 5120);
         }
 
-        public static void CreateWindowsFile(string filepath, string filename, string contents, int fileicon = 8, int bytes = 512)
+        public static void CreateWindowsFile(string filepath, string filename, string contents, int fileicon, int bytes)
         {
             File.WriteAllText(Path.Combine(filepath, filename), contents);
             THFileInfo info = new THFileInfo();
@@ -251,7 +250,7 @@ namespace TimeHACK.Engine
                         // Add Address Book into existance!
 
                         SaveDirectoryInfo(ProfileProgramsDirectory, "Outlook Express", false, "Outlook Express", true);
-                        CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Outlook Express"), "WAB.exe", "addressbook");
+                        CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Outlook Express"), "WAB.exe", "addressbook", 8, 512);
 
                         // There is no "The Microsoft Network" folder!
 

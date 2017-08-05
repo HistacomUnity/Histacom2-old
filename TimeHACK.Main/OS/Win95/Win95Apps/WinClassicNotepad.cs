@@ -110,10 +110,13 @@ namespace TimeHACK.OS.Win95.Win95Apps
             {
                 ActivateSaveFileDialog(".txt");
                 string selectedPath = Program.OpenFileExplorerAsDialogAndReturnGivenPath();
+                List<string> pathList = selectedPath.Split('\\').ToList();
+                pathList.RemoveAt(selectedPath.Split('\\').Count() - 1);
 
                 if (selectedPath != "")
                 {
-                    File.WriteAllText(selectedPath, mainText.Text);
+                    SaveSystem.CreateWindowsFile(pathList.ToString(), selectedPath.Split('\\').Last(), mainText.Text, 12, mainText.Text.Length);
+                    //File.WriteAllText(selectedPath, mainText.Text);
                 }
             } catch {
             }               

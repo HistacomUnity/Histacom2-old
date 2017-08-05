@@ -150,24 +150,24 @@ namespace TimeHACK.OS.Win95.Win95Apps
                                 itm = this.mainView.Items.Add(Path.GetFileName(str));
                                 itm.Tag = str;
                             }
-                            else return;
+                            else break;
                         }
-                        else return;
-                    } else {
+                        else break;
+                    }
+                    else {
                         if (!(Path.GetFileName(str) == "_data.info"))
                         {
                             itm = this.mainView.Items.Add(Path.GetFileName(str));
                             itm.Tag = str;
                         }
-                        else return;
+                        else break;
                     }
                     FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(CurrentDirectory, "_data.info")));
-                    foreach(var item in fsfi.Files)
+                    foreach (var item in fsfi.Files)
                     {
                         Debug.Print(item.Name + " " + Path.GetFileName(str));
-                        if (item.Name == Path.GetFileName(str)) { itm.ImageIndex = item.FileIcon; return; }
+                        if (item.Name == Path.GetFileName(str)) { itm.ImageIndex = item.FileIcon; break; }
                     }
-                    itm.ImageIndex = 8;
                 }
             } catch (Exception ex) {
                 //wm.StartInfobox95("Exploring - C:", "Error with the file explorer \n" + ex.Message, Properties.Resources.Win95Info); add illegal operation dialog here later

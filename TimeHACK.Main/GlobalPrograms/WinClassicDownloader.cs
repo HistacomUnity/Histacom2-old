@@ -38,10 +38,10 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 switch (appName.Text)
                 {
                     case "Downloading: FTP Client":
-                        CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop"), "FTP Client Setup.exe", "ftp client setup", 11);
+                        CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop"), "FTP Client Setup.exe", "ftp client setup", 11, 56291);
                         break;
                     case "Downloading: Web Chat 1998":
-                        CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop"), "Web Chat Setup.exe", "web chat setup", 11);
+                        CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop"), "Web Chat Setup.exe", "web chat setup", 11, 34846);
                         break;
                 }
                 /* if (appName.Text == "Downloading: Guess The Number")
