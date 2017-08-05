@@ -43,6 +43,9 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     case "Downloading: Web Chat 1998":
                         CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop"), "Web Chat Setup.exe", "web chat setup", 11, 34846);
                         break;
+                    case "Downloading: Time Distorter 0.1":
+                        CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop"), "Time Distorter Setup.exe", "time distorter setup", 11, 11583);
+                        break;
                 }
                 /* if (appName.Text == "Downloading: Guess The Number")
                 {
@@ -60,21 +63,9 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 {
                     CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop", "Skindows 95 Setup.exe"), "Skindows95Setup");
                 }
-                if (appName.Text == "Downloading: Web Chat")
-                {
-                    CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop", "Web Chat Setup.exe"), "web chat setup");
-                }
-                if (appName.Text == "Downloading: hwcv.exe")
-                {
-                    CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop", "hwcv.exe"), "hwcv");
-                }
                 if (appName.Text == "Downloading: Time Distorter")
                 {
                     CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop", "Time Distorter Setup.exe"), "time distorter setup");
-                }
-                if (appName.Text == "Downloading: FTP Client")
-                {
-                    CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop", "FTP Client setup.exe"), "ftp client setup");
                 } */
                 ((Form)this.TopLevelControl).Close();
                 dlTimer.Stop();

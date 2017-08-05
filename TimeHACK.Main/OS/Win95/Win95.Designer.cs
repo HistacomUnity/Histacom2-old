@@ -728,7 +728,7 @@ namespace TimeHACK.OS.Win95
             this.FTPClientToolStripMenuItem.Name = "FTPClientToolStripMenuItem";
             this.FTPClientToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.FTPClientToolStripMenuItem.Text = "FTP Client";
-            this.FTPClientToolStripMenuItem.Visible = false;
+            this.FTPClientToolStripMenuItem.Visible = true;
             this.FTPClientToolStripMenuItem.Click += new System.EventHandler(this.FTPClientToolStripMenuItem_Click);
             // 
             // DocumentsToolStripMenuItem

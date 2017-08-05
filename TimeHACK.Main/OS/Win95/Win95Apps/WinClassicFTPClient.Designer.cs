@@ -231,6 +231,7 @@
             this.fileIcons.TransparentColor = System.Drawing.Color.Transparent;
             this.fileIcons.Images.SetKeyName(0, "WinClassicFolder.png");
             this.fileIcons.Images.SetKeyName(1, "WinClassicNotepad.png");
+            this.fileIcons.Images.SetKeyName(2, "WinClassicSetup.png");
             // 
             // WinClassicFTPClient
             // 

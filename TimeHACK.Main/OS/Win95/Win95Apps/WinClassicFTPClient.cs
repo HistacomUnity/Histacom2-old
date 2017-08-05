@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TimeHACK.Engine;
 
 namespace TimeHACK.OS.Win95.Win95Apps
 {
@@ -63,7 +64,45 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 objListViewItem = ftpFiles.GetItemAt(objDrawingPoint.X, objDrawingPoint.Y);
                 if (objListViewItem.Text == "/software/")
                 {
-
+                    ftpFiles.Clear();
+                    ListViewItem listViewItem1 = new ListViewItem(new string[] { "/downloads/" }, 0, Color.Black, Color.Empty, null);
+                    ListViewItem listViewItem2 = new ListViewItem(new string[] { "skindows.html" }, 1, Color.Black, Color.Empty, null);
+                    ftpFiles.Items.AddRange(new ListViewItem[] { listViewItem1, listViewItem2 });
+                }
+                else if (objListViewItem.Text == "/downloads/")
+                {
+                    ftpFiles.Clear();
+                    ListViewItem listViewItem1 = new ListViewItem(new string[] { "/totallynotthetimedistorter/" }, 0, Color.Black, Color.Empty, null);
+                    ListViewItem listViewItem2 = new ListViewItem(new string[] { "FTP Client Setup.exe" }, 2, Color.Black, Color.Empty, null);
+                    ListViewItem listViewItem3 = new ListViewItem(new string[] { "Web Chat Setup.exe" }, 2, Color.Black, Color.Empty, null);
+                    ftpFiles.Items.AddRange(new ListViewItem[] { listViewItem1, listViewItem2, listViewItem3 });
+                }
+                else if (objListViewItem.Text == "/totallynotthetimedistorter/")
+                {
+                    ftpFiles.Clear();
+                    ListViewItem listViewItem1 = new ListViewItem(new string[] { "Time Distorter Setup.exe" }, 2, Color.Black, Color.Empty, null);
+                    ftpFiles.Items.AddRange(new ListViewItem[] { listViewItem1 });
+                }
+                else if (objListViewItem.Text == "FTP Client Setup.exe")
+                {
+                    WinClassicDownloader opendownload = new WinClassicDownloader();
+                    WindowManager wm = new WindowManager();
+                    wm.StartWin95(opendownload, "Downloader", null, false, true);
+                    opendownload.appName.Text = "Downloading: FTP Client";
+                }
+                else if (objListViewItem.Text == "Web Chat Setup.exe")
+                {
+                    WinClassicDownloader opendownload = new WinClassicDownloader();
+                    WindowManager wm = new WindowManager();
+                    wm.StartWin95(opendownload, "Downloader", null, false, true);
+                    opendownload.appName.Text = "Downloading: Web Chat 1998";
+                }
+                else if (objListViewItem.Text == "Time Distorter Setup.exe")
+                {
+                    WinClassicDownloader opendownload = new WinClassicDownloader();
+                    WindowManager wm = new WindowManager();
+                    wm.StartWin95(opendownload, "Downloader", null, false, true);
+                    opendownload.appName.Text = "Downloading: Time Distorter 0.1";
                 }
             }
         }
