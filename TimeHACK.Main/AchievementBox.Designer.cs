@@ -56,6 +56,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AchievementBox";
             this.Text = "Form1";
+            this.TopMost = true;
             this.ResumeLayout(false);
 
         }

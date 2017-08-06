@@ -19,6 +19,8 @@ namespace TimeHACK
         public AchievementBox(int type)
         {
             InitializeComponent();
+            this.BringToFront();
+            this.Show();
             switch (type)
             {
                 case 0: //Piracy Ending
@@ -27,20 +29,21 @@ namespace TimeHACK
                     break;
                 case 20:
                     BackgroundImage = Properties.Resources.AchievementMines;
+                    button1.Hide();
                     break;
             }
             Location = new Point(Screen.PrimaryScreen.WorkingArea.Width - 202, -102);
             while (this.Location.Y != 0)
             {
-                Thread.Sleep(25);
+                Thread.Sleep(5);
                 Location = new Point(Location.X, Location.Y + 1);
             }
             if (!stayOnScreen)
             {
-                Thread.Sleep(5000);
+                Thread.Sleep(3000);
                 while (this.Location.Y != -102)
                 {
-                    Thread.Sleep(25);
+                    Thread.Sleep(5);
                     Location = new Point(Location.X, Location.Y - 1);
                 }
                 this.Close();

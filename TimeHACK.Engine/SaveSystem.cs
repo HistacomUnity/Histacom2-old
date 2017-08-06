@@ -588,7 +588,7 @@ namespace TimeHACK.Engine
 
         public static byte[] GetAchievements()
         {
-            byte[] byt = new byte[] { 0, 0 };
+            byte[] byt = new byte[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
             if (DevMode) File.WriteAllBytes(Path.Combine(DataDirectory, "achieved.thack"), byt);
 
             if (File.Exists(Path.Combine(DataDirectory, "achieved.thack"))) byt = File.ReadAllBytes(Path.Combine(DataDirectory, "achieved.thack"));
@@ -599,6 +599,8 @@ namespace TimeHACK.Engine
 
         public static void SaveAchievement(int achievementID)
         {
+            if (!File.Exists(Path.Combine(DataDirectory, "achieved.thack"))) File.WriteAllBytes(Path.Combine(DataDirectory, "achieved.thack"), new byte[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 });
+
             byte[] byt = File.ReadAllBytes(Path.Combine(DataDirectory, "achieved.thack"));
             byt[achievementID] = 1;
             File.WriteAllBytes(Path.Combine(DataDirectory, "achieved.thack"), byt);

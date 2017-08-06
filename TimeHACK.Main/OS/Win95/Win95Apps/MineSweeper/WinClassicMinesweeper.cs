@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TimeHACK.OS.Win95.Win95Apps.MineSweeper;
 using TimeHACK.Engine;
+using System.Threading;
 
 namespace TimeHACK.OS.Win95.Win95Apps
 {
@@ -109,8 +110,8 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         break;
                     case ("hard"):
                         if (SaveSystem.CurrentSave.mineSweepH > _game.Time) SaveSystem.CurrentSave.mineSweepH = _game.Time;
-                        SaveSystem.SaveAchievement(20);
-                        AchievementBox ab = new AchievementBox(20);
+                        Thread t = new Thread(Achieve);
+                        t.Start();
                         break;
 
                 }
@@ -118,8 +119,16 @@ namespace TimeHACK.OS.Win95.Win95Apps
             }
         }
 
+        private void Achieve()
+        {
+            SaveSystem.SaveAchievement(20);
+            new AchievementBox(20);
+        }
+
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Thread t = new Thread(Achieve);
+            t.Start();
             this.ParentForm.Close();
         }
     }
