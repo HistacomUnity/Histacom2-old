@@ -38,6 +38,7 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
             _button.Click += new EventHandler(Click);
             _button.Paint += (sender, args) => Paintbrush.PaintClassicBorders(sender,args,2);
             _button.MouseDown += new MouseEventHandler(DismantleClick);
+            _button.MouseUp += new MouseEventHandler(MiddleClick);
             _button.FlatStyle = FlatStyle.Flat;
             _button.FlatAppearance.BorderSize = 1;
             _button.BackgroundImageLayout = ImageLayout.Stretch;
@@ -45,12 +46,51 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
             _game.Panel.Controls.Add(Button);
         }
 
+        private void MiddleClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Middle && Opened)
+            {
+                int c = 0;
+                if (_game.IsBomb(X - 1, Y - 1)) c++;
+                if (_game.IsBomb(X - 0, Y - 1)) c++;
+                if (_game.IsBomb(X + 1, Y - 1)) c++;
+                if (_game.IsBomb(X - 1, Y - 0)) c++;
+                if (_game.IsBomb(X + 1, Y - 0)) c++;
+                if (_game.IsBomb(X - 1, Y + 1)) c++;
+                if (_game.IsBomb(X - 0, Y + 1)) c++;
+                if (_game.IsBomb(X + 1, Y + 1)) c++;
+
+                int s = 0;
+                if (_game.IsDismantled(X - 1, Y - 1) && _game.IsBomb(X - 1, Y - 1)) s++;
+                if (_game.IsDismantled(X - 0, Y - 1) && _game.IsBomb(X - 0, Y - 1)) s++;
+                if (_game.IsDismantled(X + 1, Y - 1) && _game.IsBomb(X + 1, Y - 1)) s++;
+                if (_game.IsDismantled(X - 1, Y - 0) && _game.IsBomb(X - 1, Y - 0)) s++;
+                if (_game.IsDismantled(X + 1, Y - 0) && _game.IsBomb(X + 1, Y - 0)) s++;
+                if (_game.IsDismantled(X - 1, Y + 1) && _game.IsBomb(X - 1, Y + 1)) s++;
+                if (_game.IsDismantled(X - 0, Y + 1) && _game.IsBomb(X - 0, Y + 1)) s++;
+                if (_game.IsDismantled(X + 1, Y + 1) && _game.IsBomb(X + 1, Y + 1)) s++;
+
+                if (s == c)
+                {
+                    _game.OpenSpot(X - 1, Y - 1);
+                    _game.OpenSpot(X - 0, Y - 1);
+                    _game.OpenSpot(X + 1, Y - 1);
+                    _game.OpenSpot(X - 1, Y - 0);
+                    _game.OpenSpot(X - 0, Y - 0);
+                    _game.OpenSpot(X + 1, Y - 0);
+                    _game.OpenSpot(X - 1, Y + 1);
+                    _game.OpenSpot(X - 0, Y + 1);
+                    _game.OpenSpot(X + 1, Y + 1);
+                }
+            }
+        }
+
         public Button Button
         {
             get { return (this._button); }
         }
 
-        private void Click(object sender, System.EventArgs e)
+        private void Click(object sender, EventArgs e)
         {
 
             if (!Dismantled)
@@ -65,7 +105,7 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
                     this.Open();
                 }
             }
-            if (_game.ftime == true)
+            if (_game.ftime == true && !Minded)
             {
                 _game.ftime = false;
                 _game._timer = new Timer();
@@ -131,67 +171,70 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
 
         public void Open()
         {
-            if (!Opened && !Dismantled)
+            if (!Minded)
             {
-                _opened = true;
-                // Count Bombs
-                int c = 0;
-                if (_game.IsBomb(X - 1, Y - 1)) c++;
-                if (_game.IsBomb(X - 0, Y - 1)) c++;
-                if (_game.IsBomb(X + 1, Y - 1)) c++;
-                if (_game.IsBomb(X - 1, Y - 0)) c++;
-                if (_game.IsBomb(X - 0, Y - 0)) c++;
-                if (_game.IsBomb(X + 1, Y - 0)) c++;
-                if (_game.IsBomb(X - 1, Y + 1)) c++;
-                if (_game.IsBomb(X - 0, Y + 1)) c++;
-                if (_game.IsBomb(X + 1, Y + 1)) c++;
-
-                if (c > 0)
+                if (!Opened && !Dismantled)
                 {
-                    Button.Text = c.ToString();
-                    switch (c)
+                    _opened = true;
+                    // Count Bombs
+                    int c = 0;
+                    if (_game.IsBomb(X - 1, Y - 1)) c++;
+                    if (_game.IsBomb(X - 0, Y - 1)) c++;
+                    if (_game.IsBomb(X + 1, Y - 1)) c++;
+                    if (_game.IsBomb(X - 1, Y - 0)) c++;
+                    if (_game.IsBomb(X - 0, Y - 0)) c++;
+                    if (_game.IsBomb(X + 1, Y - 0)) c++;
+                    if (_game.IsBomb(X - 1, Y + 1)) c++;
+                    if (_game.IsBomb(X - 0, Y + 1)) c++;
+                    if (_game.IsBomb(X + 1, Y + 1)) c++;
+
+                    if (c > 0)
                     {
-                        case 1:
-                            Button.ForeColor = Color.Blue;
-                            break;
-                        case 2:
-                            Button.ForeColor = Color.Green;
-                            break;
-                        case 3:
-                            Button.ForeColor = Color.Red;
-                            break;
-                        case 4:
-                            Button.ForeColor = Color.DarkBlue;
-                            break;
-                        case 5:
-                            Button.ForeColor = Color.DarkRed;
-                            break;
-                        case 6:
-                            Button.ForeColor = Color.LightBlue;
-                            break;
-                        case 7:
-                            Button.ForeColor = Color.Orange; // Guesed, never seen one!
-                            break;
-                        case 8:
-                            Button.ForeColor = Color.Ivory; // Guesed, never seen one!
-                            break;
+                        Button.Text = c.ToString();
+                        switch (c)
+                        {
+                            case 1:
+                                Button.ForeColor = Color.Blue;
+                                break;
+                            case 2:
+                                Button.ForeColor = Color.Green;
+                                break;
+                            case 3:
+                                Button.ForeColor = Color.Red;
+                                break;
+                            case 4:
+                                Button.ForeColor = Color.DarkBlue;
+                                break;
+                            case 5:
+                                Button.ForeColor = Color.DarkRed;
+                                break;
+                            case 6:
+                                Button.ForeColor = Color.LightBlue;
+                                break;
+                            case 7:
+                                Button.ForeColor = Color.Orange; // Guesed, never seen one!
+                                break;
+                            case 8:
+                                Button.ForeColor = Color.Ivory; // Guesed, never seen one!
+                                break;
+                        }
                     }
-                }
-                else
-                {
-                    Button.BackColor = SystemColors.ControlLight;
-                    Button.FlatStyle = FlatStyle.Flat;
-                    Button.Enabled = false;
+                    else
+                    {
+                        Button.BackColor = SystemColors.ControlLight;
+                        Button.FlatStyle = FlatStyle.Flat;
+                        Button.Enabled = false;
 
-                    _game.OpenSpot(X - 1, Y - 1);
-                    _game.OpenSpot(X - 0, Y - 1);
-                    _game.OpenSpot(X + 1, Y - 1);
-                    _game.OpenSpot(X - 1, Y - 0);
-                    _game.OpenSpot(X - 0, Y - 0);
-                    _game.OpenSpot(X + 1, Y - 0);
-                    _game.OpenSpot(X - 1, Y + 1);
-                    _game.OpenSpot(X - 0, Y + 1);
-                    _game.OpenSpot(X + 1, Y + 1);
+                        _game.OpenSpot(X - 1, Y - 1);
+                        _game.OpenSpot(X - 0, Y - 1);
+                        _game.OpenSpot(X + 1, Y - 1);
+                        _game.OpenSpot(X - 1, Y - 0);
+                        _game.OpenSpot(X - 0, Y - 0);
+                        _game.OpenSpot(X + 1, Y - 0);
+                        _game.OpenSpot(X - 1, Y + 1);
+                        _game.OpenSpot(X - 0, Y + 1);
+                        _game.OpenSpot(X + 1, Y + 1);
+                    }
                 }
             }
         }

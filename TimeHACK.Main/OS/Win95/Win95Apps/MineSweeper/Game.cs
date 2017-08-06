@@ -37,25 +37,13 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
             Square s = (Square)sender;
             if (s.Dismantled)
             {
-                if (s.Minded)
-                {
-                    _dismantledMines++;
-                }
-                else
-                {
-                    _incorrectdismantledMines++;
-                }
+                if (s.Minded) _dismantledMines++;
+                else _incorrectdismantledMines++;
             }
             else
             {
-                if (s.Minded)
-                {
-                    _dismantledMines--;
-                }
-                else
-                {
-                    _incorrectdismantledMines--;
-                }
+                if (s.Minded) _dismantledMines--;
+                else _incorrectdismantledMines--;
             }
 
             OnDismantledMinesChanged();
@@ -100,6 +88,18 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
                 if (y >= 0 && y < Height)
                 {
                     return _squares[x, y].Minded;
+                }
+            }
+            return false;
+        }
+
+        public bool IsDismantled(int x, int y)
+        {
+            if (x >= 0 && x < Width)
+            {
+                if (y >= 0 && y < Height)
+                {
+                    return _squares[x, y].Dismantled;
                 }
             }
             return false;
