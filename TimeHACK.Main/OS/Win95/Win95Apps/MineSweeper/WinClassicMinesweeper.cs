@@ -102,22 +102,15 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 switch (level)
                 {
                     case ("easy"):
-                        if (SaveSystem.CurrentSave.mineSweepE > _game.Time)
-                        {
-                            SaveSystem.CurrentSave.mineSweepE = _game.Time;
-                        }
+                        if (SaveSystem.CurrentSave.mineSweepE > _game.Time) SaveSystem.CurrentSave.mineSweepE = _game.Time;
                         break;
                     case ("medium"):
-                        if (SaveSystem.CurrentSave.mineSweepI > _game.Time)
-                        {
-                            SaveSystem.CurrentSave.mineSweepI = _game.Time;
-                        }
+                        if (SaveSystem.CurrentSave.mineSweepI > _game.Time) SaveSystem.CurrentSave.mineSweepI = _game.Time;
                         break;
                     case ("hard"):
-                        if (SaveSystem.CurrentSave.mineSweepH > _game.Time)
-                        {
-                            SaveSystem.CurrentSave.mineSweepH = _game.Time;
-                        }
+                        if (SaveSystem.CurrentSave.mineSweepH > _game.Time) SaveSystem.CurrentSave.mineSweepH = _game.Time;
+                        SaveSystem.SaveAchievement(20);
+                        AchievementBox ab = new AchievementBox(20);
                         break;
 
                 }

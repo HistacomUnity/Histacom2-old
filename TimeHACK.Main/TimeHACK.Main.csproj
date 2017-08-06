@@ -126,6 +126,12 @@
     <Compile Include="AchievementScreen.Designer.cs">
       <DependentUpon>AchievementScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="AchievementBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AchievementBox.Designer.cs">
+      <DependentUpon>AchievementBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\BIOS\BIOS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -344,6 +350,9 @@
     <EmbeddedResource Include="AchievementScreen.resx">
       <DependentUpon>AchievementScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AchievementBox.resx">
+      <DependentUpon>AchievementBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OS\BIOS\BIOS.resx">
       <DependentUpon>BIOS.cs</DependentUpon>
     </EmbeddedResource>
@@ -492,6 +501,9 @@
     <None Include="Resources\XCross.png" />
     <None Include="Resources\XCross_highlighted.png" />
     <None Include="Resources\DCTheme_BG.JPG" />
+    <None Include="Resources\EndingDestruction.png" />
+    <None Include="Resources\EndingPiracy.png" />
+    <None Include="Resources\AchievementMines.png" />
     <Content Include="Resources\Icon128x.ico" />
     <None Include="Resources\ICTheme_BG.jpg" />
     <Content Include="Resources\IE4\google.jpg" />

@@ -81,6 +81,16 @@ namespace TimeHACK.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap AchievementMines {
+            get {
+                object obj = ResourceManager.GetObject("AchievementMines", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream AIMbuddyjoin {
@@ -131,6 +141,26 @@ namespace TimeHACK.Properties {
         internal static System.Drawing.Bitmap DCTheme_BG {
             get {
                 object obj = ResourceManager.GetObject("DCTheme_BG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap EndingDestruction {
+            get {
+                object obj = ResourceManager.GetObject("EndingDestruction", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap EndingPiracy {
+            get {
+                object obj = ResourceManager.GetObject("EndingPiracy", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

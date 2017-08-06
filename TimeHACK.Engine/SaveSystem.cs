@@ -23,7 +23,6 @@ namespace TimeHACK.Engine
     public static class SaveSystem
     {
         public static Save CurrentSave { get; set; }
-        public static FileSystemFolderInfo filesystemflinfo { get; set; }
         public static bool DevMode = false;
         public static Form troubleshooter;
 
@@ -596,6 +595,13 @@ namespace TimeHACK.Engine
             else File.WriteAllBytes(Path.Combine(DataDirectory, "achieved.thack"), byt);
 
             return byt;
+        }
+
+        public static void SaveAchievement(int achievementID)
+        {
+            byte[] byt = File.ReadAllBytes(Path.Combine(DataDirectory, "achieved.thack"));
+            byt[achievementID] = 1;
+            File.WriteAllBytes(Path.Combine(DataDirectory, "achieved.thack"), byt);
         }
 
         public static void SetTheme()

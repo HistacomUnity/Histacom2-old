@@ -295,7 +295,10 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     break;
                 case "time distorter setup":
                     Win95Installer instTd = new Win95Installer("Time Distorter 0.1");
-                    instTd.InstallCompleted += (sendr, args) => TitleScreen.frm95.TimeDistorterToolStripMenuItem.Visible = true;
+                    instTd.InstallCompleted += (sendr, args) =>
+                    {
+                        TitleScreen.frm95.TimeDistorterToolStripMenuItem.Visible = true;
+                    };
                     WinClassic appTd = wm.StartWin95(instTd, "Time Distorter Setup", null, true, true);
                     Program.AddTaskbarItem(appTd, appTd.Tag.ToString(), "Time Distorter Setup", null);
                     appTd.BringToFront();

@@ -30,8 +30,9 @@ namespace TimeHACK
             if (achieved[1] == 1)
             {
                 listView1.Items[1].ImageIndex = 0;
-                listView1.Items[1].Name = "Netpocalypse Ending";
+                listView1.Items[1].Name = "Destruction Ending";
             }
+            if (achieved[20] == 1) listView2.Items[0].ImageIndex = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
