@@ -75,14 +75,14 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
 
         private void Explode(object sender, EventArgs e)
         {
-            _timer.Enabled = false;
+            if (_timer != null) _timer.Enabled = false;
             foreach (Square s in _squares)
             {
                 s.RemoveEvents();
                 if (s.Minded)
                 {
                     s.Button.Text = "*";
-                    s.Button.Font = new System.Drawing.Font("Arial Black", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
+                    s.Button.Font = new Font("Arial Black", 16F, FontStyle.Regular, GraphicsUnit.Point, ((System.Byte)(0)));
                     s.Button.ForeColor = Color.Black;
                 }
             }
