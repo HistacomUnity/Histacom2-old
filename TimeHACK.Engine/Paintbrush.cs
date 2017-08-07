@@ -14,19 +14,19 @@ namespace TimeHACK.Engine
         public static void PaintClassicBorders(object sender, PaintEventArgs e, int borderwidth)
         {
             ControlPaint.DrawBorder(e.Graphics, ((Control)sender).ClientRectangle,
-                SystemColors.ControlLightLight, borderwidth, ButtonBorderStyle.Outset,
-                SystemColors.ControlLightLight, borderwidth, ButtonBorderStyle.Outset,
-                SystemColors.ControlLightLight, borderwidth, ButtonBorderStyle.Outset,
-                SystemColors.ControlLightLight, borderwidth, ButtonBorderStyle.Outset);
+                Color.White, borderwidth, ButtonBorderStyle.Solid,
+                Color.White, borderwidth, ButtonBorderStyle.Solid,
+                Color.Gray, borderwidth, ButtonBorderStyle.Solid,
+                Color.Gray, borderwidth, ButtonBorderStyle.Solid);
         }
 
         public static void PaintClassicBordersIndented(object sender, PaintEventArgs e, int borderwidth)
         {
             ControlPaint.DrawBorder(e.Graphics, ((Control)sender).ClientRectangle,
-                SystemColors.ControlDarkDark, borderwidth, ButtonBorderStyle.Inset,
-                SystemColors.ControlDarkDark, borderwidth, ButtonBorderStyle.Inset,
-                SystemColors.ControlDarkDark, borderwidth, ButtonBorderStyle.Inset,
-                SystemColors.ControlDarkDark, borderwidth, ButtonBorderStyle.Inset);
+                Color.Gray, borderwidth, ButtonBorderStyle.Solid,
+                Color.Gray, borderwidth, ButtonBorderStyle.Solid,
+                Color.White, borderwidth, ButtonBorderStyle.Solid,
+                Color.White, borderwidth, ButtonBorderStyle.Solid);
         }
     }
 }

@@ -23,7 +23,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             InitializeComponent();
             labelBombs.Font = new Font(TitleScreen.pfc.Families[2], 15, GraphicsUnit.Point);
             labelTime.Font = new Font(TitleScreen.pfc.Families[2], 15, GraphicsUnit.Point);
-            panel1.Paint += (sender, args) => Paintbrush.PaintClassicBordersIndented(sender, args, 3);
+            panel2.Paint += (sender, args) => Paintbrush.PaintClassicBordersIndented(sender, args, 3);
         }
         private void GameTick(object sender, EventArgs e)
         {
@@ -36,15 +36,19 @@ namespace TimeHACK.OS.Win95.Win95Apps
         }
         public void calculateFormSize(int x, int y)
         {
-            panel1.Size = new Size(x * 25, y * 25);
-            this.ParentForm.Size = new Size(x * 25 + 45, y * 25 + 100);
-            labelTime.Location = new Point(x * 25 - 38, button1.Location.Y);
+            panel1.Size = new Size(x * 16, y * 16);
+            panel2.Size = new Size(x * 16 + 6, y * 16 + 6);
+            this.ParentForm.Size = new Size(x * 16 + 51, y * 16 + 106);
+            labelTime.Location = new Point(x * 16 - 32, button1.Location.Y);
+            panel2.Paint -= (sender, args) => Paintbrush.PaintClassicBordersIndented(sender, args, 3);
+            panel2.Refresh();
+            panel2.Paint += (sender, args) => Paintbrush.PaintClassicBordersIndented(sender, args, 3);
             button1.PerformClick();
         }
         private void begginnerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             level = "easy";
-            button1.Location = new Point(108, 32);
+            button1.Location = new Point(70, 32);
             calculateFormSize(8, 8);
         }
         private void intermediateToolStripMenuItem_Click(object sender, EventArgs e)

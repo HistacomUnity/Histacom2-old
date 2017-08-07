@@ -540,6 +540,14 @@
     <None Include="Resources\minsweeper smile.PNG" />
     <None Include="Resources\minesweepeprlogo.PNG" />
     <None Include="Resources\MinesweepNumBox.png" />
+    <None Include="Resources\minesweepSquare.png" />
+    <None Include="Resources\minesweepSquare0.png" />
+    <None Include="Resources\minesweepSquare1.png" />
+    <None Include="Resources\minesweepSquare2.png" />
+    <None Include="Resources\minesweepSquare3.png" />
+    <None Include="Resources\minesweepSquare4.png" />
+    <None Include="Resources\minesweepSquareExploded.png" />
+    <None Include="Resources\minesweepSquareMine.png" />
     <Content Include="Resources\modem_dial.wav" />
     <None Include="Resources\MS-DOS-logo-1.png" />
     <None Include="Resources\msdosprompt.png" />

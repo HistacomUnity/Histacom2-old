@@ -16,6 +16,7 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
         private Game _game;
         private bool _minded = false;
         private bool _opened = false;
+        private bool _exploded = false;
         private int _x;
         private int _y;
 
@@ -30,17 +31,17 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
             int w = _game.Panel.Width / _game.Width;
             int h = _game.Panel.Height / _game.Height;
 
-            _button.Width = w + 1;
-            _button.Height = h + 1;
+            _button.Width = 16;
+            _button.Height = 16;
             _button.Left = w * X;
             _button.Top = h * Y;
             _button.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
             _button.Click += new EventHandler(Click);
-            _button.Paint += (sender, args) => Paintbrush.PaintClassicBorders(sender,args,2);
             _button.MouseDown += new MouseEventHandler(DismantleClick);
             _button.MouseUp += new MouseEventHandler(MiddleClick);
             _button.FlatStyle = FlatStyle.Flat;
-            _button.FlatAppearance.BorderSize = 1;
+            _button.FlatAppearance.BorderSize = 0;
+            _button.BackgroundImage = Properties.Resources.minesweepSquare;
             _button.BackgroundImageLayout = ImageLayout.Stretch;
 
             _game.Panel.Controls.Add(Button);
@@ -97,7 +98,8 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
             {
                 if (Minded)
                 {
-                    Button.BackColor = Color.Red;
+                    Button.BackgroundImage = Properties.Resources.minesweepSquareExploded;
+                    _exploded = true;
                     OnExplode();
                 }
                 else
@@ -128,7 +130,7 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
                 else if(Button.Text == "?")
                 {
                     _dismantled = false;
-                    Button.BackgroundImage = null;
+                    Button.BackgroundImage = Properties.Resources.minesweepSquare;
                     Button.Text = "";
                     return;
                 }
@@ -190,20 +192,19 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
 
                     if (c > 0)
                     {
-                        Button.Text = c.ToString();
                         switch (c)
                         {
                             case 1:
-                                Button.ForeColor = Color.Blue;
+                                Button.BackgroundImage = Properties.Resources.minesweepSquare1;
                                 break;
                             case 2:
-                                Button.ForeColor = Color.Green;
+                                Button.BackgroundImage = Properties.Resources.minesweepSquare2;
                                 break;
                             case 3:
-                                Button.ForeColor = Color.Red;
+                                Button.BackgroundImage = Properties.Resources.minesweepSquare3;
                                 break;
                             case 4:
-                                Button.ForeColor = Color.DarkBlue;
+                                Button.BackgroundImage = Properties.Resources.minesweepSquare4;
                                 break;
                             case 5:
                                 Button.ForeColor = Color.DarkRed;
@@ -221,8 +222,7 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
                     }
                     else
                     {
-                        Button.BackColor = SystemColors.ControlLight;
-                        Button.FlatStyle = FlatStyle.Flat;
+                        Button.BackgroundImage = Properties.Resources.minesweepSquare0;
                         Button.Enabled = false;
 
                         _game.OpenSpot(X - 1, Y - 1);
@@ -254,10 +254,16 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
             get { return (this._y); }
         }
 
+        public bool Exploded
+        {
+            get { return (this._exploded); }
+        }
+
         public void RemoveEvents()
         {
             _button.Click -= new EventHandler(Click);
             _button.MouseDown -= new MouseEventHandler(DismantleClick);
+            _button.MouseUp -= new MouseEventHandler(MiddleClick);
         }
     }
 }

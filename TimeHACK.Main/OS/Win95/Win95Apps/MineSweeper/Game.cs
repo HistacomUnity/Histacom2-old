@@ -67,11 +67,9 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
             foreach (Square s in _squares)
             {
                 s.RemoveEvents();
-                if (s.Minded)
+                if (s.Minded && !s.Exploded)
                 {
-                    s.Button.Text = "*";
-                    s.Button.Font = new Font("Arial Black", 16F, FontStyle.Regular, GraphicsUnit.Point, ((System.Byte)(0)));
-                    s.Button.ForeColor = Color.Black;
+                    s.Button.BackgroundImage = Properties.Resources.minesweepSquareMine;
                 }
             }
         }
