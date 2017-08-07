@@ -207,7 +207,7 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
                                 Button.BackgroundImage = Properties.Resources.minesweepSquare4;
                                 break;
                             case 5:
-                                Button.ForeColor = Color.DarkRed;
+                                Button.BackgroundImage = Properties.Resources.minesweepSquare5;
                                 break;
                             case 6:
                                 Button.ForeColor = Color.LightBlue;

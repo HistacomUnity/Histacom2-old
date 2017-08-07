@@ -738,10 +738,16 @@
   <data name="minesweepSquare4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minesweepSquare4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="minesweepSquare5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minesweepSquare5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="minesweepSquareExploded" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minesweepSquareExploded.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="minesweepSquareMine" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minesweepSquareMine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minesweepSquareWrong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minesweepSquareWrong.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

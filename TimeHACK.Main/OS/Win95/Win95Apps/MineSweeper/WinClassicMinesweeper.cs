@@ -43,24 +43,25 @@ namespace TimeHACK.OS.Win95.Win95Apps
             panel2.Paint -= (sender, args) => Paintbrush.PaintClassicBordersIndented(sender, args, 3);
             panel2.Refresh();
             panel2.Paint += (sender, args) => Paintbrush.PaintClassicBordersIndented(sender, args, 3);
+            button1.Location = new Point(this.Width / 2 - 12, 32);
             button1.PerformClick();
         }
         private void begginnerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             level = "easy";
-            button1.Location = new Point(70, 32);
+            //button1.Location = new Point(70, 32);
             calculateFormSize(8, 8);
         }
         private void intermediateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             level = "medium";
-            button1.Location = new Point(208, 32);
+            //button1.Location = new Point(158, 32);
             calculateFormSize(16, 16);
         }
         private void expertToolStripMenuItem_Click(object sender, EventArgs e)
         {
             level = "hard";
-            button1.Location = new Point(381, 32);
+            //button1.Location = new Point(381, 32);
             calculateFormSize(30, 16);
         }
         private void button1_Click(object sender, EventArgs e)
@@ -120,6 +121,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
                 }
                 SaveSystem.SaveGame();
+                timer1.Stop();
             }
         }
 
@@ -131,8 +133,6 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Thread t = new Thread(Achieve);
-            t.Start();
             this.ParentForm.Close();
         }
     }

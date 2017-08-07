@@ -67,9 +67,13 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
             foreach (Square s in _squares)
             {
                 s.RemoveEvents();
-                if (s.Minded && !s.Exploded)
+                if (s.Minded && !s.Exploded && !s.Dismantled)
                 {
                     s.Button.BackgroundImage = Properties.Resources.minesweepSquareMine;
+                }
+                if (s.Dismantled && !s.Minded)
+                {
+                    s.Button.BackgroundImage = Properties.Resources.minesweepSquareWrong;
                 }
             }
         }

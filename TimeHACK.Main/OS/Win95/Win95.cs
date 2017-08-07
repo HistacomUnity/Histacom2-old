@@ -569,7 +569,7 @@ namespace TimeHACK.OS.Win95
 
         private void MinsweeperToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            WinClassic app = wm.StartWin95(new WinClassicMinesweeper(), "Minesweeper", Properties.Resources.WinClassicMinesweeper, false, false);
+            WinClassic app = wm.StartWin95(new WinClassicMinesweeper(), "Minesweeper", Properties.Resources.WinClassicMinesweeper, false, false, false, false);
             AddTaskBarItem(app, app.Tag.ToString(), "Minesweeper", Properties.Resources.WinClassicMinesweeper);
 
             nonimportantapps.Add(app);
