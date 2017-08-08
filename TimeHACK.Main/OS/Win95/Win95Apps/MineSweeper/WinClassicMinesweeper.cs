@@ -48,15 +48,15 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             panel1.Size = new Size(x * 16, y * 16);
             panel2.Size = new Size(x * 16 + 6, y * 16 + 6);
-            this.ParentForm.Size = new Size(x * 16 + 41, y * 16 + 120);
+            this.ParentForm.Size = new Size(x * 16 + 41, y * 16 + 128);
             panel3.Size = new Size(Width, Height - 24);
-            panel4.Size = new Size(panel2.Width, 33);
-            labelTime.Location = new Point(panel4.Width - 58, 4);
+            panel4.Size = new Size(panel2.Width, 37);
+            labelTime.Location = new Point(panel4.Width - 58, 6);
             //panel2.Paint -= (sender, args) => Paintbrush.PaintClassicBordersIndented(sender, args, 3);
             panel2.Refresh();
             panel3.Refresh();
             //panel2.Paint += (sender, args) => Paintbrush.PaintClassicBordersIndented(sender, args, 3);
-            button1.Location = new Point(panel4.Width / 2 - 12, 4);
+            button1.Location = new Point(panel4.Width / 2 - 12, 6);
             button1.PerformClick();
         }
         private void begginnerToolStripMenuItem_Click(object sender, EventArgs e)

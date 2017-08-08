@@ -69,7 +69,7 @@
             this.labelBombs.Font = new System.Drawing.Font("Lemon\'s LCD", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBombs.ForeColor = System.Drawing.Color.Red;
             this.labelBombs.Image = global::TimeHACK.Properties.Resources.MinesweepNumBox;
-            this.labelBombs.Location = new System.Drawing.Point(3, 4);
+            this.labelBombs.Location = new System.Drawing.Point(3, 6);
             this.labelBombs.Name = "labelBombs";
             this.labelBombs.Size = new System.Drawing.Size(56, 25);
             this.labelBombs.TabIndex = 9;
@@ -82,7 +82,7 @@
             this.labelTime.Font = new System.Drawing.Font("Lemon\'s LCD", 15F);
             this.labelTime.ForeColor = System.Drawing.Color.Red;
             this.labelTime.Image = global::TimeHACK.Properties.Resources.MinesweepNumBox;
-            this.labelTime.Location = new System.Drawing.Point(75, 4);
+            this.labelTime.Location = new System.Drawing.Point(75, 6);
             this.labelTime.Margin = new System.Windows.Forms.Padding(0);
             this.labelTime.Name = "labelTime";
             this.labelTime.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -274,7 +274,7 @@
             this.button1.BackgroundImage = global::TimeHACK.Properties.Resources.WinClassicMinesweeperSmile;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(54, 3);
+            this.button1.Location = new System.Drawing.Point(54, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(25, 25);
             this.button1.TabIndex = 7;
@@ -289,7 +289,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.panel1);
-            this.panel2.Location = new System.Drawing.Point(15, 51);
+            this.panel2.Location = new System.Drawing.Point(15, 57);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(134, 134);
             this.panel2.TabIndex = 10;
@@ -300,7 +300,7 @@
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Location = new System.Drawing.Point(0, 25);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(164, 197);
+            this.panel3.Size = new System.Drawing.Size(164, 205);
             this.panel3.TabIndex = 11;
             // 
             // panel4
@@ -310,7 +310,7 @@
             this.panel4.Controls.Add(this.labelBombs);
             this.panel4.Location = new System.Drawing.Point(15, 11);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(134, 33);
+            this.panel4.Size = new System.Drawing.Size(134, 37);
             this.panel4.TabIndex = 11;
             // 
             // WinClassicMinesweeper
@@ -321,7 +321,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.menuStrip1);
             this.Name = "WinClassicMinesweeper";
-            this.Size = new System.Drawing.Size(164, 222);
+            this.Size = new System.Drawing.Size(164, 230);
             this.Load += new System.EventHandler(this.WinClassicMinesweeper_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

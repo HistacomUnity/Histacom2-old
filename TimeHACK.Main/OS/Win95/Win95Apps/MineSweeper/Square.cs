@@ -126,7 +126,7 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
                     _dismantled = false;
                     Button.BackgroundImage = Properties.Resources.minesweepSquareQuestion;
                 }
-                else if(Button.Text == "?")
+                else if(Button.BackgroundImage == Properties.Resources.minesweepSquareQuestion)
                 {
                     Button.BackgroundImage = Properties.Resources.minesweepSquare;
                     return;
