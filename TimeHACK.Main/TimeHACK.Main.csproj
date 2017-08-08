@@ -168,6 +168,12 @@
     <Compile Include="OS\Win95\Win95Apps\IE4Sites\IE4Start.Designer.cs">
       <DependentUpon>IE4Start.cs</DependentUpon>
     </Compile>
+    <Compile Include="OS\Win95\Win95Apps\MineSweeper\CustomMinefield.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\MineSweeper\CustomMinefield.Designer.cs">
+      <DependentUpon>CustomMinefield.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\Win95\Win95Apps\MineSweeper\Game.cs" />
     <Compile Include="OS\Win95\Win95Apps\MineSweeper\MineBestTimes.cs">
       <SubType>UserControl</SubType>
@@ -371,6 +377,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\IE4Sites\IE4Start.resx">
       <DependentUpon>IE4Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\MineSweeper\CustomMinefield.resx">
+      <DependentUpon>CustomMinefield.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\MineSweeper\MineBestTimes.resx">
       <DependentUpon>MineBestTimes.cs</DependentUpon>

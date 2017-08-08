@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using TimeHACK.OS.Win95.Win95Apps.MineSweeper;
 using TimeHACK.Engine;
 using System.Threading;
+using TimeHACK.Engine.Template;
 
 namespace TimeHACK.OS.Win95.Win95Apps
 {
@@ -18,6 +19,9 @@ namespace TimeHACK.OS.Win95.Win95Apps
         private Game _game;
         public int currentface = 1;
         public string level = "easy";
+        public int customwidth;
+        public int customheight;
+        public int custommines;
         public WinClassicMinesweeper()
         {
             InitializeComponent();
@@ -34,12 +38,16 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 item.BackgroundImageLayout = ImageLayout.Center;
                 item.DisplayStyle = ToolStripItemDisplayStyle.Text;
             }
+            toolStripSeparator1.Paint += Paintbrush.ExtendedToolStripSeparator_Paint;
+            toolStripSeparator2.Paint += Paintbrush.ExtendedToolStripSeparator_Paint;
+            toolStripSeparator3.Paint += Paintbrush.ExtendedToolStripSeparator_Paint;
+            toolStripSeparator4.Paint += Paintbrush.ExtendedToolStripSeparator_Paint;
+            toolStripSeparator5.Paint += Paintbrush.ExtendedToolStripSeparator_Paint;
         }
         private void GameTick(object sender, EventArgs e)
         {
             labelTime.Text = _game.Time.ToString();
         }
-
         private void GameDismantledMinesChanged(object sender, EventArgs e)
         {
             labelBombs.Text = (_game.Mines - _game.DismantledMines).ToString();
@@ -63,7 +71,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             level = "easy";
             //button1.Location = new Point(70, 32);
-            calculateFormSize(8, 8);
+            calculateFormSize(9, 9);
         }
         private void intermediateToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -85,7 +93,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             {
                 case ("easy"):
                     Cursor.Current = Cursors.WaitCursor;
-                    _game = new Game(this, panel1, 8, 8, 10);
+                    _game = new Game(this, panel1, 9, 9, 10);
                     break;
                 case ("medium"):
                     Cursor.Current = Cursors.WaitCursor;
@@ -95,10 +103,15 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     Cursor.Current = Cursors.WaitCursor;
                     _game = new Game(this, panel1, 30, 16, 99);
                     break;
+                case ("custom"):
+                    Cursor.Current = Cursors.WaitCursor;
+                    _game = new Game(this, panel1, customwidth, customheight, custommines);
+                    break;
             }
             _game.Tick += new EventHandler(GameTick);
             _game.DismantledMinesChanged += new EventHandler(GameDismantledMinesChanged);
             _game.Start();
+            timer1.Start();
         }
 
         private void WinClassicMinesweeper_Load(object sender, EventArgs e)
@@ -147,6 +160,12 @@ namespace TimeHACK.OS.Win95.Win95Apps
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.ParentForm.Close();
+        }
+
+        private void customToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            level = "custom";
+            new WindowManager().StartWin95(new CustomMinefield(this), "Custom Field", null, false, false, true, false);
         }
     }
 }

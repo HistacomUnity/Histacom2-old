@@ -13,6 +13,7 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
 
         private Button _button;
         private bool _dismantled = false;
+        private bool _questioned = false;
         private Game _game;
         private bool _minded = false;
         private bool _opened = false;
@@ -124,10 +125,12 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
                 if (Dismantled)
                 {
                     _dismantled = false;
+                    _questioned = true;
                     Button.BackgroundImage = Properties.Resources.minesweepSquareQuestion;
                 }
-                else if(Button.BackgroundImage == Properties.Resources.minesweepSquareQuestion)
+                else if(_questioned)
                 {
+                    _questioned = false;
                     Button.BackgroundImage = Properties.Resources.minesweepSquare;
                     return;
                 }
