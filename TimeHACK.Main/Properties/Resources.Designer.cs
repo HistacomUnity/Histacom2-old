@@ -488,6 +488,36 @@ namespace TimeHACK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap minesweepSquare6 {
+            get {
+                object obj = ResourceManager.GetObject("minesweepSquare6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minesweepSquare7 {
+            get {
+                object obj = ResourceManager.GetObject("minesweepSquare7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minesweepSquare8 {
+            get {
+                object obj = ResourceManager.GetObject("minesweepSquare8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minesweepSquareExploded {
             get {
                 object obj = ResourceManager.GetObject("minesweepSquareExploded", resourceCulture);
@@ -501,6 +531,16 @@ namespace TimeHACK.Properties {
         internal static System.Drawing.Bitmap minesweepSquareMine {
             get {
                 object obj = ResourceManager.GetObject("minesweepSquareMine", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minesweepSquareQuestion {
+            get {
+                object obj = ResourceManager.GetObject("minesweepSquareQuestion", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1384,6 +1424,16 @@ namespace TimeHACK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap WinClassicMinesweeperGasp {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicMinesweeperGasp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WinClassicMinesweeperSad {
             get {
                 object obj = ResourceManager.GetObject("WinClassicMinesweeperSad", resourceCulture);
@@ -1397,6 +1447,16 @@ namespace TimeHACK.Properties {
         internal static System.Drawing.Bitmap WinClassicMinesweeperSmile {
             get {
                 object obj = ResourceManager.GetObject("WinClassicMinesweeperSmile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WinClassicMinesweeperWin {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicMinesweeperWin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

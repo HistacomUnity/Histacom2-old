@@ -741,13 +741,31 @@
   <data name="minesweepSquare5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minesweepSquare5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="minesweepSquare6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minesweepSquare6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minesweepSquare7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minesweepSquare7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minesweepSquare8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minesweepSquare8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="minesweepSquareExploded" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minesweepSquareExploded.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="minesweepSquareMine" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minesweepSquareMine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="minesweepSquareQuestion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minesweepSquareQuestion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="minesweepSquareWrong" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minesweepSquareWrong.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinClassicMinesweeperGasp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minsweeper gasp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinClassicMinesweeperWin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minsweeper win.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

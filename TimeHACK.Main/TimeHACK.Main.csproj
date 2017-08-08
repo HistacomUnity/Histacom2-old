@@ -550,6 +550,12 @@
     <None Include="Resources\minesweepSquareMine.png" />
     <None Include="Resources\minesweepSquareWrong.png" />
     <None Include="Resources\minesweepSquare5.png" />
+    <None Include="Resources\minsweeper win.png" />
+    <None Include="Resources\minsweeper gasp.png" />
+    <None Include="Resources\minesweepSquare6.png" />
+    <None Include="Resources\minesweepSquare7.png" />
+    <None Include="Resources\minesweepSquare8.png" />
+    <None Include="Resources\minesweepSquareQuestion.png" />
     <Content Include="Resources\modem_dial.wav" />
     <None Include="Resources\MS-DOS-logo-1.png" />
     <None Include="Resources\msdosprompt.png" />

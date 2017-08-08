@@ -24,6 +24,16 @@ namespace TimeHACK.OS.Win95.Win95Apps
             labelBombs.Font = new Font(TitleScreen.pfc.Families[2], 15, GraphicsUnit.Point);
             labelTime.Font = new Font(TitleScreen.pfc.Families[2], 15, GraphicsUnit.Point);
             panel2.Paint += (sender, args) => Paintbrush.PaintClassicBordersIndented(sender, args, 3);
+            panel3.Paint += (sender, args) => Paintbrush.PaintClassicBorders(sender, args, 3);
+            panel4.Paint += (sender, args) => Paintbrush.PaintClassicBordersIndented(sender, args, 2);
+            foreach (ToolStripMenuItem item in menuStrip1.Items)
+            {
+                item.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular);
+                item.BackColor = Color.Silver;
+                item.BackgroundImage = Properties.Resources.sliversilver;
+                item.BackgroundImageLayout = ImageLayout.Center;
+                item.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            }
         }
         private void GameTick(object sender, EventArgs e)
         {
@@ -38,12 +48,15 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             panel1.Size = new Size(x * 16, y * 16);
             panel2.Size = new Size(x * 16 + 6, y * 16 + 6);
-            this.ParentForm.Size = new Size(x * 16 + 51, y * 16 + 106);
-            labelTime.Location = new Point(x * 16 - 32, button1.Location.Y);
-            panel2.Paint -= (sender, args) => Paintbrush.PaintClassicBordersIndented(sender, args, 3);
+            this.ParentForm.Size = new Size(x * 16 + 41, y * 16 + 120);
+            panel3.Size = new Size(Width, Height - 24);
+            panel4.Size = new Size(panel2.Width, 33);
+            labelTime.Location = new Point(panel4.Width - 58, 4);
+            //panel2.Paint -= (sender, args) => Paintbrush.PaintClassicBordersIndented(sender, args, 3);
             panel2.Refresh();
-            panel2.Paint += (sender, args) => Paintbrush.PaintClassicBordersIndented(sender, args, 3);
-            button1.Location = new Point(this.Width / 2 - 12, 32);
+            panel3.Refresh();
+            //panel2.Paint += (sender, args) => Paintbrush.PaintClassicBordersIndented(sender, args, 3);
+            button1.Location = new Point(panel4.Width / 2 - 12, 4);
             button1.PerformClick();
         }
         private void begginnerToolStripMenuItem_Click(object sender, EventArgs e)
@@ -66,26 +79,26 @@ namespace TimeHACK.OS.Win95.Win95Apps
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            button1.BackgroundImage = Properties.Resources.WinClassicMinesweeperSmile;
             labelTime.Text = "0";
             switch (level)
             {
                 case ("easy"):
                     Cursor.Current = Cursors.WaitCursor;
-                    _game = new Game(this.panel1, 8, 8, 10);
+                    _game = new Game(this, panel1, 8, 8, 10);
                     break;
                 case ("medium"):
                     Cursor.Current = Cursors.WaitCursor;
-                    _game = new Game(this.panel1, 16, 16, 40);
+                    _game = new Game(this, panel1, 16, 16, 40);
                     break;
                 case ("hard"):
                     Cursor.Current = Cursors.WaitCursor;
-                    _game = new Game(this.panel1, 30, 16, 99);
+                    _game = new Game(this, panel1, 30, 16, 99);
                     break;
             }
             _game.Tick += new EventHandler(GameTick);
             _game.DismantledMinesChanged += new EventHandler(GameDismantledMinesChanged);
             _game.Start();
-
         }
 
         private void WinClassicMinesweeper_Load(object sender, EventArgs e)
@@ -105,6 +118,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             if (_game.win == true)
             {
+                button1.BackgroundImage = Properties.Resources.WinClassicMinesweeperWin;
                 switch (level)
                 {
                     case ("easy"):
@@ -118,7 +132,6 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         Thread t = new Thread(Achieve);
                         t.Start();
                         break;
-
                 }
                 SaveSystem.SaveGame();
                 timer1.Stop();

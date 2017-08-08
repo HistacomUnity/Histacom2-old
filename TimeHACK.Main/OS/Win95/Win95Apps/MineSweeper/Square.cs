@@ -124,20 +124,16 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
                 if (Dismantled)
                 {
                     _dismantled = false;
-                    Button.BackgroundImage = null;
-                    Button.Text = "?";
+                    Button.BackgroundImage = Properties.Resources.minesweepSquareQuestion;
                 }
                 else if(Button.Text == "?")
                 {
-                    _dismantled = false;
                     Button.BackgroundImage = Properties.Resources.minesweepSquare;
-                    Button.Text = "";
                     return;
                 }
                 else
                 {
                     _dismantled = true;
-                    Button.Text = "";
                     Button.BackgroundImage = Properties.Resources.WinClassicMinesweeperFlag;
                 }
                 OnDismantle();
@@ -210,13 +206,13 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
                                 Button.BackgroundImage = Properties.Resources.minesweepSquare5;
                                 break;
                             case 6:
-                                Button.ForeColor = Color.LightBlue;
+                                Button.BackgroundImage = Properties.Resources.minesweepSquare6;
                                 break;
                             case 7:
-                                Button.ForeColor = Color.Orange; // Guesed, never seen one!
+                                Button.BackgroundImage = Properties.Resources.minesweepSquare7;
                                 break;
                             case 8:
-                                Button.ForeColor = Color.Ivory; // Guesed, never seen one!
+                                Button.BackgroundImage = Properties.Resources.minesweepSquare8;
                                 break;
                         }
                     }

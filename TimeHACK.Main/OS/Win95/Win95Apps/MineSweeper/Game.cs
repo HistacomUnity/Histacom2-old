@@ -21,13 +21,15 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
         public bool  ftime = true;
         public int Time;
         public bool win = false;
+        private WinClassicMinesweeper _window;
 
-        public Game(Panel panel, int width, int height, int mines)
+        public Game(WinClassicMinesweeper window, Panel panel, int width, int height, int mines)
         {
             _panel = panel;
             _width = width;
             _height = height;
             _mines = mines;
+            _window = window;
             win = false;
         }
 
@@ -63,6 +65,8 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
 
         private void Explode(object sender, EventArgs e)
         {
+            _panel.Enabled = false;
+            _window.button1.BackgroundImage = Properties.Resources.WinClassicMinesweeperSad;
             if (_timer != null) _timer.Enabled = false;
             foreach (Square s in _squares)
             {
@@ -76,6 +80,7 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
                     s.Button.BackgroundImage = Properties.Resources.minesweepSquareWrong;
                 }
             }
+            _window.button1.BackgroundImage = Properties.Resources.WinClassicMinesweeperSad;
         }
 
         public int Height
@@ -164,6 +169,8 @@ namespace TimeHACK.OS.Win95.Win95Apps.MineSweeper
                     Square s = new Square(this, x, y);
                     s.Explode += new EventHandler(Explode);
                     s.Dismantle += new EventHandler(Dismantle);
+                    s.Button.MouseDown += (send, args) => { if (_panel.Enabled) _window.button1.BackgroundImage = Properties.Resources.WinClassicMinesweeperGasp; };
+                    s.Button.MouseUp += (send, args) => { if (_panel.Enabled) _window.button1.BackgroundImage = Properties.Resources.WinClassicMinesweeperSmile; };
                     _squares[x, y] = s;
                 }
             }
