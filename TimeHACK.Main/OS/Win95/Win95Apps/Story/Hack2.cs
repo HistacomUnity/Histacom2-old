@@ -76,6 +76,7 @@ namespace TimeHACK.OS.Win95.Win95Apps.Story
             await Task.Delay(2500);
             Console.WriteLine("Command> Show Start Button");
             TitleScreen.frm95.startbutton.Show();
+            TitleScreen.frm95.desktopicons.BackgroundImage = null;
             await Task.Delay(2900);
             Console.WriteLine("12padams> OKAY, NOW YOU'VE DONE IT!");
             await Task.Delay(2500);
@@ -92,18 +93,64 @@ namespace TimeHACK.OS.Win95.Win95Apps.Story
             await Task.Delay(3000);
             Console.WriteLine("The Hidden Hacker> Oh, is it? Well, watch this!");
             await Task.Delay(2500);
+            TitleScreen.frm95.distort.Counter = 14;
             Console.WriteLine("Command> Show Timer");
             TitleScreen.frm95.distort.lblCountDown.Show();
             await Task.Delay(3000);
             Console.WriteLine("The Hidden Hacker> And here's one more command for you to learn.");
-            await Task.Delay(1700);
+            await Task.Delay(2000);
             Console.WriteLine("Command> Disconnect 12padams");
             await Task.Delay(2000);
             Console.WriteLine("telnet> 12padams Disconnected.");
             await Task.Delay(3000);
             Console.WriteLine($"The Hidden Hacker> Good luck {SaveSystem.ProfileName}! I'll see you in the future!");
-            await Task.Delay(3500);
+            await Task.Delay(4000);
+
+            while (TitleScreen.frm95.distort.Counter != 0) { }
+            TitleScreen.frm95.distort.lblCountDown.Text = "Initiating Time Travel Sequence...";
+            await Task.Delay(100);
+            Program.Invert(Console.cmdPrompt);
+            await Task.Delay(100);
+            Program.Invert(Console.cmdPrompt);
+            await Task.Delay(100);
+            Program.Invert(Console.cmdPrompt);
+            await Task.Delay(100);
+            Program.Invert(Console.cmdPrompt);
+            await Task.Delay(100);
+            Program.Invert(Console.cmdPrompt);
+            await Task.Delay(100);
+            Program.Invert(Console.cmdPrompt);
+            await Task.Delay(100);
+            Program.Invert(Console.cmdPrompt);
+            await Task.Delay(100);
+            Program.Invert(Console.cmdPrompt);
+            await Task.Delay(100);
+            Program.Invert(Console.cmdPrompt);
+            await Task.Delay(100);
+            Program.Invert(Console.cmdPrompt);
             app.Close();
+            await Task.Delay(1000);
+            Program.Invert(TitleScreen.frm95.taskbar, false);
+            await Task.Delay(100);
+            Program.Invert(TitleScreen.frm95.taskbar, false);
+            await Task.Delay(100);
+            Program.Invert(TitleScreen.frm95.taskbar, false);
+            await Task.Delay(100);
+            Program.Invert(TitleScreen.frm95.taskbar, false);
+            await Task.Delay(100);
+            Program.Invert(TitleScreen.frm95.taskbar, false);
+            await Task.Delay(100);
+            Program.Invert(TitleScreen.frm95.taskbar, false);
+            await Task.Delay(100);
+            Program.Invert(TitleScreen.frm95.taskbar, false);
+            await Task.Delay(100);
+            Program.Invert(TitleScreen.frm95.taskbar, false);
+            await Task.Delay(100);
+            Program.Invert(TitleScreen.frm95.taskbar, false);
+            await Task.Delay(100);
+            Program.Invert(TitleScreen.frm95.taskbar, false);
+            await Task.Delay(100);
+            TitleScreen.frm95.taskbar.Hide();
         }
     }
 }

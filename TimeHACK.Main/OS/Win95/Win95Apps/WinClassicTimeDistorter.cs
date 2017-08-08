@@ -22,6 +22,12 @@ namespace TimeHACK.OS.Win95
             _counter = counter;
         }
 
+        public int Counter
+        {
+            get { return _counter; }
+            set { _counter = value; }
+        }
+
         private void btnGo_Click(object sender, EventArgs e)
         {
             lblCountDown.Visible = true;

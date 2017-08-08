@@ -104,5 +104,19 @@ namespace TimeHACK
         {
             Program.nonimportantapps.Remove((WinClassic)sender);
         }
+
+        public static void Invert(Control c, bool forecolor = true, bool backcolor = true)
+        {
+            if (backcolor)
+            {
+                if (c.BackColor == Color.Black) c.BackColor = Color.White;
+                else c.BackColor = Color.Black;
+            }
+            if (forecolor)
+            {
+                if (c.ForeColor == Color.White || c.ForeColor == Color.Silver) c.ForeColor = Color.Black;
+                else c.ForeColor = Color.White;
+            }
+        }
     }
 }

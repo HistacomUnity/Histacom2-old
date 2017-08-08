@@ -195,8 +195,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.RichTextBox cmdPrompt;
         private System.Windows.Forms.Panel actionPanel;
         private System.Windows.Forms.Button btnFont;
         private System.Windows.Forms.Button btnCopy;
@@ -206,5 +204,6 @@
         private System.Windows.Forms.Button btnPaste;
         private System.Windows.Forms.Button btnMark;
         private System.Windows.Forms.ComboBox sizeSel;
+        internal System.Windows.Forms.RichTextBox cmdPrompt;
     }
 }
