@@ -310,10 +310,10 @@
     <Compile Include="GlobalPrograms\WinClassicDownloader.Designer.cs">
       <DependentUpon>WinClassicDownloader.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicNotepad.cs">
+    <Compile Include="GlobalPrograms\WinClassicNotepad.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicNotepad.Designer.cs">
+    <Compile Include="GlobalPrograms\WinClassicNotepad.Designer.cs">
       <DependentUpon>WinClassicNotepad.cs</DependentUpon>
     </Compile>
     <Compile Include="OS\Win95\Win95Apps\WinClassicWordPad.cs">
@@ -456,7 +456,7 @@
     <EmbeddedResource Include="GlobalPrograms\WinClassicDownloader.resx">
       <DependentUpon>WinClassicDownloader.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicNotepad.resx">
+    <EmbeddedResource Include="GlobalPrograms\WinClassicNotepad.resx">
       <DependentUpon>WinClassicNotepad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicWordPad.resx">
@@ -513,6 +513,7 @@
     <None Include="Resources\EndingDestruction.png" />
     <None Include="Resources\EndingPiracy.png" />
     <None Include="Resources\AchievementMines.png" />
+    <None Include="Resources\distort1.wav" />
     <Content Include="Resources\Icon128x.ico" />
     <None Include="Resources\ICTheme_BG.jpg" />
     <Content Include="Resources\IE4\google.jpg" />

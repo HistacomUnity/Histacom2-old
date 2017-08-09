@@ -1,7 +1,11 @@
 ﻿using System;
+using System.Drawing;
+using System.Media;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using TimeHACK.Engine;
 using TimeHACK.Engine.Template;
+using TimeHACK.OS.Win98;
 
 namespace TimeHACK.OS.Win95.Win95Apps.Story
 {
@@ -12,6 +16,7 @@ namespace TimeHACK.OS.Win95.Win95Apps.Story
         public static async void StartObjective()
         {
             WinClassicTerminal Console = new WinClassicTerminal(true);
+            Random r = new Random();
             WinClassic app = wm.StartWin95(Console, "MS-DOS Prompt", null, true, true);
             
             Console.WriteLine("telnet> 185.152.46.51 Connecting...");
@@ -92,8 +97,8 @@ namespace TimeHACK.OS.Win95.Win95Apps.Story
             Console.WriteLine("12padams> NO! That's impossible!");
             await Task.Delay(3000);
             Console.WriteLine("The Hidden Hacker> Oh, is it? Well, watch this!");
-            await Task.Delay(2500);
-            TitleScreen.frm95.distort.Counter = 14;
+            TitleScreen.frm95.distort.Counter = 16;
+            await Task.Delay(2000);
             Console.WriteLine("Command> Show Timer");
             TitleScreen.frm95.distort.lblCountDown.Show();
             await Task.Delay(3000);
@@ -129,7 +134,8 @@ namespace TimeHACK.OS.Win95.Win95Apps.Story
             await Task.Delay(100);
             Program.Invert(Console.cmdPrompt);
             app.Close();
-            await Task.Delay(1000);
+            await Task.Delay(100);
+            TitleScreen.frm95.taskbar.BackgroundImage = null;
             Program.Invert(TitleScreen.frm95.taskbar, false);
             await Task.Delay(100);
             Program.Invert(TitleScreen.frm95.taskbar, false);
@@ -151,6 +157,126 @@ namespace TimeHACK.OS.Win95.Win95Apps.Story
             Program.Invert(TitleScreen.frm95.taskbar, false);
             await Task.Delay(100);
             TitleScreen.frm95.taskbar.Hide();
+            await Task.Delay(100);
+            TitleScreen.frm95.desktopicons.Hide();
+            await Task.Delay(100);
+            TitleScreen.frm95.desktopicons.Show();
+            await Task.Delay(100);
+            TitleScreen.frm95.desktopicons.Hide();
+            await Task.Delay(100);
+            TitleScreen.frm95.desktopicons.Show();
+            await Task.Delay(100);
+            TitleScreen.frm95.desktopicons.Hide();
+            await Task.Delay(100);
+            TitleScreen.frm95.desktopicons.Show();
+            await Task.Delay(100);
+            TitleScreen.frm95.desktopicons.Hide();
+            await Task.Delay(100);
+            TitleScreen.frm95.desktopicons.Show();
+            await Task.Delay(100);
+            TitleScreen.frm95.desktopicons.Hide();
+            await Task.Delay(100);
+            Program.Invert(TitleScreen.frm95, false);
+            await Task.Delay(100);
+            Program.Invert(TitleScreen.frm95, false);
+            await Task.Delay(100);
+            Program.Invert(TitleScreen.frm95, false);
+            await Task.Delay(100);
+            Program.Invert(TitleScreen.frm95, false);
+            await Task.Delay(100);
+            Program.Invert(TitleScreen.frm95, false);
+            await Task.Delay(100);
+            Program.Invert(TitleScreen.frm95, false);
+            await Task.Delay(100);
+            Program.Invert(TitleScreen.frm95, false);
+            await Task.Delay(100);
+            Program.Invert(TitleScreen.frm95, false);
+            await Task.Delay(100);
+            Program.Invert(TitleScreen.frm95, false);
+            await Task.Delay(100);
+            Program.Invert(TitleScreen.frm95, false);
+            await Task.Delay(100);
+            TitleScreen.frm95.distort.ParentForm.Location = new Point(r.Next(TitleScreen.frm95.Width), r.Next(TitleScreen.frm95.Height));
+            Program.Invert(TitleScreen.frm95, false);
+            await Task.Delay(100);
+            TitleScreen.frm95.distort.ParentForm.Location = new Point(r.Next(TitleScreen.frm95.Width), r.Next(TitleScreen.frm95.Height));
+            Program.Invert(TitleScreen.frm95, false);
+            await Task.Delay(100);
+            TitleScreen.frm95.distort.ParentForm.Location = new Point(r.Next(TitleScreen.frm95.Width), r.Next(TitleScreen.frm95.Height));
+            Program.Invert(TitleScreen.frm95, false);
+            await Task.Delay(100);
+            TitleScreen.frm95.distort.ParentForm.Location = new Point(r.Next(TitleScreen.frm95.Width), r.Next(TitleScreen.frm95.Height));
+            Program.Invert(TitleScreen.frm95, false);
+            await Task.Delay(100);
+            TitleScreen.frm95.distort.ParentForm.Location = new Point(r.Next(TitleScreen.frm95.Width), r.Next(TitleScreen.frm95.Height));
+            Program.Invert(TitleScreen.frm95, false);
+            await Task.Delay(100);
+            TitleScreen.frm95.distort.ParentForm.Location = new Point(r.Next(TitleScreen.frm95.Width), r.Next(TitleScreen.frm95.Height));
+            Program.Invert(TitleScreen.frm95, false);
+            await Task.Delay(100);
+            TitleScreen.frm95.distort.ParentForm.Location = new Point(r.Next(TitleScreen.frm95.Width), r.Next(TitleScreen.frm95.Height));
+            Program.Invert(TitleScreen.frm95, false);
+            await Task.Delay(100);
+            TitleScreen.frm95.distort.ParentForm.Location = new Point(r.Next(TitleScreen.frm95.Width), r.Next(TitleScreen.frm95.Height));
+            Program.Invert(TitleScreen.frm95, false);
+            await Task.Delay(100);
+            TitleScreen.frm95.distort.ParentForm.Location = new Point(r.Next(TitleScreen.frm95.Width), r.Next(TitleScreen.frm95.Height));
+            Program.Invert(TitleScreen.frm95, false);
+            await Task.Delay(100);
+            TitleScreen.frm95.distort.ParentForm.Location = new Point(r.Next(TitleScreen.frm95.Width), r.Next(TitleScreen.frm95.Height));
+            Program.Invert(TitleScreen.frm95, false);
+            await Task.Delay(100);
+            TitleScreen.frm95.Hide();
+            ((WinClassic)TitleScreen.frm95.distort.ParentForm).BringToFront();
+            ((WinClassic)TitleScreen.frm95.distort.ParentForm).maximizebutton.Enabled = false;
+            ((WinClassic)TitleScreen.frm95.distort.ParentForm).WindowState = FormWindowState.Maximized;
+            ((WinClassic)TitleScreen.frm95.distort.ParentForm).right.Hide();
+            ((WinClassic)TitleScreen.frm95.distort.ParentForm).left.Hide();
+            ((WinClassic)TitleScreen.frm95.distort.ParentForm).bottom.Hide();
+            ((WinClassic)TitleScreen.frm95.distort.ParentForm).top.Hide();
+            ((WinClassic)TitleScreen.frm95.distort.ParentForm).bottomleftcorner.Hide();
+            ((WinClassic)TitleScreen.frm95.distort.ParentForm).bottomrightcorner.Hide();
+            ((WinClassic)TitleScreen.frm95.distort.ParentForm).topleftcorner.Hide();
+            ((WinClassic)TitleScreen.frm95.distort.ParentForm).toprightcorner.Hide();
+            ((WinClassic)TitleScreen.frm95.distort.ParentForm).Dock = DockStyle.Fill;
+            ((WinClassic)TitleScreen.frm95.distort.ParentForm).max = true;
+            ((WinClassic)TitleScreen.frm95.distort.ParentForm).maximizebutton.Image = Engine.Properties.Resources.WinClassicRestore;
+            ((WinClassic)TitleScreen.frm95.distort.ParentForm).programtopbar.Hide();
+            TitleScreen.frm95.distort.BackColor = Color.Black;
+            TitleScreen.frm95.distort.btnGo.Hide();
+            foreach (Control c in TitleScreen.frm95.distort.Controls) c.ForeColor = Color.Silver;
+            TitleScreen.frm95.distort.lblCountDown.Text = "Traveling...";
+
+            Point start = TitleScreen.frm95.distort.lblTo.Location;
+            Point end = new Point(TitleScreen.frm95.distort.lblDestYear.Location.X - TitleScreen.frm95.distort.lblTo.Width - 10, TitleScreen.frm95.distort.lblDestYear.Location.Y);
+            int increment = (end.X - start.X) / 50;
+
+            SoundPlayer sp = new SoundPlayer(Properties.Resources.distort1);
+            sp.Play();
+            await Task.Delay(1000);
+
+            for (int i = 0; i < 50; i += 2)
+            {
+                TitleScreen.frm95.distort.lblTo.ForeColor = Color.White;
+                TitleScreen.frm95.distort.lblTo.Location = new Point(TitleScreen.frm95.distort.lblTo.Location.X + increment, TitleScreen.frm95.distort.lblTo.Location.Y);
+                await Task.Delay(100);
+                TitleScreen.frm95.distort.lblTo.ForeColor = Color.Silver;
+                TitleScreen.frm95.distort.lblTo.Location = new Point(TitleScreen.frm95.distort.lblTo.Location.X + increment, TitleScreen.frm95.distort.lblTo.Location.Y);
+                await Task.Delay(100);
+            }
+            foreach (Control c in TitleScreen.frm95.distort.Controls) c.ForeColor = Color.Gray;
+            await Task.Delay(100);
+            foreach (Control c in TitleScreen.frm95.distort.Controls) c.ForeColor = Color.Black;
+            await Task.Delay(2000);
+            sp.Stop();
+
+            SaveSystem.UpgradeFileSystem("95", "98");
+            SaveSystem.CurrentSave.CurrentOS = "98";
+            SaveSystem.currentTheme = new Default98Theme();
+            TitleScreen.frm95.distort.ParentForm.Close();
+            Program.title.StartGame();
+            TitleScreen.frm95.Close();
+            return;
         }
     }
 }

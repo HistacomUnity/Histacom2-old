@@ -107,6 +107,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(164, 24);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
@@ -129,8 +130,9 @@
             this.toolStripSeparator4,
             this.exitToolStripMenuItem});
             this.gameToolStripMenuItem.Name = "gameToolStripMenuItem";
-            this.gameToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.gameToolStripMenuItem.Text = "Game";
+            this.gameToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
+            this.gameToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
+            this.gameToolStripMenuItem.Text = "&Game";
             this.gameToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             // 
             // newToolStripMenuItem
@@ -258,8 +260,9 @@
             this.toolStripSeparator5,
             this.aboutMinesweeperToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(36, 20);
+            this.helpToolStripMenuItem.Text = "&Help";
             // 
             // helpTopicsToolStripMenuItem
             // 

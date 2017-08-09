@@ -41,6 +41,7 @@
             // 
             // lblDest
             // 
+            this.lblDest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDest.AutoSize = true;
             this.lblDest.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblDest.Location = new System.Drawing.Point(286, 6);
@@ -53,6 +54,7 @@
             // 
             // lblDestYear
             // 
+            this.lblDestYear.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblDestYear.AutoSize = true;
             this.lblDestYear.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblDestYear.Location = new System.Drawing.Point(333, 32);
@@ -77,6 +79,7 @@
             // 
             // lblYear
             // 
+            this.lblYear.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblYear.AutoSize = true;
             this.lblYear.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblYear.Location = new System.Drawing.Point(29, 32);
@@ -89,6 +92,7 @@
             // 
             // lblTo
             // 
+            this.lblTo.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblTo.AutoSize = true;
             this.lblTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblTo.Location = new System.Drawing.Point(151, 43);
@@ -112,14 +116,16 @@
             // 
             // lblCountDown
             // 
-            this.lblCountDown.AutoSize = true;
+            this.lblCountDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCountDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblCountDown.Location = new System.Drawing.Point(48, 87);
+            this.lblCountDown.Location = new System.Drawing.Point(0, 88);
             this.lblCountDown.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCountDown.Name = "lblCountDown";
-            this.lblCountDown.Size = new System.Drawing.Size(46, 25);
+            this.lblCountDown.Size = new System.Drawing.Size(464, 25);
             this.lblCountDown.TabIndex = 8;
             this.lblCountDown.Text = "null";
+            this.lblCountDown.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblCountDown.Visible = false;
             // 
             // countDownTimer
@@ -148,12 +154,12 @@
 
         #endregion
         private System.Windows.Forms.Label lblDest;
-        private System.Windows.Forms.Label lblDestYear;
         private System.Windows.Forms.Label lblCurrent;
         private System.Windows.Forms.Label lblYear;
-        private System.Windows.Forms.Label lblTo;
-        private System.Windows.Forms.Button btnGo;
         internal System.Windows.Forms.Label lblCountDown;
         private System.Windows.Forms.Timer countDownTimer;
+        internal System.Windows.Forms.Button btnGo;
+        internal System.Windows.Forms.Label lblTo;
+        internal System.Windows.Forms.Label lblDestYear;
     }
 }

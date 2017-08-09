@@ -254,6 +254,15 @@ namespace TimeHACK.Engine
                         // There is no "The Microsoft Network" folder!
 
                         if (Directory.Exists(Path.Combine(ProfileProgramsDirectory, "The Microsoft Network"))) Directory.Delete(Path.Combine(ProfileProgramsDirectory, "The Microsoft Network"), true);
+                        FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(ProfileProgramsDirectory, "_data.info")));
+                        foreach (THDirInfo dir in fsfi.SubDirs)
+                        {
+                            if (dir.Name == "The Microsoft Network")
+                            {
+                                fsfi.SubDirs.Remove(dir);
+                                break;
+                            }
+                        }
                     }
                     break;
             }
