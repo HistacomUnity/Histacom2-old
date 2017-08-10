@@ -144,6 +144,12 @@
     <Compile Include="OS\Win2K\Win2KApps\SurviveTheDay.Designer.cs">
       <DependentUpon>SurviveTheDay.cs</DependentUpon>
     </Compile>
+    <Compile Include="OS\Win95\Win95Apps\IE4Sites\12padams1998.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\IE4Sites\12padams1998.Designer.cs">
+      <DependentUpon>12padams1998.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\Win95\Win95Apps\IE4Sites\GoogleHome.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -364,6 +370,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win2K\Win2KApps\SurviveTheDay.resx">
       <DependentUpon>SurviveTheDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\IE4Sites\12padams1998.resx">
+      <DependentUpon>12padams1998.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\IE4Sites\GoogleHome.resx">
       <DependentUpon>GoogleHome.cs</DependentUpon>
