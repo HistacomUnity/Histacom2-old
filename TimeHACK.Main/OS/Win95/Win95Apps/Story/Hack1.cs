@@ -23,18 +23,17 @@ namespace TimeHACK.OS.Win95.Win95Apps.Story
         // This is the very first story script!
         public static void StartObjective()
         {
-            System.Windows.Forms.Timer tmr = new System.Windows.Forms.Timer();
-            tmr.Interval = 1;
-            tmr.Tick += new EventHandler(CheckIfSoundFinished);
+            if (!ended) {
+                System.Windows.Forms.Timer tmr = new System.Windows.Forms.Timer();
+                tmr.Interval = 1;
+                tmr.Tick += new EventHandler(CheckIfSoundFinished);
 
-            if (devMode == true)
-            {
-                ContinueObjective();
-            }
-            else
-            {
-                soundThread.Start();
-                tmr.Start();
+                if (devMode == true) ContinueObjective();
+                else
+                {
+                    soundThread.Start();
+                    tmr.Start();
+                }
             }
         }
 
@@ -71,6 +70,7 @@ namespace TimeHACK.OS.Win95.Win95Apps.Story
 
             await Task.Delay(36000);
             app.Close();
+            ended = true;
         }
         
         public static void CheckIfSoundFinished(Object sender, EventArgs e)

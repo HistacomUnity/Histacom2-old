@@ -38,6 +38,9 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 case "www.google.stanford.edu":
                     uc = new GooglePrototype();
                     break;
+                case "www.12padams.com":
+                    uc = new _12padams1998();
+                    break;
                 default:
                     uc = new IE4NoPage();
                     break;
@@ -50,6 +53,8 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
             browsingArea.Controls.Clear();
             browsingArea.Controls.Add(uc);
+
+            if (url == "www.12padams.com") Story.Hack1.StartObjective();
         }
 
         private void TempIE4_Load(object sender, EventArgs e)

@@ -69,6 +69,7 @@
             this.linkLabel2.TabIndex = 2;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "   ";
+            this.linkLabel2.Click += new System.EventHandler(this.linkLabel2_Click);
             // 
             // IE4Start
             // 
