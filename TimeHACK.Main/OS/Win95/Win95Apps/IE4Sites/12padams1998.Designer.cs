@@ -387,6 +387,7 @@
             this.label17.TabIndex = 4;
             this.label17.Text = "Copyright 1998 12padams";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // _12padams1998
             // 
