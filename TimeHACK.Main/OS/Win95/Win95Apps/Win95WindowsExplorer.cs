@@ -778,15 +778,14 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void mainView_AfterLabelEdit(object sender, LabelEditEventArgs e)
         {
-            string setText;
-            setText = e.Label;
+            string setText = e.Label;
             if (setText == "") wm.StartInfobox95("Windows Explorer", "Please enter a new directory name", InfoboxType.Info, InfoboxButtons.OK);
             else
             {
-                if (Directory.Exists(setText)) wm.StartInfobox95("Windows Explorer", "That directory already exists.", InfoboxType.Info, InfoboxButtons.OK);
+                if (Directory.Exists(setText)) wm.StartInfobox95("Error Renaming File", $"Cannot rename {new DirectoryInfo(setText).Name}: A file with the name you specified already exists. Specify a different filename.", InfoboxType.Error, InfoboxButtons.OK);
                 else
                 {
-                    if (File.Exists(setText)) wm.StartInfobox95("Windows Explorer", "That file already exists.", InfoboxType.Info, InfoboxButtons.OK);
+                    if (File.Exists(setText)) wm.StartInfobox95("Error Renaming File", $"Cannot rename {new FileInfo(setText).Name}: A file with the name you specified already exists. Specify a different filename.", InfoboxType.Error, InfoboxButtons.OK);
                     else
                     {
                         if (Directory.Exists((string)mainView.FocusedItem.Tag))
@@ -796,7 +795,6 @@ namespace TimeHACK.OS.Win95.Win95Apps
                             Directory.Move((string)mainView.FocusedItem.Tag, Path.Combine(CurrentDirectory, setText));
 
                             File.Delete(Path.Combine(CurrentDirectory, setText, "_data.info"));
-
                             SaveDirectoryInfo(CurrentDirectory, setText, false, setText, true);
                         }
                         else
@@ -807,7 +805,6 @@ namespace TimeHACK.OS.Win95.Win95Apps
                             File.Delete((string)mainView.FocusedItem.Tag);
                         }
                     }
-
                 }
             }
             RefreshAll();
