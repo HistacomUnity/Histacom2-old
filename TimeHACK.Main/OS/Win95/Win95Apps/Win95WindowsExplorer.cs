@@ -779,7 +779,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         private void mainView_AfterLabelEdit(object sender, LabelEditEventArgs e)
         {
             string setText = e.Label;
-            if (setText == "") wm.StartInfobox95("Windows Explorer", "Please enter a new directory name", InfoboxType.Info, InfoboxButtons.OK);
+            if (setText == "") wm.StartInfobox95("Rename", "You must type a filename.", InfoboxType.Error, InfoboxButtons.OK);
             else
             {
                 if (Directory.Exists(setText)) wm.StartInfobox95("Error Renaming File", $"Cannot rename {new DirectoryInfo(setText).Name}: A file with the name you specified already exists. Specify a different filename.", InfoboxType.Error, InfoboxButtons.OK);
