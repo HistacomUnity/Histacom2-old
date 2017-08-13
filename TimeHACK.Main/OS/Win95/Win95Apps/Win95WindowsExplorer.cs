@@ -115,20 +115,15 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
             if (returnYesIfProtected == true)
             {
-                if (toRead.IsProtected == true)
-                {
-                    return "yes";
-                }
+                if (toRead.IsProtected == true) return "yes";
             }
-            else
-            {
-                return toRead.Label;
-            }
+            else return toRead.Label;
             return Val;
         }
 
-        void RefreshAll() {
-            try {
+        private void RefreshAll()
+        {
+            //try {
                 this.mainView.Items.Clear();
 
                 foreach (string str in Directory.GetDirectories(CurrentDirectory))
@@ -136,6 +131,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     string label = ReadDataFile(str, false);
                     ListViewItem itm = this.mainView.Items.Add(label ?? Path.GetFileName(str));
                     itm.ImageIndex = 1;
+                    itm.Tag = str;
                 }
                 foreach (string str in Directory.GetFiles(CurrentDirectory))
                 {
@@ -169,13 +165,14 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         if (item.Name == Path.GetFileName(str)) { itm.ImageIndex = item.FileIcon; break; }
                     }
                 }
+                /*
             } catch (Exception ex) {
                 //wm.StartInfobox95("Exploring - C:", "Error with the file explorer \n" + ex.Message, Properties.Resources.Win95Info); add illegal operation dialog here later
                 ((Form)this.TopLevelControl).Close();
-            }
+            }*/
         }
 
-        void RefreshTreeNode()
+        private void RefreshTreeNode()
         {
             // Refresh the TreeView
 
@@ -606,7 +603,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             try
             {
-                if (mainView.FocusedItem.Tag == null)
+                if (new DirectoryInfo((string)mainView.FocusedItem.Tag).Extension == null || new DirectoryInfo((string)mainView.FocusedItem.Tag).Extension == "")
                 { // If it isn't a file
                     GoToDir(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text));
                 }
@@ -684,10 +681,12 @@ namespace TimeHACK.OS.Win95.Win95Apps
             }
             else
             {
-                Directory.CreateDirectory(Path.Combine(CurrentDirectory, "New Folder"));
                 SaveDirectoryInfo(CurrentDirectory, "New Folder", false, "New Folder", true);
 
                 RefreshAll();
+                OldLabelText = "New Folder";
+                mainView.LabelEdit = true;
+                mainView.FindItemWithText("New Folder").BeginEdit();
             }
 
             RefreshTreeNode();
@@ -779,47 +778,40 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void mainView_AfterLabelEdit(object sender, LabelEditEventArgs e)
         {
-
-            try
+            string setText;
+            setText = e.Label;
+            if (setText == "") wm.StartInfobox95("Windows Explorer", "Please enter a new directory name", InfoboxType.Info, InfoboxButtons.OK);
+            else
             {
-                string setText;
-                setText = e.Label;
-                if (setText == "") wm.StartInfobox95("Windows Explorer", "Please enter a new directory name", InfoboxType.Info, InfoboxButtons.OK);
+                if (Directory.Exists(setText)) wm.StartInfobox95("Windows Explorer", "That directory already exists.", InfoboxType.Info, InfoboxButtons.OK);
                 else
                 {
-                    if (Directory.Exists(setText)) wm.StartInfobox95("Windows Explorer", "That directory already exists.", InfoboxType.Info, InfoboxButtons.OK);
+                    if (File.Exists(setText)) wm.StartInfobox95("Windows Explorer", "That file already exists.", InfoboxType.Info, InfoboxButtons.OK);
                     else
                     {
-                        if (File.Exists(setText)) wm.StartInfobox95("Windows Explorer", "That file already exists.", InfoboxType.Info, InfoboxButtons.OK);
+                        if (Directory.Exists((string)mainView.FocusedItem.Tag))
+                        {
+                            // It was a directory
+
+                            Directory.Move((string)mainView.FocusedItem.Tag, Path.Combine(CurrentDirectory, setText));
+
+                            File.Delete(Path.Combine(CurrentDirectory, setText, "_data.info"));
+
+                            SaveDirectoryInfo(CurrentDirectory, setText, false, setText, true);
+                        }
                         else
                         {
-                            if (Directory.Exists(mainView.FocusedItem.ImageKey))
-                            {
-                                // It was a directory
+                            // It was a file
 
-                                Directory.Move(mainView.FocusedItem.ImageKey, Path.Combine(CurrentDirectory, setText));
-
-                                File.Delete(Path.Combine(CurrentDirectory, setText, "_data.info"));
-
-                                SaveDirectoryInfo(CurrentDirectory, setText, false, $"{setText}", true);
-                            }
-                            else
-                            {
-                                // It was a file
-
-                                File.Copy(mainView.FocusedItem.ImageKey, Path.Combine(CurrentDirectory, setText));
-                                File.Delete(mainView.FocusedItem.ImageKey);
-                            }
+                            File.Copy((string)mainView.FocusedItem.Tag, Path.Combine(CurrentDirectory, setText));
+                            File.Delete((string)mainView.FocusedItem.Tag);
                         }
-
                     }
+
                 }
-                RefreshAll();
-                RefreshTreeNode();
             }
-            catch
-            {
-            }
+            RefreshAll();
+            RefreshTreeNode();
         }
 
         private TreeNode[] createSubDirNodes(DirectoryInfo folder)
@@ -882,8 +874,6 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     if (File.Exists(CurrentCopyFile)) File.Delete(CurrentCopyFile);
 
                     File.Move(mainView.FocusedItem.Tag.ToString(), Path.Combine(GameDirectory, "Data", Path.GetFileName(mainView.FocusedItem.Tag.ToString())));
-
-
                 }
                 RefreshAll();
             }
@@ -986,6 +976,11 @@ namespace TimeHACK.OS.Win95.Win95Apps
         private void SellectAllCtrlAToolStripMenuItem_Click(object sender, EventArgs e)
         {
             foreach (ListViewItem item in mainView.Items) item.Selected = true;
+        }
+
+        private void mainView_MouseClick(object sender, MouseEventArgs e)
+        {
+
         }
     }
 }

@@ -270,7 +270,7 @@ namespace TimeHACK.Engine
 
         public static void SaveDirectoryInfo(string parent, string dirname, bool isProtected, string label, bool allowback)
         {
-            if (Directory.Exists(Path.Combine(parent, dirname)) && Path.Combine(parent, dirname) != ProfileFileSystemDirectory) return;
+            if (File.Exists(Path.Combine(parent, dirname, "_data.info")) && Path.Combine(parent, dirname) != ProfileFileSystemDirectory) return;
             Directory.CreateDirectory(Path.Combine(parent, dirname));
 
             FileSystemFolderInfo info = new FileSystemFolderInfo();

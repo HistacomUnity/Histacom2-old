@@ -152,7 +152,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     case "notopbar":
                         ((WinClassic)this.ParentForm).programtopbar.Hide();
                         receive.Play();
-                        break; // TODO: Finish WebChat 1998
+                        break;
                     case "filepoof":
                         label5.Hide();
                         button5.Hide();
@@ -205,7 +205,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         break;
                     case "notyper":
                         history.ReadOnly = true;
-                        break;
+                        break; // TODO: Add ending here
                     default:
                         if (msgsound) receive.Play();
                         break;
