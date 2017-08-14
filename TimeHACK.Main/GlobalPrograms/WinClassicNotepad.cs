@@ -56,18 +56,12 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void cutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (mainText.SelectedText.Length >= 0)
-            {
-                mainText.Cut();
-            }
+            if (mainText.SelectedText.Length >= 0) mainText.Cut();
         }
 
         private void copyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (mainText.SelectedText.Length >= 0)
-            {
-                mainText.Copy();
-            }
+            if (mainText.SelectedText.Length >= 0) mainText.Copy();
         }
 
         private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -116,7 +110,6 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 if (selectedPath != "")
                 {
                     SaveSystem.CreateWindowsFile(pathList.ToString(), selectedPath.Split('\\').Last(), mainText.Text, 12, mainText.Text.Length);
-                    //File.WriteAllText(selectedPath, mainText.Text);
                 }
             } catch {
             }               

@@ -202,10 +202,10 @@
     <Compile Include="OS\Win95\Win95Apps\Win95Installer.Designer.cs">
       <DependentUpon>Win95Installer.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicCalculator.cs">
+    <Compile Include="GlobalPrograms\WinClassicCalculator.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicCalculator.Designer.cs">
+    <Compile Include="GlobalPrograms\WinClassicCalculator.Designer.cs">
       <DependentUpon>WinClassicCalculator.cs</DependentUpon>
     </Compile>
     <Compile Include="OS\Win95\Win95Apps\WinClassicFTPClient.cs">
@@ -399,7 +399,7 @@
     <EmbeddedResource Include="OS\Win95\Win95Apps\Win95Installer.resx">
       <DependentUpon>Win95Installer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicCalculator.resx">
+    <EmbeddedResource Include="GlobalPrograms\WinClassicCalculator.resx">
       <DependentUpon>WinClassicCalculator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicFTPClient.resx">
@@ -516,6 +516,18 @@
   <ItemGroup>
     <Content Include="Icon128x.ico" />
     <Content Include="Resources\12padams_EULA.txt" />
+    <None Include="Resources\wordpad_find.png" />
+    <None Include="Resources\wordpad_printpreview.png" />
+    <None Include="Resources\wordpad_print.png" />
+    <None Include="Resources\wordpad_save.png" />
+    <None Include="Resources\wordpad_open.png" />
+    <None Include="Resources\wordpad_paste.png" />
+    <None Include="Resources\wordpad_copy.png" />
+    <None Include="Resources\wordpad_cut.png" />
+    <None Include="Resources\wordpad_new.png" />
+    <None Include="Resources\wordpad_underline.png" />
+    <None Include="Resources\wordpad_italic.png" />
+    <None Include="Resources\wordpad_bold.png" />
     <None Include="Resources\XCross.png" />
     <None Include="Resources\XCross_highlighted.png" />
     <None Include="Resources\DCTheme_BG.JPG" />

@@ -15,16 +15,15 @@ namespace TimeHACK.OS.Win95.Win95Apps
     public partial class WinClassicWordPad : UserControl
     {
         WindowManager wm = new WindowManager();
+        
+        bool doBold = false;
+        bool doItalic = false;
+        bool doUnderline = false;
 
-        bool btnBoldSelected = true;
-        bool btnItalicSelected = true;
-        bool btnUnderlineSelected = true;
-        bool doBold;
-        bool doItalic;
-        bool doUnderline;
         public WinClassicWordPad()
         {
             InitializeComponent();
+
             foreach (ToolStripMenuItem item in topmenu.Items)
             {
                 item.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
@@ -35,13 +34,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             }
 
             // Time to prepare to load all the fonts up for the combo boxes
-
-            foreach (FontFamily font in System.Drawing.FontFamily.Families)
-            {
-                // Added to the ComboBox here
-
-                comboFont.Items.Add(font.Name);
-            }
+            foreach (FontFamily font in FontFamily.Families) comboFont.Items.Add(font.Name);
 
             // Handlers
             this.clearToolStripMenuItem.Click += (sender, args) => mainText.Text = mainText.Text.Remove(mainText.SelectionStart, mainText.SelectedText.Length);
@@ -71,48 +64,44 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void btnBold_Click(object sender, EventArgs e)
         {
-            if (btnBoldSelected == false)
+            if (!doBold)
             {
                 btnBold.BackgroundImage = null;
-                btnBoldSelected = true;
-                
+                doBold = true;
             } else {
-                btnBold.BackgroundImage = Properties.Resources.sliversilver;
-                btnBoldSelected = false;
+                btnBold.BackgroundImage = Properties.Resources.wordpad_bold;
+                doBold = false;
             }
-            doBold = btnBoldSelected;
             DoFontStyles();
         }
 
         private void btnItalic_Click(object sender, EventArgs e)
         {
-            if (btnItalicSelected == false)
+            if (!doItalic)
             {
-                btnItalic.BackgroundImage = Properties.Resources.sliversilver;
-                btnItalicSelected = true;
+                btnItalic.BackgroundImage = null;
+                doItalic = true;
             }
             else
             {
-                btnItalic.BackgroundImage = null;
-                btnItalicSelected = false;
+                btnItalic.BackgroundImage = Properties.Resources.wordpad_italic;
+                doItalic = false;
             }
-            doItalic = btnItalicSelected;
             DoFontStyles();
         }
 
         private void btnUnderline_Click(object sender, EventArgs e)
         {
-            if (btnUnderlineSelected == false)
+            if (!doUnderline)
             {
-                btnUnderline.BackgroundImage = Properties.Resources.sliversilver;
-                btnUnderlineSelected = true;
+                btnUnderline.BackgroundImage = null;
+                doUnderline = true;
             }
             else
             {
-                btnUnderline.BackgroundImage = null;
-                btnUnderlineSelected = false;
+                btnUnderline.BackgroundImage = Properties.Resources.wordpad_underline;
+                doUnderline = false;
             }
-            doUnderline = btnUnderlineSelected;
             DoFontStyles();
         }
 
@@ -175,9 +164,9 @@ namespace TimeHACK.OS.Win95.Win95Apps
             FontStyle Bold = FontStyle.Regular;
             FontStyle Italic = FontStyle.Regular;
             FontStyle Underline = FontStyle.Regular;
-            if (doBold == true) Bold = FontStyle.Bold;
-            if (doItalic == true) Italic = FontStyle.Italic;
-            if (doUnderline == true)Underline = FontStyle.Underline;
+            if (doBold) Bold = FontStyle.Bold;
+            if (doItalic) Italic = FontStyle.Italic;
+            if (doUnderline) Underline = FontStyle.Underline;
             mainText.SelectionFont = new Font(mainText.SelectionFont.FontFamily, mainText.SelectionFont.Size, Bold | Italic | Underline);
         }
     }

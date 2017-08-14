@@ -145,9 +145,6 @@
   <data name="MSNewGame" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\titlescreen\msnewgame.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WinClassicNew" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\WinClassicNew.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="WinClassicMinesweeperSmile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minsweeper smile.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -266,9 +263,6 @@
   </data>
   <data name="WinClassicRun" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\winclassic\winclassicrun.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WinClassicCut" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\WinClassicCut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ie4_go" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ie4_go.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -555,9 +549,6 @@
   <data name="windows_command_prompt" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\windows_command_prompt.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="WinClassicCopy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\WinClassicCopy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="win95_splitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\win95_splitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -606,7 +597,7 @@
   <data name="Win95IconIE4" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAAJVJREFUOE+VkQsSxCAMQj16bu4GFU3YdO2+Gaqi0F/7j96zfqKHqYiuByYBFfYJ
+        vQAADr0BR/uQrQAAAJVJREFUOE+VkQsSxCAMQj16bu4GFU3YdO2+Gaqi0F/7j96zfqKHqYiuByYBFfYJ
         1okT9uuef4slmG9gWjdzN4Wnf9bRT1RhaCN+KriGieyvkjr8Rl7AMMbywE0zCBiIBS9Awbn7tUD29xME
         Q0rM8IHhPbziKRhMU0pqjVIfcgHAfB2oiugnuEnG/EkZ/4fLZEksutHaB6sGQO/gf7MbAAAAAElFTkSu
         QmCC
@@ -770,5 +761,41 @@
   </data>
   <data name="WinClassicMinesweeperWin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minsweeper win.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wordpad_bold" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wordpad_bold.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wordpad_copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wordpad_copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wordpad_cut" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wordpad_cut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wordpad_find" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wordpad_find.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wordpad_italic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wordpad_italic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wordpad_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wordpad_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wordpad_open" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wordpad_open.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wordpad_paste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wordpad_paste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wordpad_print" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wordpad_print.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wordpad_printpreview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wordpad_printpreview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wordpad_save" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wordpad_save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wordpad_underline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wordpad_underline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

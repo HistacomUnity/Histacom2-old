@@ -57,6 +57,11 @@
             this.aboutWordpadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainText = new System.Windows.Forms.RichTextBox();
             this.pnlToolbar = new System.Windows.Forms.Panel();
+            this.btnFind = new System.Windows.Forms.Button();
+            this.btnPrintPreview = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnOpen = new System.Windows.Forms.Button();
             this.btnPaste = new System.Windows.Forms.Button();
             this.btnCopy = new System.Windows.Forms.Button();
             this.btnCut = new System.Windows.Forms.Button();
@@ -71,16 +76,21 @@
             this.btnBold = new System.Windows.Forms.Button();
             this.statusBar = new System.Windows.Forms.Panel();
             this.lblStatus = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.topmenu.SuspendLayout();
             this.pnlToolbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlFormatBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.statusBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // topmenu
             // 
+            this.topmenu.AutoSize = false;
             this.topmenu.BackColor = System.Drawing.Color.Silver;
             this.topmenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
@@ -91,42 +101,45 @@
             this.helpToolStripMenuItem});
             this.topmenu.Location = new System.Drawing.Point(0, 0);
             this.topmenu.Name = "topmenu";
-            this.topmenu.Size = new System.Drawing.Size(593, 24);
+            this.topmenu.Padding = new System.Windows.Forms.Padding(0);
+            this.topmenu.Size = new System.Drawing.Size(593, 19);
             this.topmenu.TabIndex = 0;
             this.topmenu.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
+            this.fileToolStripMenuItem.AutoSize = false;
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newToolStripMenuItem,
             this.toolStripSeparator1,
             this.sendToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0, 0, 1, 0);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(28, 18);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.newToolStripMenuItem.Text = "New";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(106, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(111, 6);
             // 
             // sendToolStripMenuItem
             // 
             this.sendToolStripMenuItem.Name = "sendToolStripMenuItem";
-            this.sendToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
+            this.sendToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.sendToolStripMenuItem.Text = "Send...";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // editToolStripMenuItem
@@ -141,53 +154,54 @@
             this.clearToolStripMenuItem,
             this.selectAllToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+            this.editToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0, 0, 1, 0);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(36, 19);
             this.editToolStripMenuItem.Text = "Edit";
             // 
             // undoToolStripMenuItem
             // 
             this.undoToolStripMenuItem.Name = "undoToolStripMenuItem";
-            this.undoToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.undoToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.undoToolStripMenuItem.Text = "Undo";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(119, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(126, 6);
             // 
             // cutToolStripMenuItem
             // 
             this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
-            this.cutToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.cutToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.cutToolStripMenuItem.Text = "Cut";
             // 
             // copyToolStripMenuItem
             // 
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.copyToolStripMenuItem.Text = "Copy";
             // 
             // pasteToolStripMenuItem
             // 
             this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
-            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.pasteToolStripMenuItem.Text = "Paste";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(119, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(126, 6);
             // 
             // clearToolStripMenuItem
             // 
             this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
-            this.clearToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.clearToolStripMenuItem.Text = "Clear";
             // 
             // selectAllToolStripMenuItem
             // 
             this.selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
-            this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.selectAllToolStripMenuItem.Text = "Select All";
             // 
             // viewToolStripMenuItem
@@ -197,7 +211,8 @@
             this.formatBarToolStripMenuItem,
             this.statusBarToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.viewToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0, 0, 1, 0);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(40, 19);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // toolbarToolStripMenuItem
@@ -206,7 +221,7 @@
             this.toolbarToolStripMenuItem.CheckOnClick = true;
             this.toolbarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolbarToolStripMenuItem.Name = "toolbarToolStripMenuItem";
-            this.toolbarToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.toolbarToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.toolbarToolStripMenuItem.Text = "Toolbar";
             // 
             // formatBarToolStripMenuItem
@@ -215,7 +230,7 @@
             this.formatBarToolStripMenuItem.CheckOnClick = true;
             this.formatBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.formatBarToolStripMenuItem.Name = "formatBarToolStripMenuItem";
-            this.formatBarToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.formatBarToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.formatBarToolStripMenuItem.Text = "Format Bar";
             // 
             // statusBarToolStripMenuItem
@@ -224,7 +239,7 @@
             this.statusBarToolStripMenuItem.CheckOnClick = true;
             this.statusBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.statusBarToolStripMenuItem.Name = "statusBarToolStripMenuItem";
-            this.statusBarToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.statusBarToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.statusBarToolStripMenuItem.Text = "Status Bar";
             // 
             // insertToolStripMenuItem
@@ -232,13 +247,14 @@
             this.insertToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dateTimeToolStripMenuItem});
             this.insertToolStripMenuItem.Name = "insertToolStripMenuItem";
-            this.insertToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.insertToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0, 0, 1, 0);
+            this.insertToolStripMenuItem.Size = new System.Drawing.Size(47, 19);
             this.insertToolStripMenuItem.Text = "Insert";
             // 
             // dateTimeToolStripMenuItem
             // 
             this.dateTimeToolStripMenuItem.Name = "dateTimeToolStripMenuItem";
-            this.dateTimeToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.dateTimeToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.dateTimeToolStripMenuItem.Text = "Date/Time";
             // 
             // formatToolStripMenuItem
@@ -246,14 +262,15 @@
             this.formatToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bulletStyleToolStripMenuItem});
             this.formatToolStripMenuItem.Name = "formatToolStripMenuItem";
-            this.formatToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.formatToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0, 0, 1, 0);
+            this.formatToolStripMenuItem.Size = new System.Drawing.Size(57, 19);
             this.formatToolStripMenuItem.Text = "Format";
             // 
             // bulletStyleToolStripMenuItem
             // 
             this.bulletStyleToolStripMenuItem.CheckOnClick = true;
             this.bulletStyleToolStripMenuItem.Name = "bulletStyleToolStripMenuItem";
-            this.bulletStyleToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.bulletStyleToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.bulletStyleToolStripMenuItem.Text = "Bullet style";
             // 
             // helpToolStripMenuItem
@@ -263,86 +280,151 @@
             this.toolStripSeparator4,
             this.aboutWordpadToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0, 0, 1, 0);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(39, 19);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // helpTopicsToolStripMenuItem
             // 
             this.helpTopicsToolStripMenuItem.Name = "helpTopicsToolStripMenuItem";
-            this.helpTopicsToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.helpTopicsToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.helpTopicsToolStripMenuItem.Text = "Help Topics";
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(156, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(166, 6);
             // 
             // aboutWordpadToolStripMenuItem
             // 
             this.aboutWordpadToolStripMenuItem.Name = "aboutWordpadToolStripMenuItem";
-            this.aboutWordpadToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.aboutWordpadToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.aboutWordpadToolStripMenuItem.Text = "About Wordpad";
             // 
             // mainText
             // 
             this.mainText.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainText.Location = new System.Drawing.Point(0, 80);
+            this.mainText.Location = new System.Drawing.Point(0, 79);
             this.mainText.Name = "mainText";
-            this.mainText.Size = new System.Drawing.Size(593, 290);
+            this.mainText.Size = new System.Drawing.Size(593, 274);
             this.mainText.TabIndex = 1;
             this.mainText.Text = "";
             // 
             // pnlToolbar
             // 
             this.pnlToolbar.BackColor = System.Drawing.Color.Silver;
+            this.pnlToolbar.Controls.Add(this.btnFind);
+            this.pnlToolbar.Controls.Add(this.btnPrintPreview);
+            this.pnlToolbar.Controls.Add(this.btnPrint);
+            this.pnlToolbar.Controls.Add(this.btnSave);
+            this.pnlToolbar.Controls.Add(this.btnOpen);
             this.pnlToolbar.Controls.Add(this.btnPaste);
             this.pnlToolbar.Controls.Add(this.btnCopy);
             this.pnlToolbar.Controls.Add(this.btnCut);
             this.pnlToolbar.Controls.Add(this.btnNew);
             this.pnlToolbar.Controls.Add(this.pictureBox1);
             this.pnlToolbar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlToolbar.Location = new System.Drawing.Point(0, 24);
+            this.pnlToolbar.Location = new System.Drawing.Point(0, 21);
             this.pnlToolbar.Name = "pnlToolbar";
             this.pnlToolbar.Size = new System.Drawing.Size(593, 28);
             this.pnlToolbar.TabIndex = 2;
             // 
+            // btnFind
+            // 
+            this.btnFind.BackgroundImage = global::TimeHACK.Properties.Resources.wordpad_find;
+            this.btnFind.FlatAppearance.BorderSize = 0;
+            this.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFind.Location = new System.Drawing.Point(137, 3);
+            this.btnFind.Name = "btnFind";
+            this.btnFind.Size = new System.Drawing.Size(23, 22);
+            this.btnFind.TabIndex = 6;
+            this.btnFind.UseVisualStyleBackColor = true;
+            // 
+            // btnPrintPreview
+            // 
+            this.btnPrintPreview.BackgroundImage = global::TimeHACK.Properties.Resources.wordpad_printpreview;
+            this.btnPrintPreview.FlatAppearance.BorderSize = 0;
+            this.btnPrintPreview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrintPreview.Location = new System.Drawing.Point(106, 3);
+            this.btnPrintPreview.Name = "btnPrintPreview";
+            this.btnPrintPreview.Size = new System.Drawing.Size(23, 22);
+            this.btnPrintPreview.TabIndex = 5;
+            this.btnPrintPreview.UseVisualStyleBackColor = true;
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.BackgroundImage = global::TimeHACK.Properties.Resources.wordpad_print;
+            this.btnPrint.FlatAppearance.BorderSize = 0;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.Location = new System.Drawing.Point(83, 3);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(23, 22);
+            this.btnPrint.TabIndex = 4;
+            this.btnPrint.UseVisualStyleBackColor = true;
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackgroundImage = global::TimeHACK.Properties.Resources.wordpad_save;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Location = new System.Drawing.Point(52, 3);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(23, 22);
+            this.btnSave.TabIndex = 3;
+            this.btnSave.UseVisualStyleBackColor = true;
+            // 
+            // btnOpen
+            // 
+            this.btnOpen.BackgroundImage = global::TimeHACK.Properties.Resources.wordpad_open;
+            this.btnOpen.FlatAppearance.BorderSize = 0;
+            this.btnOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpen.Location = new System.Drawing.Point(29, 3);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(23, 22);
+            this.btnOpen.TabIndex = 2;
+            this.btnOpen.UseVisualStyleBackColor = true;
+            // 
             // btnPaste
             // 
-            this.btnPaste.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
-            this.btnPaste.Image = global::TimeHACK.Properties.Resources.WinClassicPaste;
-            this.btnPaste.Location = new System.Drawing.Point(102, 3);
+            this.btnPaste.BackgroundImage = global::TimeHACK.Properties.Resources.wordpad_paste;
+            this.btnPaste.FlatAppearance.BorderSize = 0;
+            this.btnPaste.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPaste.Location = new System.Drawing.Point(214, 3);
             this.btnPaste.Name = "btnPaste";
-            this.btnPaste.Size = new System.Drawing.Size(26, 23);
+            this.btnPaste.Size = new System.Drawing.Size(23, 22);
             this.btnPaste.TabIndex = 1;
             this.btnPaste.UseVisualStyleBackColor = true;
             // 
             // btnCopy
             // 
-            this.btnCopy.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
-            this.btnCopy.Image = global::TimeHACK.Properties.Resources.WinClassicCopy;
-            this.btnCopy.Location = new System.Drawing.Point(70, 3);
+            this.btnCopy.BackgroundImage = global::TimeHACK.Properties.Resources.wordpad_copy;
+            this.btnCopy.FlatAppearance.BorderSize = 0;
+            this.btnCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCopy.Location = new System.Drawing.Point(191, 3);
             this.btnCopy.Name = "btnCopy";
-            this.btnCopy.Size = new System.Drawing.Size(26, 23);
+            this.btnCopy.Size = new System.Drawing.Size(23, 22);
             this.btnCopy.TabIndex = 1;
             this.btnCopy.UseVisualStyleBackColor = true;
             // 
             // btnCut
             // 
-            this.btnCut.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
-            this.btnCut.Image = global::TimeHACK.Properties.Resources.WinClassicCut;
-            this.btnCut.Location = new System.Drawing.Point(38, 3);
+            this.btnCut.BackgroundImage = global::TimeHACK.Properties.Resources.wordpad_cut;
+            this.btnCut.FlatAppearance.BorderSize = 0;
+            this.btnCut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCut.Location = new System.Drawing.Point(168, 3);
             this.btnCut.Name = "btnCut";
-            this.btnCut.Size = new System.Drawing.Size(26, 23);
+            this.btnCut.Size = new System.Drawing.Size(23, 22);
             this.btnCut.TabIndex = 1;
             this.btnCut.UseVisualStyleBackColor = true;
             // 
             // btnNew
             // 
-            this.btnNew.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
-            this.btnNew.Image = global::TimeHACK.Properties.Resources.WinClassicNew;
+            this.btnNew.BackgroundImage = global::TimeHACK.Properties.Resources.wordpad_new;
+            this.btnNew.FlatAppearance.BorderSize = 0;
+            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNew.Location = new System.Drawing.Point(6, 3);
             this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(26, 23);
+            this.btnNew.Size = new System.Drawing.Size(23, 22);
             this.btnNew.TabIndex = 1;
             this.btnNew.UseVisualStyleBackColor = true;
             // 
@@ -367,7 +449,7 @@
             this.pnlFormatBar.Controls.Add(this.btnItalic);
             this.pnlFormatBar.Controls.Add(this.btnBold);
             this.pnlFormatBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlFormatBar.Location = new System.Drawing.Point(0, 52);
+            this.pnlFormatBar.Location = new System.Drawing.Point(0, 51);
             this.pnlFormatBar.Name = "pnlFormatBar";
             this.pnlFormatBar.Size = new System.Drawing.Size(593, 28);
             this.pnlFormatBar.TabIndex = 3;
@@ -393,7 +475,7 @@
             "36",
             "48",
             "72"});
-            this.comboSize.Location = new System.Drawing.Point(157, 3);
+            this.comboSize.Location = new System.Drawing.Point(252, 3);
             this.comboSize.Name = "comboSize";
             this.comboSize.Size = new System.Drawing.Size(50, 21);
             this.comboSize.TabIndex = 1;
@@ -404,7 +486,7 @@
             this.comboFont.FormattingEnabled = true;
             this.comboFont.Location = new System.Drawing.Point(6, 3);
             this.comboFont.Name = "comboFont";
-            this.comboFont.Size = new System.Drawing.Size(145, 21);
+            this.comboFont.Size = new System.Drawing.Size(240, 21);
             this.comboFont.TabIndex = 1;
             this.comboFont.Text = "Arial";
             // 
@@ -422,13 +504,14 @@
             // btnUnderline
             // 
             this.btnUnderline.BackColor = System.Drawing.Color.DimGray;
-            this.btnUnderline.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
+            this.btnUnderline.BackgroundImage = global::TimeHACK.Properties.Resources.wordpad_underline;
+            this.btnUnderline.FlatAppearance.BorderSize = 0;
+            this.btnUnderline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUnderline.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUnderline.Location = new System.Drawing.Point(277, 2);
+            this.btnUnderline.Location = new System.Drawing.Point(358, 3);
             this.btnUnderline.Name = "btnUnderline";
-            this.btnUnderline.Size = new System.Drawing.Size(26, 23);
+            this.btnUnderline.Size = new System.Drawing.Size(23, 22);
             this.btnUnderline.TabIndex = 1;
-            this.btnUnderline.Text = "U";
             this.btnUnderline.UseVisualStyleBackColor = false;
             this.btnUnderline.Click += new System.EventHandler(this.btnUnderline_Click);
             this.btnUnderline.MouseEnter += new System.EventHandler(this.btnUnderline_MouseEnter);
@@ -437,13 +520,14 @@
             // btnItalic
             // 
             this.btnItalic.BackColor = System.Drawing.Color.DimGray;
-            this.btnItalic.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
+            this.btnItalic.BackgroundImage = global::TimeHACK.Properties.Resources.wordpad_italic;
+            this.btnItalic.FlatAppearance.BorderSize = 0;
+            this.btnItalic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnItalic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnItalic.Location = new System.Drawing.Point(245, 2);
+            this.btnItalic.Location = new System.Drawing.Point(335, 3);
             this.btnItalic.Name = "btnItalic";
-            this.btnItalic.Size = new System.Drawing.Size(26, 23);
+            this.btnItalic.Size = new System.Drawing.Size(23, 22);
             this.btnItalic.TabIndex = 1;
-            this.btnItalic.Text = "I";
             this.btnItalic.UseVisualStyleBackColor = false;
             this.btnItalic.Click += new System.EventHandler(this.btnItalic_Click);
             this.btnItalic.MouseEnter += new System.EventHandler(this.btnItalic_MouseEnter);
@@ -452,13 +536,14 @@
             // btnBold
             // 
             this.btnBold.BackColor = System.Drawing.Color.DimGray;
-            this.btnBold.BackgroundImage = global::TimeHACK.Properties.Resources.sliversilver;
+            this.btnBold.BackgroundImage = global::TimeHACK.Properties.Resources.wordpad_bold;
+            this.btnBold.FlatAppearance.BorderSize = 0;
+            this.btnBold.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBold.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBold.Location = new System.Drawing.Point(213, 2);
+            this.btnBold.Location = new System.Drawing.Point(312, 3);
             this.btnBold.Name = "btnBold";
-            this.btnBold.Size = new System.Drawing.Size(26, 23);
+            this.btnBold.Size = new System.Drawing.Size(23, 22);
             this.btnBold.TabIndex = 1;
-            this.btnBold.Text = "B";
             this.btnBold.UseVisualStyleBackColor = false;
             this.btnBold.Click += new System.EventHandler(this.btnBold_Click);
             this.btnBold.MouseEnter += new System.EventHandler(this.btnBold_MouseEnter);
@@ -484,13 +569,39 @@
             this.lblStatus.TabIndex = 0;
             this.lblStatus.Text = "For Help, go to Help -> Help topics";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::TimeHACK.Properties.Resources.ie4_hsplitter;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 19);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(593, 2);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 5;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::TimeHACK.Properties.Resources.ie4_hsplitter;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox4.Location = new System.Drawing.Point(0, 49);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(593, 2);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 6;
+            this.pictureBox4.TabStop = false;
+            // 
             // WinClassicWordPad
             // 
             this.BackColor = System.Drawing.Color.Silver;
-            this.Controls.Add(this.statusBar);
             this.Controls.Add(this.mainText);
+            this.Controls.Add(this.statusBar);
             this.Controls.Add(this.pnlFormatBar);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pnlToolbar);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.topmenu);
             this.Name = "WinClassicWordPad";
             this.Size = new System.Drawing.Size(593, 370);
@@ -502,8 +613,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.statusBar.ResumeLayout(false);
             this.statusBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -551,5 +663,12 @@
         private System.Windows.Forms.Button btnUnderline;
         private System.Windows.Forms.Button btnItalic;
         private System.Windows.Forms.Button btnBold;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Button btnOpen;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.Button btnPrintPreview;
+        private System.Windows.Forms.Button btnFind;
     }
 }
