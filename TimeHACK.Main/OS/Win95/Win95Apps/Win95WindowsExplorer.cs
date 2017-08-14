@@ -258,8 +258,8 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
                     break;
                 case "wordpad":
-                    WinClassic appWP = wm.StartWin95(new WinClassicWordPad(), "Wordpad", Properties.Resources.WinClassicWordpad, true, true);
-                    Program.AddTaskbarItem(appWP, appWP.Tag.ToString(), "Wordpad", Properties.Resources.WinClassicWordpad);
+                    WinClassic appWP = wm.StartWin95(new WinClassicWordPad(), "Wordpad", Properties.Resources.Win95WordpadIcon2, true, true);
+                    Program.AddTaskbarItem(appWP, appWP.Tag.ToString(), "Wordpad", Properties.Resources.Win95WordpadIcon2);
 
                     Program.nonimportantapps.Add(appWP);
                     Program.nonimportantapps[Program.nonimportantapps.Count - 1].BringToFront();

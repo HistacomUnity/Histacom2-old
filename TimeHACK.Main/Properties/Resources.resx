@@ -762,6 +762,9 @@
   <data name="WinClassicMinesweeperWin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minsweeper win.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Win95WordpadIcon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\Win95WordpadIcon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="wordpad_bold" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wordpad_bold.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

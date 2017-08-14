@@ -516,6 +516,7 @@
   <ItemGroup>
     <Content Include="Icon128x.ico" />
     <Content Include="Resources\12padams_EULA.txt" />
+    <None Include="Resources\WinClassic\WinClassicWordpadIcon.png" />
     <None Include="Resources\wordpad_find.png" />
     <None Include="Resources\wordpad_printpreview.png" />
     <None Include="Resources\wordpad_print.png" />
@@ -659,6 +660,7 @@
     <None Include="Resources\WinClassic\Win98Stop.WAV" />
     <None Include="Resources\WinClassic\WinClassicApp.png" />
     <None Include="Resources\WinClassic\WinClassicCalcBig.png" />
+    <None Include="Resources\WinClassic\Win95WordpadIcon2.png" />
     <Content Include="Resources\WinClassic\WinClassicClock.png" />
     <Content Include="Resources\WinClassic\WinClassicComputer.png" />
     <None Include="Resources\WinClassic\WinClassicCopy.png" />

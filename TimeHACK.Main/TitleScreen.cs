@@ -33,17 +33,17 @@ namespace TimeHACK
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
 
-        [DllImportAttribute("user32.dll")]
+        [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd,
                          int Msg, int wParam, int lParam);
-        [DllImportAttribute("user32.dll")]
+        [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
 
 
         public TitleScreen()
         {
             InitializeComponent();
-            this.startmenu.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            this.startmenu.Paint += (sender, args) => Paintbrush.PaintClassicBorders(sender, args, 2);
             if (!File.Exists(Path.Combine(DataDirectory, "o.k")))
             {
                 SeizureWarning sw = new SeizureWarning();
@@ -113,10 +113,7 @@ namespace TimeHACK
             }
 
             // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1)) e.Handled = true;
         }
 
         // When the TitleScreen Loads
@@ -207,13 +204,7 @@ namespace TimeHACK
                 try
                 {
                     // Time to close all the game applications
-                    foreach (Form frm in Application.OpenForms)
-                    {
-                        if (frm.Tag.ToString() != "ignoreFormOnTaskbar")
-                        {
-                            frm.Close();
-                        }
-                    }
+                    foreach (Form frm in Application.OpenForms) if (frm.Tag.ToString() != "ignoreFormOnTaskbar") frm.Close();
                 } catch {
 
                 }

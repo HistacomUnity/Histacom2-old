@@ -369,8 +369,8 @@ namespace TimeHACK.OS.Win95
         private void WordPadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WinClassicWordPad wp = new WinClassicWordPad();
-            WinClassic app = wm.StartWin95(wp, "Wordpad", Properties.Resources.Win95IconWordpad, true, true);
-            AddTaskBarItem(app, app.Tag.ToString(), "Wordpad", Properties.Resources.Win95IconWordpad);
+            WinClassic app = wm.StartWin95(wp, "Wordpad", Properties.Resources.Win95WordpadIcon2, true, true);
+            AddTaskBarItem(app, app.Tag.ToString(), "Wordpad", Properties.Resources.Win95WordpadIcon2);
 
             nonimportantapps.Add(app);
             nonimportantapps[nonimportantapps.Count - 1].BringToFront();
