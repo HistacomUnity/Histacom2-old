@@ -603,16 +603,9 @@
     <None Include="Resources\termNothing.png" />
     <None Include="Resources\termPaste.png" />
     <None Include="Resources\termSettings.png" />
-    <Content Include="Resources\TitleScreen\Exit.png" />
-    <Content Include="Resources\TitleScreen\LoadGame.png" />
-    <Content Include="Resources\TitleScreen\MSExit.png" />
-    <Content Include="Resources\TitleScreen\MSLoadGame.png" />
-    <Content Include="Resources\TitleScreen\MSNewGame.png" />
-    <Content Include="Resources\TitleScreen\NewGame.png" />
     <Content Include="Resources\TitleScreen\TaskBarButton.png" />
     <Content Include="Resources\TitleScreen\TaskBarClock.png" />
     <Content Include="Resources\TitleScreen\TimeHACK_Logo.png" />
-    <Content Include="Resources\TitleScreen\TitleScreenBG.png" />
     <None Include="Resources\WinClassic\WinClassicWordpad.png" />
     <None Include="Resources\WinClassic\WinClassicUndo.png" />
     <None Include="Resources\LeviWindows.ttf" />

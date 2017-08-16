@@ -177,16 +177,6 @@ namespace TimeHACK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Exit {
-            get {
-                object obj = ResourceManager.GetObject("Exit", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap google {
             get {
                 object obj = ResourceManager.GetObject("google", resourceCulture);
@@ -407,16 +397,6 @@ namespace TimeHACK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap LoadGame {
-            get {
-                object obj = ResourceManager.GetObject("LoadGame", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap MinesweepNumBox {
             get {
                 object obj = ResourceManager.GetObject("MinesweepNumBox", resourceCulture);
@@ -579,46 +559,6 @@ namespace TimeHACK.Properties {
         internal static System.Drawing.Bitmap MSDOSPromptToolStripMenuItem1_Image {
             get {
                 object obj = ResourceManager.GetObject("MSDOSPromptToolStripMenuItem1_Image", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap MSExit {
-            get {
-                object obj = ResourceManager.GetObject("MSExit", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap MSLoadGame {
-            get {
-                object obj = ResourceManager.GetObject("MSLoadGame", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap MSNewGame {
-            get {
-                object obj = ResourceManager.GetObject("MSNewGame", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap NewGame {
-            get {
-                object obj = ResourceManager.GetObject("NewGame", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -839,16 +779,6 @@ namespace TimeHACK.Properties {
         internal static System.Drawing.Bitmap TimeHACK_Logo {
             get {
                 object obj = ResourceManager.GetObject("TimeHACK_Logo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap TitleScreenBG {
-            get {
-                object obj = ResourceManager.GetObject("TitleScreenBG", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
