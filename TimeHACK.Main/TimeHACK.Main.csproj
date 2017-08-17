@@ -132,12 +132,6 @@
     <Compile Include="AchievementBox.Designer.cs">
       <DependentUpon>AchievementBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\BIOS\BIOS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OS\BIOS\BIOS.Designer.cs">
-      <DependentUpon>BIOS.cs</DependentUpon>
-    </Compile>
     <Compile Include="OS\Win2K\Win2KApps\SurviveTheDay.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -190,11 +184,11 @@
     <Compile Include="OS\Win95\Win95Apps\MineSweeper\Square.cs" />
     <Compile Include="OS\Win95\Win95Apps\Story\Hack1.cs" />
     <Compile Include="OS\Win95\Win95Apps\Story\Hack2.cs" />
-    <Compile Include="OS\Win95\Win95Apps\WinClassicIE4.cs">
+    <Compile Include="OS\Win95\Win95Apps\WinClassicIE3.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicIE4.Designer.cs">
-      <DependentUpon>WinClassicIE4.cs</DependentUpon>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicIE3.Designer.cs">
+      <DependentUpon>WinClassicIE3.cs</DependentUpon>
     </Compile>
     <Compile Include="OS\Win95\Win95Apps\Win95Installer.cs">
       <SubType>UserControl</SubType>
@@ -365,9 +359,6 @@
     <EmbeddedResource Include="AchievementBox.resx">
       <DependentUpon>AchievementBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\BIOS\BIOS.resx">
-      <DependentUpon>BIOS.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="OS\Win2K\Win2KApps\SurviveTheDay.resx">
       <DependentUpon>SurviveTheDay.cs</DependentUpon>
     </EmbeddedResource>
@@ -393,8 +384,8 @@
     <EmbeddedResource Include="OS\Win95\Win95Apps\MineSweeper\MineBestTimes.resx">
       <DependentUpon>MineBestTimes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicIE4.resx">
-      <DependentUpon>WinClassicIE4.cs</DependentUpon>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicIE3.resx">
+      <DependentUpon>WinClassicIE3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\Win95Installer.resx">
       <DependentUpon>Win95Installer.cs</DependentUpon>
@@ -516,7 +507,6 @@
   <ItemGroup>
     <Content Include="Icon128x.ico" />
     <Content Include="Resources\12padams_EULA.txt" />
-    <None Include="Resources\WinClassic\WinClassicWordpadIcon.png" />
     <None Include="Resources\wordpad_find.png" />
     <None Include="Resources\wordpad_printpreview.png" />
     <None Include="Resources\wordpad_print.png" />
@@ -538,6 +528,14 @@
     <None Include="Resources\distort1.wav" />
     <Content Include="Resources\Icon128x.ico" />
     <None Include="Resources\ICTheme_BG.jpg" />
+    <None Include="Resources\IE3\IE3_SwirlyThings.png" />
+    <None Include="Resources\IE3\IE3_Back.png" />
+    <None Include="Resources\IE3\IE3_Forward.png" />
+    <None Include="Resources\IE3\IE3_Stop.png" />
+    <None Include="Resources\IE3\IE3_Refresh.png" />
+    <None Include="Resources\IE3\IE3_BackHover.png" />
+    <None Include="Resources\IE3\IE3_ForwardHover.png" />
+    <None Include="Resources\IE3\IE3_StopHover.png" />
     <Content Include="Resources\IE4\google.jpg" />
     <Content Include="Resources\IE4\googlehome.html" />
     <Content Include="Resources\IE4\googleprototype.html" />
@@ -566,7 +564,6 @@
     <None Include="Resources\ie4_hsplitter.png" />
     <None Include="Resources\ie4_forward.png" />
     <None Include="Resources\ie4_back.png" />
-    <None Include="Resources\minsweeper logo.jpg" />
     <None Include="Resources\minsweeper flag.PNG" />
     <None Include="Resources\minsweeper sad.PNG" />
     <None Include="Resources\minsweeper smile.PNG" />
@@ -593,7 +590,6 @@
     <None Include="Resources\msdosprompt.png" />
     <None Include="Resources\SeizureWarning.png" />
     <None Include="Resources\MSDOSPromptToolStripMenuItem1.Image.png" />
-    <None Include="Resources\regedit_100.ico" />
     <Content Include="Resources\std_beep.wav" />
     <Content Include="Resources\std_gobeep.wav" />
     <None Include="Resources\termCopy.png" />
@@ -658,7 +654,6 @@
     <Content Include="Resources\WinClassic\WinClassicComputer.png" />
     <None Include="Resources\WinClassic\WinClassicCopy.png" />
     <None Include="Resources\WinClassic\WinClassicCut.png" />
-    <None Include="Resources\WinClassic\WinClassicDisplayDummy.png" />
     <None Include="Resources\WinClassic\WinClassicDisplayExample.png" />
     <Content Include="Resources\WinClassic\WinClassicDocuments.png" />
     <None Include="Resources\WinClassic\WinClassicEndings.png" />

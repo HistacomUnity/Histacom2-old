@@ -948,7 +948,7 @@ namespace TimeHACK.OS.Win95
             this.desktopImages.TransparentColor = System.Drawing.Color.Transparent;
             this.desktopImages.Images.SetKeyName(0, "WinClassicComputer.png");
             this.desktopImages.Images.SetKeyName(1, "WinClassicFolder.png");
-            this.desktopImages.Images.SetKeyName(2, "WinClassicIE4.png");
+            this.desktopImages.Images.SetKeyName(2, "WinClassicIE3.png");
             this.desktopImages.Images.SetKeyName(3, "WinClassicInbox.png");
             this.desktopImages.Images.SetKeyName(4, "WinClassicMSN.png");
             this.desktopImages.Images.SetKeyName(5, "WinClassicNetworking.png");

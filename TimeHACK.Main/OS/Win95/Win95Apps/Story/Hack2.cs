@@ -273,6 +273,7 @@ namespace TimeHACK.OS.Win95.Win95Apps.Story
             SaveSystem.UpgradeFileSystem("95", "98");
             SaveSystem.CurrentSave.CurrentOS = "98";
             SaveSystem.currentTheme = new Default98Theme();
+            SaveSystem.CurrentSave.ThemeName = "default98";
             TitleScreen.frm95.distort.ParentForm.Close();
             Program.title.StartGame();
             TitleScreen.frm95.Close();

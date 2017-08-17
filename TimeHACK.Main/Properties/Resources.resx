@@ -780,4 +780,28 @@
   <data name="wordpad_underline" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wordpad_underline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="IE3_Back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE3\IE3_Back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IE3_Forward" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE3\IE3_Forward.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IE3_Stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE3\IE3_Stop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IE3_SwirlyThings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE3\IE3_SwirlyThings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IE3_BackHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE3\IE3_BackHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IE3_ForwardHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE3\IE3_ForwardHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IE3_Refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE3\IE3_Refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IE3_StopHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE3\IE3_StopHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

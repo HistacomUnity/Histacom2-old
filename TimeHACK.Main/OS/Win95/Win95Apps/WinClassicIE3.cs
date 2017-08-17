@@ -11,16 +11,23 @@ using TimeHACK.OS.Win95.Win95Apps.IE4Sites;
 
 namespace TimeHACK.OS.Win95.Win95Apps
 {
-    public partial class WinClassicIE4 : UserControl
+    public partial class WinClassicIE3 : UserControl
     {
         public static Panel browsingArea = new Panel();
         public static ComboBox addressbar = new ComboBox();
 
-        public WinClassicIE4()
+        public WinClassicIE3()
         {
             InitializeComponent();
             browsingArea = _browsingArea;
             addressbar = _addressbar;
+
+            BackButton.MouseEnter += (s, e) => BackButton.BackgroundImage = Properties.Resources.IE3_BackHover;
+            BackButton.MouseLeave += (s, e) => BackButton.BackgroundImage = Properties.Resources.IE3_Back;
+            ForwardButton.MouseEnter += (s, e) => ForwardButton.BackgroundImage = Properties.Resources.IE3_ForwardHover;
+            ForwardButton.MouseLeave += (s, e) => ForwardButton.BackgroundImage = Properties.Resources.IE3_Forward;
+            StopButton.MouseEnter += (s, e) => StopButton.BackgroundImage = Properties.Resources.IE3_StopHover;
+            StopButton.MouseLeave += (s, e) => StopButton.BackgroundImage = Properties.Resources.IE3_Stop;
         }
 
         public static async void GoToPage(string url)
