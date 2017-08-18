@@ -257,6 +257,16 @@ namespace TimeHACK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap IE3_RefreshHover {
+            get {
+                object obj = ResourceManager.GetObject("IE3_RefreshHover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap IE3_Stop {
             get {
                 object obj = ResourceManager.GetObject("IE3_Stop", resourceCulture);

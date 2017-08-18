@@ -42,7 +42,7 @@
             this.Button7 = new System.Windows.Forms.Button();
             this.Button6 = new System.Windows.Forms.Button();
             this.HomeButton = new System.Windows.Forms.Button();
-            this.Button4 = new System.Windows.Forms.Button();
+            this.RefreshButton = new System.Windows.Forms.Button();
             this.StopButton = new System.Windows.Forms.Button();
             this.ForwardButton = new System.Windows.Forms.Button();
             this.BackButton = new System.Windows.Forms.Button();
@@ -362,21 +362,21 @@
             this.HomeButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.HomeButton.UseVisualStyleBackColor = false;
             // 
-            // Button4
+            // RefreshButton
             // 
-            this.Button4.BackColor = System.Drawing.Color.Transparent;
-            this.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Button4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Button4.FlatAppearance.BorderSize = 0;
-            this.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button4.Image = global::TimeHACK.Properties.Resources.IE3_Refresh;
-            this.Button4.Location = new System.Drawing.Point(160, 0);
-            this.Button4.Name = "Button4";
-            this.Button4.Size = new System.Drawing.Size(50, 42);
-            this.Button4.TabIndex = 3;
-            this.Button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Button4.UseVisualStyleBackColor = false;
+            this.RefreshButton.BackColor = System.Drawing.Color.Transparent;
+            this.RefreshButton.BackgroundImage = global::TimeHACK.Properties.Resources.IE3_Refresh;
+            this.RefreshButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.RefreshButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.RefreshButton.FlatAppearance.BorderSize = 0;
+            this.RefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RefreshButton.Location = new System.Drawing.Point(160, 0);
+            this.RefreshButton.Name = "RefreshButton";
+            this.RefreshButton.Size = new System.Drawing.Size(50, 42);
+            this.RefreshButton.TabIndex = 3;
+            this.RefreshButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.RefreshButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.RefreshButton.UseVisualStyleBackColor = false;
             // 
             // StopButton
             // 
@@ -445,7 +445,7 @@
             this.Panel1.Controls.Add(this.Button7);
             this.Panel1.Controls.Add(this.Button6);
             this.Panel1.Controls.Add(this.HomeButton);
-            this.Panel1.Controls.Add(this.Button4);
+            this.Panel1.Controls.Add(this.RefreshButton);
             this.Panel1.Controls.Add(this.StopButton);
             this.Panel1.Controls.Add(this.ForwardButton);
             this.Panel1.Controls.Add(this.BackButton);
@@ -505,6 +505,7 @@
             // 
             // ToolStripMenuItem1
             // 
+            this.ToolStripMenuItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.ToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripMenuItem2,
             this.ToolStripMenuItem8,
@@ -1342,7 +1343,7 @@
         internal System.Windows.Forms.Button Button7;
         internal System.Windows.Forms.Button Button6;
         internal System.Windows.Forms.Button HomeButton;
-        internal System.Windows.Forms.Button Button4;
+        internal System.Windows.Forms.Button RefreshButton;
         internal System.Windows.Forms.Button StopButton;
         internal System.Windows.Forms.Button ForwardButton;
         internal System.Windows.Forms.Button BackButton;

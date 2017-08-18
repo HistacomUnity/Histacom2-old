@@ -536,6 +536,7 @@
     <None Include="Resources\IE3\IE3_BackHover.png" />
     <None Include="Resources\IE3\IE3_ForwardHover.png" />
     <None Include="Resources\IE3\IE3_StopHover.png" />
+    <None Include="Resources\IE3\IE3_RefreshHover.png" />
     <Content Include="Resources\IE4\google.jpg" />
     <Content Include="Resources\IE4\googlehome.html" />
     <Content Include="Resources\IE4\googleprototype.html" />

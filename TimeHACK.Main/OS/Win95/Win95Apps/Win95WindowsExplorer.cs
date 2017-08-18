@@ -146,9 +146,9 @@ namespace TimeHACK.OS.Win95.Win95Apps
                                 itm = this.mainView.Items.Add(Path.GetFileName(str));
                                 itm.Tag = str;
                             }
-                            else break;
+                            else continue;
                         }
-                        else break;
+                        else continue;
                     }
                     else {
                         if (!(Path.GetFileName(str) == "_data.info"))
@@ -156,7 +156,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                             itm = this.mainView.Items.Add(Path.GetFileName(str));
                             itm.Tag = str;
                         }
-                        else break;
+                        else continue;
                     }
                     FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(CurrentDirectory, "_data.info")));
                     foreach (var item in fsfi.Files)
@@ -220,7 +220,6 @@ namespace TimeHACK.OS.Win95.Win95Apps
                         WinClassic app = wm.StartWin95(np, "Notepad", Properties.Resources.Win95IconNotepad, true, true);
 
                         Program.AddTaskbarItem(app, app.Tag.ToString(), "Notepad", Properties.Resources.Win95IconNotepad);
-
                         break;
                     case 12:
                         OpenApplication(FileDialogBoxManager.ReadTextFile(fileDir), fileDir);
@@ -228,7 +227,6 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 }
             } catch {
             }
-            
         }
 
         void OpenApplication(string appname, string path)
@@ -419,69 +417,9 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     fileType = 11;
                     returnVal = "Compressed ZIP file \n winrar";
                     break;
-                case ".rar":
-                    fileType = 11;
-                    returnVal = "WINRAR Compressed file \n winrar";
-                    break;
-                case ".gz":
-                    fileType = 11;
-                    returnVal = "WINRAR file \n winrar";
-                    break;
-                case ".7z":
-                    fileType = 11;
-                    returnVal = "7ZIP file \n 7z";
-                    break;
-                case ".ace":
-                    fileType = 11;
-                    returnVal = "WINRAR file \n winrar";
-                    break;
-                case ".arj":
-                    fileType = 11;
-                    returnVal = "WINRAR file \n winrar";
-                    break;
-                case ".bz2":
-                    fileType = 11;
-                    returnVal = "WINRAR file \n winrar";
-                    break;
-                case ".gzip":
-                    fileType = 11;
-                    returnVal = "WINRAR file \n winrar";
-                    break;
-                case ".lzh":
-                    fileType = 11;
-                    returnVal = "WINRAR file \n winrar";
-                    break;
-                case ".tar":
-                    fileType = 11;
-                    returnVal = "WINRAR file \n winrar";
-                    break;
-                case ".uue":
-                    fileType = 11;
-                    returnVal = "WINRAR file \n winrar";
-                    break;
-                case ".xz":
-                    fileType = 11;
-                    returnVal = "WINRAR file \n winrar";
-                    break;
-                case ".z":
-                    fileType = 11;
-                    returnVal = "WINRAR file \n winrar";
-                    break;
-                case ".001":
-                    fileType = 11;
-                    returnVal = "WINRAR file \n winrar";
-                    break;
                 case ".exe":
                     fileType = 12;
                     returnVal = "Program \n exe";
-                    break;
-                case ".jar":
-                    fileType = 13;
-                    returnVal = "Java file \n java";
-                    break;
-                case ".iso":
-                    fileType = 14;
-                    returnVal = "CD Image file \n iso";
                     break;
                 case ".avi":
                     fileType = 15;
@@ -577,7 +515,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     break;
                 case ".bat":
                     fileType = 18;
-                    returnVal = "MS-DOS Batch file \n winterm";
+                    returnVal = "MS-DOS Batch File \n winterm";
                     break;
                 case ".url":
                     fileType = 19;

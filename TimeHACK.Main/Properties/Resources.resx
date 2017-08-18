@@ -801,6 +801,9 @@
   <data name="IE3_Refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IE3\IE3_Refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="IE3_RefreshHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE3\IE3_RefreshHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="IE3_StopHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IE3\IE3_StopHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

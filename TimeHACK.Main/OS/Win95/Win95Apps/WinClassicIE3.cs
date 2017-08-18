@@ -28,6 +28,8 @@ namespace TimeHACK.OS.Win95.Win95Apps
             ForwardButton.MouseLeave += (s, e) => ForwardButton.BackgroundImage = Properties.Resources.IE3_Forward;
             StopButton.MouseEnter += (s, e) => StopButton.BackgroundImage = Properties.Resources.IE3_StopHover;
             StopButton.MouseLeave += (s, e) => StopButton.BackgroundImage = Properties.Resources.IE3_Stop;
+            RefreshButton.MouseEnter += (s, e) => RefreshButton.BackgroundImage = Properties.Resources.IE3_RefreshHover;
+            RefreshButton.MouseLeave += (s, e) => RefreshButton.BackgroundImage = Properties.Resources.IE3_Refresh;
         }
 
         public static async void GoToPage(string url)
