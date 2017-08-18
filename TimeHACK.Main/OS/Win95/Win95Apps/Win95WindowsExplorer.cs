@@ -124,7 +124,8 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void RefreshAll()
         {
-            //try {
+            //try
+            //{
                 this.mainView.Items.Clear();
 
                 foreach (string str in Directory.GetDirectories(CurrentDirectory))
@@ -631,9 +632,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                             OpenFile(mainView.FocusedItem.Tag.ToString());
                         }
                 }
-            } catch (Exception ex) {
-                MessageBox.Show(ex.Message);
-            }
+            } catch { /* TODO: Illegal operation */ }
         }
 
         void diskView_AfterSelect(object sender, EventArgs e)
@@ -738,10 +737,50 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 }
                 else
                 {
-                    if (Directory.Exists(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text))) Directory.Delete(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text), true);
-                        else File.Delete(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text));
+                    if (Directory.Exists(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text)))
+                    {
+                        Directory.Delete(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text), true);
+
+                        // Remove the directory now from the _data.info
+
+                        FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(CurrentDirectory, "_data.info")));
+
+                        foreach (THDirInfo dir in fsfi.SubDirs)
+                        {
+                            if (dir.Name == mainView.FocusedItem.Text)
+                            {
+                                // Delete it
+
+                                fsfi.SubDirs.Remove(dir);
+                            }
+                        }
+
+                        File.WriteAllText(Path.Combine(CurrentDirectory, "_data.info"), JsonConvert.SerializeObject(fsfi));
+                    }
+                    else
+                    {
+                        File.Delete(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text));
+
+                        // Remove the file now from the _data.info
+
+                        FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(CurrentDirectory, "_data.info")));
+
+                        foreach (THFileInfo file in fsfi.Files)
+                        {
+                            if (file.Name == mainView.FocusedItem.Text)
+                            {
+                                // Delete it
+
+                                fsfi.Files.Remove(file);
+                            }
+                        }
+
+                        File.WriteAllText(Path.Combine(CurrentDirectory, "_data.info"), JsonConvert.SerializeObject(fsfi));
+                      
+                    }
 
                     RefreshAll();
+                    RefreshTreeNode();
                 }
             } catch
             {
@@ -782,37 +821,80 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
         private void mainView_AfterLabelEdit(object sender, LabelEditEventArgs e)
         {
-            string setText = e.Label;
-            if (setText == "") wm.StartInfobox95("Rename", "You must type a filename.", InfoboxType.Error, InfoboxButtons.OK);
-            else
+            try
             {
-                if (Directory.Exists(setText)) wm.StartInfobox95("Error Renaming File", $"Cannot rename {new DirectoryInfo(setText).Name}: A file with the name you specified already exists. Specify a different filename.", InfoboxType.Error, InfoboxButtons.OK);
+                string setText = e.Label;
+                if (setText == "") wm.StartInfobox95("Rename", "You must type a filename.", InfoboxType.Error, InfoboxButtons.OK);
                 else
                 {
-                    if (File.Exists(setText)) wm.StartInfobox95("Error Renaming File", $"Cannot rename {new FileInfo(setText).Name}: A file with the name you specified already exists. Specify a different filename.", InfoboxType.Error, InfoboxButtons.OK);
+                    if (Directory.Exists(setText)) wm.StartInfobox95("Error Renaming File", $"Cannot rename {new DirectoryInfo(setText).Name}: A file with the name you specified already exists. Specify a different filename.", InfoboxType.Error, InfoboxButtons.OK);
                     else
                     {
-                        if (Directory.Exists((string)mainView.FocusedItem.Tag))
-                        {
-                            // It was a directory
-
-                            Directory.Move((string)mainView.FocusedItem.Tag, Path.Combine(CurrentDirectory, setText));
-
-                            File.Delete(Path.Combine(CurrentDirectory, setText, "_data.info"));
-                            SaveDirectoryInfo(CurrentDirectory, setText, false, setText, true);
-                        }
+                        if (File.Exists(setText)) wm.StartInfobox95("Error Renaming File", $"Cannot rename {new FileInfo(setText).Name}: A file with the name you specified already exists. Specify a different filename.", InfoboxType.Error, InfoboxButtons.OK);
                         else
                         {
-                            // It was a file
+                            if (Directory.Exists(Path.Combine(CurrentDirectory, OldLabelText)))
+                            {
+                                // It was a directory
 
-                            File.Copy((string)mainView.FocusedItem.Tag, Path.Combine(CurrentDirectory, setText));
-                            File.Delete((string)mainView.FocusedItem.Tag);
+                                Directory.Move(Path.Combine(CurrentDirectory, OldLabelText), Path.Combine(CurrentDirectory, setText));
+
+                                File.Delete(Path.Combine(CurrentDirectory, setText, "_data.info"));
+                                SaveDirectoryInfo(CurrentDirectory, setText, false, setText, true);
+
+                                // Rename the directory now in the _data.info
+
+                                FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(CurrentDirectory, "_data.info")));
+
+                                foreach (THDirInfo dir in fsfi.SubDirs)
+                                {
+                                    if (dir.Name == mainView.FocusedItem.Tag.ToString())
+                                    {
+                                        // Rename it
+                                        THDirInfo oldDirInfo = dir;
+                                        oldDirInfo.Name = Path.Combine(CurrentDirectory, setText);
+
+                                        fsfi.SubDirs.Remove(dir);
+                                        fsfi.SubDirs.Add(oldDirInfo);
+                                    }
+                                }
+
+                                File.Delete(Path.Combine(CurrentDirectory, "_data.info"));
+                                File.WriteAllText(Path.Combine(CurrentDirectory, "_data.info"), JsonConvert.SerializeObject(fsfi));
+                            }
+                            else
+                            {
+                                // It was a file                                
+
+                                File.Copy(Path.Combine(CurrentDirectory, OldLabelText), Path.Combine(CurrentDirectory, setText));
+                                File.Delete(Path.Combine(CurrentDirectory, OldLabelText));
+
+                                // Rename the file now in the _data.info
+
+                                FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(CurrentDirectory, "_data.info")));
+
+                                foreach (THFileInfo file in fsfi.Files)
+                                {
+                                    if (file.Name == mainView.FocusedItem.Tag.ToString())
+                                    {
+                                        // Rename it
+                                        THFileInfo oldFileInfo = file;
+                                        oldFileInfo.Name = Path.Combine(CurrentDirectory, setText);
+
+                                        fsfi.Files.Remove(file);
+                                        fsfi.Files.Add(oldFileInfo);                                       
+                                    }
+                                }
+
+                                File.Delete(Path.Combine(CurrentDirectory, "_data.info"));
+                                File.WriteAllText(Path.Combine(CurrentDirectory, "_data.info"), JsonConvert.SerializeObject(fsfi));
+                            }
                         }
                     }
                 }
-            }
-            RefreshAll();
-            RefreshTreeNode();
+                RefreshAll();
+                RefreshTreeNode();
+            } catch { }
         }
 
         private TreeNode[] createSubDirNodes(DirectoryInfo folder)
