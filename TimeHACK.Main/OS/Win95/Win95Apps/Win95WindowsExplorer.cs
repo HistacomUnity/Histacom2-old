@@ -138,18 +138,18 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 {
                     ListViewItem itm;
 
-                    if (IsFileOpenDialog == true || IsFileSaveDialog == true)
+                    if (IsFileOpenDialog || IsFileSaveDialog)
                     {
                         if (!(Path.GetFileName(str) == "_data.info"))
-                        {
+                        { 
                             if (new FileInfo(str).Extension == onlyViewExtension)
                             {
                                 itm = this.mainView.Items.Add(Path.GetFileName(str));
                                 itm.Tag = str;
                             }
-                            else break;
+                            else continue;
                         }
-                        else break;
+                        else continue;
                     }
                     else {
                         if (!(Path.GetFileName(str) == "_data.info"))
@@ -157,7 +157,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                             itm = this.mainView.Items.Add(Path.GetFileName(str));
                             itm.Tag = str;
                         }
-                        else break;
+                        else continue;
                     }
                     FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(CurrentDirectory, "_data.info")));
                     foreach (var item in fsfi.Files)
@@ -604,7 +604,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             try
             {
-                if (new DirectoryInfo((string)mainView.FocusedItem.Tag).Extension == null || new DirectoryInfo((string)mainView.FocusedItem.Tag).Extension == "")
+                if (Directory.Exists(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text)))
                 { // If it isn't a file
                     if (mainView.FocusedItem.Text == "C:")
                         GoToDir(Path.Combine(CurrentDirectory, "CDrive"));
@@ -613,7 +613,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 }
                 else
                 { // If it is a file
-                        if (IsFileOpenDialog == true || IsFileSaveDialog == true)
+                        if (IsFileOpenDialog || IsFileSaveDialog)
                         {
                             if (new FileInfo(Path.Combine(CurrentDirectory, txtSave.Text)).Extension == onlyViewExtension)
                             {

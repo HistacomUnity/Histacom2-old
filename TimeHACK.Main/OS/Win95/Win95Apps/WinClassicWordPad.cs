@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Text;
 using TimeHACK.Engine;
+using static TimeHACK.Engine.FileDialogBoxManager;
+using System.IO;
 
 namespace TimeHACK.OS.Win95.Win95Apps
 {
@@ -19,6 +21,8 @@ namespace TimeHACK.OS.Win95.Win95Apps
         bool doBold = false;
         bool doItalic = false;
         bool doUnderline = false;
+
+        string CurrentFilePath = "";
 
         public WinClassicWordPad()
         {
@@ -168,6 +172,66 @@ namespace TimeHACK.OS.Win95.Win95Apps
             if (doItalic) Italic = FontStyle.Italic;
             if (doUnderline) Underline = FontStyle.Underline;
             mainText.SelectionFont = new Font(mainText.SelectionFont.FontFamily, mainText.SelectionFont.Size, Bold | Italic | Underline);
+        }
+
+        private void openToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ActivateOpenFileDialog(".rtf");
+                string selectedPath = Program.OpenFileExplorerAsDialogAndReturnGivenPath();
+
+                if (selectedPath != null)
+                {
+                    try
+                    {
+                        mainText.LoadFile(selectedPath);
+                    } catch
+                    {
+                        (new WindowManager()).StartInfobox95("Wordpad", "An error occured opening the file.", Engine.Template.InfoboxType.Error, Engine.Template.InfoboxButtons.OK);
+                    }
+                    
+                }
+            }
+            catch
+            {
+            }
+        }
+
+        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveAs();
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (CurrentFilePath == "")
+            {
+                // We aren't in a file right now
+
+                SaveAs();
+            }
+            else
+            {
+                File.Delete(CurrentFilePath);
+                SaveRtfDocument(mainText, CurrentFilePath);
+            }
+        }
+
+        void SaveAs()
+        {
+            try
+            {
+                ActivateSaveFileDialog(".rtf");
+                string selectedPath = Program.OpenFileExplorerAsDialogAndReturnGivenPath();
+
+                if (selectedPath != "")
+                {                    
+                    SaveRtfDocument(mainText, selectedPath);
+                    CurrentFilePath = selectedPath;
+                }
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
     }
 }

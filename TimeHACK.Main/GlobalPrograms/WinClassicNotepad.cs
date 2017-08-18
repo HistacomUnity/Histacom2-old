@@ -85,10 +85,9 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             try
             {
-                ActivateSaveFileDialog(".txt");
+                ActivateOpenFileDialog(".txt");
                 string selectedPath = Program.OpenFileExplorerAsDialogAndReturnGivenPath();
 
-                MessageBox.Show(selectedPath);
                 if (selectedPath != "")
                 {
                     mainText.Text = ReadTextFile(selectedPath);
@@ -113,7 +112,6 @@ namespace TimeHACK.OS.Win95.Win95Apps
             }
         }
 
-        // TO LEMPAMO: THIS FUCTION IS A FUNCTION ON IT'S OWN BECUASE TWO THINGS CALL IT - OK?
         void SaveAs()
         {
             try
@@ -125,7 +123,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
                 {
                     SaveSystem.CreateWindowsFile(new FileInfo(selectedPath).Directory.FullName, selectedPath.Split('\\').Last(), mainText.Text, 12, mainText.Text.Length);
                     CurrentFilePath = selectedPath;
-                }              
+                } 
             }
             catch { }
         }

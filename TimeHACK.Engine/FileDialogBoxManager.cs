@@ -38,27 +38,18 @@ namespace TimeHACK.Engine
             }         
         }
 
-        //public static void SaveTextFile(string path, string contents, int fileIcon)
-        //{
-        //    try
-        //    {
-        //        File.WriteAllText(path, contents);
-        //        FileSystemFolderInfo theDir = Newtonsoft.Json.JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(Path.GetPathRoot(path), "_data.info")));
+        public static void SaveRtfDocument(RichTextBox tbox, string path)
+        {
+            int fileBytes = 0;
+            tbox.SaveFile(path);
+            fileBytes = File.ReadAllText(path).Length;
 
-
-
-        //        using (FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read))
-        //        {
-        //            theDir.Files.Add(new THFileInfo()
-        //            {
-        //                Name = Path.GetFileName(path),
-        //                ByteSize = (int)fs.Length,
-        //                FileIcon = fileIcon
-        //            });
-        //        }
-
-                
-        //    } catch { }
-        //}
+            THFileInfo info = new THFileInfo();
+            info.Name = Path.GetFileName(path);
+            info.FileIcon = 17;
+            info.ByteSize = fileBytes;
+            SaveSystem.CurrentSave.BytesLeft -= fileBytes;
+            SaveSystem.UpdateDirectoryInfo(new FileInfo(path).Directory.FullName, info);
+        }
     }
 }

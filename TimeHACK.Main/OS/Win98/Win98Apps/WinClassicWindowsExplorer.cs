@@ -161,7 +161,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
             {
                 ListViewItem itm;
 
-                if (IsFileOpenDialog == true || IsFileSaveDialog == true)
+                if (IsFileOpenDialog || IsFileSaveDialog)
                 {
                     if (!(Path.GetFileName(str) == "_data.info"))
                     {
@@ -637,7 +637,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             try
             {
-                if (new DirectoryInfo((string)mainView.FocusedItem.Tag).Extension == null || new DirectoryInfo((string)mainView.FocusedItem.Tag).Extension == "")
+                if (Directory.Exists(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text)))
                 { // If it isn't a file
                     if (mainView.FocusedItem.Text == "C:")
                         GoToDir(Path.Combine(CurrentDirectory, "CDrive"));
