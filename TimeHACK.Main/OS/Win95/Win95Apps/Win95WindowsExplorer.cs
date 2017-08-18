@@ -69,7 +69,9 @@ namespace TimeHACK.OS.Win95.Win95Apps
                                                     Properties.Resources.WinClassicCalcBig,
                                                     Properties.Resources.WinClassicNotepadBig,
                                                     Properties.Resources.WinClassicRegedit, // 15
-                                                    Properties.Resources.WinClassicWordpad });
+                                                    Properties.Resources.WinClassicWordpad,
+                                                    Properties.Resources.WinClassicTextFile,
+                                                    Properties.Resources.WinClassicRtfFile});
 
             program.BringToFront();
 
@@ -605,7 +607,10 @@ namespace TimeHACK.OS.Win95.Win95Apps
             {
                 if (new DirectoryInfo((string)mainView.FocusedItem.Tag).Extension == null || new DirectoryInfo((string)mainView.FocusedItem.Tag).Extension == "")
                 { // If it isn't a file
-                    GoToDir(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text));
+                    if (mainView.FocusedItem.Text == "C:")
+                        GoToDir(Path.Combine(CurrentDirectory, "CDrive"));
+                    else
+                        GoToDir(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text));
                 }
                 else
                 { // If it is a file
@@ -976,6 +981,11 @@ namespace TimeHACK.OS.Win95.Win95Apps
         }
 
         private void mainView_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void TextDocumentToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

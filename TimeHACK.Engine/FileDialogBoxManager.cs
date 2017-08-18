@@ -13,6 +13,7 @@ namespace TimeHACK.Engine
         public static bool IsInOpenDialog = false;
         public static bool IsInSaveDialog = false;
         public static string OnlyViewExtension = "";
+
         public static void ActivateOpenFileDialog(string ExtensionToView)
         {
             IsInOpenDialog = true;
@@ -35,6 +36,29 @@ namespace TimeHACK.Engine
             } catch {
                 return "";
             }         
+        }
+
+        public static void SaveTextFile(string path, string contents, int fileIcon)
+        {
+            try
+            {
+                File.WriteAllText(path, contents);
+                FileSystemFolderInfo theDir = Newtonsoft.Json.JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(Path.GetPathRoot(path), "_data.info")));
+
+
+
+                using (FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read))
+                {
+                    theDir.Files.Add(new THFileInfo()
+                    {
+                        Name = Path.GetFileName(path),
+                        ByteSize = (int)fs.Length,
+                        FileIcon = fileIcon
+                    });
+                }
+
+                
+            } catch { }
         }
     }
 }

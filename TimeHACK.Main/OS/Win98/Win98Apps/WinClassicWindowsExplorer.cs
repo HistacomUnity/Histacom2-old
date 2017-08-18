@@ -12,6 +12,7 @@ using System.IO;
 using TimeHACK.Engine;
 using Newtonsoft.Json;
 using TimeHACK.Engine.Template;
+using System.Diagnostics;
 
 namespace TimeHACK.OS.Win95.Win95Apps
 {
@@ -123,81 +124,54 @@ namespace TimeHACK.OS.Win95.Win95Apps
         }
 
         void RefreshAll() {
-            try {
+            //try {
+            this.mainView.Items.Clear();
 
-                this.mainView.Items.Clear();
+            foreach (string str in Directory.GetDirectories(CurrentDirectory))
+            {
+                string label = ReadDataFile(str, false);
+                ListViewItem itm = this.mainView.Items.Add(label ?? Path.GetFileName(str));
+                itm.ImageIndex = 1;
+                itm.Tag = str;
+            }
+            foreach (string str in Directory.GetFiles(CurrentDirectory))
+            {
+                ListViewItem itm;
 
-                // Update the WebView
-
-                if (CurrentDirectory == SaveSystem.ProfileMyComputerDirectory)
+                if (IsFileOpenDialog == true || IsFileSaveDialog == true)
                 {
-                    pictureBox1.Image = Properties.Resources.Win95HardDiskIcon;
-                } else if (CurrentDirectory == SaveSystem.ProfileFileSystemDirectory) {
-                    pictureBox1.Image = Properties.Resources.Win95Computer;
-                } else {
-                    pictureBox1.Image = Properties.Resources.WinClassicFolder;
-                }
-
-                txtInfoTip.Show();
-                InfoDesc.Hide();
-
-                string weblabel = ReadDataFile(CurrentDirectory, false);
-
-                txtInfoTitle.Text = weblabel ?? new FileInfo(CurrentDirectory).Name;
-                foreach (string str in Directory.GetDirectories(CurrentDirectory))
-                {
-                    string label = ReadDataFile(str, false);
-                    ListViewItem itm = this.mainView.Items.Add(label ?? Path.GetFileName(str));
-                    itm.ImageKey = str;
-                }
-                foreach (string str in Directory.GetFiles(CurrentDirectory))
-                {
-                    // Get the app Icon
-
-                    //int AppIcon = 2;
-
-                    //switch (new FileInfo(str).Extension)
-                    //{
-                    //    case ".exe":
-                    //        string contents;
-
-                    //        contents = File.ReadAllText(str);
-
-                    //        switch (contents.ToLower())
-                    //        {
-                    //            case "calc":
-                    //                AppIcon = 3;
-                    //                break;
-                    //            case "explorer":
-                    //                AppIcon = 4;
-                    //                break;
-                    //        }
-                    //        break;
-                    //}
-
-
-
-                    if (IsFileOpenDialog == true || IsFileSaveDialog == true)
+                    if (!(Path.GetFileName(str) == "_data.info"))
                     {
-                        if (!(Path.GetFileName(str) == "_data.info"))
+                        if (new FileInfo(str).Extension == onlyViewExtension)
                         {
-                            if (new FileInfo(str).Extension == onlyViewExtension)
-                            {
-                                ListViewItem itm = this.mainView.Items.Add(Path.GetFileName(str));
-                                itm.Tag = str;
-                            }
-                        }
-                    } else {
-                        if (!(Path.GetFileName(str) == "_data.info")) {
-                            ListViewItem itm = this.mainView.Items.Add(Path.GetFileName(str));
+                            itm = this.mainView.Items.Add(Path.GetFileName(str));
                             itm.Tag = str;
                         }
+                        else break;
                     }
+                    else break;
                 }
-            } catch (Exception ex) {
-                //wm.StartInfobox95("Exploring - C:", "Error with the file explorer \n" + ex.Message, Properties.Resources.Win95Info); add illegal operation dialog here later
-                ((Form)this.TopLevelControl).Close();
+                else
+                {
+                    if (!(Path.GetFileName(str) == "_data.info"))
+                    {
+                        itm = this.mainView.Items.Add(Path.GetFileName(str));
+                        itm.Tag = str;
+                    }
+                    else break;
+                }
+                FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(CurrentDirectory, "_data.info")));
+                foreach (var item in fsfi.Files)
+                {
+                    Debug.Print(item.Name + " " + Path.GetFileName(str));
+                    if (item.Name == Path.GetFileName(str)) { itm.ImageIndex = item.FileIcon; break; }
+                }
             }
+            /*
+        } catch (Exception ex) {
+            //wm.StartInfobox95("Exploring - C:", "Error with the file explorer \n" + ex.Message, Properties.Resources.Win95Info); add illegal operation dialog here later
+            ((Form)this.TopLevelControl).Close();
+        }*/
         }
 
         void RefreshTreeNode()
@@ -602,31 +576,36 @@ namespace TimeHACK.OS.Win95.Win95Apps
         {
             try
             {
-                if (mainView.FocusedItem.Tag == null)
+                if (new DirectoryInfo((string)mainView.FocusedItem.Tag).Extension == null || new DirectoryInfo((string)mainView.FocusedItem.Tag).Extension == "")
                 { // If it isn't a file
-                    GoToDir(Path.Combine(CurrentDirectory, mainView.FocusedItem.ImageKey.ToString()));
+                    if (mainView.FocusedItem.Text == "C:")
+                        GoToDir(Path.Combine(CurrentDirectory, "CDrive"));
+                    else
+                        GoToDir(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text));
                 }
                 else
                 { // If it is a file
-                        if (IsFileOpenDialog == true || IsFileSaveDialog == true)
+                    if (IsFileOpenDialog == true || IsFileSaveDialog == true)
+                    {
+                        if (new FileInfo(Path.Combine(CurrentDirectory, txtSave.Text)).Extension == onlyViewExtension)
                         {
-                            if (new FileInfo(Path.Combine(CurrentDirectory, txtSave.Text)).Extension == onlyViewExtension)
-                            {
-                                Program.WindowsExplorerReturnPath = Path.Combine(CurrentDirectory, txtSave.Text);
-                            }
-
-
-                            FileDialogBoxManager.IsInOpenDialog = false;
-                            FileDialogBoxManager.IsInSaveDialog = false;
-
-                            ((Form)this.TopLevelControl).Close();
+                            Program.WindowsExplorerReturnPath = Path.Combine(CurrentDirectory, txtSave.Text);
                         }
-                        else
-                        {
-                            OpenFile(mainView.FocusedItem.Tag.ToString());
-                        }
+
+
+                        FileDialogBoxManager.IsInOpenDialog = false;
+                        FileDialogBoxManager.IsInSaveDialog = false;
+
+                        ((Form)this.TopLevelControl).Close();
+                    }
+                    else
+                    {
+                        OpenFile(mainView.FocusedItem.Tag.ToString());
+                    }
                 }
-            } catch (Exception ex) {
+            }
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message);
             }
         }
