@@ -65,12 +65,11 @@ namespace TimeHACK.OS.Win95.Win95Apps
                                                     Properties.Resources.WinClassicFolder,
                                                     Properties.Resources.WinClassicApp, // 10
                                                     Properties.Resources.WinClassicSetup,
-                                                    Properties.Resources.WinClassicNotepad,
+                                                    Properties.Resources.WinClassicTextFile,
                                                     Properties.Resources.WinClassicCalcBig,
                                                     Properties.Resources.WinClassicNotepadBig,
                                                     Properties.Resources.WinClassicRegedit, // 15
                                                     Properties.Resources.WinClassicWordpad,
-                                                    Properties.Resources.WinClassicTextFile,
                                                     Properties.Resources.WinClassicRtfFile});
 
             program.BringToFront();
