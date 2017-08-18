@@ -55,7 +55,31 @@ namespace TimeHACK.OS.Win95.Win95Apps
             diskView.ImageList.Images.Add(Properties.Resources.Win95NetworkIcon);
             diskView.ImageList.Images.Add(Properties.Resources.Win95RecycleIcon);
 
+            mainView.LargeImageList = new ImageList();
+            mainView.LargeImageList.ImageSize = new Size(32, 32);
+
+            mainView.LargeImageList.Images.AddRange(new Bitmap[] { Properties.Resources.Win95Computer, // 0
+                                                    Properties.Resources.WinClassicFolder,
+                                                    Properties.Resources.WinClassicIE4,
+                                                    Properties.Resources.WinClassicInbox,
+                                                    Properties.Resources.WinClassicMSN,
+                                                    Properties.Resources.WinClassicNetworking, // 5
+                                                    Properties.Resources.WinClassicOutlook,
+                                                    Properties.Resources.WinClassicRecycle,
+                                                    Properties.Resources.Win95File,
+                                                    Properties.Resources.WinClassicFolder,
+                                                    Properties.Resources.WinClassicApp, // 10
+                                                    Properties.Resources.WinClassicSetup,
+                                                    Properties.Resources.WinClassicNotepad,
+                                                    Properties.Resources.WinClassicCalcBig,
+                                                    Properties.Resources.WinClassicNotepadBig,
+                                                    Properties.Resources.WinClassicRegedit, // 15
+                                                    Properties.Resources.WinClassicWordpad,
+                                                    Properties.Resources.WinClassicTextFile,
+                                                    Properties.Resources.WinClassicRtfFile});
+
             program.BringToFront();
+
 
             //diskView.Items.Add("My Computer", 0);
             Application.DoEvents();
@@ -226,7 +250,7 @@ namespace TimeHACK.OS.Win95.Win95Apps
 
                         break;
                     case 12:
-                        OpenApplication(FileDialogBoxManager.ReadTextFile(fileDir));
+                        OpenApplication(FileDialogBoxManager.ReadTextFile(fileDir), fileDir);
                         break;
                 }
             } catch {
@@ -234,16 +258,16 @@ namespace TimeHACK.OS.Win95.Win95Apps
             
         }
 
-        void OpenApplication(string appname)
+        void OpenApplication(string appname, string path)
         {
             switch (appname.ToLower())
-            {               
+            {
                 case "explorer":
-                    Engine.Template.WinClassic app = wm.StartWin95(new Win95WindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
+                    WinClassic app = wm.StartWin95(new Win95WindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
                     Program.AddTaskbarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
                     break;
                 case "calc":
-                    Engine.Template.WinClassic appCalc = wm.StartWin95(new WinClassicCalculator(), "Calculator", Properties.Resources.WinClassicCalc, true, true);
+                    WinClassic appCalc = wm.StartWin95(new WinClassicCalculator(), "Calculator", Properties.Resources.WinClassicCalc, true, true);
                     Program.AddTaskbarItem(appCalc, appCalc.Tag.ToString(), "Calculator", Properties.Resources.WinClassicCalc);
 
                     Program.nonimportantapps.Add(appCalc);
@@ -251,30 +275,68 @@ namespace TimeHACK.OS.Win95.Win95Apps
                     Program.nonimportantapps[Program.nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(Program.NonImportantApp_Closing);
 
                     break;
+                case "notepad":
+                    WinClassic appNP = wm.StartWin95(new WinClassicNotepad(), "Notepad", Properties.Resources.Win95IconNotepad_2, true, true);
+                    Program.AddTaskbarItem(appNP, appNP.Tag.ToString(), "Notepad", Properties.Resources.Win95IconNotepad_2);
+
+                    Program.nonimportantapps.Add(appNP);
+                    Program.nonimportantapps[Program.nonimportantapps.Count - 1].BringToFront();
+                    Program.nonimportantapps[Program.nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(Program.NonImportantApp_Closing);
+
+                    break;
                 case "wordpad":
-                    Engine.Template.WinClassic appWP = wm.StartWin95(new WinClassicWordPad(), "Wordpad", Properties.Resources.WinClassicWordpad, true, true);
-                    Program.AddTaskbarItem(appWP, appWP.Tag.ToString(), "Wordpad", Properties.Resources.WinClassicWordpad);
+                    WinClassic appWP = wm.StartWin95(new WinClassicWordPad(), "Wordpad", Properties.Resources.Win95WordpadIcon2, true, true);
+                    Program.AddTaskbarItem(appWP, appWP.Tag.ToString(), "Wordpad", Properties.Resources.Win95WordpadIcon2);
 
                     Program.nonimportantapps.Add(appWP);
                     Program.nonimportantapps[Program.nonimportantapps.Count - 1].BringToFront();
                     Program.nonimportantapps[Program.nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(Program.NonImportantApp_Closing);
 
                     break;
+                case "ie":
+                    if (TitleScreen.frm95.ie != null) { wm.StartInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", InfoboxType.Warning, InfoboxButtons.OK); return; }
+                    TitleScreen.frm95.ie = wm.StartWin95(new WinClassicIE3(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
+                    Program.AddTaskbarItem(TitleScreen.frm95.ie, TitleScreen.frm95.ie.Tag.ToString(), "Internet Explorer 4", Properties.Resources.Win95IconIE4);
+                    TitleScreen.frm95.ie.BringToFront();
+                    TitleScreen.frm95.ie.FormClosing += new FormClosingEventHandler(TitleScreen.frm95.InternetExplorer4_Closing);
+
+                    break;
+                case "web chat setup":
+                    Win95Installer inst = new Win95Installer("Web Chat 1998");
+                    inst.InstallCompleted += (sendr, args) => TitleScreen.frm95.WebChatToolStripMenuItem.Visible = true;
+                    WinClassic appInstaller = wm.StartWin95(inst, "Web Chat Setup", null, true, true);
+                    Program.AddTaskbarItem(appInstaller, appInstaller.Tag.ToString(), "Web Chat Setup", null);
+                    appInstaller.BringToFront();
+
+                    break;
+                case "ftp client setup":
+                    Win95Installer instFtp = new Win95Installer("FTP Client");
+                    instFtp.InstallCompleted += (sendr, args) => TitleScreen.frm95.FTPClientToolStripMenuItem.Visible = true;
+                    WinClassic appFtp = wm.StartWin95(instFtp, "FTP Client Setup", null, true, true);
+                    Program.AddTaskbarItem(appFtp, appFtp.Tag.ToString(), "FTP Client Setup", null);
+                    appFtp.BringToFront();
+
+                    break;
+                case "time distorter setup":
+                    Win95Installer instTd = new Win95Installer("Time Distorter 0.1");
+                    instTd.InstallCompleted += (sendr, args) =>
+                    {
+                        TitleScreen.frm95.TimeDistorterToolStripMenuItem.Visible = true;
+                    };
+                    WinClassic appTd = wm.StartWin95(instTd, "Time Distorter Setup", null, true, true);
+                    Program.AddTaskbarItem(appTd, appTd.Tag.ToString(), "Time Distorter Setup", null);
+                    appTd.BringToFront();
+
+                    break;
                 case "iebrokeninstaller":
                     wm.StartInfobox95("Internet Explorer Installer", "Installation Failed: The INF file was not found", InfoboxType.Error, InfoboxButtons.OK);
 
                     break;
-                case "addressbook":
-                    WinClassic appAdBk = wm.StartWin95(new WinClassicAddressBook(), "Address Book", Properties.Resources.WinClassicAddressBook, true, true);
-                    Program.AddTaskbarItem(appAdBk, appAdBk.Tag.ToString(), "Address Book", Properties.Resources.WinClassicAddressBook);
-
-                    Program.nonimportantapps.Add(appAdBk);
-                    Program.nonimportantapps[Program.nonimportantapps.Count - 1].BringToFront();
-                    Program.nonimportantapps[Program.nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(Program.NonImportantApp_Closing);
-
+                default:
+                    wm.StartInfobox95(path.Replace(ProfileMyComputerDirectory, "C:"), $"{path.Replace(ProfileMyComputerDirectory, "C:")} is not a valid Win32 application.", InfoboxType.Error, InfoboxButtons.OK);
                     break;
             }
-            }
+        }
 
         string ReturnType(string extension) {
             string returnVal = "";

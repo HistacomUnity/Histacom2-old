@@ -60,7 +60,6 @@
             this.FileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CreateShortcutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ShortcutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TextDocumentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BitmapImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DeleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -117,7 +116,6 @@
             this.mainView.Size = new System.Drawing.Size(308, 458);
             this.mainView.TabIndex = 10;
             this.mainView.UseCompatibleStateImageBehavior = false;
-            this.mainView.View = System.Windows.Forms.View.List;
             this.mainView.AfterLabelEdit += new System.Windows.Forms.LabelEditEventHandler(this.mainView_AfterLabelEdit);
             this.mainView.SelectedIndexChanged += new System.EventHandler(this.mainView_SelectedIndexChanged);
             this.mainView.DoubleClick += new System.EventHandler(this.mainView_DoubleClick);
@@ -396,7 +394,6 @@
             // 
             this.CreateShortcutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FolderToolStripMenuItem,
-            this.ShortcutToolStripMenuItem,
             this.TextDocumentToolStripMenuItem,
             this.BitmapImageToolStripMenuItem});
             this.CreateShortcutToolStripMenuItem.Name = "CreateShortcutToolStripMenuItem";
@@ -409,12 +406,6 @@
             this.FolderToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.FolderToolStripMenuItem.Text = "Folder";
             this.FolderToolStripMenuItem.Click += new System.EventHandler(this.FolderToolStripMenuItem_Click);
-            // 
-            // ShortcutToolStripMenuItem
-            // 
-            this.ShortcutToolStripMenuItem.Name = "ShortcutToolStripMenuItem";
-            this.ShortcutToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.ShortcutToolStripMenuItem.Text = "Shortcut";
             // 
             // TextDocumentToolStripMenuItem
             // 
@@ -577,7 +568,6 @@
         internal System.Windows.Forms.ToolStripMenuItem FileToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem CreateShortcutToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem FolderToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem ShortcutToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem TextDocumentToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem BitmapImageToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem DeleteToolStripMenuItem;
