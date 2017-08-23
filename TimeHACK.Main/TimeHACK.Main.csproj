@@ -138,6 +138,12 @@
     <Compile Include="OS\Win2K\Win2KApps\SurviveTheDay.Designer.cs">
       <DependentUpon>SurviveTheDay.cs</DependentUpon>
     </Compile>
+    <Compile Include="OS\Win95\Win95Apps\GuessTheNumber.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\GuessTheNumber.Designer.cs">
+      <DependentUpon>GuessTheNumber.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\Win95\Win95Apps\IE4Sites\12padams1998.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -362,6 +368,9 @@
     <EmbeddedResource Include="OS\Win2K\Win2KApps\SurviveTheDay.resx">
       <DependentUpon>SurviveTheDay.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\GuessTheNumber.resx">
+      <DependentUpon>GuessTheNumber.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\IE4Sites\12padams1998.resx">
       <DependentUpon>12padams1998.cs</DependentUpon>
     </EmbeddedResource>
@@ -432,9 +441,6 @@
     <EmbeddedResource Include="SaveDialogs\NewGameDialog.resx">
       <DependentUpon>NewGameDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="UI\IProgressBar.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <EmbeddedResource Include="OS\Win95\Win95.resx">
       <DependentUpon>Win95.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -526,6 +532,12 @@
     <None Include="Resources\EndingPiracy.png" />
     <None Include="Resources\AchievementMines.png" />
     <None Include="Resources\distort1.wav" />
+    <None Include="Resources\GuessTheNumber\GTN95_Check.png" />
+    <None Include="Resources\GuessTheNumber\GTN95_CheckClicked.png" />
+    <None Include="Resources\GuessTheNumber\GTN95_Higher.png" />
+    <None Include="Resources\GuessTheNumber\GTN95_Restart.png" />
+    <None Include="Resources\GuessTheNumber\GTN95_RestartClicked.png" />
+    <None Include="Resources\ButtonPattern.png" />
     <Content Include="Resources\Icon128x.ico" />
     <None Include="Resources\ICTheme_BG.jpg" />
     <None Include="Resources\IE3\IE3_SwirlyThings.png" />

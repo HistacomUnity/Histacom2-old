@@ -78,6 +78,15 @@
       <DependentUpon>WinClassic.cs</DependentUpon>
     </Compile>
     <Compile Include="Theme.cs" />
+    <Compile Include="UI\ClassicButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ClassicButton.Designer.cs">
+      <DependentUpon>ClassicButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\IProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="WindowManager.cs" />
     <Compile Include="MessageParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -103,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Template\WinClassic.resx">
       <DependentUpon>WinClassic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ClassicButton.resx">
+      <DependentUpon>ClassicButton.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

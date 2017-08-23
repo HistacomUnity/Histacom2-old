@@ -138,6 +138,16 @@ namespace TimeHACK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ButtonPattern {
+            get {
+                object obj = ResourceManager.GetObject("ButtonPattern", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DCTheme_BG {
             get {
                 object obj = ResourceManager.GetObject("DCTheme_BG", resourceCulture);
@@ -180,6 +190,56 @@ namespace TimeHACK.Properties {
         internal static System.Drawing.Bitmap google {
             get {
                 object obj = ResourceManager.GetObject("google", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GTN95_Check {
+            get {
+                object obj = ResourceManager.GetObject("GTN95_Check", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GTN95_CheckClicked {
+            get {
+                object obj = ResourceManager.GetObject("GTN95_CheckClicked", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GTN95_Higher {
+            get {
+                object obj = ResourceManager.GetObject("GTN95_Higher", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GTN95_Restart {
+            get {
+                object obj = ResourceManager.GetObject("GTN95_Restart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GTN95_RestartClicked {
+            get {
+                object obj = ResourceManager.GetObject("GTN95_RestartClicked", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
