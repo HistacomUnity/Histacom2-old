@@ -91,7 +91,7 @@
     <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Icon128x.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\HistacomIcon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
@@ -537,6 +537,7 @@
     <None Include="Resources\GuessTheNumber\GTN95_Restart.png" />
     <None Include="Resources\GuessTheNumber\GTN95_RestartClicked.png" />
     <None Include="Resources\ButtonPattern.png" />
+    <None Include="Resources\HistacomIcon.ico" />
     <Content Include="Resources\Icon128x.ico" />
     <None Include="Resources\ICTheme_BG.jpg" />
     <None Include="Resources\IE3\IE3_SwirlyThings.png" />
@@ -611,6 +612,7 @@
     <None Include="Resources\termNothing.png" />
     <None Include="Resources\termPaste.png" />
     <None Include="Resources\termSettings.png" />
+    <None Include="Resources\TitleScreen\CopyrightNotice.png" />
     <Content Include="Resources\TitleScreen\Histacom2_Logo.png" />
     <Content Include="Resources\TitleScreen\TaskBarButton.png" />
     <Content Include="Resources\TitleScreen\TaskBarClock.png" />

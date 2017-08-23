@@ -148,6 +148,16 @@ namespace Histacom2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap CopyrightNotice {
+            get {
+                object obj = ResourceManager.GetObject("CopyrightNotice", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap DCTheme_BG {
             get {
                 object obj = ResourceManager.GetObject("DCTheme_BG", resourceCulture);
@@ -251,6 +261,16 @@ namespace Histacom2.Properties {
             get {
                 object obj = ResourceManager.GetObject("Histacom2_Logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        public static System.Drawing.Icon HistacomIcon {
+            get {
+                object obj = ResourceManager.GetObject("HistacomIcon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         

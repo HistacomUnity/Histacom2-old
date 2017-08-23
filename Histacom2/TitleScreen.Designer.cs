@@ -56,6 +56,7 @@
             this.bottomleftcorner = new System.Windows.Forms.Panel();
             this.topleftcorner = new System.Windows.Forms.Panel();
             this.updateText = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.program.SuspendLayout();
             this.programContent.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -68,6 +69,7 @@
             this.ossidestartmenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.osimage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // vmModeTimer
@@ -91,6 +93,7 @@
             // programContent
             // 
             this.programContent.BackColor = System.Drawing.Color.Teal;
+            this.programContent.Controls.Add(this.pictureBox3);
             this.programContent.Controls.Add(this.panel2);
             this.programContent.Controls.Add(this.startmenu);
             this.programContent.Controls.Add(this.pictureBox2);
@@ -212,7 +215,7 @@
             this.startmenu.Controls.Add(this.ossidestartmenu);
             this.startmenu.Location = new System.Drawing.Point(0, 52);
             this.startmenu.Name = "startmenu";
-            this.startmenu.Size = new System.Drawing.Size(165, 223);
+            this.startmenu.Size = new System.Drawing.Size(156, 223);
             this.startmenu.TabIndex = 11;
             // 
             // startmenuitems
@@ -230,9 +233,9 @@
             this.startmenuitems.Location = new System.Drawing.Point(23, 2);
             this.startmenuitems.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.startmenuitems.Name = "startmenuitems";
-            this.startmenuitems.Padding = new System.Windows.Forms.Padding(4, 2, 0, 0);
+            this.startmenuitems.Padding = new System.Windows.Forms.Padding(1, 2, 0, 0);
             this.startmenuitems.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.startmenuitems.Size = new System.Drawing.Size(143, 220);
+            this.startmenuitems.Size = new System.Drawing.Size(140, 220);
             this.startmenuitems.TabIndex = 0;
             this.startmenuitems.Text = "StartMenu";
             // 
@@ -380,6 +383,15 @@
             this.updateText.Enabled = true;
             this.updateText.Tick += new System.EventHandler(this.updateText_Tick);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::Histacom2.Properties.Resources.CopyrightNotice;
+            this.pictureBox3.Location = new System.Drawing.Point(162, 220);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(225, 50);
+            this.pictureBox3.TabIndex = 13;
+            this.pictureBox3.TabStop = false;
+            // 
             // TitleScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -407,6 +419,7 @@
             this.ossidestartmenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.osimage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -438,5 +451,6 @@
         private System.Windows.Forms.Timer updateText;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ToolStripMenuItem achievementsToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
