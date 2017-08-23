@@ -1,0 +1,720 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B958AA5F-8AED-456C-9C07-9E4C6C027042}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Histacom2</RootNamespace>
+    <AssemblyName>Histacom2</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Logan\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <SupportUrl>http://www.ashifter.ml/histacom/forum</SupportUrl>
+    <TargetCulture>en</TargetCulture>
+    <ProductName>HistacomCS</ProductName>
+    <PublisherName>HistacomCS Development Team</PublisherName>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>2.0.0.3</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Histacom2.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>1194F9D110CE37E287D2AAE10D81371AB88D31B2</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon128x.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AchievementScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AchievementScreen.Designer.cs">
+      <DependentUpon>AchievementScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AchievementBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AchievementBox.Designer.cs">
+      <DependentUpon>AchievementBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win2K\Win2KApps\SurviveTheDay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win2K\Win2KApps\SurviveTheDay.Designer.cs">
+      <DependentUpon>SurviveTheDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\GuessTheNumber.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\GuessTheNumber.Designer.cs">
+      <DependentUpon>GuessTheNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\IE4Sites\12padams1998.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\IE4Sites\12padams1998.Designer.cs">
+      <DependentUpon>12padams1998.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\IE4Sites\GoogleHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\IE4Sites\GoogleHome.Designer.cs">
+      <DependentUpon>GoogleHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\IE4Sites\GooglePrototype.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\IE4Sites\GooglePrototype.Designer.cs">
+      <DependentUpon>GooglePrototype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\IE4Sites\IE4NoPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\IE4Sites\IE4NoPage.Designer.cs">
+      <DependentUpon>IE4NoPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\IE4Sites\IE4Start.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\IE4Sites\IE4Start.Designer.cs">
+      <DependentUpon>IE4Start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\MineSweeper\CustomMinefield.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\MineSweeper\CustomMinefield.Designer.cs">
+      <DependentUpon>CustomMinefield.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\MineSweeper\Game.cs" />
+    <Compile Include="OS\Win95\Win95Apps\MineSweeper\MineBestTimes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\MineSweeper\MineBestTimes.Designer.cs">
+      <DependentUpon>MineBestTimes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\MineSweeper\Square.cs" />
+    <Compile Include="OS\Win95\Win95Apps\Story\Hack1.cs" />
+    <Compile Include="OS\Win95\Win95Apps\Story\Hack2.cs" />
+    <Compile Include="OS\Win95\Win95Apps\WinClassicIE3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicIE3.Designer.cs">
+      <DependentUpon>WinClassicIE3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\Win95Installer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\Win95Installer.Designer.cs">
+      <DependentUpon>Win95Installer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalPrograms\WinClassicCalculator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GlobalPrograms\WinClassicCalculator.Designer.cs">
+      <DependentUpon>WinClassicCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicFTPClient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicFTPClient.Designer.cs">
+      <DependentUpon>WinClassicFTPClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\MineSweeper\WinClassicMinesweeper.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\MineSweeper\WinClassicMinesweeper.Designer.cs">
+      <DependentUpon>WinClassicMinesweeper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicTerminal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicTerminal.Designer.cs">
+      <DependentUpon>WinClassicTerminal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicThemePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicThemePanel.Designer.cs">
+      <DependentUpon>WinClassicThemePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicWelcome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicWelcome.Designer.cs">
+      <DependentUpon>WinClassicWelcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\Win95WindowsExplorer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\Win95WindowsExplorer.Designer.cs">
+      <DependentUpon>Win95WindowsExplorer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicTimeDistorter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicTimeDistorter.Designer.cs">
+      <DependentUpon>WinClassicTimeDistorter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win98\Win98.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OS\Win98\Win98.Designer.cs">
+      <DependentUpon>Win98.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win98\Win98Apps\WinClassicWindowsExplorer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win98\Win98Apps\WinClassicWindowsExplorer.Designer.cs">
+      <DependentUpon>WinClassicWindowsExplorer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SaveDialogs\LoadGameDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaveDialogs\LoadGameDialog.Designer.cs">
+      <DependentUpon>LoadGameDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SaveDialogs\LoadGameProfileItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SaveDialogs\LoadGameProfileItem.Designer.cs">
+      <DependentUpon>LoadGameProfileItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SaveDialogs\NewGameDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaveDialogs\NewGameDialog.Designer.cs">
+      <DependentUpon>NewGameDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95.Designer.cs">
+      <DependentUpon>Win95.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win98\Win98Apps\AddressBook\FRMWinClassicAddressBookNewContact.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win98\Win98Apps\AddressBook\FRMWinClassicAddressBookNewContact.Designer.cs">
+      <DependentUpon>FRMWinClassicAddressBookNewContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WebChat1998.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WebChat1998.Designer.cs">
+      <DependentUpon>WebChat1998.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win98\Win98Apps\AddressBook\FRMWinClassicAddressBookNewFolder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win98\Win98Apps\AddressBook\FRMWinClassicAddressBookNewFolder.Designer.cs">
+      <DependentUpon>FRMWinClassicAddressBookNewFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win98\Win98Apps\AddressBook\WinClassicAddressBook.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win98\Win98Apps\AddressBook\WinClassicAddressBook.Designer.cs">
+      <DependentUpon>WinClassicAddressBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalPrograms\WinClassicDownloader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GlobalPrograms\WinClassicDownloader.Designer.cs">
+      <DependentUpon>WinClassicDownloader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalPrograms\WinClassicNotepad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GlobalPrograms\WinClassicNotepad.Designer.cs">
+      <DependentUpon>WinClassicNotepad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicWordPad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicWordPad.Designer.cs">
+      <DependentUpon>WinClassicWordPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95TaskBarItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95TaskBarItem.Designer.cs">
+      <DependentUpon>Win95TaskBarItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaveDialogs\SaveFileTroubleShooter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaveDialogs\SaveFileTroubleShooter.Designer.cs">
+      <DependentUpon>SaveFileTroubleShooter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeizureWarning.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SeizureWarning.Designer.cs">
+      <DependentUpon>SeizureWarning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TitleScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TitleScreen.Designer.cs">
+      <DependentUpon>TitleScreen.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AchievementScreen.resx">
+      <DependentUpon>AchievementScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AchievementBox.resx">
+      <DependentUpon>AchievementBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win2K\Win2KApps\SurviveTheDay.resx">
+      <DependentUpon>SurviveTheDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\GuessTheNumber.resx">
+      <DependentUpon>GuessTheNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\IE4Sites\12padams1998.resx">
+      <DependentUpon>12padams1998.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\IE4Sites\GoogleHome.resx">
+      <DependentUpon>GoogleHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\IE4Sites\GooglePrototype.resx">
+      <DependentUpon>GooglePrototype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\IE4Sites\IE4NoPage.resx">
+      <DependentUpon>IE4NoPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\IE4Sites\IE4Start.resx">
+      <DependentUpon>IE4Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\MineSweeper\CustomMinefield.resx">
+      <DependentUpon>CustomMinefield.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\MineSweeper\MineBestTimes.resx">
+      <DependentUpon>MineBestTimes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicIE3.resx">
+      <DependentUpon>WinClassicIE3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\Win95Installer.resx">
+      <DependentUpon>Win95Installer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GlobalPrograms\WinClassicCalculator.resx">
+      <DependentUpon>WinClassicCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicFTPClient.resx">
+      <DependentUpon>WinClassicFTPClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\MineSweeper\WinClassicMinesweeper.resx">
+      <DependentUpon>WinClassicMinesweeper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicTerminal.resx">
+      <DependentUpon>WinClassicTerminal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicThemePanel.resx">
+      <DependentUpon>WinClassicThemePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicTimeDistorter.resx">
+      <DependentUpon>WinClassicTimeDistorter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicWelcome.resx">
+      <DependentUpon>WinClassicWelcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\Win95WindowsExplorer.resx">
+      <DependentUpon>Win95WindowsExplorer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win98\Win98.resx">
+      <DependentUpon>Win98.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win98\Win98Apps\WinClassicWindowsExplorer.resx">
+      <DependentUpon>WinClassicWindowsExplorer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaveDialogs\LoadGameDialog.resx">
+      <DependentUpon>LoadGameDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaveDialogs\LoadGameProfileItem.resx">
+      <DependentUpon>LoadGameProfileItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaveDialogs\NewGameDialog.resx">
+      <DependentUpon>NewGameDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95.resx">
+      <DependentUpon>Win95.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win98\Win98Apps\AddressBook\FRMWinClassicAddressBookNewContact.resx">
+      <DependentUpon>FRMWinClassicAddressBookNewContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\WebChat1998.resx">
+      <DependentUpon>WebChat1998.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win98\Win98Apps\AddressBook\FRMWinClassicAddressBookNewFolder.resx">
+      <DependentUpon>FRMWinClassicAddressBookNewFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win98\Win98Apps\AddressBook\WinClassicAddressBook.resx">
+      <DependentUpon>WinClassicAddressBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GlobalPrograms\WinClassicDownloader.resx">
+      <DependentUpon>WinClassicDownloader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GlobalPrograms\WinClassicNotepad.resx">
+      <DependentUpon>WinClassicNotepad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicWordPad.resx">
+      <DependentUpon>WinClassicWordPad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95TaskBarItem.resx">
+      <DependentUpon>Win95TaskBarItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaveDialogs\SaveFileTroubleShooter.resx">
+      <DependentUpon>SaveFileTroubleShooter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeizureWarning.resx">
+      <DependentUpon>SeizureWarning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TitleScreen.resx">
+      <DependentUpon>TitleScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\Lemon%27s LCD.ttf" />
+    <None Include="Resources\windows_command_prompt.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon128x.ico" />
+    <Content Include="Resources\12padams_EULA.txt" />
+    <None Include="Resources\wordpad_find.png" />
+    <None Include="Resources\wordpad_printpreview.png" />
+    <None Include="Resources\wordpad_print.png" />
+    <None Include="Resources\wordpad_save.png" />
+    <None Include="Resources\wordpad_open.png" />
+    <None Include="Resources\wordpad_paste.png" />
+    <None Include="Resources\wordpad_copy.png" />
+    <None Include="Resources\wordpad_cut.png" />
+    <None Include="Resources\wordpad_new.png" />
+    <None Include="Resources\wordpad_underline.png" />
+    <None Include="Resources\wordpad_italic.png" />
+    <None Include="Resources\wordpad_bold.png" />
+    <None Include="Resources\XCross.png" />
+    <None Include="Resources\XCross_highlighted.png" />
+    <None Include="Resources\DCTheme_BG.JPG" />
+    <None Include="Resources\EndingDestruction.png" />
+    <None Include="Resources\EndingPiracy.png" />
+    <None Include="Resources\AchievementMines.png" />
+    <None Include="Resources\distort1.wav" />
+    <None Include="Resources\GuessTheNumber\GTN95_Check.png" />
+    <None Include="Resources\GuessTheNumber\GTN95_CheckClicked.png" />
+    <None Include="Resources\GuessTheNumber\GTN95_Higher.png" />
+    <None Include="Resources\GuessTheNumber\GTN95_Restart.png" />
+    <None Include="Resources\GuessTheNumber\GTN95_RestartClicked.png" />
+    <None Include="Resources\ButtonPattern.png" />
+    <Content Include="Resources\Icon128x.ico" />
+    <None Include="Resources\ICTheme_BG.jpg" />
+    <None Include="Resources\IE3\IE3_SwirlyThings.png" />
+    <None Include="Resources\IE3\IE3_Back.png" />
+    <None Include="Resources\IE3\IE3_Forward.png" />
+    <None Include="Resources\IE3\IE3_Stop.png" />
+    <None Include="Resources\IE3\IE3_Refresh.png" />
+    <None Include="Resources\IE3\IE3_BackHover.png" />
+    <None Include="Resources\IE3\IE3_ForwardHover.png" />
+    <None Include="Resources\IE3\IE3_StopHover.png" />
+    <None Include="Resources\IE3\IE3_RefreshHover.png" />
+    <Content Include="Resources\IE4\google.jpg" />
+    <Content Include="Resources\IE4\googlehome.html" />
+    <Content Include="Resources\IE4\googleprototype.html" />
+    <None Include="Resources\IE4\ie4about.png" />
+    <Content Include="Resources\IE4\ie4start.html" />
+    <None Include="Resources\IE4\nopage.bmp" />
+    <Content Include="Resources\IE4\padams.html" />
+    <None Include="Resources\wmsui32_1001.ico_16x16.png" />
+    <None Include="Resources\shell32_21.ico_16x16.png" />
+    <None Include="Resources\LauncherSideBar.png" />
+    <None Include="Resources\IE4\start.png" />
+    <None Include="Resources\IE4\start_googlink.png" />
+    <None Include="Resources\IE4\start_padamslink.png" />
+    <None Include="Resources\ie4_history.png" />
+    <None Include="Resources\ie4_home.png" />
+    <None Include="Resources\ie4_hsplitter1.png" />
+    <None Include="Resources\ie4_hsplitter2.png" />
+    <None Include="Resources\ie4_mail.png" />
+    <None Include="Resources\ie4_print.png" />
+    <None Include="Resources\ie4_refresh.png" />
+    <None Include="Resources\ie4_search.png" />
+    <None Include="Resources\ie4_stop.png" />
+    <None Include="Resources\ie4_vsplitter.png" />
+    <None Include="Resources\ie4_favorites.png" />
+    <None Include="Resources\ie4_go.png" />
+    <None Include="Resources\ie4_hsplitter.png" />
+    <None Include="Resources\ie4_forward.png" />
+    <None Include="Resources\ie4_back.png" />
+    <None Include="Resources\minsweeper flag.PNG" />
+    <None Include="Resources\minsweeper sad.PNG" />
+    <None Include="Resources\minsweeper smile.PNG" />
+    <None Include="Resources\minesweepeprlogo.PNG" />
+    <None Include="Resources\MinesweepNumBox.png" />
+    <None Include="Resources\minesweepSquare.png" />
+    <None Include="Resources\minesweepSquare0.png" />
+    <None Include="Resources\minesweepSquare1.png" />
+    <None Include="Resources\minesweepSquare2.png" />
+    <None Include="Resources\minesweepSquare3.png" />
+    <None Include="Resources\minesweepSquare4.png" />
+    <None Include="Resources\minesweepSquareExploded.png" />
+    <None Include="Resources\minesweepSquareMine.png" />
+    <None Include="Resources\minesweepSquareWrong.png" />
+    <None Include="Resources\minesweepSquare5.png" />
+    <None Include="Resources\minsweeper win.png" />
+    <None Include="Resources\minsweeper gasp.png" />
+    <None Include="Resources\minesweepSquare6.png" />
+    <None Include="Resources\minesweepSquare7.png" />
+    <None Include="Resources\minesweepSquare8.png" />
+    <None Include="Resources\minesweepSquareQuestion.png" />
+    <Content Include="Resources\modem_dial.wav" />
+    <None Include="Resources\MS-DOS-logo-1.png" />
+    <None Include="Resources\msdosprompt.png" />
+    <None Include="Resources\SeizureWarning.png" />
+    <None Include="Resources\MSDOSPromptToolStripMenuItem1.Image.png" />
+    <Content Include="Resources\std_beep.wav" />
+    <Content Include="Resources\std_gobeep.wav" />
+    <None Include="Resources\termCopy.png" />
+    <None Include="Resources\termFont.png" />
+    <None Include="Resources\termMark.png" />
+    <None Include="Resources\termMax.png" />
+    <None Include="Resources\termNothing.png" />
+    <None Include="Resources\termPaste.png" />
+    <None Include="Resources\termSettings.png" />
+    <Content Include="Resources\TitleScreen\Histacom2_Logo.png" />
+    <Content Include="Resources\TitleScreen\TaskBarButton.png" />
+    <Content Include="Resources\TitleScreen\TaskBarClock.png" />
+    <Content Include="Resources\TitleScreen\TimeHACK_Logo.png" />
+    <None Include="Resources\WinClassic\WinClassicWordpad.png" />
+    <None Include="Resources\WinClassic\WinClassicUndo.png" />
+    <None Include="Resources\LeviWindows.ttf" />
+    <None Include="Resources\WinClassicAbout95.png" />
+    <None Include="Resources\Win98SideBar.png" />
+    <None Include="Resources\Win95Help.png" />
+    <None Include="Resources\WinAboutSeparator95.png" />
+    <None Include="Resources\win95_splitter.png" />
+    <None Include="Resources\win95_welcome.png" />
+    <None Include="Resources\win95_welcometip.png" />
+    <None Include="Resources\WinClassicGENERALApplicationToolBoxBackground.png" />
+    <None Include="Resources\Win2000WebBackground.png" />
+    <None Include="Resources\Win98WebBackground.png" />
+    <Content Include="Resources\WinClassic\16Color.png" />
+    <Content Include="Resources\WinClassic\256Color.png" />
+    <None Include="Resources\WinClassic\tada.wav" />
+    <None Include="Resources\WinClassic\sliversilver.png" />
+    <None Include="Resources\WinClassic\AIMmessagereceived.wav" />
+    <None Include="Resources\WinClassic\AIMmessagesent.wav" />
+    <None Include="Resources\WinClassic\AIMbuddyjoin.wav" />
+    <None Include="Resources\WinClassic\AIMbuddyleave.wav" />
+    <None Include="Resources\WinClassic\AIMfile.wav" />
+    <None Include="Resources\WinClassic\LauncherSideBar.png" />
+    <Content Include="Resources\WinClassic\TrueColor.png" />
+    <None Include="Resources\WinClassic\Win95Info.png" />
+    <None Include="Resources\WinClassic\Win95Error.png" />
+    <None Include="Resources\WinClassic\Win95IconNotepad.png" />
+    <None Include="Resources\WinClassic\Win95DesktopIcon.png" />
+    <None Include="Resources\WinClassic\Win95HardDiskIcon.png" />
+    <None Include="Resources\WinClassic\Win95ControlPanelIcon.png" />
+    <None Include="Resources\WinClassic\Win95PrintersFolder.png" />
+    <None Include="Resources\WinClassic\Win95ComputerIcon.png" />
+    <None Include="Resources\WinClassic\Win95NetworkIcon.png" />
+    <None Include="Resources\WinClassic\Win95RecycleIcon.png" />
+    <None Include="Resources\WinClassic\Win95File.png" />
+    <Content Include="Resources\WinClassic\Win95SideBar.png" />
+    <Content Include="Resources\WinClassic\Win95Start.wav" />
+    <None Include="Resources\WinClassic\Win95Warning.png" />
+    <None Include="Resources\WinClassic\WinClassicAddressBookNewIcon.png" />
+    <None Include="Resources\WinClassic\WinClassicAddressBookPropertiesIcon.png" />
+    <None Include="Resources\WinClassic\WinClassicAddressBookDeleteIcon.png" />
+    <None Include="Resources\WinClassic\WinClassicCalc.png" />
+    <None Include="Resources\WinClassic\Win98Computer.png" />
+    <None Include="Resources\WinClassic\Win98Start.wav" />
+    <None Include="Resources\WinClassic\Win98Stop.WAV" />
+    <None Include="Resources\WinClassic\WinClassicApp.png" />
+    <None Include="Resources\WinClassic\WinClassicCalcBig.png" />
+    <None Include="Resources\WinClassic\Win95WordpadIcon2.png" />
+    <Content Include="Resources\WinClassic\WinClassicClock.png" />
+    <Content Include="Resources\WinClassic\WinClassicComputer.png" />
+    <None Include="Resources\WinClassic\WinClassicCopy.png" />
+    <None Include="Resources\WinClassic\WinClassicCut.png" />
+    <None Include="Resources\WinClassic\WinClassicDisplayExample.png" />
+    <Content Include="Resources\WinClassic\WinClassicDocuments.png" />
+    <None Include="Resources\WinClassic\WinClassicEndings.png" />
+    <None Include="Resources\WinClassic\WinClassicEndingsLocked.png" />
+    <None Include="Resources\WinClassic\WinClassicEndingsIcon.png" />
+    <Content Include="Resources\WinClassic\WinClassicFind.png" />
+    <Content Include="Resources\WinClassic\WinClassicFolder.png" />
+    <None Include="Resources\WinClassic\WinClassicGENERALApplicationToolbarBackground.png" />
+    <Content Include="Resources\WinClassic\WinClassicHelp.png" />
+    <None Include="Resources\WinClassic\WinClassicHWCV.png" />
+    <Content Include="Resources\WinClassic\WinClassicIE4.png" />
+    <Content Include="Resources\WinClassic\WinClassicInbox.png" />
+    <None Include="Resources\WinClassic\WinClassicInstallPic.png" />
+    <None Include="Resources\WinClassic\WinClassicMinesweeper.png" />
+    <Content Include="Resources\WinClassic\WinClassicMSN.png" />
+    <Content Include="Resources\WinClassic\WinClassicNetworking.png" />
+    <None Include="Resources\WinClassic\WinClassicNotepad.png" />
+    <None Include="Resources\WinClassic\WinClassicNew.png" />
+    <None Include="Resources\WinClassic\WinClassicOpenFolderSmall.png" />
+    <None Include="Resources\WinClassic\WinClassicNotepadBig.png" />
+    <Content Include="Resources\WinClassic\WinClassicOutlook.png" />
+    <None Include="Resources\WinClassic\WinClassicPaste.png" />
+    <Content Include="Resources\WinClassic\WinClassicProgramItem.png" />
+    <Content Include="Resources\WinClassic\WinClassicPrograms.png" />
+    <Content Include="Resources\WinClassic\WinClassicRecycle.png" />
+    <None Include="Resources\WinClassic\WinClassicRegedit.png" />
+    <Content Include="Resources\WinClassic\WinClassicRun.png" />
+    <Content Include="Resources\WinClassic\WinClassicSettings.png" />
+    <None Include="Resources\WinClassic\WinClassicSetup.png" />
+    <Content Include="Resources\WinClassic\WinClassicShutdown.png" />
+    <Content Include="Resources\WinClassic\WinClassicStart.png" />
+    <Content Include="Resources\WinClassic\WinClassicSuspend.png" />
+    <Content Include="Resources\WinClassic\WinClassicTaskBar.png" />
+    <Content Include="Resources\WinClassic\WinClassicTaskbarItem.png" />
+    <Content Include="Resources\WinClassic\WinClassicTime.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Histacom2.Engine\Histacom2.Engine.csproj">
+      <Project>{9477b70f-2d32-4e1d-857b-4624a1deeb1b}</Project>
+      <Name>Histacom2.Engine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
