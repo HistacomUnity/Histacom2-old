@@ -40,7 +40,7 @@ namespace Histacom2.OS.Win95.Win95Apps.IE4Sites
             WinClassicDownloader opendownload = new WinClassicDownloader();
             WindowManager wm = new WindowManager();
             wm.StartWin95(opendownload, "Downloader", null, false, true);
-            opendownload.appName.Text = "Downloading: Web Chat";
+            opendownload.appName.Text = "Downloading: Web Chat 1998";
             opendownload.amountToDL = 35;
         }
 
