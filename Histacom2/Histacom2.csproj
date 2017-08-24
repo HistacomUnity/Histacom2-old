@@ -512,6 +512,7 @@
   <ItemGroup>
     <Content Include="Icon128x.ico" />
     <Content Include="Resources\12padams_EULA.txt" />
+    <None Include="Resources\WinClassic\WinClassicWebchat.png" />
     <None Include="Resources\wordpad_find.png" />
     <None Include="Resources\wordpad_printpreview.png" />
     <None Include="Resources\wordpad_print.png" />
@@ -538,6 +539,9 @@
     <None Include="Resources\GuessTheNumber\GTN95_RestartClicked.png" />
     <None Include="Resources\ButtonPattern.png" />
     <None Include="Resources\HistacomIcon.ico" />
+    <None Include="Resources\GuessTheNumber\GTN95_Correct.png" />
+    <None Include="Resources\GuessTheNumber\GTN95_Lower.png" />
+    <None Include="Resources\GuessTheNumber\GTN95_Error.png" />
     <Content Include="Resources\Icon128x.ico" />
     <None Include="Resources\ICTheme_BG.jpg" />
     <None Include="Resources\IE3\IE3_SwirlyThings.png" />
@@ -640,6 +644,8 @@
     <None Include="Resources\WinClassic\AIMbuddyleave.wav" />
     <None Include="Resources\WinClassic\AIMfile.wav" />
     <None Include="Resources\WinClassic\LauncherSideBar.png" />
+    <None Include="Resources\WinClassic\TimeDistorter1.png" />
+    <None Include="Resources\WinClassic\TimeDistorter1Icon.png" />
     <Content Include="Resources\WinClassic\TrueColor.png" />
     <None Include="Resources\WinClassic\Win95Info.png" />
     <None Include="Resources\WinClassic\Win95Error.png" />
@@ -677,6 +683,10 @@
     <Content Include="Resources\WinClassic\WinClassicFind.png" />
     <Content Include="Resources\WinClassic\WinClassicFolder.png" />
     <None Include="Resources\WinClassic\WinClassicGENERALApplicationToolbarBackground.png" />
+    <None Include="Resources\WinClassic\WinClassicFTPIcon.png" />
+    <None Include="Resources\WinClassic\WinClassicGTN.png" />
+    <None Include="Resources\WinClassic\WinClassicGTNIcon.png" />
+    <None Include="Resources\WinClassic\WinClassicFTP.png" />
     <Content Include="Resources\WinClassic\WinClassicHelp.png" />
     <None Include="Resources\WinClassic\WinClassicHWCV.png" />
     <Content Include="Resources\WinClassic\WinClassicIE4.png" />

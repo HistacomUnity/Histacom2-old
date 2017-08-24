@@ -227,9 +227,39 @@ namespace Histacom2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap GTN95_Correct {
+            get {
+                object obj = ResourceManager.GetObject("GTN95_Correct", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap GTN95_Error {
+            get {
+                object obj = ResourceManager.GetObject("GTN95_Error", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap GTN95_Higher {
             get {
                 object obj = ResourceManager.GetObject("GTN95_Higher", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap GTN95_Lower {
+            get {
+                object obj = ResourceManager.GetObject("GTN95_Lower", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -956,6 +986,26 @@ namespace Histacom2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap TimeDistorter1 {
+            get {
+                object obj = ResourceManager.GetObject("TimeDistorter1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap TimeDistorter1Icon {
+            get {
+                object obj = ResourceManager.GetObject("TimeDistorter1Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap TrueColor {
             get {
                 object obj = ResourceManager.GetObject("TrueColor", resourceCulture);
@@ -1476,9 +1526,49 @@ namespace Histacom2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap WinClassicFTP {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicFTP", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WinClassicFTPIcon {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicFTPIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap WinClassicGENERALApplicationToolbarBackground {
             get {
                 object obj = ResourceManager.GetObject("WinClassicGENERALApplicationToolbarBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WinClassicGTN {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicGTN", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WinClassicGTNIcon {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicGTNIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1799,6 +1889,16 @@ namespace Histacom2.Properties {
         public static System.Drawing.Bitmap WinClassicUndo {
             get {
                 object obj = ResourceManager.GetObject("WinClassicUndo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WinClassicWebchat {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicWebchat", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

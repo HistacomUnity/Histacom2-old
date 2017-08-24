@@ -223,7 +223,7 @@ namespace Histacom2.OS.Win95
             this.startmenuitems.Name = "startmenuitems";
             this.startmenuitems.Padding = new System.Windows.Forms.Padding(6, 2, 0, 0);
             this.startmenuitems.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.startmenuitems.Size = new System.Drawing.Size(145, 292);
+            this.startmenuitems.Size = new System.Drawing.Size(145, 311);
             this.startmenuitems.TabIndex = 0;
             this.startmenuitems.Text = "StartMenu";
             // 
@@ -664,10 +664,12 @@ namespace Histacom2.OS.Win95
             this.GuessTheNumberToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.GuessTheNumberToolStripMenuItem.BackgroundImage = global::Histacom2.Properties.Resources.sliversilver;
             this.GuessTheNumberToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.GuessTheNumberToolStripMenuItem.Image = global::Histacom2.Properties.Resources.WinClassicGTNIcon;
             this.GuessTheNumberToolStripMenuItem.Name = "GuessTheNumberToolStripMenuItem";
             this.GuessTheNumberToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.GuessTheNumberToolStripMenuItem.Text = "Guess The Number";
             this.GuessTheNumberToolStripMenuItem.Visible = false;
+            this.GuessTheNumberToolStripMenuItem.Click += new System.EventHandler(this.GuessTheNumberToolStripMenuItem_Click);
             // 
             // StartRunnerToolStripMenuItem
             // 
@@ -704,6 +706,7 @@ namespace Histacom2.OS.Win95
             this.WebChatToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.WebChatToolStripMenuItem.BackgroundImage = global::Histacom2.Properties.Resources.sliversilver;
             this.WebChatToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.WebChatToolStripMenuItem.Image = global::Histacom2.Properties.Resources.WinClassicWebchat;
             this.WebChatToolStripMenuItem.Name = "WebChatToolStripMenuItem";
             this.WebChatToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.WebChatToolStripMenuItem.Text = "Web Chat";
@@ -715,9 +718,11 @@ namespace Histacom2.OS.Win95
             this.TimeDistorterToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.TimeDistorterToolStripMenuItem.BackgroundImage = global::Histacom2.Properties.Resources.sliversilver;
             this.TimeDistorterToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.TimeDistorterToolStripMenuItem.Image = global::Histacom2.Properties.Resources.TimeDistorter1Icon;
             this.TimeDistorterToolStripMenuItem.Name = "TimeDistorterToolStripMenuItem";
             this.TimeDistorterToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.TimeDistorterToolStripMenuItem.Text = "Time Distorter";
+            this.TimeDistorterToolStripMenuItem.Visible = false;
             this.TimeDistorterToolStripMenuItem.Click += new System.EventHandler(this.TimeDistorterToolStripMenuItem_Click);
             // 
             // FTPClientToolStripMenuItem
@@ -725,10 +730,11 @@ namespace Histacom2.OS.Win95
             this.FTPClientToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.FTPClientToolStripMenuItem.BackgroundImage = global::Histacom2.Properties.Resources.sliversilver;
             this.FTPClientToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.FTPClientToolStripMenuItem.Image = global::Histacom2.Properties.Resources.WinClassicFTPIcon;
             this.FTPClientToolStripMenuItem.Name = "FTPClientToolStripMenuItem";
             this.FTPClientToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.FTPClientToolStripMenuItem.Text = "FTP Client";
-            this.FTPClientToolStripMenuItem.Visible = true;
+            this.FTPClientToolStripMenuItem.Visible = false;
             this.FTPClientToolStripMenuItem.Click += new System.EventHandler(this.FTPClientToolStripMenuItem_Click);
             // 
             // DocumentsToolStripMenuItem

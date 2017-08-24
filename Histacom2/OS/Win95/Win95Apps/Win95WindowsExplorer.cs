@@ -69,7 +69,10 @@ namespace Histacom2.OS.Win95.Win95Apps
                                                     Properties.Resources.WinClassicCalcBig,
                                                     Properties.Resources.WinClassicNotepadBig,
                                                     Properties.Resources.WinClassicRegedit, // 15
-                                                    Properties.Resources.WinClassicWordpad });
+                                                    Properties.Resources.WinClassicWordpad,
+                                                    Properties.Resources.TimeDistorter1,
+                                                    Properties.Resources.WinClassicGTN,
+                                                    Properties.Resources.WinClassicFTP });
 
             program.BringToFront();
 
@@ -282,7 +285,13 @@ namespace Histacom2.OS.Win95.Win95Apps
                     break;
                 case "ftp client setup":
                     Win95Installer instFtp = new Win95Installer("FTP Client");
-                    instFtp.InstallCompleted += (sendr, args) => TitleScreen.frm95.FTPClientToolStripMenuItem.Visible = true;
+                    instFtp.InstallCompleted += (sendr, args) =>
+                    {
+                        SaveDirectoryInfo(ProfileProgramsDirectory, "12padams", true, "12padams", true);
+                        SaveDirectoryInfo(Path.Combine(ProfileProgramsDirectory, "12padams"), "FTP Client", true, "FTP Client", true);
+                        CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "12padams", "FTP Client"), "ftpclint.exe", "ftp client", 19, 58395);
+                        TitleScreen.frm95.FTPClientToolStripMenuItem.Visible = true;
+                    };
                     WinClassic appFtp = wm.StartWin95(instFtp, "FTP Client Setup", null, true, true);
                     Program.AddTaskbarItem(appFtp, appFtp.Tag.ToString(), "FTP Client Setup", null);
                     appFtp.BringToFront();
@@ -292,6 +301,9 @@ namespace Histacom2.OS.Win95.Win95Apps
                     Win95Installer instTd = new Win95Installer("Time Distorter 0.1");
                     instTd.InstallCompleted += (sendr, args) =>
                     {
+                        SaveDirectoryInfo(ProfileProgramsDirectory, "12padams", true, "12padams", true);
+                        SaveDirectoryInfo(Path.Combine(ProfileProgramsDirectory, "12padams"), "Time Distorter 0.1", true, "Time Distorter 0.1", true);
+                        CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "12padams", "Time Distorter 0.1"), "tdistort.exe", "time distorter", 17, 23895);
                         TitleScreen.frm95.TimeDistorterToolStripMenuItem.Visible = true;
                     };
                     WinClassic appTd = wm.StartWin95(instTd, "Time Distorter Setup", null, true, true);
@@ -301,6 +313,29 @@ namespace Histacom2.OS.Win95.Win95Apps
                     break;
                 case "iebrokeninstaller":
                     wm.StartInfobox95("Internet Explorer Installer", "Installation Failed: The INF file was not found", InfoboxType.Error, InfoboxButtons.OK);
+
+                    break;
+                case "gtnv1 setup":
+                    Win95Installer instGtn = new Win95Installer("Guess The Number V1");
+                    instGtn.InstallCompleted += (sendr, args) =>
+                    {
+                        SaveDirectoryInfo(ProfileProgramsDirectory, "12padams", true, "12padams", true);
+                        SaveDirectoryInfo(Path.Combine(ProfileProgramsDirectory, "12padams"), "Guess The Number V1", true, "Guess The Number V1", true);
+                        CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "12padams", "Guess The Number V1"), "guessnum.exe", "guess number", 18, 17483);
+                        TitleScreen.frm95.GuessTheNumberToolStripMenuItem.Visible = true;
+                    };
+                    WinClassic appGtn = wm.StartWin95(instGtn, "Guess The Number Setup", null, true, true);
+                    Program.AddTaskbarItem(appGtn, appGtn.Tag.ToString(), "Guess The Number Setup", null);
+                    appGtn.BringToFront();
+
+                    break;
+                case "guess number":
+                    WinClassic appGTN = wm.StartWin95(new GuessTheNumber(), "Guess The Number", Properties.Resources.WinClassicGTNIcon, false, true, false, false);
+                    Program.AddTaskbarItem(appGTN, appGTN.Tag.ToString(), "Guess The Number", Properties.Resources.WinClassicGTNIcon);
+
+                    Program.nonimportantapps.Add(appGTN);
+                    Program.nonimportantapps[Program.nonimportantapps.Count - 1].BringToFront();
+                    Program.nonimportantapps[Program.nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(Program.NonImportantApp_Closing);
 
                     break;
                 default:

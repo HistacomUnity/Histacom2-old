@@ -74,6 +74,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(55, 27);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -91,6 +92,7 @@
             this.pictureBox3.Size = new System.Drawing.Size(227, 23);
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // GuessTheNumber
             // 

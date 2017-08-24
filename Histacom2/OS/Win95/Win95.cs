@@ -593,6 +593,19 @@ namespace Histacom2.OS.Win95
         {
             heldDownItem = null;
         }
+
+        private void GuessTheNumberToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WinClassic app = wm.StartWin95(new GuessTheNumber(), "Guess The Number", Properties.Resources.WinClassicGTNIcon, false, false, false, false);
+            AddTaskBarItem(app, app.Tag.ToString(), "Guess The Number", Properties.Resources.WinClassicGTNIcon);
+
+            nonimportantapps.Add(app);
+            nonimportantapps[nonimportantapps.Count - 1].BringToFront();
+            nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
+
+            app.BringToFront();
+            startmenu.Hide();
+        }
     }
     public class MyRenderer : ToolStripProfessionalRenderer
     {

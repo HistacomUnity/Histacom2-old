@@ -32,6 +32,7 @@ namespace Histacom2.OS.Win95.Win95Apps.IE4Sites
             WindowManager wm = new WindowManager();
             wm.StartWin95(opendownload, "Downloader", null, false, true);
             opendownload.appName.Text = "Downloading: FTP Client";
+            opendownload.amountToDL = 56;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -40,6 +41,7 @@ namespace Histacom2.OS.Win95.Win95Apps.IE4Sites
             WindowManager wm = new WindowManager();
             wm.StartWin95(opendownload, "Downloader", null, false, true);
             opendownload.appName.Text = "Downloading: Web Chat";
+            opendownload.amountToDL = 35;
         }
 
         private void label17_Click(object sender, EventArgs e)
@@ -133,6 +135,15 @@ namespace Histacom2.OS.Win95.Win95Apps.IE4Sites
             Refresh();
             label16.Text = "Password: projectDeath98";
             Refresh();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            WinClassicDownloader opendownload = new WinClassicDownloader();
+            WindowManager wm = new WindowManager();
+            wm.StartWin95(opendownload, "Downloader", null, false, true);
+            opendownload.appName.Text = "Downloading: Guess The Number V1";
+            opendownload.amountToDL = 16;
         }
     }
 }
