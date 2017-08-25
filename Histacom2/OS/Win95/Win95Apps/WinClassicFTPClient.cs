@@ -75,7 +75,8 @@ namespace Histacom2.OS.Win95.Win95Apps
                     ListViewItem listViewItem1 = new ListViewItem(new string[] { "/totallynotthetimedistorter/" }, 0, Color.Black, Color.Empty, null);
                     ListViewItem listViewItem2 = new ListViewItem(new string[] { "FTP Client Setup.exe" }, 2, Color.Black, Color.Empty, null);
                     ListViewItem listViewItem3 = new ListViewItem(new string[] { "Web Chat Setup.exe" }, 2, Color.Black, Color.Empty, null);
-                    ftpFiles.Items.AddRange(new ListViewItem[] { listViewItem1, listViewItem2, listViewItem3 });
+                    ListViewItem listViewItem4 = new ListViewItem(new string[] { "Guess The Number V1 Setup.exe" }, 2, Color.Black, Color.Empty, null);
+                    ftpFiles.Items.AddRange(new ListViewItem[] { listViewItem1, listViewItem2, listViewItem3, listViewItem4 });
                 }
                 else if (objListViewItem.Text == "/totallynotthetimedistorter/")
                 {
@@ -103,6 +104,13 @@ namespace Histacom2.OS.Win95.Win95Apps
                     WindowManager wm = new WindowManager();
                     wm.StartWin95(opendownload, "Downloader", null, false, true);
                     opendownload.appName.Text = "Downloading: Time Distorter 0.1";
+                }
+                else if (objListViewItem.Text == "Guess The Number V1 Setup.exe")
+                {
+                    WinClassicDownloader opendownload = new WinClassicDownloader();
+                    WindowManager wm = new WindowManager();
+                    wm.StartWin95(opendownload, "Downloader", null, false, true);
+                    opendownload.appName.Text = "Downloading: Guess The Number V1";
                 }
             }
         }
