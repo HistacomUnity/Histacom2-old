@@ -126,7 +126,7 @@ namespace Histacom2
             Resources.google.Save(Path.Combine(DataDirectory, "google.jpg"));
 
             // Set GameVersion
-            gameversion.Text = "Version 2.0.0.3";
+            gameversion.Text = "Version 2.0.1";
 
             // Initialize Font
             File.WriteAllBytes(DataDirectory + "\\LeviWindows.ttf", Resources.LeviWindows);
@@ -268,7 +268,7 @@ namespace Histacom2
 
         private void gameversion_MouseLeave(object sender, EventArgs e)
         {
-            gameversion.Text = "Version 2.0.0.3";
+            gameversion.Text = "Version 2.0.1";
         }
 
         private void startbutton_Click(object sender, EventArgs e)
@@ -291,9 +291,9 @@ namespace Histacom2
 
         private void updateText_Tick(object sender, EventArgs e)
         {
-            if (gameversion.Text != "Version 2.0.0.3")
+            if (gameversion.Text != "Version 2.0.1")
             {
-                gameversion.Text = "Version 2.0.0.3";
+                gameversion.Text = "Version 2.0.1";
                 updateText.Stop();
             }
         }

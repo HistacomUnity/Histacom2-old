@@ -97,6 +97,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                     WindowManager wm = new WindowManager();
                     wm.StartWin95(opendownload, "Downloader", null, false, true);
                     opendownload.appName.Text = "Downloading: Web Chat 1998";
+                    opendownload.amountToDL = 35;
                 }
                 else if (objListViewItem.Text == "Time Distorter Setup.exe")
                 {
@@ -111,6 +112,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                     WindowManager wm = new WindowManager();
                     wm.StartWin95(opendownload, "Downloader", null, false, true);
                     opendownload.appName.Text = "Downloading: Guess The Number V1";
+                    opendownload.amountToDL = 16;
                 }
             }
         }
