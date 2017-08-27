@@ -16,7 +16,6 @@ namespace Histacom2.SaveDialogs
     {
         public string log;
         Save savedata;
-        string json;
         public SaveFileTroubleShooter()
         {
             InitializeComponent();

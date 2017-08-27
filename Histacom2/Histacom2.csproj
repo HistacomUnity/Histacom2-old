@@ -634,6 +634,9 @@
     <None Include="Resources\WinClassicGENERALApplicationToolBoxBackground.png" />
     <None Include="Resources\Win2000WebBackground.png" />
     <None Include="Resources\Win98WebBackground.png" />
+    <None Include="Resources\WinClassicTextFile.png" />
+    <None Include="Resources\WinClassicRtfFile.png" />
+    <None Include="Resources\WinClassicNotepad.png" />
     <Content Include="Resources\WinClassic\16Color.png" />
     <Content Include="Resources\WinClassic\256Color.png" />
     <None Include="Resources\WinClassic\tada.wav" />

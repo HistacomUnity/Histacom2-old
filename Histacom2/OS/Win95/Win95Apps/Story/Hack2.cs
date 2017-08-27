@@ -270,7 +270,7 @@ namespace Histacom2.OS.Win95.Win95Apps.Story
             await Task.Delay(2000);
             sp.Stop();
 
-            SaveSystem.UpgradeFileSystem("95", "98");
+            SaveSystem.UpgradeFileSystem("98");
             SaveSystem.CurrentSave.CurrentOS = "98";
             SaveSystem.currentTheme = new Default98Theme();
             SaveSystem.CurrentSave.ThemeName = "default98";

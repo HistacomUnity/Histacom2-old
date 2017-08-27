@@ -70,9 +70,10 @@ namespace Histacom2.OS.Win95.Win95Apps
                                                     Properties.Resources.WinClassicNotepadBig,
                                                     Properties.Resources.WinClassicRegedit, // 15
                                                     Properties.Resources.WinClassicWordpad,
-                                                    Properties.Resources.TimeDistorter1,
+													Properties.Resources.TimeDistorter1,
                                                     Properties.Resources.WinClassicGTN,
-                                                    Properties.Resources.WinClassicFTP });
+                                                    Properties.Resources.WinClassicFTP,
+                                                    Properties.Resources.WinClassicRtfFile});
 
             program.BringToFront();
 
@@ -126,7 +127,8 @@ namespace Histacom2.OS.Win95.Win95Apps
 
         private void RefreshAll()
         {
-            //try {
+            //try
+            //{
                 this.mainView.Items.Clear();
 
                 foreach (string str in Directory.GetDirectories(CurrentDirectory))
@@ -140,10 +142,10 @@ namespace Histacom2.OS.Win95.Win95Apps
                 {
                     ListViewItem itm;
 
-                    if (IsFileOpenDialog == true || IsFileSaveDialog == true)
+                    if (IsFileOpenDialog || IsFileSaveDialog)
                     {
                         if (!(Path.GetFileName(str) == "_data.info"))
-                        {
+                        { 
                             if (new FileInfo(str).Extension == onlyViewExtension)
                             {
                                 itm = this.mainView.Items.Add(Path.GetFileName(str));
@@ -220,9 +222,18 @@ namespace Histacom2.OS.Win95.Win95Apps
                     case 1:
                         WinClassicNotepad np = new WinClassicNotepad();
                         np.mainText.Text = FileDialogBoxManager.ReadTextFile(fileDir);
+                        np.CurrentFilePath = fileDir;
                         WinClassic app = wm.StartWin95(np, "Notepad", Properties.Resources.Win95IconNotepad, true, true);
 
                         Program.AddTaskbarItem(app, app.Tag.ToString(), "Notepad", Properties.Resources.Win95IconNotepad);
+                        break;
+                    case 2:
+                        WinClassicWordPad wp = new WinClassicWordPad();
+                        wp.mainText.LoadFile(fileDir);
+                        wp.CurrentFilePath = fileDir;
+                        WinClassic app2 = wm.StartWin95(wp, "Wordpad", Properties.Resources.Win95IconWordpad, true, true);
+
+                        Program.AddTaskbarItem(app2, app2.Tag.ToString(), "Wordpad", Properties.Resources.Win95IconWordpad);
                         break;
                     case 12:
                         OpenApplication(FileDialogBoxManager.ReadTextFile(fileDir), fileDir);
@@ -576,13 +587,16 @@ namespace Histacom2.OS.Win95.Win95Apps
         {
             try
             {
-                if (new DirectoryInfo((string)mainView.FocusedItem.Tag).Extension == null || new DirectoryInfo((string)mainView.FocusedItem.Tag).Extension == "")
+                if (Directory.Exists(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text)))
                 { // If it isn't a file
-                    GoToDir(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text));
+                    if (mainView.FocusedItem.Text == "C:")
+                        GoToDir(Path.Combine(CurrentDirectory, "CDrive"));
+                    else
+                        GoToDir(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text));
                 }
                 else
                 { // If it is a file
-                        if (IsFileOpenDialog == true || IsFileSaveDialog == true)
+                        if (IsFileOpenDialog || IsFileSaveDialog)
                         {
                             if (new FileInfo(Path.Combine(CurrentDirectory, txtSave.Text)).Extension == onlyViewExtension)
                             {
@@ -600,9 +614,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                             OpenFile(mainView.FocusedItem.Tag.ToString());
                         }
                 }
-            } catch (Exception ex) {
-                MessageBox.Show(ex.Message);
-            }
+            } catch { /* TODO: Illegal operation */ }
         }
 
         void diskView_AfterSelect(object sender, EventArgs e)
@@ -654,7 +666,7 @@ namespace Histacom2.OS.Win95.Win95Apps
             }
             else
             {
-                SaveDirectoryInfo(CurrentDirectory, "New Folder", false, "New Folder", true);
+                SaveDirectoryInfo(CurrentDirectory, "New Folder", false, "New Folder", true, false);
 
                 RefreshAll();
                 OldLabelText = "New Folder";
@@ -707,10 +719,26 @@ namespace Histacom2.OS.Win95.Win95Apps
                 }
                 else
                 {
-                    if (Directory.Exists(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text))) Directory.Delete(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text), true);
-                        else File.Delete(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text));
+                    if (Directory.Exists(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text)))
+                    {
+                        Directory.Delete(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text), true);
+
+                        // Remove the directory now from the _data.info
+
+                        SaveSystem.RemoveSubDirFromDirectory(CurrentDirectory, mainView.FocusedItem.Text);
+                    }
+                    else
+                    {
+                        File.Delete(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text));
+
+                        // Remove the file now from the _data.info
+
+                        RemoveFileFromDirectory(CurrentDirectory, mainView.FocusedItem.Text);
+                      
+                    }
 
                     RefreshAll();
+                    RefreshTreeNode();
                 }
             } catch
             {
@@ -751,37 +779,48 @@ namespace Histacom2.OS.Win95.Win95Apps
 
         private void mainView_AfterLabelEdit(object sender, LabelEditEventArgs e)
         {
-            string setText = e.Label;
-            if (setText == "") wm.StartInfobox95("Rename", "You must type a filename.", InfoboxType.Error, InfoboxButtons.OK);
-            else
+            try
             {
-                if (Directory.Exists(setText)) wm.StartInfobox95("Error Renaming File", $"Cannot rename {new DirectoryInfo(setText).Name}: A file with the name you specified already exists. Specify a different filename.", InfoboxType.Error, InfoboxButtons.OK);
+                string setText = e.Label;
+                if (setText == "") wm.StartInfobox95("Rename", "You must type a filename.", InfoboxType.Error, InfoboxButtons.OK);
                 else
                 {
-                    if (File.Exists(setText)) wm.StartInfobox95("Error Renaming File", $"Cannot rename {new FileInfo(setText).Name}: A file with the name you specified already exists. Specify a different filename.", InfoboxType.Error, InfoboxButtons.OK);
+                    if (Directory.Exists(setText)) wm.StartInfobox95("Error Renaming File", $"Cannot rename {new DirectoryInfo(setText).Name}: A file with the name you specified already exists. Specify a different filename.", InfoboxType.Error, InfoboxButtons.OK);
                     else
                     {
-                        if (Directory.Exists((string)mainView.FocusedItem.Tag))
-                        {
-                            // It was a directory
-
-                            Directory.Move((string)mainView.FocusedItem.Tag, Path.Combine(CurrentDirectory, setText));
-
-                            File.Delete(Path.Combine(CurrentDirectory, setText, "_data.info"));
-                            SaveDirectoryInfo(CurrentDirectory, setText, false, setText, true);
-                        }
+                        if (File.Exists(setText)) wm.StartInfobox95("Error Renaming File", $"Cannot rename {new FileInfo(setText).Name}: A file with the name you specified already exists. Specify a different filename.", InfoboxType.Error, InfoboxButtons.OK);
                         else
                         {
-                            // It was a file
+                            if (Directory.Exists(Path.Combine(CurrentDirectory, OldLabelText)))
+                            {
+                                // It was a directory
 
-                            File.Copy((string)mainView.FocusedItem.Tag, Path.Combine(CurrentDirectory, setText));
-                            File.Delete((string)mainView.FocusedItem.Tag);
+                                Directory.Move(Path.Combine(CurrentDirectory, OldLabelText), Path.Combine(CurrentDirectory, setText));
+
+                                File.Delete(Path.Combine(CurrentDirectory, setText, "_data.info"));
+                                SaveDirectoryInfo(CurrentDirectory, setText, false, setText, true, true);
+
+                                // Rename the directory now in the _data.info
+
+                                RenameDirectory(CurrentDirectory, OldLabelText, setText);
+                            }
+                            else
+                            {
+                                // It was a file                    
+
+                                File.Copy(Path.Combine(CurrentDirectory, OldLabelText), Path.Combine(CurrentDirectory, setText));
+                                File.Delete(Path.Combine(CurrentDirectory, OldLabelText));
+
+                                // Rename the file now in the _data.info
+
+                                RenameFile(CurrentDirectory, OldLabelText, setText);
+                            }
                         }
                     }
                 }
-            }
-            RefreshAll();
-            RefreshTreeNode();
+                RefreshAll();
+                RefreshTreeNode();
+            } catch { }
         }
 
         private TreeNode[] createSubDirNodes(DirectoryInfo folder)
@@ -948,9 +987,24 @@ namespace Histacom2.OS.Win95.Win95Apps
             foreach (ListViewItem item in mainView.Items) item.Selected = true;
         }
 
-        private void mainView_MouseClick(object sender, MouseEventArgs e)
+        private void TextDocumentToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (File.Exists(CurrentDirectory + "\\New Text Document.txt"))
+            {
+                //wm.StartInfobox95("Windows Explorer", "This directory already exists", Properties.Resources.Win95Info);
+                //TODO: add making "New Folder (2)"
+            }
+            else
+            {
+                CreateWindowsFile(CurrentDirectory, "New Text Document.txt", "", 12, 0);
 
+                RefreshAll();
+                OldLabelText = "New Folder";
+                mainView.LabelEdit = true;
+                mainView.FindItemWithText("New Text Document.txt").BeginEdit();
+            }
+
+            RefreshTreeNode();
         }
     }
 }
