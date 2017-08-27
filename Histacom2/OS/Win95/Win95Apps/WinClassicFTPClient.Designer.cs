@@ -37,7 +37,7 @@
             "???.html"}, 1, System.Drawing.Color.Black, System.Drawing.Color.Empty, null);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WinClassicFTPClient));
             this.topBar = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.infoLabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -49,7 +49,7 @@
             this.hostnameBox = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.ftpFiles = new System.Windows.Forms.ListView();
             this.fileIcons = new System.Windows.Forms.ImageList(this.components);
@@ -60,7 +60,7 @@
             // topBar
             // 
             this.topBar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.topBar.Controls.Add(this.button1);
+            this.topBar.Controls.Add(this.btnLogin);
             this.topBar.Controls.Add(this.infoLabel);
             this.topBar.Controls.Add(this.label4);
             this.topBar.Controls.Add(this.textBox4);
@@ -76,15 +76,16 @@
             this.topBar.Size = new System.Drawing.Size(762, 30);
             this.topBar.TabIndex = 0;
             // 
-            // button1
+            // btnLogin
             // 
-            this.button1.Location = new System.Drawing.Point(585, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(44, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Location = new System.Drawing.Point(585, 2);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(44, 23);
+            this.btnLogin.TabIndex = 5;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.button1_Click);
             // 
             // infoLabel
             // 
@@ -172,7 +173,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.welcomeLabel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 469);
@@ -180,18 +181,20 @@
             this.panel1.Size = new System.Drawing.Size(762, 30);
             this.panel1.TabIndex = 9;
             // 
-            // button2
+            // btnCancel
             // 
-            this.button2.Location = new System.Drawing.Point(3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "cancelButton";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Location = new System.Drawing.Point(3, 2);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 0;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // welcomeLabel
             // 
-            this.welcomeLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.welcomeLabel.BackColor = System.Drawing.Color.Transparent;
             this.welcomeLabel.Location = new System.Drawing.Point(577, 7);
             this.welcomeLabel.Name = "welcomeLabel";
             this.welcomeLabel.Size = new System.Drawing.Size(178, 13);
@@ -242,6 +245,7 @@
             this.Controls.Add(this.topBar);
             this.Name = "WinClassicFTPClient";
             this.Size = new System.Drawing.Size(762, 499);
+            this.Load += new System.EventHandler(this.WinClassicFTPClient_Load);
             this.topBar.ResumeLayout(false);
             this.topBar.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -262,9 +266,9 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         public System.Windows.Forms.TextBox hostnameBox;
         private System.Windows.Forms.Label infoLabel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label welcomeLabel;
         internal System.Windows.Forms.ListView ftpFiles;
         private System.Windows.Forms.ImageList fileIcons;
