@@ -46,7 +46,7 @@ namespace Histacom2.Engine
 
             THFileInfo info = new THFileInfo();
             info.Name = Path.GetFileName(path);
-            info.FileIcon = 17;
+            info.FileIcon = 20;
             info.ByteSize = fileBytes;
             SaveSystem.CurrentSave.BytesLeft -= fileBytes;
             SaveSystem.UpdateDirectoryInfo(new FileInfo(path).Directory.FullName, info);

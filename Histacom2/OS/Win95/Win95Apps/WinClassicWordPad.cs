@@ -186,6 +186,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                     try
                     {
                         mainText.LoadFile(selectedPath);
+                        CurrentFilePath = selectedPath;
                     } catch
                     {
                         (new WindowManager()).StartInfobox95("Wordpad", "An error occured opening the file.", Engine.Template.InfoboxType.Error, Engine.Template.InfoboxButtons.OK);
@@ -232,6 +233,51 @@ namespace Histacom2.OS.Win95.Win95Apps
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ActivateOpenFileDialog(".rtf");
+                string selectedPath = Program.OpenFileExplorerAsDialogAndReturnGivenPath();
+
+                if (selectedPath != null)
+                {
+                    try
+                    {
+                        mainText.LoadFile(selectedPath);
+                    }
+                    catch
+                    {
+                        (new WindowManager()).StartInfobox95("Wordpad", "An error occured opening the file.", Engine.Template.InfoboxType.Error, Engine.Template.InfoboxButtons.OK);
+                    }
+
+                }
+            }
+            catch
+            {
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (CurrentFilePath == "")
+            {
+                // We aren't in a file right now
+
+                SaveAs();
+            }
+            else
+            {
+                File.Delete(CurrentFilePath);
+                SaveRtfDocument(mainText, CurrentFilePath);
+            }
         }
     }
 }

@@ -226,6 +226,13 @@ namespace Histacom2.OS.Win95.Win95Apps
 
                         Program.AddTaskbarItem(app, app.Tag.ToString(), "Notepad", Properties.Resources.Win95IconNotepad);
                         break;
+                    case 2:
+                        WinClassicWordPad wp = new WinClassicWordPad();
+                        wp.mainText.LoadFile(fileDir);
+                        WinClassic app2 = wm.StartWin95(wp, "Wordpad", Properties.Resources.Win95IconWordpad, true, true);
+
+                        Program.AddTaskbarItem(app2, app2.Tag.ToString(), "Wordpad", Properties.Resources.Win95IconWordpad);
+                        break;
                     case 12:
                         OpenApplication(FileDialogBoxManager.ReadTextFile(fileDir), fileDir);
                         break;
