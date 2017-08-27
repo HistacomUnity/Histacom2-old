@@ -787,6 +787,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                                 // Delete it
 
                                 fsfi.SubDirs.Remove(dir);
+                                continue;
                             }
                         }
 
@@ -807,6 +808,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                                 // Delete it
 
                                 fsfi.Files.Remove(file);
+                                continue;
                             }
                         }
 

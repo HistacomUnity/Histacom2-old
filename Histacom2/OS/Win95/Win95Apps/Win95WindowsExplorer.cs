@@ -732,10 +732,11 @@ namespace Histacom2.OS.Win95.Win95Apps
                                 // Delete it
 
                                 fsfi.SubDirs.Remove(dir);
+                                break;
                             }
                         }
 
-                        File.WriteAllText(Path.Combine(CurrentDirectory, "_data.info"), JsonConvert.SerializeObject(fsfi));
+                        File.WriteAllText(Path.Combine(CurrentDirectory, "_data.info"), JsonConvert.SerializeObject(fsfi, Formatting.Indented));
                     }
                     else
                     {
@@ -752,10 +753,11 @@ namespace Histacom2.OS.Win95.Win95Apps
                                 // Delete it
 
                                 fsfi.Files.Remove(file);
+                                continue;
                             }
                         }
 
-                        File.WriteAllText(Path.Combine(CurrentDirectory, "_data.info"), JsonConvert.SerializeObject(fsfi));
+                        File.WriteAllText(Path.Combine(CurrentDirectory, "_data.info"), JsonConvert.SerializeObject(fsfi, Formatting.Indented));
                       
                     }
 
@@ -828,7 +830,7 @@ namespace Histacom2.OS.Win95.Win95Apps
 
                                 foreach (THDirInfo dir in fsfi.SubDirs)
                                 {
-                                    if (dir.Name == mainView.FocusedItem.Tag.ToString())
+                                    if (dir.Name == OldLabelText)
                                     {
                                         // Rename it
                                         THDirInfo oldDirInfo = dir;
@@ -855,7 +857,7 @@ namespace Histacom2.OS.Win95.Win95Apps
 
                                 foreach (THFileInfo file in fsfi.Files)
                                 {
-                                    if (file.Name == mainView.FocusedItem.Tag.ToString())
+                                    if (file.Name == OldLabelText)
                                     {
                                         // Rename it
                                         THFileInfo oldFileInfo = file;

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            //System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WinClassicWindowsExplorer));
             this.program = new System.Windows.Forms.Panel();
             this.mainView = new System.Windows.Forms.ListView();
             this.pnlInfo = new System.Windows.Forms.Panel();
@@ -137,6 +136,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Histacom2.Properties.Resources.WinClassicFolderSmall;
             this.pictureBox1.Location = new System.Drawing.Point(15, 18);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 30);
@@ -157,8 +157,8 @@
             // 
             // pnlInfoContent
             // 
-            this.pnlInfoContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.pnlInfoContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlInfoContent.BackColor = System.Drawing.Color.Transparent;
             this.pnlInfoContent.Controls.Add(this.InfoDesc);
@@ -280,7 +280,7 @@
             // btnFolderClose
             // 
             this.btnFolderClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
-            //this.btnFolderClose.Image = ((System.Drawing.Image)(resources.GetObject("btnFolderClose.Image")));
+            this.btnFolderClose.Image = global::Histacom2.Properties.Resources.XCross;
             this.btnFolderClose.Location = new System.Drawing.Point(172, 3);
             this.btnFolderClose.Name = "btnFolderClose";
             this.btnFolderClose.Size = new System.Drawing.Size(21, 16);
@@ -358,7 +358,7 @@
             // 
             // txtSave
             // 
-            this.txtSave.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.txtSave.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSave.Location = new System.Drawing.Point(60, 3);
             this.txtSave.Name = "txtSave";
@@ -397,7 +397,7 @@
             this.TextDocumentToolStripMenuItem,
             this.BitmapImageToolStripMenuItem});
             this.CreateShortcutToolStripMenuItem.Name = "CreateShortcutToolStripMenuItem";
-            this.CreateShortcutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.CreateShortcutToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.CreateShortcutToolStripMenuItem.Text = "New";
             // 
             // FolderToolStripMenuItem
@@ -422,21 +422,21 @@
             // DeleteToolStripMenuItem
             // 
             this.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem";
-            this.DeleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.DeleteToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.DeleteToolStripMenuItem.Text = "Delete";
             this.DeleteToolStripMenuItem.Click += new System.EventHandler(this.DeleteToolStripMenuItem_Click);
             // 
             // RenameToolStripMenuItem
             // 
             this.RenameToolStripMenuItem.Name = "RenameToolStripMenuItem";
-            this.RenameToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.RenameToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.RenameToolStripMenuItem.Text = "Rename";
             this.RenameToolStripMenuItem.Click += new System.EventHandler(this.RenameToolStripMenuItem_Click);
             // 
             // CloseToolStripMenuItem
             // 
             this.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem";
-            this.CloseToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.CloseToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.CloseToolStripMenuItem.Text = "Close";
             this.CloseToolStripMenuItem.Click += new System.EventHandler(this.CloseToolStripMenuItem_Click);
             // 
