@@ -1034,11 +1034,6 @@ namespace Histacom2.OS.Win95.Win95Apps
             foreach (ListViewItem item in mainView.Items) item.Selected = true;
         }
 
-        private void mainView_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
         private void TextDocumentToolStripMenuItem_Click(object sender, EventArgs e)
         {
 

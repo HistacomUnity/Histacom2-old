@@ -94,7 +94,6 @@
             this.mainView.UseCompatibleStateImageBehavior = false;
             this.mainView.AfterLabelEdit += new System.Windows.Forms.LabelEditEventHandler(this.mainView_AfterLabelEdit);
             this.mainView.DoubleClick += new System.EventHandler(this.mainView_DoubleClick);
-            this.mainView.MouseClick += new System.Windows.Forms.MouseEventHandler(this.mainView_MouseClick);
             // 
             // diskView
             // 
