@@ -822,9 +822,6 @@
   <data name="IE3_StopHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IE3\IE3_StopHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WinClassicTextFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassicTextFile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="webchat1998_convo" xml:space="preserve">
     <value>{
   "messages": [
@@ -1923,6 +1920,9 @@
   </data>
   <data name="WinClassicWebchat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WinClassic\WinClassicWebchat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinClassicNotepad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassicNotepad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="WinClassicRtfFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WinClassicRtfFile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

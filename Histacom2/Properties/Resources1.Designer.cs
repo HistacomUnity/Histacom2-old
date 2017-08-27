@@ -1706,6 +1706,16 @@ namespace Histacom2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap WinClassicNotepad {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicNotepad", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap WinClassicNotepadBig {
             get {
                 object obj = ResourceManager.GetObject("WinClassicNotepadBig", resourceCulture);
@@ -1869,16 +1879,6 @@ namespace Histacom2.Properties {
         public static System.Drawing.Bitmap WinClassicTaskbarItem {
             get {
                 object obj = ResourceManager.GetObject("WinClassicTaskbarItem", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap WinClassicTextFile {
-            get {
-                object obj = ResourceManager.GetObject("WinClassicTextFile", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

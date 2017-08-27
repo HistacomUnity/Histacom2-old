@@ -178,7 +178,7 @@
             this.FolderToolStripMenuItem,
             this.TextDocumentToolStripMenuItem});
             this.CreateShortcutToolStripMenuItem.Name = "CreateShortcutToolStripMenuItem";
-            this.CreateShortcutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.CreateShortcutToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.CreateShortcutToolStripMenuItem.Text = "New";
             // 
             // FolderToolStripMenuItem
@@ -198,21 +198,21 @@
             // DeleteToolStripMenuItem
             // 
             this.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem";
-            this.DeleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.DeleteToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.DeleteToolStripMenuItem.Text = "Delete";
             this.DeleteToolStripMenuItem.Click += new System.EventHandler(this.DeleteToolStripMenuItem_Click);
             // 
             // RenameToolStripMenuItem
             // 
             this.RenameToolStripMenuItem.Name = "RenameToolStripMenuItem";
-            this.RenameToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.RenameToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.RenameToolStripMenuItem.Text = "Rename";
             this.RenameToolStripMenuItem.Click += new System.EventHandler(this.RenameToolStripMenuItem_Click);
             // 
             // CloseToolStripMenuItem
             // 
             this.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem";
-            this.CloseToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.CloseToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.CloseToolStripMenuItem.Text = "Close";
             this.CloseToolStripMenuItem.Click += new System.EventHandler(this.CloseToolStripMenuItem_Click);
             // 

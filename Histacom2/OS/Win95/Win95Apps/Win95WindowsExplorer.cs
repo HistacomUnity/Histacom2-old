@@ -65,7 +65,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                                                     Properties.Resources.WinClassicFolder,
                                                     Properties.Resources.WinClassicApp, // 10
                                                     Properties.Resources.WinClassicSetup,
-                                                    Properties.Resources.WinClassicTextFile,
+                                                    Properties.Resources.WinClassicNotepad,
                                                     Properties.Resources.WinClassicCalcBig,
                                                     Properties.Resources.WinClassicNotepadBig,
                                                     Properties.Resources.WinClassicRegedit, // 15
