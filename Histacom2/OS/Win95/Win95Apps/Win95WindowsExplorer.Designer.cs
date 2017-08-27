@@ -108,7 +108,7 @@
             // 
             // MenuStrip1
             // 
-            this.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
+            this.MenuStrip1.BackColor = System.Drawing.Color.Silver;
             this.MenuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.MenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FileToolStripMenuItem,
@@ -139,7 +139,7 @@
             this.TextDocumentToolStripMenuItem,
             this.BitmapImageToolStripMenuItem});
             this.CreateShortcutToolStripMenuItem.Name = "CreateShortcutToolStripMenuItem";
-            this.CreateShortcutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.CreateShortcutToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.CreateShortcutToolStripMenuItem.Text = "New";
             // 
             // FolderToolStripMenuItem
@@ -148,6 +148,12 @@
             this.FolderToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.FolderToolStripMenuItem.Text = "Folder";
             this.FolderToolStripMenuItem.Click += new System.EventHandler(this.FolderToolStripMenuItem_Click);
+            // 
+            // ShortcutToolStripMenuItem
+            // 
+            this.ShortcutToolStripMenuItem.Name = "ShortcutToolStripMenuItem";
+            this.ShortcutToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.ShortcutToolStripMenuItem.Text = "Shortcut";
             // 
             // TextDocumentToolStripMenuItem
             // 

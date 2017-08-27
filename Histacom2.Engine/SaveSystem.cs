@@ -235,36 +235,46 @@ namespace Histacom2.Engine
             File.WriteAllText(Path.Combine(path, "_data.info"), toWrite);
         }
 
-        public static void UpgradeFileSystem(string oldOS, string newOS)
+        public static void RemoveFileFromDirectory(string path, string filename)
         {
-            switch (oldOS)
+            FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(path, "_data.info")));
+            THFileInfo fi = fsfi.Files.Find((THFileInfo f) => { return f.Name == filename; });
+            if (fi == null) return;
+
+            fsfi.ByteSize -= fi.ByteSize;
+            CurrentSave.BytesLeft += fi.ByteSize;
+
+            fsfi.Files.Remove(fi);
+            string toWrite = JsonConvert.SerializeObject(fsfi, Formatting.Indented);
+
+            File.WriteAllText(Path.Combine(path, "_data.info"), toWrite);
+        }
+
+        public static void UpgradeFileSystem(string newOS)
+        {
+            if (newOS == "98" || newOS == "2000" || newOS == "ME")
             {
-                case "95":
-                    if (newOS == "98" || newOS == "2000" || newOS == "ME")
+                // We are upgrading from the old WinClassic file System to the new WinClassic filesystem!
+                // All the above OSes share basically the same file layout!
+                // (Excluding Documents And Settings) which is 2000 and ME only
+
+                // Add Address Book into existance!
+
+                SaveDirectoryInfo(ProfileProgramsDirectory, "Outlook Express", false, "Outlook Express", true);
+                CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Outlook Express"), "WAB.exe", "addressbook", 8, 512);
+
+                // There is no "The Microsoft Network" folder!
+
+                if (Directory.Exists(Path.Combine(ProfileProgramsDirectory, "The Microsoft Network"))) Directory.Delete(Path.Combine(ProfileProgramsDirectory, "The Microsoft Network"), true);
+                FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(ProfileProgramsDirectory, "_data.info")));
+                foreach (THDirInfo dir in fsfi.SubDirs)
+                {
+                    if (dir.Name == "The Microsoft Network")
                     {
-                        // We are upgrading from the old WinClassic file System to the new WinClassic filesystem!
-                        // All the above OSes share basically the same file layout!
-                        // (Excluding Documents And Settings) which is 2000 and ME only
-
-                        // Add Address Book into existance!
-
-                        SaveDirectoryInfo(ProfileProgramsDirectory, "Outlook Express", false, "Outlook Express", true);
-                        CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Outlook Express"), "WAB.exe", "addressbook", 8, 512);
-
-                        // There is no "The Microsoft Network" folder!
-
-                        if (Directory.Exists(Path.Combine(ProfileProgramsDirectory, "The Microsoft Network"))) Directory.Delete(Path.Combine(ProfileProgramsDirectory, "The Microsoft Network"), true);
-                        FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(ProfileProgramsDirectory, "_data.info")));
-                        foreach (THDirInfo dir in fsfi.SubDirs)
-                        {
-                            if (dir.Name == "The Microsoft Network")
-                            {
-                                fsfi.SubDirs.Remove(dir);
-                                break;
-                            }
-                        }
+                        fsfi.SubDirs.Remove(dir);
+                        break;
                     }
-                    break;
+                }
             }
         }
 

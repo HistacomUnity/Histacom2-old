@@ -13,12 +13,11 @@ using Histacom2.Engine.Template;
 
 namespace Histacom2.OS.Win95.Win95Apps.Story
 {
-    static class Hack1 : Object
+    static class Hack1 : object
     {
         static WindowManager wm = new WindowManager();
         static bool ended = false;
         static Thread soundThread = new Thread(dialup_sound_play);
-        static bool devMode = true;
 
         // This is the very first story script!
         public static void StartObjective()
@@ -28,7 +27,7 @@ namespace Histacom2.OS.Win95.Win95Apps.Story
                 tmr.Interval = 1;
                 tmr.Tick += new EventHandler(CheckIfSoundFinished);
 
-                if (devMode == true) ContinueObjective();
+                if (SaveSystem.DevMode) ContinueObjective();
                 else
                 {
                     soundThread.Start();
