@@ -867,9 +867,7 @@ namespace Histacom2.Properties {
         ///    &quot;btn4txt&quot;: &quot;&quot;,
         ///    &quot;btn4tag&quot;: &quot;&quot;,
         ///    &quot;btn5txt&quot;: &quot;&quot;,
-        ///    &quot;btn5tag&quot;: &quot;&quot;
-        ///  },
-        ///  &quot;inthe [rest of string was truncated]&quot;;.
+        ///    &quot;btn5tag&quot;: &quot; [rest of string was truncated]&quot;;.
         /// </summary>
         public static string std_story {
             get {
@@ -1040,8 +1038,7 @@ namespace Histacom2.Properties {
         ///      &quot;userchat&quot;: true
         ///    },
         ///    {
-        ///      &quot;user&quot;: &quot;SkyHigh&quot;,
-        ///    [rest of string was truncated]&quot;;.
+        ///     [rest of string was truncated]&quot;;.
         /// </summary>
         public static string webchat1998_convo {
             get {
