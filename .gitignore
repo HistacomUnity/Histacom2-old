@@ -416,34 +416,34 @@ __pycache__/
 
 # End of https://www.gitignore.io/api/macos,linux,windows,jetbrains,visualstudio,visualstudiocode
 
-### TimeHack Extra ###
-TimeHACK.Main\bin\Debug
-TimeHACK.Main\bin\Release
-TimeHACK.Main\obj\Debug\*
-TimeHACK.Main\obj\Release\*
-TimeHACK.Engine\bin\Debug
-TimeHACK.Engine\bin\Release
-TimeHACK.Engine\obj\Debug\*
-TimeHACK.Engine\obj\Release\*
+### Histacom Extra ###
+Histacom2\bin\Debug
+Histacom2\bin\Release
+Histacom2\obj\Debug\*
+Histacom2\obj\Release\*
+Histacom2.Engine\bin\Debug
+Histacom2.Engine\bin\Release
+Histacom2.Engine\obj\Debug\*
+Histacom2.Engine\obj\Release\*
 
 # The below files keep the Resources working
 
-!TimeHACK.Main\obj\Debug\TempPE
-!TimeHACK.Main\obj\Debug\DesignTimeResolveAssemblyReferences.cache
-!TimeHACK.Main\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache
-!TimeHACK.Main\obj\Debug\CoreCompileInputs.cache
-!TimeHACK.Main\obj\Release\TempPE
-!TimeHACK.Main\obj\Release\DesignTimeResolveAssemblyReferences.cache
-!TimeHACK.Main\obj\Release\DesignTimeResolveAssemblyReferencesInput.cache
-!TimeHACK.Main\obj\Release\CoreCompileInputs.cache
-!TimeHACK.Engine\obj\Debug\TempPE
-!TimeHACK.Engine\obj\Debug\DesignTimeResolveAssemblyReferences.cache
-!TimeHACK.Engine\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache
-!TimeHACK.Engine\obj\Debug\CoreCompileInputs.cache
-!TimeHACK.Engine\obj\Release\TempPE
-!TimeHACK.Engine\obj\Release\DesignTimeResolveAssemblyReferences.cache
-!TimeHACK.Engine\obj\Release\DesignTimeResolveAssemblyReferencesInput.cache
-!TimeHACK.Engine\obj\Release\CoreCompileInputs.cache
+!Histacom2\obj\Debug\TempPE
+!Histacom2\obj\Debug\DesignTimeResolveAssemblyReferences.cache
+!Histacom2\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache
+!Histacom2\obj\Debug\CoreCompileInputs.cache
+!Histacom2\obj\Release\TempPE
+!Histacom2\obj\Release\DesignTimeResolveAssemblyReferences.cache
+!Histacom2\obj\Release\DesignTimeResolveAssemblyReferencesInput.cache
+!Histacom2\obj\Release\CoreCompileInputs.cache
+!Histacom2.Engine\obj\Debug\TempPE
+!Histacom2.Engine\obj\Debug\DesignTimeResolveAssemblyReferences.cache
+!Histacom2.Engine\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache
+!Histacom2.Engine\obj\Debug\CoreCompileInputs.cache
+!Histacom2.Engine\obj\Release\TempPE
+!Histacom2.Engine\obj\Release\DesignTimeResolveAssemblyReferences.cache
+!Histacom2.Engine\obj\Release\DesignTimeResolveAssemblyReferencesInput.cache
+!Histacom2.Engine\obj\Release\CoreCompileInputs.cache
 !packages
 
 # Including the .idea directory within repositories is a BAD idea:
