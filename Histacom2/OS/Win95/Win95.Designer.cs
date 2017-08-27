@@ -218,7 +218,7 @@ namespace Histacom2.OS.Win95
             this.SuspendToolStripMenuItem,
             this.ShutdownToolStripMenuItem});
             this.startmenuitems.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.startmenuitems.Location = new System.Drawing.Point(28, 2);
+            this.startmenuitems.Location = new System.Drawing.Point(26, 2);
             this.startmenuitems.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.startmenuitems.Name = "startmenuitems";
             this.startmenuitems.Padding = new System.Windows.Forms.Padding(6, 2, 0, 0);
@@ -930,7 +930,7 @@ namespace Histacom2.OS.Win95
             this.ossidestartmenu.Controls.Add(this.osimage);
             this.ossidestartmenu.Location = new System.Drawing.Point(0, 0);
             this.ossidestartmenu.Name = "ossidestartmenu";
-            this.ossidestartmenu.Size = new System.Drawing.Size(26, 297);
+            this.ossidestartmenu.Size = new System.Drawing.Size(23, 297);
             this.ossidestartmenu.TabIndex = 4;
             // 
             // osimage
@@ -939,7 +939,7 @@ namespace Histacom2.OS.Win95
             this.osimage.Image = global::Histacom2.Properties.Resources.Win95SideBar;
             this.osimage.Location = new System.Drawing.Point(0, 0);
             this.osimage.Name = "osimage";
-            this.osimage.Size = new System.Drawing.Size(26, 297);
+            this.osimage.Size = new System.Drawing.Size(23, 297);
             this.osimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.osimage.TabIndex = 0;
             this.osimage.TabStop = false;

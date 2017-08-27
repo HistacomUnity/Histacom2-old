@@ -107,7 +107,7 @@
             // 
             // MenuStrip1
             // 
-            this.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
+            this.MenuStrip1.BackColor = System.Drawing.Color.Silver;
             this.MenuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.MenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FileToolStripMenuItem,
@@ -128,7 +128,7 @@
             this.RenameToolStripMenuItem,
             this.CloseToolStripMenuItem});
             this.FileToolStripMenuItem.Name = "FileToolStripMenuItem";
-            this.FileToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
+            this.FileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.FileToolStripMenuItem.Text = "File";
             // 
             // CreateShortcutToolStripMenuItem
@@ -139,52 +139,52 @@
             this.TextDocumentToolStripMenuItem,
             this.BitmapImageToolStripMenuItem});
             this.CreateShortcutToolStripMenuItem.Name = "CreateShortcutToolStripMenuItem";
-            this.CreateShortcutToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.CreateShortcutToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.CreateShortcutToolStripMenuItem.Text = "New";
             // 
             // FolderToolStripMenuItem
             // 
             this.FolderToolStripMenuItem.Name = "FolderToolStripMenuItem";
-            this.FolderToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.FolderToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.FolderToolStripMenuItem.Text = "Folder";
             this.FolderToolStripMenuItem.Click += new System.EventHandler(this.FolderToolStripMenuItem_Click);
             // 
             // ShortcutToolStripMenuItem
             // 
             this.ShortcutToolStripMenuItem.Name = "ShortcutToolStripMenuItem";
-            this.ShortcutToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.ShortcutToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.ShortcutToolStripMenuItem.Text = "Shortcut";
             // 
             // TextDocumentToolStripMenuItem
             // 
             this.TextDocumentToolStripMenuItem.Name = "TextDocumentToolStripMenuItem";
-            this.TextDocumentToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.TextDocumentToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.TextDocumentToolStripMenuItem.Text = "Text Document";
             // 
             // BitmapImageToolStripMenuItem
             // 
             this.BitmapImageToolStripMenuItem.Name = "BitmapImageToolStripMenuItem";
-            this.BitmapImageToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.BitmapImageToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.BitmapImageToolStripMenuItem.Text = "Bitmap Image";
             // 
             // DeleteToolStripMenuItem
             // 
             this.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem";
-            this.DeleteToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.DeleteToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.DeleteToolStripMenuItem.Text = "Delete";
             this.DeleteToolStripMenuItem.Click += new System.EventHandler(this.DeleteToolStripMenuItem_Click);
             // 
             // RenameToolStripMenuItem
             // 
             this.RenameToolStripMenuItem.Name = "RenameToolStripMenuItem";
-            this.RenameToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.RenameToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.RenameToolStripMenuItem.Text = "Rename";
             this.RenameToolStripMenuItem.Click += new System.EventHandler(this.RenameToolStripMenuItem_Click);
             // 
             // CloseToolStripMenuItem
             // 
             this.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem";
-            this.CloseToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.CloseToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.CloseToolStripMenuItem.Text = "Close";
             this.CloseToolStripMenuItem.Click += new System.EventHandler(this.CloseToolStripMenuItem_Click);
             // 
@@ -196,34 +196,34 @@
             this.PasteToolStripMenuItem,
             this.SellectAllCtrlAToolStripMenuItem});
             this.EditToolStripMenuItem.Name = "EditToolStripMenuItem";
-            this.EditToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.EditToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.EditToolStripMenuItem.Text = "Edit";
             // 
             // CutCtrlXToolStripMenuItem
             // 
             this.CutCtrlXToolStripMenuItem.Name = "CutCtrlXToolStripMenuItem";
-            this.CutCtrlXToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.CutCtrlXToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.CutCtrlXToolStripMenuItem.Text = "Cut                       Ctrl+X";
             this.CutCtrlXToolStripMenuItem.Click += new System.EventHandler(this.CutCtrlXToolStripMenuItem_Click);
             // 
             // CopyCtrlCToolStripMenuItem
             // 
             this.CopyCtrlCToolStripMenuItem.Name = "CopyCtrlCToolStripMenuItem";
-            this.CopyCtrlCToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.CopyCtrlCToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.CopyCtrlCToolStripMenuItem.Text = "Copy                    Ctrl+C";
             this.CopyCtrlCToolStripMenuItem.Click += new System.EventHandler(this.CopyCtrlCToolStripMenuItem_Click);
             // 
             // PasteToolStripMenuItem
             // 
             this.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem";
-            this.PasteToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.PasteToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.PasteToolStripMenuItem.Text = "Paste                    Ctrl+V";
             this.PasteToolStripMenuItem.Click += new System.EventHandler(this.PasteToolStripMenuItem_Click);
             // 
             // SellectAllCtrlAToolStripMenuItem
             // 
             this.SellectAllCtrlAToolStripMenuItem.Name = "SellectAllCtrlAToolStripMenuItem";
-            this.SellectAllCtrlAToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.SellectAllCtrlAToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.SellectAllCtrlAToolStripMenuItem.Text = "Select All            Ctrl+A";
             this.SellectAllCtrlAToolStripMenuItem.Click += new System.EventHandler(this.SellectAllCtrlAToolStripMenuItem_Click);
             // 
@@ -232,13 +232,13 @@
             this.ViewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.RefreshToolStripMenuItem});
             this.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem";
-            this.ViewToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.ViewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.ViewToolStripMenuItem.Text = "View";
             // 
             // RefreshToolStripMenuItem
             // 
             this.RefreshToolStripMenuItem.Name = "RefreshToolStripMenuItem";
-            this.RefreshToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.RefreshToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.RefreshToolStripMenuItem.Text = "Refresh";
             this.RefreshToolStripMenuItem.Click += new System.EventHandler(this.RefreshToolStripMenuItem_Click);
             // 
@@ -248,19 +248,19 @@
             this.HelpToolStripMenuItem1,
             this.AboutWindows95ToolStripMenuItem});
             this.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem";
-            this.HelpToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.HelpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.HelpToolStripMenuItem.Text = "Help";
             // 
             // HelpToolStripMenuItem1
             // 
             this.HelpToolStripMenuItem1.Name = "HelpToolStripMenuItem1";
-            this.HelpToolStripMenuItem1.Size = new System.Drawing.Size(188, 22);
+            this.HelpToolStripMenuItem1.Size = new System.Drawing.Size(174, 22);
             this.HelpToolStripMenuItem1.Text = "Help Topics";
             // 
             // AboutWindows95ToolStripMenuItem
             // 
             this.AboutWindows95ToolStripMenuItem.Name = "AboutWindows95ToolStripMenuItem";
-            this.AboutWindows95ToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.AboutWindows95ToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.AboutWindows95ToolStripMenuItem.Text = "About Windows 95";
             this.AboutWindows95ToolStripMenuItem.Click += new System.EventHandler(this.AboutWindows95ToolStripMenuItem_Click);
             // 
