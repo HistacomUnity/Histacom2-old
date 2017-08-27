@@ -33,6 +33,7 @@
             this.vmModeTimer = new System.Windows.Forms.Timer(this.components);
             this.program = new System.Windows.Forms.Panel();
             this.programContent = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.VM_Height = new System.Windows.Forms.NumericUpDown();
             this.VM_Width = new System.Windows.Forms.NumericUpDown();
@@ -56,9 +57,9 @@
             this.bottomleftcorner = new System.Windows.Forms.Panel();
             this.topleftcorner = new System.Windows.Forms.Panel();
             this.updateText = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.program.SuspendLayout();
             this.programContent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VM_Height)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VM_Width)).BeginInit();
@@ -69,7 +70,6 @@
             this.ossidestartmenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.osimage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // vmModeTimer
@@ -102,6 +102,15 @@
             this.programContent.Name = "programContent";
             this.programContent.Size = new System.Drawing.Size(791, 300);
             this.programContent.TabIndex = 9;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::Histacom2.Properties.Resources.CopyrightNotice;
+            this.pictureBox3.Location = new System.Drawing.Point(162, 220);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(225, 50);
+            this.pictureBox3.TabIndex = 13;
+            this.pictureBox3.TabStop = false;
             // 
             // panel2
             // 
@@ -383,15 +392,6 @@
             this.updateText.Enabled = true;
             this.updateText.Tick += new System.EventHandler(this.updateText_Tick);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::Histacom2.Properties.Resources.CopyrightNotice;
-            this.pictureBox3.Location = new System.Drawing.Point(162, 220);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(225, 50);
-            this.pictureBox3.TabIndex = 13;
-            this.pictureBox3.TabStop = false;
-            // 
             // TitleScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -399,6 +399,7 @@
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(791, 300);
             this.Controls.Add(this.program);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TitleScreen";
             this.Tag = "ignoreFormOnTaskbar";
@@ -406,6 +407,7 @@
             this.Load += new System.EventHandler(this.TitleScreen_Load);
             this.program.ResumeLayout(false);
             this.programContent.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VM_Height)).EndInit();
@@ -419,7 +421,6 @@
             this.ossidestartmenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.osimage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
