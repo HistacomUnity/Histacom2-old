@@ -15,6 +15,7 @@ namespace Histacom2.OS.Win95.Win95Apps
 {
     public partial class WinClassicNotepad : UserControl
     {
+        public string CurrentFilePath = "";
         public WinClassicNotepad()
         {
             InitializeComponent();
@@ -84,10 +85,9 @@ namespace Histacom2.OS.Win95.Win95Apps
         {
             try
             {
-                ActivateSaveFileDialog(".txt");
+                ActivateOpenFileDialog(".txt");
                 string selectedPath = Program.OpenFileExplorerAsDialogAndReturnGivenPath();
 
-                MessageBox.Show(selectedPath);
                 if (selectedPath != "")
                 {
                     mainText.Text = ReadTextFile(selectedPath);
@@ -100,19 +100,37 @@ namespace Histacom2.OS.Win95.Win95Apps
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (CurrentFilePath == "")
+            {
+                // We aren't in a file right now
+
+                SaveAs();
+            } else {
+
+                File.Delete(CurrentFilePath);
+                SaveSystem.CreateWindowsFile(new FileInfo(CurrentFilePath).Directory.FullName, CurrentFilePath.Split('\\').Last(), mainText.Text, 12, mainText.Text.Length);
+            }
+        }
+
+        void SaveAs()
+        {
             try
             {
                 ActivateSaveFileDialog(".txt");
                 string selectedPath = Program.OpenFileExplorerAsDialogAndReturnGivenPath();
-                List<string> pathList = selectedPath.Split('\\').ToList();
-                pathList.RemoveAt(selectedPath.Split('\\').Count() - 1);
 
                 if (selectedPath != "")
                 {
-                    SaveSystem.CreateWindowsFile(pathList.ToString(), selectedPath.Split('\\').Last(), mainText.Text, 12, mainText.Text.Length);
-                }
-            } catch {
-            }               
+                    SaveSystem.CreateWindowsFile(new FileInfo(selectedPath).Directory.FullName, selectedPath.Split('\\').Last(), mainText.Text, 12, mainText.Text.Length);
+                    CurrentFilePath = selectedPath;
+                } 
+            }
+            catch { }
+        }
+
+        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveAs();
         }
     }
 }

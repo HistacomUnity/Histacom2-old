@@ -30,15 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             this.program = new System.Windows.Forms.Panel();
+            this.pnlSave = new System.Windows.Forms.Panel();
+            this.Button1 = new System.Windows.Forms.Button();
+            this.Label1 = new System.Windows.Forms.Label();
+            this.txtSave = new System.Windows.Forms.TextBox();
             this.mainView = new System.Windows.Forms.ListView();
             this.diskView = new System.Windows.Forms.TreeView();
             this.MenuStrip1 = new System.Windows.Forms.MenuStrip();
             this.FileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CreateShortcutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ShortcutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TextDocumentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.BitmapImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DeleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RenameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CloseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,19 +58,16 @@
             this.bottomrightcorner = new System.Windows.Forms.Panel();
             this.bottomleftcorner = new System.Windows.Forms.Panel();
             this.topleftcorner = new System.Windows.Forms.Panel();
-            this.pnlSave = new System.Windows.Forms.Panel();
-            this.Button1 = new System.Windows.Forms.Button();
-            this.Label1 = new System.Windows.Forms.Label();
-            this.txtSave = new System.Windows.Forms.TextBox();
             this.refresh = new System.Windows.Forms.Timer(this.components);
             this.program.SuspendLayout();
-            this.MenuStrip1.SuspendLayout();
             this.pnlSave.SuspendLayout();
+            this.MenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // program
             // 
             this.program.BackColor = System.Drawing.Color.Silver;
+            this.program.Controls.Add(this.pnlSave);
             this.program.Controls.Add(this.mainView);
             this.program.Controls.Add(this.diskView);
             this.program.Controls.Add(this.MenuStrip1);
@@ -76,12 +75,52 @@
             this.program.Controls.Add(this.bottomrightcorner);
             this.program.Controls.Add(this.bottomleftcorner);
             this.program.Controls.Add(this.topleftcorner);
-            this.program.Controls.Add(this.pnlSave);
             this.program.Dock = System.Windows.Forms.DockStyle.Fill;
             this.program.Location = new System.Drawing.Point(0, 0);
             this.program.Name = "program";
             this.program.Size = new System.Drawing.Size(704, 517);
             this.program.TabIndex = 13;
+            // 
+            // pnlSave
+            // 
+            this.pnlSave.Controls.Add(this.Button1);
+            this.pnlSave.Controls.Add(this.Label1);
+            this.pnlSave.Controls.Add(this.txtSave);
+            this.pnlSave.Location = new System.Drawing.Point(3, 474);
+            this.pnlSave.Name = "pnlSave";
+            this.pnlSave.Size = new System.Drawing.Size(850, 35);
+            this.pnlSave.TabIndex = 18;
+            this.pnlSave.Visible = false;
+            // 
+            // Button1
+            // 
+            this.Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button1.Location = new System.Drawing.Point(608, 1);
+            this.Button1.Name = "Button1";
+            this.Button1.Size = new System.Drawing.Size(75, 23);
+            this.Button1.TabIndex = 17;
+            this.Button1.Text = "Save";
+            this.Button1.UseVisualStyleBackColor = true;
+            this.Button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // Label1
+            // 
+            this.Label1.AutoSize = true;
+            this.Label1.Location = new System.Drawing.Point(3, 6);
+            this.Label1.Name = "Label1";
+            this.Label1.Size = new System.Drawing.Size(57, 13);
+            this.Label1.TabIndex = 16;
+            this.Label1.Text = "File Name:";
+            // 
+            // txtSave
+            // 
+            this.txtSave.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSave.Location = new System.Drawing.Point(60, 3);
+            this.txtSave.Name = "txtSave";
+            this.txtSave.Size = new System.Drawing.Size(542, 20);
+            this.txtSave.TabIndex = 15;
             // 
             // mainView
             // 
@@ -95,10 +134,12 @@
             this.mainView.UseCompatibleStateImageBehavior = false;
             this.mainView.AfterLabelEdit += new System.Windows.Forms.LabelEditEventHandler(this.mainView_AfterLabelEdit);
             this.mainView.DoubleClick += new System.EventHandler(this.mainView_DoubleClick);
-            this.mainView.MouseClick += new System.Windows.Forms.MouseEventHandler(this.mainView_MouseClick);
             // 
             // diskView
             // 
+            this.diskView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.diskView.Location = new System.Drawing.Point(3, 27);
             this.diskView.Name = "diskView";
             this.diskView.Size = new System.Drawing.Size(213, 444);
@@ -135,9 +176,7 @@
             // 
             this.CreateShortcutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FolderToolStripMenuItem,
-            this.ShortcutToolStripMenuItem,
-            this.TextDocumentToolStripMenuItem,
-            this.BitmapImageToolStripMenuItem});
+            this.TextDocumentToolStripMenuItem});
             this.CreateShortcutToolStripMenuItem.Name = "CreateShortcutToolStripMenuItem";
             this.CreateShortcutToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.CreateShortcutToolStripMenuItem.Text = "New";
@@ -149,23 +188,12 @@
             this.FolderToolStripMenuItem.Text = "Folder";
             this.FolderToolStripMenuItem.Click += new System.EventHandler(this.FolderToolStripMenuItem_Click);
             // 
-            // ShortcutToolStripMenuItem
-            // 
-            this.ShortcutToolStripMenuItem.Name = "ShortcutToolStripMenuItem";
-            this.ShortcutToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.ShortcutToolStripMenuItem.Text = "Shortcut";
-            // 
             // TextDocumentToolStripMenuItem
             // 
             this.TextDocumentToolStripMenuItem.Name = "TextDocumentToolStripMenuItem";
             this.TextDocumentToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.TextDocumentToolStripMenuItem.Text = "Text Document";
-            // 
-            // BitmapImageToolStripMenuItem
-            // 
-            this.BitmapImageToolStripMenuItem.Name = "BitmapImageToolStripMenuItem";
-            this.BitmapImageToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.BitmapImageToolStripMenuItem.Text = "Bitmap Image";
+            this.TextDocumentToolStripMenuItem.Click += new System.EventHandler(this.TextDocumentToolStripMenuItem_Click);
             // 
             // DeleteToolStripMenuItem
             // 
@@ -296,47 +324,6 @@
             this.topleftcorner.Size = new System.Drawing.Size(4, 4);
             this.topleftcorner.TabIndex = 1;
             // 
-            // pnlSave
-            // 
-            this.pnlSave.Controls.Add(this.Button1);
-            this.pnlSave.Controls.Add(this.Label1);
-            this.pnlSave.Controls.Add(this.txtSave);
-            this.pnlSave.Location = new System.Drawing.Point(3, 474);
-            this.pnlSave.Name = "pnlSave";
-            this.pnlSave.Size = new System.Drawing.Size(850, 35);
-            this.pnlSave.TabIndex = 18;
-            this.pnlSave.Visible = false;
-            // 
-            // Button1
-            // 
-            this.Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button1.Location = new System.Drawing.Point(608, 1);
-            this.Button1.Name = "Button1";
-            this.Button1.Size = new System.Drawing.Size(75, 23);
-            this.Button1.TabIndex = 17;
-            this.Button1.Text = "Save";
-            this.Button1.UseVisualStyleBackColor = true;
-            this.Button1.Click += new System.EventHandler(this.Button1_Click);
-            // 
-            // Label1
-            // 
-            this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(3, 6);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(57, 13);
-            this.Label1.TabIndex = 16;
-            this.Label1.Text = "File Name:";
-            // 
-            // txtSave
-            // 
-            this.txtSave.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSave.Location = new System.Drawing.Point(60, 3);
-            this.txtSave.Name = "txtSave";
-            this.txtSave.Size = new System.Drawing.Size(542, 20);
-            this.txtSave.TabIndex = 15;
-            // 
             // refresh
             // 
             this.refresh.Interval = 15000;
@@ -352,10 +339,10 @@
             this.Load += new System.EventHandler(this.WinClassicWindowsExplorer_Load);
             this.program.ResumeLayout(false);
             this.program.PerformLayout();
-            this.MenuStrip1.ResumeLayout(false);
-            this.MenuStrip1.PerformLayout();
             this.pnlSave.ResumeLayout(false);
             this.pnlSave.PerformLayout();
+            this.MenuStrip1.ResumeLayout(false);
+            this.MenuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -368,9 +355,7 @@
         internal System.Windows.Forms.ToolStripMenuItem FileToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem CreateShortcutToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem FolderToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem ShortcutToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem TextDocumentToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem BitmapImageToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem DeleteToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem RenameToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem CloseToolStripMenuItem;
