@@ -243,18 +243,28 @@ namespace Histacom2.OS.Win95.Win95Apps
                     case 1:
                         WinClassicNotepad np = new WinClassicNotepad();
                         np.mainText.Text = FileDialogBoxManager.ReadTextFile(fileDir);
+                        np.CurrentFilePath = fileDir;
                         WinClassic app = wm.StartWin95(np, "Notepad", Properties.Resources.Win95IconNotepad, true, true);
 
                         Program.AddTaskbarItem(app, app.Tag.ToString(), "Notepad", Properties.Resources.Win95IconNotepad);
+                        break;
+                    case 2:
+                        WinClassicWordPad wp = new WinClassicWordPad();
+                        wp.mainText.LoadFile(fileDir);
+                        wp.CurrentFilePath = fileDir;
+                        WinClassic app2 = wm.StartWin95(wp, "Wordpad", Properties.Resources.Win95IconWordpad, true, true);
 
+                        Program.AddTaskbarItem(app2, app2.Tag.ToString(), "Wordpad", Properties.Resources.Win95IconWordpad);
                         break;
                     case 12:
                         OpenApplication(FileDialogBoxManager.ReadTextFile(fileDir), fileDir);
                         break;
                 }
-            } catch {
             }
-            
+            catch
+            {
+            }
+
         }
 
         void OpenApplication(string appname, string path)
@@ -778,20 +788,7 @@ namespace Histacom2.OS.Win95.Win95Apps
 
                         // Remove the directory now from the _data.info
 
-                        FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(CurrentDirectory, "_data.info")));
-
-                        foreach (THDirInfo dir in fsfi.SubDirs)
-                        {
-                            if (dir.Name == mainView.FocusedItem.Text)
-                            {
-                                // Delete it
-
-                                fsfi.SubDirs.Remove(dir);
-                                continue;
-                            }
-                        }
-
-                        File.WriteAllText(Path.Combine(CurrentDirectory, "_data.info"), JsonConvert.SerializeObject(fsfi, Formatting.Indented));
+                        SaveSystem.RemoveSubDirFromDirectory(CurrentDirectory, mainView.FocusedItem.Text);
                     }
                     else
                     {
@@ -799,20 +796,7 @@ namespace Histacom2.OS.Win95.Win95Apps
 
                         // Remove the file now from the _data.info
 
-                        FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(CurrentDirectory, "_data.info")));
-
-                        foreach (THFileInfo file in fsfi.Files)
-                        {
-                            if (file.Name == mainView.FocusedItem.Text)
-                            {
-                                // Delete it
-
-                                fsfi.Files.Remove(file);
-                                continue;
-                            }
-                        }
-
-                        File.WriteAllText(Path.Combine(CurrentDirectory, "_data.info"), JsonConvert.SerializeObject(fsfi, Formatting.Indented));
+                        RemoveFileFromDirectory(CurrentDirectory, mainView.FocusedItem.Text);
 
                     }
 
@@ -824,6 +808,8 @@ namespace Histacom2.OS.Win95.Win95Apps
             {
                 RefreshAll();
             }
+
+            RefreshTreeNode();
         }
 
         internal static bool FileOrDirectoryExists(string path)
@@ -876,54 +862,22 @@ namespace Histacom2.OS.Win95.Win95Apps
                                 Directory.Move(Path.Combine(CurrentDirectory, OldLabelText), Path.Combine(CurrentDirectory, setText));
 
                                 File.Delete(Path.Combine(CurrentDirectory, setText, "_data.info"));
-                                SaveDirectoryInfo(CurrentDirectory, setText, false, setText, true);
+                                SaveDirectoryInfo(CurrentDirectory, setText, false, setText, true, true);
 
                                 // Rename the directory now in the _data.info
 
-                                FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(CurrentDirectory, "_data.info")));
-
-                                foreach (THDirInfo dir in fsfi.SubDirs)
-                                {
-                                    if (dir.Name == mainView.FocusedItem.Tag.ToString())
-                                    {
-                                        // Rename it
-                                        THDirInfo oldDirInfo = dir;
-                                        oldDirInfo.Name = Path.Combine(CurrentDirectory, setText);
-
-                                        fsfi.SubDirs.Remove(dir);
-                                        fsfi.SubDirs.Add(oldDirInfo);
-                                    }
-                                }
-
-                                File.Delete(Path.Combine(CurrentDirectory, "_data.info"));
-                                File.WriteAllText(Path.Combine(CurrentDirectory, "_data.info"), JsonConvert.SerializeObject(fsfi, Formatting.Indented));
+                                RenameDirectory(CurrentDirectory, OldLabelText, setText);
                             }
                             else
                             {
-                                // It was a file                                
+                                // It was a file                    
 
                                 File.Copy(Path.Combine(CurrentDirectory, OldLabelText), Path.Combine(CurrentDirectory, setText));
                                 File.Delete(Path.Combine(CurrentDirectory, OldLabelText));
 
                                 // Rename the file now in the _data.info
 
-                                FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(CurrentDirectory, "_data.info")));
-
-                                foreach (THFileInfo file in fsfi.Files)
-                                {
-                                    if (file.Name == mainView.FocusedItem.Tag.ToString())
-                                    {
-                                        // Rename it
-                                        THFileInfo oldFileInfo = file;
-                                        oldFileInfo.Name = Path.Combine(CurrentDirectory, setText);
-
-                                        fsfi.Files.Remove(file);
-                                        fsfi.Files.Add(oldFileInfo);
-                                    }
-                                }
-
-                                File.Delete(Path.Combine(CurrentDirectory, "_data.info"));
-                                File.WriteAllText(Path.Combine(CurrentDirectory, "_data.info"), JsonConvert.SerializeObject(fsfi, Formatting.Indented));
+                                RenameFile(CurrentDirectory, OldLabelText, setText);
                             }
                         }
                     }

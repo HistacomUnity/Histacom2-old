@@ -15,7 +15,7 @@ namespace Histacom2.OS.Win95.Win95Apps
 {
     public partial class WinClassicNotepad : UserControl
     {
-        string CurrentFilePath = "";
+        public string CurrentFilePath = "";
         public WinClassicNotepad()
         {
             InitializeComponent();

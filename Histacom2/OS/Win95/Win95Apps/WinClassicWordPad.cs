@@ -22,7 +22,7 @@ namespace Histacom2.OS.Win95.Win95Apps
         bool doItalic = false;
         bool doUnderline = false;
 
-        string CurrentFilePath = "";
+        public string CurrentFilePath = "";
 
         public WinClassicWordPad()
         {
