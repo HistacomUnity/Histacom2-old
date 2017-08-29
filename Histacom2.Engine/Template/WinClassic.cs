@@ -14,13 +14,13 @@ namespace Histacom2.Engine.Template
         }
 
         public Font fnt;
+        public ResizeOverlay resizer = new ResizeOverlay();
 
         public bool resizable = true;
         public bool closeDisabled = false;
         public bool isActive = true;
         public bool Resizing = false;
         public Bitmap ResizingBmp = null;
-
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int WM_SYSCOMMAND = 0x0112;
         public const int HT_CAPTION = 0x2;
@@ -74,8 +74,9 @@ namespace Histacom2.Engine.Template
         {
             if (e.Button == MouseButtons.Left)
             {
-                if (resizable) this.Size = new Size(MousePosition.X - this.Location.X, this.Size.Height);
-                this.Invalidate();
+                var toDraw = resizer.ToDraw;
+                if (resizable) toDraw.Width = MousePosition.X - this.Location.X;
+                resizer.ToDraw = toDraw;
             }
         }
 
@@ -83,9 +84,10 @@ namespace Histacom2.Engine.Template
         {
             if (e.Button == MouseButtons.Left)
             {
-                if (resizable) this.Width = ((this.Width + this.Location.X) - Cursor.Position.X);
-                if (resizable)this.Location = new Point(Cursor.Position.X, this.Location.Y);
-                this.Invalidate();
+                var toDraw = resizer.ToDraw;
+                if (resizable) toDraw.Width = ((this.Width + this.Location.X) - Cursor.Position.X);
+                if (resizable) toDraw.X = Cursor.Position.X;
+                resizer.ToDraw = toDraw;
             }
         }
 
@@ -93,8 +95,10 @@ namespace Histacom2.Engine.Template
         {
             if (e.Button == MouseButtons.Left)
             {
-                if (resizable) this.Size = new Size(this.Size.Width, MousePosition.Y - this.Location.Y);
-                this.Invalidate();
+                var toDraw = resizer.ToDraw;
+                if (resizable) toDraw.Y = this.Location.Y;
+                if (resizable) toDraw.Height = ((toDraw.Height + toDraw.Top) + Cursor.Position.Y);
+                resizer.ToDraw = toDraw;
             }
         }
 
@@ -102,8 +106,10 @@ namespace Histacom2.Engine.Template
         {
             if (e.Button == MouseButtons.Left)
             {
-                if (resizable) this.Size = new Size(MousePosition.X - this.Location.X, MousePosition.Y - this.Location.Y);
-                this.Invalidate();
+                var toDraw = resizer.ToDraw;
+                if (resizable) toDraw.Width = MousePosition.X - this.Location.X;
+                if (resizable) toDraw.Height = MousePosition.Y - this.Location.Y;
+                resizer.ToDraw = toDraw;
             }
         }
 
@@ -111,10 +117,11 @@ namespace Histacom2.Engine.Template
         {
             if (e.Button == MouseButtons.Left)
             {
-                if (resizable) this.Width = ((this.Width + this.Location.X) - Cursor.Position.X);
-                if (resizable) this.Height = (Cursor.Position.Y - this.Location.Y);
-                if (resizable) this.Location = new Point(Cursor.Position.X, this.Location.Y);
-                this.Invalidate();
+                var toDraw = resizer.ToDraw;
+                if (resizable) toDraw.Width = ((toDraw.Width + toDraw.Location.X) - Cursor.Position.X);
+                if (resizable) toDraw.Height = Cursor.Position.Y - this.Location.Y;
+                if (resizable) toDraw.X = Cursor.Position.X;
+                resizer.ToDraw = toDraw;
             }
         }
 
@@ -122,11 +129,12 @@ namespace Histacom2.Engine.Template
         {
             if (e.Button == MouseButtons.Left)
             {
-                if (resizable) this.Width = ((this.Width + this.Location.X) - Cursor.Position.X);
-                if (resizable) this.Location = new Point(Cursor.Position.X, this.Location.Y);
-                if (resizable) this.Height = ((this.Height + this.Location.Y) - Cursor.Position.Y);
-                if (resizable) this.Location = new Point(this.Location.X, Cursor.Position.Y);
-                this.Invalidate();
+                var toDraw = resizer.ToDraw;
+                if (resizable) toDraw.Width = ((this.Width + this.Location.X) - Cursor.Position.X);
+                if (resizable) toDraw.X = Cursor.Position.X;
+                if (resizable) toDraw.Height = ((this.Height + this.Location.Y) - Cursor.Position.Y);
+                if (resizable) toDraw.Y = Cursor.Position.Y;
+                resizer.ToDraw = toDraw;
             }
         }
 
@@ -134,9 +142,10 @@ namespace Histacom2.Engine.Template
         {
             if(e.Button == MouseButtons.Left)
             {
-                if(resizable) this.Height = ((this.Height + this.Location.Y) - Cursor.Position.Y);
-                if(resizable) this.Location = new Point(this.Location.X, Cursor.Position.Y);
-                this.Invalidate();
+                var toDraw = resizer.ToDraw;
+                if (resizable) toDraw.Height = ((toDraw.Height + toDraw.Top) - Cursor.Position.Y);
+                if (resizable) toDraw.Y = Cursor.Position.Y;
+                resizer.ToDraw = toDraw;
             }
         }
 
@@ -144,10 +153,12 @@ namespace Histacom2.Engine.Template
         {
             if (e.Button == MouseButtons.Left)
             {
-                if (resizable) this.Width = (Cursor.Position.X - this.Location.X);
-                if (resizable) this.Height = ((this.Location.Y - Cursor.Position.Y) + this.Height);
-                if (resizable) this.Location = new Point(this.Location.X, Cursor.Position.Y);
-                this.Update();
+                var toDraw = resizer.ToDraw;
+                if (resizable) toDraw.Width = (Cursor.Position.X - toDraw.X);
+                if (resizable) toDraw.Height = ((toDraw.Height + toDraw.Top) - Cursor.Position.Y);
+                if (resizable) toDraw.X = Cursor.Position.X;
+                if (resizable) toDraw.Y = Cursor.Position.Y;
+                resizer.ToDraw = toDraw;
             }
         }
 
@@ -158,6 +169,15 @@ namespace Histacom2.Engine.Template
                 MessageBox.Show("HIT IT");
                 e.Graphics.DrawImage(ResizingBmp, 0, 0, this.Width, this.Height);
             }
+        }
+
+        private void border_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.Bounds = resizer.ToDraw;
+            resizer.tmrMove.Stop();
+            resizer.Close();
+
+            resizer = new ResizeOverlay();
         }
 
         private void border_MouseDown(object sender, MouseEventArgs e)
@@ -174,22 +194,16 @@ namespace Histacom2.Engine.Template
             else if (right.ClientRectangle.Contains(cursor)) SendMessage(Handle, WM_SYSCOMMAND, 0xF002, 0);
             else if (bottom.ClientRectangle.Contains(cursor)) SendMessage(Handle, WM_SYSCOMMAND, 0xF006, 0);
 
-            /* Now we need to fix this weird artificating!
-            To lempamo: This is probably the best way I can think of the fix this
-            I can take a picture of the window as it is and then just draw that
-            and once you mouseup I will go back to the actual form
-            I'll have a boolean called Resizing which tells the form on paint to just draw the overlay!
-            */
+            // Now we need to fix this weird artificating!
 
-            var screen = Screen.PrimaryScreen;
+            resizer.tmrMove.Start();
+            resizer.Show();
 
-            using (var bitmap = new Bitmap(this.Bounds.Width, this.Bounds.Height))
-            using (var graphics = Graphics.FromImage(bitmap))
-            {
-                graphics.CopyFromScreen(new Point(this.Bounds.Left, this.Bounds.Top), new Point(0, 0), this.Bounds.Size);
-                Resizing = true;
-                ResizingBmp = bitmap;
-            }
+            resizer.ToDraw = this.Bounds;
+
+            // However this defocuses the window which we don't want
+
+            WinClassic_Activated(null, null); 
         }
 
         public bool max = false;
