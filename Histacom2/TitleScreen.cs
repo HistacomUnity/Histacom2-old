@@ -207,8 +207,6 @@ namespace Histacom2
                 } catch {
 
                 }
-                
-
 
                 // If VM Mode is not enabled
                 if (vm_mode.Checked != true)

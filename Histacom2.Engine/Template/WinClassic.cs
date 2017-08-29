@@ -18,6 +18,8 @@ namespace Histacom2.Engine.Template
         public bool resizable = true;
         public bool closeDisabled = false;
         public bool isActive = true;
+        public bool Resizing = false;
+        public Bitmap ResizingBmp = null;
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int WM_SYSCOMMAND = 0x0112;
@@ -73,6 +75,7 @@ namespace Histacom2.Engine.Template
             if (e.Button == MouseButtons.Left)
             {
                 if (resizable) this.Size = new Size(MousePosition.X - this.Location.X, this.Size.Height);
+                this.Invalidate();
             }
         }
 
@@ -82,6 +85,7 @@ namespace Histacom2.Engine.Template
             {
                 if (resizable) this.Width = ((this.Width + this.Location.X) - Cursor.Position.X);
                 if (resizable)this.Location = new Point(Cursor.Position.X, this.Location.Y);
+                this.Invalidate();
             }
         }
 
@@ -90,6 +94,7 @@ namespace Histacom2.Engine.Template
             if (e.Button == MouseButtons.Left)
             {
                 if (resizable) this.Size = new Size(this.Size.Width, MousePosition.Y - this.Location.Y);
+                this.Invalidate();
             }
         }
 
@@ -98,6 +103,7 @@ namespace Histacom2.Engine.Template
             if (e.Button == MouseButtons.Left)
             {
                 if (resizable) this.Size = new Size(MousePosition.X - this.Location.X, MousePosition.Y - this.Location.Y);
+                this.Invalidate();
             }
         }
 
@@ -108,6 +114,7 @@ namespace Histacom2.Engine.Template
                 if (resizable) this.Width = ((this.Width + this.Location.X) - Cursor.Position.X);
                 if (resizable) this.Height = (Cursor.Position.Y - this.Location.Y);
                 if (resizable) this.Location = new Point(Cursor.Position.X, this.Location.Y);
+                this.Invalidate();
             }
         }
 
@@ -119,6 +126,7 @@ namespace Histacom2.Engine.Template
                 if (resizable) this.Location = new Point(Cursor.Position.X, this.Location.Y);
                 if (resizable) this.Height = ((this.Height + this.Location.Y) - Cursor.Position.Y);
                 if (resizable) this.Location = new Point(this.Location.X, Cursor.Position.Y);
+                this.Invalidate();
             }
         }
 
@@ -128,6 +136,7 @@ namespace Histacom2.Engine.Template
             {
                 if(resizable) this.Height = ((this.Height + this.Location.Y) - Cursor.Position.Y);
                 if(resizable) this.Location = new Point(this.Location.X, Cursor.Position.Y);
+                this.Invalidate();
             }
         }
 
@@ -138,6 +147,48 @@ namespace Histacom2.Engine.Template
                 if (resizable) this.Width = (Cursor.Position.X - this.Location.X);
                 if (resizable) this.Height = ((this.Location.Y - Cursor.Position.Y) + this.Height);
                 if (resizable) this.Location = new Point(this.Location.X, Cursor.Position.Y);
+                this.Update();
+            }
+        }
+
+        private void WinClassic_Paint(object sender, PaintEventArgs e)
+        {
+            if (Resizing)
+            {
+                MessageBox.Show("HIT IT");
+                e.Graphics.DrawImage(ResizingBmp, 0, 0, this.Width, this.Height);
+            }
+        }
+
+        private void border_MouseDown(object sender, MouseEventArgs e)
+        {
+            var cursor = this.PointToClient(Cursor.Position);
+
+            if (topleftcorner.ClientRectangle.Contains(cursor)) SendMessage(Handle, WM_SYSCOMMAND, 0xF004, 0);
+            else if (toprightcorner.ClientRectangle.Contains(cursor)) SendMessage(Handle, WM_SYSCOMMAND, 0xF005, 0);
+            else if (bottomleftcorner.ClientRectangle.Contains(cursor)) SendMessage(Handle, WM_SYSCOMMAND, 0xF007, 0);
+            else if (bottomrightcorner.ClientRectangle.Contains(cursor)) SendMessage(Handle, WM_SYSCOMMAND, 0xF008, 0);
+
+            else if (top.ClientRectangle.Contains(cursor)) SendMessage(Handle, WM_SYSCOMMAND, 0xF003, 0);
+            else if (left.ClientRectangle.Contains(cursor)) SendMessage(Handle, WM_SYSCOMMAND, 0xF001, 0);
+            else if (right.ClientRectangle.Contains(cursor)) SendMessage(Handle, WM_SYSCOMMAND, 0xF002, 0);
+            else if (bottom.ClientRectangle.Contains(cursor)) SendMessage(Handle, WM_SYSCOMMAND, 0xF006, 0);
+
+            /* Now we need to fix this weird artificating!
+            To lempamo: This is probably the best way I can think of the fix this
+            I can take a picture of the window as it is and then just draw that
+            and once you mouseup I will go back to the actual form
+            I'll have a boolean called Resizing which tells the form on paint to just draw the overlay!
+            */
+
+            var screen = Screen.PrimaryScreen;
+
+            using (var bitmap = new Bitmap(this.Bounds.Width, this.Bounds.Height))
+            using (var graphics = Graphics.FromImage(bitmap))
+            {
+                graphics.CopyFromScreen(new Point(this.Bounds.Left, this.Bounds.Top), new Point(0, 0), this.Bounds.Size);
+                Resizing = true;
+                ResizingBmp = bitmap;
             }
         }
 
@@ -215,21 +266,6 @@ namespace Histacom2.Engine.Template
         {
             var c = (Button)sender;
             c.UseVisualStyleBackColor = true;
-        }
-
-        private void border_MouseDown(object sender, EventArgs e)
-        {
-            var cursor = this.PointToClient(Cursor.Position);
-
-            if (topleftcorner.ClientRectangle.Contains(cursor)) SendMessage(Handle, WM_SYSCOMMAND, 0xF004, 0);
-            else if (toprightcorner.ClientRectangle.Contains(cursor)) SendMessage(Handle, WM_SYSCOMMAND, 0xF005, 0);
-            else if (bottomleftcorner.ClientRectangle.Contains(cursor)) SendMessage(Handle, WM_SYSCOMMAND, 0xF007, 0);
-            else if (bottomrightcorner.ClientRectangle.Contains(cursor)) SendMessage(Handle, WM_SYSCOMMAND, 0xF008, 0);
-
-            else if (top.ClientRectangle.Contains(cursor)) SendMessage(Handle, WM_SYSCOMMAND, 0xF003, 0);
-            else if (left.ClientRectangle.Contains(cursor)) SendMessage(Handle, WM_SYSCOMMAND, 0xF001, 0);
-            else if (right.ClientRectangle.Contains(cursor)) SendMessage(Handle, WM_SYSCOMMAND, 0xF002, 0);
-            else if (bottom.ClientRectangle.Contains(cursor)) SendMessage(Handle, WM_SYSCOMMAND, 0xF006, 0);
         }
     }
 }

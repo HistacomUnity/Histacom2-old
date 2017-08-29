@@ -254,11 +254,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(300, 300);
             this.Controls.Add(this.program);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "WinClassic";
             this.Text = "WinClassic";
             this.Activated += new System.EventHandler(this.WinClassic_Activated);
             this.Deactivate += new System.EventHandler(this.WinClassic_Deactivate);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.WinClassic_Paint);
             this.program.ResumeLayout(false);
             this.programtopbar.ResumeLayout(false);
             this.programtopbar.PerformLayout();
