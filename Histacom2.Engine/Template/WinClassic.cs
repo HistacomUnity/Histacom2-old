@@ -97,7 +97,7 @@ namespace Histacom2.Engine.Template
             {
                 var toDraw = resizer.ToDraw;
                 if (resizable) toDraw.Y = this.Location.Y;
-                if (resizable) toDraw.Height = ((toDraw.Height + toDraw.Top) + Cursor.Position.Y);
+                if (resizable) toDraw.Height = MousePosition.Y - this.Location.Y;
                 resizer.ToDraw = toDraw;
             }
         }
@@ -154,9 +154,8 @@ namespace Histacom2.Engine.Template
             if (e.Button == MouseButtons.Left)
             {
                 var toDraw = resizer.ToDraw;
-                if (resizable) toDraw.Width = (Cursor.Position.X - toDraw.X);
+                if (resizable) toDraw.Width = MousePosition.X - this.Location.X;
                 if (resizable) toDraw.Height = ((toDraw.Height + toDraw.Top) - Cursor.Position.Y);
-                if (resizable) toDraw.X = Cursor.Position.X;
                 if (resizable) toDraw.Y = Cursor.Position.Y;
                 resizer.ToDraw = toDraw;
             }
