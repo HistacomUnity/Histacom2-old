@@ -54,6 +54,12 @@
     <Compile Include="Paintbrush.cs" />
     <Compile Include="SaveSystem.cs" />
     <Compile Include="TaskBarController.cs" />
+    <Compile Include="Template\ResizeOverlay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\ResizeOverlay.Designer.cs">
+      <DependentUpon>ResizeOverlay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Template\Win9XBSOD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\ResizeOverlay.resx">
+      <DependentUpon>ResizeOverlay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template\Win9XBSOD.resx">
       <DependentUpon>Win9XBSOD.cs</DependentUpon>
