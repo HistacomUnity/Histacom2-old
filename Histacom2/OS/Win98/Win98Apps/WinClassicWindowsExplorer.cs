@@ -11,6 +11,7 @@ using static Histacom2.Engine.SaveSystem;
 using System.IO;
 using Histacom2.Engine;
 using Newtonsoft.Json;
+using System.Diagnostics;
 using Histacom2.Engine.Template;
 
 namespace Histacom2.OS.Win95.Win95Apps
@@ -54,7 +55,30 @@ namespace Histacom2.OS.Win95.Win95Apps
             diskView.ImageList.Images.Add(Properties.Resources.Win95NetworkIcon);
             diskView.ImageList.Images.Add(Properties.Resources.Win95RecycleIcon);
 
+            mainView.LargeImageList = new ImageList();
+            mainView.LargeImageList.ImageSize = new Size(32, 32);
+
+            mainView.LargeImageList.Images.AddRange(new Bitmap[] { Properties.Resources.Win95Computer, // 0
+                                                    Properties.Resources.WinClassicFolder,
+                                                    Properties.Resources.WinClassicIE4,
+                                                    Properties.Resources.WinClassicInbox,
+                                                    Properties.Resources.WinClassicMSN,
+                                                    Properties.Resources.WinClassicNetworking, // 5
+                                                    Properties.Resources.WinClassicOutlook,
+                                                    Properties.Resources.WinClassicRecycle,
+                                                    Properties.Resources.Win95File,
+                                                    Properties.Resources.WinClassicFolder,
+                                                    Properties.Resources.WinClassicApp, // 10
+                                                    Properties.Resources.WinClassicSetup,
+                                                    Properties.Resources.WinClassicNotepad,
+                                                    Properties.Resources.WinClassicCalcBig,
+                                                    Properties.Resources.WinClassicNotepadBig,
+                                                    Properties.Resources.WinClassicRegedit, // 15
+                                                    Properties.Resources.WinClassicWordpad,
+                                                    Properties.Resources.WinClassicRtfFile});
+
             program.BringToFront();
+
 
             //diskView.Items.Add("My Computer", 0);
             Application.DoEvents();
@@ -123,81 +147,54 @@ namespace Histacom2.OS.Win95.Win95Apps
         }
 
         void RefreshAll() {
-            try {
+            //try {
+            this.mainView.Items.Clear();
 
-                this.mainView.Items.Clear();
+            foreach (string str in Directory.GetDirectories(CurrentDirectory))
+            {
+                string label = ReadDataFile(str, false);
+                ListViewItem itm = this.mainView.Items.Add(label ?? Path.GetFileName(str));
+                itm.ImageIndex = 1;
+                itm.Tag = str;
+            }
+            foreach (string str in Directory.GetFiles(CurrentDirectory))
+            {
+                ListViewItem itm;
 
-                // Update the WebView
-
-                if (CurrentDirectory == SaveSystem.ProfileMyComputerDirectory)
+                if (IsFileOpenDialog || IsFileSaveDialog)
                 {
-                    pictureBox1.Image = Properties.Resources.Win95HardDiskIcon;
-                } else if (CurrentDirectory == SaveSystem.ProfileFileSystemDirectory) {
-                    pictureBox1.Image = Properties.Resources.Win95Computer;
-                } else {
-                    pictureBox1.Image = Properties.Resources.WinClassicFolder;
-                }
-
-                txtInfoTip.Show();
-                InfoDesc.Hide();
-
-                string weblabel = ReadDataFile(CurrentDirectory, false);
-
-                txtInfoTitle.Text = weblabel ?? new FileInfo(CurrentDirectory).Name;
-                foreach (string str in Directory.GetDirectories(CurrentDirectory))
-                {
-                    string label = ReadDataFile(str, false);
-                    ListViewItem itm = this.mainView.Items.Add(label ?? Path.GetFileName(str));
-                    itm.ImageKey = str;
-                }
-                foreach (string str in Directory.GetFiles(CurrentDirectory))
-                {
-                    // Get the app Icon
-
-                    //int AppIcon = 2;
-
-                    //switch (new FileInfo(str).Extension)
-                    //{
-                    //    case ".exe":
-                    //        string contents;
-
-                    //        contents = File.ReadAllText(str);
-
-                    //        switch (contents.ToLower())
-                    //        {
-                    //            case "calc":
-                    //                AppIcon = 3;
-                    //                break;
-                    //            case "explorer":
-                    //                AppIcon = 4;
-                    //                break;
-                    //        }
-                    //        break;
-                    //}
-
-
-
-                    if (IsFileOpenDialog == true || IsFileSaveDialog == true)
+                    if (!(Path.GetFileName(str) == "_data.info"))
                     {
-                        if (!(Path.GetFileName(str) == "_data.info"))
+                        if (new FileInfo(str).Extension == onlyViewExtension)
                         {
-                            if (new FileInfo(str).Extension == onlyViewExtension)
-                            {
-                                ListViewItem itm = this.mainView.Items.Add(Path.GetFileName(str));
-                                itm.Tag = str;
-                            }
-                        }
-                    } else {
-                        if (!(Path.GetFileName(str) == "_data.info")) {
-                            ListViewItem itm = this.mainView.Items.Add(Path.GetFileName(str));
+                            itm = this.mainView.Items.Add(Path.GetFileName(str));
                             itm.Tag = str;
                         }
+                        else break;
                     }
+                    else break;
                 }
-            } catch (Exception ex) {
-                //wm.StartInfobox95("Exploring - C:", "Error with the file explorer \n" + ex.Message, Properties.Resources.Win95Info); add illegal operation dialog here later
-                ((Form)this.TopLevelControl).Close();
+                else
+                {
+                    if (!(Path.GetFileName(str) == "_data.info"))
+                    {
+                        itm = this.mainView.Items.Add(Path.GetFileName(str));
+                        itm.Tag = str;
+                    }
+                    else break;
+                }
+                FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(CurrentDirectory, "_data.info")));
+                foreach (var item in fsfi.Files)
+                {
+                    Debug.Print(item.Name + " " + Path.GetFileName(str));
+                    if (item.Name == Path.GetFileName(str)) { itm.ImageIndex = item.FileIcon; break; }
+                }
             }
+            /*
+        } catch (Exception ex) {
+            //wm.StartInfobox95("Exploring - C:", "Error with the file explorer \n" + ex.Message, Properties.Resources.Win95Info); add illegal operation dialog here later
+            ((Form)this.TopLevelControl).Close();
+        }*/
         }
 
         void RefreshTreeNode()
@@ -246,30 +243,40 @@ namespace Histacom2.OS.Win95.Win95Apps
                     case 1:
                         WinClassicNotepad np = new WinClassicNotepad();
                         np.mainText.Text = FileDialogBoxManager.ReadTextFile(fileDir);
+                        np.CurrentFilePath = fileDir;
                         WinClassic app = wm.StartWin95(np, "Notepad", Properties.Resources.Win95IconNotepad, true, true);
 
                         Program.AddTaskbarItem(app, app.Tag.ToString(), "Notepad", Properties.Resources.Win95IconNotepad);
+                        break;
+                    case 2:
+                        WinClassicWordPad wp = new WinClassicWordPad();
+                        wp.mainText.LoadFile(fileDir);
+                        wp.CurrentFilePath = fileDir;
+                        WinClassic app2 = wm.StartWin95(wp, "Wordpad", Properties.Resources.Win95IconWordpad, true, true);
 
+                        Program.AddTaskbarItem(app2, app2.Tag.ToString(), "Wordpad", Properties.Resources.Win95IconWordpad);
                         break;
                     case 12:
-                        OpenApplication(FileDialogBoxManager.ReadTextFile(fileDir));
+                        OpenApplication(FileDialogBoxManager.ReadTextFile(fileDir), fileDir);
                         break;
                 }
-            } catch {
             }
-            
+            catch
+            {
+            }
+
         }
 
-        void OpenApplication(string appname)
+        void OpenApplication(string appname, string path)
         {
             switch (appname.ToLower())
-            {               
+            {
                 case "explorer":
-                    Engine.Template.WinClassic app = wm.StartWin95(new Win95WindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
+                    WinClassic app = wm.StartWin95(new Win95WindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
                     Program.AddTaskbarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
                     break;
                 case "calc":
-                    Engine.Template.WinClassic appCalc = wm.StartWin95(new WinClassicCalculator(), "Calculator", Properties.Resources.WinClassicCalc, true, true);
+                    WinClassic appCalc = wm.StartWin95(new WinClassicCalculator(), "Calculator", Properties.Resources.WinClassicCalc, true, true);
                     Program.AddTaskbarItem(appCalc, appCalc.Tag.ToString(), "Calculator", Properties.Resources.WinClassicCalc);
 
                     Program.nonimportantapps.Add(appCalc);
@@ -277,30 +284,68 @@ namespace Histacom2.OS.Win95.Win95Apps
                     Program.nonimportantapps[Program.nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(Program.NonImportantApp_Closing);
 
                     break;
+                case "notepad":
+                    WinClassic appNP = wm.StartWin95(new WinClassicNotepad(), "Notepad", Properties.Resources.Win95IconNotepad_2, true, true);
+                    Program.AddTaskbarItem(appNP, appNP.Tag.ToString(), "Notepad", Properties.Resources.Win95IconNotepad_2);
+
+                    Program.nonimportantapps.Add(appNP);
+                    Program.nonimportantapps[Program.nonimportantapps.Count - 1].BringToFront();
+                    Program.nonimportantapps[Program.nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(Program.NonImportantApp_Closing);
+
+                    break;
                 case "wordpad":
-                    Engine.Template.WinClassic appWP = wm.StartWin95(new WinClassicWordPad(), "Wordpad", Properties.Resources.WinClassicWordpad, true, true);
-                    Program.AddTaskbarItem(appWP, appWP.Tag.ToString(), "Wordpad", Properties.Resources.WinClassicWordpad);
+                    WinClassic appWP = wm.StartWin95(new WinClassicWordPad(), "Wordpad", Properties.Resources.Win95WordpadIcon2, true, true);
+                    Program.AddTaskbarItem(appWP, appWP.Tag.ToString(), "Wordpad", Properties.Resources.Win95WordpadIcon2);
 
                     Program.nonimportantapps.Add(appWP);
                     Program.nonimportantapps[Program.nonimportantapps.Count - 1].BringToFront();
                     Program.nonimportantapps[Program.nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(Program.NonImportantApp_Closing);
 
                     break;
+                case "ie":
+                    if (TitleScreen.frm95.ie != null) { wm.StartInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", InfoboxType.Warning, InfoboxButtons.OK); return; }
+                    TitleScreen.frm95.ie = wm.StartWin95(new WinClassicIE3(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
+                    Program.AddTaskbarItem(TitleScreen.frm95.ie, TitleScreen.frm95.ie.Tag.ToString(), "Internet Explorer 4", Properties.Resources.Win95IconIE4);
+                    TitleScreen.frm95.ie.BringToFront();
+                    TitleScreen.frm95.ie.FormClosing += new FormClosingEventHandler(TitleScreen.frm95.InternetExplorer4_Closing);
+
+                    break;
+                case "web chat setup":
+                    Win95Installer inst = new Win95Installer("Web Chat 1998");
+                    inst.InstallCompleted += (sendr, args) => TitleScreen.frm95.WebChatToolStripMenuItem.Visible = true;
+                    WinClassic appInstaller = wm.StartWin95(inst, "Web Chat Setup", null, true, true);
+                    Program.AddTaskbarItem(appInstaller, appInstaller.Tag.ToString(), "Web Chat Setup", null);
+                    appInstaller.BringToFront();
+
+                    break;
+                case "ftp client setup":
+                    Win95Installer instFtp = new Win95Installer("FTP Client");
+                    instFtp.InstallCompleted += (sendr, args) => TitleScreen.frm95.FTPClientToolStripMenuItem.Visible = true;
+                    WinClassic appFtp = wm.StartWin95(instFtp, "FTP Client Setup", null, true, true);
+                    Program.AddTaskbarItem(appFtp, appFtp.Tag.ToString(), "FTP Client Setup", null);
+                    appFtp.BringToFront();
+
+                    break;
+                case "time distorter setup":
+                    Win95Installer instTd = new Win95Installer("Time Distorter 0.1");
+                    instTd.InstallCompleted += (sendr, args) =>
+                    {
+                        TitleScreen.frm95.TimeDistorterToolStripMenuItem.Visible = true;
+                    };
+                    WinClassic appTd = wm.StartWin95(instTd, "Time Distorter Setup", null, true, true);
+                    Program.AddTaskbarItem(appTd, appTd.Tag.ToString(), "Time Distorter Setup", null);
+                    appTd.BringToFront();
+
+                    break;
                 case "iebrokeninstaller":
                     wm.StartInfobox95("Internet Explorer Installer", "Installation Failed: The INF file was not found", InfoboxType.Error, InfoboxButtons.OK);
 
                     break;
-                case "addressbook":
-                    WinClassic appAdBk = wm.StartWin95(new WinClassicAddressBook(), "Address Book", Properties.Resources.WinClassicAddressBook, true, true);
-                    Program.AddTaskbarItem(appAdBk, appAdBk.Tag.ToString(), "Address Book", Properties.Resources.WinClassicAddressBook);
-
-                    Program.nonimportantapps.Add(appAdBk);
-                    Program.nonimportantapps[Program.nonimportantapps.Count - 1].BringToFront();
-                    Program.nonimportantapps[Program.nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(Program.NonImportantApp_Closing);
-
+                default:
+                    wm.StartInfobox95(path.Replace(ProfileMyComputerDirectory, "C:"), $"{path.Replace(ProfileMyComputerDirectory, "C:")} is not a valid Win32 application.", InfoboxType.Error, InfoboxButtons.OK);
                     break;
             }
-            }
+        }
 
         string ReturnType(string extension) {
             string returnVal = "";
@@ -602,33 +647,34 @@ namespace Histacom2.OS.Win95.Win95Apps
         {
             try
             {
-                if (mainView.FocusedItem.Tag == null)
+                if (Directory.Exists(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text)))
                 { // If it isn't a file
-                    GoToDir(Path.Combine(CurrentDirectory, mainView.FocusedItem.ImageKey.ToString()));
+                    if (mainView.FocusedItem.Text == "C:")
+                        GoToDir(Path.Combine(CurrentDirectory, "CDrive"));
+                    else
+                        GoToDir(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text));
                 }
                 else
                 { // If it is a file
-                        if (IsFileOpenDialog == true || IsFileSaveDialog == true)
+                    if (IsFileOpenDialog == true || IsFileSaveDialog == true)
+                    {
+                        if (new FileInfo(Path.Combine(CurrentDirectory, txtSave.Text)).Extension == onlyViewExtension)
                         {
-                            if (new FileInfo(Path.Combine(CurrentDirectory, txtSave.Text)).Extension == onlyViewExtension)
-                            {
-                                Program.WindowsExplorerReturnPath = Path.Combine(CurrentDirectory, txtSave.Text);
-                            }
-
-
-                            FileDialogBoxManager.IsInOpenDialog = false;
-                            FileDialogBoxManager.IsInSaveDialog = false;
-
-                            ((Form)this.TopLevelControl).Close();
+                            Program.WindowsExplorerReturnPath = Path.Combine(CurrentDirectory, txtSave.Text);
                         }
-                        else
-                        {
-                            OpenFile(mainView.FocusedItem.Tag.ToString());
-                        }
+
+
+                        FileDialogBoxManager.IsInOpenDialog = false;
+                        FileDialogBoxManager.IsInSaveDialog = false;
+
+                        ((Form)this.TopLevelControl).Close();
+                    }
+                    else
+                    {
+                        OpenFile(mainView.FocusedItem.Tag.ToString());
+                    }
                 }
-            } catch (Exception ex) {
-                MessageBox.Show(ex.Message);
-            }
+            } catch { /* TODO: Illegal operation */ }
         }
 
         void diskView_AfterSelect(object sender, EventArgs e)
@@ -730,23 +776,40 @@ namespace Histacom2.OS.Win95.Win95Apps
         {
             try
             {
-                if (!FileOrDirectoryExists(mainView.FocusedItem.ImageKey))
+                if (!FileOrDirectoryExists(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text)))
                 {
                     wm.StartInfobox95("Windows Explorer", "This directory doesn't exist", InfoboxType.Info, InfoboxButtons.OK);
                 }
                 else
                 {
-                    if (Directory.Exists(mainView.FocusedItem.ImageKey)) Directory.Delete(mainView.FocusedItem.ImageKey, true);
-                        else File.Delete(mainView.FocusedItem.ImageKey);
+                    if (Directory.Exists(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text)))
+                    {
+                        Directory.Delete(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text), true);
+
+                        // Remove the directory now from the _data.info
+
+                        SaveSystem.RemoveSubDirFromDirectory(CurrentDirectory, mainView.FocusedItem.Text);
+                    }
+                    else
+                    {
+                        File.Delete(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text));
+
+                        // Remove the file now from the _data.info
+
+                        RemoveFileFromDirectory(CurrentDirectory, mainView.FocusedItem.Text);
+
+                    }
 
                     RefreshAll();
                     RefreshTreeNode();
                 }
-            } catch
+            }
+            catch
             {
                 RefreshAll();
             }
-            
+
+            RefreshTreeNode();
         }
 
         internal static bool FileOrDirectoryExists(string path)
@@ -780,53 +843,49 @@ namespace Histacom2.OS.Win95.Win95Apps
 
         private void mainView_AfterLabelEdit(object sender, LabelEditEventArgs e)
         {
-            try {
-                string setText;
-                setText = e.Label;
-                if (setText == "")
-                {
-                    wm.StartInfobox95("Windows Explorer", "Please enter a new directory name", InfoboxType.Info, InfoboxButtons.OK);
-                }
+            try
+            {
+                string setText = e.Label;
+                if (setText == "") wm.StartInfobox95("Rename", "You must type a filename.", InfoboxType.Error, InfoboxButtons.OK);
                 else
                 {
-                    if (Directory.Exists(setText))
-                    {
-                        wm.StartInfobox95("Windows Explorer", "That directory already exists.", InfoboxType.Info, InfoboxButtons.OK);
-                    }
+                    if (Directory.Exists(setText)) wm.StartInfobox95("Error Renaming File", $"Cannot rename {new DirectoryInfo(setText).Name}: A file with the name you specified already exists. Specify a different filename.", InfoboxType.Error, InfoboxButtons.OK);
                     else
                     {
-                        if (File.Exists(setText))
-                        {
-                            wm.StartInfobox95("Windows Explorer", "That file already exists.", InfoboxType.Info, InfoboxButtons.OK);
-                        }
+                        if (File.Exists(setText)) wm.StartInfobox95("Error Renaming File", $"Cannot rename {new FileInfo(setText).Name}: A file with the name you specified already exists. Specify a different filename.", InfoboxType.Error, InfoboxButtons.OK);
                         else
                         {
-                            if (Directory.Exists(mainView.FocusedItem.ImageKey))
+                            if (Directory.Exists(Path.Combine(CurrentDirectory, OldLabelText)))
                             {
                                 // It was a directory
 
-                                Directory.Move(mainView.FocusedItem.ImageKey, Path.Combine(CurrentDirectory, setText));
+                                Directory.Move(Path.Combine(CurrentDirectory, OldLabelText), Path.Combine(CurrentDirectory, setText));
 
                                 File.Delete(Path.Combine(CurrentDirectory, setText, "_data.info"));
+                                SaveDirectoryInfo(CurrentDirectory, setText, false, setText, true, true);
 
-                                SaveDirectoryInfo(CurrentDirectory, setText, false, $"{setText}", true);
+                                // Rename the directory now in the _data.info
+
+                                RenameDirectory(CurrentDirectory, OldLabelText, setText);
                             }
                             else
                             {
-                                // It was a file
+                                // It was a file                    
 
-                                File.Copy(mainView.FocusedItem.ImageKey, Path.Combine(CurrentDirectory, setText));
-                                File.Delete(mainView.FocusedItem.ImageKey);
+                                File.Copy(Path.Combine(CurrentDirectory, OldLabelText), Path.Combine(CurrentDirectory, setText));
+                                File.Delete(Path.Combine(CurrentDirectory, OldLabelText));
+
+                                // Rename the file now in the _data.info
+
+                                RenameFile(CurrentDirectory, OldLabelText, setText);
                             }
                         }
-
                     }
                 }
                 RefreshAll();
                 RefreshTreeNode();
-            } catch {
             }
-            
+            catch { }
         }
 
         private TreeNode[] createSubDirNodes(DirectoryInfo folder)

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WinClassicWindowsExplorer));
             this.program = new System.Windows.Forms.Panel();
             this.mainView = new System.Windows.Forms.ListView();
             this.pnlInfo = new System.Windows.Forms.Panel();
@@ -60,7 +59,6 @@
             this.FileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CreateShortcutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ShortcutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TextDocumentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BitmapImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DeleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -117,7 +115,6 @@
             this.mainView.Size = new System.Drawing.Size(308, 458);
             this.mainView.TabIndex = 10;
             this.mainView.UseCompatibleStateImageBehavior = false;
-            this.mainView.View = System.Windows.Forms.View.List;
             this.mainView.AfterLabelEdit += new System.Windows.Forms.LabelEditEventHandler(this.mainView_AfterLabelEdit);
             this.mainView.SelectedIndexChanged += new System.EventHandler(this.mainView_SelectedIndexChanged);
             this.mainView.DoubleClick += new System.EventHandler(this.mainView_DoubleClick);
@@ -139,6 +136,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Histacom2.Properties.Resources.WinClassicFolderSmall;
             this.pictureBox1.Location = new System.Drawing.Point(15, 18);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 30);
@@ -282,7 +280,7 @@
             // btnFolderClose
             // 
             this.btnFolderClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
-            this.btnFolderClose.Image = ((System.Drawing.Image)(resources.GetObject("btnFolderClose.Image")));
+            this.btnFolderClose.Image = global::Histacom2.Properties.Resources.XCross;
             this.btnFolderClose.Location = new System.Drawing.Point(172, 3);
             this.btnFolderClose.Name = "btnFolderClose";
             this.btnFolderClose.Size = new System.Drawing.Size(21, 16);
@@ -339,7 +337,7 @@
             // 
             // Button1
             // 
-            this.Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button1.Location = new System.Drawing.Point(626, 3);
             this.Button1.Name = "Button1";
@@ -396,7 +394,6 @@
             // 
             this.CreateShortcutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FolderToolStripMenuItem,
-            this.ShortcutToolStripMenuItem,
             this.TextDocumentToolStripMenuItem,
             this.BitmapImageToolStripMenuItem});
             this.CreateShortcutToolStripMenuItem.Name = "CreateShortcutToolStripMenuItem";
@@ -409,12 +406,6 @@
             this.FolderToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.FolderToolStripMenuItem.Text = "Folder";
             this.FolderToolStripMenuItem.Click += new System.EventHandler(this.FolderToolStripMenuItem_Click);
-            // 
-            // ShortcutToolStripMenuItem
-            // 
-            this.ShortcutToolStripMenuItem.Name = "ShortcutToolStripMenuItem";
-            this.ShortcutToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.ShortcutToolStripMenuItem.Text = "Shortcut";
             // 
             // TextDocumentToolStripMenuItem
             // 
@@ -538,7 +529,7 @@
             // refresh
             // 
             this.refresh.Enabled = true;
-            this.refresh.Interval = 15000;
+            this.refresh.Interval = 4000;
             this.refresh.Tick += new System.EventHandler(this.refresh_Tick);
             // 
             // WinClassicWindowsExplorer
@@ -577,7 +568,6 @@
         internal System.Windows.Forms.ToolStripMenuItem FileToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem CreateShortcutToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem FolderToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem ShortcutToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem TextDocumentToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem BitmapImageToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem DeleteToolStripMenuItem;

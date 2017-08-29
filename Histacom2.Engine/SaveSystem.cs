@@ -28,6 +28,13 @@ namespace Histacom2.Engine
 
         public static Theme currentTheme { get; set; }
 
+        public static bool IsBinarySave =
+#if BINARY_SAVE
+            true;
+#else
+            false;
+#endif
+
 #if BINARY_SAVE
         private static readonly byte[] magic = Encoding.UTF8.GetBytes("THSv");
         private static readonly IOrderedEnumerable<System.Reflection.PropertyInfo> properties = typeof(Save).GetProperties().OrderBy(p => (p.GetCustomAttributes(typeof(OrderAttribute), false).SingleOrDefault() as OrderAttribute).Order);
@@ -207,23 +214,7 @@ namespace Histacom2.Engine
 
         public static void UpdateDirectoryInfo(string path, THFileInfo newfile)
         {
-            newfile.DOSName = newfile.Name.ToUpper().Replace("*", "").Replace("+", "").Replace(":", "").Replace(";", "").Replace(" ", "");
-            if (newfile.DOSName.Contains("."))
-            {
-                string[] dos = newfile.DOSName.Split('.');
-
-                if (dos.Count() > 2)
-                {
-                    List<string> dosb = dos.ToList();
-                    dosb.RemoveRange(1, dos.Count() - 2);
-                    dos = dosb.ToArray();
-                }
-                dos[1] = dos[1].Substring(0, 3);
-                if (dos[0].Length > 8) dos[0] = dos[0].Substring(0, 6) + "~1";
-
-                newfile.DOSName = dos[0] + "." + dos[1];
-            }
-            else if (newfile.DOSName.Length > 8) newfile.DOSName = newfile.DOSName.Substring(0, 6) + "~1";
+            SetDOSName(ref newfile);
 
             if (File.ReadAllText(Path.Combine(path, "_data.info")).Contains(newfile.DOSName)) return;
             FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(path, "_data.info")));
@@ -235,40 +226,129 @@ namespace Histacom2.Engine
             File.WriteAllText(Path.Combine(path, "_data.info"), toWrite);
         }
 
-        public static void UpgradeFileSystem(string oldOS, string newOS)
+        public static void RemoveFileFromDirectory(string path, string filename)
         {
-            switch (oldOS)
+            FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(path, "_data.info")));
+            THFileInfo fi = fsfi.Files.Find((THFileInfo f) => { return f.Name == filename; });
+            if (fi == null) return;
+
+            fsfi.ByteSize -= fi.ByteSize;
+            CurrentSave.BytesLeft += fi.ByteSize;
+
+            fsfi.Files.Remove(fi);
+            string toWrite = JsonConvert.SerializeObject(fsfi, Formatting.Indented);
+
+            File.WriteAllText(Path.Combine(path, "_data.info"), toWrite);
+        }
+
+        public static void RemoveSubDirFromDirectory(string path, string dirname)
+        {
+            FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(path, "_data.info")));
+            THDirInfo di = fsfi.SubDirs.Find((THDirInfo f) => { return f.Name == dirname; });
+            if (di == null) return;
+
+            // Find the bytesize of the folder
+
+            FileSystemFolderInfo dirfsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(path, "_data.info")));
+
+            fsfi.ByteSize -= dirfsfi.ByteSize;
+            CurrentSave.BytesLeft += dirfsfi.ByteSize;
+
+            fsfi.SubDirs.Remove(di);
+            string toWrite = JsonConvert.SerializeObject(fsfi, Formatting.Indented);
+
+            File.WriteAllText(Path.Combine(path, "_data.info"), toWrite);
+        }
+
+        public static string SetDOSName(ref THFileInfo file)
+        {
+            file.DOSName = file.Name.ToUpper().Replace("*", "").Replace("+", "").Replace(":", "").Replace(";", "").Replace(" ", "");
+            if (file.DOSName.Contains("."))
             {
-                case "95":
-                    if (newOS == "98" || newOS == "2000" || newOS == "ME")
+                string[] dos = file.DOSName.Split('.');
+
+                if (dos.Count() > 2)
+                {
+                    List<string> dosb = dos.ToList();
+                    dosb.RemoveRange(1, dos.Count() - 2);
+                    dos = dosb.ToArray();
+                }
+                dos[1] = dos[1].Substring(0, 3);
+                if (dos[0].Length > 8) dos[0] = dos[0].Substring(0, 6) + "~1";
+
+                file.DOSName = dos[0] + "." + dos[1];
+            }
+            else if (file.DOSName.Length > 8) file.DOSName = file.DOSName.Substring(0, 6) + "~1";
+            return file.DOSName;
+        }
+
+        public static void RenameDirectory(string path, string dirname, string newname)
+        {
+            FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(path, "_data.info")));
+            THDirInfo di = fsfi.SubDirs.Find((THDirInfo f) => { return f.Name == dirname; });
+            if (di == null) return;
+
+            THDirInfo newDi = di;
+
+            newDi.Name = newname;
+
+            THFileInfo tmpfi = new THFileInfo();
+            newDi.DOSName = SetDOSName(ref tmpfi);
+            fsfi.SubDirs.Remove(di);
+            fsfi.SubDirs.Add(newDi);
+            string toWrite = JsonConvert.SerializeObject(fsfi, Formatting.Indented);
+
+            File.WriteAllText(Path.Combine(path, "_data.info"), toWrite);
+        }
+
+        public static void RenameFile(string path, string filename, string newname)
+        {
+            FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(path, "_data.info")));
+            THFileInfo fi = fsfi.Files.Find((THFileInfo f) => { return f.Name == filename; });
+            if (fi == null) return;
+
+            THFileInfo newFi = fi;
+
+            newFi.Name = newname;
+
+            THFileInfo tmpfi = new THFileInfo();
+            newFi.DOSName = SetDOSName(ref tmpfi);
+            fsfi.Files.Remove(fi);
+            fsfi.Files.Add(newFi);
+            string toWrite = JsonConvert.SerializeObject(fsfi, Formatting.Indented);
+
+            File.WriteAllText(Path.Combine(path, "_data.info"), toWrite);
+        }
+
+        public static void UpgradeFileSystem(string newOS)
+        {
+            if (newOS == "98" || newOS == "2000" || newOS == "ME")
+            {
+                // We are upgrading from the old WinClassic file System to the new WinClassic filesystem!
+                // All the above OSes share basically the same file layout!
+                // (Excluding Documents And Settings) which is 2000 and ME only
+
+                // Add Address Book into existance!
+
+                SaveDirectoryInfo(ProfileProgramsDirectory, "Outlook Express", false, "Outlook Express", true);
+                CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Outlook Express"), "WAB.exe", "addressbook", 8, 512);
+
+                // There is no "The Microsoft Network" folder!
+
+                if (Directory.Exists(Path.Combine(ProfileProgramsDirectory, "The Microsoft Network"))) Directory.Delete(Path.Combine(ProfileProgramsDirectory, "The Microsoft Network"), true);
+                FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(ProfileProgramsDirectory, "_data.info")));
+                foreach (THDirInfo dir in fsfi.SubDirs)
+                {
+                    if (dir.Name == "The Microsoft Network")
                     {
-                        // We are upgrading from the old WinClassic file System to the new WinClassic filesystem!
-                        // All the above OSes share basically the same file layout!
-                        // (Excluding Documents And Settings) which is 2000 and ME only
-
-                        // Add Address Book into existance!
-
-                        SaveDirectoryInfo(ProfileProgramsDirectory, "Outlook Express", false, "Outlook Express", true);
-                        CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Outlook Express"), "WAB.exe", "addressbook", 8, 512);
-
-                        // There is no "The Microsoft Network" folder!
-
-                        if (Directory.Exists(Path.Combine(ProfileProgramsDirectory, "The Microsoft Network"))) Directory.Delete(Path.Combine(ProfileProgramsDirectory, "The Microsoft Network"), true);
-                        FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(ProfileProgramsDirectory, "_data.info")));
-                        foreach (THDirInfo dir in fsfi.SubDirs)
-                        {
-                            if (dir.Name == "The Microsoft Network")
-                            {
-                                fsfi.SubDirs.Remove(dir);
-                                break;
-                            }
-                        }
+                        fsfi.SubDirs.Remove(dir);
+                        break;
                     }
-                    break;
+                }
             }
         }
 
-        public static void SaveDirectoryInfo(string parent, string dirname, bool isProtected, string label, bool allowback)
+        public static void SaveDirectoryInfo(string parent, string dirname, bool isProtected, string label, bool allowback, bool updateParent = true)
         {
             if (File.Exists(Path.Combine(parent, dirname, "_data.info")) && Path.Combine(parent, dirname) != ProfileFileSystemDirectory) return;
             Directory.CreateDirectory(Path.Combine(parent, dirname));
@@ -286,15 +366,18 @@ namespace Histacom2.Engine
             info.SubDirs = new List<THDirInfo>(256);
             info.ByteSize = 0;
 
-            if (parent != ProfileDirectory)
+            if (updateParent == true)
             {
-                FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(parent, "_data.info")));
-                THDirInfo thd = new THDirInfo();
-                thd.Name = info.Label;
-                thd.DOSName = info.DOSLabel;
-                fsfi.SubDirs.Add(thd);
+                if ((parent != ProfileDirectory))
+                {
+                    FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(parent, "_data.info")));
+                    THDirInfo thd = new THDirInfo();
+                    thd.Name = info.Label;
+                    thd.DOSName = info.DOSLabel;
+                    fsfi.SubDirs.Add(thd);
 
-                File.WriteAllText(Path.Combine(parent, "_data.info"), JsonConvert.SerializeObject(fsfi, Formatting.Indented));
+                    File.WriteAllText(Path.Combine(parent, "_data.info"), JsonConvert.SerializeObject(fsfi, Formatting.Indented));
+                }
             }
 
             string toWrite = JsonConvert.SerializeObject(info, Formatting.Indented);

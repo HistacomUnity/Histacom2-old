@@ -16,7 +16,6 @@ namespace Histacom2.SaveDialogs
     {
         public string log;
         Save savedata;
-        string json;
         public SaveFileTroubleShooter()
         {
             InitializeComponent();
@@ -44,6 +43,7 @@ namespace Histacom2.SaveDialogs
             // Check if the main.save file exists
 
             string savefile = Path.Combine(SaveSystem.ProfileDirectory, "main.save");
+            string oldsavefile = Path.Combine(SaveSystem.ProfileDirectory, "oldmain.save");
 
             if (!File.Exists(savefile))
             {
@@ -59,54 +59,111 @@ namespace Histacom2.SaveDialogs
                 return;
             } else {
                 WriteToLog("File main.save does exist - checking contents");
+                bool readable = false;
 
                 try
                 {
                     savedata = SaveSystem.ReadSave(savefile);
-
+                    readable = true;
                 } catch
                 {
-                    WriteToLog("ISSUE FOUND! File main.save is unreadable");
+                    WriteToLog("Save file cannot be read - scanning each line and examining them...");
+                    // Take a little look at the file?
 
-                    WriteToLog("Sorry, there is no repairing it easily, your data will be lost");
+                    // But first let's just create a measure of how the JSON SHOULD look
+                    if (!SaveSystem.IsBinarySave)
+                    {
+                        if (File.Exists(oldsavefile)) File.Delete(oldsavefile);
+                        File.Copy(savefile, oldsavefile);
 
-                    string backupfile = Path.Combine(SaveSystem.ProfileDirectory, "main.backup");
+                        SaveSystem.NewGame();
+                        string[] fileLines = File.ReadAllText(oldsavefile).Split('\n');
+                        string[] shouldBeLines = File.ReadAllText(savefile).Split('\n');
+                        int i = 0;
 
-                    if (Directory.Exists(backupfile)) Directory.Delete(backupfile);
+                        string newJson = "";
 
-                    File.Copy(savefile, backupfile);
-                    SaveSystem.NewGame();
+                        foreach (string element in fileLines)
+                        {
+                            element.Replace("\n", "").Replace("\r", "");
+                        }
 
-                    // Make sure the username is set
+                        foreach (string line in fileLines)
+                        {
+                            if (!line.StartsWith("{"))
+                            {
+                                if (!line.StartsWith("}"))
+                                {
+                                    try {
+                                        // We will attempt to deserialize this line
 
-                    SaveSystem.CurrentSave.Username = SaveSystem.ProfileName;
+                                        Newtonsoft.Json.JsonConvert.DeserializeObject("{" + $"{Environment.NewLine}{line}{Environment.NewLine}" + "}");
 
-                    WriteToLog($"The corrupt file has been stored in {backupfile}");
+                                        // It worked! This line is not the problem!
 
-                    EndScan(true);
+                                        newJson += $"{Environment.NewLine}{fileLines[i]}";
+
+                                        WriteToLog($"The line {fileLines[i]} is fine!");
+                                    } catch {
+                                        // If it failed to read this line the this is the line that's causing problems!
+
+                                        try { newJson += $"{Environment.NewLine}{shouldBeLines[i]}";
+                                            WriteToLog($"ISSUE FOUND! The line {fileLines[i]} was corrupt - it has been reset to default settings!");
+                                        } catch { WriteToLog($"ISSUE FOUND! A line was unneeded - it has been removed as it should!"); } // The reason I'm catching that is in case someone adds a line at the end of the file or something
+                                    }
+                                }
+                            }
+                            i++;
+                        }
+
+                        // After all that let's see if we fixed the file - but first, add the "{" and "}" in!
+
+                        newJson = "{" + $"{Environment.NewLine}{newJson}{Environment.NewLine}" + "}";
+
+                        // Now let's test it
+
+                        try
+                        {
+                            savedata = Newtonsoft.Json.JsonConvert.DeserializeObject<Save>(newJson);
+
+                            WriteToLog("Save file successfully recovered!");
+
+                            File.WriteAllText(savefile, newJson);
+                            readable = true;
+
+                            if (File.Exists(oldsavefile)) File.Delete(oldsavefile);
+                            EndScan(true);
+                        } catch {
+                            // It's unusable...
+
+                            WriteToLog("ISSUE FOUND! File main.save is unreadable");
+
+                            WriteToLog("Sorry, there is no repairing it easily, your data will be lost");
+
+                            string backupfile = Path.Combine(SaveSystem.ProfileDirectory, "main.backup");
+
+                            if (Directory.Exists(backupfile)) Directory.Delete(backupfile);
+
+                            File.Copy(savefile, backupfile);
+                            SaveSystem.NewGame();
+
+                            // Make sure the username is set
+
+                            SaveSystem.CurrentSave.Username = SaveSystem.ProfileName;
+                            SaveSystem.SaveGame();
+
+                            WriteToLog($"The corrupt file has been stored in {backupfile}");
+
+                            EndScan(true);
+                        }
+                    }
                 }
-                
 
-                // Check the values
 
-                if (savedata.CurrentOS == null || savedata.CurrentOS == "")
-                {
-                    WriteToLog("ISSUE FOUND! Data for CurrentOS is null! Giving default value...");
-                    savedata.CurrentOS = "95";
-                    EndScan(true);
-                }
+                // Check the values if it was readable
 
-                if (savedata.ExperiencedStories == null)
-                {
-                    WriteToLog("ISSUE FOUND! Data for ExperiencedStories is null! Giving default value...");
-                    savedata.ExperiencedStories = new List<string>();
-                }
-
-                if (savedata.ThemeName == null || savedata.ThemeName == "")
-                {
-                    WriteToLog("ISSUE FOUND! Data for ThemeName is null! Giving default value...");
-                    savedata.ThemeName = "95normal";
-                }
+                if (readable) CheckValues();
+                    
             }
 
             string folderspath = Path.Combine(SaveSystem.ProfileDirectory, "folders");
@@ -118,26 +175,29 @@ namespace Histacom2.SaveDialogs
                 SaveSystem.CheckFiles();
             }
 
+        }
 
+        private void CheckValues()
+        {
+            foreach (var field in typeof(Save).GetFields())
+            {
+                if (field.GetValue(savedata) is string) if (field.GetValue(savedata).ToString() == null) { field.SetValue(savedata, ""); continue; }
+                if (field.GetValue(savedata) is Theme) if (field.GetValue(savedata) == null) { field.SetValue(savedata, new Default95Theme()); continue; }
+                if (field.GetValue(savedata) is List<string>) if (field.GetValue(savedata) == null) { field.SetValue(savedata, new List<string>()); }
+            }
         }
 
         void EndScan(bool successful)
         {
             pnlResolved.Visible = true;
+            label1.Hide();
             if (successful == true)
             {
                 label2.Text = "The issue has been resolved.";
-                // Set CurrentSave to the resolved one
-
-                SaveSystem.CurrentSave = savedata;
-
-                // Set the main.save file to the resolved one
-
-                SaveSystem.WriteSave(Path.Combine(SaveSystem.ProfileDirectory, "main.save"), savedata);
 
                 textBox1.Text = log;
             } else {
-                label2.Text = "The issue has not been resolved, sorry";
+                label2.Text = "The issue has not been resolved, sorry.";
                 textBox1.Text = log;
             }
         }

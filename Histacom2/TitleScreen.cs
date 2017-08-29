@@ -55,7 +55,6 @@ namespace Histacom2
 
         public void StartGame()
         {
-            //TODO: You may want to handle story stuff to decide what OS to boot here.
             if (Convert.ToInt32(VM_Width.Text) == 1337 && Convert.ToInt32(VM_Height.Text) == 1337) leet();
             else
             {
@@ -208,8 +207,6 @@ namespace Histacom2
                 } catch {
 
                 }
-                
-
 
                 // If VM Mode is not enabled
                 if (vm_mode.Checked != true)

@@ -270,11 +270,12 @@ namespace Histacom2.OS.Win95.Win95Apps.Story
             await Task.Delay(2000);
             sp.Stop();
 
-            SaveSystem.UpgradeFileSystem("95", "98");
+            SaveSystem.UpgradeFileSystem("98");
             SaveSystem.CurrentSave.CurrentOS = "98";
             SaveSystem.currentTheme = new Default98Theme();
             SaveSystem.CurrentSave.ThemeName = "default98";
             TitleScreen.frm95.distort.ParentForm.Close();
+            foreach (Form frm in Application.OpenForms) if (frm is WinClassic) frm.Close();
             Program.title.StartGame();
             TitleScreen.frm95.Close();
             return;
