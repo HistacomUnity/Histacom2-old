@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Histacom2.Engine", "Histacom2.Engine\Histacom2.Engine.csproj", "{9477B70F-2D32-4E1D-857B-4624A1DEEB1B}"
 EndProject
@@ -16,7 +16,6 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{9477B70F-2D32-4E1D-857B-4624A1DEEB1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9477B70F-2D32-4E1D-857B-4624A1DEEB1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9477B70F-2D32-4E1D-857B-4624A1DEEB1B}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{9477B70F-2D32-4E1D-857B-4624A1DEEB1B}.Debug|x86.Build.0 = Debug|Any CPU
 		{9477B70F-2D32-4E1D-857B-4624A1DEEB1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
