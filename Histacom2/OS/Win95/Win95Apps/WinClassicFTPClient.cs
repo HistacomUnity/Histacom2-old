@@ -88,14 +88,14 @@ namespace Histacom2.OS.Win95.Win95Apps
                 {
                     WinClassicDownloader opendownload = new WinClassicDownloader();
                     WindowManager wm = new WindowManager();
-                    wm.StartWin95(opendownload, "Downloader", null, false, true);
+                    wm.Init(opendownload, "Downloader", null, false, true);
                     opendownload.appName.Text = "Downloading: FTP Client";
                 }
                 else if (objListViewItem.Text == "Web Chat Setup.exe")
                 {
                     WinClassicDownloader opendownload = new WinClassicDownloader();
                     WindowManager wm = new WindowManager();
-                    wm.StartWin95(opendownload, "Downloader", null, false, true);
+                    wm.Init(opendownload, "Downloader", null, false, true);
                     opendownload.appName.Text = "Downloading: Web Chat 1998";
                     opendownload.amountToDL = 35;
                 }
@@ -103,14 +103,14 @@ namespace Histacom2.OS.Win95.Win95Apps
                 {
                     WinClassicDownloader opendownload = new WinClassicDownloader();
                     WindowManager wm = new WindowManager();
-                    wm.StartWin95(opendownload, "Downloader", null, false, true);
+                    wm.Init(opendownload, "Downloader", null, false, true);
                     opendownload.appName.Text = "Downloading: Time Distorter 0.1";
                 }
                 else if (objListViewItem.Text == "Guess The Number V1 Setup.exe")
                 {
                     WinClassicDownloader opendownload = new WinClassicDownloader();
                     WindowManager wm = new WindowManager();
-                    wm.StartWin95(opendownload, "Downloader", null, false, true);
+                    wm.Init(opendownload, "Downloader", null, false, true);
                     opendownload.appName.Text = "Downloading: Guess The Number V1";
                     opendownload.amountToDL = 16;
                 }

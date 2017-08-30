@@ -244,7 +244,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                         WinClassicNotepad np = new WinClassicNotepad();
                         np.mainText.Text = FileDialogBoxManager.ReadTextFile(fileDir);
                         np.CurrentFilePath = fileDir;
-                        WinClassic app = wm.StartWin95(np, "Notepad", Properties.Resources.Win95IconNotepad, true, true);
+                        WinClassic app = wm.Init(np, "Notepad", Properties.Resources.Win95IconNotepad, true, true);
 
                         Program.AddTaskbarItem(app, app.Tag.ToString(), "Notepad", Properties.Resources.Win95IconNotepad);
                         break;
@@ -252,7 +252,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                         WinClassicWordPad wp = new WinClassicWordPad();
                         wp.mainText.LoadFile(fileDir);
                         wp.CurrentFilePath = fileDir;
-                        WinClassic app2 = wm.StartWin95(wp, "Wordpad", Properties.Resources.Win95IconWordpad, true, true);
+                        WinClassic app2 = wm.Init(wp, "Wordpad", Properties.Resources.Win95IconWordpad, true, true);
 
                         Program.AddTaskbarItem(app2, app2.Tag.ToString(), "Wordpad", Properties.Resources.Win95IconWordpad);
                         break;
@@ -272,11 +272,11 @@ namespace Histacom2.OS.Win95.Win95Apps
             switch (appname.ToLower())
             {
                 case "explorer":
-                    WinClassic app = wm.StartWin95(new Win95WindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
+                    WinClassic app = wm.Init(new Win95WindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
                     Program.AddTaskbarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
                     break;
                 case "calc":
-                    WinClassic appCalc = wm.StartWin95(new WinClassicCalculator(), "Calculator", Properties.Resources.WinClassicCalc, true, true);
+                    WinClassic appCalc = wm.Init(new WinClassicCalculator(), "Calculator", Properties.Resources.WinClassicCalc, true, true);
                     Program.AddTaskbarItem(appCalc, appCalc.Tag.ToString(), "Calculator", Properties.Resources.WinClassicCalc);
 
                     Program.nonimportantapps.Add(appCalc);
@@ -285,7 +285,7 @@ namespace Histacom2.OS.Win95.Win95Apps
 
                     break;
                 case "notepad":
-                    WinClassic appNP = wm.StartWin95(new WinClassicNotepad(), "Notepad", Properties.Resources.Win95IconNotepad_2, true, true);
+                    WinClassic appNP = wm.Init(new WinClassicNotepad(), "Notepad", Properties.Resources.Win95IconNotepad_2, true, true);
                     Program.AddTaskbarItem(appNP, appNP.Tag.ToString(), "Notepad", Properties.Resources.Win95IconNotepad_2);
 
                     Program.nonimportantapps.Add(appNP);
@@ -294,7 +294,7 @@ namespace Histacom2.OS.Win95.Win95Apps
 
                     break;
                 case "wordpad":
-                    WinClassic appWP = wm.StartWin95(new WinClassicWordPad(), "Wordpad", Properties.Resources.Win95WordpadIcon2, true, true);
+                    WinClassic appWP = wm.Init(new WinClassicWordPad(), "Wordpad", Properties.Resources.Win95WordpadIcon2, true, true);
                     Program.AddTaskbarItem(appWP, appWP.Tag.ToString(), "Wordpad", Properties.Resources.Win95WordpadIcon2);
 
                     Program.nonimportantapps.Add(appWP);
@@ -304,7 +304,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                     break;
                 case "ie":
                     if (TitleScreen.frm95.ie != null) { wm.StartInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", InfoboxType.Warning, InfoboxButtons.OK); return; }
-                    TitleScreen.frm95.ie = wm.StartWin95(new WinClassicIE3(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
+                    TitleScreen.frm95.ie = wm.Init(new WinClassicIE3(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
                     Program.AddTaskbarItem(TitleScreen.frm95.ie, TitleScreen.frm95.ie.Tag.ToString(), "Internet Explorer 4", Properties.Resources.Win95IconIE4);
                     TitleScreen.frm95.ie.BringToFront();
                     TitleScreen.frm95.ie.FormClosing += new FormClosingEventHandler(TitleScreen.frm95.InternetExplorer4_Closing);
@@ -313,7 +313,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                 case "web chat setup":
                     Win95Installer inst = new Win95Installer("Web Chat 1998");
                     inst.InstallCompleted += (sendr, args) => TitleScreen.frm95.WebChatToolStripMenuItem.Visible = true;
-                    WinClassic appInstaller = wm.StartWin95(inst, "Web Chat Setup", null, true, true);
+                    WinClassic appInstaller = wm.Init(inst, "Web Chat Setup", null, true, true);
                     Program.AddTaskbarItem(appInstaller, appInstaller.Tag.ToString(), "Web Chat Setup", null);
                     appInstaller.BringToFront();
 
@@ -321,7 +321,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                 case "ftp client setup":
                     Win95Installer instFtp = new Win95Installer("FTP Client");
                     instFtp.InstallCompleted += (sendr, args) => TitleScreen.frm95.FTPClientToolStripMenuItem.Visible = true;
-                    WinClassic appFtp = wm.StartWin95(instFtp, "FTP Client Setup", null, true, true);
+                    WinClassic appFtp = wm.Init(instFtp, "FTP Client Setup", null, true, true);
                     Program.AddTaskbarItem(appFtp, appFtp.Tag.ToString(), "FTP Client Setup", null);
                     appFtp.BringToFront();
 
@@ -332,7 +332,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                     {
                         TitleScreen.frm95.TimeDistorterToolStripMenuItem.Visible = true;
                     };
-                    WinClassic appTd = wm.StartWin95(instTd, "Time Distorter Setup", null, true, true);
+                    WinClassic appTd = wm.Init(instTd, "Time Distorter Setup", null, true, true);
                     Program.AddTaskbarItem(appTd, appTd.Tag.ToString(), "Time Distorter Setup", null);
                     appTd.BringToFront();
 

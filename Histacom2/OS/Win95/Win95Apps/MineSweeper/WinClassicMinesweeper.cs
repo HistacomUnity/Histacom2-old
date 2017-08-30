@@ -123,7 +123,7 @@ namespace Histacom2.OS.Win95.Win95Apps
         private void bestTimesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WindowManager wm = new WindowManager();
-            wm.StartWin95(new MineBestTimes(), "Best Times", null, false, false, true, false);
+            wm.Init(new MineBestTimes(), "Best Times", null, false, false, true, false);
 
         }
 
@@ -165,7 +165,7 @@ namespace Histacom2.OS.Win95.Win95Apps
         private void customToolStripMenuItem_Click(object sender, EventArgs e)
         {
             level = "custom";
-            new WindowManager().StartWin95(new CustomMinefield(this), "Custom Field", null, false, false, true, false);
+            new WindowManager().Init(new CustomMinefield(this), "Custom Field", null, false, false, true, false);
         }
     }
 }

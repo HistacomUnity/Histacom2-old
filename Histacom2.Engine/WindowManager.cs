@@ -10,10 +10,43 @@ namespace Histacom2.Engine
     {
         public static System.Drawing.Text.PrivateFontCollection pfc = new System.Drawing.Text.PrivateFontCollection();
 
-        public WinClassic StartWin95(UserControl content, string title, Image icon, bool MaxButton, bool MinButton, bool ShowApplicationAsDialog = false, bool resize = true)
+        public WinClassic Init(UserControl content, string title, Image icon, bool MaxButton, bool MinButton, bool ShowApplicationAsDialog = false, bool resize = true)
         {
+            WinClassic app = null;
             // Setup Window
-            WinClassic app = new WinClassic();
+            switch (SaveSystem.CurrentSave.CurrentOS)
+            {
+                case  "95":
+                    {
+                        app = new WinClassic();
+                        break;
+                    }
+                case "98":
+                    {
+                        app = new WinClassic();
+                        break;
+                    }
+                case "ME":
+                    {
+                        app = new WinClassic();
+                        break;
+                    }
+                case "2000":
+                    {
+                        app = new WinClassic();
+                        break;
+                    }
+                case "XP":
+                    {
+                        // app = new WinXP();
+                        break;
+                    }
+                default:
+                    {
+                        app = new WinClassic();
+                        break;
+                    }
+            }
             app.Text = title;
             app.Title.Text = title;
             app.Width = content.Width + 8;
@@ -76,6 +109,10 @@ namespace Histacom2.Engine
             if (ShowApplicationAsDialog == false) { app.Show(); } else { app.ShowDialog(); }
             return app;
         }
+        
+        // A THING TM
+
+        // A THING TM
 
         public WinClassic StartInfobox95(string title, string text, InfoboxType type, InfoboxButtons btns)
         {
@@ -84,7 +121,7 @@ namespace Histacom2.Engine
             app.infoText.Text = text;
             app.infoText.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
 
-            return StartWin95(app, title, null, false, false, resize: false);
+            return Init(app, title, null, false, false, resize: false);
         }
 
         public WinClassic StartAboutBox95(string shortname, string longname, Image appicon)
@@ -94,7 +131,7 @@ namespace Histacom2.Engine
             uc.textBox1.Text = longname + "\r\nWindows 95\r\nCopyright © 1981-1995 Microsoft Corp.";
             uc.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
 
-            return StartWin95(uc, "About " + shortname, null, false, false, resize: false);
+            return Init(uc, "About " + shortname, null, false, false, resize: false);
         }
     }
 }
