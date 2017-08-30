@@ -69,9 +69,9 @@ namespace Histacom2
         {
             if (SaveSystem.CurrentSave.CurrentOS == "95")
             {
-                WinClassic app = wm.StartWin95(new Win95WindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true, true);
+                WinClassic app = wm.Init(new Win95WindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true, true);
             } else {
-                WinClassic app = wm.StartWin95(new WinClassicWindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true, true);
+                WinClassic app = wm.Init(new WinClassicWindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true, true);
             }
             
             try
