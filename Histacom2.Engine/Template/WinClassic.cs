@@ -205,10 +205,13 @@ namespace Histacom2.Engine.Template
             WinClassic_Activated(null, null); 
         }
 
-        public bool max = false;
 
+        public bool max = false;
+        public Size prevSize;
+        public Point prevPoint;
         private void maximizebutton_Click(object sender, EventArgs e)
         {
+
             if (max == false)
             {
                 this.right.Hide();
@@ -220,7 +223,10 @@ namespace Histacom2.Engine.Template
                 this.topleftcorner.Hide();
                 this.toprightcorner.Hide();
                 this.Dock = DockStyle.Fill;
-                this.WindowState = FormWindowState.Maximized;
+                prevSize = this.Size;
+                prevPoint = this.Location;
+                this.Size = new Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height - 28);
+                this.Location = new Point(0, 0);
                 max = true;
                 maximizebutton.Image = Engine.Properties.Resources.WinClassicRestore;
             }
@@ -235,11 +241,12 @@ namespace Histacom2.Engine.Template
                 this.topleftcorner.Show();
                 this.toprightcorner.Show();
                 this.Dock = DockStyle.None;
-                this.WindowState = FormWindowState.Normal;
+                this.Size = prevSize;
+                this.Location = prevPoint;
                 max = false;
                 maximizebutton.Image = Engine.Properties.Resources.WinClassicMax;
             }
-            
+
         }
 
         // The rest of this code will automatically style the buttons on the form!
