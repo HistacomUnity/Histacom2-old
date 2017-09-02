@@ -36,6 +36,7 @@
             this.dlTimer = new System.Windows.Forms.Timer(this.components);
             this.dlSpeed = new System.Windows.Forms.Timer(this.components);
             this.progBar = new System.Windows.Forms.ProgressBar();
+            this.progressBar1 = new Histacom2.UI.ProgressBar();
             this.SuspendLayout();
             // 
             // amountLbl
@@ -94,11 +95,29 @@
             this.progBar.Size = new System.Drawing.Size(399, 23);
             this.progBar.TabIndex = 15;
             // 
+            // progressBar1
+            // 
+            this.progressBar1.BlockSpacing = 5;
+            this.progressBar1.BlockWidth = 20;
+            this.progressBar1.Location = new System.Drawing.Point(6, 32);
+            this.progressBar1.MarqueeWidth = 125;
+            this.progressBar1.Maximum = 100D;
+            this.progressBar1.Minimum = 0D;
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.ProgressColor = System.Drawing.Color.DarkBlue;
+            this.progressBar1.ShowText = false;
+            this.progressBar1.Size = new System.Drawing.Size(399, 23);
+            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.progressBar1.TabIndex = 16;
+            this.progressBar1.Text = "progressBar1";
+            this.progressBar1.Value = 0D;
+            // 
             // WinClassicDownloader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.progBar);
             this.Controls.Add(this.amountLbl);
             this.Controls.Add(this.appName);
@@ -120,5 +139,6 @@
         private System.Windows.Forms.Timer dlTimer;
         private System.Windows.Forms.Timer dlSpeed;
         private System.Windows.Forms.ProgressBar progBar;
+        private UI.ProgressBar progressBar1;
     }
 }
