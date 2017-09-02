@@ -53,6 +53,8 @@ namespace Histacom2.OS.Win95.Win95Apps
             mainView.LargeImageList = new ImageList();
             mainView.LargeImageList.ImageSize = new Size(32, 32);
 
+            // Icons 17, 18, 19 reserved for exclusive apps
+
             mainView.LargeImageList.Images.AddRange(new Bitmap[] { Properties.Resources.Win95Computer, // 0
                                                     Properties.Resources.WinClassicFolder,
                                                     Properties.Resources.WinClassicIE4,
@@ -73,7 +75,7 @@ namespace Histacom2.OS.Win95.Win95Apps
 													Properties.Resources.TimeDistorter1,
                                                     Properties.Resources.WinClassicGTN,
                                                     Properties.Resources.WinClassicFTP,
-                                                    Properties.Resources.WinClassicRtfFile});
+                                                    Properties.Resources.WinClassicRtfFile}); //20
 
             program.BringToFront();
 
@@ -992,7 +994,7 @@ namespace Histacom2.OS.Win95.Win95Apps
             if (File.Exists(CurrentDirectory + "\\New Text Document.txt"))
             {
                 //wm.StartInfobox95("Windows Explorer", "This directory already exists", Properties.Resources.Win95Info);
-                //TODO: add making "New Folder (2)"
+                //TODO: add making "New Text Document (2)"
             }
             else
             {
