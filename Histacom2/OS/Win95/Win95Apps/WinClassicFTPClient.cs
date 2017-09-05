@@ -119,7 +119,6 @@ namespace Histacom2.OS.Win95.Win95Apps
 
         private void DoClassicButtons()
         {
-            btnLogin.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             btnCancel.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
         }
 

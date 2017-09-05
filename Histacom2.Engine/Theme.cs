@@ -19,6 +19,9 @@ namespace Histacom2.Engine
         public Stream progErrorSound { get; set; }
         public Stream questionSound { get; set; }
 
+        public Color threeDObjectsColor { get; set; }
+        public Color threeDObjectsTextColor { get; set; }
+
         public Color activeTitleBarColor { get; set; }
         public Color activeTitleTextColor { get; set; }
         public Color inactiveTitleBarColor { get; set; }
@@ -42,6 +45,9 @@ namespace Histacom2.Engine
             progErrorSound = Properties.Resources.CHORD;
             questionSound = Properties.Resources.CHORD;
 
+            threeDObjectsColor = Color.Silver;
+            threeDObjectsTextColor = Color.Black;
+
             activeTitleBarColor = Color.Navy;
             activeTitleTextColor = Color.White;
             inactiveTitleBarColor = Color.Gray;
@@ -64,6 +70,14 @@ namespace Histacom2.Engine
             exclamationSound = Properties.Resources.CHORD;
             progErrorSound = Properties.Resources.CHORD;
             questionSound = Properties.Resources.CHORD;
+
+            threeDObjectsColor = Color.Silver;
+            threeDObjectsTextColor = Color.Black;
+
+            activeTitleBarColor = Color.Navy;
+            activeTitleTextColor = Color.White;
+            inactiveTitleBarColor = Color.Gray;
+            inactiveTitleTextColor = Color.Silver;
 
             defaultWallpaper = null;
             themeName = "default98";

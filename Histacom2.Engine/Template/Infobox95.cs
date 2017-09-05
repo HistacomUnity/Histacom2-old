@@ -13,9 +13,6 @@ namespace Histacom2.Engine.Template
         public Infobox95(InfoboxType type, InfoboxButtons btns)
         {
             InitializeComponent();
-            button1.Paint += (sender, args) => Paintbrush.PaintClassicBorders(sender, args, 2);
-            button2.Paint += (sender, args) => Paintbrush.PaintClassicBorders(sender, args, 2);
-            button3.Paint += (sender, args) => Paintbrush.PaintClassicBorders(sender, args, 2);
 
             switch (type)
             {

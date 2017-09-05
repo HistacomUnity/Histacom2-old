@@ -37,7 +37,6 @@
             "???.html"}, 1, System.Drawing.Color.Black, System.Drawing.Color.Empty, null);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WinClassicFTPClient));
             this.topBar = new System.Windows.Forms.Panel();
-            this.btnLogin = new System.Windows.Forms.Button();
             this.infoLabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -53,6 +52,7 @@
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.ftpFiles = new System.Windows.Forms.ListView();
             this.fileIcons = new System.Windows.Forms.ImageList(this.components);
+            this.btnLogin = new Histacom2.Engine.UI.ClassicButton();
             this.topBar.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -75,17 +75,6 @@
             this.topBar.Name = "topBar";
             this.topBar.Size = new System.Drawing.Size(762, 30);
             this.topBar.TabIndex = 0;
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Location = new System.Drawing.Point(585, 2);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(44, 23);
-            this.btnLogin.TabIndex = 5;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.button1_Click);
             // 
             // infoLabel
             // 
@@ -236,6 +225,18 @@
             this.fileIcons.Images.SetKeyName(1, "WinClassicNotepad.png");
             this.fileIcons.Images.SetKeyName(2, "WinClassicSetup.png");
             // 
+            // btnLogin
+            // 
+            this.btnLogin.BackColor = System.Drawing.Color.Silver;
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.Black;
+            this.btnLogin.Location = new System.Drawing.Point(585, 4);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(44, 20);
+            this.btnLogin.TabIndex = 9;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.Click += new System.EventHandler(this.button1_Click);
+            // 
             // WinClassicFTPClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -266,11 +267,11 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         public System.Windows.Forms.TextBox hostnameBox;
         private System.Windows.Forms.Label infoLabel;
-        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label welcomeLabel;
         internal System.Windows.Forms.ListView ftpFiles;
         private System.Windows.Forms.ImageList fileIcons;
+        private Engine.UI.ClassicButton btnLogin;
     }
 }
