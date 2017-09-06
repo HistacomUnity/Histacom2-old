@@ -206,7 +206,7 @@ namespace Histacom2.OS.Win98
         private void NotePadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WinClassicNotepad wp = new WinClassicNotepad();
-            WinClassic app = wm.StartWin95(wp, "Notepad", Properties.Resources.Win95IconNotepad, true, true);
+            WinClassic app = wm.Init(wp, "Notepad", Properties.Resources.Win95IconNotepad, true, true);
             AddTaskBarItem(app, app.Tag.ToString(), "Notepad", Properties.Resources.Win95IconNotepad);
 
             nonimportantapps.Add(app);
@@ -219,7 +219,7 @@ namespace Histacom2.OS.Win98
         private void downloaderTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WinClassicDownloader opendownload = new WinClassicDownloader();
-            WinClassic app = wm.StartWin95(opendownload, "Downloader", null, false, true);
+            WinClassic app = wm.Init(opendownload, "Downloader", null, false, true);
             opendownload.appName.Text = "Downloading: Survive The Day";
 
             AddTaskBarItem(app, app.Tag.ToString(), "Downloader", null);
@@ -231,7 +231,7 @@ namespace Histacom2.OS.Win98
         private void installerTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Win95Installer openinstaller = new Win95Installer("Testing");
-            WinClassic app = wm.StartWin95(openinstaller, "Installer", null, false, true);
+            WinClassic app = wm.Init(openinstaller, "Installer", null, false, true);
 
             AddTaskBarItem(app, app.Tag.ToString(), "Installer", null);
 
@@ -242,7 +242,7 @@ namespace Histacom2.OS.Win98
         private void InternetExplorerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (ie != null) { wm.StartInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", InfoboxType.Warning, InfoboxButtons.OK); return; }
-            ie = wm.StartWin95(new WinClassicIE3(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
+            ie = wm.Init(new WinClassicIE3(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
             AddTaskBarItem(ie, ie.Tag.ToString(), "Internet Explorer 4", Properties.Resources.Win95IconIE4);
             ie.BringToFront();
             ie.FormClosing += new FormClosingEventHandler(InternetExplorer4_Closing);
@@ -262,7 +262,7 @@ namespace Histacom2.OS.Win98
                     if (objListViewItem.Text == "Internet Explorer")
                     {
                         if (ie != null) { wm.StartInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", InfoboxType.Warning, InfoboxButtons.OK); return; }
-                        ie = wm.StartWin95(new WinClassicIE3(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
+                        ie = wm.Init(new WinClassicIE3(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
                         AddTaskBarItem(ie, ie.Tag.ToString(), "Internet Explorer 4", Properties.Resources.Win95IconIE4);
                         ie.BringToFront();
                         ie.FormClosing += new FormClosingEventHandler(InternetExplorer4_Closing);
@@ -270,7 +270,7 @@ namespace Histacom2.OS.Win98
                     }
                     else if (objListViewItem.Text == "My Computer")
                     {
-                        WinClassic app = wm.StartWin95(new Win95WindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
+                        WinClassic app = wm.Init(new Win95WindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
                         AddTaskBarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
                         app.BringToFront();
                         startmenu.Hide();
@@ -309,7 +309,7 @@ namespace Histacom2.OS.Win98
                         {
                             we.CurrentDirectory = objListViewItem.Tag.ToString();
 
-                            WinClassic app = wm.StartWin95(we, "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
+                            WinClassic app = wm.Init(we, "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
                             AddTaskBarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
                             app.BringToFront();
                             startmenu.Hide();
@@ -336,7 +336,7 @@ namespace Histacom2.OS.Win98
         private void WebChatToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WebChat1998 wc = new WebChat1998();
-            WinClassic app = wm.StartWin95(wc, "Web Chat 1998", null, true, true);
+            WinClassic app = wm.Init(wc, "Web Chat 1998", null, true, true);
 
             AddTaskBarItem(app, app.Tag.ToString(), "Web Chat 1998", null);
 
@@ -355,7 +355,7 @@ namespace Histacom2.OS.Win98
         private void WordPadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WinClassicWordPad wp = new WinClassicWordPad();
-            WinClassic app = wm.StartWin95(wp, "Wordpad", Properties.Resources.Win95IconWordpad, true, true);
+            WinClassic app = wm.Init(wp, "Wordpad", Properties.Resources.Win95IconWordpad, true, true);
             AddTaskBarItem(app, app.Tag.ToString(), "Wordpad", Properties.Resources.Win95IconWordpad);
 
             nonimportantapps.Add(app);
@@ -394,7 +394,7 @@ namespace Histacom2.OS.Win98
         private void AddressBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            WinClassic app = wm.StartWin95(new WinClassicAddressBook(), "Address Book", Properties.Resources.WinClassicAddressBook, true, true);
+            WinClassic app = wm.Init(new WinClassicAddressBook(), "Address Book", Properties.Resources.WinClassicAddressBook, true, true);
             Program.AddTaskbarItem(app, app.Tag.ToString(), "Address Book", Properties.Resources.WinClassicAddressBook);
 
             Program.nonimportantapps.Add(app);
@@ -408,7 +408,7 @@ namespace Histacom2.OS.Win98
         {
             FileDialogBoxManager.IsInOpenDialog = false;
             FileDialogBoxManager.IsInSaveDialog = false;
-            WinClassic app = wm.StartWin95(new WinClassicWindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
+            WinClassic app = wm.Init(new WinClassicWindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
             AddTaskBarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
 
             nonimportantapps.Add(app);
@@ -427,7 +427,7 @@ namespace Histacom2.OS.Win98
         private void temp_for_std(object sender, EventArgs e)
         {
             Win2K.Win2KApps.SurviveTheDay std = new Win2K.Win2KApps.SurviveTheDay();
-            WinClassic app = wm.StartWin95(std, "Survive The Day", null, false, false);
+            WinClassic app = wm.Init(std, "Survive The Day", null, false, false);
             AddTaskBarItem(app, app.Tag.ToString(), "Survive The Day", null);
 
             nonimportantapps.Add(app);
@@ -441,7 +441,7 @@ namespace Histacom2.OS.Win98
         private void MSDOSPromptToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             WinClassicTerminal msdos = new WinClassicTerminal(false);
-            WinClassic app = wm.StartWin95(msdos, "MS-DOS Prompt", Properties.Resources.MSDOSPromptToolStripMenuItem1_Image, true, true, false);
+            WinClassic app = wm.Init(msdos, "MS-DOS Prompt", Properties.Resources.MSDOSPromptToolStripMenuItem1_Image, true, true, false);
 
             AddTaskBarItem(app, app.Tag.ToString(), "MS-DOS Prompt", Properties.Resources.MSDOSPromptToolStripMenuItem1_Image);
             app.BringToFront();
@@ -451,7 +451,7 @@ namespace Histacom2.OS.Win98
         private void PropertiesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             WinClassicThemePanel theme = new WinClassicThemePanel();
-            WinClassic app = wm.StartWin95(theme, "Themes", null, false, true, false);
+            WinClassic app = wm.Init(theme, "Themes", null, false, true, false);
 
             AddTaskBarItem(app, app.Tag.ToString(), "Themes", null);
             app.BringToFront();
@@ -469,7 +469,7 @@ namespace Histacom2.OS.Win98
 
         private void FTPClientToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            WinClassic app = wm.StartWin95(new WinClassicFTPClient(), "FTP Client", null, true, true);
+            WinClassic app = wm.Init(new WinClassicFTPClient(), "FTP Client", null, true, true);
 
             AddTaskBarItem(app, app.Tag.ToString(), "FTP Client", null);
             app.BringToFront();
@@ -478,7 +478,7 @@ namespace Histacom2.OS.Win98
 
         private void CalculatorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            WinClassic app = wm.StartWin95(new WinClassicCalculator(), "Calculator", Properties.Resources.WinClassicCalc, false, false);
+            WinClassic app = wm.Init(new WinClassicCalculator(), "Calculator", Properties.Resources.WinClassicCalc, false, false);
             AddTaskBarItem(app, app.Tag.ToString(), "Calculator", Properties.Resources.WinClassicCalc);
 
             nonimportantapps.Add(app);

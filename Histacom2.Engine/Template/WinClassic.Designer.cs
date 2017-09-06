@@ -162,6 +162,7 @@
             this.toprightcorner.TabIndex = 6;
             this.toprightcorner.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
             this.toprightcorner.MouseMove += new System.Windows.Forms.MouseEventHandler(this.toprightcorner_MouseMove);
+            this.toprightcorner.MouseUp += new System.Windows.Forms.MouseEventHandler(this.border_MouseUp);
             // 
             // bottomrightcorner
             // 
@@ -174,6 +175,7 @@
             this.bottomrightcorner.TabIndex = 4;
             this.bottomrightcorner.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
             this.bottomrightcorner.MouseMove += new System.Windows.Forms.MouseEventHandler(this.bottomrightcorner_MouseMove);
+            this.bottomrightcorner.MouseUp += new System.Windows.Forms.MouseEventHandler(this.border_MouseUp);
             // 
             // bottomleftcorner
             // 
@@ -186,6 +188,7 @@
             this.bottomleftcorner.TabIndex = 2;
             this.bottomleftcorner.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
             this.bottomleftcorner.MouseMove += new System.Windows.Forms.MouseEventHandler(this.bottomleftcorner_MouseMove);
+            this.bottomleftcorner.MouseUp += new System.Windows.Forms.MouseEventHandler(this.border_MouseUp);
             // 
             // topleftcorner
             // 
@@ -197,6 +200,7 @@
             this.topleftcorner.TabIndex = 1;
             this.topleftcorner.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
             this.topleftcorner.MouseMove += new System.Windows.Forms.MouseEventHandler(this.topleftcorner_MouseMove);
+            this.topleftcorner.MouseUp += new System.Windows.Forms.MouseEventHandler(this.border_MouseUp);
             // 
             // left
             // 
@@ -209,6 +213,7 @@
             this.left.TabIndex = 3;
             this.left.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
             this.left.MouseMove += new System.Windows.Forms.MouseEventHandler(this.left_MouseMove);
+            this.left.MouseUp += new System.Windows.Forms.MouseEventHandler(this.border_MouseUp);
             // 
             // bottom
             // 
@@ -222,6 +227,7 @@
             this.bottom.TabIndex = 5;
             this.bottom.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
             this.bottom.MouseMove += new System.Windows.Forms.MouseEventHandler(this.bottom_MouseMove);
+            this.bottom.MouseUp += new System.Windows.Forms.MouseEventHandler(this.border_MouseUp);
             // 
             // right
             // 
@@ -234,6 +240,7 @@
             this.right.TabIndex = 7;
             this.right.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
             this.right.MouseMove += new System.Windows.Forms.MouseEventHandler(this.right_MouseMove);
+            this.right.MouseUp += new System.Windows.Forms.MouseEventHandler(this.border_MouseUp);
             // 
             // top
             // 
@@ -247,6 +254,7 @@
             this.top.TabIndex = 8;
             this.top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
             this.top.MouseMove += new System.Windows.Forms.MouseEventHandler(this.top_MouseMove);
+            this.top.MouseUp += new System.Windows.Forms.MouseEventHandler(this.border_MouseUp);
             // 
             // WinClassic
             // 
@@ -254,11 +262,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(300, 300);
             this.Controls.Add(this.program);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "WinClassic";
             this.Text = "WinClassic";
             this.Activated += new System.EventHandler(this.WinClassic_Activated);
             this.Deactivate += new System.EventHandler(this.WinClassic_Deactivate);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.WinClassic_Paint);
             this.program.ResumeLayout(false);
             this.programtopbar.ResumeLayout(false);
             this.programtopbar.PerformLayout();

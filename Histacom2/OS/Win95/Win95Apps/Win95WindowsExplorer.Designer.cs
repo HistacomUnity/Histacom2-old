@@ -67,7 +67,6 @@
             // program
             // 
             this.program.BackColor = System.Drawing.Color.Silver;
-            this.program.Controls.Add(this.pnlSave);
             this.program.Controls.Add(this.mainView);
             this.program.Controls.Add(this.diskView);
             this.program.Controls.Add(this.MenuStrip1);
@@ -75,6 +74,7 @@
             this.program.Controls.Add(this.bottomrightcorner);
             this.program.Controls.Add(this.bottomleftcorner);
             this.program.Controls.Add(this.topleftcorner);
+            this.program.Controls.Add(this.pnlSave);
             this.program.Dock = System.Windows.Forms.DockStyle.Fill;
             this.program.Location = new System.Drawing.Point(0, 0);
             this.program.Name = "program";
@@ -86,9 +86,10 @@
             this.pnlSave.Controls.Add(this.Button1);
             this.pnlSave.Controls.Add(this.Label1);
             this.pnlSave.Controls.Add(this.txtSave);
-            this.pnlSave.Location = new System.Drawing.Point(3, 474);
+            this.pnlSave.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlSave.Location = new System.Drawing.Point(0, 482);
             this.pnlSave.Name = "pnlSave";
-            this.pnlSave.Size = new System.Drawing.Size(850, 35);
+            this.pnlSave.Size = new System.Drawing.Size(704, 35);
             this.pnlSave.TabIndex = 18;
             this.pnlSave.Visible = false;
             // 
@@ -96,7 +97,7 @@
             // 
             this.Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button1.Location = new System.Drawing.Point(608, 1);
+            this.Button1.Location = new System.Drawing.Point(629, 1);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(75, 23);
             this.Button1.TabIndex = 17;
@@ -119,17 +120,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSave.Location = new System.Drawing.Point(60, 3);
             this.txtSave.Name = "txtSave";
-            this.txtSave.Size = new System.Drawing.Size(542, 20);
+            this.txtSave.Size = new System.Drawing.Size(563, 20);
             this.txtSave.TabIndex = 15;
             // 
             // mainView
             // 
-            this.mainView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainView.Location = new System.Drawing.Point(215, 27);
+            this.mainView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainView.Location = new System.Drawing.Point(213, 24);
             this.mainView.Name = "mainView";
-            this.mainView.Size = new System.Drawing.Size(486, 444);
+            this.mainView.Size = new System.Drawing.Size(491, 458);
             this.mainView.TabIndex = 10;
             this.mainView.UseCompatibleStateImageBehavior = false;
             this.mainView.AfterLabelEdit += new System.Windows.Forms.LabelEditEventHandler(this.mainView_AfterLabelEdit);
@@ -137,12 +136,10 @@
             // 
             // diskView
             // 
-            this.diskView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.diskView.Location = new System.Drawing.Point(3, 27);
+            this.diskView.Dock = System.Windows.Forms.DockStyle.Left;
+            this.diskView.Location = new System.Drawing.Point(0, 24);
             this.diskView.Name = "diskView";
-            this.diskView.Size = new System.Drawing.Size(213, 444);
+            this.diskView.Size = new System.Drawing.Size(213, 458);
             this.diskView.TabIndex = 13;
             this.diskView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.diskView_AfterSelect);
             // 

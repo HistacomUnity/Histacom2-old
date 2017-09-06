@@ -17,7 +17,7 @@ namespace Histacom2.OS.Win95.Win95Apps.Story
         {
             WinClassicTerminal Console = new WinClassicTerminal(true);
             Random r = new Random();
-            WinClassic app = wm.StartWin95(Console, "MS-DOS Prompt", null, true, true);
+            WinClassic app = wm.Init(Console, "MS-DOS Prompt", null, true, true);
             
             Console.WriteLine("telnet> 185.152.46.51 Connecting...");
             await Task.Delay(2500);

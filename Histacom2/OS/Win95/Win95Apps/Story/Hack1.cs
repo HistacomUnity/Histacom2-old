@@ -39,7 +39,7 @@ namespace Histacom2.OS.Win95.Win95Apps.Story
         public static async void ContinueObjective()
         {
             WinClassicTerminal Console = new WinClassicTerminal(true);
-            WinClassic app = wm.StartWin95(Console, "MS-DOS Prompt", null, true, true);
+            WinClassic app = wm.Init(Console, "MS-DOS Prompt", null, true, true);
 
             Console.WriteLine("telnet> 104.27.135.159 Connecting...");
             await Task.Delay(2500);

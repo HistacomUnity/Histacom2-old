@@ -123,7 +123,7 @@ namespace Histacom2.OS.Win95.Win95Apps
         void NewFolder()
         {
             FRMWinClassicAddressBookNewFolder abnf = new FRMWinClassicAddressBookNewFolder();
-            WinClassic app = wm.StartWin95(abnf, "Address Book - New Folder", Properties.Resources.Win95IconWordpad, true, true, true);
+            WinClassic app = wm.Init(abnf, "Address Book - New Folder", Properties.Resources.Win95IconWordpad, true, true, true);
 
             if (treeView1.SelectedNode != null)
             {
@@ -146,7 +146,7 @@ namespace Histacom2.OS.Win95.Win95Apps
         void NewContact()
         {
             FRMWinClassicAddressBookNewContact abnc = new FRMWinClassicAddressBookNewContact();
-            WinClassic app = wm.StartWin95(abnc, "Address Book - New Contact", Properties.Resources.Win95IconWordpad, true, true, true);
+            WinClassic app = wm.Init(abnc, "Address Book - New Contact", Properties.Resources.Win95IconWordpad, true, true, true);
 
             if (treeView1.SelectedNode != null)
             {
@@ -189,7 +189,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                         }
                     }
                 }
-                WinClassic app = wm.StartWin95(abnc, "Address Book - Contact Properties", Properties.Resources.Win95IconWordpad, true, true, true);
+                WinClassic app = wm.Init(abnc, "Address Book - Contact Properties", Properties.Resources.Win95IconWordpad, true, true, true);
 
                 if (treeView1.SelectedNode != null)
                 {

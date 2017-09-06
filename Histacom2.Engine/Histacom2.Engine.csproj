@@ -54,6 +54,12 @@
     <Compile Include="Paintbrush.cs" />
     <Compile Include="SaveSystem.cs" />
     <Compile Include="TaskBarController.cs" />
+    <Compile Include="Template\ResizeOverlay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\ResizeOverlay.Designer.cs">
+      <DependentUpon>ResizeOverlay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Template\Win9XBSOD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,12 @@
     </Compile>
     <Compile Include="Template\WinClassic.Designer.cs">
       <DependentUpon>WinClassic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\WinXP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\WinXP.Designer.cs">
+      <DependentUpon>WinXP.cs</DependentUpon>
     </Compile>
     <Compile Include="Theme.cs" />
     <Compile Include="UI\ClassicButton.cs">
@@ -102,6 +114,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Template\ResizeOverlay.resx">
+      <DependentUpon>ResizeOverlay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Template\Win9XBSOD.resx">
       <DependentUpon>Win9XBSOD.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,6 +129,9 @@
     <EmbeddedResource Include="Template\WinClassic.resx">
       <DependentUpon>WinClassic.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Template\WinXP.resx">
+      <DependentUpon>WinXP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\ClassicButton.resx">
       <DependentUpon>ClassicButton.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +139,18 @@
   <ItemGroup>
     <Content Include="Resources\chord.wav" />
     <Content Include="Resources\Icon128x.ico" />
+    <Content Include="Resources\WinXP\Window\WinXP_Bottom.png" />
+    <Content Include="Resources\WinXP\Window\WinXP_Close.png" />
+    <Content Include="Resources\WinXP\Window\WinXP_LBCorner.png" />
+    <Content Include="Resources\WinXP\Window\WinXP_LeftSide.png" />
+    <Content Include="Resources\WinXP\Window\WinXP_Max.png" />
+    <Content Include="Resources\WinXP\Window\WinXP_Min.png" />
+    <Content Include="Resources\WinXP\Window\WinXP_RBCorner.png" />
+    <Content Include="Resources\WinXP\Window\WinXP_Restore.png" />
+    <Content Include="Resources\WinXP\Window\WinXP_RightSide.png" />
+    <Content Include="Resources\WinXP\Window\WinXP_TLCorner.png" />
+    <Content Include="Resources\WinXP\Window\WinXP_TopBar.png" />
+    <Content Include="Resources\WinXP\Window\WinXP_TRCorner.png" />
     <None Include="Resources\WinAboutSeparator95.png" />
     <None Include="Resources\Win95PlusDangerousCreaturesStart.WAV" />
     <None Include="Resources\Win95Start.wav" />

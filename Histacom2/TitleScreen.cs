@@ -156,7 +156,7 @@ namespace Histacom2
             label1.Parent = leet;
             label1.AutoSize = true;
             label1.Text = "Thank you for making Histacom2 possible.";
-            wm.StartWin95(leet, "Thank You", null, true, true);
+            wm.Init(leet, "Thank You", null, true, true);
         }
 
         // The VM Mode timer / checker. Updates every 100ms
@@ -207,8 +207,6 @@ namespace Histacom2
                 } catch {
 
                 }
-                
-
 
                 // If VM Mode is not enabled
                 if (vm_mode.Checked != true)

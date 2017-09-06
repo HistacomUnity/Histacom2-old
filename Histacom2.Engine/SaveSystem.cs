@@ -28,6 +28,13 @@ namespace Histacom2.Engine
 
         public static Theme currentTheme { get; set; }
 
+        public static bool IsBinarySave =
+#if BINARY_SAVE
+            true;
+#else
+            false;
+#endif
+
 #if BINARY_SAVE
         private static readonly byte[] magic = Encoding.UTF8.GetBytes("THSv");
         private static readonly IOrderedEnumerable<System.Reflection.PropertyInfo> properties = typeof(Save).GetProperties().OrderBy(p => (p.GetCustomAttributes(typeof(OrderAttribute), false).SingleOrDefault() as OrderAttribute).Order);
