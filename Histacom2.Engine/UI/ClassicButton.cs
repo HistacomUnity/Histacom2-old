@@ -59,7 +59,7 @@ namespace Histacom2.Engine.UI
                 g.FillRectangle(new SolidBrush(_darkBack), new Rectangle(1, 1, Width - 2, Height - 2));
                 g.FillRectangle(new SolidBrush(BackColor), new Rectangle(2, 2, Width - 3, Height - 3));
 
-                g.DrawString(Text, _font, new SolidBrush(ForeColor), ((Width / 2) + 1) + Padding.Left, (Height / 2) - (g.MeasureString(Text, Font).Height / 2) + 3, sf);
+                g.DrawString(Text, _font, new SolidBrush(ForeColor), ((Width / 2) + 1) + Padding.Left, (Height / 2) - (g.MeasureString(Text, Font).Height / 2) + 2, sf);
             }
             else
             {
@@ -68,7 +68,7 @@ namespace Histacom2.Engine.UI
                 g.FillRectangle(new SolidBrush(_darkBack), new Rectangle(1, 1, Width - 2, Height - 2));
                 g.FillRectangle(new SolidBrush(BackColor), new Rectangle(1, 1, Width - 3, Height - 3));
 
-                g.DrawString(Text, _font, new SolidBrush(ForeColor), (Width / 2) + Padding.Left, (Height / 2) - (g.MeasureString(Text, Font).Height / 2) + 2, sf);
+                g.DrawString(Text, _font, new SolidBrush(ForeColor), (Width / 2) + Padding.Left, (Height / 2) - (g.MeasureString(Text, Font).Height / 2) + 1, sf);
             }
         }
         

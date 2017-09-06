@@ -117,11 +117,6 @@ namespace Histacom2.OS.Win95.Win95Apps
             }
         }
 
-        private void DoClassicButtons()
-        {
-            btnCancel.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
-        }
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
             ParentForm.Close();
@@ -129,7 +124,12 @@ namespace Histacom2.OS.Win95.Win95Apps
 
         private void WinClassicFTPClient_Load(object sender, EventArgs e)
         {
-            DoClassicButtons();
+            
+        }
+
+        private void topBar_Paint(object sender, PaintEventArgs e)
+        {
+            topBar.BackColor = SaveSystem.currentTheme.threeDObjectsColor;
         }
     }
 }
