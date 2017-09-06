@@ -95,6 +95,8 @@ namespace Histacom2.OS.Win95.Win95Apps
                         ((WinClassic)f).programtopbar.BackColor = SaveSystem.currentTheme.inactiveTitleBarColor;
                         ((WinClassic)f).Title.ForeColor = SaveSystem.currentTheme.inactiveTitleTextColor;
                     }
+                    f.Invalidate();
+                    foreach (Control c in f.Controls) c.Invalidate();
                 }
             }
         }
@@ -136,6 +138,8 @@ namespace Histacom2.OS.Win95.Win95Apps
                         ((WinClassic)f).programtopbar.BackColor = SaveSystem.currentTheme.inactiveTitleBarColor;
                         ((WinClassic)f).Title.ForeColor = SaveSystem.currentTheme.inactiveTitleTextColor;
                     }
+                    f.Invalidate();
+                    foreach (Control c in f.Controls) c.Invalidate();
                 }
             }
             ParentForm.Close();

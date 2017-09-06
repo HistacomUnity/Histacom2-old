@@ -45,5 +45,17 @@ namespace Histacom2.Engine
             // Draw the line.
             e.Graphics.DrawLine(new Pen(foreColor), 4, height / 2, width - 4, height / 2);
         }
+
+        public static Color GetLightFromColor(Color basecolor)
+        {
+            if (basecolor == Color.FromArgb(112, 112, 112)) return Color.FromArgb(184, 184, 184);
+            return ControlPaint.Light(basecolor, 50);
+        }
+
+        public static Color GetDarkFromColor(Color basecolor)
+        {
+            if (basecolor == Color.FromArgb(112, 112, 112)) return Color.FromArgb(72, 72, 72);
+            return ControlPaint.Dark(basecolor, 50);
+        }
     }
 }
