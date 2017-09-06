@@ -48,14 +48,17 @@ namespace Histacom2.Engine
 
         public static Color GetLightFromColor(Color basecolor)
         {
+            if (basecolor == Color.Silver) return Color.White;
             if (basecolor == Color.FromArgb(112, 112, 112)) return Color.FromArgb(184, 184, 184);
-            return ControlPaint.Light(basecolor, 50);
+            if (basecolor == Color.FromArgb(169, 200, 169)) return Color.FromArgb(218, 223, 218);
+            return ControlPaint.Light(basecolor, 70);
         }
 
         public static Color GetDarkFromColor(Color basecolor)
         {
             if (basecolor == Color.FromArgb(112, 112, 112)) return Color.FromArgb(72, 72, 72);
-            return ControlPaint.Dark(basecolor, 50);
+            if (basecolor == Color.FromArgb(169, 200, 169)) return Color.FromArgb(95, 153, 95);
+            return ControlPaint.Dark(basecolor, 70);
         }
     }
 }

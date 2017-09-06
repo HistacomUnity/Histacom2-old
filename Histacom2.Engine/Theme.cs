@@ -127,6 +127,11 @@ namespace Histacom2.Engine
 
             asteriskSound = Properties.Resources.Win95PlusInsideComputerAsterisk;
 
+            threeDObjectsColor = Color.FromArgb(169, 200, 169);
+            threeDObjectsTextColor = Color.Black;
+
+            buttonFont = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold);
+
             activeTitleBarColor = Color.FromArgb(224, 0, 0);
             activeTitleTextColor = Color.White;
             inactiveTitleBarColor = Color.FromArgb(96, 168, 128);

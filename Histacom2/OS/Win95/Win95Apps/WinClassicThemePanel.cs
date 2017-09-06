@@ -96,7 +96,17 @@ namespace Histacom2.OS.Win95.Win95Apps
                         ((WinClassic)f).Title.ForeColor = SaveSystem.currentTheme.inactiveTitleTextColor;
                     }
                     f.Invalidate();
-                    foreach (Control c in f.Controls) c.Invalidate();
+                    ((WinClassic)f).programContent.Invalidate();
+                    ((WinClassic)f).top.Invalidate();
+                    ((WinClassic)f).toprightcorner.Invalidate();
+                    ((WinClassic)f).right.Invalidate();
+                    ((WinClassic)f).bottomrightcorner.Invalidate();
+                    ((WinClassic)f).bottom.Invalidate();
+                    ((WinClassic)f).bottomleftcorner.Invalidate();
+                    ((WinClassic)f).left.Invalidate();
+                    ((WinClassic)f).topleftcorner.Invalidate();
+                    foreach (Control c in ((WinClassic)f).progContent.Controls) c.Invalidate();
+                    ((WinClassic)f).progContent.BackColor = SaveSystem.currentTheme.threeDObjectsColor;
                 }
             }
         }
@@ -139,7 +149,17 @@ namespace Histacom2.OS.Win95.Win95Apps
                         ((WinClassic)f).Title.ForeColor = SaveSystem.currentTheme.inactiveTitleTextColor;
                     }
                     f.Invalidate();
-                    foreach (Control c in f.Controls) c.Invalidate();
+                    ((WinClassic)f).programContent.Invalidate();
+                    ((WinClassic)f).top.Invalidate();
+                    ((WinClassic)f).toprightcorner.Invalidate();
+                    ((WinClassic)f).right.Invalidate();
+                    ((WinClassic)f).bottomrightcorner.Invalidate();
+                    ((WinClassic)f).bottom.Invalidate();
+                    ((WinClassic)f).bottomleftcorner.Invalidate();
+                    ((WinClassic)f).left.Invalidate();
+                    ((WinClassic)f).topleftcorner.Invalidate();
+                    foreach (Control c in ((WinClassic)f).progContent.Controls) c.Invalidate();
+                    ((WinClassic)f).progContent.BackColor = SaveSystem.currentTheme.threeDObjectsColor;
                 }
             }
             ParentForm.Close();

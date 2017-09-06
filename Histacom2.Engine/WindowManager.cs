@@ -60,6 +60,7 @@ namespace Histacom2.Engine
             content.Parent = app.programContent;
             content.BringToFront();
             content.Dock = DockStyle.Fill;
+            app.progContent = content;
 
             // Check if icon is null
             if (icon == null)

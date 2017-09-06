@@ -16,6 +16,7 @@ namespace Histacom2.Engine.Template
 
         public Font fnt;
         public ResizeOverlay resizer = new ResizeOverlay();
+        public UserControl progContent;
 
         public bool resizable = true;
         public bool closeDisabled = false;
