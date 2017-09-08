@@ -94,6 +94,9 @@
     <Compile Include="UI\ClassicButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UI\ClassicTextbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UI\IProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>

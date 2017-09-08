@@ -24,6 +24,8 @@ namespace Histacom2.Engine
 
         public Font buttonFont { get; set; }
 
+        public Color windowColor { get; set; }
+
         public Color activeTitleBarColor { get; set; }
         public Color activeTitleTextColor { get; set; }
         public Color inactiveTitleBarColor { get; set; }
@@ -51,6 +53,8 @@ namespace Histacom2.Engine
             threeDObjectsTextColor = Color.Black;
 
             buttonFont = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular);
+
+            windowColor = Color.White;
 
             activeTitleBarColor = Color.Navy;
             activeTitleTextColor = Color.White;
@@ -80,6 +84,8 @@ namespace Histacom2.Engine
 
             buttonFont = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular);
 
+            windowColor = Color.White;
+
             activeTitleBarColor = Color.Navy;
             activeTitleTextColor = Color.White;
             inactiveTitleBarColor = Color.Gray;
@@ -108,6 +114,8 @@ namespace Histacom2.Engine
 
             buttonFont = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold);
 
+            windowColor = Color.FromArgb(184, 184, 184);
+
             activeTitleBarColor = Color.Teal;
             activeTitleTextColor = Color.White;
             inactiveTitleBarColor = Color.FromArgb(72, 72, 72);
@@ -131,6 +139,8 @@ namespace Histacom2.Engine
             threeDObjectsTextColor = Color.Black;
 
             buttonFont = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold);
+
+            windowColor = Color.White;
 
             activeTitleBarColor = Color.FromArgb(224, 0, 0);
             activeTitleTextColor = Color.White;
