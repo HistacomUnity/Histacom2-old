@@ -10,9 +10,12 @@ namespace Histacom2.Engine.UI
 {
     public class ClassicTextbox : Control
     {
+        public bool UseSystemPasswordChar { get; set; }
+
         public ClassicTextbox() : base()
         {
-
+            if (SaveSystem.currentTheme != null) Font = SaveSystem.currentTheme.buttonFont;
+            else Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular);
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -28,8 +31,15 @@ namespace Histacom2.Engine.UI
             var _lightBack = Paintbrush.GetLightFromColor(textboxcolor);
             var _darkBack = Paintbrush.GetDarkFromColor(textboxcolor);
 
+            if (SaveSystem.currentTheme != null) Font = SaveSystem.currentTheme.buttonFont;
+            else Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular);
+
             var g = e.Graphics;
             g.Clear(BackColor);
+
+            g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;
+            if (UseSystemPasswordChar) g.DrawString(new string('●', Text.Length), Font, Brushes.Black, 3, 3);
+            else g.DrawString(Text, Font, Brushes.Black, 3, 3);
 
             g.DrawLine(new Pen(_darkBack), 0, 0, Width - 2, 0);
             g.DrawLine(new Pen(_lightBack), Width - 1, 0, Width - 1, Height - 1);
