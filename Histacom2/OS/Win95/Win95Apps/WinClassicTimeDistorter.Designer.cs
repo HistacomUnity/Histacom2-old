@@ -34,7 +34,7 @@
             this.lblCurrent = new System.Windows.Forms.Label();
             this.lblYear = new System.Windows.Forms.Label();
             this.lblTo = new System.Windows.Forms.Label();
-            this.btnGo = new System.Windows.Forms.Button();
+            this.btnGo = new Histacom2.Engine.UI.ClassicButton();
             this.lblCountDown = new System.Windows.Forms.Label();
             this.countDownTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
@@ -104,14 +104,12 @@
             // 
             // btnGo
             // 
-            this.btnGo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGo.Location = new System.Drawing.Point(162, 133);
             this.btnGo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnGo.Name = "btnGo";
             this.btnGo.Size = new System.Drawing.Size(124, 23);
             this.btnGo.TabIndex = 7;
-            this.btnGo.Text = "Go to destination year";
-            this.btnGo.UseVisualStyleBackColor = true;
+            this.btnGo.Text = "Go To Destination Year";
             this.btnGo.Click += new System.EventHandler(this.btnGo_Click);
             // 
             // lblCountDown
@@ -158,7 +156,7 @@
         private System.Windows.Forms.Label lblYear;
         internal System.Windows.Forms.Label lblCountDown;
         private System.Windows.Forms.Timer countDownTimer;
-        internal System.Windows.Forms.Button btnGo;
+        internal Histacom2.Engine.UI.ClassicButton btnGo;
         internal System.Windows.Forms.Label lblTo;
         internal System.Windows.Forms.Label lblDestYear;
     }

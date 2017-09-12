@@ -8,13 +8,25 @@ using System.Windows.Forms;
 
 namespace Histacom2.Engine.UI
 {
-    public class ClassicButton : Control
+    public class ClassicButton : Control, IButtonControl
     {
         private Color _lightBack;
         private Color _darkBack;
-        private Font _font;
 
         private bool _pressing = false;
+
+        public DialogResult DialogResult
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
 
         public ClassicButton() : base()
         {
@@ -26,8 +38,8 @@ namespace Histacom2.Engine.UI
             if (SaveSystem.currentTheme != null) ForeColor = SaveSystem.currentTheme.threeDObjectsTextColor;
             else ForeColor = Color.Black;
 
-            if (SaveSystem.currentTheme != null) _font = SaveSystem.currentTheme.buttonFont;
-            else _font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular);
+            if (SaveSystem.currentTheme != null) Font = SaveSystem.currentTheme.buttonFont;
+            else Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular);
 
             MouseDown += (s, e) => { _pressing = true; Invalidate(); };
             MouseUp += (s, e) => { _pressing = false; Invalidate(); };
@@ -59,7 +71,7 @@ namespace Histacom2.Engine.UI
                 g.FillRectangle(new SolidBrush(_darkBack), new Rectangle(1, 1, Width - 2, Height - 2));
                 g.FillRectangle(new SolidBrush(BackColor), new Rectangle(2, 2, Width - 3, Height - 3));
 
-                g.DrawString(Text, _font, new SolidBrush(ForeColor), ((Width / 2) + 1) + Padding.Left, (Height / 2) - (g.MeasureString(Text, Font).Height / 2) + 2, sf);
+                g.DrawString(Text, Font, new SolidBrush(ForeColor), ((Width / 2) + 1) + Padding.Left, (Height / 2) - (g.MeasureString(Text, Font).Height / 2) + 2, sf);
             }
             else
             {
@@ -68,9 +80,18 @@ namespace Histacom2.Engine.UI
                 g.FillRectangle(new SolidBrush(_darkBack), new Rectangle(1, 1, Width - 2, Height - 2));
                 g.FillRectangle(new SolidBrush(BackColor), new Rectangle(1, 1, Width - 3, Height - 3));
 
-                g.DrawString(Text, _font, new SolidBrush(ForeColor), (Width / 2) + Padding.Left, (Height / 2) - (g.MeasureString(Text, Font).Height / 2) + 1, sf);
+                g.DrawString(Text, Font, new SolidBrush(ForeColor), (Width / 2) + Padding.Left, (Height / 2) - (g.MeasureString(Text, Font).Height / 2) + 1, sf);
             }
         }
-        
+
+        public void NotifyDefault(bool value)
+        {
+            
+        }
+
+        public void PerformClick()
+        {
+            this.OnClick(new EventArgs());
+        }
     }
 }

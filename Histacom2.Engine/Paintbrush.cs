@@ -56,6 +56,7 @@ namespace Histacom2.Engine
 
         public static Color GetDarkFromColor(Color basecolor)
         {
+            if (basecolor == Color.Silver) return Color.Gray;
             if (basecolor == Color.FromArgb(112, 112, 112)) return Color.FromArgb(72, 72, 72);
             if (basecolor == Color.FromArgb(169, 200, 169)) return Color.FromArgb(95, 153, 95);
             return ControlPaint.Dark(basecolor, 70);
