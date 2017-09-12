@@ -19,6 +19,11 @@ namespace Histacom2.Engine
         public Stream progErrorSound { get; set; }
         public Stream questionSound { get; set; }
 
+        public Color threeDObjectsColor { get; set; }
+        public Color threeDObjectsTextColor { get; set; }
+
+        public Font buttonFont { get; set; }
+
         public Color activeTitleBarColor { get; set; }
         public Color activeTitleTextColor { get; set; }
         public Color inactiveTitleBarColor { get; set; }
@@ -41,6 +46,11 @@ namespace Histacom2.Engine
             exclamationSound = Properties.Resources.CHORD;
             progErrorSound = Properties.Resources.CHORD;
             questionSound = Properties.Resources.CHORD;
+
+            threeDObjectsColor = Color.Silver;
+            threeDObjectsTextColor = Color.Black;
+
+            buttonFont = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular);
 
             activeTitleBarColor = Color.Navy;
             activeTitleTextColor = Color.White;
@@ -65,6 +75,16 @@ namespace Histacom2.Engine
             progErrorSound = Properties.Resources.CHORD;
             questionSound = Properties.Resources.CHORD;
 
+            threeDObjectsColor = Color.Silver;
+            threeDObjectsTextColor = Color.Black;
+
+            buttonFont = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular);
+
+            activeTitleBarColor = Color.Navy;
+            activeTitleTextColor = Color.White;
+            inactiveTitleBarColor = Color.Gray;
+            inactiveTitleTextColor = Color.Silver;
+
             defaultWallpaper = null;
             themeName = "default98";
         }
@@ -82,6 +102,11 @@ namespace Histacom2.Engine
             exclamationSound = Properties.Resources.Win95PlusDangerousCreaturesExclamation;
             progErrorSound = Properties.Resources.Win95PlusDangerousCreaturesProgError;
             questionSound = Properties.Resources.Win95PlusDangerousCreaturesQuestion;
+
+            threeDObjectsColor = Color.FromArgb(112, 112, 112);
+            threeDObjectsTextColor = Color.Black;
+
+            buttonFont = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold);
 
             activeTitleBarColor = Color.Teal;
             activeTitleTextColor = Color.White;
@@ -101,6 +126,11 @@ namespace Histacom2.Engine
             stopSound = Properties.Resources.Win95PlusInsideComputerStop;
 
             asteriskSound = Properties.Resources.Win95PlusInsideComputerAsterisk;
+
+            threeDObjectsColor = Color.FromArgb(169, 200, 169);
+            threeDObjectsTextColor = Color.Black;
+
+            buttonFont = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold);
 
             activeTitleBarColor = Color.FromArgb(224, 0, 0);
             activeTitleTextColor = Color.White;

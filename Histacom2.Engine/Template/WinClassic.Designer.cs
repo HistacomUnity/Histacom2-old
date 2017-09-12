@@ -79,6 +79,7 @@
             this.programContent.Name = "programContent";
             this.programContent.Size = new System.Drawing.Size(292, 274);
             this.programContent.TabIndex = 9;
+            this.programContent.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.programContent_ControlAdded);
             // 
             // programtopbar
             // 
@@ -160,6 +161,7 @@
             this.toprightcorner.Name = "toprightcorner";
             this.toprightcorner.Size = new System.Drawing.Size(4, 4);
             this.toprightcorner.TabIndex = 6;
+            this.toprightcorner.Paint += new System.Windows.Forms.PaintEventHandler(this.toprightcorner_Paint);
             this.toprightcorner.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
             this.toprightcorner.MouseMove += new System.Windows.Forms.MouseEventHandler(this.toprightcorner_MouseMove);
             this.toprightcorner.MouseUp += new System.Windows.Forms.MouseEventHandler(this.border_MouseUp);
@@ -173,6 +175,7 @@
             this.bottomrightcorner.Name = "bottomrightcorner";
             this.bottomrightcorner.Size = new System.Drawing.Size(4, 4);
             this.bottomrightcorner.TabIndex = 4;
+            this.bottomrightcorner.Paint += new System.Windows.Forms.PaintEventHandler(this.bottomrightcorner_Paint);
             this.bottomrightcorner.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
             this.bottomrightcorner.MouseMove += new System.Windows.Forms.MouseEventHandler(this.bottomrightcorner_MouseMove);
             this.bottomrightcorner.MouseUp += new System.Windows.Forms.MouseEventHandler(this.border_MouseUp);
@@ -186,6 +189,7 @@
             this.bottomleftcorner.Name = "bottomleftcorner";
             this.bottomleftcorner.Size = new System.Drawing.Size(4, 4);
             this.bottomleftcorner.TabIndex = 2;
+            this.bottomleftcorner.Paint += new System.Windows.Forms.PaintEventHandler(this.bottomleftcorner_Paint);
             this.bottomleftcorner.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
             this.bottomleftcorner.MouseMove += new System.Windows.Forms.MouseEventHandler(this.bottomleftcorner_MouseMove);
             this.bottomleftcorner.MouseUp += new System.Windows.Forms.MouseEventHandler(this.border_MouseUp);
@@ -198,6 +202,7 @@
             this.topleftcorner.Name = "topleftcorner";
             this.topleftcorner.Size = new System.Drawing.Size(4, 4);
             this.topleftcorner.TabIndex = 1;
+            this.topleftcorner.Paint += new System.Windows.Forms.PaintEventHandler(this.topleftcorner_Paint);
             this.topleftcorner.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
             this.topleftcorner.MouseMove += new System.Windows.Forms.MouseEventHandler(this.topleftcorner_MouseMove);
             this.topleftcorner.MouseUp += new System.Windows.Forms.MouseEventHandler(this.border_MouseUp);
@@ -211,6 +216,7 @@
             this.left.Name = "left";
             this.left.Size = new System.Drawing.Size(4, 292);
             this.left.TabIndex = 3;
+            this.left.Paint += new System.Windows.Forms.PaintEventHandler(this.left_Paint);
             this.left.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
             this.left.MouseMove += new System.Windows.Forms.MouseEventHandler(this.left_MouseMove);
             this.left.MouseUp += new System.Windows.Forms.MouseEventHandler(this.border_MouseUp);
@@ -225,6 +231,7 @@
             this.bottom.Name = "bottom";
             this.bottom.Size = new System.Drawing.Size(296, 4);
             this.bottom.TabIndex = 5;
+            this.bottom.Paint += new System.Windows.Forms.PaintEventHandler(this.bottom_Paint);
             this.bottom.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
             this.bottom.MouseMove += new System.Windows.Forms.MouseEventHandler(this.bottom_MouseMove);
             this.bottom.MouseUp += new System.Windows.Forms.MouseEventHandler(this.border_MouseUp);
@@ -238,6 +245,7 @@
             this.right.Name = "right";
             this.right.Size = new System.Drawing.Size(4, 296);
             this.right.TabIndex = 7;
+            this.right.Paint += new System.Windows.Forms.PaintEventHandler(this.right_Paint);
             this.right.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
             this.right.MouseMove += new System.Windows.Forms.MouseEventHandler(this.right_MouseMove);
             this.right.MouseUp += new System.Windows.Forms.MouseEventHandler(this.border_MouseUp);
@@ -252,6 +260,7 @@
             this.top.Name = "top";
             this.top.Size = new System.Drawing.Size(300, 4);
             this.top.TabIndex = 8;
+            this.top.Paint += new System.Windows.Forms.PaintEventHandler(this.top_Paint);
             this.top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
             this.top.MouseMove += new System.Windows.Forms.MouseEventHandler(this.top_MouseMove);
             this.top.MouseUp += new System.Windows.Forms.MouseEventHandler(this.border_MouseUp);

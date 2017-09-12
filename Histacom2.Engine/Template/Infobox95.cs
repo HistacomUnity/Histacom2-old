@@ -13,9 +13,8 @@ namespace Histacom2.Engine.Template
         public Infobox95(InfoboxType type, InfoboxButtons btns)
         {
             InitializeComponent();
-            button1.Paint += (sender, args) => Paintbrush.PaintClassicBorders(sender, args, 2);
-            button2.Paint += (sender, args) => Paintbrush.PaintClassicBorders(sender, args, 2);
-            button3.Paint += (sender, args) => Paintbrush.PaintClassicBorders(sender, args, 2);
+            this.BackColor = SaveSystem.currentTheme.threeDObjectsColor;
+            this.programContent.BackColor = SaveSystem.currentTheme.threeDObjectsColor;
 
             switch (type)
             {
@@ -65,6 +64,12 @@ namespace Histacom2.Engine.Template
         private void button1_Click(object sender, EventArgs e)
         {
             if (btnStatus == 0) this.ParentForm.Close();
+        }
+
+        private void programContent_Paint(object sender, PaintEventArgs e)
+        {
+            this.BackColor = SaveSystem.currentTheme.threeDObjectsColor;
+            this.programContent.BackColor = SaveSystem.currentTheme.threeDObjectsColor;
         }
     }
 

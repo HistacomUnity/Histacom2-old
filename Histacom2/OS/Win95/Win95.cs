@@ -606,6 +606,31 @@ namespace Histacom2.OS.Win95
             app.BringToFront();
             startmenu.Hide();
         }
+
+        private void taskbar_Paint(object sender, PaintEventArgs e)
+        {
+            var gfx = e.Graphics;
+            gfx.Clear(currentTheme.threeDObjectsColor);
+
+            var _lightBack = Paintbrush.GetLightFromColor(currentTheme.threeDObjectsColor);
+
+            gfx.DrawLine(new Pen(_lightBack), 0, 1, taskbar.Width, 1);
+        }
+
+        private void clockPanel_Paint(object sender, PaintEventArgs e)
+        {
+            var gfx = e.Graphics;
+            gfx.Clear(currentTheme.threeDObjectsColor);
+
+            var _lightBack = Paintbrush.GetLightFromColor(currentTheme.threeDObjectsColor);
+            var _darkBack = Paintbrush.GetDarkFromColor(currentTheme.threeDObjectsColor);
+
+            gfx.DrawLine(new Pen(_lightBack), 0, 1, clockPanel.Width, 1);
+            gfx.DrawLine(new Pen(_darkBack), 0, 24, 0, 4);
+            gfx.DrawLine(new Pen(_darkBack), 61, 4, 0, 4);
+            gfx.DrawLine(new Pen(_lightBack), 62, 4, 62, 25);
+            gfx.DrawLine(new Pen(_lightBack), 0, 25, 62, 25);
+        }
     }
     public class MyRenderer : ToolStripProfessionalRenderer
     {

@@ -11,10 +11,12 @@ namespace Histacom2.Engine.Template
         {
             InitializeComponent();
             DoubleBuffered = true;
+            programContent.BackColor = SaveSystem.currentTheme.threeDObjectsColor;
         }
 
         public Font fnt;
         public ResizeOverlay resizer = new ResizeOverlay();
+        public UserControl progContent;
 
         public bool resizable = true;
         public bool closeDisabled = false;
@@ -207,6 +209,105 @@ namespace Histacom2.Engine.Template
 
 
         public bool max = false;
+
+        private void bottom_Paint(object sender, PaintEventArgs e)
+        {
+            var gfx = e.Graphics;
+            gfx.Clear(SaveSystem.currentTheme.threeDObjectsColor);
+
+            var _darkBack = Paintbrush.GetDarkFromColor(SaveSystem.currentTheme.threeDObjectsColor);
+
+            gfx.DrawLine(Pens.Black, 0, 3, bottom.Width, 3);
+            gfx.DrawLine(new Pen(_darkBack), 0, 2, bottom.Width, 2);
+        }
+
+        private void bottomleftcorner_Paint(object sender, PaintEventArgs e)
+        {
+            var gfx = e.Graphics;
+            gfx.Clear(SaveSystem.currentTheme.threeDObjectsColor);
+
+            var _lightBack = Paintbrush.GetLightFromColor(SaveSystem.currentTheme.threeDObjectsColor);
+            var _darkBack = Paintbrush.GetDarkFromColor(SaveSystem.currentTheme.threeDObjectsColor);
+
+            gfx.DrawLine(Pens.Black, 0, 3, 3, 3);
+            gfx.DrawLine(new Pen(_darkBack), 1, 2, 3, 2);
+            gfx.DrawLine(new Pen(_lightBack), 1, 0, 1, 1);
+        }
+
+        private void left_Paint(object sender, PaintEventArgs e)
+        {
+            var gfx = e.Graphics;
+            gfx.Clear(SaveSystem.currentTheme.threeDObjectsColor);
+
+            var _lightBack = Paintbrush.GetLightFromColor(SaveSystem.currentTheme.threeDObjectsColor);
+
+            gfx.DrawLine(new Pen(_lightBack), 1, 0, 1, left.Height);
+        }
+
+        private void programContent_ControlAdded(object sender, ControlEventArgs e)
+        {
+            e.Control.BackColor = SaveSystem.currentTheme.threeDObjectsColor;
+            e.Control.Invalidate();
+        }
+
+        private void topleftcorner_Paint(object sender, PaintEventArgs e)
+        {
+            var gfx = e.Graphics;
+            gfx.Clear(SaveSystem.currentTheme.threeDObjectsColor);
+
+            var _lightBack = Paintbrush.GetLightFromColor(SaveSystem.currentTheme.threeDObjectsColor);
+
+            gfx.DrawLine(new Pen(_lightBack), 1, 3, 1, 1);
+            gfx.DrawLine(new Pen(_lightBack), 1, 1, 3, 1);
+        }
+
+        private void top_Paint(object sender, PaintEventArgs e)
+        {
+            var gfx = e.Graphics;
+            gfx.Clear(SaveSystem.currentTheme.threeDObjectsColor);
+
+            var _lightBack = Paintbrush.GetLightFromColor(SaveSystem.currentTheme.threeDObjectsColor);
+
+            gfx.DrawLine(new Pen(_lightBack), 0, 1, top.Width, 1);
+        }
+
+        private void toprightcorner_Paint(object sender, PaintEventArgs e)
+        {
+            var gfx = e.Graphics;
+            gfx.Clear(SaveSystem.currentTheme.threeDObjectsColor);
+
+            var _lightBack = Paintbrush.GetLightFromColor(SaveSystem.currentTheme.threeDObjectsColor);
+            var _darkBack = Paintbrush.GetDarkFromColor(SaveSystem.currentTheme.threeDObjectsColor);
+
+            gfx.DrawLine(new Pen(_lightBack), 0, 1, 1, 1);
+            gfx.DrawLine(new Pen(_darkBack), 2, 1, 2, 3);
+            gfx.DrawLine(Pens.Black, 3, 0, 3, 3);
+        }
+
+        private void right_Paint(object sender, PaintEventArgs e)
+        {
+            var gfx = e.Graphics;
+            gfx.Clear(SaveSystem.currentTheme.threeDObjectsColor);
+
+            var _darkBack = Paintbrush.GetDarkFromColor(SaveSystem.currentTheme.threeDObjectsColor);
+
+            gfx.DrawLine(Pens.Black, 3, 0, 3, bottom.Width);
+            gfx.DrawLine(new Pen(_darkBack), 2, 0, 2, bottom.Width);
+        }
+
+        private void bottomrightcorner_Paint(object sender, PaintEventArgs e)
+        {
+            var gfx = e.Graphics;
+            gfx.Clear(SaveSystem.currentTheme.threeDObjectsColor);
+
+            var _darkBack = Paintbrush.GetDarkFromColor(SaveSystem.currentTheme.threeDObjectsColor);
+
+            gfx.DrawLine(Pens.Black, 3, 0, 3, 3);
+            gfx.DrawLine(Pens.Black, 0, 3, 3, 3);
+            gfx.DrawLine(new Pen(_darkBack), 2, 0, 2, 2);
+            gfx.DrawLine(new Pen(_darkBack), 0, 2, 2, 2);
+        }
+
         public Size prevSize;
         public Point prevPoint;
         private void maximizebutton_Click(object sender, EventArgs e)
