@@ -11,14 +11,9 @@ namespace Histacom2.Engine.Template
             this.textBox2.Text = "This product is licensed to:\r\n" + Environment.UserName + "\r\n";
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.ParentForm.Close();
-        }
-
         private void classicButton1_Click(object sender, EventArgs e)
         {
-            this.ParentForm.Close();
+            ParentForm.Close();
         }
     }
 }

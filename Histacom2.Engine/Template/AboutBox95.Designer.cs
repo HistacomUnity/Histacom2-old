@@ -102,7 +102,7 @@
             // 
             this.classicButton1.BackColor = System.Drawing.Color.Silver;
             this.classicButton1.ForeColor = System.Drawing.Color.Black;
-            this.classicButton1.Location = new System.Drawing.Point(251, 220);
+            this.classicButton1.Location = new System.Drawing.Point(251, 223);
             this.classicButton1.Name = "classicButton1";
             this.classicButton1.Size = new System.Drawing.Size(75, 23);
             this.classicButton1.TabIndex = 6;
