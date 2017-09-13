@@ -76,9 +76,6 @@ namespace Histacom2.OS.Win95
         private void Desktop_Load(object sender, EventArgs e)
         {
             if (currentTheme.defaultWallpaper != null) desktopicons.BackgroundImage = new Bitmap(currentTheme.defaultWallpaper, Width, Height);
-            //Start Menu Color - Commented until it works reliably
-            //startmenuitems.Renderer = new MyRenderer();
-            //ProgramsToolStripMenuItem.DropDown.Renderer = new MyRenderer();
 
             // Make Font Mandatory
             fontLoad();
@@ -144,8 +141,8 @@ namespace Histacom2.OS.Win95
         private void fontLoad()
         {
             this.taskbartime.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
-            //this.ProgramsToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
-            //this.DocumentsToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            this.ProgramsToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            this.DocumentsToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             this.SettingsToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             this.FindToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             this.HelpToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
@@ -656,30 +653,6 @@ namespace Histacom2.OS.Win95
             gfx.DrawLine(new Pen(_darkBack), startmenu.Width - 2, 1, startmenu.Width - 2, startmenu.Height - 2);
             gfx.DrawLine(new Pen(_lightBack), 1, startmenu.Height - 3, 1, 1);
             gfx.DrawLine(new Pen(_lightBack), startmenu.Width - 3, 1, 1, 1);
-        }
-    }
-    public class MyRenderer : ToolStripProfessionalRenderer
-    {
-        public MyRenderer() : base(new MyColors()) { }
-    }
-
-    public class MyColors : ProfessionalColorTable
-    {
-        public override Color MenuItemSelectedGradientBegin
-        {
-            get { return Color.Navy; }
-        }
-        public override Color MenuItemSelectedGradientEnd
-        {
-            get { return Color.Navy; }
-        }
-        public override Color MenuItemPressedGradientBegin
-        {
-            get { return Color.Navy; }
-        }
-        public override Color MenuItemPressedGradientEnd
-        {
-            get { return Color.Navy; }
         }
     }
 }

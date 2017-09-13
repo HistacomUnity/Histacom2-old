@@ -28,8 +28,14 @@ namespace Histacom2.Engine.UI
             }
         }
 
+        public bool AdaptForeColorWithTheme { get; set; }
+        public bool AdaptFontWithTheme { get; set; }
+
         public ClassicButton() : base()
         {
+            AdaptForeColorWithTheme = true;
+            AdaptFontWithTheme = true;
+
             if (SaveSystem.currentTheme != null) BackColor = SaveSystem.currentTheme.threeDObjectsColor;
             else BackColor = Color.Silver;
             _lightBack = ControlPaint.Light(BackColor, 50);
@@ -52,6 +58,18 @@ namespace Histacom2.Engine.UI
 
             if (SaveSystem.currentTheme != null) BackColor = SaveSystem.currentTheme.threeDObjectsColor;
             else BackColor = Color.Silver;
+
+            if (AdaptForeColorWithTheme)
+            {
+                if (SaveSystem.currentTheme != null) ForeColor = SaveSystem.currentTheme.threeDObjectsTextColor;
+                else ForeColor = Color.Black;
+            }
+
+            if (AdaptFontWithTheme)
+            {
+                if (SaveSystem.currentTheme != null) Font = SaveSystem.currentTheme.buttonFont;
+                else Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular);
+            }
 
             _lightBack = Paintbrush.GetLightFromColor(BackColor);
             _darkBack = Paintbrush.GetDarkFromColor(BackColor);
