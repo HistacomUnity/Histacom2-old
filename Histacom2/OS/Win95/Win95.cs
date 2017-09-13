@@ -37,7 +37,7 @@ namespace Histacom2.OS.Win95
         public Windows95()
         {
             InitializeComponent();
-            startmenu.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            //startmenu.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             ProgramsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             AccessoriesToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             CommunicationsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
@@ -144,8 +144,8 @@ namespace Histacom2.OS.Win95
         private void fontLoad()
         {
             this.taskbartime.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
-            this.ProgramsToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
-            this.DocumentsToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            //this.ProgramsToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            //this.DocumentsToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             this.SettingsToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             this.FindToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             this.HelpToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
@@ -161,8 +161,8 @@ namespace Histacom2.OS.Win95
         private void startbutton_Click(object sender, EventArgs e)
         {
             startmenu.Show();
-            startmenu.BringToFront();
             if (taskbar.Visible) taskbar.BringToFront();
+            startmenu.BringToFront();
         }
 
         // Shutdown button
@@ -630,6 +630,28 @@ namespace Histacom2.OS.Win95
             gfx.DrawLine(new Pen(_darkBack), 61, 4, 0, 4);
             gfx.DrawLine(new Pen(_lightBack), 62, 4, 62, 25);
             gfx.DrawLine(new Pen(_lightBack), 0, 25, 62, 25);
+        }
+
+        private void startmenuitems_Paint(object sender, PaintEventArgs e)
+        {
+            var gfx = e.Graphics;
+            gfx.Clear(currentTheme.threeDObjectsColor);
+        }
+
+        private void startmenu_Paint(object sender, PaintEventArgs e)
+        {
+            var gfx = e.Graphics;
+            gfx.Clear(currentTheme.threeDObjectsColor);
+
+            var _lightBack = Paintbrush.GetLightFromColor(currentTheme.threeDObjectsColor);
+            var _darkBack = Paintbrush.GetDarkFromColor(currentTheme.threeDObjectsColor);
+
+            gfx.DrawLine(Pens.Black, 0, startmenu.Height - 1, startmenu.Width - 1, startmenu.Height - 1);
+            gfx.DrawLine(Pens.Black, startmenu.Width - 1, startmenu.Height - 1, startmenu.Width - 1, 0);
+            gfx.DrawLine(new Pen(_darkBack), 1, startmenu.Height - 2, startmenu.Width - 2, startmenu.Height - 2);
+            gfx.DrawLine(new Pen(_darkBack), startmenu.Width - 2, 1, startmenu.Width - 2, startmenu.Height - 2);
+            gfx.DrawLine(new Pen(_lightBack), 1, startmenu.Height - 3, 1, 1);
+            gfx.DrawLine(new Pen(_lightBack), startmenu.Width - 3, 1, 1, 1);
         }
     }
     public class MyRenderer : ToolStripProfessionalRenderer

@@ -97,6 +97,9 @@
     <Compile Include="UI\ClassicLabel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UI\ClassicStartMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UI\ClassicTextbox.cs">
       <SubType>Component</SubType>
     </Compile>
