@@ -92,8 +92,8 @@ namespace Histacom2
 
         private void btnDevMode_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("DevMode is a mode Designed for Development of the game, if you are seeing this that means it is activated! All DevMode does is if a Profile already exists then rather than asking you to choose a different name it just " +
-                "deletes the old one! This means that you won't have 1 million profiles everytime you want to test something in the game!");
+            MessageBox.Show("DevMode (Development Mode) is a special mode that lets you test features without having a large amount of accounts just to test a new feature. How it works is simple:" +
+                "\n1. It checks for a profile of the same name.\n2. If so, it deletes the profile and starts a new game.\n3. If not, then it starts a new game.");
         }
     }
 }

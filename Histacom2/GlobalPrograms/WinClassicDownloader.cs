@@ -32,7 +32,7 @@ namespace Histacom2.OS.Win95.Win95Apps
             amountDLed = amountDLed + 8;
             if (8 > amountToDL - amountDLed)
             {
-                progBar.Value = amountToDL;
+                progressBar1.Value = amountToDL;
                 amountLbl.Text = $"Downloaded {amountDLed} KB out of {amountToDL}";
 
                 switch (appName.Text)
@@ -67,8 +67,8 @@ namespace Histacom2.OS.Win95.Win95Apps
             }
             else
             {
-                progBar.Maximum = amountToDL;
-                progBar.Value = amountDLed;
+                progressBar1.Maximum = amountToDL;
+                progressBar1.Value = amountDLed;
             }
             amountLbl.Text = $"Downloaded {amountDLed} KB out of {amountToDL}";
         }
