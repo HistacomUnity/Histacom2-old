@@ -15,10 +15,5 @@ namespace Histacom2.Engine.Template
         {
             this.ParentForm.Close();
         }
-
-        private void classicButton1_Click(object sender, EventArgs e)
-        {
-            this.ParentForm.Close();
-        }
     }
 }
