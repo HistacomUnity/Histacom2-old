@@ -48,7 +48,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.progressBar1 = new Histacom2.UI.ProgressBar();
+            this.progressBar1 = new Histacom2.Engine.UI.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.installPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -317,7 +317,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel3;
-        private UI.ProgressBar progressBar1;
+        private Engine.UI.ProgressBar progressBar1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label7;

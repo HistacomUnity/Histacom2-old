@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Histacom2.UI
+namespace Histacom2.Engine.UI
 {
     public class ProgressBar : Control
     {
