@@ -37,7 +37,7 @@ namespace Histacom2.OS.Win95
         public Windows95()
         {
             InitializeComponent();
-            startmenu.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            //startmenu.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             ProgramsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             AccessoriesToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             CommunicationsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
@@ -76,9 +76,6 @@ namespace Histacom2.OS.Win95
         private void Desktop_Load(object sender, EventArgs e)
         {
             if (currentTheme.defaultWallpaper != null) desktopicons.BackgroundImage = new Bitmap(currentTheme.defaultWallpaper, Width, Height);
-            //Start Menu Color - Commented until it works reliably
-            //startmenuitems.Renderer = new MyRenderer();
-            //ProgramsToolStripMenuItem.DropDown.Renderer = new MyRenderer();
 
             // Make Font Mandatory
             fontLoad();
@@ -161,8 +158,8 @@ namespace Histacom2.OS.Win95
         private void startbutton_Click(object sender, EventArgs e)
         {
             startmenu.Show();
-            startmenu.BringToFront();
             if (taskbar.Visible) taskbar.BringToFront();
+            startmenu.BringToFront();
         }
 
         // Shutdown button
@@ -635,29 +632,27 @@ namespace Histacom2.OS.Win95
             gfx.DrawLine(new Pen(_lightBack), 62, 4, 62, 25);
             gfx.DrawLine(new Pen(_lightBack), 0, 25, 62, 25);
         }
-    }
-    public class MyRenderer : ToolStripProfessionalRenderer
-    {
-        public MyRenderer() : base(new MyColors()) { }
-    }
 
-    public class MyColors : ProfessionalColorTable
-    {
-        public override Color MenuItemSelectedGradientBegin
+        private void startmenuitems_Paint(object sender, PaintEventArgs e)
         {
-            get { return Color.Navy; }
+            var gfx = e.Graphics;
+            gfx.Clear(currentTheme.threeDObjectsColor);
         }
-        public override Color MenuItemSelectedGradientEnd
+
+        private void startmenu_Paint(object sender, PaintEventArgs e)
         {
-            get { return Color.Navy; }
-        }
-        public override Color MenuItemPressedGradientBegin
-        {
-            get { return Color.Navy; }
-        }
-        public override Color MenuItemPressedGradientEnd
-        {
-            get { return Color.Navy; }
+            var gfx = e.Graphics;
+            gfx.Clear(currentTheme.threeDObjectsColor);
+
+            var _lightBack = Paintbrush.GetLightFromColor(currentTheme.threeDObjectsColor);
+            var _darkBack = Paintbrush.GetDarkFromColor(currentTheme.threeDObjectsColor);
+
+            gfx.DrawLine(Pens.Black, 0, startmenu.Height - 1, startmenu.Width - 1, startmenu.Height - 1);
+            gfx.DrawLine(Pens.Black, startmenu.Width - 1, startmenu.Height - 1, startmenu.Width - 1, 0);
+            gfx.DrawLine(new Pen(_darkBack), 1, startmenu.Height - 2, startmenu.Width - 2, startmenu.Height - 2);
+            gfx.DrawLine(new Pen(_darkBack), startmenu.Width - 2, 1, startmenu.Width - 2, startmenu.Height - 2);
+            gfx.DrawLine(new Pen(_lightBack), 1, startmenu.Height - 3, 1, 1);
+            gfx.DrawLine(new Pen(_lightBack), startmenu.Width - 3, 1, 1, 1);
         }
     }
 }

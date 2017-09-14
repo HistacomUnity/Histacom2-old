@@ -36,7 +36,7 @@
             this.dlTimer = new System.Windows.Forms.Timer(this.components);
             this.dlSpeed = new System.Windows.Forms.Timer(this.components);
             this.progBar = new System.Windows.Forms.ProgressBar();
-            this.progressBar1 = new Histacom2.UI.ProgressBar();
+            this.progressBar1 = new Histacom2.Engine.UI.ProgressBar();
             this.SuspendLayout();
             // 
             // amountLbl
@@ -139,6 +139,6 @@
         private System.Windows.Forms.Timer dlTimer;
         private System.Windows.Forms.Timer dlSpeed;
         private System.Windows.Forms.ProgressBar progBar;
-        private UI.ProgressBar progressBar1;
+        private Engine.UI.ProgressBar progressBar1;
     }
 }

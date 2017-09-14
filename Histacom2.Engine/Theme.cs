@@ -31,6 +31,9 @@ namespace Histacom2.Engine
         public Color inactiveTitleBarColor { get; set; }
         public Color inactiveTitleTextColor { get; set; }
 
+        public Color selectedBackColor { get; set; }
+        public Color selectedTextColor { get; set; }
+
         public Image defaultWallpaper { get; set; }
 
         public string themeName { get; set; }
@@ -60,6 +63,9 @@ namespace Histacom2.Engine
             activeTitleTextColor = Color.White;
             inactiveTitleBarColor = Color.Gray;
             inactiveTitleTextColor = Color.Silver;
+
+            selectedBackColor = Color.Navy;
+            selectedTextColor = Color.White;
 
             defaultWallpaper = null;
             themeName = "default95";
@@ -91,6 +97,9 @@ namespace Histacom2.Engine
             inactiveTitleBarColor = Color.Gray;
             inactiveTitleTextColor = Color.Silver;
 
+            selectedBackColor = Color.Navy;
+            selectedTextColor = Color.White;
+
             defaultWallpaper = null;
             themeName = "default98";
         }
@@ -121,6 +130,9 @@ namespace Histacom2.Engine
             inactiveTitleBarColor = Color.FromArgb(72, 72, 72);
             inactiveTitleTextColor = Color.Gray;
 
+            selectedBackColor = Color.Teal;
+            selectedTextColor = Color.White;
+
             defaultWallpaper = Properties.Resources.Win95PlusDangerousCreaturesWallpaper;
             themeName = "dangeranimals";
         }
@@ -146,6 +158,9 @@ namespace Histacom2.Engine
             activeTitleTextColor = Color.White;
             inactiveTitleBarColor = Color.FromArgb(96, 168, 128);
             inactiveTitleTextColor = Color.FromArgb(216, 224, 216);
+
+            selectedBackColor = Color.FromArgb(248, 255, 160);
+            selectedTextColor = Color.Black;
 
             defaultWallpaper = Properties.Resources.Win95PlusInsideComputerWallpaper;
             themeName = "insidepc";

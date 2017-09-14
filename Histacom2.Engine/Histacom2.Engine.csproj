@@ -15,7 +15,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>true</Optimize>
+    <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -95,6 +95,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UI\ClassicLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\ClassicStartMenuItem.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UI\ClassicTextbox.cs">

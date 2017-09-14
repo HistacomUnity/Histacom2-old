@@ -19,18 +19,6 @@ namespace Histacom2.OS.Win95.Win95Apps
         public WinClassicCalculator()
         {
             InitializeComponent();
-            foreach (Control c in Controls)
-            {
-                if (c is Button)
-                {
-                    c.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
-                    c.Paint += (sender, args) => Paintbrush.PaintClassicBorders(sender, args, 2);
-                }
-                else
-                {
-                    c.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
-                }
-            }
             txtNumbers.Paint += (sender, args) => Paintbrush.PaintClassicBordersIndented(sender, args, 2);
         }
         private void number_click(object sender, EventArgs e)
@@ -40,7 +28,7 @@ namespace Histacom2.OS.Win95.Win95Apps
              if ((txtNumbers.Text == "0") || (operation_pressed))
                 txtNumbers.Text = "";
             operation_pressed = false;
-            Button num = (Button)sender;
+            Engine.UI.ClassicButton num = (Engine.UI.ClassicButton)sender;
             if (num.Text == ".")
             {
                 if (!txtNumbers.Text.Contains("."))
@@ -77,7 +65,7 @@ namespace Histacom2.OS.Win95.Win95Apps
 
         private void arithmitic_click(object sender, EventArgs e)
         {
-            Button num = (Button)sender;
+            Engine.UI.ClassicButton num = (Engine.UI.ClassicButton)sender;
             if (txtNumbers.Text.Contains("∞"))
                 txtNumbers.Clear();
             if (prevnum != 0)
@@ -135,7 +123,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                     txtNumbers.Text = (prevnum / double.Parse(txtNumbers.Text)).ToString();
                     break;
             }
-            prevnum = Int32.Parse(txtNumbers.Text);
+            prevnum = int.Parse(txtNumbers.Text);
             operation = "";
         }
 
