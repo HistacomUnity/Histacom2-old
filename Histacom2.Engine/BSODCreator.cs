@@ -17,6 +17,7 @@ namespace Histacom2.Engine
             Testing,
             WimpEnding,
             PiracyEnding,
+            Generic
         }
 
         public Win9XBSOD throw9XBSOD(bool except, BSODCauses type)
@@ -43,6 +44,9 @@ namespace Histacom2.Engine
                     foreach (Control ctrl in bsod.Controls) ctrl.ForeColor = System.Drawing.Color.Silver;
                     bsod.label1.BackColor = System.Drawing.Color.Silver;
                     bsod.label1.ForeColor = System.Drawing.Color.Black;
+                    break;
+                case BSODCauses.Generic:
+
                     break;
                 default:
                     break;

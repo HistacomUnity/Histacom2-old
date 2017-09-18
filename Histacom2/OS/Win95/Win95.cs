@@ -10,6 +10,9 @@ using Histacom2.Engine.Template.Taskbars;
 using Histacom2.OS.Win95.Win95Apps;
 using Histacom2.OS.Win95.Win95Apps.Story;
 using static Histacom2.Engine.SaveSystem;
+using Histacom2.OS.Win95.Win95Apps._12padamViruses;
+using Histacom2.OS.Win95.Win95Apps._12padamsViruses;
+
 namespace Histacom2.OS.Win95
 {
     public partial class Windows95 : Form
@@ -313,6 +316,7 @@ namespace Histacom2.OS.Win95
                     {
                         wm.StartInfobox95("Caught it!", "If you were to run this, the game would crash!\nLuckily, it won't crash this time!", InfoboxType.Error, InfoboxButtons.OK);
                     }
+                   
                     else
                     {
                         // It is an actual file on the disk
@@ -653,6 +657,32 @@ namespace Histacom2.OS.Win95
             gfx.DrawLine(new Pen(_darkBack), startmenu.Width - 2, 1, startmenu.Width - 2, startmenu.Height - 2);
             gfx.DrawLine(new Pen(_lightBack), 1, startmenu.Height - 3, 1, 1);
             gfx.DrawLine(new Pen(_lightBack), startmenu.Width - 3, 1, 1, 1);
+        }
+
+        private void ErrorBlasterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WinClassic app = wm.Init(new ErrorBlaster95(), "Welcome to Error Blaster 95!", null, false, false, false, false);
+            AddTaskBarItem(app, app.Tag.ToString(), "Welcome to Error Blaster 95!", null);
+
+            nonimportantapps.Add(app);
+            nonimportantapps[nonimportantapps.Count - 1].BringToFront();
+            nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
+
+            app.BringToFront();
+            startmenu.Hide();
+        }
+
+        private void FilesOrFoldersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WinClassic app = wm.Init(new StartRunner95(), "Welcome to Start Runner 95!", null, false, false, false, false);
+            AddTaskBarItem(app, app.Tag.ToString(), "Welcome to Start Runner 95!", null);
+
+            nonimportantapps.Add(app);
+            nonimportantapps[nonimportantapps.Count - 1].BringToFront();
+            nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
+
+            app.BringToFront();
+            startmenu.Hide();
         }
     }
 }

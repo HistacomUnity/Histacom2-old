@@ -275,6 +275,7 @@
             this.button7.TabIndex = 12;
             this.button7.Text = "Download";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // label13
             // 
@@ -297,6 +298,7 @@
             this.button6.TabIndex = 10;
             this.button6.Text = "Download";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label12
             // 
