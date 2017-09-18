@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Histacom2.OS.Win95.Win95Apps.IE4Sites
+namespace Histacom2.OS.Win95.Win95Apps.IE3Sites
 {
-    public partial class IE4Start : UserControl
+    public partial class IE3Start : UserControl
     {
-        public IE4Start()
+        public IE3Start()
         {
             InitializeComponent();
         }

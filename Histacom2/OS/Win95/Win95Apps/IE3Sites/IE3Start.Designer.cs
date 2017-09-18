@@ -1,6 +1,6 @@
-﻿namespace Histacom2.OS.Win95.Win95Apps.IE4Sites
+﻿namespace Histacom2.OS.Win95.Win95Apps.IE3Sites
 {
-    partial class IE4Start
+    partial class IE3Start
     {
         /// <summary> 
         /// Required designer variable.
@@ -71,7 +71,7 @@
             this.linkLabel2.Text = "   ";
             this.linkLabel2.Click += new System.EventHandler(this.linkLabel2_Click);
             // 
-            // IE4Start
+            // IE3Start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -79,7 +79,7 @@
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "IE4Start";
+            this.Name = "IE3Start";
             this.Size = new System.Drawing.Size(959, 483);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

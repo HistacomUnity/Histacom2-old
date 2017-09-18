@@ -1,6 +1,6 @@
-﻿namespace Histacom2.OS.Win95.Win95Apps.IE4Sites
+﻿namespace Histacom2.OS.Win95.Win95Apps.IE3Sites
 {
-    partial class IE4NoPage
+    partial class IENoPage
     {
         /// <summary> 
         /// Required designer variable.
@@ -41,13 +41,13 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // IE4NoPage
+            // IENoPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.pictureBox1);
-            this.Name = "IE4NoPage";
+            this.Name = "IENoPage";
             this.Size = new System.Drawing.Size(959, 541);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

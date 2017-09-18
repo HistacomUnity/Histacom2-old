@@ -340,7 +340,7 @@
             this.Button24.AdaptFontWithTheme = false;
             this.Button24.AdaptForeColorWithTheme = false;
             this.Button24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Button24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button24.ForeColor = System.Drawing.Color.MidnightBlue;
             this.Button24.Location = new System.Drawing.Point(223, 139);
             this.Button24.Name = "Button24";
