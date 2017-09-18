@@ -145,5 +145,23 @@ namespace Histacom2.OS.Win95.Win95Apps.IE3Sites
             opendownload.appName.Text = "Downloading: Guess The Number V1";
             opendownload.amountToDL = 16;
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            WinClassicDownloader opendownload = new WinClassicDownloader();
+            WindowManager wm = new WindowManager();
+            wm.Init(opendownload, "Downloader", null, false, true);
+            opendownload.appName.Text = "Downloading: Error Blaster 95";
+            opendownload.amountToDL = 32;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            WinClassicDownloader opendownload = new WinClassicDownloader();
+            WindowManager wm = new WindowManager();
+            wm.Init(opendownload, "Downloader", null, false, true);
+            opendownload.appName.Text = "Downloading: Start Runner 95";
+            opendownload.amountToDL = 32;
+        }
     }
 }

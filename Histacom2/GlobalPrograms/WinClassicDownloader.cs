@@ -49,6 +49,12 @@ namespace Histacom2.OS.Win95.Win95Apps
                     case "Downloading: Guess The Number V1":
                         CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop"), "Guess The Number V1 Setup.exe", "gtnv1 setup", 11, 16483);
                         break;
+                    case "Downloading: Error Blaster 95":
+                        CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop"), "Error Blaster 95 Setup.exe", "eb95 setup", 11, 34846);
+                        break;
+                    case "Downloading: Start Runner 95":
+                        CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop"), "Start Runner Setup.exe", "sr95 setup", 11, 34846);
+                        break;
                 }
                 /* if (appName.Text == "Downloading: Start Runner")
                 {

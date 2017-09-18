@@ -138,6 +138,18 @@
     <Compile Include="OS\Win2K\Win2KApps\SurviveTheDay.Designer.cs">
       <DependentUpon>SurviveTheDay.cs</DependentUpon>
     </Compile>
+    <Compile Include="OS\Win95\Win95Apps\12padamsViruses\ErrorBlaster95.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\12padamsViruses\ErrorBlaster95.Designer.cs">
+      <DependentUpon>ErrorBlaster95.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\12padamsViruses\StartRunner95.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\12padamsViruses\StartRunner95.Designer.cs">
+      <DependentUpon>StartRunner95.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\Win95\Win95Apps\GuessTheNumber.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -379,6 +391,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win2K\Win2KApps\SurviveTheDay.resx">
       <DependentUpon>SurviveTheDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\12padamsViruses\ErrorBlaster95.resx">
+      <DependentUpon>ErrorBlaster95.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\12padamsViruses\StartRunner95.resx">
+      <DependentUpon>StartRunner95.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\GuessTheNumber.resx">
       <DependentUpon>GuessTheNumber.cs</DependentUpon>
@@ -653,6 +671,7 @@
     <None Include="Resources\WinClassicTextFile.png" />
     <None Include="Resources\WinClassicRtfFile.png" />
     <None Include="Resources\WinClassicNotepad.png" />
+    <None Include="Resources\Win95Error.png" />
     <Content Include="Resources\WinClassic\16Color.png" />
     <Content Include="Resources\WinClassic\256Color.png" />
     <None Include="Resources\WinClassic\tada.wav" />

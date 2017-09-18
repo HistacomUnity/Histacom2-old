@@ -13,6 +13,7 @@ using Histacom2.Engine;
 using Newtonsoft.Json;
 using Histacom2.Engine.Template;
 using System.Diagnostics;
+using Histacom2.OS.Win95.Win95Apps._12padamViruses;
 
 namespace Histacom2.OS.Win95.Win95Apps
 {
@@ -350,6 +351,26 @@ namespace Histacom2.OS.Win95.Win95Apps
                     Program.nonimportantapps[Program.nonimportantapps.Count - 1].BringToFront();
                     Program.nonimportantapps[Program.nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(Program.NonImportantApp_Closing);
 
+                    break;
+                case "eb95 setup":
+                    Win95Installer ebInstall = new Win95Installer("Error Blaster 95");
+                    ebInstall.InstallCompleted += (sender, args) => TitleScreen.frm95.ErrorBlasterToolStripMenuItem.Visible = true;
+                    WinClassic installer = wm.Init(ebInstall, "Error Blaster 95 Setup", null, true, true);
+                    Program.AddTaskbarItem(installer, installer.Tag.ToString(), "Error Blaster 95 Setup", null);
+                    installer.BringToFront();
+                    break;
+                case "error blaster":
+                    WinClassic eb = wm.Init(new ErrorBlaster95(), "Welcome to Error Blaster 95!", null, true, true);
+                    Program.AddTaskbarItem(eb, eb.Tag.ToString(), "Welcome to Error Blaster 95!", null);
+                    Program.nonimportantapps[Program.nonimportantapps.Count - 1].BringToFront();
+                    Program.nonimportantapps[Program.nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(Program.NonImportantApp_Closing);
+                    break;
+                case "sr95 setup":
+                    Win95Installer srInstall = new Win95Installer("Start Runner 95");
+                    srInstall.InstallCompleted += (sender, args) => TitleScreen.frm95.ErrorBlasterToolStripMenuItem.Visible = true;
+                    WinClassic install = wm.Init(srInstall, "Start Runner 95 Setup", null, true, true);
+                    Program.AddTaskbarItem(install, install.Tag.ToString(), "Error Blaster 95 Setup", null);
+                    install.BringToFront();
                     break;
                 default:
                     wm.StartInfobox95(path.Replace(ProfileMyComputerDirectory, "C:"), $"{path.Replace(ProfileMyComputerDirectory, "C:")} is not a valid Win32 application.", InfoboxType.Error, InfoboxButtons.OK);

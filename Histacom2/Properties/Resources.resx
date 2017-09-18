@@ -121,193 +121,317 @@
   <data name="WinClassicDisplayExample" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WinClassic\WinClassicDisplayExample.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Histacom2_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\titlescreen\Histacom2_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WinClassicAbout95" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassicAbout95.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="modem_dial" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\modem_dial.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Win95NetworkIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\Win95NetworkIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AIMmessagesent" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\AIMmessagesent.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Win95Start" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\winclassic\win95start.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="WinClassicAddressBookNewIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\WinClassicAddressBookNewIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="WinClassicMSN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\winclassic\winclassicmsn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WinClassicMinesweeperSmile" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minsweeper smile.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="start" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE4\start.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WinClassicAddressBookDeleteIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\WinClassicAddressBookDeleteIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="GTN95_Lower" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GuessTheNumber\GTN95_Lower.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="TrueColor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\winclassic\truecolor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AIMmessagesent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\AIMmessagesent.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Win95Info" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\Win95Info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WinClassicAddressBook" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wmsui32_1001.ico_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="termNothing" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\termNothing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tada" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\tada.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="AIMbuddyleave" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\AIMbuddyleave.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Win98Start" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\Win98Start.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="WinClassicTime" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\winclassic\winclassictime.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="termMark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\termMark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Win95ComputerIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WinClassic\Win95ComputerIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WinClassicUndo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\WinClassicUndo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WinClassicInstallPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\WinClassicInstallPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WinClassicSetup" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\winclassic\winclassicsetup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MinesweepNumBox" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MinesweepNumBox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WinClassicSettings" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\winclassic\winclassicsettings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="termSettings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\termSettings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WinClassicHWCV" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\WinClassicHWCV.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Win95File" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\Win95File.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="termMax" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\termMax.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Win95WordpadIcon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\Win95WordpadIcon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WinClassicNetworking" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\winclassic\winclassicnetworking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Win98Computer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\Win98Computer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Win98SideBar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Win98SideBar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="XCross_highlighted" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\XCross_highlighted.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WinClassicClock" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\winclassic\winclassicclock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AIMfile" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\AIMfile.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="google" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\ie4\google.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Win95Warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\Win95Warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ie4_favorites" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ie4_favorites.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WinClassicShutdown" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\winclassic\winclassicshutdown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ie4_vsplitter3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ie4_hsplitter2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="start_googlink" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IE4\start_googlink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_256Color" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\winclassic\256color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Win95PrintersFolder" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\Win95PrintersFolder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ie4_refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ie4_refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_16Color" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\winclassic\16color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="WinClassicFolderSmall" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAFJJREFUOE9j
-        oBpoaGj4j46hUoQBSPGBAwf+///PgEITZQguzciGYMNQ7RADSAVQAyCGIAzA7gJsNFYDiNUMokddQAsX
-        kIPhBkABTIBUPOCAgQEAB3nmEC2x2cUAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="ie4_vsplitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ie4_vsplitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="wordpad_printpreview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wordpad_printpreview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Win95HardDiskIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WinClassic\Win95HardDiskIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WinClassicCalc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\WinClassicCalc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="IE3_StopHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE3\IE3_StopHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WinClassicRun" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\winclassic\winclassicrun.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ie4_go" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ie4_go.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="win95_welcome" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\win95_welcome.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="termCopy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\termCopy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WinClassicMinesweeperFlag" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minsweeper flag.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="std_gobeep" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\std_gobeep.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="AIMmessagereceived" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\AIMmessagereceived.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="modem_dial" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\modem_dial.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Win95Computer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\winclassic\winclassiccomputer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Win95PrintersFolder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\Win95PrintersFolder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Win95RecycleIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\Win95RecycleIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WinClassicFolder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\winclassic\winclassicfolder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WinClassicFileExplorer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shell32_21.ico_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="termNothing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\termNothing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Win95IconNotepad" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WinClassic\Win95IconNotepad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="WinClassicRegedit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\WinClassicRegedit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="WinClassicSuspend" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\winclassic\winclassicsuspend.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WinClassicPrograms" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\winclassic\winclassicprograms.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WinClassicDocuments" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\winclassic\winclassicdocuments.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WinClassicTaskBar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\winclassic\winclassictaskbar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Lemon_s_LCD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\lemon's lcd.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="WinClassicWordpad" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\WinClassicWordpad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="GTN95_RestartClicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GuessTheNumber\GTN95_RestartClicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Win95DesktopIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\Win95DesktopIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Win95Error" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\Win95Error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WinClassicOpenFolderSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\WinClassicOpenFolderSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="IE3_Forward" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE3\IE3_Forward.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="XCross" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\XCross.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="std_beep" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\std_beep.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Win98Stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\Win98Stop.WAV;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Win95Warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\Win95Warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ie4_history" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ie4_history.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinClassicShutdown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\winclassic\winclassicshutdown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IE3_SwirlyThings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE3\IE3_SwirlyThings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ie4about" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE4\ie4about.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinClassicApp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\WinClassicApp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ICTheme_BG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ICTheme_BG.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="termMax" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\termMax.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GTN95_CheckClicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GuessTheNumber\GTN95_CheckClicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wordpad_open" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wordpad_open.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GTN95_Correct" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GuessTheNumber\GTN95_Correct.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon128x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\icon128x.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinClassicFind" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\winclassic\winclassicfind.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinClassicSettings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\winclassic\winclassicsettings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LauncherSideBar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\LauncherSideBar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ie4_home" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ie4_home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ie4_refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ie4_refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="WinClassicIE4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\winclassic\winclassicie4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="WinClassicGTN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\WinClassicGTN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinClassicHelp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\winclassic\winclassichelp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GTN95_Restart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GuessTheNumber\GTN95_Restart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IE3_ForwardHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE3\IE3_ForwardHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ie4_stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ie4_stop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minesweepSquare0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minesweepSquare0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinClassicFTP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\WinClassicFTP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Win98WebBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Win98WebBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LeviWindows" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LeviWindows.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="AchievementMines" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AchievementMines.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MSDOSPromptToolStripMenuItem1_Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MSDOSPromptToolStripMenuItem1.Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minesweepSquareMine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minesweepSquareMine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Win95Help" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Win95Help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minesweepSquareQuestion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minesweepSquareQuestion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="start_googlink" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE4\start_googlink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Win95ControlPanelIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\Win95ControlPanelIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ie4_hsplitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ie4_hsplitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minesweepSquare1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minesweepSquare1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TimeDistorter1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\TimeDistorter1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinClassicFTPIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\WinClassicFTPIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Win98Start" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\Win98Start.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="WinClassicMinesweeper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\WinClassicMinesweeper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Win95Computer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\winclassic\winclassiccomputer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\tada.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="WinClassicMinesweeperSmile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minsweeper smile.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="WinClassicMinesweeperSad" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minsweeper sad.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AIMfile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\AIMfile.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="WinClassicProgramItem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\winclassic\winclassicprogramitem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_256Color" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\winclassic\256color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="XCross_highlighted" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XCross_highlighted.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinClassicRun" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\winclassic\winclassicrun.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minesweepSquareWrong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minesweepSquareWrong.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Win95Info" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\Win95Info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Win98SideBar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Win98SideBar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ie4_favorites" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ie4_favorites.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinClassicRtfFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassicRtfFile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IE3_BackHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE3\IE3_BackHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ButtonPattern" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ButtonPattern.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ie4_go" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ie4_go.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SeizureWarning" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SeizureWarning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sliversilver" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\sliversilver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minesweepSquare7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minesweepSquare7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="termPaste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\termPaste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinClassicRecycle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\winclassic\winclassicrecycle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Win95RecycleIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\Win95RecycleIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minesweepSquare" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minesweepSquare.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinClassicNetworking" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\winclassic\winclassicnetworking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ie4_search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ie4_search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinClassicCalcBig" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\WinClassicCalcBig.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minesweepSquare4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minesweepSquare4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="distort1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\distort1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="wordpad_italic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wordpad_italic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinClassicEndingsIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\WinClassicEndingsIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="termFont" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\termFont.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="std_story" xml:space="preserve">
     <value>{
@@ -441,128 +565,82 @@
   }
 }</value>
   </data>
-  <data name="WinClassicEndingsLocked" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\WinClassicEndingsLocked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WinClassicPrograms" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\winclassic\winclassicprograms.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="TaskBarButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\titlescreen\taskbarbutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="HistacomIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HistacomIcon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LauncherSideBar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\LauncherSideBar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="wordpad_paste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wordpad_paste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AIMbuddyjoin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\AIMbuddyjoin.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="google" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ie4\google.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ie4_hsplitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ie4_hsplitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WinAboutSeparator95" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinAboutSeparator95.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ie4_stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ie4_stop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WinClassicRecycle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\winclassic\winclassicrecycle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WinClassicProgramItem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\winclassic\winclassicprogramitem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LeviWindows" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LeviWindows.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="sliversilver" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\sliversilver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ie4about" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IE4\ie4about.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Win2000WebBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Win2000WebBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WinClassicGENERALApplicationToolbarBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassicGENERALApplicationToolBoxBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="termFont" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\termFont.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Win98WebBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Win98WebBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ie4_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ie4_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="termSettings" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\termSettings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tada1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\winclassic\tada.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Win95Help" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Win95Help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="std_gobeep" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\std_gobeep.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="start_padamslink" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IE4\start_padamslink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WinClassicStart" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\winclassic\winclassicstart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ie4_search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ie4_search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WinClassicTaskbarItem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\winclassic\winclassictaskbaritem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WinClassicEndings" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\WinClassicEndings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="std_beep" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\std_beep.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Win95IconWordpad" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xMzQDW3oAAACMSURBVDhPnZAB
-        DsAgCAN9Ok/zZ4yiEINsMkkKRNezWWNmlZSM84wabVwyEX3ODNLCZXWiyUrsgEr13h2gZlmvAGZGKQAX
-        VRlAzfcJIAB+/gMiM5smIMbMBLO8uUMqCcxsOzww4/AIiGZ7eR4OQBYZ2uIGswOyWj72ArQMyOoVsMY+
-        aQNok1HVambm9gBAYeI/oBSQZwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="WinClassicDocuments" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\winclassic\winclassicdocuments.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ie4_history" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ie4_history.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WinClassicAddressBookDeleteIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\WinClassicAddressBookDeleteIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="windows_command_prompt" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\windows_command_prompt.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="minesweepSquare6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minesweepSquare6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wordpad_print" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wordpad_print.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minesweepSquareExploded" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minesweepSquareExploded.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="win95_welcometip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\win95_welcometip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GTN95_Check" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GuessTheNumber\GTN95_Check.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="win95_splitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\win95_splitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="nopage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IE4\nopage.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WinClassicClock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\winclassic\winclassicclock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DCTheme_BG" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DCTheme_BG.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="minesweepSquare2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minesweepSquare2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Icon128x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\icon128x.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="WinClassicFolderSmall" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAFJJREFUOE9j
+        oBpoaGj4j46hUoQBSPGBAwf+///PgEITZQguzciGYMNQ7RADSAVQAyCGIAzA7gJsNFYDiNUMokddQAsX
+        kIPhBkABTIBUPOCAgQEAB3nmEC2x2cUAAAAASUVORK5CYII=
+</value>
   </data>
-  <data name="WinClassicInbox" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\winclassic\winclassicinbox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WinClassicAbout95" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassicAbout95.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ie4_vsplitter2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ie4_hsplitter1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="EndingPiracy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EndingPiracy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="termMark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\termMark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="minesweepSquare8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minesweepSquare8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="TaskBarClock" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\titlescreen\taskbarclock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WinClassicNotepad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassicNotepad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinAboutSeparator95" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinAboutSeparator95.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GTN95_Higher" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GuessTheNumber\GTN95_Higher.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tada1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\winclassic\tada.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="AIMmessagereceived" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\AIMmessagereceived.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="IE3_Back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE3\IE3_Back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Win95IconNotepad_2" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -573,254 +651,62 @@
         BSJKDySVfIiSNKD1AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="ie4_print" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ie4_print.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="start" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IE4\start.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WinClassicFolder" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\winclassic\winclassicfolder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Win95IconIE4" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAAJVJREFUOE+VkQsSxCAMQj16bu4GFU3YdO2+Gaqi0F/7j96zfqKHqYiuByYBFfYJ
-        1okT9uuef4slmG9gWjdzN4Wnf9bRT1RhaCN+KriGieyvkjr8Rl7AMMbywE0zCBiIBS9Awbn7tUD29xME
-        Q0rM8IHhPbziKRhMU0pqjVIfcgHAfB2oiugnuEnG/EkZ/4fLZEksutHaB6sGQO/gf7MbAAAAAElFTkSu
-        QmCC
-</value>
-  </data>
-  <data name="win95_welcome" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\win95_welcome.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Win95ControlPanelIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\Win95ControlPanelIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ie4_forward" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ie4_forward.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ICTheme_BG" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ICTheme_BG.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Win95SideBar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\winclassic\win95sidebar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ie4_home" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ie4_home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="win95_welcometip" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\win95_welcometip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WinClassicFind" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\winclassic\winclassicfind.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WinClassicPaste" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\WinClassicPaste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WinClassicOutlook" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\winclassic\winclassicoutlook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Win98Computer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\Win98Computer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WinClassicAddressBookPropertiesIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\WinClassicAddressBookPropertiesIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="termPaste" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\termPaste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WinClassicInstallPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\WinClassicInstallPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WinClassicHelp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\winclassic\winclassichelp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WinClassicAddressBookNewIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\WinClassicAddressBookNewIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Win95Error" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\Win95Error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ie4_mail" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ie4_mail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SeizureWarning" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SeizureWarning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Win95File" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\Win95File.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WinClassicApp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\WinClassicApp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WinClassicMinesweeper" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\WinClassicMinesweeper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MSDOSPromptToolStripMenuItem1_Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MSDOSPromptToolStripMenuItem1.Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WinClassicEndingsIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\WinClassicEndingsIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WinClassicCalcBig" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\WinClassicCalcBig.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WinClassicNotepadBig" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\WinClassicNotepadBig.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WinClassicRegedit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\WinClassicRegedit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MinesweepNumBox" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MinesweepNumBox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AchievementMines" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AchievementMines.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="distort1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\distort1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="EndingDestruction" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\EndingDestruction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="EndingPiracy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\EndingPiracy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Lemon_s_LCD" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\lemon's lcd.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="minesweepSquare" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minesweepSquare.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="minesweepSquare0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minesweepSquare0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="minesweepSquare1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minesweepSquare1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="minesweepSquare2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minesweepSquare2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="minesweepSquare3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minesweepSquare3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="minesweepSquare4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minesweepSquare4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="minesweepSquare5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minesweepSquare5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="minesweepSquare6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minesweepSquare6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="minesweepSquare7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minesweepSquare7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="minesweepSquare8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minesweepSquare8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="minesweepSquareExploded" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minesweepSquareExploded.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="minesweepSquareMine" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minesweepSquareMine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="minesweepSquareQuestion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minesweepSquareQuestion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="minesweepSquareWrong" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minesweepSquareWrong.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WinClassicMinesweeperGasp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minsweeper gasp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WinClassicMinesweeperWin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minsweeper win.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Win95WordpadIcon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\Win95WordpadIcon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="wordpad_bold" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wordpad_bold.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="wordpad_copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wordpad_copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="wordpad_cut" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wordpad_cut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="wordpad_find" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wordpad_find.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="wordpad_italic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wordpad_italic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="wordpad_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wordpad_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wordpad_open" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wordpad_open.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Win2000WebBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Win2000WebBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wordpad_paste" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wordpad_paste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WinClassicUndo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\WinClassicUndo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wordpad_print" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wordpad_print.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WinClassicWebchat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\WinClassicWebchat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wordpad_printpreview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wordpad_printpreview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WinClassicOpenFolderSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\WinClassicOpenFolderSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="wordpad_save" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wordpad_save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wordpad_underline" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wordpad_underline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WinClassicAddressBook" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wmsui32_1001.ico_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IE3_Back" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IE3\IE3_Back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="minesweepSquare3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minesweepSquare3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IE3_Forward" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IE3\IE3_Forward.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="TrueColor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\winclassic\truecolor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinClassicPaste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\WinClassicPaste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ie4_mail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ie4_mail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TaskBarButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\titlescreen\taskbarbutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Win95IconWordpad" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xMzQDW3oAAACMSURBVDhPnZAB
+        DsAgCAN9Ok/zZ4yiEINsMkkKRNezWWNmlZSM84wabVwyEX3ODNLCZXWiyUrsgEr13h2gZlmvAGZGKQAX
+        VRlAzfcJIAB+/gMiM5smIMbMBLO8uUMqCcxsOzww4/AIiGZ7eR4OQBYZ2uIGswOyWj72ArQMyOoVsMY+
+        aQNok1HVambm9gBAYeI/oBSQZwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="ie4_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ie4_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IE3_Stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IE3\IE3_Stop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IE3_SwirlyThings" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IE3\IE3_SwirlyThings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WinClassicOutlook" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\winclassic\winclassicoutlook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ButtonPattern" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ButtonPattern.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="GTN95_Check" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GuessTheNumber\GTN95_Check.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="GTN95_CheckClicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GuessTheNumber\GTN95_CheckClicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="GTN95_Higher" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GuessTheNumber\GTN95_Higher.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="GTN95_Restart" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GuessTheNumber\GTN95_Restart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="GTN95_RestartClicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GuessTheNumber\GTN95_RestartClicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IE3_BackHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IE3\IE3_BackHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IE3_ForwardHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IE3\IE3_ForwardHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IE3_Refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IE3\IE3_Refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IE3_RefreshHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IE3\IE3_RefreshHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IE3_StopHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IE3\IE3_StopHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WinClassicEndings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\WinClassicEndings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="webchat1998_convo" xml:space="preserve">
     <value>{
@@ -1885,46 +1771,163 @@
   ]
 }</value>
   </data>
+  <data name="ie4_vsplitter2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ie4_hsplitter1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IE3_RefreshHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE3\IE3_RefreshHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinClassicHWCV" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\WinClassicHWCV.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinClassicGENERALApplicationToolbarBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassicGENERALApplicationToolBoxBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinClassicSetup" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\winclassic\winclassicsetup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TaskBarClock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\titlescreen\taskbarclock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wordpad_copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wordpad_copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Win95DesktopIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\Win95DesktopIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ie4_print" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ie4_print.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="CopyrightNotice" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TitleScreen\CopyrightNotice.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="GTN95_Correct" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GuessTheNumber\GTN95_Correct.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="wordpad_cut" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wordpad_cut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wordpad_find" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wordpad_find.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinClassicCalc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\WinClassicCalc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinClassicWordpad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\WinClassicWordpad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Win95IconIE4" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vQAADr0BR/uQrQAAAJVJREFUOE+VkQsSxCAMQj16bu4GFU3YdO2+Gaqi0F/7j96zfqKHqYiuByYBFfYJ
+        1okT9uuef4slmG9gWjdzN4Wnf9bRT1RhaCN+KriGieyvkjr8Rl7AMMbywE0zCBiIBS9Awbn7tUD29xME
+        Q0rM8IHhPbziKRhMU0pqjVIfcgHAfB2oiugnuEnG/EkZ/4fLZEksutHaB6sGQO/gf7MbAAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="DCTheme_BG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DCTheme_BG.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Win95SideBar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\winclassic\win95sidebar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinClassicTaskBar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\winclassic\winclassictaskbar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinClassicTaskbarItem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\winclassic\winclassictaskbaritem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinClassicStart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\winclassic\winclassicstart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinClassicAddressBookPropertiesIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\WinClassicAddressBookPropertiesIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="start_padamslink" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE4\start_padamslink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinClassicEndingsLocked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\WinClassicEndingsLocked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AIMbuddyleave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\AIMbuddyleave.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="wordpad_underline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wordpad_underline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinClassicMinesweeperGasp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minsweeper gasp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minesweepSquare5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minesweepSquare5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="GTN95_Error" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GuessTheNumber\GTN95_Error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="GTN95_Lower" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GuessTheNumber\GTN95_Lower.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Histacom2_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\titlescreen\Histacom2_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HistacomIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HistacomIcon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ie4_vsplitter3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ie4_hsplitter2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="TimeDistorter1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\TimeDistorter1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WinClassicMinesweeperFlag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minsweeper flag.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nopage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE4\nopage.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AIMbuddyjoin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\AIMbuddyjoin.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="WinClassicMinesweeperWin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minsweeper win.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IE3_Refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE3\IE3_Refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="TimeDistorter1Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WinClassic\TimeDistorter1Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WinClassicFTP" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\WinClassicFTP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ie4_vsplitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ie4_vsplitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WinClassicFTPIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\WinClassicFTPIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WinClassicNotepadBig" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\WinClassicNotepadBig.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WinClassicGTN" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\WinClassicGTN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="EndingDestruction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EndingDestruction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="XCross" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XCross.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Win98Stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\Win98Stop.WAV;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_16Color" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\winclassic\16color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wordpad_bold" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wordpad_bold.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="WinClassicGTNIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WinClassic\WinClassicGTNIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WinClassicWebchat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassic\WinClassicWebchat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Win95NetworkIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\Win95NetworkIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WinClassicNotepad" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassicNotepad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WinClassicFileExplorer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shell32_21.ico_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WinClassicRtfFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WinClassicRtfFile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ie4_forward" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ie4_forward.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinClassicInbox" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\winclassic\winclassicinbox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinClassicTime" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\winclassic\winclassictime.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Win95Start" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\winclassic\win95start.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95Error1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Win95Error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

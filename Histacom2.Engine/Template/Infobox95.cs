@@ -22,21 +22,26 @@ namespace Histacom2.Engine.Template
                     pictureBox1.Image = Properties.Resources.Win95Info;
                     SoundPlayer spa = new SoundPlayer(SaveSystem.currentTheme.asteriskSound);
                     spa.Play();
+                    spa.Stream.Position = 0;
+
                     break;
                 case InfoboxType.Question:
                     pictureBox1.Image = Properties.Resources.Win95Question;
                     SoundPlayer spq = new SoundPlayer(SaveSystem.currentTheme.questionSound);
                     spq.Play();
+                    spq.Stream.Position = 0;
                     break;
                 case InfoboxType.Warning:
                     pictureBox1.Image = Properties.Resources.Win95Warning;
                     SoundPlayer spw = new SoundPlayer(SaveSystem.currentTheme.exclamationSound);
                     spw.Play();
+                    spw.Stream.Position = 0;
                     break;
                 case InfoboxType.Error:
                     pictureBox1.Image = Properties.Resources.Win95Error;
                     SoundPlayer spe = new SoundPlayer(SaveSystem.currentTheme.critStopSound);
                     spe.Play();
+                    spe.Stream.Position = 0;
                     break;
             }
 
