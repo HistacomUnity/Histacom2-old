@@ -10,6 +10,8 @@ using Histacom2.Engine.Template.Taskbars;
 using Histacom2.OS.Win95.Win95Apps;
 using Histacom2.OS.Win95.Win95Apps.Story;
 using static Histacom2.Engine.SaveSystem;
+using Histacom2.OS.Win98.Win98Apps;
+
 namespace Histacom2.OS.Win98
 {
     public partial class Windows98 : Form
@@ -242,7 +244,7 @@ namespace Histacom2.OS.Win98
         private void InternetExplorerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (ie != null) { wm.StartInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", InfoboxType.Warning, InfoboxButtons.OK); return; }
-            ie = wm.Init(new WinClassicIE3(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
+            ie = wm.Init(new WinClassicIE4(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
             AddTaskBarItem(ie, ie.Tag.ToString(), "Internet Explorer 4", Properties.Resources.Win95IconIE4);
             ie.BringToFront();
             ie.FormClosing += new FormClosingEventHandler(InternetExplorer4_Closing);
@@ -262,7 +264,7 @@ namespace Histacom2.OS.Win98
                     if (objListViewItem.Text == "Internet Explorer")
                     {
                         if (ie != null) { wm.StartInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", InfoboxType.Warning, InfoboxButtons.OK); return; }
-                        ie = wm.Init(new WinClassicIE3(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
+                        ie = wm.Init(new WinClassicIE4(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
                         AddTaskBarItem(ie, ie.Tag.ToString(), "Internet Explorer 4", Properties.Resources.Win95IconIE4);
                         ie.BringToFront();
                         ie.FormClosing += new FormClosingEventHandler(InternetExplorer4_Closing);

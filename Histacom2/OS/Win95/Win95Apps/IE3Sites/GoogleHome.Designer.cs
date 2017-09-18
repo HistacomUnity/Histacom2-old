@@ -1,4 +1,4 @@
-﻿namespace Histacom2.OS.Win95.Win95Apps.IE4Sites
+﻿namespace Histacom2.OS.Win95.Win95Apps.IE3Sites
 {
     partial class GoogleHome
     {

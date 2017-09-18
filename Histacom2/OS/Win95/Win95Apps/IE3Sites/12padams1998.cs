@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using Histacom2.Engine;
 using System.Threading;
 
-namespace Histacom2.OS.Win95.Win95Apps.IE4Sites
+namespace Histacom2.OS.Win95.Win95Apps.IE3Sites
 {
     public partial class _12padams1998 : UserControl
     {

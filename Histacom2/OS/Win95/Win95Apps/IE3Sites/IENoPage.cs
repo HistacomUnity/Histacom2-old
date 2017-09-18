@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Histacom2.OS.Win95.Win95Apps.IE4Sites
+namespace Histacom2.OS.Win95.Win95Apps.IE3Sites
 {
-    public partial class IE4NoPage : UserControl
+    public partial class IENoPage : UserControl
     {
-        public IE4NoPage()
+        public IENoPage()
         {
             InitializeComponent();
         }

@@ -7,29 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Histacom2.OS.Win95.Win95Apps.IE3Sites;
+using Histacom2.OS.Win98.Win98Apps.IE4Sites;
 
-namespace Histacom2.OS.Win95.Win95Apps
+namespace Histacom2.OS.Win98.Win98Apps
 {
-    public partial class WinClassicIE3 : UserControl
+    public partial class WinClassicIE4 : UserControl
     {
         public static Panel browsingArea = new Panel();
         public static ComboBox addressbar = new ComboBox();
 
-        public WinClassicIE3()
+        public WinClassicIE4()
         {
             InitializeComponent();
             browsingArea = _browsingArea;
             addressbar = _addressbar;
-
-            BackButton.MouseEnter += (s, e) => BackButton.BackgroundImage = Properties.Resources.IE3_BackHover;
-            BackButton.MouseLeave += (s, e) => BackButton.BackgroundImage = Properties.Resources.IE3_Back;
-            ForwardButton.MouseEnter += (s, e) => ForwardButton.BackgroundImage = Properties.Resources.IE3_ForwardHover;
-            ForwardButton.MouseLeave += (s, e) => ForwardButton.BackgroundImage = Properties.Resources.IE3_Forward;
-            StopButton.MouseEnter += (s, e) => StopButton.BackgroundImage = Properties.Resources.IE3_StopHover;
-            StopButton.MouseLeave += (s, e) => StopButton.BackgroundImage = Properties.Resources.IE3_Stop;
-            RefreshButton.MouseEnter += (s, e) => RefreshButton.BackgroundImage = Properties.Resources.IE3_RefreshHover;
-            RefreshButton.MouseLeave += (s, e) => RefreshButton.BackgroundImage = Properties.Resources.IE3_Refresh;
         }
 
         public static async void GoToPage(string url)
@@ -38,18 +29,15 @@ namespace Histacom2.OS.Win95.Win95Apps
 
             switch (url)
             {
-                case "www.microsoft.com/windows/ie/default.htm":
-                    uc = new IE3Start();
+                /*case "www.microsoft.com/windows/ie/default.htm":
+                    uc = new IE4Start();
                     break;
                 case "www.google.com":
                     uc = new GoogleHome();
                     break;
-                case "www.google.stanford.edu":
-                    uc = new GooglePrototype();
-                    break;
                 case "www.12padams.com":
                     uc = new _12padams1998();
-                    break;
+                    break;*/
                 default:
                     uc = new IENoPage();
                     break;
@@ -62,8 +50,6 @@ namespace Histacom2.OS.Win95.Win95Apps
 
             browsingArea.Controls.Clear();
             browsingArea.Controls.Add(uc);
-
-            if (url == "www.12padams.com") Story.Hack1.StartObjective();
         }
 
         private void TempIE4_Load(object sender, EventArgs e)
