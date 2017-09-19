@@ -21,9 +21,11 @@ namespace Histacom2.Engine.UI
         {
             base.OnPaint(e);
             var gfx = e.Graphics;
+            gfx.Clear(BackColor);
             gfx.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;
 
-            gfx.DrawString(Text, Font, new SolidBrush(ForeColor), 0, 0);
+            gfx.DrawString(Text, Font, new SolidBrush(ForeColor), ClientRectangle);
+            Height = (int)gfx.MeasureString(Text, Font, ClientRectangle.Width).Height;
         }
     }
 }

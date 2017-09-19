@@ -36,7 +36,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Histacom2.Properties.Resources.start;
+            this.pictureBox1.Image = global::Histacom2.Properties.Resources.IE3_Start;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(640, 480);

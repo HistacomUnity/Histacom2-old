@@ -19,7 +19,7 @@ namespace Histacom2.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resources {
@@ -207,26 +207,6 @@ namespace Histacom2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap GTN95_Check {
-            get {
-                object obj = ResourceManager.GetObject("GTN95_Check", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap GTN95_CheckClicked {
-            get {
-                object obj = ResourceManager.GetObject("GTN95_CheckClicked", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         public static System.Drawing.Bitmap GTN95_Correct {
             get {
                 object obj = ResourceManager.GetObject("GTN95_Correct", resourceCulture);
@@ -260,26 +240,6 @@ namespace Histacom2.Properties {
         public static System.Drawing.Bitmap GTN95_Lower {
             get {
                 object obj = ResourceManager.GetObject("GTN95_Lower", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap GTN95_Restart {
-            get {
-                object obj = ResourceManager.GetObject("GTN95_Restart", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap GTN95_RestartClicked {
-            get {
-                object obj = ResourceManager.GetObject("GTN95_RestartClicked", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -380,6 +340,16 @@ namespace Histacom2.Properties {
         public static System.Drawing.Bitmap IE3_RefreshHover {
             get {
                 object obj = ResourceManager.GetObject("IE3_RefreshHover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IE3_Start {
+            get {
+                object obj = ResourceManager.GetObject("IE3_Start", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -570,6 +540,116 @@ namespace Histacom2.Properties {
         public static System.Drawing.Bitmap ie4about {
             get {
                 object obj = ResourceManager.GetObject("ie4about", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IE4Home_AboutIE5 {
+            get {
+                object obj = ResourceManager.GetObject("IE4Home_AboutIE5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IE4Home_HDots {
+            get {
+                object obj = ResourceManager.GetObject("IE4Home_HDots", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IE4Home_IE4CD {
+            get {
+                object obj = ResourceManager.GetObject("IE4Home_IE4CD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IE4Home_MSBG {
+            get {
+                object obj = ResourceManager.GetObject("IE4Home_MSBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IE4Home_MSHome {
+            get {
+                object obj = ResourceManager.GetObject("IE4Home_MSHome", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IE4Home_MSLogo {
+            get {
+                object obj = ResourceManager.GetObject("IE4Home_MSLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IE4Home_SecUpdate {
+            get {
+                object obj = ResourceManager.GetObject("IE4Home_SecUpdate", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IE4Home_WinTechBG {
+            get {
+                object obj = ResourceManager.GetObject("IE4Home_WinTechBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IE4Home_WinTechHome {
+            get {
+                object obj = ResourceManager.GetObject("IE4Home_WinTechHome", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IE4Home_WinTechIE {
+            get {
+                object obj = ResourceManager.GetObject("IE4Home_WinTechIE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap IE4Home_WinTechLogo {
+            get {
+                object obj = ResourceManager.GetObject("IE4Home_WinTechLogo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -799,16 +879,6 @@ namespace Histacom2.Properties {
         public static System.Drawing.Bitmap sliversilver {
             get {
                 object obj = ResourceManager.GetObject("sliversilver", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap start {
-            get {
-                object obj = ResourceManager.GetObject("start", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

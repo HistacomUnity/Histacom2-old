@@ -29,9 +29,10 @@ namespace Histacom2.OS.Win98.Win98Apps
 
             switch (url)
             {
-                /*case "www.microsoft.com/windows/ie/default.htm":
-                    uc = new IE4Start();
+                case "www.microsoft.com/windows/ie/default.htm":
+                    uc = new IE4HomePage();
                     break;
+                    /*
                 case "www.google.com":
                     uc = new GoogleHome();
                     break;

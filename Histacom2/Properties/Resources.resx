@@ -127,7 +127,7 @@
   <data name="WinClassicMSN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\winclassic\winclassicmsn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="start" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="IE3_Start" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IE4\start.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="GTN95_Lower" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -205,9 +205,6 @@
   <data name="Lemon_s_LCD" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\lemon's lcd.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="GTN95_RestartClicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GuessTheNumber\GTN95_RestartClicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Win95Error" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WinClassic\Win95Error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -241,9 +238,6 @@
   <data name="termMax" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\termMax.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="GTN95_CheckClicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GuessTheNumber\GTN95_CheckClicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="wordpad_open" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wordpad_open.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -276,9 +270,6 @@
   </data>
   <data name="WinClassicHelp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\winclassic\winclassichelp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="GTN95_Restart" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GuessTheNumber\GTN95_Restart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IE3_ForwardHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IE3\IE3_ForwardHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -594,9 +585,6 @@
   </data>
   <data name="win95_welcometip" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\win95_welcometip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="GTN95_Check" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GuessTheNumber\GTN95_Check.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="win95_splitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\win95_splitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1929,5 +1917,38 @@
   </data>
   <data name="Win95Error1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Win95Error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IE4Home_AboutIE5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE4\IE4Home_AboutIE5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IE4Home_HDots" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE4\IE4Home_HDots.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IE4Home_IE4CD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE4\IE4Home_IE4CD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IE4Home_MSBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE4\IE4Home_MSBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IE4Home_MSHome" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE4\IE4Home_MSHome.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IE4Home_MSLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE4\IE4Home_MSLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IE4Home_SecUpdate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE4\IE4Home_SecUpdate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IE4Home_WinTechBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE4\IE4Home_WinTechBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IE4Home_WinTechHome" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE4\IE4Home_WinTechHome.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IE4Home_WinTechIE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE4\IE4Home_WinTechIE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IE4Home_WinTechLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IE4\IE4Home_WinTechLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

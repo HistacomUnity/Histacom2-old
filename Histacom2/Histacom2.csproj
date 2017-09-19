@@ -268,6 +268,12 @@
     <Compile Include="OS\Win98\Win98.Designer.cs">
       <DependentUpon>Win98.cs</DependentUpon>
     </Compile>
+    <Compile Include="OS\Win98\Win98Apps\IE4Sites\IE4HomePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win98\Win98Apps\IE4Sites\IE4HomePage.Designer.cs">
+      <DependentUpon>IE4HomePage.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\Win98\Win98Apps\IE4Sites\IENoPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -458,9 +464,15 @@
       <DependentUpon>Win98.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win98\Win98Apps\IE4Sites\IE4HomePage.resx">
+      <DependentUpon>IE4HomePage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OS\Win98\Win98Apps\IE4Sites\IENoPage.resx">
       <DependentUpon>IENoPage.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win98\Win98Apps\WinClassicIE4.resx">
+      <DependentUpon>WinClassicIE4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win98\Win98Apps\WinClassicWindowsExplorer.resx">
       <DependentUpon>WinClassicWindowsExplorer.cs</DependentUpon>
@@ -546,6 +558,7 @@
   <ItemGroup>
     <Content Include="Icon128x.ico" />
     <Content Include="Resources\12padams_EULA.txt" />
+    <None Include="Resources\y1k86jqd.bmp" />
     <None Include="Resources\WinClassic\WinClassicWebchat.png" />
     <None Include="Resources\wordpad_find.png" />
     <None Include="Resources\wordpad_printpreview.png" />
@@ -591,6 +604,17 @@
     <Content Include="Resources\IE4\googlehome.html" />
     <Content Include="Resources\IE4\googleprototype.html" />
     <None Include="Resources\IE4\ie4about.png" />
+    <None Include="Resources\IE4\IE4Home_MSHome.png" />
+    <None Include="Resources\IE4\IE4Home_MSBG.png" />
+    <None Include="Resources\IE4\IE4Home_MSLogo.png" />
+    <None Include="Resources\IE4\IE4Home_WinTechLogo.png" />
+    <None Include="Resources\IE4\IE4Home_WinTechBG.png" />
+    <None Include="Resources\IE4\IE4Home_WinTechHome.png" />
+    <None Include="Resources\IE4\IE4Home_WinTechIE.png" />
+    <None Include="Resources\IE4\IE4Home_AboutIE5.png" />
+    <None Include="Resources\IE4\IE4Home_IE4CD.png" />
+    <None Include="Resources\IE4\IE4Home_HDots.png" />
+    <None Include="Resources\IE4\IE4Home_SecUpdate.png" />
     <Content Include="Resources\IE4\ie4start.html" />
     <None Include="Resources\IE4\nopage.bmp" />
     <Content Include="Resources\IE4\padams.html" />
