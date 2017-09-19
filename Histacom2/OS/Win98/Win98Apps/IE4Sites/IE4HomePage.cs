@@ -28,6 +28,7 @@ namespace Histacom2.OS.Win98.Win98Apps.IE4Sites
             classicLabel7.Invalidate();
             classicLabel8.Invalidate();
             classicLabel9.Invalidate();
+            classicLabel15.Invalidate();
             classicLabel25.Invalidate();
         }
     }
