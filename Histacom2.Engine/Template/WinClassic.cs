@@ -111,7 +111,7 @@ namespace Histacom2.Engine.Template
             if (e.Button == MouseButtons.Left)
             {
                 var toDraw = resizer.ToDraw;
-                if (resizable) toDraw.Width = MousePosition.X - this.Location.X;
+                if (resizable) if (MousePosition.X - this.Location.X > progContent.MinimumSize.Width + 8) toDraw.Width = MousePosition.X - this.Location.X;
                 if (resizable) toDraw.Height = MousePosition.Y - this.Location.Y;
                 resizer.ToDraw = toDraw;
             }
@@ -122,9 +122,9 @@ namespace Histacom2.Engine.Template
             if (e.Button == MouseButtons.Left)
             {
                 var toDraw = resizer.ToDraw;
-                if (resizable) toDraw.Width = ((toDraw.Width + toDraw.Location.X) - Cursor.Position.X);
+                if (resizable) if (((this.Width + this.Location.X) - Cursor.Position.X) > progContent.MinimumSize.Width + 8) toDraw.Width = ((toDraw.Width + toDraw.Location.X) - Cursor.Position.X);
                 if (resizable) toDraw.Height = Cursor.Position.Y - this.Location.Y;
-                if (resizable) toDraw.X = Cursor.Position.X;
+                if (resizable) if (((this.Width + this.Location.X) - Cursor.Position.X) > progContent.MinimumSize.Width + 8) toDraw.X = Cursor.Position.X;
                 resizer.ToDraw = toDraw;
             }
         }
@@ -134,8 +134,8 @@ namespace Histacom2.Engine.Template
             if (e.Button == MouseButtons.Left)
             {
                 var toDraw = resizer.ToDraw;
-                if (resizable) toDraw.Width = ((this.Width + this.Location.X) - Cursor.Position.X);
-                if (resizable) toDraw.X = Cursor.Position.X;
+                if (resizable) if (((this.Width + this.Location.X) - Cursor.Position.X) > progContent.MinimumSize.Width + 8) toDraw.Width = ((this.Width + this.Location.X) - Cursor.Position.X);
+                if (resizable) if (((this.Width + this.Location.X) - Cursor.Position.X) > progContent.MinimumSize.Width + 8) toDraw.X = Cursor.Position.X;
                 if (resizable) toDraw.Height = ((this.Height + this.Location.Y) - Cursor.Position.Y);
                 if (resizable) toDraw.Y = Cursor.Position.Y;
                 resizer.ToDraw = toDraw;
@@ -158,7 +158,7 @@ namespace Histacom2.Engine.Template
             if (e.Button == MouseButtons.Left)
             {
                 var toDraw = resizer.ToDraw;
-                if (resizable) toDraw.Width = MousePosition.X - this.Location.X;
+                if (resizable) if (MousePosition.X - this.Location.X > progContent.MinimumSize.Width + 8) toDraw.Width = MousePosition.X - this.Location.X;
                 if (resizable) toDraw.Height = ((toDraw.Height + toDraw.Top) - Cursor.Position.Y);
                 if (resizable) toDraw.Y = Cursor.Position.Y;
                 resizer.ToDraw = toDraw;
