@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IE4HomePage));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -67,6 +68,7 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.classicLabel10 = new Histacom2.Engine.UI.ClassicLabel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.classicLabel25 = new Histacom2.Engine.UI.ClassicLabel();
             this.classicLabel15 = new Histacom2.Engine.UI.ClassicLabel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.classicLabel9 = new Histacom2.Engine.UI.ClassicLabel();
@@ -83,8 +85,8 @@
             this.classicLabel2 = new Histacom2.Engine.UI.ClassicLabel();
             this.classicLabel1 = new Histacom2.Engine.UI.ClassicLabel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.classicLabel25 = new Histacom2.Engine.UI.ClassicLabel();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -113,6 +115,7 @@
             // panel1
             // 
             this.panel1.BackgroundImage = global::Histacom2.Properties.Resources.IE4Home_MSBG;
+            this.panel1.Controls.Add(this.pictureBox16);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -120,6 +123,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(959, 21);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.BackgroundImage = global::Histacom2.Properties.Resources.IE4Home_MSProducts;
+            this.pictureBox16.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox16.Location = new System.Drawing.Point(104, 0);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(81, 21);
+            this.pictureBox16.TabIndex = 2;
+            this.pictureBox16.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -542,6 +555,16 @@
             this.panel6.Size = new System.Drawing.Size(585, 452);
             this.panel6.TabIndex = 5;
             // 
+            // classicLabel25
+            // 
+            this.classicLabel25.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.classicLabel25.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classicLabel25.Location = new System.Drawing.Point(0, 438);
+            this.classicLabel25.Name = "classicLabel25";
+            this.classicLabel25.Size = new System.Drawing.Size(570, 14);
+            this.classicLabel25.TabIndex = 14;
+            this.classicLabel25.Text = "Last updated:  Tuesday, November 03, 1998";
+            // 
             // classicLabel15
             // 
             this.classicLabel15.Dock = System.Windows.Forms.DockStyle.Top;
@@ -706,16 +729,6 @@
             this.panel7.Size = new System.Drawing.Size(959, 1);
             this.panel7.TabIndex = 0;
             // 
-            // classicLabel25
-            // 
-            this.classicLabel25.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.classicLabel25.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.classicLabel25.Location = new System.Drawing.Point(0, 438);
-            this.classicLabel25.Name = "classicLabel25";
-            this.classicLabel25.Size = new System.Drawing.Size(570, 14);
-            this.classicLabel25.TabIndex = 14;
-            this.classicLabel25.Text = "Last updated:  Tuesday, November 03, 1998";
-            // 
             // IE4HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -733,6 +746,7 @@
             this.Size = new System.Drawing.Size(959, 542);
             this.SizeChanged += new System.EventHandler(this.IE4HomePage_SizeChanged);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -818,5 +832,6 @@
         private Engine.UI.ClassicLabel classicLabel24;
         private System.Windows.Forms.PictureBox pictureBox15;
         private Engine.UI.ClassicLabel classicLabel25;
+        private System.Windows.Forms.PictureBox pictureBox16;
     }
 }

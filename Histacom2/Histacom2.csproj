@@ -615,6 +615,7 @@
     <None Include="Resources\IE4\IE4Home_IE4CD.png" />
     <None Include="Resources\IE4\IE4Home_HDots.png" />
     <None Include="Resources\IE4\IE4Home_SecUpdate.png" />
+    <None Include="Resources\IE4\IE4Home_MSProducts.png" />
     <Content Include="Resources\IE4\ie4start.html" />
     <None Include="Resources\IE4\nopage.bmp" />
     <Content Include="Resources\IE4\padams.html" />

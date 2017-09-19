@@ -607,6 +607,16 @@ namespace Histacom2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap IE4Home_MSProducts {
+            get {
+                object obj = ResourceManager.GetObject("IE4Home_MSProducts", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap IE4Home_SecUpdate {
             get {
                 object obj = ResourceManager.GetObject("IE4Home_SecUpdate", resourceCulture);

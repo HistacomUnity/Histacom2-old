@@ -1317,6 +1317,7 @@
             this.Controls.Add(this.Panel14);
             this.Controls.Add(this.Panel1);
             this.Controls.Add(this.MenuStrip3);
+            this.MinimumSize = new System.Drawing.Size(650, 0);
             this.Name = "WinClassicIE4";
             this.Size = new System.Drawing.Size(959, 644);
             this.Load += new System.EventHandler(this.TempIE4_Load);
