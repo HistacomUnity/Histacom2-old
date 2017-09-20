@@ -30,6 +30,12 @@ namespace Histacom2.OS.Win98.Win98Apps.IE4Sites
             classicLabel9.Invalidate();
             classicLabel15.Invalidate();
             classicLabel25.Invalidate();
+            classicLabel26.Invalidate();
+        }
+
+        private void classicLabel22_Click(object sender, EventArgs e)
+        {
+            WinClassicIE4.GoToPage("www.12padams.com");
         }
     }
 }

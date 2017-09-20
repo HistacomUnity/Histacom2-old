@@ -69,6 +69,7 @@
             this.classicLabel10 = new Histacom2.Engine.UI.ClassicLabel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.classicLabel25 = new Histacom2.Engine.UI.ClassicLabel();
+            this.classicLabel26 = new Histacom2.Engine.UI.ClassicLabel();
             this.classicLabel15 = new Histacom2.Engine.UI.ClassicLabel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.classicLabel9 = new Histacom2.Engine.UI.ClassicLabel();
@@ -234,6 +235,7 @@
             // 
             // classicLabel22
             // 
+            this.classicLabel22.Cursor = System.Windows.Forms.Cursors.Hand;
             this.classicLabel22.Dock = System.Windows.Forms.DockStyle.Top;
             this.classicLabel22.Font = new System.Drawing.Font("Verdana", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.classicLabel22.ForeColor = System.Drawing.Color.Navy;
@@ -241,7 +243,8 @@
             this.classicLabel22.Name = "classicLabel22";
             this.classicLabel22.Size = new System.Drawing.Size(197, 14);
             this.classicLabel22.TabIndex = 20;
-            this.classicLabel22.Text = " 12padams";
+            this.classicLabel22.Text = " http://www.12padams.com/";
+            this.classicLabel22.Click += new System.EventHandler(this.classicLabel22_Click);
             // 
             // classicLabel21
             // 
@@ -252,7 +255,7 @@
             this.classicLabel21.Name = "classicLabel21";
             this.classicLabel21.Size = new System.Drawing.Size(197, 14);
             this.classicLabel21.TabIndex = 19;
-            this.classicLabel21.Text = " Google";
+            this.classicLabel21.Text = " http://www.google.com/";
             // 
             // panel13
             // 
@@ -536,6 +539,7 @@
             // panel6
             // 
             this.panel6.Controls.Add(this.classicLabel25);
+            this.panel6.Controls.Add(this.classicLabel26);
             this.panel6.Controls.Add(this.classicLabel15);
             this.panel6.Controls.Add(this.panel12);
             this.panel6.Controls.Add(this.classicLabel9);
@@ -559,11 +563,21 @@
             // 
             this.classicLabel25.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.classicLabel25.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.classicLabel25.Location = new System.Drawing.Point(0, 438);
+            this.classicLabel25.Location = new System.Drawing.Point(0, 424);
             this.classicLabel25.Name = "classicLabel25";
             this.classicLabel25.Size = new System.Drawing.Size(570, 14);
             this.classicLabel25.TabIndex = 14;
             this.classicLabel25.Text = "Last updated:  Tuesday, November 03, 1998";
+            // 
+            // classicLabel26
+            // 
+            this.classicLabel26.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.classicLabel26.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classicLabel26.Location = new System.Drawing.Point(0, 438);
+            this.classicLabel26.Name = "classicLabel26";
+            this.classicLabel26.Size = new System.Drawing.Size(570, 14);
+            this.classicLabel26.TabIndex = 15;
+            this.classicLabel26.Text = "© 1999 Microsoft Corporation. All rights reserved. Terms of Use.";
             // 
             // classicLabel15
             // 
@@ -833,5 +847,6 @@
         private System.Windows.Forms.PictureBox pictureBox15;
         private Engine.UI.ClassicLabel classicLabel25;
         private System.Windows.Forms.PictureBox pictureBox16;
+        private Engine.UI.ClassicLabel classicLabel26;
     }
 }

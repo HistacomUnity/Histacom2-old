@@ -28,6 +28,7 @@ namespace Histacom2.Engine.UI
             }
         }
 
+        public bool AdaptBackColorWithTheme = true;
         public bool AdaptForeColorWithTheme = true;
         public bool AdaptFontWithTheme = true;
 
@@ -48,8 +49,7 @@ namespace Histacom2.Engine.UI
         {
             base.OnPaint(e);
 
-            if (SaveSystem.currentTheme != null) BackColor = SaveSystem.currentTheme.threeDObjectsColor;
-            else BackColor = Color.Silver;
+            if (SaveSystem.currentTheme != null && AdaptBackColorWithTheme) BackColor = SaveSystem.currentTheme.threeDObjectsColor;
 
             if (AdaptForeColorWithTheme)
             {

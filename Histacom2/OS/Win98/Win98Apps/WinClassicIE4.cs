@@ -35,10 +35,10 @@ namespace Histacom2.OS.Win98.Win98Apps
                     /*
                 case "www.google.com":
                     uc = new GoogleHome();
-                    break;
-                case "www.12padams.com":
-                    uc = new _12padams1998();
                     break;*/
+                case "www.12padams.com":
+                    uc = new _12padams1999();
+                    break;
                 default:
                     uc = new IENoPage();
                     break;
