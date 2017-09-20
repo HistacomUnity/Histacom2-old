@@ -15,26 +15,17 @@ namespace Histacom2.Engine.UI
 
         private bool _pressing = false;
 
-        public DialogResult DialogResult
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
+        public DialogResult DialogResult { get; set; }
 
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public bool AdaptBackColorWithTheme = true;
-        public bool AdaptForeColorWithTheme = true;
-        public bool AdaptFontWithTheme = true;
+        public bool AdaptBackColorWithTheme { get; set; }
+        public bool AdaptForeColorWithTheme { get; set; }
+        public bool AdaptFontWithTheme { get; set; }
 
         public ClassicButton() : base()
         {
-
+            AdaptBackColorWithTheme = true;
+            AdaptForeColorWithTheme = true;
+            AdaptFontWithTheme = true;
             if (SaveSystem.currentTheme != null) BackColor = SaveSystem.currentTheme.threeDObjectsColor;
             else BackColor = Color.Silver;
             _lightBack = ControlPaint.Light(BackColor, 50);
