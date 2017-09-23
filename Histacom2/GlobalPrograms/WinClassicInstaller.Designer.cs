@@ -90,6 +90,7 @@
             this.classicButton3.AdaptForeColorWithTheme = true;
             this.classicButton3.BackColor = System.Drawing.Color.Silver;
             this.classicButton3.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.classicButton3.Enabled = false;
             this.classicButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.classicButton3.ForeColor = System.Drawing.Color.Black;
             this.classicButton3.Location = new System.Drawing.Point(248, 326);

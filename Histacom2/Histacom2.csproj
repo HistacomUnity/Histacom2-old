@@ -132,6 +132,12 @@
     <Compile Include="AchievementBox.Designer.cs">
       <DependentUpon>AchievementBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalPrograms\InstallerPanes\EULAPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GlobalPrograms\InstallerPanes\EULAPane.Designer.cs">
+      <DependentUpon>EULAPane.cs</DependentUpon>
+    </Compile>
     <Compile Include="GlobalPrograms\InstallerPanes\DirectoryPane.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -418,6 +424,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AchievementBox.resx">
       <DependentUpon>AchievementBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GlobalPrograms\InstallerPanes\EULAPane.resx">
+      <DependentUpon>EULAPane.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GlobalPrograms\InstallerPanes\DirectoryPane.resx">
       <DependentUpon>DirectoryPane.cs</DependentUpon>

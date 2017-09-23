@@ -101,16 +101,16 @@
             // 
             this.groupBox1.Controls.Add(this.classicButton1);
             this.groupBox1.Controls.Add(this.classicLabel5);
-            this.groupBox1.Location = new System.Drawing.Point(24, 231);
+            this.groupBox1.Location = new System.Drawing.Point(24, 225);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(447, 50);
+            this.groupBox1.Size = new System.Drawing.Size(447, 56);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Destination Folder";
             // 
             // classicLabel5
             // 
-            this.classicLabel5.Location = new System.Drawing.Point(12, 22);
+            this.classicLabel5.Location = new System.Drawing.Point(12, 27);
             this.classicLabel5.Name = "classicLabel5";
             this.classicLabel5.Size = new System.Drawing.Size(311, 13);
             this.classicLabel5.TabIndex = 0;
@@ -125,7 +125,7 @@
             this.classicButton1.DialogResult = System.Windows.Forms.DialogResult.None;
             this.classicButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.classicButton1.ForeColor = System.Drawing.Color.Black;
-            this.classicButton1.Location = new System.Drawing.Point(365, 16);
+            this.classicButton1.Location = new System.Drawing.Point(365, 22);
             this.classicButton1.Name = "classicButton1";
             this.classicButton1.Size = new System.Drawing.Size(75, 23);
             this.classicButton1.TabIndex = 1;

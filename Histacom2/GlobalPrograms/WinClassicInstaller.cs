@@ -35,8 +35,10 @@ namespace Histacom2.GlobalPrograms
 
             if (state == 0)
             {
-                var dir = new InstallerPanes.DirectoryPane();
-                dir.Parent = panel1;
+                var eula = new InstallerPanes.EULAPane();
+                eula.Parent = panel1;
+                state = 1;
+                classicButton2.Enabled = false;
             }
         }
     }

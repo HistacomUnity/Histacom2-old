@@ -63,16 +63,17 @@ namespace Histacom2.Engine.UI
             g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;
             StringFormat sf = new StringFormat();
             sf.Alignment = StringAlignment.Center;
+            sf.LineAlignment = StringAlignment.Center;
             sf.HotkeyPrefix = System.Drawing.Text.HotkeyPrefix.Show;
             
-            if (_pressing)
+            if (_pressing && Enabled)
             {
                 g.FillRectangle(new SolidBrush(_lightBack), new Rectangle(0, 0, Width, Height));
                 g.FillRectangle(Brushes.Black, new Rectangle(0, 0, Width - 1, Height - 1));
                 g.FillRectangle(new SolidBrush(_darkBack), new Rectangle(1, 1, Width - 2, Height - 2));
                 g.FillRectangle(new SolidBrush(BackColor), new Rectangle(2, 2, Width - 3, Height - 3));
 
-                g.DrawString(Text, Font, new SolidBrush(ForeColor), ((Width / 2) + 1) + Padding.Left, (Height / 2) - (g.MeasureString(Text, Font).Height / 2) + 2, sf);
+                g.DrawString(Text, Font, new SolidBrush(ForeColor), new Rectangle(2, 2, Width - 3, Height - 3), sf);
             }
             else
             {
@@ -81,7 +82,8 @@ namespace Histacom2.Engine.UI
                 g.FillRectangle(new SolidBrush(_darkBack), new Rectangle(1, 1, Width - 2, Height - 2));
                 g.FillRectangle(new SolidBrush(BackColor), new Rectangle(1, 1, Width - 3, Height - 3));
 
-                g.DrawString(Text, Font, new SolidBrush(ForeColor), (Width / 2) + Padding.Left, (Height / 2) - (g.MeasureString(Text, Font).Height / 2) + 1, sf);
+                if (Enabled) g.DrawString(Text, Font, new SolidBrush(ForeColor), new Rectangle(1, 1, Width - 3, Height - 3), sf);
+                else g.DrawString(Text, Font, new SolidBrush(_darkBack), new Rectangle(1, 1, Width - 3, Height - 3), sf);
             }
         }
 
