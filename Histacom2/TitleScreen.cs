@@ -105,11 +105,7 @@ namespace Histacom2
 
         private void VM_WidthHeight_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                    (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.')) e.Handled = true;
 
             // only allow one decimal point
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1)) e.Handled = true;
@@ -156,7 +152,7 @@ namespace Histacom2
             label1.Parent = leet;
             label1.AutoSize = true;
             label1.Text = "Thank you for making Histacom2 possible.";
-            wm.StartWin95(leet, "Thank You", null, true, true);
+            wm.Init(leet, "Thank You", null, true, true);
         }
 
         // The VM Mode timer / checker. Updates every 100ms

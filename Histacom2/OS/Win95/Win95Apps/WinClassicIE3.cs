@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Histacom2.OS.Win95.Win95Apps.IE4Sites;
+using Histacom2.OS.Win95.Win95Apps.IE3Sites;
 
 namespace Histacom2.OS.Win95.Win95Apps
 {
@@ -39,7 +39,7 @@ namespace Histacom2.OS.Win95.Win95Apps
             switch (url)
             {
                 case "www.microsoft.com/windows/ie/default.htm":
-                    uc = new IE4Start();
+                    uc = new IE3Start();
                     break;
                 case "www.google.com":
                     uc = new GoogleHome();
@@ -51,7 +51,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                     uc = new _12padams1998();
                     break;
                 default:
-                    uc = new IE4NoPage();
+                    uc = new IENoPage();
                     break;
             }
 

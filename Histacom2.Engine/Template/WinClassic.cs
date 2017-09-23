@@ -11,10 +11,12 @@ namespace Histacom2.Engine.Template
         {
             InitializeComponent();
             DoubleBuffered = true;
+            programContent.BackColor = SaveSystem.currentTheme.threeDObjectsColor;
         }
 
         public Font fnt;
         public ResizeOverlay resizer = new ResizeOverlay();
+        public UserControl progContent;
 
         public bool resizable = true;
         public bool closeDisabled = false;
@@ -75,7 +77,7 @@ namespace Histacom2.Engine.Template
             if (e.Button == MouseButtons.Left)
             {
                 var toDraw = resizer.ToDraw;
-                if (resizable) toDraw.Width = MousePosition.X - this.Location.X;
+                if (resizable) if (MousePosition.X - this.Location.X > progContent.MinimumSize.Width + 8) toDraw.Width = MousePosition.X - this.Location.X;
                 resizer.ToDraw = toDraw;
             }
         }
@@ -85,8 +87,10 @@ namespace Histacom2.Engine.Template
             if (e.Button == MouseButtons.Left)
             {
                 var toDraw = resizer.ToDraw;
-                if (resizable) toDraw.Width = ((this.Width + this.Location.X) - Cursor.Position.X);
-                if (resizable) toDraw.X = Cursor.Position.X;
+                if (resizable) {
+                    if (((this.Width + this.Location.X) - Cursor.Position.X) > progContent.MinimumSize.Width + 8) toDraw.Width = ((this.Width + this.Location.X) - Cursor.Position.X);
+                    if (((this.Width + this.Location.X) - Cursor.Position.X) > progContent.MinimumSize.Width + 8) toDraw.X = Cursor.Position.X;
+                }
                 resizer.ToDraw = toDraw;
             }
         }
@@ -107,7 +111,7 @@ namespace Histacom2.Engine.Template
             if (e.Button == MouseButtons.Left)
             {
                 var toDraw = resizer.ToDraw;
-                if (resizable) toDraw.Width = MousePosition.X - this.Location.X;
+                if (resizable) if (MousePosition.X - this.Location.X > progContent.MinimumSize.Width + 8) toDraw.Width = MousePosition.X - this.Location.X;
                 if (resizable) toDraw.Height = MousePosition.Y - this.Location.Y;
                 resizer.ToDraw = toDraw;
             }
@@ -118,9 +122,9 @@ namespace Histacom2.Engine.Template
             if (e.Button == MouseButtons.Left)
             {
                 var toDraw = resizer.ToDraw;
-                if (resizable) toDraw.Width = ((toDraw.Width + toDraw.Location.X) - Cursor.Position.X);
+                if (resizable) if (((this.Width + this.Location.X) - Cursor.Position.X) > progContent.MinimumSize.Width + 8) toDraw.Width = ((toDraw.Width + toDraw.Location.X) - Cursor.Position.X);
                 if (resizable) toDraw.Height = Cursor.Position.Y - this.Location.Y;
-                if (resizable) toDraw.X = Cursor.Position.X;
+                if (resizable) if (((this.Width + this.Location.X) - Cursor.Position.X) > progContent.MinimumSize.Width + 8) toDraw.X = Cursor.Position.X;
                 resizer.ToDraw = toDraw;
             }
         }
@@ -130,8 +134,8 @@ namespace Histacom2.Engine.Template
             if (e.Button == MouseButtons.Left)
             {
                 var toDraw = resizer.ToDraw;
-                if (resizable) toDraw.Width = ((this.Width + this.Location.X) - Cursor.Position.X);
-                if (resizable) toDraw.X = Cursor.Position.X;
+                if (resizable) if (((this.Width + this.Location.X) - Cursor.Position.X) > progContent.MinimumSize.Width + 8) toDraw.Width = ((this.Width + this.Location.X) - Cursor.Position.X);
+                if (resizable) if (((this.Width + this.Location.X) - Cursor.Position.X) > progContent.MinimumSize.Width + 8) toDraw.X = Cursor.Position.X;
                 if (resizable) toDraw.Height = ((this.Height + this.Location.Y) - Cursor.Position.Y);
                 if (resizable) toDraw.Y = Cursor.Position.Y;
                 resizer.ToDraw = toDraw;
@@ -154,7 +158,7 @@ namespace Histacom2.Engine.Template
             if (e.Button == MouseButtons.Left)
             {
                 var toDraw = resizer.ToDraw;
-                if (resizable) toDraw.Width = MousePosition.X - this.Location.X;
+                if (resizable) if (MousePosition.X - this.Location.X > progContent.MinimumSize.Width + 8) toDraw.Width = MousePosition.X - this.Location.X;
                 if (resizable) toDraw.Height = ((toDraw.Height + toDraw.Top) - Cursor.Position.Y);
                 if (resizable) toDraw.Y = Cursor.Position.Y;
                 resizer.ToDraw = toDraw;
@@ -205,10 +209,112 @@ namespace Histacom2.Engine.Template
             WinClassic_Activated(null, null); 
         }
 
+
         public bool max = false;
 
+        private void bottom_Paint(object sender, PaintEventArgs e)
+        {
+            var gfx = e.Graphics;
+            gfx.Clear(SaveSystem.currentTheme.threeDObjectsColor);
+
+            var _darkBack = Paintbrush.GetDarkFromColor(SaveSystem.currentTheme.threeDObjectsColor);
+
+            gfx.DrawLine(Pens.Black, 0, 3, bottom.Width, 3);
+            gfx.DrawLine(new Pen(_darkBack), 0, 2, bottom.Width, 2);
+        }
+
+        private void bottomleftcorner_Paint(object sender, PaintEventArgs e)
+        {
+            var gfx = e.Graphics;
+            gfx.Clear(SaveSystem.currentTheme.threeDObjectsColor);
+
+            var _lightBack = Paintbrush.GetLightFromColor(SaveSystem.currentTheme.threeDObjectsColor);
+            var _darkBack = Paintbrush.GetDarkFromColor(SaveSystem.currentTheme.threeDObjectsColor);
+
+            gfx.DrawLine(Pens.Black, 0, 3, 3, 3);
+            gfx.DrawLine(new Pen(_darkBack), 1, 2, 3, 2);
+            gfx.DrawLine(new Pen(_lightBack), 1, 0, 1, 1);
+        }
+
+        private void left_Paint(object sender, PaintEventArgs e)
+        {
+            var gfx = e.Graphics;
+            gfx.Clear(SaveSystem.currentTheme.threeDObjectsColor);
+
+            var _lightBack = Paintbrush.GetLightFromColor(SaveSystem.currentTheme.threeDObjectsColor);
+
+            gfx.DrawLine(new Pen(_lightBack), 1, 0, 1, left.Height);
+        }
+
+        private void programContent_ControlAdded(object sender, ControlEventArgs e)
+        {
+            e.Control.BackColor = SaveSystem.currentTheme.threeDObjectsColor;
+            e.Control.Invalidate();
+        }
+
+        private void topleftcorner_Paint(object sender, PaintEventArgs e)
+        {
+            var gfx = e.Graphics;
+            gfx.Clear(SaveSystem.currentTheme.threeDObjectsColor);
+
+            var _lightBack = Paintbrush.GetLightFromColor(SaveSystem.currentTheme.threeDObjectsColor);
+
+            gfx.DrawLine(new Pen(_lightBack), 1, 3, 1, 1);
+            gfx.DrawLine(new Pen(_lightBack), 1, 1, 3, 1);
+        }
+
+        private void top_Paint(object sender, PaintEventArgs e)
+        {
+            var gfx = e.Graphics;
+            gfx.Clear(SaveSystem.currentTheme.threeDObjectsColor);
+
+            var _lightBack = Paintbrush.GetLightFromColor(SaveSystem.currentTheme.threeDObjectsColor);
+
+            gfx.DrawLine(new Pen(_lightBack), 0, 1, top.Width, 1);
+        }
+
+        private void toprightcorner_Paint(object sender, PaintEventArgs e)
+        {
+            var gfx = e.Graphics;
+            gfx.Clear(SaveSystem.currentTheme.threeDObjectsColor);
+
+            var _lightBack = Paintbrush.GetLightFromColor(SaveSystem.currentTheme.threeDObjectsColor);
+            var _darkBack = Paintbrush.GetDarkFromColor(SaveSystem.currentTheme.threeDObjectsColor);
+
+            gfx.DrawLine(new Pen(_lightBack), 0, 1, 1, 1);
+            gfx.DrawLine(new Pen(_darkBack), 2, 1, 2, 3);
+            gfx.DrawLine(Pens.Black, 3, 0, 3, 3);
+        }
+
+        private void right_Paint(object sender, PaintEventArgs e)
+        {
+            var gfx = e.Graphics;
+            gfx.Clear(SaveSystem.currentTheme.threeDObjectsColor);
+
+            var _darkBack = Paintbrush.GetDarkFromColor(SaveSystem.currentTheme.threeDObjectsColor);
+
+            gfx.DrawLine(Pens.Black, 3, 0, 3, bottom.Width);
+            gfx.DrawLine(new Pen(_darkBack), 2, 0, 2, bottom.Width);
+        }
+
+        private void bottomrightcorner_Paint(object sender, PaintEventArgs e)
+        {
+            var gfx = e.Graphics;
+            gfx.Clear(SaveSystem.currentTheme.threeDObjectsColor);
+
+            var _darkBack = Paintbrush.GetDarkFromColor(SaveSystem.currentTheme.threeDObjectsColor);
+
+            gfx.DrawLine(Pens.Black, 3, 0, 3, 3);
+            gfx.DrawLine(Pens.Black, 0, 3, 3, 3);
+            gfx.DrawLine(new Pen(_darkBack), 2, 0, 2, 2);
+            gfx.DrawLine(new Pen(_darkBack), 0, 2, 2, 2);
+        }
+
+        public Size prevSize;
+        public Point prevPoint;
         private void maximizebutton_Click(object sender, EventArgs e)
         {
+
             if (max == false)
             {
                 this.right.Hide();
@@ -220,7 +326,10 @@ namespace Histacom2.Engine.Template
                 this.topleftcorner.Hide();
                 this.toprightcorner.Hide();
                 this.Dock = DockStyle.Fill;
-                this.WindowState = FormWindowState.Maximized;
+                prevSize = this.Size;
+                prevPoint = this.Location;
+                this.Size = new Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height - 28);
+                this.Location = new Point(0, 0);
                 max = true;
                 maximizebutton.Image = Engine.Properties.Resources.WinClassicRestore;
             }
@@ -235,11 +344,12 @@ namespace Histacom2.Engine.Template
                 this.topleftcorner.Show();
                 this.toprightcorner.Show();
                 this.Dock = DockStyle.None;
-                this.WindowState = FormWindowState.Normal;
+                this.Size = prevSize;
+                this.Location = prevPoint;
                 max = false;
                 maximizebutton.Image = Engine.Properties.Resources.WinClassicMax;
             }
-            
+
         }
 
         // The rest of this code will automatically style the buttons on the form!

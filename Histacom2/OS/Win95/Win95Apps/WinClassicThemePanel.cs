@@ -61,64 +61,32 @@ namespace Histacom2.OS.Win95.Win95Apps
 
         private void applyButton_Click(object sender, EventArgs e)
         {
-            switch ((string)comboBox1.SelectedItem)
-            {
-                case "Default":
-                    SaveSystem.CurrentSave.ThemeName = "default95";
-                    SaveSystem.currentTheme = new Default95Theme();
-                    TitleScreen.frm95.BackgroundImage = null;
-                    TitleScreen.frm95.desktopicons.BackgroundImage = null;
-                    break;
-                case "Dangerous Creatures":
-                    SaveSystem.CurrentSave.ThemeName = "dangeranimals";
-                    SaveSystem.currentTheme = new DangerousCreaturesTheme();
-                    TitleScreen.frm95.BackgroundImage = Properties.Resources.DCTheme_BG;
-                    TitleScreen.frm95.desktopicons.BackgroundImage = new Bitmap(Properties.Resources.DCTheme_BG, TitleScreen.frm95.Width, TitleScreen.frm95.Height);
-                    break;
-                case "Inside Your Computer":
-                    SaveSystem.CurrentSave.ThemeName = "insidepc";
-                    SaveSystem.currentTheme = new InsideComputerTheme();
-                    TitleScreen.frm95.BackgroundImage = Properties.Resources.ICTheme_BG;
-                    TitleScreen.frm95.desktopicons.BackgroundImage = new Bitmap(Properties.Resources.ICTheme_BG, TitleScreen.frm95.Width, TitleScreen.frm95.Height);
-                    break;
-            }
-            foreach (Form f in Application.OpenForms)
-            {
-                if (f is WinClassic)
-                {
-                    if (((WinClassic)f).isActive)
-                    {
-                        ((WinClassic)f).programtopbar.BackColor = SaveSystem.currentTheme.activeTitleBarColor;
-                        ((WinClassic)f).Title.ForeColor = SaveSystem.currentTheme.activeTitleTextColor;
-                    } else
-                    {
-                        ((WinClassic)f).programtopbar.BackColor = SaveSystem.currentTheme.inactiveTitleBarColor;
-                        ((WinClassic)f).Title.ForeColor = SaveSystem.currentTheme.inactiveTitleTextColor;
-                    }
-                }
-            }
+            ChangeTheme();
         }
 
         private void okButton_Click(object sender, EventArgs e)
+        {
+            ChangeTheme();
+            ParentForm.Close();
+        }
+
+        private void ChangeTheme()
         {
             switch ((string)comboBox1.SelectedItem)
             {
                 case "Default":
                     SaveSystem.CurrentSave.ThemeName = "default95";
                     SaveSystem.currentTheme = new Default95Theme();
-                    TitleScreen.frm95.BackgroundImage = null;
                     TitleScreen.frm95.desktopicons.BackgroundImage = null;
                     break;
                 case "Dangerous Creatures":
                     SaveSystem.CurrentSave.ThemeName = "dangeranimals";
                     SaveSystem.currentTheme = new DangerousCreaturesTheme();
-                    TitleScreen.frm95.BackgroundImage = Properties.Resources.DCTheme_BG;
                     TitleScreen.frm95.desktopicons.BackgroundImage = new Bitmap(Properties.Resources.DCTheme_BG, TitleScreen.frm95.Width, TitleScreen.frm95.Height);
                     break;
                 case "Inside Your Computer":
                     SaveSystem.CurrentSave.ThemeName = "insidepc";
                     SaveSystem.currentTheme = new InsideComputerTheme();
-                    TitleScreen.frm95.BackgroundImage = Properties.Resources.ICTheme_BG;
                     TitleScreen.frm95.desktopicons.BackgroundImage = new Bitmap(Properties.Resources.ICTheme_BG, TitleScreen.frm95.Width, TitleScreen.frm95.Height);
                     break;
             }
@@ -136,9 +104,22 @@ namespace Histacom2.OS.Win95.Win95Apps
                         ((WinClassic)f).programtopbar.BackColor = SaveSystem.currentTheme.inactiveTitleBarColor;
                         ((WinClassic)f).Title.ForeColor = SaveSystem.currentTheme.inactiveTitleTextColor;
                     }
+                    f.Invalidate();
+                    ((WinClassic)f).programContent.Invalidate();
+                    ((WinClassic)f).top.Invalidate();
+                    ((WinClassic)f).toprightcorner.Invalidate();
+                    ((WinClassic)f).right.Invalidate();
+                    ((WinClassic)f).bottomrightcorner.Invalidate();
+                    ((WinClassic)f).bottom.Invalidate();
+                    ((WinClassic)f).bottomleftcorner.Invalidate();
+                    ((WinClassic)f).left.Invalidate();
+                    ((WinClassic)f).topleftcorner.Invalidate();
+                    foreach (Control c in ((WinClassic)f).progContent.Controls) c.Invalidate();
+                    ((WinClassic)f).progContent.BackColor = SaveSystem.currentTheme.threeDObjectsColor;
                 }
             }
-            ParentForm.Close();
+            TitleScreen.frm95.taskbar.Invalidate();
+            TitleScreen.frm95.clockPanel.Invalidate();
         }
     }
 }

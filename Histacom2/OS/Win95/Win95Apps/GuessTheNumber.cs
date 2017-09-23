@@ -21,11 +21,6 @@ namespace Histacom2.OS.Win95.Win95Apps
 
             rnd = new Random();
             num = rnd.Next(0, 101);
-
-            pictureBox1.MouseDown += (s, a) => pictureBox1.BackgroundImage = Properties.Resources.GTN95_CheckClicked;
-            pictureBox1.MouseUp += (s, a) => pictureBox1.BackgroundImage = Properties.Resources.GTN95_Check;
-            pictureBox3.MouseDown += (s, a) => pictureBox3.BackgroundImage = Properties.Resources.GTN95_RestartClicked;
-            pictureBox3.MouseUp += (s, a) => pictureBox3.BackgroundImage = Properties.Resources.GTN95_Restart;
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

@@ -132,11 +132,47 @@
     <Compile Include="AchievementBox.Designer.cs">
       <DependentUpon>AchievementBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalPrograms\InstallerPanes\EULAPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GlobalPrograms\InstallerPanes\EULAPane.Designer.cs">
+      <DependentUpon>EULAPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalPrograms\InstallerPanes\DirectoryPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GlobalPrograms\InstallerPanes\DirectoryPane.Designer.cs">
+      <DependentUpon>DirectoryPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalPrograms\InstallerPanes\WelcomePane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GlobalPrograms\InstallerPanes\WelcomePane.Designer.cs">
+      <DependentUpon>WelcomePane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalPrograms\WinClassicInstaller.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GlobalPrograms\WinClassicInstaller.Designer.cs">
+      <DependentUpon>WinClassicInstaller.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\Win2K\Win2KApps\SurviveTheDay.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="OS\Win2K\Win2KApps\SurviveTheDay.Designer.cs">
       <DependentUpon>SurviveTheDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\12padamsViruses\ErrorBlaster95.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\12padamsViruses\ErrorBlaster95.Designer.cs">
+      <DependentUpon>ErrorBlaster95.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\12padamsViruses\StartRunner95.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\12padamsViruses\StartRunner95.Designer.cs">
+      <DependentUpon>StartRunner95.cs</DependentUpon>
     </Compile>
     <Compile Include="OS\Win95\Win95Apps\GuessTheNumber.cs">
       <SubType>UserControl</SubType>
@@ -144,35 +180,35 @@
     <Compile Include="OS\Win95\Win95Apps\GuessTheNumber.Designer.cs">
       <DependentUpon>GuessTheNumber.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\IE4Sites\12padams1998.cs">
+    <Compile Include="OS\Win95\Win95Apps\IE3Sites\12padams1998.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\IE4Sites\12padams1998.Designer.cs">
+    <Compile Include="OS\Win95\Win95Apps\IE3Sites\12padams1998.Designer.cs">
       <DependentUpon>12padams1998.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\IE4Sites\GoogleHome.cs">
+    <Compile Include="OS\Win95\Win95Apps\IE3Sites\GoogleHome.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\IE4Sites\GoogleHome.Designer.cs">
+    <Compile Include="OS\Win95\Win95Apps\IE3Sites\GoogleHome.Designer.cs">
       <DependentUpon>GoogleHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\IE4Sites\GooglePrototype.cs">
+    <Compile Include="OS\Win95\Win95Apps\IE3Sites\GooglePrototype.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\IE4Sites\GooglePrototype.Designer.cs">
+    <Compile Include="OS\Win95\Win95Apps\IE3Sites\GooglePrototype.Designer.cs">
       <DependentUpon>GooglePrototype.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\IE4Sites\IE4NoPage.cs">
+    <Compile Include="OS\Win95\Win95Apps\IE3Sites\IENoPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\IE4Sites\IE4NoPage.Designer.cs">
-      <DependentUpon>IE4NoPage.cs</DependentUpon>
+    <Compile Include="OS\Win95\Win95Apps\IE3Sites\IENoPage.Designer.cs">
+      <DependentUpon>IENoPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\IE4Sites\IE4Start.cs">
+    <Compile Include="OS\Win95\Win95Apps\IE3Sites\IE3Start.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\IE4Sites\IE4Start.Designer.cs">
-      <DependentUpon>IE4Start.cs</DependentUpon>
+    <Compile Include="OS\Win95\Win95Apps\IE3Sites\IE3Start.Designer.cs">
+      <DependentUpon>IE3Start.cs</DependentUpon>
     </Compile>
     <Compile Include="OS\Win95\Win95Apps\MineSweeper\CustomMinefield.cs">
       <SubType>UserControl</SubType>
@@ -255,6 +291,30 @@
     </Compile>
     <Compile Include="OS\Win98\Win98.Designer.cs">
       <DependentUpon>Win98.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win98\Win98Apps\IE4Sites\12padams1999.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win98\Win98Apps\IE4Sites\12padams1999.Designer.cs">
+      <DependentUpon>12padams1999.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win98\Win98Apps\IE4Sites\IE4HomePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win98\Win98Apps\IE4Sites\IE4HomePage.Designer.cs">
+      <DependentUpon>IE4HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win98\Win98Apps\IE4Sites\IENoPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win98\Win98Apps\IE4Sites\IENoPage.Designer.cs">
+      <DependentUpon>IENoPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win98\Win98Apps\WinClassicIE4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win98\Win98Apps\WinClassicIE4.Designer.cs">
+      <DependentUpon>WinClassicIE4.cs</DependentUpon>
     </Compile>
     <Compile Include="OS\Win98\Win98Apps\WinClassicWindowsExplorer.cs">
       <SubType>UserControl</SubType>
@@ -365,27 +425,45 @@
     <EmbeddedResource Include="AchievementBox.resx">
       <DependentUpon>AchievementBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GlobalPrograms\InstallerPanes\EULAPane.resx">
+      <DependentUpon>EULAPane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GlobalPrograms\InstallerPanes\DirectoryPane.resx">
+      <DependentUpon>DirectoryPane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GlobalPrograms\InstallerPanes\WelcomePane.resx">
+      <DependentUpon>WelcomePane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GlobalPrograms\WinClassicInstaller.resx">
+      <DependentUpon>WinClassicInstaller.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OS\Win2K\Win2KApps\SurviveTheDay.resx">
       <DependentUpon>SurviveTheDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\12padamsViruses\ErrorBlaster95.resx">
+      <DependentUpon>ErrorBlaster95.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\12padamsViruses\StartRunner95.resx">
+      <DependentUpon>StartRunner95.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\GuessTheNumber.resx">
       <DependentUpon>GuessTheNumber.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\IE4Sites\12padams1998.resx">
+    <EmbeddedResource Include="OS\Win95\Win95Apps\IE3Sites\12padams1998.resx">
       <DependentUpon>12padams1998.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\IE4Sites\GoogleHome.resx">
+    <EmbeddedResource Include="OS\Win95\Win95Apps\IE3Sites\GoogleHome.resx">
       <DependentUpon>GoogleHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\IE4Sites\GooglePrototype.resx">
+    <EmbeddedResource Include="OS\Win95\Win95Apps\IE3Sites\GooglePrototype.resx">
       <DependentUpon>GooglePrototype.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\IE4Sites\IE4NoPage.resx">
-      <DependentUpon>IE4NoPage.cs</DependentUpon>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\IE3Sites\IENoPage.resx">
+      <DependentUpon>IENoPage.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\IE4Sites\IE4Start.resx">
-      <DependentUpon>IE4Start.cs</DependentUpon>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\IE3Sites\IE3Start.resx">
+      <DependentUpon>IE3Start.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\MineSweeper\CustomMinefield.resx">
       <DependentUpon>CustomMinefield.cs</DependentUpon>
@@ -427,6 +505,19 @@
     <EmbeddedResource Include="OS\Win98\Win98.resx">
       <DependentUpon>Win98.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win98\Win98Apps\IE4Sites\12padams1999.resx">
+      <DependentUpon>12padams1999.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win98\Win98Apps\IE4Sites\IE4HomePage.resx">
+      <DependentUpon>IE4HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win98\Win98Apps\IE4Sites\IENoPage.resx">
+      <DependentUpon>IENoPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win98\Win98Apps\WinClassicIE4.resx">
+      <DependentUpon>WinClassicIE4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win98\Win98Apps\WinClassicWindowsExplorer.resx">
       <DependentUpon>WinClassicWindowsExplorer.cs</DependentUpon>
@@ -512,6 +603,7 @@
   <ItemGroup>
     <Content Include="Icon128x.ico" />
     <Content Include="Resources\12padams_EULA.txt" />
+    <None Include="Resources\y1k86jqd.bmp" />
     <None Include="Resources\WinClassic\WinClassicWebchat.png" />
     <None Include="Resources\wordpad_find.png" />
     <None Include="Resources\wordpad_printpreview.png" />
@@ -557,6 +649,18 @@
     <Content Include="Resources\IE4\googlehome.html" />
     <Content Include="Resources\IE4\googleprototype.html" />
     <None Include="Resources\IE4\ie4about.png" />
+    <None Include="Resources\IE4\IE4Home_MSHome.png" />
+    <None Include="Resources\IE4\IE4Home_MSBG.png" />
+    <None Include="Resources\IE4\IE4Home_MSLogo.png" />
+    <None Include="Resources\IE4\IE4Home_WinTechLogo.png" />
+    <None Include="Resources\IE4\IE4Home_WinTechBG.png" />
+    <None Include="Resources\IE4\IE4Home_WinTechHome.png" />
+    <None Include="Resources\IE4\IE4Home_WinTechIE.png" />
+    <None Include="Resources\IE4\IE4Home_AboutIE5.png" />
+    <None Include="Resources\IE4\IE4Home_IE4CD.png" />
+    <None Include="Resources\IE4\IE4Home_HDots.png" />
+    <None Include="Resources\IE4\IE4Home_SecUpdate.png" />
+    <None Include="Resources\IE4\IE4Home_MSProducts.png" />
     <Content Include="Resources\IE4\ie4start.html" />
     <None Include="Resources\IE4\nopage.bmp" />
     <Content Include="Resources\IE4\padams.html" />
@@ -637,6 +741,7 @@
     <None Include="Resources\WinClassicTextFile.png" />
     <None Include="Resources\WinClassicRtfFile.png" />
     <None Include="Resources\WinClassicNotepad.png" />
+    <None Include="Resources\Win95Error.png" />
     <Content Include="Resources\WinClassic\16Color.png" />
     <Content Include="Resources\WinClassic\256Color.png" />
     <None Include="Resources\WinClassic\tada.wav" />
@@ -696,6 +801,8 @@
     <Content Include="Resources\WinClassic\WinClassicInbox.png" />
     <None Include="Resources\WinClassic\WinClassicInstallPic.png" />
     <None Include="Resources\WinClassic\WinClassicMinesweeper.png" />
+    <None Include="Resources\WinClassic\WinClassicInstallSidebar.png" />
+    <None Include="Resources\WinClassic\WinClassicInstallIcon.png" />
     <Content Include="Resources\WinClassic\WinClassicMSN.png" />
     <Content Include="Resources\WinClassic\WinClassicNetworking.png" />
     <None Include="Resources\WinClassic\WinClassicNotepad.png" />
@@ -723,6 +830,9 @@
       <Project>{9477b70f-2d32-4e1d-857b-4624a1deeb1b}</Project>
       <Name>Histacom2.Engine</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="OS\WinXP\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

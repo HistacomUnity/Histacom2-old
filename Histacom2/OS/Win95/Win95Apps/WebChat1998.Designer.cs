@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.resources = new System.ComponentModel.ComponentResourceManager(typeof(WebChat1998));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WebChat1998));
             this.Chat = new System.Windows.Forms.Timer(this.components);
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label1 = new Histacom2.Engine.UI.ClassicLabel();
             this.history = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new Histacom2.Engine.UI.ClassicLabel();
+            this.button5 = new Histacom2.Engine.UI.ClassicButton();
+            this.label6 = new Histacom2.Engine.UI.ClassicLabel();
             this.typechat = new System.Windows.Forms.TextBox();
             this.login = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label2 = new Histacom2.Engine.UI.ClassicLabel();
             this.txtscreenname = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new Histacom2.Engine.UI.ClassicButton();
+            this.label3 = new Histacom2.Engine.UI.ClassicLabel();
+            this.label4 = new Histacom2.Engine.UI.ClassicLabel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.label7 = new Histacom2.Engine.UI.ClassicLabel();
+            this.button2 = new Histacom2.Engine.UI.ClassicButton();
+            this.button3 = new Histacom2.Engine.UI.ClassicButton();
+            this.button4 = new Histacom2.Engine.UI.ClassicButton();
             this.panel1.SuspendLayout();
             this.login.SuspendLayout();
             this.SuspendLayout();
@@ -73,8 +73,7 @@
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(501, 13);
+            this.label1.Location = new System.Drawing.Point(506, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 13);
             this.label1.TabIndex = 1;
@@ -107,7 +106,6 @@
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(13, 18);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(84, 13);
@@ -116,17 +114,18 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(97, 13);
+            this.button5.BackColor = System.Drawing.Color.Silver;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.button5.ForeColor = System.Drawing.Color.Black;
+            this.button5.Location = new System.Drawing.Point(101, 13);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 0;
             this.button5.Text = "Download";
-            this.button5.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(504, 374);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(62, 13);
@@ -157,7 +156,6 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(328, 161);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(149, 13);
@@ -174,19 +172,18 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Silver;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(331, 208);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(151, 23);
             this.button1.TabIndex = 4;
             this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(196, 16);
+            this.label3.Location = new System.Drawing.Point(202, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(112, 13);
             this.label3.TabIndex = 3;
@@ -194,7 +191,6 @@
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(118, 56);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 13);
@@ -229,48 +225,48 @@
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(22, 13);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(406, 13);
+            this.label7.Size = new System.Drawing.Size(441, 13);
             this.label7.TabIndex = 7;
             this.label7.Text = "To speak, just type in the bottom textbox, then click the Speak button or press E" +
     "nter.";
             // 
             // button2
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.BackColor = System.Drawing.Color.Silver;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Location = new System.Drawing.Point(422, 415);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(71, 23);
             this.button2.TabIndex = 8;
             this.button2.Text = "Speak";
-            this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Silver;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.button3.ForeColor = System.Drawing.Color.Black;
             this.button3.Location = new System.Drawing.Point(149, 427);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 9;
             this.button3.Text = "Paul";
-            this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.Silver;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.button4.ForeColor = System.Drawing.Color.Black;
             this.button4.Location = new System.Drawing.Point(235, 427);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 10;
             this.button4.Text = "Bill";
-            this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // WebChat1998
@@ -293,7 +289,6 @@
             this.Size = new System.Drawing.Size(724, 462);
             this.Load += new System.EventHandler(this.WebChat1998_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.login.ResumeLayout(false);
             this.login.PerformLayout();
             this.ResumeLayout(false);
@@ -305,25 +300,25 @@
 
         private System.Windows.Forms.Timer Chat;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Label label1;
+        private Histacom2.Engine.UI.ClassicLabel label1;
         private System.Windows.Forms.TextBox history;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Label label5;
+        private Histacom2.Engine.UI.ClassicLabel label6;
+        private Histacom2.Engine.UI.ClassicButton button5;
+        private Histacom2.Engine.UI.ClassicLabel label5;
         private System.Windows.Forms.TextBox typechat;
         private System.Windows.Forms.Panel login;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private Histacom2.Engine.UI.ClassicLabel label4;
+        private Histacom2.Engine.UI.ClassicLabel label3;
+        private Histacom2.Engine.UI.ClassicButton button1;
         private System.Windows.Forms.TextBox txtscreenname;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private Histacom2.Engine.UI.ClassicLabel label2;
+        private Histacom2.Engine.UI.ClassicLabel label7;
+        private Histacom2.Engine.UI.ClassicButton button2;
+        private Histacom2.Engine.UI.ClassicButton button3;
+        private Histacom2.Engine.UI.ClassicButton button4;
         private System.ComponentModel.ComponentResourceManager resources;
     }
 }

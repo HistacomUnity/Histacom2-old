@@ -13,6 +13,8 @@ using Histacom2.Engine;
 using Newtonsoft.Json;
 using Histacom2.Engine.Template;
 using System.Diagnostics;
+using Histacom2.OS.Win95.Win95Apps._12padamViruses;
+using Histacom2.GlobalPrograms;
 
 namespace Histacom2.OS.Win95.Win95Apps
 {
@@ -225,7 +227,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                         WinClassicNotepad np = new WinClassicNotepad();
                         np.mainText.Text = FileDialogBoxManager.ReadTextFile(fileDir);
                         np.CurrentFilePath = fileDir;
-                        WinClassic app = wm.StartWin95(np, "Notepad", Properties.Resources.Win95IconNotepad, true, true);
+                        WinClassic app = wm.Init(np, "Notepad", Properties.Resources.Win95IconNotepad, true, true);
 
                         Program.AddTaskbarItem(app, app.Tag.ToString(), "Notepad", Properties.Resources.Win95IconNotepad);
                         break;
@@ -233,7 +235,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                         WinClassicWordPad wp = new WinClassicWordPad();
                         wp.mainText.LoadFile(fileDir);
                         wp.CurrentFilePath = fileDir;
-                        WinClassic app2 = wm.StartWin95(wp, "Wordpad", Properties.Resources.Win95IconWordpad, true, true);
+                        WinClassic app2 = wm.Init(wp, "Wordpad", Properties.Resources.Win95IconWordpad, true, true);
 
                         Program.AddTaskbarItem(app2, app2.Tag.ToString(), "Wordpad", Properties.Resources.Win95IconWordpad);
                         break;
@@ -250,11 +252,11 @@ namespace Histacom2.OS.Win95.Win95Apps
             switch (appname.ToLower())
             {
                 case "explorer":
-                    WinClassic app = wm.StartWin95(new Win95WindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
+                    WinClassic app = wm.Init(new Win95WindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
                     Program.AddTaskbarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
                     break;
                 case "calc":
-                    WinClassic appCalc = wm.StartWin95(new WinClassicCalculator(), "Calculator", Properties.Resources.WinClassicCalc, true, true);
+                    WinClassic appCalc = wm.Init(new WinClassicCalculator(), "Calculator", Properties.Resources.WinClassicCalc, true, true);
                     Program.AddTaskbarItem(appCalc, appCalc.Tag.ToString(), "Calculator", Properties.Resources.WinClassicCalc);
 
                     Program.nonimportantapps.Add(appCalc);
@@ -263,7 +265,7 @@ namespace Histacom2.OS.Win95.Win95Apps
 
                     break;
                 case "notepad":
-                    WinClassic appNP = wm.StartWin95(new WinClassicNotepad(), "Notepad", Properties.Resources.Win95IconNotepad_2, true, true);
+                    WinClassic appNP = wm.Init(new WinClassicNotepad(), "Notepad", Properties.Resources.Win95IconNotepad_2, true, true);
                     Program.AddTaskbarItem(appNP, appNP.Tag.ToString(), "Notepad", Properties.Resources.Win95IconNotepad_2);
 
                     Program.nonimportantapps.Add(appNP);
@@ -272,7 +274,7 @@ namespace Histacom2.OS.Win95.Win95Apps
 
                     break;
                 case "wordpad":
-                    WinClassic appWP = wm.StartWin95(new WinClassicWordPad(), "Wordpad", Properties.Resources.Win95WordpadIcon2, true, true);
+                    WinClassic appWP = wm.Init(new WinClassicWordPad(), "Wordpad", Properties.Resources.Win95WordpadIcon2, true, true);
                     Program.AddTaskbarItem(appWP, appWP.Tag.ToString(), "Wordpad", Properties.Resources.Win95WordpadIcon2);
 
                     Program.nonimportantapps.Add(appWP);
@@ -282,7 +284,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                     break;
                 case "ie":
                     if (TitleScreen.frm95.ie != null) { wm.StartInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", InfoboxType.Warning, InfoboxButtons.OK); return; }
-                    TitleScreen.frm95.ie = wm.StartWin95(new WinClassicIE3(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
+                    TitleScreen.frm95.ie = wm.Init(new WinClassicIE3(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
                     Program.AddTaskbarItem(TitleScreen.frm95.ie, TitleScreen.frm95.ie.Tag.ToString(), "Internet Explorer 4", Properties.Resources.Win95IconIE4);
                     TitleScreen.frm95.ie.BringToFront();
                     TitleScreen.frm95.ie.FormClosing += new FormClosingEventHandler(TitleScreen.frm95.InternetExplorer4_Closing);
@@ -291,7 +293,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                 case "web chat setup":
                     Win95Installer inst = new Win95Installer("Web Chat 1998");
                     inst.InstallCompleted += (sendr, args) => TitleScreen.frm95.WebChatToolStripMenuItem.Visible = true;
-                    WinClassic appInstaller = wm.StartWin95(inst, "Web Chat Setup", null, true, true);
+                    WinClassic appInstaller = wm.Init(inst, "Web Chat Setup", null, true, true);
                     Program.AddTaskbarItem(appInstaller, appInstaller.Tag.ToString(), "Web Chat Setup", null);
                     appInstaller.BringToFront();
 
@@ -305,7 +307,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                         CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "12padams", "FTP Client"), "ftpclint.exe", "ftp client", 19, 58395);
                         TitleScreen.frm95.FTPClientToolStripMenuItem.Visible = true;
                     };
-                    WinClassic appFtp = wm.StartWin95(instFtp, "FTP Client Setup", null, true, true);
+                    WinClassic appFtp = wm.Init(instFtp, "FTP Client Setup", null, true, true);
                     Program.AddTaskbarItem(appFtp, appFtp.Tag.ToString(), "FTP Client Setup", null);
                     appFtp.BringToFront();
 
@@ -319,7 +321,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                         CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "12padams", "Time Distorter 0.1"), "tdistort.exe", "time distorter", 17, 23895);
                         TitleScreen.frm95.TimeDistorterToolStripMenuItem.Visible = true;
                     };
-                    WinClassic appTd = wm.StartWin95(instTd, "Time Distorter Setup", null, true, true);
+                    WinClassic appTd = wm.Init(instTd, "Time Distorter Setup", null, true, true);
                     Program.AddTaskbarItem(appTd, appTd.Tag.ToString(), "Time Distorter Setup", null);
                     appTd.BringToFront();
 
@@ -337,19 +339,39 @@ namespace Histacom2.OS.Win95.Win95Apps
                         CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "12padams", "Guess The Number V1"), "guessnum.exe", "guess number", 18, 17483);
                         TitleScreen.frm95.GuessTheNumberToolStripMenuItem.Visible = true;
                     };
-                    WinClassic appGtn = wm.StartWin95(instGtn, "Guess The Number Setup", null, true, true);
+                    WinClassic appGtn = wm.Init(instGtn, "Guess The Number Setup", null, true, true);
                     Program.AddTaskbarItem(appGtn, appGtn.Tag.ToString(), "Guess The Number Setup", null);
                     appGtn.BringToFront();
 
                     break;
                 case "guess number":
-                    WinClassic appGTN = wm.StartWin95(new GuessTheNumber(), "Guess The Number", Properties.Resources.WinClassicGTNIcon, false, true, false, false);
+                    WinClassic appGTN = wm.Init(new GuessTheNumber(), "Guess The Number", Properties.Resources.WinClassicGTNIcon, false, true, false, false);
                     Program.AddTaskbarItem(appGTN, appGTN.Tag.ToString(), "Guess The Number", Properties.Resources.WinClassicGTNIcon);
 
                     Program.nonimportantapps.Add(appGTN);
                     Program.nonimportantapps[Program.nonimportantapps.Count - 1].BringToFront();
                     Program.nonimportantapps[Program.nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(Program.NonImportantApp_Closing);
 
+                    break;
+                case "eb95 setup":
+                    Win95Installer ebInstall = new Win95Installer("Error Blaster 95");
+                    ebInstall.InstallCompleted += (sender, args) => TitleScreen.frm95.ErrorBlasterToolStripMenuItem.Visible = true;
+                    WinClassic installer = wm.Init(ebInstall, "Error Blaster 95 Setup", null, true, true);
+                    Program.AddTaskbarItem(installer, installer.Tag.ToString(), "Error Blaster 95 Setup", null);
+                    installer.BringToFront();
+                    break;
+                case "error blaster":
+                    WinClassic eb = wm.Init(new ErrorBlaster95(), "Welcome to Error Blaster 95!", null, true, true);
+                    Program.AddTaskbarItem(eb, eb.Tag.ToString(), "Welcome to Error Blaster 95!", null);
+                    Program.nonimportantapps[Program.nonimportantapps.Count - 1].BringToFront();
+                    Program.nonimportantapps[Program.nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(Program.NonImportantApp_Closing);
+                    break;
+                case "sr95 setup":
+                    Win95Installer srInstall = new Win95Installer("Start Runner 95");
+                    srInstall.InstallCompleted += (sender, args) => TitleScreen.frm95.ErrorBlasterToolStripMenuItem.Visible = true;
+                    WinClassic install = wm.Init(srInstall, "Start Runner 95 Setup", null, true, true);
+                    Program.AddTaskbarItem(install, install.Tag.ToString(), "Error Blaster 95 Setup", null);
+                    install.BringToFront();
                     break;
                 default:
                     wm.StartInfobox95(path.Replace(ProfileMyComputerDirectory, "C:"), $"{path.Replace(ProfileMyComputerDirectory, "C:")} is not a valid Win32 application.", InfoboxType.Error, InfoboxButtons.OK);

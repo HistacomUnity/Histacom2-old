@@ -19,10 +19,20 @@ namespace Histacom2.Engine
         public Stream progErrorSound { get; set; }
         public Stream questionSound { get; set; }
 
+        public Color threeDObjectsColor { get; set; }
+        public Color threeDObjectsTextColor { get; set; }
+
+        public Font buttonFont { get; set; }
+
+        public Color windowColor { get; set; }
+
         public Color activeTitleBarColor { get; set; }
         public Color activeTitleTextColor { get; set; }
         public Color inactiveTitleBarColor { get; set; }
         public Color inactiveTitleTextColor { get; set; }
+
+        public Color selectedBackColor { get; set; }
+        public Color selectedTextColor { get; set; }
 
         public Image defaultWallpaper { get; set; }
 
@@ -42,10 +52,20 @@ namespace Histacom2.Engine
             progErrorSound = Properties.Resources.CHORD;
             questionSound = Properties.Resources.CHORD;
 
+            threeDObjectsColor = Color.Silver;
+            threeDObjectsTextColor = Color.Black;
+
+            buttonFont = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular);
+
+            windowColor = Color.White;
+
             activeTitleBarColor = Color.Navy;
             activeTitleTextColor = Color.White;
             inactiveTitleBarColor = Color.Gray;
             inactiveTitleTextColor = Color.Silver;
+
+            selectedBackColor = Color.Navy;
+            selectedTextColor = Color.White;
 
             defaultWallpaper = null;
             themeName = "default95";
@@ -65,6 +85,21 @@ namespace Histacom2.Engine
             progErrorSound = Properties.Resources.CHORD;
             questionSound = Properties.Resources.CHORD;
 
+            threeDObjectsColor = Color.Silver;
+            threeDObjectsTextColor = Color.Black;
+
+            buttonFont = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular);
+
+            windowColor = Color.White;
+
+            activeTitleBarColor = Color.Navy;
+            activeTitleTextColor = Color.White;
+            inactiveTitleBarColor = Color.Gray;
+            inactiveTitleTextColor = Color.Silver;
+
+            selectedBackColor = Color.Navy;
+            selectedTextColor = Color.White;
+
             defaultWallpaper = null;
             themeName = "default98";
         }
@@ -83,10 +118,20 @@ namespace Histacom2.Engine
             progErrorSound = Properties.Resources.Win95PlusDangerousCreaturesProgError;
             questionSound = Properties.Resources.Win95PlusDangerousCreaturesQuestion;
 
+            threeDObjectsColor = Color.FromArgb(112, 112, 112);
+            threeDObjectsTextColor = Color.Black;
+
+            buttonFont = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold);
+
+            windowColor = Color.FromArgb(184, 184, 184);
+
             activeTitleBarColor = Color.Teal;
             activeTitleTextColor = Color.White;
             inactiveTitleBarColor = Color.FromArgb(72, 72, 72);
             inactiveTitleTextColor = Color.Gray;
+
+            selectedBackColor = Color.Teal;
+            selectedTextColor = Color.White;
 
             defaultWallpaper = Properties.Resources.Win95PlusDangerousCreaturesWallpaper;
             themeName = "dangeranimals";
@@ -102,10 +147,20 @@ namespace Histacom2.Engine
 
             asteriskSound = Properties.Resources.Win95PlusInsideComputerAsterisk;
 
+            threeDObjectsColor = Color.FromArgb(169, 200, 169);
+            threeDObjectsTextColor = Color.Black;
+
+            buttonFont = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold);
+
+            windowColor = Color.White;
+
             activeTitleBarColor = Color.FromArgb(224, 0, 0);
             activeTitleTextColor = Color.White;
             inactiveTitleBarColor = Color.FromArgb(96, 168, 128);
             inactiveTitleTextColor = Color.FromArgb(216, 224, 216);
+
+            selectedBackColor = Color.FromArgb(248, 255, 160);
+            selectedTextColor = Color.Black;
 
             defaultWallpaper = Properties.Resources.Win95PlusInsideComputerWallpaper;
             themeName = "insidepc";

@@ -3,7 +3,7 @@ using System.IO;
 using System.Windows.Forms;
 using static Histacom2.Engine.SaveSystem;
 
-namespace Histacom2.OS.Win95.Win95Apps
+namespace Histacom2.GlobalPrograms
 {
     public partial class WinClassicDownloader : UserControl
     {
@@ -32,7 +32,7 @@ namespace Histacom2.OS.Win95.Win95Apps
             amountDLed = amountDLed + 8;
             if (8 > amountToDL - amountDLed)
             {
-                progBar.Value = amountToDL;
+                progressBar1.Value = amountToDL;
                 amountLbl.Text = $"Downloaded {amountDLed} KB out of {amountToDL}";
 
                 switch (appName.Text)
@@ -49,16 +49,17 @@ namespace Histacom2.OS.Win95.Win95Apps
                     case "Downloading: Guess The Number V1":
                         CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop"), "Guess The Number V1 Setup.exe", "gtnv1 setup", 11, 16483);
                         break;
+                    case "Downloading: Error Blaster 95":
+                        CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop"), "Error Blaster 95 Setup.exe", "eb95 setup", 11, 34846);
+                        break;
+                    case "Downloading: Start Runner 95":
+                        CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop"), "Start Runner Setup.exe", "sr95 setup", 11, 34846);
+                        break;
+                    case "Downloading: Web Chat 1999":
+                        CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop"), "Web Chat Setup.exe", "web chat 99 setup", 11, 37048);
+                        break;
                 }
-                /* if (appName.Text == "Downloading: Start Runner")
-                {
-                    CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop", "Start Runner Setup.exe"), "StartRunner");
-                }
-                if (appName.Text == "Downloading: Error Blaster")
-                {
-                    CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop", "Error Blaster Setup.exe"), "ErrorBlaster");
-                }
-                if (appName.Text == "Downloading: Skindows 95")
+                /* if (appName.Text == "Downloading: Skindows 95")
                 {
                     CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop", "Skindows 95 Setup.exe"), "Skindows95Setup");
                 } */
@@ -67,8 +68,8 @@ namespace Histacom2.OS.Win95.Win95Apps
             }
             else
             {
-                progBar.Maximum = amountToDL;
-                progBar.Value = amountDLed;
+                progressBar1.Maximum = amountToDL;
+                progressBar1.Value = amountDLed;
             }
             amountLbl.Text = $"Downloaded {amountDLed} KB out of {amountToDL}";
         }

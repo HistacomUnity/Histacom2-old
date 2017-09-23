@@ -31,12 +31,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new Histacom2.Engine.UI.ClassicButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox3 = new Histacom2.Engine.UI.ClassicButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -68,12 +66,13 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::Histacom2.Properties.Resources.GTN95_Check;
+            this.pictureBox1.BackColor = System.Drawing.Color.Silver;
+            this.pictureBox1.ForeColor = System.Drawing.Color.Black;
             this.pictureBox1.Location = new System.Drawing.Point(191, 30);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(55, 27);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.Text = "Check";
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
@@ -86,12 +85,14 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackgroundImage = global::Histacom2.Properties.Resources.GTN95_Restart;
+            this.pictureBox3.BackColor = System.Drawing.Color.Silver;
+            this.pictureBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pictureBox3.ForeColor = System.Drawing.Color.Black;
             this.pictureBox3.Location = new System.Drawing.Point(19, 62);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(227, 23);
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.Text = "Restart";
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // GuessTheNumber
@@ -107,9 +108,7 @@
             this.Controls.Add(this.label1);
             this.Name = "GuessTheNumber";
             this.Size = new System.Drawing.Size(268, 100);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,8 +119,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private Engine.UI.ClassicButton pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private Engine.UI.ClassicButton pictureBox3;
     }
 }

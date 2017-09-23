@@ -11,7 +11,7 @@ using Histacom2.Engine;
 using static Histacom2.Engine.FileDialogBoxManager;
 using System.IO;
 
-namespace Histacom2.OS.Win95.Win95Apps
+namespace Histacom2.GlobalPrograms
 {
     public partial class WinClassicNotepad : UserControl
     {

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Histacom2.Engine;
+using Histacom2.GlobalPrograms;
 
 namespace Histacom2.OS.Win95.Win95Apps
 {
@@ -88,14 +89,14 @@ namespace Histacom2.OS.Win95.Win95Apps
                 {
                     WinClassicDownloader opendownload = new WinClassicDownloader();
                     WindowManager wm = new WindowManager();
-                    wm.StartWin95(opendownload, "Downloader", null, false, true);
+                    wm.Init(opendownload, "Downloader", null, false, true);
                     opendownload.appName.Text = "Downloading: FTP Client";
                 }
                 else if (objListViewItem.Text == "Web Chat Setup.exe")
                 {
                     WinClassicDownloader opendownload = new WinClassicDownloader();
                     WindowManager wm = new WindowManager();
-                    wm.StartWin95(opendownload, "Downloader", null, false, true);
+                    wm.Init(opendownload, "Downloader", null, false, true);
                     opendownload.appName.Text = "Downloading: Web Chat 1998";
                     opendownload.amountToDL = 35;
                 }
@@ -103,24 +104,18 @@ namespace Histacom2.OS.Win95.Win95Apps
                 {
                     WinClassicDownloader opendownload = new WinClassicDownloader();
                     WindowManager wm = new WindowManager();
-                    wm.StartWin95(opendownload, "Downloader", null, false, true);
+                    wm.Init(opendownload, "Downloader", null, false, true);
                     opendownload.appName.Text = "Downloading: Time Distorter 0.1";
                 }
                 else if (objListViewItem.Text == "Guess The Number V1 Setup.exe")
                 {
                     WinClassicDownloader opendownload = new WinClassicDownloader();
                     WindowManager wm = new WindowManager();
-                    wm.StartWin95(opendownload, "Downloader", null, false, true);
+                    wm.Init(opendownload, "Downloader", null, false, true);
                     opendownload.appName.Text = "Downloading: Guess The Number V1";
                     opendownload.amountToDL = 16;
                 }
             }
-        }
-
-        private void DoClassicButtons()
-        {
-            btnLogin.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
-            btnCancel.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -130,7 +125,12 @@ namespace Histacom2.OS.Win95.Win95Apps
 
         private void WinClassicFTPClient_Load(object sender, EventArgs e)
         {
-            DoClassicButtons();
+            
+        }
+
+        private void topBar_Paint(object sender, PaintEventArgs e)
+        {
+            topBar.BackColor = SaveSystem.currentTheme.threeDObjectsColor;
         }
     }
 }

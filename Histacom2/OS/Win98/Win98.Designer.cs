@@ -106,9 +106,9 @@ namespace Histacom2.OS.Win98
             this.NewToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.FolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TextDocumentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PropertiesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.desktopupdate = new System.Windows.Forms.Timer(this.components);
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.taskbar.SuspendLayout();
             this.clockPanel.SuspendLayout();
@@ -200,11 +200,12 @@ namespace Histacom2.OS.Win98
             this.startmenu.Controls.Add(this.ossidestartmenu);
             this.startmenu.Location = new System.Drawing.Point(0, 160);
             this.startmenu.Name = "startmenu";
-            this.startmenu.Size = new System.Drawing.Size(174, 300);
+            this.startmenu.Size = new System.Drawing.Size(161, 295);
             this.startmenu.TabIndex = 3;
             // 
             // startmenuitems
             // 
+            this.startmenuitems.AutoSize = false;
             this.startmenuitems.BackColor = System.Drawing.Color.Silver;
             this.startmenuitems.Dock = System.Windows.Forms.DockStyle.None;
             this.startmenuitems.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -217,12 +218,12 @@ namespace Histacom2.OS.Win98
             this.SuspendToolStripMenuItem,
             this.ShutdownToolStripMenuItem});
             this.startmenuitems.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.startmenuitems.Location = new System.Drawing.Point(28, 2);
+            this.startmenuitems.Location = new System.Drawing.Point(22, 2);
             this.startmenuitems.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.startmenuitems.Name = "startmenuitems";
             this.startmenuitems.Padding = new System.Windows.Forms.Padding(6, 2, 0, 0);
             this.startmenuitems.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.startmenuitems.Size = new System.Drawing.Size(145, 292);
+            this.startmenuitems.Size = new System.Drawing.Size(137, 309);
             this.startmenuitems.TabIndex = 0;
             this.startmenuitems.Text = "StartMenu";
             // 
@@ -250,7 +251,7 @@ namespace Histacom2.OS.Win98
             this.ProgramsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ProgramsToolStripMenuItem.Name = "ProgramsToolStripMenuItem";
             this.ProgramsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.ProgramsToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
+            this.ProgramsToolStripMenuItem.Size = new System.Drawing.Size(130, 36);
             this.ProgramsToolStripMenuItem.Text = "Programs";
             // 
             // AccessoriesToolStripMenuItem
@@ -717,7 +718,7 @@ namespace Histacom2.OS.Win98
             this.DocumentsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.DocumentsToolStripMenuItem.Name = "DocumentsToolStripMenuItem";
             this.DocumentsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.DocumentsToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
+            this.DocumentsToolStripMenuItem.Size = new System.Drawing.Size(130, 36);
             this.DocumentsToolStripMenuItem.Text = "Documents";
             // 
             // downloaderTestToolStripMenuItem
@@ -758,7 +759,7 @@ namespace Histacom2.OS.Win98
             this.SettingsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem";
             this.SettingsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.SettingsToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
+            this.SettingsToolStripMenuItem.Size = new System.Drawing.Size(130, 36);
             this.SettingsToolStripMenuItem.Text = "Settings";
             // 
             // ControlPanelToolStripMenuItem
@@ -803,7 +804,7 @@ namespace Histacom2.OS.Win98
             this.FindToolStripMenuItem.Name = "FindToolStripMenuItem";
             this.FindToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
             this.FindToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.FindToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
+            this.FindToolStripMenuItem.Size = new System.Drawing.Size(130, 36);
             this.FindToolStripMenuItem.Text = "Find";
             // 
             // FilesOrFoldersToolStripMenuItem
@@ -851,7 +852,7 @@ namespace Histacom2.OS.Win98
             this.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem";
             this.HelpToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
             this.HelpToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.HelpToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
+            this.HelpToolStripMenuItem.Size = new System.Drawing.Size(130, 36);
             this.HelpToolStripMenuItem.Text = "Help";
             // 
             // RunToolStripMenuItem
@@ -863,7 +864,7 @@ namespace Histacom2.OS.Win98
             this.RunToolStripMenuItem.Name = "RunToolStripMenuItem";
             this.RunToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
             this.RunToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.RunToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
+            this.RunToolStripMenuItem.Size = new System.Drawing.Size(130, 36);
             this.RunToolStripMenuItem.Text = "Run...";
             // 
             // SuspendToolStripMenuItem
@@ -874,7 +875,7 @@ namespace Histacom2.OS.Win98
             this.SuspendToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SuspendToolStripMenuItem.Name = "SuspendToolStripMenuItem";
             this.SuspendToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.SuspendToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
+            this.SuspendToolStripMenuItem.Size = new System.Drawing.Size(130, 36);
             this.SuspendToolStripMenuItem.Text = "Suspend";
             // 
             // ShutdownToolStripMenuItem
@@ -885,7 +886,7 @@ namespace Histacom2.OS.Win98
             this.ShutdownToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ShutdownToolStripMenuItem.Name = "ShutdownToolStripMenuItem";
             this.ShutdownToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.ShutdownToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
+            this.ShutdownToolStripMenuItem.Size = new System.Drawing.Size(130, 36);
             this.ShutdownToolStripMenuItem.Text = "Shut Down...";
             this.ShutdownToolStripMenuItem.Click += new System.EventHandler(this.ShutdownToolStripMenuItem_Click);
             // 
@@ -894,7 +895,7 @@ namespace Histacom2.OS.Win98
             this.ossidestartmenu.Controls.Add(this.osimage);
             this.ossidestartmenu.Location = new System.Drawing.Point(0, 0);
             this.ossidestartmenu.Name = "ossidestartmenu";
-            this.ossidestartmenu.Size = new System.Drawing.Size(22, 297);
+            this.ossidestartmenu.Size = new System.Drawing.Size(21, 297);
             this.ossidestartmenu.TabIndex = 4;
             // 
             // osimage
@@ -903,7 +904,7 @@ namespace Histacom2.OS.Win98
             this.osimage.Image = global::Histacom2.Properties.Resources.Win98SideBar;
             this.osimage.Location = new System.Drawing.Point(0, 0);
             this.osimage.Name = "osimage";
-            this.osimage.Size = new System.Drawing.Size(22, 297);
+            this.osimage.Size = new System.Drawing.Size(21, 297);
             this.osimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.osimage.TabIndex = 0;
             this.osimage.TabStop = false;
@@ -954,7 +955,7 @@ namespace Histacom2.OS.Win98
             this.PropertiesToolStripMenuItem1});
             this.rightclickbackproperties.Name = "ContextMenuStrip1";
             this.rightclickbackproperties.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.rightclickbackproperties.Size = new System.Drawing.Size(153, 92);
+            this.rightclickbackproperties.Size = new System.Drawing.Size(128, 70);
             // 
             // NewToolStripMenuItem1
             // 
@@ -963,7 +964,7 @@ namespace Histacom2.OS.Win98
             this.FolderToolStripMenuItem,
             this.TextDocumentToolStripMenuItem});
             this.NewToolStripMenuItem1.Name = "NewToolStripMenuItem1";
-            this.NewToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.NewToolStripMenuItem1.Size = new System.Drawing.Size(127, 22);
             this.NewToolStripMenuItem1.Text = "New";
             // 
             // FolderToolStripMenuItem
@@ -982,11 +983,19 @@ namespace Histacom2.OS.Win98
             this.TextDocumentToolStripMenuItem.Text = "Text Document";
             this.TextDocumentToolStripMenuItem.Click += new System.EventHandler(this.TextDocumentToolStripMenuItem_Click);
             // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
             // PropertiesToolStripMenuItem1
             // 
             this.PropertiesToolStripMenuItem1.BackColor = System.Drawing.Color.Silver;
             this.PropertiesToolStripMenuItem1.Name = "PropertiesToolStripMenuItem1";
-            this.PropertiesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.PropertiesToolStripMenuItem1.Size = new System.Drawing.Size(127, 22);
             this.PropertiesToolStripMenuItem1.Text = "Properties";
             // 
             // desktopupdate
@@ -995,22 +1004,14 @@ namespace Histacom2.OS.Win98
             this.desktopupdate.Interval = 5000;
             this.desktopupdate.Tick += new System.EventHandler(this.desktopupdate_Tick);
             // 
-            // deleteToolStripMenuItem
-            // 
-            this.deleteToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.deleteToolStripMenuItem.Text = "Delete";
-            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
-            // 
             // Windows98
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(640, 480);
-            this.Controls.Add(this.taskbar);
             this.Controls.Add(this.startmenu);
+            this.Controls.Add(this.taskbar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.desktopicons);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1025,7 +1026,6 @@ namespace Histacom2.OS.Win98
             this.clockPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.startbutton)).EndInit();
             this.startmenu.ResumeLayout(false);
-            this.startmenu.PerformLayout();
             this.startmenuitems.ResumeLayout(false);
             this.startmenuitems.PerformLayout();
             this.ossidestartmenu.ResumeLayout(false);

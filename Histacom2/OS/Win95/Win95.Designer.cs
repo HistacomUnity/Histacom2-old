@@ -41,7 +41,7 @@ namespace Histacom2.OS.Win95
             this.startbutton = new System.Windows.Forms.PictureBox();
             this.startmenu = new System.Windows.Forms.Panel();
             this.startmenuitems = new System.Windows.Forms.MenuStrip();
-            this.ProgramsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ProgramsToolStripMenuItem = new Histacom2.Engine.UI.ClassicStartMenuItem();
             this.AccessoriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CommunicationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.InternetConnectionWizardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -82,23 +82,23 @@ namespace Histacom2.OS.Win95
             this.WebChatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TimeDistorterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FTPClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.DocumentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DocumentsToolStripMenuItem = new Histacom2.Engine.UI.ClassicStartMenuItem();
             this.downloaderTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.installerTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.storyTest1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.SettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SettingsToolStripMenuItem = new Histacom2.Engine.UI.ClassicStartMenuItem();
             this.ControlPanelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PrintersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TaskbarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.FindToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.FindToolStripMenuItem = new Histacom2.Engine.UI.ClassicStartMenuItem();
             this.FilesOrFoldersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ComputerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OnTheInternetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PeopleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.HelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.RunToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.SuspendToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ShutdownToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HelpToolStripMenuItem = new Histacom2.Engine.UI.ClassicStartMenuItem();
+            this.RunToolStripMenuItem = new Histacom2.Engine.UI.ClassicStartMenuItem();
+            this.SuspendToolStripMenuItem = new Histacom2.Engine.UI.ClassicStartMenuItem();
+            this.ShutdownToolStripMenuItem = new Histacom2.Engine.UI.ClassicStartMenuItem();
             this.ossidestartmenu = new System.Windows.Forms.Panel();
             this.osimage = new System.Windows.Forms.PictureBox();
             this.clockTimer = new System.Windows.Forms.Timer(this.components);
@@ -144,14 +144,15 @@ namespace Histacom2.OS.Win95
             // 
             this.taskbar.BackColor = System.Drawing.Color.Silver;
             this.taskbar.BackgroundImage = global::Histacom2.Properties.Resources.WinClassicTaskBar;
+            this.taskbar.Controls.Add(this.startbutton);
             this.taskbar.Controls.Add(this.clockPanel);
             this.taskbar.Controls.Add(this.taskbarItems);
-            this.taskbar.Controls.Add(this.startbutton);
             this.taskbar.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.taskbar.Location = new System.Drawing.Point(0, 452);
             this.taskbar.Name = "taskbar";
             this.taskbar.Size = new System.Drawing.Size(640, 28);
             this.taskbar.TabIndex = 2;
+            this.taskbar.Paint += new System.Windows.Forms.PaintEventHandler(this.taskbar_Paint);
             // 
             // clockPanel
             // 
@@ -162,6 +163,7 @@ namespace Histacom2.OS.Win95
             this.clockPanel.Name = "clockPanel";
             this.clockPanel.Size = new System.Drawing.Size(65, 28);
             this.clockPanel.TabIndex = 4;
+            this.clockPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.clockPanel_Paint);
             // 
             // taskbartime
             // 
@@ -199,15 +201,19 @@ namespace Histacom2.OS.Win95
             this.startmenu.BackColor = System.Drawing.Color.Silver;
             this.startmenu.Controls.Add(this.startmenuitems);
             this.startmenu.Controls.Add(this.ossidestartmenu);
-            this.startmenu.Location = new System.Drawing.Point(0, 160);
+            this.startmenu.Location = new System.Drawing.Point(2, 185);
             this.startmenu.Name = "startmenu";
-            this.startmenu.Size = new System.Drawing.Size(174, 300);
+            this.startmenu.Size = new System.Drawing.Size(168, 271);
             this.startmenu.TabIndex = 3;
+            this.startmenu.Paint += new System.Windows.Forms.PaintEventHandler(this.startmenu_Paint);
             // 
             // startmenuitems
             // 
+            this.startmenuitems.AutoSize = false;
             this.startmenuitems.BackColor = System.Drawing.Color.Silver;
+            this.startmenuitems.BackgroundImage = global::Histacom2.Properties.Resources.sliversilver;
             this.startmenuitems.Dock = System.Windows.Forms.DockStyle.None;
+            this.startmenuitems.GripMargin = new System.Windows.Forms.Padding(0);
             this.startmenuitems.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ProgramsToolStripMenuItem,
             this.DocumentsToolStripMenuItem,
@@ -218,17 +224,18 @@ namespace Histacom2.OS.Win95
             this.SuspendToolStripMenuItem,
             this.ShutdownToolStripMenuItem});
             this.startmenuitems.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.startmenuitems.Location = new System.Drawing.Point(26, 2);
-            this.startmenuitems.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.startmenuitems.Location = new System.Drawing.Point(26, 5);
             this.startmenuitems.Name = "startmenuitems";
-            this.startmenuitems.Padding = new System.Windows.Forms.Padding(6, 2, 0, 0);
-            this.startmenuitems.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.startmenuitems.Size = new System.Drawing.Size(145, 311);
+            this.startmenuitems.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.startmenuitems.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.startmenuitems.Size = new System.Drawing.Size(137, 262);
             this.startmenuitems.TabIndex = 0;
             this.startmenuitems.Text = "StartMenu";
+            this.startmenuitems.Paint += new System.Windows.Forms.PaintEventHandler(this.startmenuitems_Paint);
             // 
             // ProgramsToolStripMenuItem
             // 
+            this.ProgramsToolStripMenuItem.AutoSize = false;
             this.ProgramsToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.ProgramsToolStripMenuItem.BackgroundImage = global::Histacom2.Properties.Resources.sliversilver;
             this.ProgramsToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -251,9 +258,9 @@ namespace Histacom2.OS.Win95
             this.ProgramsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ProgramsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ProgramsToolStripMenuItem.Name = "ProgramsToolStripMenuItem";
-            this.ProgramsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.ProgramsToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
-            this.ProgramsToolStripMenuItem.Text = "Programs";
+            this.ProgramsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
+            this.ProgramsToolStripMenuItem.Size = new System.Drawing.Size(137, 32);
+            this.ProgramsToolStripMenuItem.Text = "&Programs";
             // 
             // AccessoriesToolStripMenuItem
             // 
@@ -686,10 +693,12 @@ namespace Histacom2.OS.Win95
             this.ErrorBlasterToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.ErrorBlasterToolStripMenuItem.BackgroundImage = global::Histacom2.Properties.Resources.sliversilver;
             this.ErrorBlasterToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ErrorBlasterToolStripMenuItem.Image = global::Histacom2.Properties.Resources.Win95Error;
             this.ErrorBlasterToolStripMenuItem.Name = "ErrorBlasterToolStripMenuItem";
             this.ErrorBlasterToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
-            this.ErrorBlasterToolStripMenuItem.Text = "Error Blaster";
+            this.ErrorBlasterToolStripMenuItem.Text = "Error Blaster 95";
             this.ErrorBlasterToolStripMenuItem.Visible = false;
+            this.ErrorBlasterToolStripMenuItem.Click += new System.EventHandler(this.ErrorBlasterToolStripMenuItem_Click);
             // 
             // SkindowsToolStripMenuItem
             // 
@@ -739,6 +748,7 @@ namespace Histacom2.OS.Win95
             // 
             // DocumentsToolStripMenuItem
             // 
+            this.DocumentsToolStripMenuItem.AutoSize = false;
             this.DocumentsToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.DocumentsToolStripMenuItem.BackgroundImage = global::Histacom2.Properties.Resources.sliversilver;
             this.DocumentsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -749,9 +759,9 @@ namespace Histacom2.OS.Win95
             this.DocumentsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DocumentsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.DocumentsToolStripMenuItem.Name = "DocumentsToolStripMenuItem";
-            this.DocumentsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.DocumentsToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
-            this.DocumentsToolStripMenuItem.Text = "Documents";
+            this.DocumentsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
+            this.DocumentsToolStripMenuItem.Size = new System.Drawing.Size(137, 32);
+            this.DocumentsToolStripMenuItem.Text = "&Documents";
             // 
             // downloaderTestToolStripMenuItem
             // 
@@ -781,6 +791,7 @@ namespace Histacom2.OS.Win95
             // 
             // SettingsToolStripMenuItem
             // 
+            this.SettingsToolStripMenuItem.AutoSize = false;
             this.SettingsToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.SettingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ControlPanelToolStripMenuItem,
@@ -790,9 +801,9 @@ namespace Histacom2.OS.Win95
             this.SettingsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SettingsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem";
-            this.SettingsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.SettingsToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
-            this.SettingsToolStripMenuItem.Text = "Settings";
+            this.SettingsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
+            this.SettingsToolStripMenuItem.Size = new System.Drawing.Size(137, 32);
+            this.SettingsToolStripMenuItem.Text = "&Settings";
             // 
             // ControlPanelToolStripMenuItem
             // 
@@ -826,6 +837,7 @@ namespace Histacom2.OS.Win95
             // 
             // FindToolStripMenuItem
             // 
+            this.FindToolStripMenuItem.AutoSize = false;
             this.FindToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.FindToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FindToolStripMenuItem.BackgroundImage")));
             this.FindToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -837,10 +849,10 @@ namespace Histacom2.OS.Win95
             this.FindToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.FindToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.FindToolStripMenuItem.Name = "FindToolStripMenuItem";
-            this.FindToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
+            this.FindToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
             this.FindToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.FindToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
-            this.FindToolStripMenuItem.Text = "Find";
+            this.FindToolStripMenuItem.Size = new System.Drawing.Size(137, 32);
+            this.FindToolStripMenuItem.Text = "&Find";
             // 
             // FilesOrFoldersToolStripMenuItem
             // 
@@ -850,6 +862,7 @@ namespace Histacom2.OS.Win95
             this.FilesOrFoldersToolStripMenuItem.Name = "FilesOrFoldersToolStripMenuItem";
             this.FilesOrFoldersToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.FilesOrFoldersToolStripMenuItem.Text = "Files or Folders...";
+            this.FilesOrFoldersToolStripMenuItem.Click += new System.EventHandler(this.FilesOrFoldersToolStripMenuItem_Click);
             // 
             // ComputerToolStripMenuItem
             // 
@@ -880,57 +893,61 @@ namespace Histacom2.OS.Win95
             // 
             // HelpToolStripMenuItem
             // 
+            this.HelpToolStripMenuItem.AutoSize = false;
             this.HelpToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.HelpToolStripMenuItem.Image = global::Histacom2.Properties.Resources.WinClassicHelp;
             this.HelpToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.HelpToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem";
-            this.HelpToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
+            this.HelpToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
             this.HelpToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.HelpToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
-            this.HelpToolStripMenuItem.Text = "Help";
+            this.HelpToolStripMenuItem.Size = new System.Drawing.Size(137, 32);
+            this.HelpToolStripMenuItem.Text = "&Help";
             // 
             // RunToolStripMenuItem
             // 
+            this.RunToolStripMenuItem.AutoSize = false;
             this.RunToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.RunToolStripMenuItem.Image = global::Histacom2.Properties.Resources.WinClassicRun;
             this.RunToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RunToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.RunToolStripMenuItem.Name = "RunToolStripMenuItem";
-            this.RunToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
+            this.RunToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
             this.RunToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.RunToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
-            this.RunToolStripMenuItem.Text = "Run...";
+            this.RunToolStripMenuItem.Size = new System.Drawing.Size(137, 32);
+            this.RunToolStripMenuItem.Text = "&Run...";
             // 
             // SuspendToolStripMenuItem
             // 
+            this.SuspendToolStripMenuItem.AutoSize = false;
             this.SuspendToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.SuspendToolStripMenuItem.Image = global::Histacom2.Properties.Resources.WinClassicSuspend;
             this.SuspendToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SuspendToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SuspendToolStripMenuItem.Name = "SuspendToolStripMenuItem";
-            this.SuspendToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.SuspendToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
-            this.SuspendToolStripMenuItem.Text = "Suspend";
+            this.SuspendToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
+            this.SuspendToolStripMenuItem.Size = new System.Drawing.Size(137, 32);
+            this.SuspendToolStripMenuItem.Text = "Suspe&nd";
             // 
             // ShutdownToolStripMenuItem
             // 
+            this.ShutdownToolStripMenuItem.AutoSize = false;
             this.ShutdownToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.ShutdownToolStripMenuItem.Image = global::Histacom2.Properties.Resources.WinClassicShutdown;
             this.ShutdownToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ShutdownToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ShutdownToolStripMenuItem.Name = "ShutdownToolStripMenuItem";
-            this.ShutdownToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 25, 0);
-            this.ShutdownToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
-            this.ShutdownToolStripMenuItem.Text = "Shut Down...";
+            this.ShutdownToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
+            this.ShutdownToolStripMenuItem.Size = new System.Drawing.Size(137, 32);
+            this.ShutdownToolStripMenuItem.Text = "Sh&ut Down...";
             this.ShutdownToolStripMenuItem.Click += new System.EventHandler(this.ShutdownToolStripMenuItem_Click);
             // 
             // ossidestartmenu
             // 
             this.ossidestartmenu.Controls.Add(this.osimage);
-            this.ossidestartmenu.Location = new System.Drawing.Point(0, 0);
+            this.ossidestartmenu.Location = new System.Drawing.Point(3, 3);
             this.ossidestartmenu.Name = "ossidestartmenu";
-            this.ossidestartmenu.Size = new System.Drawing.Size(23, 297);
+            this.ossidestartmenu.Size = new System.Drawing.Size(21, 265);
             this.ossidestartmenu.TabIndex = 4;
             // 
             // osimage
@@ -939,7 +956,7 @@ namespace Histacom2.OS.Win95
             this.osimage.Image = global::Histacom2.Properties.Resources.Win95SideBar;
             this.osimage.Location = new System.Drawing.Point(0, 0);
             this.osimage.Name = "osimage";
-            this.osimage.Size = new System.Drawing.Size(23, 297);
+            this.osimage.Size = new System.Drawing.Size(21, 265);
             this.osimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.osimage.TabIndex = 0;
             this.osimage.TabStop = false;
@@ -1050,8 +1067,8 @@ namespace Histacom2.OS.Win95
             this.BackColor = System.Drawing.Color.Teal;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(640, 480);
-            this.Controls.Add(this.taskbar);
             this.Controls.Add(this.startmenu);
+            this.Controls.Add(this.taskbar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.desktopicons);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1066,7 +1083,6 @@ namespace Histacom2.OS.Win95
             this.clockPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.startbutton)).EndInit();
             this.startmenu.ResumeLayout(false);
-            this.startmenu.PerformLayout();
             this.startmenuitems.ResumeLayout(false);
             this.startmenuitems.PerformLayout();
             this.ossidestartmenu.ResumeLayout(false);
@@ -1082,11 +1098,10 @@ namespace Histacom2.OS.Win95
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         internal System.Windows.Forms.Panel taskbar;
-        internal System.Windows.Forms.PictureBox startbutton;
         internal System.Windows.Forms.Label taskbartime;
         internal System.Windows.Forms.Panel startmenu;
         internal System.Windows.Forms.MenuStrip startmenuitems;
-        internal System.Windows.Forms.ToolStripMenuItem ProgramsToolStripMenuItem;
+        internal Histacom2.Engine.UI.ClassicStartMenuItem ProgramsToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem AccessoriesToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem CommunicationsToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem InternetConnectionWizardToolStripMenuItem;
@@ -1123,23 +1138,22 @@ namespace Histacom2.OS.Win95
         internal System.Windows.Forms.ToolStripMenuItem SkindowsToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem WebChatToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem TimeDistorterToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem DocumentsToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem SettingsToolStripMenuItem;
+        internal Histacom2.Engine.UI.ClassicStartMenuItem DocumentsToolStripMenuItem;
+        internal Histacom2.Engine.UI.ClassicStartMenuItem SettingsToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem ControlPanelToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem PrintersToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem TaskbarToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem FindToolStripMenuItem;
+        internal Histacom2.Engine.UI.ClassicStartMenuItem FindToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem FilesOrFoldersToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem ComputerToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem OnTheInternetToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem PeopleToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem HelpToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem RunToolStripMenuItem;
+        internal Histacom2.Engine.UI.ClassicStartMenuItem HelpToolStripMenuItem;
+        internal Histacom2.Engine.UI.ClassicStartMenuItem RunToolStripMenuItem;
         internal System.Windows.Forms.Panel ossidestartmenu;
         internal System.Windows.Forms.PictureBox osimage;
-        internal System.Windows.Forms.ToolStripMenuItem ShutdownToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem SuspendToolStripMenuItem;
-        private System.Windows.Forms.Panel clockPanel;
+        internal Histacom2.Engine.UI.ClassicStartMenuItem ShutdownToolStripMenuItem;
+        internal Histacom2.Engine.UI.ClassicStartMenuItem SuspendToolStripMenuItem;
         private System.Windows.Forms.Timer clockTimer;
         private System.Windows.Forms.ImageList desktopImages;
         internal System.Windows.Forms.ListView desktopicons;
@@ -1159,5 +1173,7 @@ namespace Histacom2.OS.Win95
         internal System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         internal System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         internal System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        public System.Windows.Forms.Panel clockPanel;
+        public System.Windows.Forms.PictureBox startbutton;
     }
 }
