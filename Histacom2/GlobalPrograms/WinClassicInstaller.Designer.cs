@@ -32,6 +32,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.classicButton1 = new Histacom2.Engine.UI.ClassicButton();
             this.classicButton2 = new Histacom2.Engine.UI.ClassicButton();
+            this.classicButton3 = new Histacom2.Engine.UI.ClassicButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,12 +81,30 @@
             this.classicButton2.Size = new System.Drawing.Size(75, 23);
             this.classicButton2.TabIndex = 3;
             this.classicButton2.Text = "&Next >";
+            this.classicButton2.Click += new System.EventHandler(this.classicButton2_Click);
+            // 
+            // classicButton3
+            // 
+            this.classicButton3.AdaptBackColorWithTheme = true;
+            this.classicButton3.AdaptFontWithTheme = true;
+            this.classicButton3.AdaptForeColorWithTheme = true;
+            this.classicButton3.BackColor = System.Drawing.Color.Silver;
+            this.classicButton3.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.classicButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.classicButton3.ForeColor = System.Drawing.Color.Black;
+            this.classicButton3.Location = new System.Drawing.Point(248, 326);
+            this.classicButton3.Name = "classicButton3";
+            this.classicButton3.Size = new System.Drawing.Size(75, 23);
+            this.classicButton3.TabIndex = 4;
+            this.classicButton3.Text = "< &Back";
+            this.classicButton3.Visible = false;
             // 
             // WinClassicInstaller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
+            this.Controls.Add(this.classicButton3);
             this.Controls.Add(this.classicButton2);
             this.Controls.Add(this.classicButton1);
             this.Controls.Add(this.pictureBox1);
@@ -106,5 +125,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private Engine.UI.ClassicButton classicButton1;
         private Engine.UI.ClassicButton classicButton2;
+        private Engine.UI.ClassicButton classicButton3;
     }
 }

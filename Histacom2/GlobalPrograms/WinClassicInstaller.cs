@@ -26,5 +26,18 @@ namespace Histacom2.GlobalPrograms
             var welkom = new InstallerPanes.WelcomePane();
             welkom.Parent = panel1;
         }
+
+        private void classicButton2_Click(object sender, EventArgs e)
+        {
+            classicButton3.Show();
+
+            panel1.Controls.Clear();
+
+            if (state == 0)
+            {
+                var dir = new InstallerPanes.DirectoryPane();
+                dir.Parent = panel1;
+            }
+        }
     }
 }

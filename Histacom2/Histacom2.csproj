@@ -132,6 +132,12 @@
     <Compile Include="AchievementBox.Designer.cs">
       <DependentUpon>AchievementBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalPrograms\InstallerPanes\DirectoryPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GlobalPrograms\InstallerPanes\DirectoryPane.Designer.cs">
+      <DependentUpon>DirectoryPane.cs</DependentUpon>
+    </Compile>
     <Compile Include="GlobalPrograms\InstallerPanes\WelcomePane.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -412,6 +418,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AchievementBox.resx">
       <DependentUpon>AchievementBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GlobalPrograms\InstallerPanes\DirectoryPane.resx">
+      <DependentUpon>DirectoryPane.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GlobalPrograms\InstallerPanes\WelcomePane.resx">
       <DependentUpon>WelcomePane.cs</DependentUpon>
@@ -784,6 +793,7 @@
     <None Include="Resources\WinClassic\WinClassicInstallPic.png" />
     <None Include="Resources\WinClassic\WinClassicMinesweeper.png" />
     <None Include="Resources\WinClassic\WinClassicInstallSidebar.png" />
+    <None Include="Resources\WinClassic\WinClassicInstallIcon.png" />
     <Content Include="Resources\WinClassic\WinClassicMSN.png" />
     <Content Include="Resources\WinClassic\WinClassicNetworking.png" />
     <None Include="Resources\WinClassic\WinClassicNotepad.png" />

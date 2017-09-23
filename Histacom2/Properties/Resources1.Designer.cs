@@ -1706,6 +1706,16 @@ namespace Histacom2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap WinClassicInstallIcon {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicInstallIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap WinClassicInstallPic {
             get {
                 object obj = ResourceManager.GetObject("WinClassicInstallPic", resourceCulture);
