@@ -173,8 +173,10 @@ namespace Histacom2.SaveDialogs
                 WriteToLog("ISSUE FOUND! Directory 'folders' doesn't exist! Creating one...");
                 Directory.CreateDirectory(folderspath);
                 SaveSystem.CheckFiles();
+                EndScan(true);
             }
 
+            EndScan(true);
         }
 
         private void CheckValues()
