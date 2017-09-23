@@ -58,6 +58,8 @@
             this.classicLabel13 = new Histacom2.Engine.UI.ClassicLabel();
             this.classicButton6 = new Histacom2.Engine.UI.ClassicButton();
             this.classicLabel14 = new Histacom2.Engine.UI.ClassicLabel();
+            this.classicLabel15 = new Histacom2.Engine.UI.ClassicLabel();
+            this.classicLabel16 = new Histacom2.Engine.UI.ClassicLabel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -99,7 +101,7 @@
             this.panel1.Controls.Add(this.classicLabel8);
             this.panel1.Controls.Add(this.classicButton1);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(104, 90);
+            this.panel1.Location = new System.Drawing.Point(104, 78);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(225, 209);
             this.panel1.TabIndex = 2;
@@ -126,6 +128,7 @@
             this.classicButton1.Size = new System.Drawing.Size(72, 23);
             this.classicButton1.TabIndex = 1;
             this.classicButton1.Text = "Download";
+            this.classicButton1.Click += new System.EventHandler(this.classicButton1_Click);
             // 
             // panel2
             // 
@@ -158,7 +161,7 @@
             this.panel3.Controls.Add(this.classicLabel13);
             this.panel3.Controls.Add(this.classicButton6);
             this.panel3.Controls.Add(this.panel4);
-            this.panel3.Location = new System.Drawing.Point(630, 90);
+            this.panel3.Location = new System.Drawing.Point(630, 78);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(225, 209);
             this.panel3.TabIndex = 3;
@@ -194,7 +197,7 @@
             this.panel5.Controls.Add(this.classicLabel10);
             this.panel5.Controls.Add(this.classicButton3);
             this.panel5.Controls.Add(this.panel6);
-            this.panel5.Location = new System.Drawing.Point(369, 90);
+            this.panel5.Location = new System.Drawing.Point(369, 78);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(225, 209);
             this.panel5.TabIndex = 4;
@@ -225,8 +228,9 @@
             this.panel7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel7.BackColor = System.Drawing.Color.Lime;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.classicLabel15);
             this.panel7.Controls.Add(this.panel8);
-            this.panel7.Location = new System.Drawing.Point(104, 314);
+            this.panel7.Location = new System.Drawing.Point(104, 302);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(353, 135);
             this.panel7.TabIndex = 5;
@@ -257,8 +261,9 @@
             this.panel9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel9.BackColor = System.Drawing.Color.Lime;
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.classicLabel16);
             this.panel9.Controls.Add(this.panel10);
-            this.panel9.Location = new System.Drawing.Point(502, 314);
+            this.panel9.Location = new System.Drawing.Point(502, 302);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(353, 135);
             this.panel9.TabIndex = 6;
@@ -298,6 +303,7 @@
             this.classicButton2.Size = new System.Drawing.Size(72, 23);
             this.classicButton2.TabIndex = 3;
             this.classicButton2.Text = "Download";
+            this.classicButton2.Click += new System.EventHandler(this.classicButton2_Click);
             // 
             // classicLabel9
             // 
@@ -324,7 +330,7 @@
             // 
             // classicLabel10
             // 
-            this.classicLabel10.Location = new System.Drawing.Point(3, 49);
+            this.classicLabel10.Location = new System.Drawing.Point(4, 49);
             this.classicLabel10.Name = "classicLabel10";
             this.classicLabel10.Size = new System.Drawing.Size(107, 13);
             this.classicLabel10.TabIndex = 5;
@@ -347,7 +353,7 @@
             // 
             // classicLabel11
             // 
-            this.classicLabel11.Location = new System.Drawing.Point(3, 79);
+            this.classicLabel11.Location = new System.Drawing.Point(4, 79);
             this.classicLabel11.Name = "classicLabel11";
             this.classicLabel11.Size = new System.Drawing.Size(107, 13);
             this.classicLabel11.TabIndex = 7;
@@ -407,6 +413,28 @@
             this.classicLabel14.Size = new System.Drawing.Size(100, 13);
             this.classicLabel14.TabIndex = 7;
             this.classicLabel14.Text = "© 12padams, 1999";
+            // 
+            // classicLabel15
+            // 
+            this.classicLabel15.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.classicLabel15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classicLabel15.ForeColor = System.Drawing.Color.Navy;
+            this.classicLabel15.Location = new System.Drawing.Point(90, 44);
+            this.classicLabel15.Name = "classicLabel15";
+            this.classicLabel15.Size = new System.Drawing.Size(167, 13);
+            this.classicLabel15.TabIndex = 2;
+            this.classicLabel15.Text = "Y2K: A Global Computer Crisis";
+            // 
+            // classicLabel16
+            // 
+            this.classicLabel16.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.classicLabel16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classicLabel16.ForeColor = System.Drawing.Color.Navy;
+            this.classicLabel16.Location = new System.Drawing.Point(122, 44);
+            this.classicLabel16.Name = "classicLabel16";
+            this.classicLabel16.Size = new System.Drawing.Size(109, 13);
+            this.classicLabel16.TabIndex = 3;
+            this.classicLabel16.Text = "Microsoft Wi n d o w s";
             // 
             // _12padams1999
             // 
@@ -469,5 +497,7 @@
         private Engine.UI.ClassicLabel classicLabel13;
         private Engine.UI.ClassicButton classicButton6;
         private Engine.UI.ClassicLabel classicLabel14;
+        private Engine.UI.ClassicLabel classicLabel15;
+        private Engine.UI.ClassicLabel classicLabel16;
     }
 }

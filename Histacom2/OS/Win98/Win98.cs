@@ -11,6 +11,7 @@ using Histacom2.OS.Win95.Win95Apps;
 using Histacom2.OS.Win95.Win95Apps.Story;
 using static Histacom2.Engine.SaveSystem;
 using Histacom2.OS.Win98.Win98Apps;
+using Histacom2.GlobalPrograms;
 
 namespace Histacom2.OS.Win98
 {
@@ -232,7 +233,7 @@ namespace Histacom2.OS.Win98
 
         private void installerTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Win95Installer openinstaller = new Win95Installer("Testing");
+            WinClassicInstaller openinstaller = new WinClassicInstaller("Testing");
             WinClassic app = wm.Init(openinstaller, "Installer", null, false, true);
 
             AddTaskBarItem(app, app.Tag.ToString(), "Installer", null);

@@ -12,6 +12,7 @@ using Histacom2.OS.Win95.Win95Apps.Story;
 using static Histacom2.Engine.SaveSystem;
 using Histacom2.OS.Win95.Win95Apps._12padamViruses;
 using Histacom2.OS.Win95.Win95Apps._12padamsViruses;
+using Histacom2.GlobalPrograms;
 
 namespace Histacom2.OS.Win95
 {

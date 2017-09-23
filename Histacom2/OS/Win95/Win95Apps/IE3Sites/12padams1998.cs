@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Histacom2.Engine;
 using System.Threading;
+using Histacom2.GlobalPrograms;
 
 namespace Histacom2.OS.Win95.Win95Apps.IE3Sites
 {

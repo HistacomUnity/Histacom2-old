@@ -3,7 +3,7 @@ using System.IO;
 using System.Windows.Forms;
 using static Histacom2.Engine.SaveSystem;
 
-namespace Histacom2.OS.Win95.Win95Apps
+namespace Histacom2.GlobalPrograms
 {
     public partial class WinClassicDownloader : UserControl
     {
@@ -55,16 +55,11 @@ namespace Histacom2.OS.Win95.Win95Apps
                     case "Downloading: Start Runner 95":
                         CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop"), "Start Runner Setup.exe", "sr95 setup", 11, 34846);
                         break;
+                    case "Downloading: Web Chat 1999":
+                        CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop"), "Web Chat Setup.exe", "web chat 99 setup", 11, 37048);
+                        break;
                 }
-                /* if (appName.Text == "Downloading: Start Runner")
-                {
-                    CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop", "Start Runner Setup.exe"), "StartRunner");
-                }
-                if (appName.Text == "Downloading: Error Blaster")
-                {
-                    CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop", "Error Blaster Setup.exe"), "ErrorBlaster");
-                }
-                if (appName.Text == "Downloading: Skindows 95")
+                /* if (appName.Text == "Downloading: Skindows 95")
                 {
                     CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop", "Skindows 95 Setup.exe"), "Skindows95Setup");
                 } */

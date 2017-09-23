@@ -1,6 +1,6 @@
 using System;
 
-﻿namespace Histacom2.OS.Win95.Win95Apps
+﻿namespace Histacom2.GlobalPrograms
 {
     partial class WinClassicNotepad
     {

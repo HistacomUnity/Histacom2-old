@@ -14,6 +14,7 @@ using Newtonsoft.Json;
 using Histacom2.Engine.Template;
 using System.Diagnostics;
 using Histacom2.OS.Win95.Win95Apps._12padamViruses;
+using Histacom2.GlobalPrograms;
 
 namespace Histacom2.OS.Win95.Win95Apps
 {

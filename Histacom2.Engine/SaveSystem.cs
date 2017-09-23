@@ -171,13 +171,13 @@ namespace Histacom2.Engine
             SaveDirectoryInfo(ProfileMyComputerDirectory, "Program Files", true, "Program Files", true);
             SaveDirectoryInfo(ProfileProgramsDirectory, "Accessories", false, "Accessories", true);
             SaveDirectoryInfo(ProfileProgramsDirectory, "Internet Explorer", true, "Internet Explorer", true);
-            SaveDirectoryInfo(ProfileProgramsDirectory, "The Microsoft Network", true, "The Microsoft Network", true);
+            if (CurrentSave.CurrentOS == "95") SaveDirectoryInfo(ProfileProgramsDirectory, "The Microsoft Network", true, "The Microsoft Network", true);
             SaveDirectoryInfo(ProfileMyComputerDirectory, "Windows", true, "Windows", true);
 
             CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Accessories"), "wordpad.exe", "wordpad", 16, 183296);
             CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Internet Explorer"), "ie20.exe", "ie", 8, 512);
             CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Internet Explorer"), "lnfinst.exe", "iebrokeninstaller", 8, 512);
-            CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "The Microsoft Network"), "msnver.txt", "5900", 12, 4);
+            if (CurrentSave.CurrentOS == "95") CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "The Microsoft Network"), "msnver.txt", "5900", 12, 4);
             
             CreateWindowsDirectory();
         }
@@ -322,7 +322,7 @@ namespace Histacom2.Engine
 
         public static void UpgradeFileSystem(string newOS)
         {
-            if (newOS == "98" || newOS == "2000" || newOS == "ME")
+            if (newOS == "98")
             {
                 // We are upgrading from the old WinClassic file System to the new WinClassic filesystem!
                 // All the above OSes share basically the same file layout!
@@ -336,10 +336,11 @@ namespace Histacom2.Engine
                 // There is no "The Microsoft Network" folder!
 
                 if (Directory.Exists(Path.Combine(ProfileProgramsDirectory, "The Microsoft Network"))) Directory.Delete(Path.Combine(ProfileProgramsDirectory, "The Microsoft Network"), true);
+                if (Directory.Exists(Path.Combine(ProfileProgramsDirectory, "12padams"))) Directory.Delete(Path.Combine(ProfileProgramsDirectory, "12padams"), true);
                 FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(ProfileProgramsDirectory, "_data.info")));
                 foreach (THDirInfo dir in fsfi.SubDirs)
                 {
-                    if (dir.Name == "The Microsoft Network")
+                    if (dir.Name == "The Microsoft Network" || dir.Name == "12padams")
                     {
                         fsfi.SubDirs.Remove(dir);
                         break;

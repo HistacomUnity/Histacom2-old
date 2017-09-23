@@ -13,6 +13,8 @@ using Histacom2.Engine;
 using Newtonsoft.Json;
 using System.Diagnostics;
 using Histacom2.Engine.Template;
+using Histacom2.OS.Win98.Win98Apps;
+using Histacom2.GlobalPrograms;
 
 namespace Histacom2.OS.Win95.Win95Apps
 {
@@ -304,30 +306,22 @@ namespace Histacom2.OS.Win95.Win95Apps
                     break;
                 case "ie":
                     if (TitleScreen.frm95.ie != null) { wm.StartInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", InfoboxType.Warning, InfoboxButtons.OK); return; }
-                    TitleScreen.frm95.ie = wm.Init(new WinClassicIE3(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
+                    TitleScreen.frm95.ie = wm.Init(new WinClassicIE4(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
                     Program.AddTaskbarItem(TitleScreen.frm95.ie, TitleScreen.frm95.ie.Tag.ToString(), "Internet Explorer 4", Properties.Resources.Win95IconIE4);
                     TitleScreen.frm95.ie.BringToFront();
                     TitleScreen.frm95.ie.FormClosing += new FormClosingEventHandler(TitleScreen.frm95.InternetExplorer4_Closing);
 
                     break;
-                case "web chat setup":
-                    Win95Installer inst = new Win95Installer("Web Chat 1998");
+                case "web chat 99 setup":
+                    Win95Installer inst = new Win95Installer("Web Chat 1999");
                     inst.InstallCompleted += (sendr, args) => TitleScreen.frm95.WebChatToolStripMenuItem.Visible = true;
                     WinClassic appInstaller = wm.Init(inst, "Web Chat Setup", null, true, true);
                     Program.AddTaskbarItem(appInstaller, appInstaller.Tag.ToString(), "Web Chat Setup", null);
                     appInstaller.BringToFront();
 
                     break;
-                case "ftp client setup":
-                    Win95Installer instFtp = new Win95Installer("FTP Client");
-                    instFtp.InstallCompleted += (sendr, args) => TitleScreen.frm95.FTPClientToolStripMenuItem.Visible = true;
-                    WinClassic appFtp = wm.Init(instFtp, "FTP Client Setup", null, true, true);
-                    Program.AddTaskbarItem(appFtp, appFtp.Tag.ToString(), "FTP Client Setup", null);
-                    appFtp.BringToFront();
-
-                    break;
                 case "time distorter setup":
-                    Win95Installer instTd = new Win95Installer("Time Distorter 0.1");
+                    Win95Installer instTd = new Win95Installer("Time Distorter 0.2");
                     instTd.InstallCompleted += (sendr, args) =>
                     {
                         TitleScreen.frm95.TimeDistorterToolStripMenuItem.Visible = true;

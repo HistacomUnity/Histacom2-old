@@ -132,6 +132,18 @@
     <Compile Include="AchievementBox.Designer.cs">
       <DependentUpon>AchievementBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalPrograms\InstallerPanes\WelcomePane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GlobalPrograms\InstallerPanes\WelcomePane.Designer.cs">
+      <DependentUpon>WelcomePane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalPrograms\WinClassicInstaller.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GlobalPrograms\WinClassicInstaller.Designer.cs">
+      <DependentUpon>WinClassicInstaller.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\Win2K\Win2KApps\SurviveTheDay.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -400,6 +412,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AchievementBox.resx">
       <DependentUpon>AchievementBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GlobalPrograms\InstallerPanes\WelcomePane.resx">
+      <DependentUpon>WelcomePane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GlobalPrograms\WinClassicInstaller.resx">
+      <DependentUpon>WinClassicInstaller.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win2K\Win2KApps\SurviveTheDay.resx">
       <DependentUpon>SurviveTheDay.cs</DependentUpon>
@@ -765,6 +783,7 @@
     <Content Include="Resources\WinClassic\WinClassicInbox.png" />
     <None Include="Resources\WinClassic\WinClassicInstallPic.png" />
     <None Include="Resources\WinClassic\WinClassicMinesweeper.png" />
+    <None Include="Resources\WinClassic\WinClassicInstallSidebar.png" />
     <Content Include="Resources\WinClassic\WinClassicMSN.png" />
     <Content Include="Resources\WinClassic\WinClassicNetworking.png" />
     <None Include="Resources\WinClassic\WinClassicNotepad.png" />

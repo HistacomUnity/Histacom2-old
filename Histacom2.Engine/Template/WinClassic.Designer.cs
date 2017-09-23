@@ -45,6 +45,7 @@
             this.bottom = new System.Windows.Forms.Panel();
             this.right = new System.Windows.Forms.Panel();
             this.top = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.program.SuspendLayout();
             this.programtopbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.programIcon)).BeginInit();
@@ -57,6 +58,7 @@
             // 
             this.program.BackColor = System.Drawing.Color.Silver;
             this.program.Controls.Add(this.programContent);
+            this.program.Controls.Add(this.panel1);
             this.program.Controls.Add(this.programtopbar);
             this.program.Controls.Add(this.toprightcorner);
             this.program.Controls.Add(this.bottomrightcorner);
@@ -75,9 +77,9 @@
             // programContent
             // 
             this.programContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.programContent.Location = new System.Drawing.Point(4, 22);
+            this.programContent.Location = new System.Drawing.Point(4, 23);
             this.programContent.Name = "programContent";
-            this.programContent.Size = new System.Drawing.Size(292, 274);
+            this.programContent.Size = new System.Drawing.Size(292, 273);
             this.programContent.TabIndex = 9;
             this.programContent.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.programContent_ControlAdded);
             // 
@@ -265,6 +267,14 @@
             this.top.MouseMove += new System.Windows.Forms.MouseEventHandler(this.top_MouseMove);
             this.top.MouseUp += new System.Windows.Forms.MouseEventHandler(this.border_MouseUp);
             // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(4, 22);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(292, 1);
+            this.panel1.TabIndex = 0;
+            // 
             // WinClassic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -307,5 +317,6 @@
         public System.Windows.Forms.PictureBox maximizebutton;
         public System.Windows.Forms.PictureBox minimizebutton;
         public System.Windows.Forms.PictureBox programIcon;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Histacom2.Engine;
 
-namespace Histacom2.OS.Win95.Win95Apps
+namespace Histacom2.GlobalPrograms
 {
     public partial class WinClassicCalculator : UserControl
     {

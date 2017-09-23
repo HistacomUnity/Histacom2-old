@@ -41,14 +41,14 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.progressBar1 = new Histacom2.Engine.UI.ProgressBar();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.progressBar1 = new Histacom2.Engine.UI.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.installPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -184,14 +184,14 @@
             this.panel2.TabIndex = 11;
             this.panel2.Visible = false;
             // 
-            // label3
+            // label5
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(-3, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(268, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Setup will install GenericName in the following directory:";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(-3, 28);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(178, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "To install in this directory, click Next.";
             // 
             // label4
             // 
@@ -202,14 +202,14 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "C:\\Program Files\\12padams\\GenericName\\";
             // 
-            // label5
+            // label3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(-3, 28);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(178, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "To install in this directory, click Next.";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(-3, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(268, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Setup will install GenericName in the following directory:";
             // 
             // panel3
             // 
@@ -230,6 +230,23 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "Installing...";
             // 
+            // progressBar1
+            // 
+            this.progressBar1.BlockSpacing = 5;
+            this.progressBar1.BlockWidth = 20;
+            this.progressBar1.Location = new System.Drawing.Point(3, 115);
+            this.progressBar1.MarqueeWidth = 125;
+            this.progressBar1.Maximum = 100D;
+            this.progressBar1.Minimum = 0D;
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.ProgressColor = System.Drawing.Color.Navy;
+            this.progressBar1.ShowText = false;
+            this.progressBar1.Size = new System.Drawing.Size(312, 28);
+            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Blocks;
+            this.progressBar1.TabIndex = 0;
+            this.progressBar1.Text = "progressBar1";
+            this.progressBar1.Value = 0D;
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.label7);
@@ -247,23 +264,6 @@
             this.label7.Size = new System.Drawing.Size(205, 13);
             this.label7.TabIndex = 0;
             this.label7.Text = "GenericName Setup has been completed.";
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.BlockSpacing = 5;
-            this.progressBar1.BlockWidth = 20;
-            this.progressBar1.Location = new System.Drawing.Point(3, 115);
-            this.progressBar1.MarqueeWidth = 125;
-            this.progressBar1.Maximum = 100D;
-            this.progressBar1.Minimum = 0D;
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.ProgressColor = System.Drawing.Color.Navy;
-            this.progressBar1.ShowText = false;
-            this.progressBar1.Size = new System.Drawing.Size(312, 28);
-            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Blocks;
-            this.progressBar1.TabIndex = 0;
-            this.progressBar1.Text = "progressBar1";
-            this.progressBar1.Value = 0D;
             // 
             // Win95Installer
             // 
