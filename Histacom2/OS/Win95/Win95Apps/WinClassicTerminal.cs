@@ -28,7 +28,7 @@ namespace Histacom2.OS.Win95.Win95Apps
         public static string prefix = @"C:\WINDOWS>";
         public static string workingDir = $"{SaveSystem.ProfileWindowsDirectory}";
         public string output = "";
-
+        public bool cls = false;
         public WinClassicTerminal(bool readOnly)
         {
             InitializeComponent();
@@ -107,9 +107,10 @@ namespace Histacom2.OS.Win95.Win95Apps
         {
             //TODO: Add font UC(?)
         }
-
+        
         private void richTextBox1_KeyUp(object sender, KeyEventArgs e)
         {
+
             if (e.KeyData == Keys.Return)
             {
                 string[] cmd = cmdPrompt.Lines[currentLine].Substring(prefix.Length).Split(' ');
@@ -152,6 +153,12 @@ namespace Histacom2.OS.Win95.Win95Apps
                         output += dline;
 
                         break;
+                    case "cls":
+                        currentLine = 0;
+                        cmdPrompt.Clear();
+                        cls = true;
+                        output = prefix;
+                        break;
                     default:
                         // Temporary CMD redirect
                         /*
@@ -180,8 +187,12 @@ namespace Histacom2.OS.Win95.Win95Apps
                 {
                     currentLine++;
                 }
-                cmdPrompt.AppendText($"\n\n{prefix}"); // Append the text to the RichTextBox
-                currentLine = currentLine + 3;
+                if (!cls)
+                {
+                    cmdPrompt.AppendText($"\n\n{prefix}"); // Append the text to the RichTextBox
+                    currentLine = currentLine + 3;
+                }
+                cls = false;
             }  
         }
     }
