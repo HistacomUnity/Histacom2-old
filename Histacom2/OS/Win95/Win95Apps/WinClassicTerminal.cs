@@ -174,11 +174,14 @@ namespace Histacom2.OS.Win95.Win95Apps
 
                 cmdPrompt.Focus();
                 cmdPrompt.AppendText($"\n{output}"); // Append the command output
-
-                int numLines = output.Split('\n').Length; // Get the number of lines from the command output
-                currentLine = currentLine + 2 + numLines; // Set the current line to equals the previous line plus 2 plus the number of lines from the command
-
+                string[] stringSeparators = new string[] { "\n" };
+                string[] lines = output.Split(stringSeparators, StringSplitOptions.None);
+                foreach (string s in lines)
+                {
+                    currentLine++;
+                }
                 cmdPrompt.AppendText($"\n\n{prefix}"); // Append the text to the RichTextBox
+                currentLine = currentLine + 3;
             }  
         }
     }
