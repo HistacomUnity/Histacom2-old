@@ -90,7 +90,6 @@
             this.classicButton3.AdaptForeColorWithTheme = true;
             this.classicButton3.BackColor = System.Drawing.Color.Silver;
             this.classicButton3.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.classicButton3.Enabled = false;
             this.classicButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.classicButton3.ForeColor = System.Drawing.Color.Black;
             this.classicButton3.Location = new System.Drawing.Point(248, 326);
@@ -125,7 +124,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Engine.UI.ClassicButton classicButton1;
-        private Engine.UI.ClassicButton classicButton2;
         private Engine.UI.ClassicButton classicButton3;
+        public Engine.UI.ClassicButton classicButton2;
     }
 }

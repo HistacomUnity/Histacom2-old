@@ -24,5 +24,11 @@ namespace Histacom2.GlobalPrograms.InstallerPanes
             radioButton1.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular);
             radioButton2.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular);
         }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked) ((WinClassicInstaller)Parent.Parent).classicButton2.Enabled = true;
+            else ((WinClassicInstaller)Parent.Parent).classicButton2.Enabled = false;
+        }
     }
 }

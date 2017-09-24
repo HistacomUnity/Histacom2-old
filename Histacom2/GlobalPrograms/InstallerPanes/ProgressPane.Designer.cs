@@ -1,6 +1,6 @@
 ﻿namespace Histacom2.GlobalPrograms.InstallerPanes
 {
-    partial class EULAPane
+    partial class ProgressPane
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EULAPane));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.classicLabel2 = new Histacom2.Engine.UI.ClassicLabel();
             this.classicLabel1 = new Histacom2.Engine.UI.ClassicLabel();
             this.classicLabel3 = new Histacom2.Engine.UI.ClassicLabel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.progressBar1 = new Histacom2.Engine.UI.ProgressBar();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -66,9 +63,10 @@
             // 
             this.classicLabel2.Location = new System.Drawing.Point(40, 28);
             this.classicLabel2.Name = "classicLabel2";
-            this.classicLabel2.Size = new System.Drawing.Size(394, 13);
+            this.classicLabel2.Size = new System.Drawing.Size(380, 13);
             this.classicLabel2.TabIndex = 1;
-            this.classicLabel2.Text = "Please read the following important information before continuing.";
+            this.classicLabel2.Text = "Please   wait   while   setup   installs   Program   on   your   computer.       " +
+    "  ";
             // 
             // classicLabel1
             // 
@@ -77,72 +75,47 @@
             this.classicLabel1.Name = "classicLabel1";
             this.classicLabel1.Size = new System.Drawing.Size(274, 13);
             this.classicLabel1.TabIndex = 0;
-            this.classicLabel1.Text = "License  Agree m e n t";
+            this.classicLabel1.Text = "Installi n g";
             // 
             // classicLabel3
             // 
             this.classicLabel3.Location = new System.Drawing.Point(25, 73);
             this.classicLabel3.Name = "classicLabel3";
-            this.classicLabel3.Size = new System.Drawing.Size(457, 26);
+            this.classicLabel3.Size = new System.Drawing.Size(446, 13);
             this.classicLabel3.TabIndex = 1;
-            this.classicLabel3.Text = "Please read the following license agreement. You must accept the terms of this ag" +
-    "reement before continuing with the installation.";
+            this.classicLabel3.Text = "Extracting Files...";
             // 
-            // textBox1
+            // progressBar1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(25, 105);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(446, 147);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = resources.GetString("textBox1.Text");
+            this.progressBar1.BlockSpacing = 5;
+            this.progressBar1.BlockWidth = 20;
+            this.progressBar1.Location = new System.Drawing.Point(25, 93);
+            this.progressBar1.MarqueeWidth = 125;
+            this.progressBar1.Maximum = 100D;
+            this.progressBar1.Minimum = 0D;
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.ProgressColor = System.Drawing.Color.DarkBlue;
+            this.progressBar1.ShowText = false;
+            this.progressBar1.Size = new System.Drawing.Size(436, 23);
+            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Blocks;
+            this.progressBar1.TabIndex = 2;
+            this.progressBar1.Text = "progressBar1";
+            this.progressBar1.Value = 0D;
             // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.Color.Silver;
-            this.radioButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton1.Location = new System.Drawing.Point(25, 259);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(134, 17);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.Text = "I &accept the agreement";
-            this.radioButton1.UseVisualStyleBackColor = false;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Checked = true;
-            this.radioButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton2.Location = new System.Drawing.Point(25, 280);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(167, 17);
-            this.radioButton2.TabIndex = 4;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "I &do not accept the agreement";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // EULAPane
+            // ProgressPane
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.classicLabel3);
             this.Controls.Add(this.panel1);
-            this.Name = "EULAPane";
+            this.Name = "ProgressPane";
             this.Size = new System.Drawing.Size(495, 314);
             this.Load += new System.EventHandler(this.DirectoryPane_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -153,8 +126,6 @@
         private Engine.UI.ClassicLabel classicLabel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Engine.UI.ClassicLabel classicLabel3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private Engine.UI.ProgressBar progressBar1;
     }
 }

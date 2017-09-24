@@ -15,6 +15,13 @@ namespace Histacom2.GlobalPrograms
         public string progName;
         public int state = 0;
 
+        public event EventHandler InstallCompleted;
+
+        protected void OnInstallCompleted(EventArgs e)
+        {
+            if (InstallCompleted != null) InstallCompleted(this, e);
+        }
+
         public WinClassicInstaller(string prog)
         {
             InitializeComponent();
@@ -39,6 +46,24 @@ namespace Histacom2.GlobalPrograms
                 eula.Parent = panel1;
                 state = 1;
                 classicButton2.Enabled = false;
+            }
+            else if (state == 1)
+            {
+                var dir = new InstallerPanes.DirectoryPane();
+                dir.Parent = panel1;
+                state = 2;
+            }
+            else if (state == 2)
+            {
+                classicButton3.Hide();
+                classicButton1.Enabled = false;
+                var p = new InstallerPanes.ProgressPane();
+                p.Parent = panel1;
+                state = 3;
+            }
+            else if (state == 3)
+            {
+                OnInstallCompleted(EventArgs.Empty);
             }
         }
     }
