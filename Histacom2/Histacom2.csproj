@@ -132,6 +132,12 @@
     <Compile Include="AchievementBox.Designer.cs">
       <DependentUpon>AchievementBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalPrograms\InstallerPanes\CompletePane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GlobalPrograms\InstallerPanes\CompletePane.Designer.cs">
+      <DependentUpon>CompletePane.cs</DependentUpon>
+    </Compile>
     <Compile Include="GlobalPrograms\InstallerPanes\ProgressPane.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -430,6 +436,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AchievementBox.resx">
       <DependentUpon>AchievementBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GlobalPrograms\InstallerPanes\CompletePane.resx">
+      <DependentUpon>CompletePane.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GlobalPrograms\InstallerPanes\ProgressPane.resx">
       <DependentUpon>ProgressPane.cs</DependentUpon>

@@ -64,6 +64,15 @@ namespace Histacom2.GlobalPrograms
             else if (state == 3)
             {
                 OnInstallCompleted(EventArgs.Empty);
+                var c = new InstallerPanes.CompletePane();
+                c.Parent = panel1;
+                classicButton3.Enabled = false;
+                classicButton2.Text = "Finish";
+                state = 4;
+            }
+            else
+            {
+                ParentForm.Close();
             }
         }
     }
