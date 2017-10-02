@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Histacom2.GlobalPrograms
@@ -70,10 +63,7 @@ namespace Histacom2.GlobalPrograms
                 classicButton2.Text = "Finish";
                 state = 4;
             }
-            else
-            {
-                ParentForm.Close();
-            }
+            else ParentForm.Close();
         }
     }
 }

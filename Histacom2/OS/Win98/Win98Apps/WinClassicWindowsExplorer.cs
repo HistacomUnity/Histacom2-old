@@ -60,6 +60,8 @@ namespace Histacom2.OS.Win95.Win95Apps
             mainView.LargeImageList = new ImageList();
             mainView.LargeImageList.ImageSize = new Size(32, 32);
 
+            // Icons 17, 18, 19 reserved for exclusive apps
+
             mainView.LargeImageList.Images.AddRange(new Bitmap[] { Properties.Resources.Win95Computer, // 0
                                                     Properties.Resources.WinClassicFolder,
                                                     Properties.Resources.WinClassicIE4,
@@ -77,7 +79,10 @@ namespace Histacom2.OS.Win95.Win95Apps
                                                     Properties.Resources.WinClassicNotepadBig,
                                                     Properties.Resources.WinClassicRegedit, // 15
                                                     Properties.Resources.WinClassicWordpad,
-                                                    Properties.Resources.WinClassicRtfFile});
+                                                    Properties.Resources.TimeDistorter1,
+                                                    Properties.Resources.WinClassicGTN,
+                                                    Properties.Resources.WinClassicFTP,
+                                                    Properties.Resources.WinClassicRtfFile}); //20
 
             program.BringToFront();
 
