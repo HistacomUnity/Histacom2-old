@@ -681,9 +681,9 @@ namespace Histacom2.Engine
 
         public static byte[] GetAchievements()
         {
-            byte[] byt = new byte[] { 0, // Piracy Ending
-                                    0, // End of Internet Ending
-                                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+            byte[] byt = new byte[] { 0, // 0 - Piracy Ending
+                                    0, // 1 - End of Internet Ending
+                                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }; // 20 - Minesweeper Hard Mode
             if (DevMode) File.WriteAllBytes(Path.Combine(DataDirectory, "achieved.thack"), byt);
 
             if (File.Exists(Path.Combine(DataDirectory, "achieved.thack"))) byt = File.ReadAllBytes(Path.Combine(DataDirectory, "achieved.thack"));

@@ -28,22 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.button1 = new Histacom2.Engine.UI.ClassicButton();
             this.SuspendLayout();
             // 
             // button1
             // 
+            this.button1.AdaptBackColorWithTheme = false;
+            this.button1.AdaptFontWithTheme = false;
+            this.button1.AdaptForeColorWithTheme = false;
             this.button1.BackColor = System.Drawing.Color.Silver;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(128, 59);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(68, 35);
             this.button1.TabIndex = 0;
             this.button1.Text = "Exit";
-            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // AchievementBox
@@ -63,6 +64,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private Histacom2.Engine.UI.ClassicButton button1;
     }
 }
