@@ -46,7 +46,7 @@
             this.label3 = new Histacom2.Engine.UI.ClassicLabel();
             this.label4 = new Histacom2.Engine.UI.ClassicLabel();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new Histacom2.Engine.UI.ClassicLabel();
             this.label7 = new Histacom2.Engine.UI.ClassicLabel();
             this.button2 = new Histacom2.Engine.UI.ClassicButton();
             this.button3 = new Histacom2.Engine.UI.ClassicButton();
@@ -220,12 +220,9 @@
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.Silver;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(331, 72);
-            this.textBox2.Multiline = true;
+            this.textBox2.Location = new System.Drawing.Point(328, 58);
             this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(151, 86);
+            this.textBox2.Size = new System.Drawing.Size(154, 76);
             this.textBox2.TabIndex = 0;
             this.textBox2.Text = "A screen name is a temporary name which will be displayed in place of your real n" +
     "ame. To keep your identity safe, please do not enter your real name in this chat" +
@@ -328,7 +325,7 @@
         private Histacom2.Engine.UI.ClassicLabel label5;
         private System.Windows.Forms.TextBox typechat;
         private System.Windows.Forms.Panel login;
-        private System.Windows.Forms.TextBox textBox2;
+        private Histacom2.Engine.UI.ClassicLabel textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private Histacom2.Engine.UI.ClassicLabel label4;
         private Histacom2.Engine.UI.ClassicLabel label3;
