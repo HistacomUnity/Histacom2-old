@@ -170,6 +170,7 @@
             // login
             // 
             this.login.BackColor = System.Drawing.Color.Moccasin;
+            this.login.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.login.Controls.Add(this.label2);
             this.login.Controls.Add(this.txtscreenname);
             this.login.Controls.Add(this.button1);
@@ -199,9 +200,9 @@
             // 
             // button1
             // 
-            this.button1.AdaptBackColorWithTheme = true;
-            this.button1.AdaptFontWithTheme = true;
-            this.button1.AdaptForeColorWithTheme = true;
+            this.button1.AdaptBackColorWithTheme = false;
+            this.button1.AdaptFontWithTheme = false;
+            this.button1.AdaptForeColorWithTheme = false;
             this.button1.BackColor = System.Drawing.Color.NavajoWhite;
             this.button1.DialogResult = System.Windows.Forms.DialogResult.None;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
