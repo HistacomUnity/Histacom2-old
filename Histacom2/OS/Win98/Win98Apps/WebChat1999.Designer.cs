@@ -66,6 +66,7 @@
             this.button2.Size = new System.Drawing.Size(71, 20);
             this.button2.TabIndex = 16;
             this.button2.Text = "Speak";
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label7
             // 
@@ -210,6 +211,7 @@
             this.button1.Size = new System.Drawing.Size(151, 23);
             this.button1.TabIndex = 4;
             this.button1.Text = "Login";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -270,6 +272,7 @@
             this.Controls.Add(this.listBox1);
             this.Name = "WebChat1999";
             this.Size = new System.Drawing.Size(724, 462);
+            this.Load += new System.EventHandler(this.WebChat1999_Load);
             this.panel1.ResumeLayout(false);
             this.login.ResumeLayout(false);
             this.login.PerformLayout();

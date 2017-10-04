@@ -118,7 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="textBox1.Text" xml:space="preserve">
-    <value>If you do not agree to the following rules below DO NOT log into the chat:
+    <value>
+If you do not agree to the following rules below DO NOT log into the chat:
 
 No Bullying
 No Swearing

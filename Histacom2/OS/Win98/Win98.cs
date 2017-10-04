@@ -303,11 +303,9 @@ namespace Histacom2.OS.Win98
                     else
                     {
                         // It is an actual file on the disk
-
                         WinClassicWindowsExplorer we = new WinClassicWindowsExplorer();
 
                         // If it is a directory
-
                         if (Directory.Exists(objListViewItem.Tag.ToString()))
                         {
                             we.CurrentDirectory = objListViewItem.Tag.ToString();
@@ -317,13 +315,7 @@ namespace Histacom2.OS.Win98
                             app.BringToFront();
                             startmenu.Hide();
                         }
-                        else
-                        {
-                            // Just open the file...
-
-                            we.OpenFile(objListViewItem.Tag.ToString());
-                        }
-
+                        else we.OpenFile(objListViewItem.Tag.ToString()); // Just open the file...
                     }
                 }
             }
@@ -338,10 +330,10 @@ namespace Histacom2.OS.Win98
         }
         private void WebChatToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            WebChat1998 wc = new WebChat1998();
-            WinClassic app = wm.Init(wc, "Web Chat 1998", null, true, true);
+            WebChat1999 wc = new WebChat1999();
+            WinClassic app = wm.Init(wc, "Web Chat 1999", null, true, true);
 
-            AddTaskBarItem(app, app.Tag.ToString(), "Web Chat 1998", null);
+            AddTaskBarItem(app, app.Tag.ToString(), "Web Chat 1999", null);
 
             app.BringToFront();
             startmenu.Hide();
