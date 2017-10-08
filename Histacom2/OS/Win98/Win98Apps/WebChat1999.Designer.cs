@@ -180,7 +180,7 @@
             this.login.Controls.Add(this.textBox2);
             this.login.Location = new System.Drawing.Point(126, 106);
             this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(468, 242);
+            this.login.Size = new System.Drawing.Size(469, 243);
             this.login.TabIndex = 17;
             // 
             // label2

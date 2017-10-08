@@ -67,27 +67,37 @@ namespace Histacom2.OS.Win98.Win98Apps
         {
             if (chatStage == 2)
             {
-                await Task.Delay(3000);
-                history.AppendText("ThatDude: omg really??" + Environment.NewLine); receive.Play();
-                await Task.Delay(4000);
-                history.AppendText("ThatDude: hold on, let me check your ip to make sure" + Environment.NewLine); receive.Play();
+                await Task.Delay(3000); history.AppendText("ThatDude: omg really??" + Environment.NewLine); receive.Play();
+                await Task.Delay(4000); history.AppendText("ThatDude: hold on, let me check your ip to make sure" + Environment.NewLine); receive.Play();
             }
             else if (chatStage == 3)
             {
-                await Task.Delay(2800);
-                history.AppendText("ThatDude: oh.." + Environment.NewLine); receive.Play();
-                await Task.Delay(5500);
-                history.AppendText("ThatDude: lemme just check your ip quick to find out who ya are tho" + Environment.NewLine); receive.Play();
+                await Task.Delay(2800); history.AppendText("ThatDude: oh.." + Environment.NewLine); receive.Play();
+                await Task.Delay(5500); history.AppendText("ThatDude: lemme just check your ip quick to find out who ya are tho" + Environment.NewLine); receive.Play();
             }
             else
             {
-                await Task.Delay(3300);
-                history.AppendText("ThatDude: hold on, let me  just check your ip real quick" + Environment.NewLine); receive.Play();
+                await Task.Delay(3300); history.AppendText("ThatDude: hold on, let me just check your ip real quick" + Environment.NewLine); receive.Play();
             }
-            await Task.Delay(5000);
-            history.AppendText("ThatDude: YES! ITS YOU!" + Environment.NewLine); receive.Play();
-            await Task.Delay(3500);
-            history.AppendText("ThatDude: hey just wait a sec here" + Environment.NewLine); receive.Play();
+            await Task.Delay(5000); history.AppendText("ThatDude: YES! ITS YOU!" + Environment.NewLine); receive.Play();
+            await Task.Delay(3000); history.AppendText("ThatDude: hey just wait a sec here" + Environment.NewLine); receive.Play();
+            await Task.Delay(3000); listBox1.Items.Remove("ThatDude"); listBox1.Items.Add("HiddenHacker"); history.AppendText("System: ThatDude is now known as HiddenHacker." + Environment.NewLine); file.Play();
+            await Task.Delay(5000); history.AppendText("HiddenHacker: yeah, sorry bout the fake name" + Environment.NewLine); receive.Play();
+            await Task.Delay(5000); history.AppendText("HiddenHacker: anyways, ive waited about a whole year to see if that time distorter worked" + Environment.NewLine); receive.Play();
+            await Task.Delay(3000); history.AppendText("HiddenHacker: and it looks like it worked" + Environment.NewLine); receive.Play();
+            await Task.Delay(5000); history.AppendText("HiddenHacker: now, after you left 1998, 12padams tried to attack me, but closed my telnet before he could" + Environment.NewLine); receive.Play();
+            await Task.Delay(2500); history.AppendText("HiddenHacker: since then, ive been in hiding" + Environment.NewLine); receive.Play();
+            await Task.Delay(3000); history.AppendText("HiddenHacker: lately, ive been hiding in this webchat" + Environment.NewLine); receive.Play();
+            await Task.Delay(4000); history.AppendText("HiddenHacker: because he'll never think to look in his own app!" + Environment.NewLine); receive.Play();
+            await Task.Delay(2000); listBox1.Items.Add("12padams"); history.AppendText("System: 12padams has joined the chat." + Environment.NewLine); join.Play();
+            await Task.Delay(2500); history.AppendText("12padams: at last i found you!" + Environment.NewLine); receive.Play();
+            await Task.Delay(1500); history.AppendText("HiddenHacker: oh CRAP!" + Environment.NewLine); receive.Play();
+            await Task.Delay(1500); history.AppendText("HiddenHacker: quick! lets logout!" + Environment.NewLine); receive.Play();
+            await Task.Delay(1250); history.AppendText("12padams: oh come on guys.." + Environment.NewLine); receive.Play();
+            await Task.Delay(1750); history.AppendText("HiddenHacker: no! i cant close the webchat!" + Environment.NewLine); receive.Play();
+            await Task.Delay(2500); history.AppendText("12padams: please just calm down, im not angry with you" + Environment.NewLine); receive.Play();
+            await Task.Delay(1750); history.AppendText("HiddenHacker: wait, really?" + Environment.NewLine); receive.Play();
+            await Task.Delay(1100); history.AppendText("12padams: yea" + Environment.NewLine); receive.Play();
         }
 
         private void button2_Click(object sender, EventArgs e)
