@@ -98,6 +98,18 @@ namespace Histacom2.OS.Win98.Win98Apps
             await Task.Delay(2500); history.AppendText("12padams: please just calm down, im not angry with you" + Environment.NewLine); receive.Play();
             await Task.Delay(1750); history.AppendText("HiddenHacker: wait, really?" + Environment.NewLine); receive.Play();
             await Task.Delay(1100); history.AppendText("12padams: yea" + Environment.NewLine); receive.Play();
+            await Task.Delay(2750); history.AppendText($"12padams: infact, id like to thank you for getting my time distorter, {SaveSystem.ProfileName}" + Environment.NewLine); receive.Play();
+            await Task.Delay(4000); history.AppendText("12padams: because if you hadn't done that, i would have completely forgot about it" + Environment.NewLine); receive.Play();
+            await Task.Delay(1750); history.AppendText($"HiddenHacker: dont forget that i told {SaveSystem.ProfileName} that the time distorter existed!" + Environment.NewLine); receive.Play();
+            await Task.Delay(2000); history.AppendText("12padams: right, right :P" + Environment.NewLine); receive.Play();
+            await Task.Delay(5000); history.AppendText("12padams: anyways, since you both now know about the time distorter, i say we work together as a team" + Environment.NewLine); receive.Play();
+            await Task.Delay(2000); history.AppendText("HiddenHacker: a team?" + Environment.NewLine); receive.Play();
+            await Task.Delay(1100); history.AppendText("12padams: yea" + Environment.NewLine); receive.Play();
+            await Task.Delay(3500); history.AppendText("12padams: ill be the developer, making new versions of the time distorter" + Environment.NewLine); receive.Play();
+            await Task.Delay(3500); history.AppendText($"12padams: {SaveSystem.ProfileName} will be the tester, using the software to travel thru time" + Environment.NewLine); receive.Play();
+            await Task.Delay(2500); history.AppendText("12padams: and hiddenhacker, you will be the overseer" + Environment.NewLine); receive.Play();
+            await Task.Delay(2500); history.AppendText("HiddenHacker: okay.. what does that mean?" + Environment.NewLine); receive.Play();
+            await Task.Delay(4500); history.AppendText($"12padams: you have to monitor what happens with {SaveSystem.ProfileName}'s distorter and let me know when it arrives safely" + Environment.NewLine); receive.Play();
         }
 
         private void button2_Click(object sender, EventArgs e)
