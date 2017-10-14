@@ -310,23 +310,23 @@ namespace Histacom2.OS.Win95.Win95Apps
 
                     break;
                 case "ie":
-                    if (TitleScreen.frm95.ie != null) { wm.StartInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", InfoboxType.Warning, InfoboxButtons.OK); return; }
-                    TitleScreen.frm95.ie = wm.Init(new WinClassicIE4(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
-                    Program.AddTaskbarItem(TitleScreen.frm95.ie, TitleScreen.frm95.ie.Tag.ToString(), "Internet Explorer 4", Properties.Resources.Win95IconIE4);
-                    TitleScreen.frm95.ie.BringToFront();
-                    TitleScreen.frm95.ie.FormClosing += new FormClosingEventHandler(TitleScreen.frm95.InternetExplorer4_Closing);
+                    if (TitleScreen.frm98.ie != null) { wm.StartInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", InfoboxType.Warning, InfoboxButtons.OK); return; }
+                    TitleScreen.frm98.ie = wm.Init(new WinClassicIE4(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
+                    Program.AddTaskbarItem(TitleScreen.frm98.ie, TitleScreen.frm98.ie.Tag.ToString(), "Internet Explorer 4", Properties.Resources.Win95IconIE4);
+                    TitleScreen.frm98.ie.BringToFront();
+                    TitleScreen.frm98.ie.FormClosing += new FormClosingEventHandler(TitleScreen.frm98.InternetExplorer4_Closing);
 
                     break;
                 case "web chat 99 setup":
-                    Win95Installer inst = new Win95Installer("Web Chat 1999");
-                    inst.InstallCompleted += (sendr, args) => TitleScreen.frm95.WebChatToolStripMenuItem.Visible = true;
+                    WinClassicInstaller inst = new WinClassicInstaller("Web Chat 1999");
+                    inst.InstallCompleted += (sendr, args) => TitleScreen.frm98.WebChatToolStripMenuItem.Visible = true;
                     WinClassic appInstaller = wm.Init(inst, "Web Chat Setup", null, true, true);
                     Program.AddTaskbarItem(appInstaller, appInstaller.Tag.ToString(), "Web Chat Setup", null);
                     appInstaller.BringToFront();
 
                     break;
                 case "time distorter setup":
-                    Win95Installer instTd = new Win95Installer("Time Distorter 0.2");
+                    WinClassicInstaller instTd = new WinClassicInstaller("Time Distorter 0.2");
                     instTd.InstallCompleted += (sendr, args) =>
                     {
                         TitleScreen.frm95.TimeDistorterToolStripMenuItem.Visible = true;

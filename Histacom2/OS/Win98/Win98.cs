@@ -342,7 +342,7 @@ namespace Histacom2.OS.Win98
         {
             nonimportantapps.Remove((WinClassic)sender);
         }
-        private void InternetExplorer4_Closing(object sender, FormClosingEventArgs e)
+        public void InternetExplorer4_Closing(object sender, FormClosingEventArgs e)
         {
             ie = null;
         }

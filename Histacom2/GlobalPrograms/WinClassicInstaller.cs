@@ -50,6 +50,7 @@ namespace Histacom2.GlobalPrograms
             {
                 classicButton3.Hide();
                 classicButton1.Enabled = false;
+                classicButton2.Enabled = false;
                 var p = new InstallerPanes.ProgressPane();
                 p.Parent = panel1;
                 state = 3;
@@ -60,7 +61,9 @@ namespace Histacom2.GlobalPrograms
                 var c = new InstallerPanes.CompletePane();
                 c.Parent = panel1;
                 classicButton3.Enabled = false;
+                classicButton2.Enabled = true;
                 classicButton2.Text = "Finish";
+                classicButton2.Invalidate();
                 state = 4;
             }
             else ParentForm.Close();

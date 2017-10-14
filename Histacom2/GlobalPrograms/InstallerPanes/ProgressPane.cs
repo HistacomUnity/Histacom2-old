@@ -30,7 +30,7 @@ namespace Histacom2.GlobalPrograms.InstallerPanes
                     ((WinClassicInstaller)Parent.Parent).classicButton2.PerformClick();
                     t.Stop();
                 }
-                progressBar1.Value += 4;
+                else progressBar1.Value += 4;
             };
             t.Start();
         }

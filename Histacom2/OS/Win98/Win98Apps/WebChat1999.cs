@@ -126,6 +126,8 @@ namespace Histacom2.OS.Win98.Win98Apps
             await Task.Delay(3000); history.AppendText("12padams: its the only way to make sure that time travel works properly" + Environment.NewLine); receive.Play();
             await Task.Delay(4500); history.AppendText("HiddenHacker: ok, so what do i need to do again?" + Environment.NewLine); receive.Play();
             await Task.Delay(3500); history.AppendText($"12padams: as i said before, make sure that {SaveSystem.ProfileName} arrives safely in 2000" + Environment.NewLine); receive.Play();
+            await Task.Delay(3000); history.AppendText("HiddenHacker: but what if he doesnt make it?" + Environment.NewLine); receive.Play();
+            await Task.Delay(3500); history.AppendText("12padams: we will cross that bridge when we come to it" + Environment.NewLine); receive.Play();
         }
 
         private void button2_Click(object sender, EventArgs e)
