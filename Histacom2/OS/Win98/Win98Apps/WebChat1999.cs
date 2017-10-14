@@ -110,6 +110,22 @@ namespace Histacom2.OS.Win98.Win98Apps
             await Task.Delay(2500); history.AppendText("12padams: and hiddenhacker, you will be the overseer" + Environment.NewLine); receive.Play();
             await Task.Delay(2500); history.AppendText("HiddenHacker: okay.. what does that mean?" + Environment.NewLine); receive.Play();
             await Task.Delay(4500); history.AppendText($"12padams: you have to monitor what happens with {SaveSystem.ProfileName}'s distorter and let me know when it arrives safely" + Environment.NewLine); receive.Play();
+            await Task.Delay(3500); history.AppendText("HiddenHacker: wait.. does that mean we are going to time travel again?" + Environment.NewLine); receive.Play();
+            await Task.Delay(1100); history.AppendText("12padams: yep!" + Environment.NewLine); receive.Play();
+            await Task.Delay(4000); history.AppendText("12padams: we cant use 0.1 anymore tho, since it only works in 1998 and only takes you to 1999" + Environment.NewLine); receive.Play();
+            await Task.Delay(4000); history.AppendText("12padams: thankfully, i made a new version that works in any year and takes you to 2000" + Environment.NewLine); receive.Play();
+            await Task.Delay(3500); history.AppendText($"12padams: so yeah, {SaveSystem.ProfileName} is gonna test 0.2, the new version" + Environment.NewLine); receive.Play();
+            await Task.Delay(3500); history.AppendText("HiddenHacker: why does he need to try it out again? it should work fine, just like 0.1" + Environment.NewLine); receive.Play();
+            await Task.Delay(3000); history.AppendText("12padams: it may not, though. didnt you read my article?" + Environment.NewLine); receive.Play();
+            await Task.Delay(3000); history.AppendText("HiddenHacker: uhh, i cant. you blocked me from seeing your site" + Environment.NewLine); receive.Play();
+            await Task.Delay(2500); history.AppendText("12padams: oh right, sorry about that!" + Environment.NewLine); receive.Play();
+            await Task.Delay(3500); history.AppendText("12padams: basically, the article was about the y2k bug" + Environment.NewLine); receive.Play();
+            await Task.Delay(3500); history.AppendText("12padams: its where computers think that the year 2000 is actually 1900" + Environment.NewLine); receive.Play();
+            await Task.Delay(3000); history.AppendText("12padams: that could drastically affect our method of time travel" + Environment.NewLine); receive.Play();
+            await Task.Delay(3000); history.AppendText("HiddenHacker: and you want him to risk his life just to see the effects?" + Environment.NewLine); receive.Play();
+            await Task.Delay(3000); history.AppendText("12padams: its the only way to make sure that time travel works properly" + Environment.NewLine); receive.Play();
+            await Task.Delay(4500); history.AppendText("HiddenHacker: ok, so what do i need to do again?" + Environment.NewLine); receive.Play();
+            await Task.Delay(3500); history.AppendText($"12padams: as i said before, make sure that {SaveSystem.ProfileName} arrives safely in 2000" + Environment.NewLine); receive.Play();
         }
 
         private void button2_Click(object sender, EventArgs e)
