@@ -138,6 +138,9 @@
     <EmbeddedResource Include="Template\WinXP.resx">
       <DependentUpon>WinXP.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\ClassicLabel.resx">
+      <DependentUpon>ClassicLabel.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\chord.wav" />

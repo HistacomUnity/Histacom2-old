@@ -14,7 +14,7 @@ namespace Histacom2.Engine.UI
     {
         public ClassicLabel()
         {
-
+            TextChanged += (s, e) => Invalidate();
         }
 
         protected override void OnPaint(PaintEventArgs e)

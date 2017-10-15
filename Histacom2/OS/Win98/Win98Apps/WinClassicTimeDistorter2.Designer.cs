@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.classicButton1 = new Histacom2.Engine.UI.ClassicButton();
             this.classicLabel1 = new Histacom2.Engine.UI.ClassicLabel();
             this.classicLabel2 = new Histacom2.Engine.UI.ClassicLabel();
             this.classicLabel3 = new Histacom2.Engine.UI.ClassicLabel();
             this.classicLabel4 = new Histacom2.Engine.UI.ClassicLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // classicButton1
@@ -50,6 +52,7 @@
             this.classicButton1.Size = new System.Drawing.Size(276, 23);
             this.classicButton1.TabIndex = 0;
             this.classicButton1.Text = "Take me to 2000!";
+            this.classicButton1.Click += new System.EventHandler(this.classicButton1_Click);
             // 
             // classicLabel1
             // 
@@ -90,6 +93,11 @@
             this.classicLabel4.Text = "Preparing to travel. ETA: N/A secs.";
             this.classicLabel4.Visible = false;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // WinClassicTimeDistorter2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -113,5 +121,6 @@
         private Engine.UI.ClassicLabel classicLabel2;
         private Engine.UI.ClassicLabel classicLabel3;
         private Engine.UI.ClassicLabel classicLabel4;
+        private System.Windows.Forms.Timer timer1;
     }
 }

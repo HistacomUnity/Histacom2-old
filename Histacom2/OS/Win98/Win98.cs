@@ -21,7 +21,7 @@ namespace Histacom2.OS.Win98
         public WindowManager wm = new WindowManager();
 
         public List<WinClassic> nonimportantapps = new List<WinClassic>();
-        public WinClassic webchat;
+        public WebChat1999 webchat;
         public WinClassic ie;
 
         public TaskBarController tb = new TaskBarController();
@@ -331,13 +331,16 @@ namespace Histacom2.OS.Win98
         }
         private void WebChatToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            WebChat1999 wc = new WebChat1999();
-            WinClassic app = wm.Init(wc, "Web Chat 1999", null, true, true);
+            if (webchat != null) return;
+            webchat = new WebChat1999();
+            WinClassic app = wm.Init(webchat, "Web Chat 1999", null, true, true);
 
             AddTaskBarItem(app, app.Tag.ToString(), "Web Chat 1999", null);
 
             app.BringToFront();
             startmenu.Hide();
+
+            app.FormClosing += (s, fe) => webchat = null;
         }
         public void NonImportantApp_Closing(object sender, FormClosingEventArgs e)
         {
@@ -456,6 +459,7 @@ namespace Histacom2.OS.Win98
 
         private void TimeDistorterToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (distort != null) return;
             distort = new WinClassicTimeDistorter2();
             WinClassic app = wm.Init(distort, "Time Distorter", null, false, false, false);
             AddTaskBarItem(app, app.Tag.ToString(), "Time Distorter", null);

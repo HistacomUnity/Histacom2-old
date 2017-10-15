@@ -322,6 +322,7 @@
     <Compile Include="OS\Win98\Win98Apps\IE4Sites\IENoPage.Designer.cs">
       <DependentUpon>IENoPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="OS\Win98\Win98Apps\Story\Hack3.cs" />
     <Compile Include="OS\Win98\Win98Apps\WebChat1999.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -868,7 +869,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="OS\Win98\Win98Apps\Story\" />
     <Folder Include="OS\WinXP\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
