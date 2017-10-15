@@ -21,7 +21,7 @@ namespace Histacom2.OS.Win98.Win98Apps
         SoundPlayer join = new SoundPlayer(Properties.Resources.AIMbuddyjoin);
         SoundPlayer leave = new SoundPlayer(Properties.Resources.AIMbuddyleave);
         SoundPlayer send = new SoundPlayer(Properties.Resources.AIMmessagesent);
-        SoundPlayer receive = new SoundPlayer(Properties.Resources.AIMmessagereceived);
+        public SoundPlayer receive = new SoundPlayer(Properties.Resources.AIMmessagereceived);
         SoundPlayer file = new SoundPlayer(Properties.Resources.AIMfile);
 
         int chatStage = 0;

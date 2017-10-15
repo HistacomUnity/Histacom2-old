@@ -292,7 +292,6 @@
         private System.Windows.Forms.Panel panel1;
         private Engine.UI.ClassicLabel label5;
         private Engine.UI.ClassicButton button5;
-        private System.Windows.Forms.TextBox history;
         private Engine.UI.ClassicLabel label1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Panel login;
@@ -303,5 +302,6 @@
         private Engine.UI.ClassicLabel label4;
         private System.Windows.Forms.TextBox textBox1;
         private Engine.UI.ClassicLabel textBox2;
+        public System.Windows.Forms.TextBox history;
     }
 }
