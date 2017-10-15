@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Media;
 using Histacom2.Engine;
 using Histacom2.Engine.Template;
+using Histacom2.GlobalPrograms;
 
 namespace Histacom2.OS.Win98.Win98Apps
 {
@@ -128,6 +129,9 @@ namespace Histacom2.OS.Win98.Win98Apps
             await Task.Delay(3500); history.AppendText($"12padams: as i said before, make sure that {SaveSystem.ProfileName} arrives safely in 2000" + Environment.NewLine); receive.Play();
             await Task.Delay(3000); history.AppendText("HiddenHacker: but what if he doesnt make it?" + Environment.NewLine); receive.Play();
             await Task.Delay(3500); history.AppendText("12padams: we will cross that bridge when we come to it" + Environment.NewLine); receive.Play();
+            await Task.Delay(3500); history.AppendText("12padams: anyways, im gonna upload 0.2 right now" + Environment.NewLine); receive.Play();
+            await Task.Delay(4500); history.AppendText("System: File \"tdistortv2\" has been uploaded." + Environment.NewLine); label5.Show(); button5.Show(); file.Play();
+            await Task.Delay(4500); history.AppendText($"12padams: go ahead and install it {SaveSystem.ProfileName}, we'll wait" + Environment.NewLine); receive.Play();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -146,6 +150,15 @@ namespace Histacom2.OS.Win98.Win98Apps
                     chatScript2();
                     break;
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            WinClassicDownloader opendownload = new WinClassicDownloader();
+            WindowManager wm = new WindowManager();
+            wm.Init(opendownload, "Downloader", null, false, true);
+            opendownload.appName.Text = "Downloading: Time Distorter 0.2";
+            opendownload.amountToDL = 42;
         }
     }
 }

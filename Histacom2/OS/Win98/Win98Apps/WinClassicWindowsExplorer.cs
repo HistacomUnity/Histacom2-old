@@ -329,7 +329,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                     WinClassicInstaller instTd = new WinClassicInstaller("Time Distorter 0.2");
                     instTd.InstallCompleted += (sendr, args) =>
                     {
-                        TitleScreen.frm95.TimeDistorterToolStripMenuItem.Visible = true;
+                        TitleScreen.frm98.TimeDistorterToolStripMenuItem.Visible = true;
                     };
                     WinClassic appTd = wm.Init(instTd, "Time Distorter Setup", null, true, true);
                     Program.AddTaskbarItem(appTd, appTd.Tag.ToString(), "Time Distorter Setup", null);

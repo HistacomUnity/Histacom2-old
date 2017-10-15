@@ -58,6 +58,9 @@ namespace Histacom2.GlobalPrograms
                     case "Downloading: Web Chat 1999":
                         CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop"), "Web Chat Setup.exe", "web chat 99 setup", 11, 37048);
                         break;
+                    case "Downloading: Time Distorter 0.2":
+                        CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop"), "tdistortv2.exe", "time distorter setup", 11, 21583);
+                        break;
                 }
                 /* if (appName.Text == "Downloading: Skindows 95")
                 {

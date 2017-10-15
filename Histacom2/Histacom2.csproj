@@ -334,6 +334,12 @@
     <Compile Include="OS\Win98\Win98Apps\WinClassicIE4.Designer.cs">
       <DependentUpon>WinClassicIE4.cs</DependentUpon>
     </Compile>
+    <Compile Include="OS\Win98\Win98Apps\WinClassicTimeDistorter2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win98\Win98Apps\WinClassicTimeDistorter2.Designer.cs">
+      <DependentUpon>WinClassicTimeDistorter2.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\Win98\Win98Apps\WinClassicWindowsExplorer.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -545,6 +551,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win98\Win98Apps\WinClassicIE4.resx">
       <DependentUpon>WinClassicIE4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win98\Win98Apps\WinClassicTimeDistorter2.resx">
+      <DependentUpon>WinClassicTimeDistorter2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win98\Win98Apps\WinClassicWindowsExplorer.resx">
       <DependentUpon>WinClassicWindowsExplorer.cs</DependentUpon>
@@ -859,6 +868,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="OS\Win98\Win98Apps\Story\" />
     <Folder Include="OS\WinXP\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

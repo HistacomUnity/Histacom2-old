@@ -131,6 +131,7 @@
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 0;
             this.button5.Text = "Download";
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // history
             // 
