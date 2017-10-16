@@ -34,6 +34,13 @@ namespace Histacom2.OS.Win98.Win98Apps.Story
             await Task.Delay(6000); TitleScreen.frm98.webchat.history.AppendText($"HiddenHacker: this must be exciting for you, {SaveSystem.ProfileName}. travelling thru time, and all" + Environment.NewLine); TitleScreen.frm98.webchat.receive.Play(); // 41
             await Task.Delay(6000); TitleScreen.frm98.webchat.history.AppendText("12padams: and it looks like hes about to leave. anything you wanna say to him before he does?" + Environment.NewLine); TitleScreen.frm98.webchat.receive.Play(); // 35
             await Task.Delay(5000); TitleScreen.frm98.webchat.history.AppendText("HiddenHacker: no, but i still really wish i could have tested it" + Environment.NewLine); TitleScreen.frm98.webchat.receive.Play(); // 30
+            await Task.Delay(4000); TitleScreen.frm98.webchat.history.AppendText("12padams: hey, tell ya what" + Environment.NewLine); TitleScreen.frm98.webchat.receive.Play(); // 26
+            await Task.Delay(5000); TitleScreen.frm98.webchat.history.AppendText($"12padams: after {SaveSystem.ProfileName} gets to 2000, you can test the next version" + Environment.NewLine); TitleScreen.frm98.webchat.receive.Play(); // 21
+            await Task.Delay(5000); TitleScreen.frm98.webchat.history.AppendText("HiddenHacker: oh cool thanks :)" + Environment.NewLine); TitleScreen.frm98.webchat.receive.Play(); // 16
+            await Task.Delay(6000); TitleScreen.frm98.webchat.history.AppendText($"12padams: oh hey {SaveSystem.ProfileName}, make sure to keep an eye on the year in case something goes wrong" + Environment.NewLine); TitleScreen.frm98.webchat.receive.Play(); // 10
+            await Task.Delay(4000); TitleScreen.frm98.webchat.history.AppendText("HiddenHacker: and have a safe trip!" + Environment.NewLine); TitleScreen.frm98.webchat.receive.Play(); // 6
+
+            while (TitleScreen.frm98.distort.secsLeft != 0) { }
         }
     }
 }

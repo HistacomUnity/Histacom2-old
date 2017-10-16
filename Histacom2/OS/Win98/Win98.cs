@@ -31,7 +31,7 @@ namespace Histacom2.OS.Win98
         public bool webchatInstalled = false;
 
         public bool hiddenpadamsFound = false;
-        private WinClassicTimeDistorter2 distort;
+        public WinClassicTimeDistorter2 distort;
 
         // Init the form
         public Windows98()
