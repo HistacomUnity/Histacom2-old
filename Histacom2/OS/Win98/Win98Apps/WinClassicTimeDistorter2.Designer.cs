@@ -117,10 +117,10 @@
         #endregion
 
         private Engine.UI.ClassicButton classicButton1;
-        private Engine.UI.ClassicLabel classicLabel1;
+        public Engine.UI.ClassicLabel classicLabel1;
         private Engine.UI.ClassicLabel classicLabel2;
         private Engine.UI.ClassicLabel classicLabel3;
-        private Engine.UI.ClassicLabel classicLabel4;
+        public Engine.UI.ClassicLabel classicLabel4;
         private System.Windows.Forms.Timer timer1;
     }
 }
