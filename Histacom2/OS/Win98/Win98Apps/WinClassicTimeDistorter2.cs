@@ -12,7 +12,7 @@ namespace Histacom2.OS.Win98.Win98Apps
 {
     public partial class WinClassicTimeDistorter2 : UserControl
     {
-        public int secsLeft = 180;
+        public int secsLeft = 120;
 
         public WinClassicTimeDistorter2()
         {
@@ -23,7 +23,7 @@ namespace Histacom2.OS.Win98.Win98Apps
         {
             classicButton1.Hide();
             classicLabel4.Show();
-            classicLabel4.Text = "Preparing to travel. ETA: 180 secs.";
+            classicLabel4.Text = "Preparing to travel. ETA: 120 secs.";
             timer1.Start();
             Story.Hack3.StartObjective();
         }
