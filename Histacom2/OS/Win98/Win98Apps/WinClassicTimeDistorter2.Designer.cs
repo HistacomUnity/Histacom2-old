@@ -118,9 +118,9 @@
 
         private Engine.UI.ClassicButton classicButton1;
         public Engine.UI.ClassicLabel classicLabel1;
-        private Engine.UI.ClassicLabel classicLabel2;
         private Engine.UI.ClassicLabel classicLabel3;
         public Engine.UI.ClassicLabel classicLabel4;
         private System.Windows.Forms.Timer timer1;
+        public Engine.UI.ClassicLabel classicLabel2;
     }
 }

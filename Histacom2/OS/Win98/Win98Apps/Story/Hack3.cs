@@ -57,7 +57,7 @@ namespace Histacom2.OS.Win98.Win98Apps.Story
             await Task.Delay(100); Program.Invert(TitleScreen.frm98.webchat);
             await Task.Delay(100); Program.Invert(TitleScreen.frm98.webchat);
             await Task.Delay(100); Program.Invert(TitleScreen.frm98.webchat);
-            await Task.Delay(100); Program.Invert(TitleScreen.frm98.webchat); // -1
+            await Task.Delay(100); Program.Invert(TitleScreen.frm98.webchat); 
             TitleScreen.frm98.webchat.ParentForm.Close();
 
             await Task.Delay(100); TitleScreen.frm98.taskbar.BackgroundImage = null; Program.Invert(TitleScreen.frm98.taskbar, false);
@@ -69,7 +69,7 @@ namespace Histacom2.OS.Win98.Win98Apps.Story
             await Task.Delay(100); Program.Invert(TitleScreen.frm98.taskbar, false);
             await Task.Delay(100); Program.Invert(TitleScreen.frm98.taskbar, false);
             await Task.Delay(100); Program.Invert(TitleScreen.frm98.taskbar, false);
-            await Task.Delay(100); Program.Invert(TitleScreen.frm98.taskbar, false); // -2
+            await Task.Delay(100); Program.Invert(TitleScreen.frm98.taskbar, false); 
 
             await Task.Delay(100); TitleScreen.frm98.taskbar.Hide();
             await Task.Delay(100); TitleScreen.frm98.desktopicons.Hide();
@@ -80,7 +80,7 @@ namespace Histacom2.OS.Win98.Win98Apps.Story
             await Task.Delay(100); TitleScreen.frm98.desktopicons.Show();
             await Task.Delay(100); TitleScreen.frm98.desktopicons.Hide();
             await Task.Delay(100); TitleScreen.frm98.desktopicons.Show();
-            await Task.Delay(100); TitleScreen.frm98.desktopicons.Hide(); // -3
+            await Task.Delay(100); TitleScreen.frm98.desktopicons.Hide(); 
 
             await Task.Delay(100); Program.Invert(TitleScreen.frm98, false);
             await Task.Delay(100); Program.Invert(TitleScreen.frm98, false);
@@ -91,7 +91,7 @@ namespace Histacom2.OS.Win98.Win98Apps.Story
             await Task.Delay(100); Program.Invert(TitleScreen.frm98, false);
             await Task.Delay(100); Program.Invert(TitleScreen.frm98, false);
             await Task.Delay(100); Program.Invert(TitleScreen.frm98, false);
-            await Task.Delay(100); Program.Invert(TitleScreen.frm98, false); // -4
+            await Task.Delay(100); Program.Invert(TitleScreen.frm98, false); 
 
             await Task.Delay(100); TitleScreen.frm98.distort.ParentForm.Location = new Point(r.Next(TitleScreen.frm98.Width), r.Next(TitleScreen.frm98.Height)); Program.Invert(TitleScreen.frm98, false);
             await Task.Delay(100); TitleScreen.frm98.distort.ParentForm.Location = new Point(r.Next(TitleScreen.frm98.Width), r.Next(TitleScreen.frm98.Height)); Program.Invert(TitleScreen.frm98, false);
@@ -122,9 +122,54 @@ namespace Histacom2.OS.Win98.Win98Apps.Story
             ((WinClassic)TitleScreen.frm98.distort.ParentForm).maximizebutton.Image = Engine.Properties.Resources.WinClassicRestore;
             ((WinClassic)TitleScreen.frm98.distort.ParentForm).programtopbar.Hide();
             TitleScreen.frm98.distort.BackColor = Color.Black;
-            foreach (Control c in TitleScreen.frm98.distort.Controls) c.Hide();
+            foreach (Control c in TitleScreen.frm98.distort.Controls) { c.BackColor = Color.Black; c.Hide(); }
             TitleScreen.frm98.distort.classicLabel1.Show();
-            TitleScreen.frm98.distort.classicLabel1.ForeColor = Color.Green;
+            TitleScreen.frm98.distort.classicLabel1.ForeColor = Color.Lime;
+            TitleScreen.frm98.distort.classicLabel2.Text = "LOL NO";
+            TitleScreen.frm98.distort.classicLabel2.ForeColor = Color.MidnightBlue;
+            // 0
+
+            await Task.Delay(100); TitleScreen.frm98.distort.classicLabel1.Text = "1999";
+            await Task.Delay(500);
+            await Task.Delay(100); TitleScreen.frm98.distort.classicLabel1.Text = "2000";
+            await Task.Delay(100); TitleScreen.frm98.distort.classicLabel1.Text = "2000"; TitleScreen.frm98.distort.classicLabel2.Show();
+            await Task.Delay(100); TitleScreen.frm98.distort.classicLabel1.Text = "2000"; TitleScreen.frm98.distort.classicLabel2.Hide();
+            await Task.Delay(100); TitleScreen.frm98.distort.classicLabel1.Text = "1900"; // 1
+
+            await Task.Delay(100); TitleScreen.frm98.distort.classicLabel1.Hide();
+            await Task.Delay(100); TitleScreen.frm98.distort.classicLabel1.Show();
+            await Task.Delay(100); TitleScreen.frm98.distort.classicLabel1.Text = "2000";
+            await Task.Delay(100); TitleScreen.frm98.distort.classicLabel1.Text = "1900"; // 1.4
+
+            for (int year = 1901; year < 2000; year++)
+            {
+                await Task.Delay(80);
+                TitleScreen.frm98.distort.classicLabel1.Text = year.ToString();
+            } // 9.32
+            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Hide(); // 9.4
+            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Show(); 
+            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Hide(); 
+            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Show();
+            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Text = "2000";
+            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Hide(); // 9.8
+            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Show();
+            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Hide(); 
+            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Show(); 
+            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Text = "2001"; 
+            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Hide(); // 10.2
+            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Show();
+            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Hide();
+            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Show();
+            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Text = "2002";
+            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Hide(); // 10.6
+            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Show();
+            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Hide();
+            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Show(); // 10.84
+            await Task.Delay(3000);
+            /*if (close_everything_.count2000 == -169)
+                MyProject.Forms.Windowsxp2002damaged.Show();
+            if (close_everything_.count2000 != -170)
+                return;*/
         }
     }
 }
