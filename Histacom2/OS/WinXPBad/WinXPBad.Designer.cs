@@ -31,7 +31,7 @@ namespace Histacom2.OS.WinXPBad
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Windows98));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WindowsXPBad));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.taskbar = new System.Windows.Forms.Panel();
@@ -141,24 +141,24 @@ namespace Histacom2.OS.WinXPBad
             // taskbar
             // 
             this.taskbar.BackColor = System.Drawing.Color.Silver;
-            this.taskbar.BackgroundImage = global::Histacom2.Properties.Resources.WinClassicTaskBar;
+            this.taskbar.BackgroundImage = global::Histacom2.Properties.Resources.WinXPTaskbarBG;
             this.taskbar.Controls.Add(this.clockPanel);
             this.taskbar.Controls.Add(this.taskbarItems);
             this.taskbar.Controls.Add(this.startbutton);
             this.taskbar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.taskbar.Location = new System.Drawing.Point(0, 452);
+            this.taskbar.Location = new System.Drawing.Point(0, 450);
             this.taskbar.Name = "taskbar";
-            this.taskbar.Size = new System.Drawing.Size(640, 28);
+            this.taskbar.Size = new System.Drawing.Size(640, 30);
             this.taskbar.TabIndex = 2;
             // 
             // clockPanel
             // 
-            this.clockPanel.BackgroundImage = global::Histacom2.Properties.Resources.WinClassicTime;
+            this.clockPanel.BackgroundImage = global::Histacom2.Properties.Resources.WinXPTaskbarTime;
             this.clockPanel.Controls.Add(this.taskbartime);
             this.clockPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.clockPanel.Location = new System.Drawing.Point(575, 0);
             this.clockPanel.Name = "clockPanel";
-            this.clockPanel.Size = new System.Drawing.Size(65, 28);
+            this.clockPanel.Size = new System.Drawing.Size(65, 30);
             this.clockPanel.TabIndex = 4;
             // 
             // taskbartime
@@ -166,7 +166,8 @@ namespace Histacom2.OS.WinXPBad
             this.taskbartime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.taskbartime.AutoSize = true;
             this.taskbartime.BackColor = System.Drawing.Color.Transparent;
-            this.taskbartime.Location = new System.Drawing.Point(10, 7);
+            this.taskbartime.ForeColor = System.Drawing.Color.White;
+            this.taskbartime.Location = new System.Drawing.Point(18, 9);
             this.taskbartime.Name = "taskbartime";
             this.taskbartime.Size = new System.Drawing.Size(26, 13);
             this.taskbartime.TabIndex = 2;
@@ -177,17 +178,17 @@ namespace Histacom2.OS.WinXPBad
             // 
             this.taskbarItems.BackColor = System.Drawing.Color.Transparent;
             this.taskbarItems.Cursor = System.Windows.Forms.Cursors.Default;
-            this.taskbarItems.Location = new System.Drawing.Point(63, 4);
+            this.taskbarItems.Location = new System.Drawing.Point(105, 4);
             this.taskbarItems.Name = "taskbarItems";
-            this.taskbarItems.Size = new System.Drawing.Size(3648, 22);
+            this.taskbarItems.Size = new System.Drawing.Size(3606, 22);
             this.taskbarItems.TabIndex = 5;
             // 
             // startbutton
             // 
-            this.startbutton.Image = global::Histacom2.Properties.Resources.WinClassicStart;
-            this.startbutton.Location = new System.Drawing.Point(2, 4);
+            this.startbutton.Image = global::Histacom2.Properties.Resources.WinXPTaskbarStart;
+            this.startbutton.Location = new System.Drawing.Point(0, 0);
             this.startbutton.Name = "startbutton";
-            this.startbutton.Size = new System.Drawing.Size(54, 22);
+            this.startbutton.Size = new System.Drawing.Size(99, 30);
             this.startbutton.TabIndex = 3;
             this.startbutton.TabStop = false;
             this.startbutton.Click += new System.EventHandler(this.startbutton_Click);
@@ -704,7 +705,7 @@ namespace Histacom2.OS.WinXPBad
             this.TimeDistorterToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.TimeDistorterToolStripMenuItem.Text = "Time Distorter";
             this.TimeDistorterToolStripMenuItem.Visible = false;
-            this.TimeDistorterToolStripMenuItem.Click += new System.EventHandler(TimeDistorterToolStripMenuItem_Click);
+            this.TimeDistorterToolStripMenuItem.Click += new System.EventHandler(this.TimeDistorterToolStripMenuItem_Click);
             // 
             // DocumentsToolStripMenuItem
             // 
@@ -769,7 +770,7 @@ namespace Histacom2.OS.WinXPBad
             this.ControlPanelToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ControlPanelToolStripMenuItem.BackgroundImage")));
             this.ControlPanelToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ControlPanelToolStripMenuItem.Name = "ControlPanelToolStripMenuItem";
-            this.ControlPanelToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.ControlPanelToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.ControlPanelToolStripMenuItem.Text = "Control Panel";
             // 
             // PrintersToolStripMenuItem
@@ -778,7 +779,7 @@ namespace Histacom2.OS.WinXPBad
             this.PrintersToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PrintersToolStripMenuItem.BackgroundImage")));
             this.PrintersToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.PrintersToolStripMenuItem.Name = "PrintersToolStripMenuItem";
-            this.PrintersToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.PrintersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.PrintersToolStripMenuItem.Text = "Printers";
             // 
             // TaskbarToolStripMenuItem
@@ -787,7 +788,7 @@ namespace Histacom2.OS.WinXPBad
             this.TaskbarToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("TaskbarToolStripMenuItem.BackgroundImage")));
             this.TaskbarToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.TaskbarToolStripMenuItem.Name = "TaskbarToolStripMenuItem";
-            this.TaskbarToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.TaskbarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.TaskbarToolStripMenuItem.Text = "Taskbar";
             // 
             // FindToolStripMenuItem
@@ -934,7 +935,7 @@ namespace Histacom2.OS.WinXPBad
             // desktopicons
             // 
             this.desktopicons.Alignment = System.Windows.Forms.ListViewAlignment.Left;
-            this.desktopicons.BackColor = System.Drawing.Color.Teal;
+            this.desktopicons.BackColor = System.Drawing.Color.DodgerBlue;
             this.desktopicons.BackgroundImageTiled = true;
             this.desktopicons.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.desktopicons.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1005,7 +1006,7 @@ namespace Histacom2.OS.WinXPBad
             this.desktopupdate.Interval = 5000;
             this.desktopupdate.Tick += new System.EventHandler(this.desktopupdate_Tick);
             // 
-            // Windows98
+            // WindowsXPBad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1017,7 +1018,7 @@ namespace Histacom2.OS.WinXPBad
             this.Controls.Add(this.desktopicons);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Windows98";
+            this.Name = "WindowsXPBad";
             this.Tag = "ignoreFormOnTaskbar";
             this.Text = "Histacom2Desktop";
             this.Load += new System.EventHandler(this.Desktop_Load);

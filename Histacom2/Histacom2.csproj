@@ -650,6 +650,9 @@
   <ItemGroup>
     <Content Include="Icon128x.ico" />
     <Content Include="Resources\12padams_EULA.txt" />
+    <None Include="Resources\WinClassic\WinXPTaskbarTime.png" />
+    <None Include="Resources\WinClassic\WinXPTaskbarStart.png" />
+    <None Include="Resources\WinClassic\WinXPTaskbarBG.png" />
     <None Include="Resources\y1k86jqd.bmp" />
     <None Include="Resources\WinClassic\WinClassicWebchat.png" />
     <None Include="Resources\wordpad_find.png" />

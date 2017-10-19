@@ -2046,6 +2046,36 @@ namespace Histacom2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap WinXPTaskbarBG {
+            get {
+                object obj = ResourceManager.GetObject("WinXPTaskbarBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WinXPTaskbarStart {
+            get {
+                object obj = ResourceManager.GetObject("WinXPTaskbarStart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WinXPTaskbarTime {
+            get {
+                object obj = ResourceManager.GetObject("WinXPTaskbarTime", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap wordpad_bold {
             get {
                 object obj = ResourceManager.GetObject("wordpad_bold", resourceCulture);
