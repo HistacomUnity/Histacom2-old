@@ -138,13 +138,12 @@
     <EmbeddedResource Include="Template\WinXP.resx">
       <DependentUpon>WinXP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\ClassicLabel.resx">
-      <DependentUpon>ClassicLabel.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\chord.wav" />
     <Content Include="Resources\Icon128x.ico" />
+    <None Include="Resources\WinBadXPStart.wav" />
+    <None Include="Resources\WinXPWallpaper.png" />
     <Content Include="Resources\WinXP\Window\WinXP_Bottom.png" />
     <Content Include="Resources\WinXP\Window\WinXP_Close.png" />
     <Content Include="Resources\WinXP\Window\WinXP_LBCorner.png" />

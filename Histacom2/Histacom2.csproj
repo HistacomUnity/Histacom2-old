@@ -650,6 +650,19 @@
   <ItemGroup>
     <Content Include="Icon128x.ico" />
     <Content Include="Resources\12padams_EULA.txt" />
+    <None Include="Resources\WinClassic\WinXPStartMenuBottomRight.png" />
+    <None Include="Resources\WinClassic\WinXPStartMenuBottomCenter.png" />
+    <None Include="Resources\WinClassic\WinXPStartMenuBottomLeft.png" />
+    <None Include="Resources\WinClassic\WinXPStartMenuBottomCenter2.png" />
+    <None Include="Resources\WinClassic\WinXPStartMenuBottomRight2.png" />
+    <None Include="Resources\WinClassic\WinXPStartMenuBottomLeft2.png" />
+    <None Include="Resources\WinClassic\WinXPStartMenuRightGradient.png" />
+    <None Include="Resources\WinClassic\WinXPStartMenuRight.png" />
+    <None Include="Resources\WinClassic\WinXPStartMenuLeftGradient.png" />
+    <None Include="Resources\WinClassic\WinXPStartMenuLeft.png" />
+    <None Include="Resources\WinClassic\WinXPStartMenuTopCenter.png" />
+    <None Include="Resources\WinClassic\WinXPStartMenuTopRight.png" />
+    <None Include="Resources\WinClassic\WinXPStartMenuTopLeft.png" />
     <None Include="Resources\WinClassic\WinXPTaskbarTime.png" />
     <None Include="Resources\WinClassic\WinXPTaskbarStart.png" />
     <None Include="Resources\WinClassic\WinXPTaskbarBG.png" />

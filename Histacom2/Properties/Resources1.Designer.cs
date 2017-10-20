@@ -2046,6 +2046,136 @@ namespace Histacom2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap WinXPStartMenuBottomCenter {
+            get {
+                object obj = ResourceManager.GetObject("WinXPStartMenuBottomCenter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WinXPStartMenuBottomCenter2 {
+            get {
+                object obj = ResourceManager.GetObject("WinXPStartMenuBottomCenter2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WinXPStartMenuBottomLeft {
+            get {
+                object obj = ResourceManager.GetObject("WinXPStartMenuBottomLeft", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WinXPStartMenuBottomLeft2 {
+            get {
+                object obj = ResourceManager.GetObject("WinXPStartMenuBottomLeft2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WinXPStartMenuBottomRight {
+            get {
+                object obj = ResourceManager.GetObject("WinXPStartMenuBottomRight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WinXPStartMenuBottomRight2 {
+            get {
+                object obj = ResourceManager.GetObject("WinXPStartMenuBottomRight2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WinXPStartMenuLeft {
+            get {
+                object obj = ResourceManager.GetObject("WinXPStartMenuLeft", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WinXPStartMenuLeftGradient {
+            get {
+                object obj = ResourceManager.GetObject("WinXPStartMenuLeftGradient", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WinXPStartMenuRight {
+            get {
+                object obj = ResourceManager.GetObject("WinXPStartMenuRight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WinXPStartMenuRightGradient {
+            get {
+                object obj = ResourceManager.GetObject("WinXPStartMenuRightGradient", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WinXPStartMenuTopCenter {
+            get {
+                object obj = ResourceManager.GetObject("WinXPStartMenuTopCenter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WinXPStartMenuTopLeft {
+            get {
+                object obj = ResourceManager.GetObject("WinXPStartMenuTopLeft", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WinXPStartMenuTopRight {
+            get {
+                object obj = ResourceManager.GetObject("WinXPStartMenuTopRight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap WinXPTaskbarBG {
             get {
                 object obj = ResourceManager.GetObject("WinXPTaskbarBG", resourceCulture);

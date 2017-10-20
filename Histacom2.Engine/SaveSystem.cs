@@ -129,7 +129,13 @@ namespace Histacom2.Engine
             save.ExperiencedStories = new List<string>();
             if (DevMode == true)
             {
-                if (ProfileName == "98")
+                if (ProfileName == "xpbad")
+                {
+                    save.CurrentOS = "xpbad";
+                    save.ThemeName = "badxp";
+                    currentTheme = new BadXPTheme();
+                }
+                else if (ProfileName == "98")
                 {
                     save.CurrentOS = "98";
                     save.ThemeName = "default98";
@@ -716,6 +722,9 @@ namespace Histacom2.Engine
                     break;
                 case "insidepc":
                     currentTheme = new InsideComputerTheme();
+                    break;
+                case "badxp":
+                    currentTheme = new BadXPTheme();
                     break;
             }
         }

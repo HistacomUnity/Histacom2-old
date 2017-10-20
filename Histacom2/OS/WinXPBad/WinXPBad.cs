@@ -37,39 +37,8 @@ namespace Histacom2.OS.WinXPBad
         public WindowsXPBad()
         {
             InitializeComponent();
-            startmenu.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
-            ProgramsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
-            AccessoriesToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
-            CommunicationsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
-            MultimediaToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
-            SystemToolsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
-            StartUpToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
-            MSDOSPromptToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
-            DocumentsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
-            SettingsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
-            FindToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             SetStyle(ControlStyles.SupportsTransparentBackColor, true);
             BackgroundImage = currentTheme.defaultWallpaper;
-            foreach (ToolStripMenuItem item in startmenuitems.Items)
-            {
-                item.MouseEnter += new EventHandler(MenuItem_MouseEnter);
-                item.MouseLeave += new EventHandler(MenuItem_MouseLeave);
-            }
-            foreach (ToolStripMenuItem item in ProgramsToolStripMenuItem.DropDown.Items)
-            {
-                item.MouseEnter += new EventHandler(MenuItem_MouseEnter);
-                item.MouseLeave += new EventHandler(MenuItem_MouseLeave);
-            }
-        }
-
-        private void MenuItem_MouseEnter(object sender, EventArgs e)
-        {
-            //((ToolStripMenuItem)sender).ForeColor = Color.White;
-        }
-
-        private void MenuItem_MouseLeave(object sender, EventArgs e)
-        {
-            //((ToolStripMenuItem)sender).ForeColor = Color.Black;
         }
 
         //  When New Game is clicked in TitleScreen.cs
@@ -102,9 +71,6 @@ namespace Histacom2.OS.WinXPBad
             // Start the ClockTimer
             clockTimer.Start();
 
-            // Set the StartMenu seperator
-            startmenuitems.Items.Insert(6, new ToolStripSeparator());
-
             //nonimportantapps.Capacity = 100;
             this.SendToBack();
 
@@ -129,14 +95,6 @@ namespace Histacom2.OS.WinXPBad
         private void fontLoad()
         {
             this.taskbartime.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
-            this.ProgramsToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
-            this.DocumentsToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
-            this.SettingsToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
-            this.FindToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
-            this.HelpToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
-            this.RunToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
-            this.SuspendToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
-            this.ShutdownToolStripMenuItem.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             this.desktopicons.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
         }
 

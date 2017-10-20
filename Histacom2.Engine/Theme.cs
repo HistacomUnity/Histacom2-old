@@ -166,4 +166,15 @@ namespace Histacom2.Engine
             themeName = "insidepc";
         }
     }
+
+    public class BadXPTheme: Theme
+    {
+        public BadXPTheme()
+        {
+            startSound = Properties.Resources.WinBadXPStart;
+
+            defaultWallpaper = Properties.Resources.WinXPWallpaper;
+            themeName = "badxp";
+        }
+    }
 }

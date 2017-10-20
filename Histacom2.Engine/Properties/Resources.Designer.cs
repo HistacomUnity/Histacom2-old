@@ -287,6 +287,15 @@ namespace Histacom2.Engine.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream WinBadXPStart {
+            get {
+                return ResourceManager.GetStream("WinBadXPStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap WinClassicBottomLeft {
@@ -532,6 +541,16 @@ namespace Histacom2.Engine.Properties {
         public static System.Drawing.Bitmap WinXP_TopRight {
             get {
                 object obj = ResourceManager.GetObject("WinXP_TopRight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WinXPWallpaper {
+            get {
+                object obj = ResourceManager.GetObject("WinXPWallpaper", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
