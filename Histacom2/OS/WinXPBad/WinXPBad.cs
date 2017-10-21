@@ -82,19 +82,15 @@ namespace Histacom2.OS.WinXPBad
 
             // Update the desktop Icons!
 
-            DesktopController.RefreshDesktopIcons(new ListViewItem[] { new System.Windows.Forms.ListViewItem("My Computer", 0),
-            new System.Windows.Forms.ListViewItem("Network Neighborhood", 5),
-            new System.Windows.Forms.ListViewItem("Inbox", 3),
-            new System.Windows.Forms.ListViewItem("Recycle Bin", 7),
-            new System.Windows.Forms.ListViewItem("Internet Explorer", 2),
-            new System.Windows.Forms.ListViewItem("Online Services", 1),
-            new System.Windows.Forms.ListViewItem("Set Up The Microsoft Network", 4),
-            new System.Windows.Forms.ListViewItem("Outlook Express", 6) }, ref desktopicons, Path.Combine(ProfileWindowsDirectory, "Desktop"));
+            ListViewItem lv = new ListViewItem("Recycle Bin", 7);
+            desktopicons.Items.Add(lv);
+            lv.Position = new Point(20, 20);
+            desktopicons.Invalidate();
+            //DesktopController.RefreshDesktopIcons(new ListViewItem[] { new System.Windows.Forms.ListViewItem("Recycle Bin", 7) }, ref desktopicons, Path.Combine(ProfileWindowsDirectory, "Desktop"));
         }
 
         private void fontLoad()
         {
-            this.taskbartime.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             this.desktopicons.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
         }
 
@@ -449,6 +445,8 @@ namespace Histacom2.OS.WinXPBad
 
         private void desktopupdate_Tick(object sender, EventArgs e)
         {
+            desktopicons.Items[0].Position = new Point(this.Width - 50, this.Height - 80);
+            /*
             DesktopController.RefreshDesktopIcons(new ListViewItem[] { new System.Windows.Forms.ListViewItem("My Computer", 0),
             new System.Windows.Forms.ListViewItem("Network Neighborhood", 5),
             new System.Windows.Forms.ListViewItem("Inbox", 3),
@@ -457,6 +455,7 @@ namespace Histacom2.OS.WinXPBad
             new System.Windows.Forms.ListViewItem("Online Services", 1),
             new System.Windows.Forms.ListViewItem("Set Up The Microsoft Network", 4),
             new System.Windows.Forms.ListViewItem("Outlook Express", 6) }, ref desktopicons, Path.Combine(ProfileWindowsDirectory, "Desktop"));
+            */
         }
 
         private void FolderToolStripMenuItem_Click(object sender, EventArgs e)

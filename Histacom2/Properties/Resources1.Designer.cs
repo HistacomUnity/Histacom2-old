@@ -2106,6 +2106,16 @@ namespace Histacom2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap WinXPStartMenuCenterDivider {
+            get {
+                object obj = ResourceManager.GetObject("WinXPStartMenuCenterDivider", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap WinXPStartMenuLeft {
             get {
                 object obj = ResourceManager.GetObject("WinXPStartMenuLeft", resourceCulture);
@@ -2119,6 +2129,16 @@ namespace Histacom2.Properties {
         public static System.Drawing.Bitmap WinXPStartMenuLeftGradient {
             get {
                 object obj = ResourceManager.GetObject("WinXPStartMenuLeftGradient", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WinXPStartMenuPlaces {
+            get {
+                object obj = ResourceManager.GetObject("WinXPStartMenuPlaces", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

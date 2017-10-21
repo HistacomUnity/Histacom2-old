@@ -650,6 +650,8 @@
   <ItemGroup>
     <Content Include="Icon128x.ico" />
     <Content Include="Resources\12padams_EULA.txt" />
+    <None Include="Resources\WinClassic\WinXPStartMenuCenterDivider.png" />
+    <None Include="Resources\WinClassic\WinXPStartMenuPlaces.png" />
     <None Include="Resources\WinClassic\WinXPStartMenuBottomRight.png" />
     <None Include="Resources\WinClassic\WinXPStartMenuBottomCenter.png" />
     <None Include="Resources\WinClassic\WinXPStartMenuBottomLeft.png" />

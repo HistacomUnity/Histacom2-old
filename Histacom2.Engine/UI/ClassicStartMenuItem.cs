@@ -33,7 +33,7 @@ namespace Histacom2.Engine.UI
             
             e.Graphics.DrawImage(Image, 0 + Padding.Left - Padding.Right, 0);
             if (!Selected) {
-                e.Graphics.DrawString(Text, new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular), Brushes.Black, 38, 11, sf);
+                if (SaveSystem.currentTheme != null) { e.Graphics.DrawString(Text, new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular), Brushes.Black, 38, 11, sf); }
 
                 if (DropDownItems.Count > 0)
                 {

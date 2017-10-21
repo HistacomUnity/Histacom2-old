@@ -36,10 +36,15 @@ namespace Histacom2.OS.WinXPBad
             this.panel2 = new System.Windows.Forms.Panel();
             this.taskbar = new System.Windows.Forms.Panel();
             this.clockPanel = new System.Windows.Forms.Panel();
-            this.taskbartime = new System.Windows.Forms.Label();
+            this.taskbartime = new Histacom2.Engine.UI.ClassicLabel();
             this.taskbarItems = new System.Windows.Forms.Panel();
             this.startbutton = new System.Windows.Forms.PictureBox();
             this.startmenu = new System.Windows.Forms.Panel();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -49,7 +54,8 @@ namespace Histacom2.OS.WinXPBad
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.classicLabel1 = new Histacom2.Engine.UI.ClassicLabel();
+            this.pictureBox3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.clockTimer = new System.Windows.Forms.Timer(this.components);
@@ -62,12 +68,14 @@ namespace Histacom2.OS.WinXPBad
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PropertiesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.desktopupdate = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.taskbar.SuspendLayout();
             this.clockPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.startbutton)).BeginInit();
             this.startmenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -77,11 +85,10 @@ namespace Histacom2.OS.WinXPBad
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.pictureBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.rightclickbackproperties.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -129,12 +136,13 @@ namespace Histacom2.OS.WinXPBad
             // taskbartime
             // 
             this.taskbartime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.taskbartime.AutoSize = true;
             this.taskbartime.BackColor = System.Drawing.Color.Transparent;
+            this.taskbartime.DropShadow = false;
+            this.taskbartime.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.taskbartime.ForeColor = System.Drawing.Color.White;
-            this.taskbartime.Location = new System.Drawing.Point(18, 9);
+            this.taskbartime.Location = new System.Drawing.Point(9, 8);
             this.taskbartime.Name = "taskbartime";
-            this.taskbartime.Size = new System.Drawing.Size(26, 13);
+            this.taskbartime.Size = new System.Drawing.Size(53, 14);
             this.taskbartime.TabIndex = 2;
             this.taskbartime.Text = "time";
             this.taskbartime.Click += new System.EventHandler(this.taskbartime_Click);
@@ -162,6 +170,10 @@ namespace Histacom2.OS.WinXPBad
             // 
             this.startmenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.startmenu.BackColor = System.Drawing.Color.White;
+            this.startmenu.Controls.Add(this.listView1);
+            this.startmenu.Controls.Add(this.pictureBox14);
+            this.startmenu.Controls.Add(this.panel4);
+            this.startmenu.Controls.Add(this.pictureBox13);
             this.startmenu.Controls.Add(this.pictureBox12);
             this.startmenu.Controls.Add(this.pictureBox11);
             this.startmenu.Controls.Add(this.pictureBox10);
@@ -176,6 +188,55 @@ namespace Histacom2.OS.WinXPBad
             this.startmenu.Name = "startmenu";
             this.startmenu.Size = new System.Drawing.Size(380, 438);
             this.startmenu.TabIndex = 3;
+            // 
+            // listView1
+            // 
+            this.listView1.BackColor = System.Drawing.Color.White;
+            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listView1.Location = new System.Drawing.Point(2, 66);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(188, 330);
+            this.listView1.TabIndex = 13;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Tile;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.BackgroundImage = global::Histacom2.Properties.Resources.WinXPStartMenuCenterDivider;
+            this.pictureBox14.Location = new System.Drawing.Point(190, 66);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(1, 330);
+            this.pictureBox14.TabIndex = 12;
+            this.pictureBox14.TabStop = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BackgroundImage = global::Histacom2.Properties.Resources.WinXPStartMenuPlaces;
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel4.Location = new System.Drawing.Point(191, 66);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(187, 330);
+            this.panel4.TabIndex = 11;
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.BackgroundImage = global::Histacom2.Properties.Resources.WinXPStartMenuBottomLeft;
+            this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox13.Location = new System.Drawing.Point(191, 396);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(187, 1);
+            this.pictureBox13.TabIndex = 10;
+            this.pictureBox13.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackgroundImage = global::Histacom2.Properties.Resources.WinXPStartMenuBottomCenter;
+            this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox12.Location = new System.Drawing.Point(190, 396);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(1, 1);
+            this.pictureBox12.TabIndex = 9;
+            this.pictureBox12.TabStop = false;
             // 
             // pictureBox11
             // 
@@ -266,17 +327,29 @@ namespace Histacom2.OS.WinXPBad
             this.panel3.Size = new System.Drawing.Size(380, 63);
             this.panel3.TabIndex = 0;
             // 
+            // classicLabel1
+            // 
+            this.classicLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.classicLabel1.DropShadow = true;
+            this.classicLabel1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classicLabel1.ForeColor = System.Drawing.Color.White;
+            this.classicLabel1.Location = new System.Drawing.Point(6, 24);
+            this.classicLabel1.Name = "classicLabel1";
+            this.classicLabel1.Size = new System.Drawing.Size(91, 19);
+            this.classicLabel1.TabIndex = 3;
+            this.classicLabel1.Text = "Username";
+            // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Blue;
             this.pictureBox3.BackgroundImage = global::Histacom2.Properties.Resources.WinXPStartMenuTopCenter;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Controls.Add(this.classicLabel1);
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox3.Location = new System.Drawing.Point(8, 0);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(364, 63);
             this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -315,7 +388,7 @@ namespace Histacom2.OS.WinXPBad
             this.desktopImages.Images.SetKeyName(4, "WinClassicMSN.png");
             this.desktopImages.Images.SetKeyName(5, "WinClassicNetworking.png");
             this.desktopImages.Images.SetKeyName(6, "WinClassicOutlook.png");
-            this.desktopImages.Images.SetKeyName(7, "WinClassicRecycle.png");
+            this.desktopImages.Images.SetKeyName(7, "WinXPRecycleBin.png");
             this.desktopImages.Images.SetKeyName(8, "WinClassicSetup.png");
             this.desktopImages.Images.SetKeyName(9, "WinClassicSetup.png");
             this.desktopImages.Images.SetKeyName(10, "WinClassicSetup.png");
@@ -395,16 +468,6 @@ namespace Histacom2.OS.WinXPBad
             this.desktopupdate.Interval = 5000;
             this.desktopupdate.Tick += new System.EventHandler(this.desktopupdate_Tick);
             // 
-            // pictureBox12
-            // 
-            this.pictureBox12.BackgroundImage = global::Histacom2.Properties.Resources.WinXPStartMenuBottomCenter;
-            this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox12.Location = new System.Drawing.Point(189, 396);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(1, 1);
-            this.pictureBox12.TabIndex = 9;
-            this.pictureBox12.TabStop = false;
-            // 
             // WindowsXPBad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -424,9 +487,11 @@ namespace Histacom2.OS.WinXPBad
             this.panel1.ResumeLayout(false);
             this.taskbar.ResumeLayout(false);
             this.clockPanel.ResumeLayout(false);
-            this.clockPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.startbutton)).EndInit();
             this.startmenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
@@ -436,11 +501,10 @@ namespace Histacom2.OS.WinXPBad
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.pictureBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.rightclickbackproperties.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -452,7 +516,7 @@ namespace Histacom2.OS.WinXPBad
         private System.Windows.Forms.Panel panel2;
         internal System.Windows.Forms.Panel taskbar;
         internal System.Windows.Forms.PictureBox startbutton;
-        internal System.Windows.Forms.Label taskbartime;
+        internal Histacom2.Engine.UI.ClassicLabel taskbartime;
         internal System.Windows.Forms.Panel startmenu;
         private System.Windows.Forms.Panel clockPanel;
         private System.Windows.Forms.Timer clockTimer;
@@ -470,7 +534,7 @@ namespace Histacom2.OS.WinXPBad
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Panel pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
@@ -480,5 +544,10 @@ namespace Histacom2.OS.WinXPBad
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.ListView listView1;
+        private Engine.UI.ClassicLabel classicLabel1;
     }
 }
