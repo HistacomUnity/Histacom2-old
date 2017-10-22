@@ -37,6 +37,8 @@ namespace Histacom2.Engine.UI
             }
         }
 
+        public bool DoBackColorAdapt { get; set; }
+
         public ClassicStartMenuItem()
         {
             AutoSize = false;
@@ -46,12 +48,18 @@ namespace Histacom2.Engine.UI
         {
             base.OnPaint(e);
 
-            if (SaveSystem.currentTheme != null) e.Graphics.Clear(SaveSystem.currentTheme.threeDObjectsColor);
-            else e.Graphics.Clear(BackColor);
+            if (SaveSystem.currentTheme != null && DoBackColorAdapt) e.Graphics.Clear(SaveSystem.currentTheme.threeDObjectsColor);
+            else if (BackColor != Color.Transparent) e.Graphics.FillRectangle(new SolidBrush(BackColor), new Rectangle(0, 0, Width, Height));
+
+            e.Graphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            if (BackgroundImage != null)
+            {
+                if (BackgroundImageLayout == ImageLayout.Stretch) e.Graphics.DrawImage(BackgroundImage, new Rectangle(0, 0, Width, Height + 9));
+            }
 
             if (Selected)
             {
-                if (SaveSystem.currentTheme != null) e.Graphics.FillRectangle(new SolidBrush(SaveSystem.currentTheme.selectedBackColor), new Rectangle(0, 0, Width, Image.Height));
+                if (SaveSystem.currentTheme != null && DoBackColorAdapt) e.Graphics.FillRectangle(new SolidBrush(SaveSystem.currentTheme.selectedBackColor), new Rectangle(0, 0, Width, Image.Height));
                 else e.Graphics.FillRectangle(Brushes.Navy, new Rectangle(0, 0, Width, Image.Height));
             }
 
@@ -62,7 +70,7 @@ namespace Histacom2.Engine.UI
 
             int imgWidth = 0;
             if (Image != null) { e.Graphics.DrawImage(Image, 0 + Padding.Left - Padding.Right, 0); imgWidth = Image.Width; }
-                if (Image != null) if (Height != Image.Height) if (layout == ClassicStartMenuItemLayout.CloseTitleWithLightSubtitle && Height != Image.Height + 8) { Height = Image.Height; }
+            //if (Image != null) if (Height != Image.Height) if (layout == ClassicStartMenuItemLayout.CloseTitleWithLightSubtitle && Height != Image.Height + 8) { Height = Image.Height; }
 
             if (!Selected) {
                 switch (layout) {
@@ -70,12 +78,12 @@ namespace Histacom2.Engine.UI
                         e.Graphics.DrawString(Text, Font, new SolidBrush(ForeColor), imgWidth + 6, 11, sf);
                         break;
                     case ClassicStartMenuItemLayout.CloseTitle:
-                        e.Graphics.DrawString(Text, Font, new SolidBrush(ForeColor), imgWidth + 2, 9, sf);
+                        e.Graphics.DrawString(Text, Font, new SolidBrush(ForeColor), imgWidth + 2, getYForString(), sf);
                         break;
                     case ClassicStartMenuItemLayout.CloseTitleWithLightSubtitle:
                         e.Graphics.DrawString(Text, Font, new SolidBrush(ForeColor), imgWidth + 2, 3, sf);
                         e.Graphics.DrawString(subtext, new Font(Font, FontStyle.Regular), Brushes.Gray, imgWidth + 2, 16, sf);
-                        if (Image != null) if (Height != Image.Height + 8) Height = Image.Height + 8;
+                        //if (Image != null) if (Height != Image.Height + 8) Height = Image.Height + 8;
                         break;
                 }
 
@@ -94,11 +102,11 @@ namespace Histacom2.Engine.UI
                             e.Graphics.DrawString(Text, Font, new SolidBrush(SaveSystem.currentTheme.selectedTextColor), imgWidth + 6, 11, sf);
                             break;
                         case ClassicStartMenuItemLayout.CloseTitle:
-                            e.Graphics.DrawString(Text, Font, new SolidBrush(SaveSystem.currentTheme.selectedTextColor), imgWidth + 2, 11, sf);
+                            e.Graphics.DrawString(Text, Font, new SolidBrush(SaveSystem.currentTheme.selectedTextColor), imgWidth + 2, getYForString(), sf);
                             break;
                         case ClassicStartMenuItemLayout.CloseTitleWithLightSubtitle:
                             e.Graphics.DrawString(Text, Font, new SolidBrush(SaveSystem.currentTheme.selectedTextColor), imgWidth + 2, 3, sf);
-                            if (Image != null) if (Height != Image.Height + 8) Height = Image.Height + 8;
+                            //if (Image != null) if (Height != Image.Height + 8) Height = Image.Height + 8;
                             break;
                     }
 
@@ -109,6 +117,16 @@ namespace Histacom2.Engine.UI
                     }
                 }
             }
+        }
+
+        private int getYForString()
+        {
+            if (Image != null)
+            {
+                if (Image.Height == 32) return 9;
+                if (Image.Height == 24) return 6;
+            }
+            return 0;
         }
     }
     public enum ClassicStartMenuItemLayout

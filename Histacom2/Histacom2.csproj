@@ -650,6 +650,14 @@
   <ItemGroup>
     <Content Include="Icon128x.ico" />
     <Content Include="Resources\12padams_EULA.txt" />
+    <None Include="Resources\WinClassic\WinXPPrintersSmall.png" />
+    <None Include="Resources\WinClassic\WinXPControlPanelSmall.png" />
+    <None Include="Resources\WinClassic\WinXPStartMenuPlacesSeparator1.png" />
+    <None Include="Resources\WinClassic\WinXPComputerSmall.png" />
+    <None Include="Resources\WinClassic\WinXPMusicSmall.png" />
+    <None Include="Resources\WinClassic\WinXPPhotosSmall.png" />
+    <None Include="Resources\WinClassic\WinXPRecent.png" />
+    <None Include="Resources\WinClassic\WinXPDocumentsSmall.png" />
     <None Include="Resources\WinClassic\WinXPTour.png" />
     <None Include="Resources\WinClassic\WinXPMovieMaker.png" />
     <None Include="Resources\WinClassic\WinXPMediaPlayer.png" />

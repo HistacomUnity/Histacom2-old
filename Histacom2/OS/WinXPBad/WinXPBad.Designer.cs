@@ -41,7 +41,6 @@ namespace Histacom2.OS.WinXPBad
             this.startbutton = new System.Windows.Forms.PictureBox();
             this.startmenu = new System.Windows.Forms.Panel();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
@@ -64,6 +63,15 @@ namespace Histacom2.OS.WinXPBad
             this.classicStartMenuItem3 = new Histacom2.Engine.UI.ClassicStartMenuItem();
             this.classicStartMenuItem4 = new Histacom2.Engine.UI.ClassicStartMenuItem();
             this.classicStartMenuItem5 = new Histacom2.Engine.UI.ClassicStartMenuItem();
+            this.classicStartMenuItem6 = new Histacom2.Engine.UI.ClassicStartMenuItem();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.classicStartMenuItem7 = new Histacom2.Engine.UI.ClassicStartMenuItem();
+            this.classicStartMenuItem8 = new Histacom2.Engine.UI.ClassicStartMenuItem();
+            this.classicStartMenuItem9 = new Histacom2.Engine.UI.ClassicStartMenuItem();
+            this.classicStartMenuItem10 = new Histacom2.Engine.UI.ClassicStartMenuItem();
+            this.classicStartMenuItem11 = new Histacom2.Engine.UI.ClassicStartMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.classicStartMenuItem12 = new Histacom2.Engine.UI.ClassicStartMenuItem();
             this.clockTimer = new System.Windows.Forms.Timer(this.components);
             this.desktopImages = new System.Windows.Forms.ImageList(this.components);
             this.desktopicons = new System.Windows.Forms.ListView();
@@ -74,7 +82,8 @@ namespace Histacom2.OS.WinXPBad
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PropertiesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.desktopupdate = new System.Windows.Forms.Timer(this.components);
-            this.classicStartMenuItem6 = new Histacom2.Engine.UI.ClassicStartMenuItem();
+            this.classicStartMenuItem13 = new Histacom2.Engine.UI.ClassicStartMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.taskbar.SuspendLayout();
             this.clockPanel.SuspendLayout();
@@ -96,6 +105,7 @@ namespace Histacom2.OS.WinXPBad
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.menuStrip2.SuspendLayout();
             this.rightclickbackproperties.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -179,7 +189,6 @@ namespace Histacom2.OS.WinXPBad
             this.startmenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.startmenu.BackColor = System.Drawing.Color.White;
             this.startmenu.Controls.Add(this.pictureBox14);
-            this.startmenu.Controls.Add(this.panel4);
             this.startmenu.Controls.Add(this.pictureBox13);
             this.startmenu.Controls.Add(this.pictureBox12);
             this.startmenu.Controls.Add(this.pictureBox11);
@@ -192,6 +201,7 @@ namespace Histacom2.OS.WinXPBad
             this.startmenu.Controls.Add(this.pictureBox4);
             this.startmenu.Controls.Add(this.panel3);
             this.startmenu.Controls.Add(this.menuStrip1);
+            this.startmenu.Controls.Add(this.menuStrip2);
             this.startmenu.Location = new System.Drawing.Point(0, 133);
             this.startmenu.Name = "startmenu";
             this.startmenu.Size = new System.Drawing.Size(380, 438);
@@ -205,15 +215,6 @@ namespace Histacom2.OS.WinXPBad
             this.pictureBox14.Size = new System.Drawing.Size(1, 330);
             this.pictureBox14.TabIndex = 12;
             this.pictureBox14.TabStop = false;
-            // 
-            // panel4
-            // 
-            this.panel4.BackgroundImage = global::Histacom2.Properties.Resources.WinXPStartMenuPlaces;
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel4.Location = new System.Drawing.Point(191, 66);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(187, 330);
-            this.panel4.TabIndex = 11;
             // 
             // pictureBox13
             // 
@@ -396,6 +397,7 @@ namespace Histacom2.OS.WinXPBad
             // classicStartMenuItem1
             // 
             this.classicStartMenuItem1.AutoSize = false;
+            this.classicStartMenuItem1.DoBackColorAdapt = false;
             this.classicStartMenuItem1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.classicStartMenuItem1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(56)))));
             this.classicStartMenuItem1.Image = global::Histacom2.Properties.Resources.WinXPIE6;
@@ -408,6 +410,7 @@ namespace Histacom2.OS.WinXPBad
             // classicStartMenuItem2
             // 
             this.classicStartMenuItem2.AutoSize = false;
+            this.classicStartMenuItem2.DoBackColorAdapt = false;
             this.classicStartMenuItem2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.classicStartMenuItem2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(56)))));
             this.classicStartMenuItem2.Image = global::Histacom2.Properties.Resources.WinXPOutlook;
@@ -427,6 +430,7 @@ namespace Histacom2.OS.WinXPBad
             // classicStartMenuItem3
             // 
             this.classicStartMenuItem3.AutoSize = false;
+            this.classicStartMenuItem3.DoBackColorAdapt = false;
             this.classicStartMenuItem3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(56)))));
             this.classicStartMenuItem3.Image = global::Histacom2.Properties.Resources.WinXPMSN;
             this.classicStartMenuItem3.LayoutStyle = Histacom2.Engine.UI.ClassicStartMenuItemLayout.CloseTitle;
@@ -438,6 +442,7 @@ namespace Histacom2.OS.WinXPBad
             // classicStartMenuItem4
             // 
             this.classicStartMenuItem4.AutoSize = false;
+            this.classicStartMenuItem4.DoBackColorAdapt = false;
             this.classicStartMenuItem4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(56)))));
             this.classicStartMenuItem4.Image = global::Histacom2.Properties.Resources.WinXPMediaPlayer;
             this.classicStartMenuItem4.LayoutStyle = Histacom2.Engine.UI.ClassicStartMenuItemLayout.CloseTitle;
@@ -449,6 +454,7 @@ namespace Histacom2.OS.WinXPBad
             // classicStartMenuItem5
             // 
             this.classicStartMenuItem5.AutoSize = false;
+            this.classicStartMenuItem5.DoBackColorAdapt = false;
             this.classicStartMenuItem5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(56)))));
             this.classicStartMenuItem5.Image = global::Histacom2.Properties.Resources.WinXPMovieMaker;
             this.classicStartMenuItem5.LayoutStyle = Histacom2.Engine.UI.ClassicStartMenuItemLayout.CloseTitle;
@@ -456,6 +462,145 @@ namespace Histacom2.OS.WinXPBad
             this.classicStartMenuItem5.Size = new System.Drawing.Size(181, 40);
             this.classicStartMenuItem5.SubTitle = "Subtitle";
             this.classicStartMenuItem5.Text = "Windows Movie Maker";
+            // 
+            // classicStartMenuItem6
+            // 
+            this.classicStartMenuItem6.AutoSize = false;
+            this.classicStartMenuItem6.DoBackColorAdapt = false;
+            this.classicStartMenuItem6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(56)))));
+            this.classicStartMenuItem6.Image = global::Histacom2.Properties.Resources.WinXPTour;
+            this.classicStartMenuItem6.LayoutStyle = Histacom2.Engine.UI.ClassicStartMenuItemLayout.CloseTitle;
+            this.classicStartMenuItem6.Name = "classicStartMenuItem6";
+            this.classicStartMenuItem6.Size = new System.Drawing.Size(181, 40);
+            this.classicStartMenuItem6.SubTitle = "Subtitle";
+            this.classicStartMenuItem6.Text = "Tour Windows XP";
+            // 
+            // menuStrip2
+            // 
+            this.menuStrip2.AutoSize = false;
+            this.menuStrip2.BackgroundImage = global::Histacom2.Properties.Resources.WinXPStartMenuPlaces;
+            this.menuStrip2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.menuStrip2.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.classicStartMenuItem7,
+            this.classicStartMenuItem8,
+            this.classicStartMenuItem9,
+            this.classicStartMenuItem10,
+            this.classicStartMenuItem11,
+            this.toolStripMenuItem2,
+            this.classicStartMenuItem12,
+            this.classicStartMenuItem13,
+            this.toolStripMenuItem3});
+            this.menuStrip2.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
+            this.menuStrip2.Location = new System.Drawing.Point(191, 66);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Padding = new System.Windows.Forms.Padding(7, 7, 0, 2);
+            this.menuStrip2.Size = new System.Drawing.Size(187, 330);
+            this.menuStrip2.TabIndex = 14;
+            this.menuStrip2.Text = "menuStrip2";
+            // 
+            // classicStartMenuItem7
+            // 
+            this.classicStartMenuItem7.AutoSize = false;
+            this.classicStartMenuItem7.BackColor = System.Drawing.Color.White;
+            this.classicStartMenuItem7.BackgroundImage = global::Histacom2.Properties.Resources.WinXPStartMenuPlaces;
+            this.classicStartMenuItem7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.classicStartMenuItem7.DoBackColorAdapt = false;
+            this.classicStartMenuItem7.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classicStartMenuItem7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(36)))), ((int)(((byte)(106)))));
+            this.classicStartMenuItem7.Image = global::Histacom2.Properties.Resources.WinXPDocumentsSmall;
+            this.classicStartMenuItem7.LayoutStyle = Histacom2.Engine.UI.ClassicStartMenuItemLayout.CloseTitle;
+            this.classicStartMenuItem7.Name = "classicStartMenuItem7";
+            this.classicStartMenuItem7.Size = new System.Drawing.Size(180, 30);
+            this.classicStartMenuItem7.SubTitle = "Subtitle";
+            this.classicStartMenuItem7.Text = "My Documents";
+            // 
+            // classicStartMenuItem8
+            // 
+            this.classicStartMenuItem8.AutoSize = false;
+            this.classicStartMenuItem8.BackColor = System.Drawing.Color.White;
+            this.classicStartMenuItem8.BackgroundImage = global::Histacom2.Properties.Resources.WinXPStartMenuPlaces;
+            this.classicStartMenuItem8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.classicStartMenuItem8.DoBackColorAdapt = false;
+            this.classicStartMenuItem8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classicStartMenuItem8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(36)))), ((int)(((byte)(106)))));
+            this.classicStartMenuItem8.Image = global::Histacom2.Properties.Resources.WinXPRecentSmall;
+            this.classicStartMenuItem8.LayoutStyle = Histacom2.Engine.UI.ClassicStartMenuItemLayout.CloseTitle;
+            this.classicStartMenuItem8.Name = "classicStartMenuItem8";
+            this.classicStartMenuItem8.Size = new System.Drawing.Size(180, 30);
+            this.classicStartMenuItem8.SubTitle = "Subtitle";
+            this.classicStartMenuItem8.Text = "My Recent &Documents";
+            // 
+            // classicStartMenuItem9
+            // 
+            this.classicStartMenuItem9.AutoSize = false;
+            this.classicStartMenuItem9.BackColor = System.Drawing.Color.White;
+            this.classicStartMenuItem9.BackgroundImage = global::Histacom2.Properties.Resources.WinXPStartMenuPlaces;
+            this.classicStartMenuItem9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.classicStartMenuItem9.DoBackColorAdapt = false;
+            this.classicStartMenuItem9.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classicStartMenuItem9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(36)))), ((int)(((byte)(106)))));
+            this.classicStartMenuItem9.Image = global::Histacom2.Properties.Resources.WinXPPhotosSmall;
+            this.classicStartMenuItem9.LayoutStyle = Histacom2.Engine.UI.ClassicStartMenuItemLayout.CloseTitle;
+            this.classicStartMenuItem9.Name = "classicStartMenuItem9";
+            this.classicStartMenuItem9.Size = new System.Drawing.Size(180, 30);
+            this.classicStartMenuItem9.SubTitle = "Subtitle";
+            this.classicStartMenuItem9.Text = "My Pictures";
+            // 
+            // classicStartMenuItem10
+            // 
+            this.classicStartMenuItem10.AutoSize = false;
+            this.classicStartMenuItem10.BackColor = System.Drawing.Color.White;
+            this.classicStartMenuItem10.BackgroundImage = global::Histacom2.Properties.Resources.WinXPStartMenuPlaces;
+            this.classicStartMenuItem10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.classicStartMenuItem10.DoBackColorAdapt = false;
+            this.classicStartMenuItem10.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classicStartMenuItem10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(36)))), ((int)(((byte)(106)))));
+            this.classicStartMenuItem10.Image = global::Histacom2.Properties.Resources.WinXPMusicSmall;
+            this.classicStartMenuItem10.LayoutStyle = Histacom2.Engine.UI.ClassicStartMenuItemLayout.CloseTitle;
+            this.classicStartMenuItem10.Name = "classicStartMenuItem10";
+            this.classicStartMenuItem10.Size = new System.Drawing.Size(180, 30);
+            this.classicStartMenuItem10.SubTitle = "Subtitle";
+            this.classicStartMenuItem10.Text = "My Music";
+            // 
+            // classicStartMenuItem11
+            // 
+            this.classicStartMenuItem11.AutoSize = false;
+            this.classicStartMenuItem11.BackColor = System.Drawing.Color.White;
+            this.classicStartMenuItem11.BackgroundImage = global::Histacom2.Properties.Resources.WinXPStartMenuPlaces;
+            this.classicStartMenuItem11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.classicStartMenuItem11.DoBackColorAdapt = false;
+            this.classicStartMenuItem11.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classicStartMenuItem11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(36)))), ((int)(((byte)(106)))));
+            this.classicStartMenuItem11.Image = global::Histacom2.Properties.Resources.WinXPComputerSmall;
+            this.classicStartMenuItem11.LayoutStyle = Histacom2.Engine.UI.ClassicStartMenuItemLayout.CloseTitle;
+            this.classicStartMenuItem11.Name = "classicStartMenuItem11";
+            this.classicStartMenuItem11.Size = new System.Drawing.Size(180, 30);
+            this.classicStartMenuItem11.SubTitle = "Subtitle";
+            this.classicStartMenuItem11.Text = "My Computer";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.AutoSize = false;
+            this.toolStripMenuItem2.BackgroundImage = global::Histacom2.Properties.Resources.WinXPStartMenuPlacesSeparator1;
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(179, 8);
+            // 
+            // classicStartMenuItem12
+            // 
+            this.classicStartMenuItem12.AutoSize = false;
+            this.classicStartMenuItem12.BackColor = System.Drawing.Color.White;
+            this.classicStartMenuItem12.BackgroundImage = global::Histacom2.Properties.Resources.WinXPStartMenuPlaces;
+            this.classicStartMenuItem12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.classicStartMenuItem12.DoBackColorAdapt = false;
+            this.classicStartMenuItem12.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classicStartMenuItem12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(36)))), ((int)(((byte)(106)))));
+            this.classicStartMenuItem12.Image = global::Histacom2.Properties.Resources.WinXPControlPanelSmall;
+            this.classicStartMenuItem12.LayoutStyle = Histacom2.Engine.UI.ClassicStartMenuItemLayout.CloseTitle;
+            this.classicStartMenuItem12.Name = "classicStartMenuItem12";
+            this.classicStartMenuItem12.Size = new System.Drawing.Size(180, 30);
+            this.classicStartMenuItem12.SubTitle = "Subtitle";
+            this.classicStartMenuItem12.Text = "&Control Panel";
             // 
             // clockTimer
             // 
@@ -552,16 +697,28 @@ namespace Histacom2.OS.WinXPBad
             this.desktopupdate.Interval = 5000;
             this.desktopupdate.Tick += new System.EventHandler(this.desktopupdate_Tick);
             // 
-            // classicStartMenuItem6
+            // classicStartMenuItem13
             // 
-            this.classicStartMenuItem6.AutoSize = false;
-            this.classicStartMenuItem6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(56)))));
-            this.classicStartMenuItem6.Image = global::Histacom2.Properties.Resources.WinXPTour;
-            this.classicStartMenuItem6.LayoutStyle = Histacom2.Engine.UI.ClassicStartMenuItemLayout.CloseTitle;
-            this.classicStartMenuItem6.Name = "classicStartMenuItem6";
-            this.classicStartMenuItem6.Size = new System.Drawing.Size(181, 40);
-            this.classicStartMenuItem6.SubTitle = "Subtitle";
-            this.classicStartMenuItem6.Text = "Tour Windows XP";
+            this.classicStartMenuItem13.AutoSize = false;
+            this.classicStartMenuItem13.BackColor = System.Drawing.Color.White;
+            this.classicStartMenuItem13.BackgroundImage = global::Histacom2.Properties.Resources.WinXPStartMenuPlaces;
+            this.classicStartMenuItem13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.classicStartMenuItem13.DoBackColorAdapt = false;
+            this.classicStartMenuItem13.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classicStartMenuItem13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(36)))), ((int)(((byte)(106)))));
+            this.classicStartMenuItem13.Image = global::Histacom2.Properties.Resources.WinXPPrintersSmall;
+            this.classicStartMenuItem13.LayoutStyle = Histacom2.Engine.UI.ClassicStartMenuItemLayout.CloseTitle;
+            this.classicStartMenuItem13.Name = "classicStartMenuItem13";
+            this.classicStartMenuItem13.Size = new System.Drawing.Size(180, 30);
+            this.classicStartMenuItem13.SubTitle = "Subtitle";
+            this.classicStartMenuItem13.Text = "Printers and Faxes";
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.AutoSize = false;
+            this.toolStripMenuItem3.BackgroundImage = global::Histacom2.Properties.Resources.WinXPStartMenuPlacesSeparator1;
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(179, 8);
             // 
             // WindowsXPBad
             // 
@@ -602,6 +759,8 @@ namespace Histacom2.OS.WinXPBad
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
             this.rightclickbackproperties.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -643,7 +802,6 @@ namespace Histacom2.OS.WinXPBad
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox14;
         private Engine.UI.ClassicLabel classicLabel1;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -654,5 +812,15 @@ namespace Histacom2.OS.WinXPBad
         private Engine.UI.ClassicStartMenuItem classicStartMenuItem4;
         private Engine.UI.ClassicStartMenuItem classicStartMenuItem5;
         private Engine.UI.ClassicStartMenuItem classicStartMenuItem6;
+        private System.Windows.Forms.MenuStrip menuStrip2;
+        private Engine.UI.ClassicStartMenuItem classicStartMenuItem7;
+        private Engine.UI.ClassicStartMenuItem classicStartMenuItem8;
+        private Engine.UI.ClassicStartMenuItem classicStartMenuItem9;
+        private Engine.UI.ClassicStartMenuItem classicStartMenuItem10;
+        private Engine.UI.ClassicStartMenuItem classicStartMenuItem11;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private Engine.UI.ClassicStartMenuItem classicStartMenuItem12;
+        private Engine.UI.ClassicStartMenuItem classicStartMenuItem13;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
     }
 }

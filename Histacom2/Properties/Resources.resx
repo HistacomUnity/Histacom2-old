@@ -2023,6 +2023,15 @@
   <data name="WinXPTaskbarTime" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WinClassic\WinXPTaskbarTime.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="WinXPComputerSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\WinXPComputerSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinXPControlPanelSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\WinXPControlPanelSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinXPDocumentsSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\WinXPDocumentsSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="WinXPMediaPlayer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WinClassic\WinXPMediaPlayer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -2032,8 +2041,23 @@
   <data name="WinXPMSN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WinClassic\WinXPMSN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="WinXPMusicSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\WinXPMusicSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinXPPhotosSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\WinXPPhotosSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinXPPrintersSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\WinXPPrintersSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinXPRecentSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\WinXPRecent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="WinXPStartMenuFavoritesSeparator1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WinClassic\WinXPStartMenuFavoritesSeparator1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinXPStartMenuPlacesSeparator1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\WinXPStartMenuPlacesSeparator1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="WinXPTour" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WinClassic\WinXPTour.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

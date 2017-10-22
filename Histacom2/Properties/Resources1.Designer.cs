@@ -2056,6 +2056,36 @@ namespace Histacom2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap WinXPComputerSmall {
+            get {
+                object obj = ResourceManager.GetObject("WinXPComputerSmall", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WinXPControlPanelSmall {
+            get {
+                object obj = ResourceManager.GetObject("WinXPControlPanelSmall", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WinXPDocumentsSmall {
+            get {
+                object obj = ResourceManager.GetObject("WinXPDocumentsSmall", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap WinXPIE6 {
             get {
                 object obj = ResourceManager.GetObject("WinXPIE6", resourceCulture);
@@ -2096,9 +2126,49 @@ namespace Histacom2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap WinXPMusicSmall {
+            get {
+                object obj = ResourceManager.GetObject("WinXPMusicSmall", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap WinXPOutlook {
             get {
                 object obj = ResourceManager.GetObject("WinXPOutlook", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WinXPPhotosSmall {
+            get {
+                object obj = ResourceManager.GetObject("WinXPPhotosSmall", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WinXPPrintersSmall {
+            get {
+                object obj = ResourceManager.GetObject("WinXPPrintersSmall", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WinXPRecentSmall {
+            get {
+                object obj = ResourceManager.GetObject("WinXPRecentSmall", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2209,6 +2279,16 @@ namespace Histacom2.Properties {
         public static System.Drawing.Bitmap WinXPStartMenuPlaces {
             get {
                 object obj = ResourceManager.GetObject("WinXPStartMenuPlaces", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WinXPStartMenuPlacesSeparator1 {
+            get {
+                object obj = ResourceManager.GetObject("WinXPStartMenuPlacesSeparator1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
