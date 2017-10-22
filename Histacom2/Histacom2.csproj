@@ -650,6 +650,13 @@
   <ItemGroup>
     <Content Include="Icon128x.ico" />
     <Content Include="Resources\12padams_EULA.txt" />
+    <None Include="Resources\WinClassic\WinXPTour.png" />
+    <None Include="Resources\WinClassic\WinXPMovieMaker.png" />
+    <None Include="Resources\WinClassic\WinXPMediaPlayer.png" />
+    <None Include="Resources\WinClassic\WinXPMSN.png" />
+    <None Include="Resources\WinClassic\WinXPStartMenuFavoritesSeparator1.png" />
+    <None Include="Resources\WinClassic\WinXPOutlook.png" />
+    <None Include="Resources\WinClassic\WinXPIE6.png" />
     <None Include="Resources\WinClassic\WinXPStartMenuCenterDivider.png" />
     <None Include="Resources\WinClassic\WinXPStartMenuPlaces.png" />
     <None Include="Resources\WinClassic\WinXPStartMenuBottomRight.png" />
@@ -819,6 +826,7 @@
     <None Include="Resources\WinClassic\LauncherSideBar.png" />
     <None Include="Resources\WinClassic\TimeDistorter1.png" />
     <None Include="Resources\WinClassic\TimeDistorter1Icon.png" />
+    <None Include="Resources\WinClassic\sliverwhite.png" />
     <Content Include="Resources\WinClassic\TrueColor.png" />
     <None Include="Resources\WinClassic\Win95Info.png" />
     <None Include="Resources\WinClassic\Win95Error.png" />

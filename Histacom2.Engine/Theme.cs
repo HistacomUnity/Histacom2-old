@@ -173,6 +173,11 @@ namespace Histacom2.Engine
         {
             startSound = Properties.Resources.WinBadXPStart;
 
+            threeDObjectsColor = Color.White;
+
+            selectedBackColor = Color.FromArgb(51, 102, 204);
+            selectedTextColor = Color.White;
+
             defaultWallpaper = Properties.Resources.WinXPWallpaper;
             themeName = "badxp";
         }

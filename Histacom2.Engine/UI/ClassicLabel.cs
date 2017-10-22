@@ -36,8 +36,6 @@ namespace Histacom2.Engine.UI
         {
             get
             {
-                // add the drop shadow flag for automatically drawing
-                // a drop shadow around the form
                 CreateParams cp = base.CreateParams;
                 if (DropShadow) cp.ClassStyle |= CS_DROPSHADOW;
                 return cp;
