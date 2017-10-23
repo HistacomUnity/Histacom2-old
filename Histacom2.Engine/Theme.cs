@@ -171,9 +171,9 @@ namespace Histacom2.Engine
         }
     }
 
-    public class Default95Plus : Theme
+    public class Default95PlusTheme : Theme
     {
-        public Default95Plus()
+        public Default95PlusTheme()
         {
             startSound = Properties.Resources.Win95PlusDefaultStop;
             stopSound = Properties.Resources.Win95PlusDefaultStop;
@@ -204,9 +204,9 @@ namespace Histacom2.Engine
         }
     }
 
-    public class GoldenEra : Theme
+    public class GoldenEraTheme : Theme
     {
-        public GoldenEra()
+        public GoldenEraTheme()
         {
             startSound = Properties.Resources.Win95PlusGoldenEraStop;
             stopSound = Properties.Resources.Win95PlusGoldenEraStop;
@@ -238,9 +238,9 @@ namespace Histacom2.Engine
     }
 
 
-    public class Leo : Theme
+    public class LeoTheme : Theme
     {
-        public Leo()
+        public LeoTheme()
         {
             startSound = Properties.Resources.Win95PlusLeoStart;
             stopSound = Properties.Resources.Win95PlusLeoStart;
@@ -271,9 +271,9 @@ namespace Histacom2.Engine
         }
     }
 
-    public class Mystery : Theme
+    public class MysteryTheme : Theme
     {
-        public Mystery()
+        public MysteryTheme()
         {
             startSound = Properties.Resources.Win95PlusMysteryStart;
             stopSound = Properties.Resources.Win95PlusMysteryStop;
@@ -304,9 +304,9 @@ namespace Histacom2.Engine
         }
     }
 
-    public class Nature : Theme
+    public class NatureTheme : Theme
     {
-        public Nature()
+        public NatureTheme()
         {
             startSound = Properties.Resources.Win95PlusNatureStart;
             stopSound = Properties.Resources.Win95PlusNatureStop;
@@ -337,9 +337,9 @@ namespace Histacom2.Engine
         }
     }
 
-    public class Science : Theme
+    public class ScienceTheme : Theme
     {
-        public Science()
+        public ScienceTheme()
         {
             startSound = Properties.Resources.Win95PlusScienceStart;
             stopSound = Properties.Resources.Win95PlusScienceStop;
@@ -370,9 +370,9 @@ namespace Histacom2.Engine
         }
     }
 
-    public class Sports : Theme
+    public class SportsTheme : Theme
     {
-        public Sports()
+        public SportsTheme()
         {
             startSound = Properties.Resources.Win95PlusSportsStart;
             stopSound = Properties.Resources.Win95PlusSportsStop;
@@ -403,9 +403,9 @@ namespace Histacom2.Engine
         }
     }
 
-    public class The60 : Theme
+    public class The60Theme : Theme
     {
-        public The60()
+        public The60Theme()
         {
             startSound = Properties.Resources.Win95PlusThe60Start;
             stopSound = Properties.Resources.Win95PlusThe60Stop;
@@ -436,9 +436,9 @@ namespace Histacom2.Engine
         }
     }
 
-    public class Travel : Theme
+    public class TravelTheme : Theme
     {
-        public Travel()
+        public TravelTheme()
         {
             startSound = Properties.Resources.Win95PlusTravelStart;
             stopSound = Properties.Resources.Win95PlusTravelStop;
@@ -469,9 +469,9 @@ namespace Histacom2.Engine
         }
     }
 
-    public class MoreWin : Default95Plus
+    public class MoreWinTheme : Default95PlusTheme
     {
-        public MoreWin()
+        public MoreWinTheme()
         {
             defaultWallpaper = Properties.Resources.Win95PlusMoreWin;
             themeName = "MoreWin";

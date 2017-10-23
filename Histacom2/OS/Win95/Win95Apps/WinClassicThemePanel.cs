@@ -150,6 +150,56 @@ namespace Histacom2.OS.Win95.Win95Apps
                     SaveSystem.currentTheme = new InsideComputerTheme();
                     TitleScreen.frm95.desktopicons.BackgroundImage = new Bitmap(Properties.Resources.ICTheme_BG, TitleScreen.frm95.Width, TitleScreen.frm95.Height);
                     break;
+                case "Windows 95 Default Plus":
+                    SaveSystem.CurrentSave.ThemeName = "default95plus";
+                    SaveSystem.currentTheme = new Default95PlusTheme();
+                    TitleScreen.frm95.desktopicons.BackgroundImage = null;
+                    break;
+                case "The Golden Era":
+                    SaveSystem.CurrentSave.ThemeName = "goldenera";
+                    SaveSystem.currentTheme = new GoldenEraTheme();
+                    TitleScreen.frm95.desktopicons.BackgroundImage = null;
+                    break;
+                case "Leonardo da Vinci":
+                    SaveSystem.CurrentSave.ThemeName = "Leo";
+                    SaveSystem.currentTheme = new LeoTheme();
+                    TitleScreen.frm95.desktopicons.BackgroundImage = null;
+                    break;
+                case "Mystery":
+                    SaveSystem.CurrentSave.ThemeName = "Mystery";
+                    SaveSystem.currentTheme = new MysteryTheme();
+                    TitleScreen.frm95.desktopicons.BackgroundImage = null;
+                    break;
+                case "Nature":
+                    SaveSystem.CurrentSave.ThemeName = "Nature";
+                    SaveSystem.currentTheme = new NatureTheme();
+                    TitleScreen.frm95.desktopicons.BackgroundImage = null;
+                    break;
+                case "Science":
+                    SaveSystem.CurrentSave.ThemeName = "Science";
+                    SaveSystem.currentTheme = new ScienceTheme();
+                    TitleScreen.frm95.desktopicons.BackgroundImage = null;
+                    break;
+                case "Sports":
+                    SaveSystem.CurrentSave.ThemeName = "Sports";
+                    SaveSystem.currentTheme = new SportsTheme();
+                    TitleScreen.frm95.desktopicons.BackgroundImage = null;
+                    break;
+                case "The 60's USA":
+                    SaveSystem.CurrentSave.ThemeName = "The60";
+                    SaveSystem.currentTheme = new The60Theme();
+                    TitleScreen.frm95.desktopicons.BackgroundImage = null;
+                    break;
+                case "Travel":
+                    SaveSystem.CurrentSave.ThemeName = "Travel";
+                    SaveSystem.currentTheme = new TravelTheme();
+                    TitleScreen.frm95.desktopicons.BackgroundImage = null;
+                    break;
+                case "More Windows":
+                    SaveSystem.CurrentSave.ThemeName = "MoreWin";
+                    SaveSystem.currentTheme = new MoreWinTheme();
+                    TitleScreen.frm95.desktopicons.BackgroundImage = null;
+                    break;
             }
             foreach (Form f in Application.OpenForms)
             {
