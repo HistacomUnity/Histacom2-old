@@ -118,9 +118,8 @@ namespace Histacom2.Engine
             pfc.AddFontFile(SaveSystem.GameDirectory + "\\Data\\LeviWindows.ttf");
             Font fnt = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
             app.fnt = fnt;
-            app.Title.Font = new Font(pfc.Families[0], 16F, FontStyle.Bold, GraphicsUnit.Point, ((0)));
             // Setup UC
-            content.Parent = app.programContent;
+            content.Parent = app.flowLayoutPanel1;
             content.BringToFront();
             content.Dock = DockStyle.Fill;
             app.progContent = content;
