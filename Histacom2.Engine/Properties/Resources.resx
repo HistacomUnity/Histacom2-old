@@ -271,4 +271,232 @@
   <data name="WinXPWallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WinXPWallpaper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Win95PlusDefaultAstrisk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusdefaultastrisk.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusDefaultCritStop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusdefaultcritstop.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusDefaultExclamation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusdefaultexclamation.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusDefaultProgError" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusdefaultprogerror.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusDefaultQuestion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusdefaultquestion.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusDefaultStop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusdefaultstop.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusDefaultWallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusdefaultwallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Win95PlusGoldenEraAstrisk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusgoldeneraastrisk.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusGoldenEraCritStop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusgoldeneracritstop.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusGoldenEraExclamation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusgoldeneraexclamation.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusGoldenEraProgError" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusgoldeneraprogerror.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusGoldenEraQuestion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusgoldeneraquestion.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusGoldenEraStart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusgoldenerastart.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusGoldenEraStop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusgoldenerastop.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusGoldenEraWallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusgoldenerawallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Win95PlusInsideComputerCritStop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusinsidecomputercritstop.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusInsideComputerExclamation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusinsidecomputerexclamation.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusInsideComputerProgError" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusinsidecomputerprogerror.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusInsideComputerQuestion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusinsidecomputerquestion.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusInsideComputerWallpaper1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusinsidecomputerwallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Win95PlusLeoAsterisk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusleoasterisk.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusLeoCritStop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusleocritstop.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusLeoExclamation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusleoexclamation.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusLeoProgError" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusleoprogerror.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusLeoQuestion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusleoquestion.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusLeoStart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusleostart.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusLeoWallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusleowallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Win95PlusMoreWin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusmorewin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Win95PlusMysteryAstrisk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusmysteryastrisk.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusMysteryCritStop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusmysterycritstop.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusMysteryExclamation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusmysteryexclamation.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusMysteryProgError" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusmysteryprogerror.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusMysteryQuestion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusmysteryquestion.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusMysteryStart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusmysterystart.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusMysteryStop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusmysterystop.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusMysteryWallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusmysterywallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Win95PlusNatureAstrisk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusnatureastrisk.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusNatureCritStop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusnaturecritstop.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusNatureExclamation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusnatureexclamation.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusNatureProgError" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusnatureprogerror.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusNatureQuestion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusnaturequestion.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusNatureStart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusnaturestart.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusNatureStop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusnaturestop.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusNatureWallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusnaturewallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Win95PlusScienceAsterisk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusscienceasterisk.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusScienceCritStop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plussciencecritstop.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusScienceExclamation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusscienceexclamation.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusScienceProgError" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusscienceprogerror.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusScienceQuestion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plussciencequestion.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusScienceStart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plussciencestart.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusScienceStop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plussciencestop.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusScienceWallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plussciencewallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Win95PlusSportsAstrisk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plussportsastrisk.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusSportsCritStop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plussportscritstop.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusSportsExclamation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plussportsexclamation.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusSportsProgError" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plussportsprogerror.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusSportsQuestion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plussportsquestion.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusSportsStart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plussportsstart.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusSportsStop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plussportsstop.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusSportsWallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plussportswallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Win95PlusThe60Asterisk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusthe60asterisk.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusThe60CritStop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusthe60critstop.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusThe60Exclamation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusthe60exclamation.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusThe60ProgError" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusthe60progerror.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusThe60Question" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusthe60question.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusThe60Start" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusthe60start.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusThe60Stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusthe60stop.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusThe60Wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plusthe60wallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Win95PlusTravelAsterisk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plustravelasterisk.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusTravelCritStop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plustravelcritstop.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusTravelExclamation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plustravelexclamation.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusTravelProgError" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plustravelprogerror.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusTravelQuestion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plustravelquestion.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusTravelStart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plustravelstart.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusTravelStop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plustravelstop.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Win95PlusTravelWallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\win95plustravelwallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
