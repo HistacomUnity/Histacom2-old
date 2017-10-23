@@ -53,8 +53,18 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Default",
+            "Windows 95 Default Plus",
             "Dangerous Creatures",
-            "Inside Your Computer"});
+            "Inside Your Computer",
+            "Leonardo da Vinci",
+            "More Windows",
+            "Mystery",
+            "Nature",
+            "Science",
+            "Sports",
+            "The 60\'s USA",
+            "The Golden Era",
+            "Travel"});
             this.comboBox1.Location = new System.Drawing.Point(15, 201);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(269, 21);
@@ -73,6 +83,13 @@
             // 
             // applyButton
             // 
+            this.applyButton.AdaptBackColorWithTheme = true;
+            this.applyButton.AdaptFontWithTheme = true;
+            this.applyButton.AdaptForeColorWithTheme = true;
+            this.applyButton.BackColor = System.Drawing.Color.Silver;
+            this.applyButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.applyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.applyButton.ForeColor = System.Drawing.Color.Black;
             this.applyButton.Location = new System.Drawing.Point(209, 245);
             this.applyButton.Name = "applyButton";
             this.applyButton.Size = new System.Drawing.Size(75, 23);
@@ -82,6 +99,13 @@
             // 
             // cancelButton
             // 
+            this.cancelButton.AdaptBackColorWithTheme = true;
+            this.cancelButton.AdaptFontWithTheme = true;
+            this.cancelButton.AdaptForeColorWithTheme = true;
+            this.cancelButton.BackColor = System.Drawing.Color.Silver;
+            this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.cancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.cancelButton.ForeColor = System.Drawing.Color.Black;
             this.cancelButton.Location = new System.Drawing.Point(128, 245);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(75, 23);
@@ -91,6 +115,13 @@
             // 
             // okButton
             // 
+            this.okButton.AdaptBackColorWithTheme = true;
+            this.okButton.AdaptFontWithTheme = true;
+            this.okButton.AdaptForeColorWithTheme = true;
+            this.okButton.BackColor = System.Drawing.Color.Silver;
+            this.okButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.okButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.okButton.ForeColor = System.Drawing.Color.Black;
             this.okButton.Location = new System.Drawing.Point(47, 245);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(75, 23);

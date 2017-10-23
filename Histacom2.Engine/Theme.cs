@@ -473,7 +473,7 @@ namespace Histacom2.Engine
     {
         public MoreWin()
         {
-            defaultWallpaper = Properties.Resources.Win95PlusMoreWinWallpaper;
+            defaultWallpaper = Properties.Resources.Win95PlusMoreWin;
             themeName = "MoreWin";
         }
     }

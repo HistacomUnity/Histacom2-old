@@ -51,6 +51,37 @@ namespace Histacom2.OS.Win95.Win95Apps
                 case "insidepc":
                     comboBox1.SelectedItem = "Inside Your Computer";
                     break;
+                case "default95plus":
+                    comboBox1.SelectedItem = "Windows 95 Default Plus";
+                    break;
+                case "goldenera":
+                    comboBox1.SelectedItem = "The Golden Era";
+                    break;
+                case "Leo":
+                    comboBox1.SelectedItem = "Leonardo da Vinci";
+                    break;
+                case "Mystery":
+                    comboBox1.SelectedItem = "Mystery";
+                    break;
+                case "Nature":
+                    comboBox1.SelectedItem = "Nature";
+                    break;
+                case "Science":
+                    comboBox1.SelectedItem = "Science";
+                    break;
+                case "Sports":
+                    comboBox1.SelectedItem = "Sports";
+                    break;
+                case "The60":
+                    comboBox1.SelectedItem = "The 60's USA";
+                    break;
+                case "Travel":
+                    comboBox1.SelectedItem = "Travel";
+                    break;
+                case "MoreWin":
+                    comboBox1.SelectedItem = "More Windows";
+                    break;
+
             }
         }
 
