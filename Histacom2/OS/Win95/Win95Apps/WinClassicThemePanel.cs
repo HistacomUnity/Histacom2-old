@@ -35,6 +35,36 @@ namespace Histacom2.OS.Win95.Win95Apps
                 case "Inside Your Computer":
                     pictureBox2.BackgroundImage = Properties.Resources.ICTheme_BG;
                     break;
+                case "Windows 95 Default Plus":
+                    pictureBox2.BackgroundImage = Properties.Resources.Win95PlusDefaultWallpaper;
+                    break;
+                case "The Golden Era":
+                    pictureBox2.BackgroundImage = Properties.Resources.Win95PlusGoldenEraWallpaper;
+                    break;
+                case "Leonardo da Vinci":
+                    pictureBox2.BackgroundImage = Properties.Resources.Win95PlusLeoWallpaper;
+                    break;
+                case "Mystery":
+                    pictureBox2.BackgroundImage = Properties.Resources.Win95PlusMysteryWallpaper;
+                    break;
+                case "Nature":
+                    pictureBox2.BackgroundImage = Properties.Resources.Win95PlusNatureWallpaper;
+                    break;
+                case "Science":
+                    pictureBox2.BackgroundImage = Properties.Resources.Win95PlusScienceWallpaper;
+                    break;
+                case "Sports":
+                    pictureBox2.BackgroundImage = Properties.Resources.Win95PlusSportsWallpaper;
+                    break;
+                case "The 60's USA":
+                    pictureBox2.BackgroundImage = Properties.Resources.Win95PlusThe60Wallpaper;
+                    break;
+                case "Travel":
+                    pictureBox2.BackgroundImage = Properties.Resources.Win95PlusTravelWallpaper;
+                    break;
+                case "More Windows":
+                    pictureBox2.BackgroundImage = Properties.Resources.Win95PlusMoreWin;
+                    break;
             }
         }
 
