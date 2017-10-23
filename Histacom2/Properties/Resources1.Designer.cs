@@ -1329,6 +1329,116 @@ namespace Histacom2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Win95PlusDangerousCreaturesWallpaper {
+            get {
+                object obj = ResourceManager.GetObject("Win95PlusDangerousCreaturesWallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Win95PlusDefaultWallpaper {
+            get {
+                object obj = ResourceManager.GetObject("Win95PlusDefaultWallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Win95PlusGoldenEraWallpaper {
+            get {
+                object obj = ResourceManager.GetObject("Win95PlusGoldenEraWallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Win95PlusLeoWallpaper {
+            get {
+                object obj = ResourceManager.GetObject("Win95PlusLeoWallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Win95PlusMoreWin {
+            get {
+                object obj = ResourceManager.GetObject("Win95PlusMoreWin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Win95PlusMysteryWallpaper {
+            get {
+                object obj = ResourceManager.GetObject("Win95PlusMysteryWallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Win95PlusNatureWallpaper {
+            get {
+                object obj = ResourceManager.GetObject("Win95PlusNatureWallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Win95PlusScienceWallpaper {
+            get {
+                object obj = ResourceManager.GetObject("Win95PlusScienceWallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Win95PlusSportsWallpaper {
+            get {
+                object obj = ResourceManager.GetObject("Win95PlusSportsWallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Win95PlusThe60Wallpaper {
+            get {
+                object obj = ResourceManager.GetObject("Win95PlusThe60Wallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Win95PlusTravelWallpaper {
+            get {
+                object obj = ResourceManager.GetObject("Win95PlusTravelWallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Win95PrintersFolder {
             get {
                 object obj = ResourceManager.GetObject("Win95PrintersFolder", resourceCulture);

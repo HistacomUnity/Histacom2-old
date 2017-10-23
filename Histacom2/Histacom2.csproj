@@ -822,6 +822,17 @@
     <None Include="Resources\WinClassicRtfFile.png" />
     <None Include="Resources\WinClassicNotepad.png" />
     <None Include="Resources\Win95Error.png" />
+    <None Include="Resources\win95plusdangerouscreatureswallpaper.jpg" />
+    <None Include="Resources\win95plusdefaultwallpaper.jpg" />
+    <None Include="Resources\win95plusgoldenerawallpaper.jpg" />
+    <None Include="Resources\win95plusleowallpaper.jpg" />
+    <None Include="Resources\win95plusmorewin.jpg" />
+    <None Include="Resources\win95plusmysterywallpaper.jpg" />
+    <None Include="Resources\win95plusnaturewallpaper.jpg" />
+    <None Include="Resources\win95plussciencewallpaper.jpg" />
+    <None Include="Resources\win95plussportswallpaper.jpg" />
+    <None Include="Resources\win95plusthe60wallpaper.jpg" />
+    <None Include="Resources\win95plustravelwallpaper.jpg" />
     <Content Include="Resources\WinClassic\16Color.png" />
     <Content Include="Resources\WinClassic\256Color.png" />
     <None Include="Resources\WinClassic\tada.wav" />
