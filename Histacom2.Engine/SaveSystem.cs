@@ -726,6 +726,36 @@ namespace Histacom2.Engine
                 case "badxp":
                     currentTheme = new BadXPTheme();
                     break;
+                case "default95plus":
+                    currentTheme = new Default95PlusTheme();
+                    break;
+                case "goldenera":
+                    currentTheme = new GoldenEraTheme();
+                    break;
+                case "Leo":
+                    currentTheme = new LeoTheme();
+                    break;
+                case "Mystery":
+                    currentTheme = new MysteryTheme();
+                    break;
+                case "Nature":
+                    currentTheme = new NatureTheme();
+                    break;
+                case "Science":
+                    currentTheme = new ScienceTheme();
+                    break;
+                case "Sports":
+                    currentTheme = new SportsTheme();
+                    break;
+                case "The60":
+                    currentTheme = new The60Theme();
+                    break;
+                case "Travel":
+                    currentTheme = new TravelTheme();
+                    break;
+                case "MoreWin":
+                    currentTheme = new MoreWinTheme();
+                    break;
             }
         }
     }
