@@ -347,6 +347,7 @@
     <Compile Include="OS\Win98\Win98Apps\WinClassicWindowsExplorer.Designer.cs">
       <DependentUpon>WinClassicWindowsExplorer.cs</DependentUpon>
     </Compile>
+    <Compile Include="OS\WinXPBad\Story\Hack4.cs" />
     <Compile Include="OS\WinXPBad\WinXPBad.cs">
       <SubType>Form</SubType>
     </Compile>

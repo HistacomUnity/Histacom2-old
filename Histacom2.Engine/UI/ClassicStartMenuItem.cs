@@ -75,7 +75,7 @@ namespace Histacom2.Engine.UI
             if (!Selected) {
                 switch (layout) {
                     case ClassicStartMenuItemLayout.DistancedTitle:
-                        e.Graphics.DrawString(Text, Font, new SolidBrush(ForeColor), imgWidth + 6, 11, sf);
+                        e.Graphics.DrawString(Text, Font, new SolidBrush(ForeColor), imgWidth + 6, getYForString(), sf);
                         break;
                     case ClassicStartMenuItemLayout.CloseTitle:
                         e.Graphics.DrawString(Text, Font, new SolidBrush(ForeColor), imgWidth + 2, getYForString(), sf);
@@ -99,7 +99,7 @@ namespace Histacom2.Engine.UI
                     switch (layout)
                     {
                         case ClassicStartMenuItemLayout.DistancedTitle:
-                            e.Graphics.DrawString(Text, Font, new SolidBrush(SaveSystem.currentTheme.selectedTextColor), imgWidth + 6, 11, sf);
+                            e.Graphics.DrawString(Text, Font, new SolidBrush(SaveSystem.currentTheme.selectedTextColor), imgWidth + 6, getYForString(), sf);
                             break;
                         case ClassicStartMenuItemLayout.CloseTitle:
                             e.Graphics.DrawString(Text, Font, new SolidBrush(SaveSystem.currentTheme.selectedTextColor), imgWidth + 2, getYForString(), sf);

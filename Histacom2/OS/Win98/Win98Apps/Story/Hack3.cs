@@ -166,10 +166,15 @@ namespace Histacom2.OS.Win98.Win98Apps.Story
             await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Hide();
             await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Show(); // 10.84
             await Task.Delay(3000);
-            /*if (close_everything_.count2000 == -169)
-                MyProject.Forms.Windowsxp2002damaged.Show();
-            if (close_everything_.count2000 != -170)
-                return;*/
+
+            SaveSystem.CurrentSave.CurrentOS = "xpbad";
+            SaveSystem.currentTheme = new BadXPTheme();
+            SaveSystem.CurrentSave.ThemeName = "badxp";
+            TitleScreen.frm98.distort.ParentForm.Close();
+            foreach (Form frm in Application.OpenForms) if (frm is WinClassic) frm.Close();
+            Program.title.StartGame();
+            TitleScreen.frm98.Close();
+            return;
         }
     }
 }
