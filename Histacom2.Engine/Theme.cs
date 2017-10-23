@@ -146,6 +146,10 @@ namespace Histacom2.Engine
             stopSound = Properties.Resources.Win95PlusInsideComputerStop;
 
             asteriskSound = Properties.Resources.Win95PlusInsideComputerAsterisk;
+            critStopSound = Properties.Resources.Win95PlusInsideComputerCritStop;
+            exclamationSound = Properties.Resources.Win95PlusInsideComputerExclamation;
+            progErrorSound = Properties.Resources.Win95PlusInsideComputerProgError;
+            questionSound = Properties.Resources.Win95PlusInsideComputerQuestion;
 
             threeDObjectsColor = Color.FromArgb(169, 200, 169);
             threeDObjectsTextColor = Color.Black;
@@ -164,6 +168,313 @@ namespace Histacom2.Engine
 
             defaultWallpaper = Properties.Resources.Win95PlusInsideComputerWallpaper;
             themeName = "insidepc";
+        }
+    }
+
+    public class Default95Plus : Theme
+    {
+        public Default95Plus()
+        {
+            startSound = Properties.Resources.Win95PlusDefaultStop;
+            stopSound = Properties.Resources.Win95PlusDefaultStop;
+
+            asteriskSound = Properties.Resources.Win95PlusDefaultAstrisk;
+            critStopSound = Properties.Resources.Win95PlusDefaultCritStop;
+            exclamationSound = Properties.Resources.Win95PlusDefaultExclamation;
+            progErrorSound = Properties.Resources.Win95PlusDefaultProgError;
+            questionSound = Properties.Resources.Win95PlusDefaultQuestion;
+
+            threeDObjectsColor = Color.Silver;
+            threeDObjectsTextColor = Color.Black;
+
+            buttonFont = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular);
+
+            windowColor = Color.White;
+
+            activeTitleBarColor = Color.Navy;
+            activeTitleTextColor = Color.White;
+            inactiveTitleBarColor = Color.Gray;
+            inactiveTitleTextColor = Color.Silver;
+
+            selectedBackColor = Color.Navy;
+            selectedTextColor = Color.White;
+
+            defaultWallpaper = Properties.Resources.Win95PlusInsideComputerWallpaper;
+            themeName = "default95plus";
+        }
+    }
+
+    public class GoldenEra : Theme
+    {
+        public GoldenEra()
+        {
+            startSound = Properties.Resources.Win95PlusGoldenEraStop;
+            stopSound = Properties.Resources.Win95PlusGoldenEraStop;
+
+            asteriskSound = Properties.Resources.Win95PlusGoldenEraAstrisk;
+            critStopSound = Properties.Resources.Win95PlusGoldenEraCritStop;
+            exclamationSound = Properties.Resources.Win95PlusGoldenEraExclamation;
+            progErrorSound = Properties.Resources.Win95PlusGoldenEraProgError;
+            questionSound = Properties.Resources.Win95PlusGoldenEraQuestion;
+
+            threeDObjectsColor = Color.FromArgb(184, 200, 184);
+            threeDObjectsTextColor = Color.Black;
+
+            buttonFont = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular);
+
+            windowColor = Color.FromArgb(225, 248, 224);
+
+            activeTitleBarColor = Color.FromArgb(216, 112, 96);
+            activeTitleTextColor = Color.FromArgb(255, 248, 224);
+            inactiveTitleBarColor = Color.FromArgb(112, 143, 112);
+            inactiveTitleTextColor = Color.FromArgb(0, 0, 0);
+
+            selectedBackColor = Color.FromArgb(128 ,136, 168);
+            selectedTextColor = Color.FromArgb(225,248, 224);
+
+            defaultWallpaper = Properties.Resources.Win95PlusGoldenEraWallpaper;
+            themeName = "goldenera";
+        }
+    }
+
+
+    public class Leo : Theme
+    {
+        public Leo()
+        {
+            startSound = Properties.Resources.Win95PlusLeoStart;
+            stopSound = Properties.Resources.Win95PlusLeoStart;
+
+            asteriskSound = Properties.Resources.Win95PlusLeoAsterisk;
+            critStopSound = Properties.Resources.Win95PlusLeoCritStop;
+            exclamationSound = Properties.Resources.Win95PlusLeoExclamation;
+            progErrorSound = Properties.Resources.Win95PlusLeoProgError;
+            questionSound = Properties.Resources.Win95PlusLeoQuestion;
+
+            threeDObjectsColor = Color.FromArgb(191, 165, 159);
+            threeDObjectsTextColor = Color.Black;
+
+            buttonFont = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular);
+
+            windowColor = Color.White;
+
+            activeTitleBarColor = Color.FromArgb(128, 0, 0);
+            activeTitleTextColor = Color.FromArgb(225, 255, 255);
+            inactiveTitleBarColor = Color.FromArgb(139, 101, 92);
+            inactiveTitleTextColor = Color.FromArgb(223, 210, 208);
+
+            selectedBackColor = Color.FromArgb(128, 0, 0);
+            selectedTextColor = Color.FromArgb(225, 255, 255);
+
+            defaultWallpaper = Properties.Resources.Win95PlusLeoWallpaper;
+            themeName = "Leo";
+        }
+    }
+
+    public class Mystery : Theme
+    {
+        public Mystery()
+        {
+            startSound = Properties.Resources.Win95PlusMysteryStart;
+            stopSound = Properties.Resources.Win95PlusMysteryStop;
+
+            asteriskSound = Properties.Resources.Win95PlusMysteryAstrisk;
+            critStopSound = Properties.Resources.Win95PlusMysteryCritStop;
+            exclamationSound = Properties.Resources.Win95PlusMysteryExclamation;
+            progErrorSound = Properties.Resources.Win95PlusMysteryProgError;
+            questionSound = Properties.Resources.Win95PlusMysteryQuestion;
+
+            threeDObjectsColor = Color.FromArgb(104, 120, 104);
+            threeDObjectsTextColor = Color.Black;
+
+            buttonFont = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular);
+
+            windowColor = Color.FromArgb(225, 255, 240);
+
+            activeTitleBarColor = Color.FromArgb(80, 56, 64);
+            activeTitleTextColor = Color.FromArgb(255, 255, 240);
+            inactiveTitleBarColor = Color.FromArgb(72, 80, 72);
+            inactiveTitleTextColor = Color.FromArgb(104, 120, 104);
+
+            selectedBackColor = Color.FromArgb(184, 120, 64);
+            selectedTextColor = Color.White;
+
+            defaultWallpaper = Properties.Resources.Win95PlusMysteryWallpaper;
+            themeName = "Mystery";
+        }
+    }
+
+    public class Nature : Theme
+    {
+        public Nature()
+        {
+            startSound = Properties.Resources.Win95PlusNatureStart;
+            stopSound = Properties.Resources.Win95PlusNatureStop;
+
+            asteriskSound = Properties.Resources.Win95PlusNatureAstrisk;
+            critStopSound = Properties.Resources.Win95PlusNatureCritStop;
+            exclamationSound = Properties.Resources.Win95PlusNatureExclamation;
+            progErrorSound = Properties.Resources.Win95PlusNatureProgError;
+            questionSound = Properties.Resources.Win95PlusNatureQuestion;
+
+            threeDObjectsColor = Color.FromArgb(216, 192, 160);
+            threeDObjectsTextColor = Color.Black;
+
+            buttonFont = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular);
+
+            windowColor = Color.FromArgb(240, 232, 216);
+
+            activeTitleBarColor = Color.FromArgb(0, 72, 72);
+            activeTitleTextColor = Color.FromArgb(240, 232, 216);
+            inactiveTitleBarColor = Color.FromArgb(104, 80, 56);
+            inactiveTitleTextColor = Color.FromArgb(0, 0, 0);
+
+            selectedBackColor = Color.FromArgb(176, 144, 112);
+            selectedTextColor = Color.FromArgb(0, 0, 0);
+
+            defaultWallpaper = Properties.Resources.Win95PlusNatureWallpaper;
+            themeName = "Nature";
+        }
+    }
+
+    public class Science : Theme
+    {
+        public Science()
+        {
+            startSound = Properties.Resources.Win95PlusScienceStart;
+            stopSound = Properties.Resources.Win95PlusScienceStop;
+
+            asteriskSound = Properties.Resources.Win95PlusScienceAsterisk;
+            critStopSound = Properties.Resources.Win95PlusScienceCritStop;
+            exclamationSound = Properties.Resources.Win95PlusScienceExclamation;
+            progErrorSound = Properties.Resources.Win95PlusScienceProgError;
+            questionSound = Properties.Resources.Win95PlusScienceQuestion;
+
+            threeDObjectsColor = Color.FromArgb(131, 153, 177);
+            threeDObjectsTextColor = Color.Black;
+
+            buttonFont = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular);
+
+            windowColor = Color.White;
+
+            activeTitleBarColor = Color.FromArgb(0, 128, 128);
+            activeTitleTextColor = Color.FromArgb(255, 255, 255);
+            inactiveTitleBarColor = Color.FromArgb(160, 160, 164);
+            inactiveTitleTextColor = Color.FromArgb(193, 204, 217);
+
+            selectedBackColor = Color.FromArgb(0, 128, 224);
+            selectedTextColor = Color.FromArgb(225, 255, 255);
+
+            defaultWallpaper = Properties.Resources.Win95PlusScienceWallpaper;
+            themeName = "Science";
+        }
+    }
+
+    public class Sports : Theme
+    {
+        public Sports()
+        {
+            startSound = Properties.Resources.Win95PlusSportsStart;
+            stopSound = Properties.Resources.Win95PlusSportsStop;
+
+            asteriskSound = Properties.Resources.Win95PlusSportsAstrisk;
+            critStopSound = Properties.Resources.Win95PlusSportsCritStop;
+            exclamationSound = Properties.Resources.Win95PlusSportsExclamation;
+            progErrorSound = Properties.Resources.Win95PlusSportsProgError;
+            questionSound = Properties.Resources.Win95PlusSportsQuestion;
+
+            threeDObjectsColor = Color.FromArgb(176, 224, 160);
+            threeDObjectsTextColor = Color.Black;
+
+            buttonFont = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular);
+
+            windowColor = Color.White;
+
+            activeTitleBarColor = Color.FromArgb(0, 128, 128);
+            activeTitleTextColor = Color.FromArgb(0, 0, 0);
+            inactiveTitleBarColor = Color.FromArgb(0, 128, 0);
+            inactiveTitleTextColor = Color.FromArgb(176, 224, 160);
+
+            selectedBackColor = Color.FromArgb(255, 255, 0);
+            selectedTextColor = Color.FromArgb(0, 0, 0);
+
+            defaultWallpaper = Properties.Resources.Win95PlusSportsWallpaper;
+            themeName = "Sports";
+        }
+    }
+
+    public class The60 : Theme
+    {
+        public The60()
+        {
+            startSound = Properties.Resources.Win95PlusThe60Start;
+            stopSound = Properties.Resources.Win95PlusThe60Stop;
+
+            asteriskSound = Properties.Resources.Win95PlusThe60Asterisk;
+            critStopSound = Properties.Resources.Win95PlusThe60CritStop;
+            exclamationSound = Properties.Resources.Win95PlusThe60Exclamation;
+            progErrorSound = Properties.Resources.Win95PlusThe60ProgError;
+            questionSound = Properties.Resources.Win95PlusThe60Question;
+
+            threeDObjectsColor = Color.FromArgb(208, 104, 216);
+            threeDObjectsTextColor = Color.Black;
+
+            buttonFont = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular);
+
+            windowColor = Color.White;
+
+            activeTitleBarColor = Color.FromArgb(0, 0, 128);
+            activeTitleTextColor = Color.FromArgb(255, 255, 255);
+            inactiveTitleBarColor = Color.FromArgb(160, 48, 168);
+            inactiveTitleTextColor = Color.FromArgb(232, 184, 240);
+
+            selectedBackColor = Color.FromArgb(0, 255, 0);
+            selectedTextColor = Color.FromArgb(0, 0, 0);
+
+            defaultWallpaper = Properties.Resources.Win95PlusThe60Wallpaper;
+            themeName = "The60";
+        }
+    }
+
+    public class Travel : Theme
+    {
+        public Travel()
+        {
+            startSound = Properties.Resources.Win95PlusTravelStart;
+            stopSound = Properties.Resources.Win95PlusTravelStop;
+
+            asteriskSound = Properties.Resources.Win95PlusTravelAsterisk;
+            critStopSound = Properties.Resources.Win95PlusTravelCritStop;
+            exclamationSound = Properties.Resources.Win95PlusTravelExclamation;
+            progErrorSound = Properties.Resources.Win95PlusTravelProgError;
+            questionSound = Properties.Resources.Win95PlusTravelQuestion;
+
+            threeDObjectsColor = Color.FromArgb(144, 128, 112);
+            threeDObjectsTextColor = Color.Black;
+
+            buttonFont = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular);
+
+            windowColor = Color.White;
+
+            activeTitleBarColor = Color.FromArgb(64, 72, 120);
+            activeTitleTextColor = Color.FromArgb(224, 224, 216);
+            inactiveTitleBarColor = Color.FromArgb(96, 88, 72);
+            inactiveTitleTextColor = Color.FromArgb(144, 128, 112);
+
+            selectedBackColor = Color.FromArgb(72, 96, 80);
+            selectedTextColor = Color.FromArgb(224, 224, 216);
+
+            defaultWallpaper = Properties.Resources.Win95PlusTravelWallpaper;
+            themeName = "Travel";
+        }
+    }
+
+    public class MoreWin : Default95Plus
+    {
+        public MoreWin()
+        {
+            defaultWallpaper = Properties.Resources.Win95PlusMoreWinWallpaper;
+            themeName = "MoreWin";
         }
     }
 
