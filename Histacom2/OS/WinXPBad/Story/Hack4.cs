@@ -15,8 +15,7 @@ namespace Histacom2.OS.WinXPBad.Story
         public static async void StartObjective()
         {
             Win95.Win95Apps.WinClassicTerminal Console = new Win95.Win95Apps.WinClassicTerminal(true);
-            Random r = new Random();
-            WinClassic app = wm.Init(Console, "MS-DOS Prompt", null, true, true);
+            WinXP app = wm.InitXP(Console, "MS-DOS Prompt", null, true, true);
         }
     }
 }

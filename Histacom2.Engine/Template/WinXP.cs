@@ -16,6 +16,7 @@ namespace Histacom2.Engine.Template
         public WinXP()
         {
             InitializeComponent();
+            DoubleBuffered = true;
         }
 
         private void WinXP_Load(object sender, EventArgs e)
