@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Histacom2.Engine;
 using Histacom2.Engine.Template;
-using Histacom2.OS.Win98;
 
 namespace Histacom2.OS.Win95.Win95Apps.Story
 {

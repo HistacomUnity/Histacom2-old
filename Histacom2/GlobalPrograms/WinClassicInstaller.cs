@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Histacom2.GlobalPrograms
@@ -14,6 +7,13 @@ namespace Histacom2.GlobalPrograms
     {
         public string progName;
         public int state = 0;
+
+        public event EventHandler InstallCompleted;
+
+        protected void OnInstallCompleted(EventArgs e)
+        {
+            if (InstallCompleted != null) InstallCompleted(this, e);
+        }
 
         public WinClassicInstaller(string prog)
         {
@@ -40,6 +40,33 @@ namespace Histacom2.GlobalPrograms
                 state = 1;
                 classicButton2.Enabled = false;
             }
+            else if (state == 1)
+            {
+                var dir = new InstallerPanes.DirectoryPane();
+                dir.Parent = panel1;
+                state = 2;
+            }
+            else if (state == 2)
+            {
+                classicButton3.Hide();
+                classicButton1.Enabled = false;
+                classicButton2.Enabled = false;
+                var p = new InstallerPanes.ProgressPane();
+                p.Parent = panel1;
+                state = 3;
+            }
+            else if (state == 3)
+            {
+                OnInstallCompleted(EventArgs.Empty);
+                var c = new InstallerPanes.CompletePane();
+                c.Parent = panel1;
+                classicButton3.Enabled = false;
+                classicButton2.Enabled = true;
+                classicButton2.Text = "Finish";
+                classicButton2.Invalidate();
+                state = 4;
+            }
+            else ParentForm.Close();
         }
     }
 }

@@ -132,6 +132,18 @@
     <Compile Include="AchievementBox.Designer.cs">
       <DependentUpon>AchievementBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalPrograms\InstallerPanes\CompletePane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GlobalPrograms\InstallerPanes\CompletePane.Designer.cs">
+      <DependentUpon>CompletePane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalPrograms\InstallerPanes\ProgressPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GlobalPrograms\InstallerPanes\ProgressPane.Designer.cs">
+      <DependentUpon>ProgressPane.cs</DependentUpon>
+    </Compile>
     <Compile Include="GlobalPrograms\InstallerPanes\EULAPane.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -268,11 +280,11 @@
     <Compile Include="OS\Win95\Win95Apps\WinClassicThemePanel.Designer.cs">
       <DependentUpon>WinClassicThemePanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicWelcome.cs">
+    <Compile Include="OS\Win95\Win95Apps\Win95Welcome.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicWelcome.Designer.cs">
-      <DependentUpon>WinClassicWelcome.cs</DependentUpon>
+    <Compile Include="OS\Win95\Win95Apps\Win95Welcome.Designer.cs">
+      <DependentUpon>Win95Welcome.cs</DependentUpon>
     </Compile>
     <Compile Include="OS\Win95\Win95Apps\Win95WindowsExplorer.cs">
       <SubType>UserControl</SubType>
@@ -310,17 +322,43 @@
     <Compile Include="OS\Win98\Win98Apps\IE4Sites\IENoPage.Designer.cs">
       <DependentUpon>IENoPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="OS\Win98\Win98Apps\Story\Hack3.cs" />
+    <Compile Include="OS\Win98\Win98Apps\WebChat1999.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win98\Win98Apps\WebChat1999.Designer.cs">
+      <DependentUpon>WebChat1999.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win98\Win98Apps\Win98Welcome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win98\Win98Apps\Win98Welcome.Designer.cs">
+      <DependentUpon>Win98Welcome.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\Win98\Win98Apps\WinClassicIE4.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="OS\Win98\Win98Apps\WinClassicIE4.Designer.cs">
       <DependentUpon>WinClassicIE4.cs</DependentUpon>
     </Compile>
+    <Compile Include="OS\Win98\Win98Apps\WinClassicTimeDistorter2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win98\Win98Apps\WinClassicTimeDistorter2.Designer.cs">
+      <DependentUpon>WinClassicTimeDistorter2.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\Win98\Win98Apps\WinClassicWindowsExplorer.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="OS\Win98\Win98Apps\WinClassicWindowsExplorer.Designer.cs">
       <DependentUpon>WinClassicWindowsExplorer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\WinXPBad\Story\Hack4.cs" />
+    <Compile Include="OS\WinXPBad\WinXPBad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OS\WinXPBad\WinXPBad.Designer.cs">
+      <DependentUpon>WinXPBad.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -425,6 +463,12 @@
     <EmbeddedResource Include="AchievementBox.resx">
       <DependentUpon>AchievementBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GlobalPrograms\InstallerPanes\CompletePane.resx">
+      <DependentUpon>CompletePane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GlobalPrograms\InstallerPanes\ProgressPane.resx">
+      <DependentUpon>ProgressPane.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GlobalPrograms\InstallerPanes\EULAPane.resx">
       <DependentUpon>EULAPane.cs</DependentUpon>
     </EmbeddedResource>
@@ -495,8 +539,8 @@
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicTimeDistorter.resx">
       <DependentUpon>WinClassicTimeDistorter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicWelcome.resx">
-      <DependentUpon>WinClassicWelcome.cs</DependentUpon>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\Win95Welcome.resx">
+      <DependentUpon>Win95Welcome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\Win95WindowsExplorer.resx">
       <DependentUpon>Win95WindowsExplorer.cs</DependentUpon>
@@ -516,11 +560,24 @@
       <DependentUpon>IENoPage.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win98\Win98Apps\WebChat1999.resx">
+      <DependentUpon>WebChat1999.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win98\Win98Apps\Win98Welcome.resx">
+      <DependentUpon>Win98Welcome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OS\Win98\Win98Apps\WinClassicIE4.resx">
       <DependentUpon>WinClassicIE4.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win98\Win98Apps\WinClassicTimeDistorter2.resx">
+      <DependentUpon>WinClassicTimeDistorter2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OS\Win98\Win98Apps\WinClassicWindowsExplorer.resx">
       <DependentUpon>WinClassicWindowsExplorer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\WinXPBad\WinXPBad.resx">
+      <DependentUpon>WinXPBad.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="SaveDialogs\LoadGameDialog.resx">
@@ -603,6 +660,39 @@
   <ItemGroup>
     <Content Include="Icon128x.ico" />
     <Content Include="Resources\12padams_EULA.txt" />
+    <None Include="Resources\WinClassic\WinXPPrintersSmall.png" />
+    <None Include="Resources\WinClassic\WinXPControlPanelSmall.png" />
+    <None Include="Resources\WinClassic\WinXPStartMenuPlacesSeparator1.png" />
+    <None Include="Resources\WinClassic\WinXPComputerSmall.png" />
+    <None Include="Resources\WinClassic\WinXPMusicSmall.png" />
+    <None Include="Resources\WinClassic\WinXPPhotosSmall.png" />
+    <None Include="Resources\WinClassic\WinXPRecent.png" />
+    <None Include="Resources\WinClassic\WinXPDocumentsSmall.png" />
+    <None Include="Resources\WinClassic\WinXPTour.png" />
+    <None Include="Resources\WinClassic\WinXPMovieMaker.png" />
+    <None Include="Resources\WinClassic\WinXPMediaPlayer.png" />
+    <None Include="Resources\WinClassic\WinXPMSN.png" />
+    <None Include="Resources\WinClassic\WinXPStartMenuFavoritesSeparator1.png" />
+    <None Include="Resources\WinClassic\WinXPOutlook.png" />
+    <None Include="Resources\WinClassic\WinXPIE6.png" />
+    <None Include="Resources\WinClassic\WinXPStartMenuCenterDivider.png" />
+    <None Include="Resources\WinClassic\WinXPStartMenuPlaces.png" />
+    <None Include="Resources\WinClassic\WinXPStartMenuBottomRight.png" />
+    <None Include="Resources\WinClassic\WinXPStartMenuBottomCenter.png" />
+    <None Include="Resources\WinClassic\WinXPStartMenuBottomLeft.png" />
+    <None Include="Resources\WinClassic\WinXPStartMenuBottomCenter2.png" />
+    <None Include="Resources\WinClassic\WinXPStartMenuBottomRight2.png" />
+    <None Include="Resources\WinClassic\WinXPStartMenuBottomLeft2.png" />
+    <None Include="Resources\WinClassic\WinXPStartMenuRightGradient.png" />
+    <None Include="Resources\WinClassic\WinXPStartMenuRight.png" />
+    <None Include="Resources\WinClassic\WinXPStartMenuLeftGradient.png" />
+    <None Include="Resources\WinClassic\WinXPStartMenuLeft.png" />
+    <None Include="Resources\WinClassic\WinXPStartMenuTopCenter.png" />
+    <None Include="Resources\WinClassic\WinXPStartMenuTopRight.png" />
+    <None Include="Resources\WinClassic\WinXPStartMenuTopLeft.png" />
+    <None Include="Resources\WinClassic\WinXPTaskbarTime.png" />
+    <None Include="Resources\WinClassic\WinXPTaskbarStart.png" />
+    <None Include="Resources\WinClassic\WinXPTaskbarBG.png" />
     <None Include="Resources\y1k86jqd.bmp" />
     <None Include="Resources\WinClassic\WinClassicWebchat.png" />
     <None Include="Resources\wordpad_find.png" />
@@ -742,6 +832,17 @@
     <None Include="Resources\WinClassicRtfFile.png" />
     <None Include="Resources\WinClassicNotepad.png" />
     <None Include="Resources\Win95Error.png" />
+    <None Include="Resources\win95plusdangerouscreatureswallpaper.jpg" />
+    <None Include="Resources\win95plusdefaultwallpaper.jpg" />
+    <None Include="Resources\win95plusgoldenerawallpaper.jpg" />
+    <None Include="Resources\win95plusleowallpaper.jpg" />
+    <None Include="Resources\win95plusmorewin.jpg" />
+    <None Include="Resources\win95plusmysterywallpaper.jpg" />
+    <None Include="Resources\win95plusnaturewallpaper.jpg" />
+    <None Include="Resources\win95plussciencewallpaper.jpg" />
+    <None Include="Resources\win95plussportswallpaper.jpg" />
+    <None Include="Resources\win95plusthe60wallpaper.jpg" />
+    <None Include="Resources\win95plustravelwallpaper.jpg" />
     <Content Include="Resources\WinClassic\16Color.png" />
     <Content Include="Resources\WinClassic\256Color.png" />
     <None Include="Resources\WinClassic\tada.wav" />
@@ -754,6 +855,7 @@
     <None Include="Resources\WinClassic\LauncherSideBar.png" />
     <None Include="Resources\WinClassic\TimeDistorter1.png" />
     <None Include="Resources\WinClassic\TimeDistorter1Icon.png" />
+    <None Include="Resources\WinClassic\sliverwhite.png" />
     <Content Include="Resources\WinClassic\TrueColor.png" />
     <None Include="Resources\WinClassic\Win95Info.png" />
     <None Include="Resources\WinClassic\Win95Error.png" />

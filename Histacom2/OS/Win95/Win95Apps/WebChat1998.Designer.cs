@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WebChat1998));
+            this.resources = new System.ComponentModel.ComponentResourceManager(typeof(WebChat1998));
             this.Chat = new System.Windows.Forms.Timer(this.components);
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label1 = new Histacom2.Engine.UI.ClassicLabel();
@@ -46,7 +46,7 @@
             this.label3 = new Histacom2.Engine.UI.ClassicLabel();
             this.label4 = new Histacom2.Engine.UI.ClassicLabel();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new Histacom2.Engine.UI.ClassicLabel();
             this.label7 = new Histacom2.Engine.UI.ClassicLabel();
             this.button2 = new Histacom2.Engine.UI.ClassicButton();
             this.button3 = new Histacom2.Engine.UI.ClassicButton();
@@ -75,7 +75,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Location = new System.Drawing.Point(506, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 13);
+            this.label1.Size = new System.Drawing.Size(96, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Users Logged In";
             // 
@@ -106,18 +106,22 @@
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(13, 18);
+            this.label5.Location = new System.Drawing.Point(10, 18);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 13);
+            this.label5.Size = new System.Drawing.Size(87, 13);
             this.label5.TabIndex = 1;
             this.label5.Text = "skin95setup.exe";
             // 
             // button5
             // 
+            this.button5.AdaptBackColorWithTheme = true;
+            this.button5.AdaptFontWithTheme = true;
+            this.button5.AdaptForeColorWithTheme = true;
             this.button5.BackColor = System.Drawing.Color.Silver;
+            this.button5.DialogResult = System.Windows.Forms.DialogResult.None;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(101, 13);
+            this.button5.Location = new System.Drawing.Point(103, 13);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 0;
@@ -128,7 +132,7 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.Location = new System.Drawing.Point(504, 374);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 13);
+            this.label6.Size = new System.Drawing.Size(70, 13);
             this.label6.TabIndex = 4;
             this.label6.Text = "File Sharing";
             // 
@@ -158,7 +162,7 @@
             // 
             this.label2.Location = new System.Drawing.Point(328, 161);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 13);
+            this.label2.Size = new System.Drawing.Size(166, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "Please type in a screen name.";
             // 
@@ -171,7 +175,11 @@
             // 
             // button1
             // 
+            this.button1.AdaptBackColorWithTheme = true;
+            this.button1.AdaptFontWithTheme = true;
+            this.button1.AdaptForeColorWithTheme = true;
             this.button1.BackColor = System.Drawing.Color.Silver;
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.None;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(331, 208);
@@ -183,9 +191,9 @@
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(202, 16);
+            this.label3.Location = new System.Drawing.Point(198, 16);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 13);
+            this.label3.Size = new System.Drawing.Size(116, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Welcome to WebChat";
             // 
@@ -193,7 +201,7 @@
             // 
             this.label4.Location = new System.Drawing.Point(118, 56);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 13);
+            this.label4.Size = new System.Drawing.Size(100, 13);
             this.label4.TabIndex = 2;
             this.label4.Text = "Chat Room Rules:";
             // 
@@ -212,12 +220,9 @@
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.Silver;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(331, 72);
-            this.textBox2.Multiline = true;
+            this.textBox2.Location = new System.Drawing.Point(328, 58);
             this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(151, 86);
+            this.textBox2.Size = new System.Drawing.Size(154, 76);
             this.textBox2.TabIndex = 0;
             this.textBox2.Text = "A screen name is a temporary name which will be displayed in place of your real n" +
     "ame. To keep your identity safe, please do not enter your real name in this chat" +
@@ -234,8 +239,12 @@
             // 
             // button2
             // 
+            this.button2.AdaptBackColorWithTheme = true;
+            this.button2.AdaptFontWithTheme = true;
+            this.button2.AdaptForeColorWithTheme = true;
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.BackColor = System.Drawing.Color.Silver;
+            this.button2.DialogResult = System.Windows.Forms.DialogResult.None;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Location = new System.Drawing.Point(422, 415);
@@ -247,7 +256,11 @@
             // 
             // button3
             // 
+            this.button3.AdaptBackColorWithTheme = true;
+            this.button3.AdaptFontWithTheme = true;
+            this.button3.AdaptForeColorWithTheme = true;
             this.button3.BackColor = System.Drawing.Color.Silver;
+            this.button3.DialogResult = System.Windows.Forms.DialogResult.None;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.button3.ForeColor = System.Drawing.Color.Black;
             this.button3.Location = new System.Drawing.Point(149, 427);
@@ -259,7 +272,11 @@
             // 
             // button4
             // 
+            this.button4.AdaptBackColorWithTheme = true;
+            this.button4.AdaptFontWithTheme = true;
+            this.button4.AdaptForeColorWithTheme = true;
             this.button4.BackColor = System.Drawing.Color.Silver;
+            this.button4.DialogResult = System.Windows.Forms.DialogResult.None;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.button4.ForeColor = System.Drawing.Color.Black;
             this.button4.Location = new System.Drawing.Point(235, 427);
@@ -308,7 +325,7 @@
         private Histacom2.Engine.UI.ClassicLabel label5;
         private System.Windows.Forms.TextBox typechat;
         private System.Windows.Forms.Panel login;
-        private System.Windows.Forms.TextBox textBox2;
+        private Histacom2.Engine.UI.ClassicLabel textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private Histacom2.Engine.UI.ClassicLabel label4;
         private Histacom2.Engine.UI.ClassicLabel label3;

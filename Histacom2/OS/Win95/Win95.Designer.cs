@@ -323,7 +323,6 @@ namespace Histacom2.OS.Win95
             this.NetMeetingToolStripMenuItem.Name = "NetMeetingToolStripMenuItem";
             this.NetMeetingToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
             this.NetMeetingToolStripMenuItem.Text = "NetMeeting";
-            this.NetMeetingToolStripMenuItem.Click += new System.EventHandler(this.WebChatToolStripMenuItem_Click);
             // 
             // MultimediaToolStripMenuItem
             // 

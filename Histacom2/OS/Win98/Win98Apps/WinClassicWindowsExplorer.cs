@@ -60,6 +60,8 @@ namespace Histacom2.OS.Win95.Win95Apps
             mainView.LargeImageList = new ImageList();
             mainView.LargeImageList.ImageSize = new Size(32, 32);
 
+            // Icons 17, 18, 19 reserved for exclusive apps
+
             mainView.LargeImageList.Images.AddRange(new Bitmap[] { Properties.Resources.Win95Computer, // 0
                                                     Properties.Resources.WinClassicFolder,
                                                     Properties.Resources.WinClassicIE4,
@@ -77,7 +79,10 @@ namespace Histacom2.OS.Win95.Win95Apps
                                                     Properties.Resources.WinClassicNotepadBig,
                                                     Properties.Resources.WinClassicRegedit, // 15
                                                     Properties.Resources.WinClassicWordpad,
-                                                    Properties.Resources.WinClassicRtfFile});
+                                                    Properties.Resources.TimeDistorter1,
+                                                    Properties.Resources.WinClassicGTN,
+                                                    Properties.Resources.WinClassicFTP,
+                                                    Properties.Resources.WinClassicRtfFile}); //20
 
             program.BringToFront();
 
@@ -305,26 +310,26 @@ namespace Histacom2.OS.Win95.Win95Apps
 
                     break;
                 case "ie":
-                    if (TitleScreen.frm95.ie != null) { wm.StartInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", InfoboxType.Warning, InfoboxButtons.OK); return; }
-                    TitleScreen.frm95.ie = wm.Init(new WinClassicIE4(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
-                    Program.AddTaskbarItem(TitleScreen.frm95.ie, TitleScreen.frm95.ie.Tag.ToString(), "Internet Explorer 4", Properties.Resources.Win95IconIE4);
-                    TitleScreen.frm95.ie.BringToFront();
-                    TitleScreen.frm95.ie.FormClosing += new FormClosingEventHandler(TitleScreen.frm95.InternetExplorer4_Closing);
+                    if (TitleScreen.frm98.ie != null) { wm.StartInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", InfoboxType.Warning, InfoboxButtons.OK); return; }
+                    TitleScreen.frm98.ie = wm.Init(new WinClassicIE4(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
+                    Program.AddTaskbarItem(TitleScreen.frm98.ie, TitleScreen.frm98.ie.Tag.ToString(), "Internet Explorer 4", Properties.Resources.Win95IconIE4);
+                    TitleScreen.frm98.ie.BringToFront();
+                    TitleScreen.frm98.ie.FormClosing += new FormClosingEventHandler(TitleScreen.frm98.InternetExplorer4_Closing);
 
                     break;
                 case "web chat 99 setup":
-                    Win95Installer inst = new Win95Installer("Web Chat 1999");
-                    inst.InstallCompleted += (sendr, args) => TitleScreen.frm95.WebChatToolStripMenuItem.Visible = true;
+                    WinClassicInstaller inst = new WinClassicInstaller("Web Chat 1999");
+                    inst.InstallCompleted += (sendr, args) => TitleScreen.frm98.WebChatToolStripMenuItem.Visible = true;
                     WinClassic appInstaller = wm.Init(inst, "Web Chat Setup", null, true, true);
                     Program.AddTaskbarItem(appInstaller, appInstaller.Tag.ToString(), "Web Chat Setup", null);
                     appInstaller.BringToFront();
 
                     break;
                 case "time distorter setup":
-                    Win95Installer instTd = new Win95Installer("Time Distorter 0.2");
+                    WinClassicInstaller instTd = new WinClassicInstaller("Time Distorter 0.2");
                     instTd.InstallCompleted += (sendr, args) =>
                     {
-                        TitleScreen.frm95.TimeDistorterToolStripMenuItem.Visible = true;
+                        TitleScreen.frm98.TimeDistorterToolStripMenuItem.Visible = true;
                     };
                     WinClassic appTd = wm.Init(instTd, "Time Distorter Setup", null, true, true);
                     Program.AddTaskbarItem(appTd, appTd.Tag.ToString(), "Time Distorter Setup", null);

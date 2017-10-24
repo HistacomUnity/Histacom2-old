@@ -30,26 +30,26 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WinXP));
             this.program = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.Panel();
             this.bottomleftcorner = new System.Windows.Forms.Panel();
             this.toprightcorner = new System.Windows.Forms.Panel();
             this.bottomrightcorner = new System.Windows.Forms.Panel();
             this.topleftcorner = new System.Windows.Forms.Panel();
             this.bottom = new System.Windows.Forms.Panel();
             this.top = new System.Windows.Forms.Panel();
+            this.programIcon = new System.Windows.Forms.PictureBox();
             this.maximizebutton = new System.Windows.Forms.PictureBox();
             this.minimizebutton = new System.Windows.Forms.PictureBox();
             this.programname = new System.Windows.Forms.Label();
             this.closebutton = new System.Windows.Forms.PictureBox();
             this.right = new System.Windows.Forms.Panel();
             this.left = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.programIcon = new System.Windows.Forms.PictureBox();
             this.program.SuspendLayout();
             this.top.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.programIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maximizebutton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizebutton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closebutton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.programIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // program
@@ -69,6 +69,14 @@
             this.program.Name = "program";
             this.program.Size = new System.Drawing.Size(300, 300);
             this.program.TabIndex = 10;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 30);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(292, 266);
+            this.flowLayoutPanel1.TabIndex = 11;
             // 
             // bottomleftcorner
             // 
@@ -133,6 +141,18 @@
             this.top.Name = "top";
             this.top.Size = new System.Drawing.Size(292, 30);
             this.top.TabIndex = 0;
+            this.top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.top_MouseDown);
+            // 
+            // programIcon
+            // 
+            this.programIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.programIcon.ErrorImage = null;
+            this.programIcon.InitialImage = null;
+            this.programIcon.Location = new System.Drawing.Point(6, 7);
+            this.programIcon.Name = "programIcon";
+            this.programIcon.Size = new System.Drawing.Size(16, 16);
+            this.programIcon.TabIndex = 7;
+            this.programIcon.TabStop = false;
             // 
             // maximizebutton
             // 
@@ -165,6 +185,7 @@
             this.programname.Size = new System.Drawing.Size(99, 13);
             this.programname.TabIndex = 3;
             this.programname.Text = "Application Title";
+            this.programname.MouseDown += new System.Windows.Forms.MouseEventHandler(this.top_MouseDown);
             // 
             // closebutton
             // 
@@ -175,6 +196,7 @@
             this.closebutton.Size = new System.Drawing.Size(21, 21);
             this.closebutton.TabIndex = 4;
             this.closebutton.TabStop = false;
+            this.closebutton.Click += new System.EventHandler(this.closebutton_Click);
             // 
             // right
             // 
@@ -195,25 +217,6 @@
             this.left.Size = new System.Drawing.Size(4, 300);
             this.left.TabIndex = 1;
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 30);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(292, 266);
-            this.flowLayoutPanel1.TabIndex = 11;
-            // 
-            // programIcon
-            // 
-            this.programIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.programIcon.ErrorImage = null;
-            this.programIcon.InitialImage = null;
-            this.programIcon.Location = new System.Drawing.Point(6, 7);
-            this.programIcon.Name = "programIcon";
-            this.programIcon.Size = new System.Drawing.Size(16, 16);
-            this.programIcon.TabIndex = 7;
-            this.programIcon.TabStop = false;
-            // 
             // WinXP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -227,10 +230,10 @@
             this.program.ResumeLayout(false);
             this.top.ResumeLayout(false);
             this.top.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.programIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maximizebutton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizebutton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.closebutton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.programIcon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -250,7 +253,7 @@
         internal System.Windows.Forms.PictureBox closebutton;
         internal System.Windows.Forms.Panel right;
         internal System.Windows.Forms.Panel left;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         public System.Windows.Forms.PictureBox programIcon;
+        public System.Windows.Forms.Panel flowLayoutPanel1;
     }
 }

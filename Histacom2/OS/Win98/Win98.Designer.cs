@@ -704,6 +704,7 @@ namespace Histacom2.OS.Win98
             this.TimeDistorterToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.TimeDistorterToolStripMenuItem.Text = "Time Distorter";
             this.TimeDistorterToolStripMenuItem.Visible = false;
+            this.TimeDistorterToolStripMenuItem.Click += new System.EventHandler(TimeDistorterToolStripMenuItem_Click);
             // 
             // DocumentsToolStripMenuItem
             // 

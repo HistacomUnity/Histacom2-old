@@ -28,7 +28,7 @@ namespace Histacom2.OS.Win95.Win95Apps
         public static string prefix = @"C:\WINDOWS>";
         public static string workingDir = $"{SaveSystem.ProfileWindowsDirectory}";
         public string output = "";
-
+        public bool cls = false;
         public WinClassicTerminal(bool readOnly)
         {
             InitializeComponent();
@@ -107,9 +107,10 @@ namespace Histacom2.OS.Win95.Win95Apps
         {
             //TODO: Add font UC(?)
         }
-
+        
         private void richTextBox1_KeyUp(object sender, KeyEventArgs e)
         {
+
             if (e.KeyData == Keys.Return)
             {
                 string[] cmd = cmdPrompt.Lines[currentLine].Substring(prefix.Length).Split(' ');
@@ -152,6 +153,12 @@ namespace Histacom2.OS.Win95.Win95Apps
                         output += dline;
 
                         break;
+                    case "cls":
+                        currentLine = 0;
+                        cmdPrompt.Clear();
+                        cls = true;
+                        output = prefix;
+                        break;
                     default:
                         // Temporary CMD redirect
                         /*
@@ -174,11 +181,18 @@ namespace Histacom2.OS.Win95.Win95Apps
 
                 cmdPrompt.Focus();
                 cmdPrompt.AppendText($"\n{output}"); // Append the command output
-
-                int numLines = output.Split('\n').Length; // Get the number of lines from the command output
-                currentLine = currentLine + 2 + numLines; // Set the current line to equals the previous line plus 2 plus the number of lines from the command
-
-                cmdPrompt.AppendText($"\n\n{prefix}"); // Append the text to the RichTextBox
+                string[] stringSeparators = new string[] { "\n" };
+                string[] lines = output.Split(stringSeparators, StringSplitOptions.None);
+                foreach (string s in lines)
+                {
+                    currentLine++;
+                }
+                if (!cls)
+                {
+                    cmdPrompt.AppendText($"\n\n{prefix}"); // Append the text to the RichTextBox
+                    currentLine = currentLine + 3;
+                }
+                cls = false;
             }  
         }
     }

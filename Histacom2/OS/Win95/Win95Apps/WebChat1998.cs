@@ -34,20 +34,12 @@ namespace Histacom2.OS.Win95.Win95Apps
 
         BSODCreator bc = new BSODCreator();
         Win9XBSOD bsod = null;
-        Win9XBSOD bsod2 = null;
 
         public WebChat1998()
         {
             InitializeComponent();
             bsod = bc.throw9XBSOD(false, BSODCreator.BSODCauses.WimpEnding);
-            bsod2 = bc.throw9XBSOD(false, BSODCreator.BSODCauses.PiracyEnding);
             bsod.Hide();
-            bsod2.Hide();
-
-            this.button1.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
-            this.button2.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
-            this.button3.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
-            this.button4.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
 
             textBox1.Text = "If you do not agree to the following rules below DO NOT log into the chat:\n\nNo Bullying\nNo Swearing\nNo Hacking\nNo Illegal Files / Piracy\n\nFailure to follow these rules will result in serious irreversible consequences.";
         }
@@ -205,9 +197,13 @@ namespace Histacom2.OS.Win95.Win95Apps
                     case "type":
                         history.ReadOnly = false;
                         break;
-                    case "notyper":
-                        history.ReadOnly = true;
-                        break; // TODO: Add ending here
+                    case "pixel":
+                        history.Font = new Font(TitleScreen.pfc.Families[1], 16, FontStyle.Regular);
+                        break;
+                    case ".cmd-end":
+                        Chat.Stop();
+                        endingActivate();
+                        break;
                     default:
                         if (msgsound) receive.Play();
                         break;
@@ -232,6 +228,23 @@ namespace Histacom2.OS.Win95.Win95Apps
             chat_index++;
         }
 
+        private async void endingActivate()
+        {
+            history.ReadOnly = true;
+            history.Text = "";
+            await Task.Delay(1500);
+            history.Text = "Starting MS-DOS...";
+            await Task.Delay(1000);
+            history.Text = "Starting MS-DOS...\n\nC:\\>";
+            history.ReadOnly = false;
+            await Task.Delay(5000);
+            history.ReadOnly = true;
+            history.Text = "GAME OVER. Your computer has been locked down to MS-DOS because you pirated software. Seriously, what were you thinking?";
+            await Task.Delay(2000);
+            SaveSystem.SaveAchievement(0);
+            new AchievementBox(0);
+        }
+
         private void WebChatClosing(object sender, FormClosingEventArgs e)
         {
             if (wimponclose)
@@ -239,7 +252,6 @@ namespace Histacom2.OS.Win95.Win95Apps
                 bsod.FormClosing += new FormClosingEventHandler(Program.title.BSODRewind);
                 bsod.Show();
                 bsod.BringToFront();
-                bsod2.Close();
             }
         }
 

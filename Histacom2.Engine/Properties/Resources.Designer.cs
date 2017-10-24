@@ -196,9 +196,182 @@ namespace Histacom2.Engine.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusDefaultAstrisk {
+            get {
+                return ResourceManager.GetStream("Win95PlusDefaultAstrisk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusDefaultCritStop {
+            get {
+                return ResourceManager.GetStream("Win95PlusDefaultCritStop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusDefaultExclamation {
+            get {
+                return ResourceManager.GetStream("Win95PlusDefaultExclamation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusDefaultProgError {
+            get {
+                return ResourceManager.GetStream("Win95PlusDefaultProgError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusDefaultQuestion {
+            get {
+                return ResourceManager.GetStream("Win95PlusDefaultQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusDefaultStop {
+            get {
+                return ResourceManager.GetStream("Win95PlusDefaultStop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Win95PlusDefaultWallpaper {
+            get {
+                object obj = ResourceManager.GetObject("Win95PlusDefaultWallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusGoldenEraAstrisk {
+            get {
+                return ResourceManager.GetStream("Win95PlusGoldenEraAstrisk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusGoldenEraCritStop {
+            get {
+                return ResourceManager.GetStream("Win95PlusGoldenEraCritStop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusGoldenEraExclamation {
+            get {
+                return ResourceManager.GetStream("Win95PlusGoldenEraExclamation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusGoldenEraProgError {
+            get {
+                return ResourceManager.GetStream("Win95PlusGoldenEraProgError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusGoldenEraQuestion {
+            get {
+                return ResourceManager.GetStream("Win95PlusGoldenEraQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusGoldenEraStart {
+            get {
+                return ResourceManager.GetStream("Win95PlusGoldenEraStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusGoldenEraStop {
+            get {
+                return ResourceManager.GetStream("Win95PlusGoldenEraStop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Win95PlusGoldenEraWallpaper {
+            get {
+                object obj = ResourceManager.GetObject("Win95PlusGoldenEraWallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         public static System.IO.UnmanagedMemoryStream Win95PlusInsideComputerAsterisk {
             get {
                 return ResourceManager.GetStream("Win95PlusInsideComputerAsterisk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusInsideComputerCritStop {
+            get {
+                return ResourceManager.GetStream("Win95PlusInsideComputerCritStop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusInsideComputerExclamation {
+            get {
+                return ResourceManager.GetStream("Win95PlusInsideComputerExclamation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusInsideComputerProgError {
+            get {
+                return ResourceManager.GetStream("Win95PlusInsideComputerProgError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusInsideComputerQuestion {
+            get {
+                return ResourceManager.GetStream("Win95PlusInsideComputerQuestion", resourceCulture);
             }
         }
         
@@ -226,6 +399,528 @@ namespace Histacom2.Engine.Properties {
         public static System.Drawing.Bitmap Win95PlusInsideComputerWallpaper {
             get {
                 object obj = ResourceManager.GetObject("Win95PlusInsideComputerWallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Win95PlusInsideComputerWallpaper1 {
+            get {
+                object obj = ResourceManager.GetObject("Win95PlusInsideComputerWallpaper1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusLeoAsterisk {
+            get {
+                return ResourceManager.GetStream("Win95PlusLeoAsterisk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusLeoCritStop {
+            get {
+                return ResourceManager.GetStream("Win95PlusLeoCritStop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusLeoExclamation {
+            get {
+                return ResourceManager.GetStream("Win95PlusLeoExclamation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusLeoProgError {
+            get {
+                return ResourceManager.GetStream("Win95PlusLeoProgError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusLeoQuestion {
+            get {
+                return ResourceManager.GetStream("Win95PlusLeoQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusLeoStart {
+            get {
+                return ResourceManager.GetStream("Win95PlusLeoStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Win95PlusLeoWallpaper {
+            get {
+                object obj = ResourceManager.GetObject("Win95PlusLeoWallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Win95PlusMoreWin {
+            get {
+                object obj = ResourceManager.GetObject("Win95PlusMoreWin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusMysteryAstrisk {
+            get {
+                return ResourceManager.GetStream("Win95PlusMysteryAstrisk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusMysteryCritStop {
+            get {
+                return ResourceManager.GetStream("Win95PlusMysteryCritStop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusMysteryExclamation {
+            get {
+                return ResourceManager.GetStream("Win95PlusMysteryExclamation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusMysteryProgError {
+            get {
+                return ResourceManager.GetStream("Win95PlusMysteryProgError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusMysteryQuestion {
+            get {
+                return ResourceManager.GetStream("Win95PlusMysteryQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusMysteryStart {
+            get {
+                return ResourceManager.GetStream("Win95PlusMysteryStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusMysteryStop {
+            get {
+                return ResourceManager.GetStream("Win95PlusMysteryStop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Win95PlusMysteryWallpaper {
+            get {
+                object obj = ResourceManager.GetObject("Win95PlusMysteryWallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusNatureAstrisk {
+            get {
+                return ResourceManager.GetStream("Win95PlusNatureAstrisk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusNatureCritStop {
+            get {
+                return ResourceManager.GetStream("Win95PlusNatureCritStop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusNatureExclamation {
+            get {
+                return ResourceManager.GetStream("Win95PlusNatureExclamation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusNatureProgError {
+            get {
+                return ResourceManager.GetStream("Win95PlusNatureProgError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusNatureQuestion {
+            get {
+                return ResourceManager.GetStream("Win95PlusNatureQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusNatureStart {
+            get {
+                return ResourceManager.GetStream("Win95PlusNatureStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusNatureStop {
+            get {
+                return ResourceManager.GetStream("Win95PlusNatureStop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Win95PlusNatureWallpaper {
+            get {
+                object obj = ResourceManager.GetObject("Win95PlusNatureWallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusScienceAsterisk {
+            get {
+                return ResourceManager.GetStream("Win95PlusScienceAsterisk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusScienceCritStop {
+            get {
+                return ResourceManager.GetStream("Win95PlusScienceCritStop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusScienceExclamation {
+            get {
+                return ResourceManager.GetStream("Win95PlusScienceExclamation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusScienceProgError {
+            get {
+                return ResourceManager.GetStream("Win95PlusScienceProgError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusScienceQuestion {
+            get {
+                return ResourceManager.GetStream("Win95PlusScienceQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusScienceStart {
+            get {
+                return ResourceManager.GetStream("Win95PlusScienceStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusScienceStop {
+            get {
+                return ResourceManager.GetStream("Win95PlusScienceStop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Win95PlusScienceWallpaper {
+            get {
+                object obj = ResourceManager.GetObject("Win95PlusScienceWallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusSportsAstrisk {
+            get {
+                return ResourceManager.GetStream("Win95PlusSportsAstrisk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusSportsCritStop {
+            get {
+                return ResourceManager.GetStream("Win95PlusSportsCritStop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusSportsExclamation {
+            get {
+                return ResourceManager.GetStream("Win95PlusSportsExclamation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusSportsProgError {
+            get {
+                return ResourceManager.GetStream("Win95PlusSportsProgError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusSportsQuestion {
+            get {
+                return ResourceManager.GetStream("Win95PlusSportsQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusSportsStart {
+            get {
+                return ResourceManager.GetStream("Win95PlusSportsStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusSportsStop {
+            get {
+                return ResourceManager.GetStream("Win95PlusSportsStop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Win95PlusSportsWallpaper {
+            get {
+                object obj = ResourceManager.GetObject("Win95PlusSportsWallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusThe60Asterisk {
+            get {
+                return ResourceManager.GetStream("Win95PlusThe60Asterisk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusThe60CritStop {
+            get {
+                return ResourceManager.GetStream("Win95PlusThe60CritStop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusThe60Exclamation {
+            get {
+                return ResourceManager.GetStream("Win95PlusThe60Exclamation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusThe60ProgError {
+            get {
+                return ResourceManager.GetStream("Win95PlusThe60ProgError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusThe60Question {
+            get {
+                return ResourceManager.GetStream("Win95PlusThe60Question", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusThe60Start {
+            get {
+                return ResourceManager.GetStream("Win95PlusThe60Start", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusThe60Stop {
+            get {
+                return ResourceManager.GetStream("Win95PlusThe60Stop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Win95PlusThe60Wallpaper {
+            get {
+                object obj = ResourceManager.GetObject("Win95PlusThe60Wallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusTravelAsterisk {
+            get {
+                return ResourceManager.GetStream("Win95PlusTravelAsterisk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusTravelCritStop {
+            get {
+                return ResourceManager.GetStream("Win95PlusTravelCritStop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusTravelExclamation {
+            get {
+                return ResourceManager.GetStream("Win95PlusTravelExclamation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusTravelProgError {
+            get {
+                return ResourceManager.GetStream("Win95PlusTravelProgError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusTravelQuestion {
+            get {
+                return ResourceManager.GetStream("Win95PlusTravelQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusTravelStart {
+            get {
+                return ResourceManager.GetStream("Win95PlusTravelStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Win95PlusTravelStop {
+            get {
+                return ResourceManager.GetStream("Win95PlusTravelStop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Win95PlusTravelWallpaper {
+            get {
+                object obj = ResourceManager.GetObject("Win95PlusTravelWallpaper", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -293,6 +988,15 @@ namespace Histacom2.Engine.Properties {
             get {
                 object obj = ResourceManager.GetObject("WinAboutSeparator95", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream WinBadXPStart {
+            get {
+                return ResourceManager.GetStream("WinBadXPStart", resourceCulture);
             }
         }
         
@@ -542,6 +1246,16 @@ namespace Histacom2.Engine.Properties {
         public static System.Drawing.Bitmap WinXP_TopRight {
             get {
                 object obj = ResourceManager.GetObject("WinXP_TopRight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WinXPWallpaper {
+            get {
+                object obj = ResourceManager.GetObject("WinXPWallpaper", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -118,7 +118,7 @@ namespace Histacom2.OS.Win95
             {
                 CurrentSave.FTime95 = true;
                 SaveGame();
-                welcome = wm.Init(new WinClassicWelcome(), "Welcome", null, false, false, resize: false);
+                welcome = wm.Init(new Win95Welcome(), "Welcome", null, false, false, resize: false);
                 AddTaskBarItem(welcome, welcome.Tag.ToString(), "Welcome", null);
 
                 nonimportantapps.Add(welcome);

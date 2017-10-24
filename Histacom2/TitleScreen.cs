@@ -11,6 +11,7 @@ using Histacom2.SaveDialogs;
 using System.Runtime.InteropServices;
 using System.Reflection;
 using System.ComponentModel;
+using Histacom2.OS.WinXPBad;
 
 namespace Histacom2
 {
@@ -20,6 +21,7 @@ namespace Histacom2
 
         public static Windows95 frm95;
         public static Windows98 frm98;
+        public static WindowsXPBad frmBadXP;
         public static string username;
         public static string progress = "95";
         
@@ -87,6 +89,20 @@ namespace Histacom2
                         //    frm98.FormBorderStyle = FormBorderStyle.Fixed3D;
                         //}
                         frm98.Show();
+                        Hide();
+
+                        break;
+                    case "xpbad":
+                        frmBadXP = new WindowsXPBad();
+                        frmBadXP.TopMost = true;
+                        frmBadXP.FormBorderStyle = FormBorderStyle.None;
+                        frmBadXP.WindowState = FormWindowState.Maximized;
+                        //if (vm_mode.Checked == true)
+                        //{
+                        //    frm98.Size = new Size(Convert.ToInt32(VM_Width.Text), Convert.ToInt32(VM_Height.Text));
+                        //    frm98.FormBorderStyle = FormBorderStyle.Fixed3D;
+                        //}
+                        frmBadXP.Show();
                         Hide();
 
                         break;

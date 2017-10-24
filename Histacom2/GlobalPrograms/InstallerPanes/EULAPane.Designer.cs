@@ -111,6 +111,7 @@
             this.radioButton1.TabIndex = 3;
             this.radioButton1.Text = "I &accept the agreement";
             this.radioButton1.UseVisualStyleBackColor = false;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton2
             // 

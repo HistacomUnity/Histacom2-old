@@ -35,6 +35,36 @@ namespace Histacom2.OS.Win95.Win95Apps
                 case "Inside Your Computer":
                     pictureBox2.BackgroundImage = Properties.Resources.ICTheme_BG;
                     break;
+                case "Windows 95 Default Plus":
+                    pictureBox2.BackgroundImage = Properties.Resources.Win95PlusDefaultWallpaper;
+                    break;
+                case "The Golden Era":
+                    pictureBox2.BackgroundImage = Properties.Resources.Win95PlusGoldenEraWallpaper;
+                    break;
+                case "Leonardo da Vinci":
+                    pictureBox2.BackgroundImage = Properties.Resources.Win95PlusLeoWallpaper;
+                    break;
+                case "Mystery":
+                    pictureBox2.BackgroundImage = Properties.Resources.Win95PlusMysteryWallpaper;
+                    break;
+                case "Nature":
+                    pictureBox2.BackgroundImage = Properties.Resources.Win95PlusNatureWallpaper;
+                    break;
+                case "Science":
+                    pictureBox2.BackgroundImage = Properties.Resources.Win95PlusScienceWallpaper;
+                    break;
+                case "Sports":
+                    pictureBox2.BackgroundImage = Properties.Resources.Win95PlusSportsWallpaper;
+                    break;
+                case "The 60's USA":
+                    pictureBox2.BackgroundImage = Properties.Resources.Win95PlusThe60Wallpaper;
+                    break;
+                case "Travel":
+                    pictureBox2.BackgroundImage = Properties.Resources.Win95PlusTravelWallpaper;
+                    break;
+                case "More Windows":
+                    pictureBox2.BackgroundImage = Properties.Resources.Win95PlusMoreWin;
+                    break;
             }
         }
 
@@ -51,6 +81,37 @@ namespace Histacom2.OS.Win95.Win95Apps
                 case "insidepc":
                     comboBox1.SelectedItem = "Inside Your Computer";
                     break;
+                case "default95plus":
+                    comboBox1.SelectedItem = "Windows 95 Default Plus";
+                    break;
+                case "goldenera":
+                    comboBox1.SelectedItem = "The Golden Era";
+                    break;
+                case "Leo":
+                    comboBox1.SelectedItem = "Leonardo da Vinci";
+                    break;
+                case "Mystery":
+                    comboBox1.SelectedItem = "Mystery";
+                    break;
+                case "Nature":
+                    comboBox1.SelectedItem = "Nature";
+                    break;
+                case "Science":
+                    comboBox1.SelectedItem = "Science";
+                    break;
+                case "Sports":
+                    comboBox1.SelectedItem = "Sports";
+                    break;
+                case "The60":
+                    comboBox1.SelectedItem = "The 60's USA";
+                    break;
+                case "Travel":
+                    comboBox1.SelectedItem = "Travel";
+                    break;
+                case "MoreWin":
+                    comboBox1.SelectedItem = "More Windows";
+                    break;
+
             }
         }
 
@@ -88,6 +149,56 @@ namespace Histacom2.OS.Win95.Win95Apps
                     SaveSystem.CurrentSave.ThemeName = "insidepc";
                     SaveSystem.currentTheme = new InsideComputerTheme();
                     TitleScreen.frm95.desktopicons.BackgroundImage = new Bitmap(Properties.Resources.ICTheme_BG, TitleScreen.frm95.Width, TitleScreen.frm95.Height);
+                    break;
+                case "Windows 95 Default Plus":
+                    SaveSystem.CurrentSave.ThemeName = "default95plus";
+                    SaveSystem.currentTheme = new Default95PlusTheme();
+                    TitleScreen.frm95.desktopicons.BackgroundImage = new Bitmap(Properties.Resources.Win95PlusDefaultWallpaper, TitleScreen.frm95.Width, TitleScreen.frm95.Height);
+                    break;
+                case "The Golden Era":
+                    SaveSystem.CurrentSave.ThemeName = "goldenera";
+                    SaveSystem.currentTheme = new GoldenEraTheme();
+                    TitleScreen.frm95.desktopicons.BackgroundImage = new Bitmap(Properties.Resources.Win95PlusGoldenEraWallpaper, TitleScreen.frm95.Width, TitleScreen.frm95.Height);
+                    break;
+                case "Leonardo da Vinci":
+                    SaveSystem.CurrentSave.ThemeName = "Leo";
+                    SaveSystem.currentTheme = new LeoTheme();
+                    TitleScreen.frm95.desktopicons.BackgroundImage = new Bitmap(Properties.Resources.Win95PlusLeoWallpaper, TitleScreen.frm95.Width, TitleScreen.frm95.Height);
+                    break;
+                case "Mystery":
+                    SaveSystem.CurrentSave.ThemeName = "Mystery";
+                    SaveSystem.currentTheme = new MysteryTheme();
+                    TitleScreen.frm95.desktopicons.BackgroundImage = new Bitmap(Properties.Resources.Win95PlusMysteryWallpaper, TitleScreen.frm95.Width, TitleScreen.frm95.Height);
+                    break;
+                case "Nature":
+                    SaveSystem.CurrentSave.ThemeName = "Nature";
+                    SaveSystem.currentTheme = new NatureTheme();
+                    TitleScreen.frm95.desktopicons.BackgroundImage = new Bitmap(Properties.Resources.Win95PlusNatureWallpaper, TitleScreen.frm95.Width, TitleScreen.frm95.Height);
+                    break;
+                case "Science":
+                    SaveSystem.CurrentSave.ThemeName = "Science";
+                    SaveSystem.currentTheme = new ScienceTheme();
+                    TitleScreen.frm95.desktopicons.BackgroundImage = new Bitmap(Properties.Resources.Win95PlusScienceWallpaper, TitleScreen.frm95.Width, TitleScreen.frm95.Height);
+                    break;
+                case "Sports":
+                    SaveSystem.CurrentSave.ThemeName = "Sports";
+                    SaveSystem.currentTheme = new SportsTheme();
+                    TitleScreen.frm95.desktopicons.BackgroundImage = new Bitmap(Properties.Resources.Win95PlusSportsWallpaper, TitleScreen.frm95.Width, TitleScreen.frm95.Height);
+                    break;
+                case "The 60's USA":
+                    SaveSystem.CurrentSave.ThemeName = "The60";
+                    SaveSystem.currentTheme = new The60Theme();
+                    TitleScreen.frm95.desktopicons.BackgroundImage = new Bitmap(Properties.Resources.Win95PlusThe60Wallpaper, TitleScreen.frm95.Width, TitleScreen.frm95.Height);
+                    break;
+                case "Travel":
+                    SaveSystem.CurrentSave.ThemeName = "Travel";
+                    SaveSystem.currentTheme = new TravelTheme();
+                    TitleScreen.frm95.desktopicons.BackgroundImage = new Bitmap(Properties.Resources.Win95PlusTravelWallpaper, TitleScreen.frm95.Width, TitleScreen.frm95.Height);
+                    break;
+                case "More Windows":
+                    SaveSystem.CurrentSave.ThemeName = "MoreWin";
+                    SaveSystem.currentTheme = new MoreWinTheme();
+                    TitleScreen.frm95.desktopicons.BackgroundImage = new Bitmap(Properties.Resources.Win95PlusMoreWin, TitleScreen.frm95.Width, TitleScreen.frm95.Height);
                     break;
             }
             foreach (Form f in Application.OpenForms)
