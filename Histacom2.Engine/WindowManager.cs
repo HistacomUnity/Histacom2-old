@@ -10,38 +10,21 @@ namespace Histacom2.Engine
     {
         public static System.Drawing.Text.PrivateFontCollection pfc = new System.Drawing.Text.PrivateFontCollection();
 
+        /// <summary>
+        /// Creates and returns a WinClassic window.
+        /// </summary>
+        /// <param name="content">The UserControl to put inside the window.</param>
+        /// <param name="title">The name of the window.</param>
+        /// <param name="icon">The window's icon. If set to null, then the title moves over to compensate.</param>
+        /// <param name="MaxButton">Whether or not the maximize button is shown.</param>
+        /// <param name="MinButton">Whether or not the minimize button is shown.</param>
+        /// <param name="ShowApplicationAsDialog">Whether or not to interrupt all other processes while this window is open.</param>
+        /// <param name="resize">Whether or not this window is resizable.</param>
+        /// <returns></returns>
         public WinClassic Init(UserControl content, string title, Image icon, bool MaxButton, bool MinButton, bool ShowApplicationAsDialog = false, bool resize = true)
         {
-            WinClassic app = null;
-            // Setup Window
-            switch (SaveSystem.CurrentSave.CurrentOS)
-            {
-                case  "95":
-                    {
-                        app = new WinClassic();
-                        break;
-                    }
-                case "98":
-                    {
-                        app = new WinClassic();
-                        break;
-                    }
-                case "ME":
-                    {
-                        app = new WinClassic();
-                        break;
-                    }
-                case "2000":
-                    {
-                        app = new WinClassic();
-                        break;
-                    }
-                default:
-                    {
-                        app = new WinClassic();
-                        break;
-                    }
-            }
+            WinClassic app = new WinClassic();
+
             app.Text = title;
             app.Title.Text = title;
             app.Width = content.Width + 8;
@@ -128,8 +111,8 @@ namespace Histacom2.Engine
             if (icon == null)
             {
                 app.programIcon.Hide();
-                app.programIcon.Image = Engine.Properties.Resources.nullIcon;
-                app.programname.Location = new Point(2, 1);
+                app.programIcon.Image = Properties.Resources.nullIcon;
+                app.programname.Location = new Point(6, 7);
             }
             else app.programIcon.Image = icon;
 

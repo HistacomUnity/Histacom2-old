@@ -17,6 +17,7 @@ namespace Histacom2.Engine.Template
         public WinXP()
         {
             InitializeComponent();
+            SetStyle(ControlStyles.SupportsTransparentBackColor, true);
             DoubleBuffered = true;
         }
 

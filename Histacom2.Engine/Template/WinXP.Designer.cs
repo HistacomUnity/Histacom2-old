@@ -90,7 +90,7 @@
             // toprightcorner
             // 
             this.toprightcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.toprightcorner.BackColor = System.Drawing.Color.Magenta;
+            this.toprightcorner.BackColor = System.Drawing.Color.Transparent;
             this.toprightcorner.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("toprightcorner.BackgroundImage")));
             this.toprightcorner.Location = new System.Drawing.Point(294, 0);
             this.toprightcorner.Name = "toprightcorner";
@@ -109,7 +109,7 @@
             // 
             // topleftcorner
             // 
-            this.topleftcorner.BackColor = System.Drawing.Color.Magenta;
+            this.topleftcorner.BackColor = System.Drawing.Color.Transparent;
             this.topleftcorner.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("topleftcorner.BackgroundImage")));
             this.topleftcorner.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.topleftcorner.Location = new System.Drawing.Point(0, 0);
@@ -178,11 +178,11 @@
             // 
             this.programname.AutoSize = true;
             this.programname.BackColor = System.Drawing.Color.Transparent;
-            this.programname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.programname.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.programname.ForeColor = System.Drawing.Color.White;
-            this.programname.Location = new System.Drawing.Point(25, 8);
+            this.programname.Location = new System.Drawing.Point(25, 7);
             this.programname.Name = "programname";
-            this.programname.Size = new System.Drawing.Size(99, 13);
+            this.programname.Size = new System.Drawing.Size(112, 16);
             this.programname.TabIndex = 3;
             this.programname.Text = "Application Title";
             this.programname.MouseDown += new System.Windows.Forms.MouseEventHandler(this.top_MouseDown);
@@ -221,11 +221,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Magenta;
             this.ClientSize = new System.Drawing.Size(300, 300);
             this.Controls.Add(this.program);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "WinXP";
             this.Text = "WinXP";
+            this.TransparencyKey = System.Drawing.Color.Magenta;
             this.Load += new System.EventHandler(this.WinXP_Load);
             this.program.ResumeLayout(false);
             this.top.ResumeLayout(false);

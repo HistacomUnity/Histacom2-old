@@ -54,6 +54,11 @@ namespace Histacom2.OS.Win95.Win95Apps
             {
                 actionPanel.Hide();
                 cmdPrompt.ReadOnly = true;
+                if (SaveSystem.CurrentSave.CurrentOS == "xpbad")
+                {
+                    cmdPrompt.BorderStyle = BorderStyle.None;
+                    cmdPrompt.ScrollBars = RichTextBoxScrollBars.Vertical;
+                }
             }
             else
             {
@@ -68,7 +73,8 @@ namespace Histacom2.OS.Win95.Win95Apps
         public void WriteLine(string Text)
         {
             cmdPrompt.AppendText(Text + "\n");
-            this.Update();
+            cmdPrompt.Update();
+            cmdPrompt.ScrollToCaret();
         }
 
         /// <summary>

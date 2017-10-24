@@ -12,6 +12,7 @@ using Histacom2.OS.Win95.Win95Apps.Story;
 using static Histacom2.Engine.SaveSystem;
 using Histacom2.OS.Win98.Win98Apps;
 using Histacom2.GlobalPrograms;
+using Histacom2.OS.WinXPBad.Story;
 
 namespace Histacom2.OS.WinXPBad
 {
@@ -44,8 +45,6 @@ namespace Histacom2.OS.WinXPBad
         //  When New Game is clicked in TitleScreen.cs
         private void Desktop_Load(object sender, EventArgs e)
         {
-            UpgradeFileSystem( "98");
-
             if (currentTheme.defaultWallpaper != null) desktopicons.BackgroundImage = new Bitmap(currentTheme.defaultWallpaper, Width, Height);
             //Start Menu Color - Commented until it works reliably
             //startmenuitems.Renderer = new MyRenderer();
@@ -54,7 +53,7 @@ namespace Histacom2.OS.WinXPBad
             // Make Font Mandatory
             fontLoad();
 
-            // Play Windows 95 Start Sound
+            // Play Start Sound
             Stream audio = currentTheme.startSound;
             startsound = new SoundPlayer(audio);
             startsound.Play();
@@ -63,10 +62,7 @@ namespace Histacom2.OS.WinXPBad
             startmenu.Hide();
 
             // Check for and set VM Mode
-            if (this.FormBorderStyle != FormBorderStyle.None)
-            {
-                this.Text = "Histacom2 - VM Mode";
-            }
+            if (this.FormBorderStyle != FormBorderStyle.None) Text = "Histacom2 - VM Mode";
 
             // Start the ClockTimer
             clockTimer.Start();
@@ -87,6 +83,8 @@ namespace Histacom2.OS.WinXPBad
             lv.Position = new Point(20, 20);
             desktopicons.Invalidate();
             //DesktopController.RefreshDesktopIcons(new ListViewItem[] { new System.Windows.Forms.ListViewItem("Recycle Bin", 7) }, ref desktopicons, Path.Combine(ProfileWindowsDirectory, "Desktop"));
+
+            Hack4.StartObjective();
         }
 
         private void fontLoad()
