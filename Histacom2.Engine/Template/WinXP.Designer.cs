@@ -90,7 +90,7 @@
             // toprightcorner
             // 
             this.toprightcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.toprightcorner.BackColor = System.Drawing.Color.Transparent;
+            this.toprightcorner.BackColor = System.Drawing.Color.Magenta;
             this.toprightcorner.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("toprightcorner.BackgroundImage")));
             this.toprightcorner.Location = new System.Drawing.Point(294, 0);
             this.toprightcorner.Name = "toprightcorner";
@@ -109,7 +109,7 @@
             // 
             // topleftcorner
             // 
-            this.topleftcorner.BackColor = System.Drawing.Color.Transparent;
+            this.topleftcorner.BackColor = System.Drawing.Color.Magenta;
             this.topleftcorner.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("topleftcorner.BackgroundImage")));
             this.topleftcorner.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.topleftcorner.Location = new System.Drawing.Point(0, 0);
