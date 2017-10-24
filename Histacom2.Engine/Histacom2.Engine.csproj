@@ -94,15 +94,25 @@
     <Compile Include="UI\ClassicButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UI\ClassicDropDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\ClassicDropDown.Designer.cs">
+      <DependentUpon>ClassicDropDown.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\ClassicLabel.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UI\ClassicStartMenuItem.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UI\ClassicTextbox.cs">
-      <SubType>Component</SubType>
+    <Compile Include="UI\ClassicTextBox.cs">
+      <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="UI\ClassicTextBox.Designer.cs">
+      <DependentUpon>ClassicTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\OldClassicTextbox.cs" />
     <Compile Include="UI\IProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -138,9 +148,13 @@
     <EmbeddedResource Include="Template\WinXP.resx">
       <DependentUpon>WinXP.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\ClassicTextBox.resx">
+      <DependentUpon>ClassicTextBox.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\chord.wav" />
+    <None Include="Resources\ClassicDropDownButton.png" />
     <Content Include="Resources\Icon128x.ico" />
     <Content Include="Resources\WinXP\Window\WinXP_Bottom.png" />
     <Content Include="Resources\WinXP\Window\WinXP_Close.png" />

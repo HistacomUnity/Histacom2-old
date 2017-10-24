@@ -36,6 +36,16 @@ namespace Histacom2.OS.Win95.Win95Apps
         public Win95WindowsExplorer()
         {
             InitializeComponent();
+
+
+            // Fonts! yoy!
+
+            foreach (Control ctrl in this.Controls)
+            {
+                ctrl.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            }
+
+            //Histacom2.Engine.UI.CustomTextBox ctb = new Histacom2.Engine.UI.CustomTextBox(textBox1);
         }
 
         void WinClassicWindowsExplorer_Load(object sender, EventArgs e)
@@ -100,14 +110,14 @@ namespace Histacom2.OS.Win95.Win95Apps
             if (IsFileOpenDialog == true)
             {
                 pnlSave.Show();
-                Button1.Text = "Open";
+                btnSave.Text = "Open";
             }
             else
             {
                 if (IsFileSaveDialog == true)
                 {
                     pnlSave.Show();
-                    Button1.Text = "Save";
+                    btnSave.Text = "Save";
                 }
             }
 
@@ -701,7 +711,7 @@ namespace Histacom2.OS.Win95.Win95Apps
             RefreshTreeNode();
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
             try
             {
@@ -728,9 +738,8 @@ namespace Histacom2.OS.Win95.Win95Apps
                         ((Form)this.TopLevelControl).Close();
                     }
                 }
-            } catch {
-
             }
+            catch { }
         }
 
         private void DeleteToolStripMenuItem_Click(object sender, EventArgs e)

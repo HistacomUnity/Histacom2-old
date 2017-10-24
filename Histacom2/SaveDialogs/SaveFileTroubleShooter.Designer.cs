@@ -59,7 +59,7 @@
             this.pnlResolved.Controls.Add(this.label2);
             this.pnlResolved.Location = new System.Drawing.Point(12, 38);
             this.pnlResolved.Name = "pnlResolved";
-            this.pnlResolved.Size = new System.Drawing.Size(589, 275);
+            this.pnlResolved.Size = new System.Drawing.Size(518, 243);
             this.pnlResolved.TabIndex = 1;
             this.pnlResolved.Visible = false;
             // 
@@ -73,7 +73,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox1.Size = new System.Drawing.Size(567, 208);
+            this.textBox1.Size = new System.Drawing.Size(496, 176);
             this.textBox1.TabIndex = 3;
             // 
             // label3
@@ -100,15 +100,15 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel2.Controls.Add(this.btnClose);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 315);
+            this.panel2.Location = new System.Drawing.Point(0, 283);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(612, 30);
+            this.panel2.Size = new System.Drawing.Size(541, 30);
             this.panel2.TabIndex = 2;
             // 
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.Location = new System.Drawing.Point(526, 4);
+            this.btnClose.Location = new System.Drawing.Point(455, 4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 0;
@@ -120,12 +120,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(612, 345);
+            this.ClientSize = new System.Drawing.Size(541, 313);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlResolved);
             this.Controls.Add(this.label1);
             this.Name = "SaveFileTroubleShooter";
-            this.Text = "Save File Troubleshooter";
             this.Load += new System.EventHandler(this.SaveFileTroubleShooter_Load);
             this.pnlResolved.ResumeLayout(false);
             this.pnlResolved.PerformLayout();

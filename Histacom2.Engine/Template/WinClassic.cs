@@ -165,15 +165,6 @@ namespace Histacom2.Engine.Template
             }
         }
 
-        private void WinClassic_Paint(object sender, PaintEventArgs e)
-        {
-            if (Resizing)
-            {
-                MessageBox.Show("HIT IT");
-                e.Graphics.DrawImage(ResizingBmp, 0, 0, this.Width, this.Height);
-            }
-        }
-
         private void border_MouseUp(object sender, MouseEventArgs e)
         {
             this.Bounds = resizer.ToDraw;

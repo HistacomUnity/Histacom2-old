@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TitleScreen));
-            this.vmModeTimer = new System.Windows.Forms.Timer(this.components);
             this.program = new System.Windows.Forms.Panel();
             this.programContent = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -71,10 +70,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.osimage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // vmModeTimer
-            // 
-            this.vmModeTimer.Tick += new System.EventHandler(this.vmModeTimer_Tick);
             // 
             // program
             // 
@@ -148,6 +143,7 @@
             0,
             0,
             0});
+            this.VM_Height.Visible = false;
             // 
             // VM_Width
             // 
@@ -170,6 +166,7 @@
             0,
             0,
             0});
+            this.VM_Width.Visible = false;
             // 
             // vm_mode
             // 
@@ -182,6 +179,7 @@
             this.vm_mode.TabIndex = 4;
             this.vm_mode.Text = "VM Mode";
             this.vm_mode.UseVisualStyleBackColor = false;
+            this.vm_mode.CheckStateChanged += new System.EventHandler(this.vm_mode_CheckStateChanged);
             // 
             // pictureBox1
             // 
@@ -427,7 +425,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Timer vmModeTimer;
         internal System.Windows.Forms.Panel program;
         internal System.Windows.Forms.Panel toprightcorner;
         internal System.Windows.Forms.Panel bottomrightcorner;

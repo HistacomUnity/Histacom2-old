@@ -137,9 +137,6 @@ namespace Histacom2
             SettingsToolStripMenuItem.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             HelpToolStripMenuItem.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             ShutdownToolStripMenuItem.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
-
-            // Start the VM Mode timer
-            vmModeTimer.Start();
         }
 
         private static void leet()
@@ -153,23 +150,6 @@ namespace Histacom2
             label1.AutoSize = true;
             label1.Text = "Thank you for making Histacom2 possible.";
             wm.Init(leet, "Thank You", null, true, true);
-        }
-
-        // The VM Mode timer / checker. Updates every 100ms
-        private void vmModeTimer_Tick(object sender, EventArgs e)
-        {
-            // Check for VM mode
-            if (vm_mode.Checked == true)
-            {
-                VM_Width.Visible = true;
-                VM_Height.Visible = true;
-            }
-            // If VM Mode is disabled
-            else
-            {
-                VM_Width.Visible = false;
-                VM_Height.Visible = false;
-            }
         }
 
         #region Menu Buttons
@@ -295,6 +275,22 @@ namespace Histacom2
         {
             AchievementScreen achievelist = new AchievementScreen();
             achievelist.ShowDialog();
+        }
+
+        private void vm_mode_CheckStateChanged(object sender, EventArgs e)
+        {
+            // Check for VM mode
+            if (vm_mode.Checked == true)
+            {
+                VM_Width.Visible = true;
+                VM_Height.Visible = true;
+            }
+            // If VM Mode is disabled
+            else
+            {
+                VM_Width.Visible = false;
+                VM_Height.Visible = false;
+            }
         }
     }
 }
