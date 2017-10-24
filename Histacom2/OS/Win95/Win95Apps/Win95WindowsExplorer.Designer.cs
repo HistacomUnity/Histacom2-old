@@ -55,6 +55,7 @@
             this.bottomleftcorner = new System.Windows.Forms.Panel();
             this.topleftcorner = new System.Windows.Forms.Panel();
             this.pnlSave = new System.Windows.Forms.Panel();
+            this.classicDropDown1 = new Histacom2.Engine.UI.ClassicDropDown();
             this.txtSave = new Histacom2.Engine.UI.ClassicTextBox();
             this.classicLabel2 = new Histacom2.Engine.UI.ClassicLabel();
             this.classicLabel1 = new Histacom2.Engine.UI.ClassicLabel();
@@ -283,6 +284,7 @@
             // 
             // pnlSave
             // 
+            this.pnlSave.Controls.Add(this.classicDropDown1);
             this.pnlSave.Controls.Add(this.txtSave);
             this.pnlSave.Controls.Add(this.classicLabel2);
             this.pnlSave.Controls.Add(this.classicLabel1);
@@ -294,6 +296,17 @@
             this.pnlSave.Size = new System.Drawing.Size(704, 54);
             this.pnlSave.TabIndex = 18;
             this.pnlSave.Visible = false;
+            // 
+            // classicDropDown1
+            // 
+            this.classicDropDown1.BackColor = System.Drawing.Color.White;
+            this.classicDropDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.classicDropDown1.Location = new System.Drawing.Point(56, 31);
+            this.classicDropDown1.Name = "classicDropDown1";
+            this.classicDropDown1.Size = new System.Drawing.Size(549, 20);
+            this.classicDropDown1.TabIndex = 23;
+            this.classicDropDown1.Text = "classicDropDown1";
+            this.classicDropDown1.UseSystemPasswordChar = false;
             // 
             // txtSave
             // 
@@ -309,14 +322,16 @@
             // 
             // classicLabel2
             // 
+            this.classicLabel2.DropShadow = false;
             this.classicLabel2.Location = new System.Drawing.Point(3, 32);
             this.classicLabel2.Name = "classicLabel2";
             this.classicLabel2.Size = new System.Drawing.Size(64, 13);
             this.classicLabel2.TabIndex = 19;
-            this.classicLabel2.Text = "File name:";
+            this.classicLabel2.Text = "File type:";
             // 
             // classicLabel1
             // 
+            this.classicLabel1.DropShadow = false;
             this.classicLabel1.Location = new System.Drawing.Point(3, 6);
             this.classicLabel1.Name = "classicLabel1";
             this.classicLabel1.Size = new System.Drawing.Size(64, 13);
@@ -411,5 +426,6 @@
         private Engine.UI.ClassicLabel classicLabel2;
         private Engine.UI.ClassicLabel classicLabel1;
         private Engine.UI.ClassicTextBox txtSave;
+        private Engine.UI.ClassicDropDown classicDropDown1;
     }
 }

@@ -95,7 +95,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UI\ClassicDropDown.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UI\ClassicDropDown.Designer.cs">
       <DependentUpon>ClassicDropDown.cs</DependentUpon>
@@ -147,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Template\WinXP.resx">
       <DependentUpon>WinXP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ClassicDropDown.resx">
+      <DependentUpon>ClassicDropDown.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ClassicTextBox.resx">
       <DependentUpon>ClassicTextBox.cs</DependentUpon>
