@@ -199,7 +199,7 @@ namespace Histacom2.Engine
             selectedBackColor = Color.Navy;
             selectedTextColor = Color.White;
 
-            defaultWallpaper = Properties.Resources.Win95PlusInsideComputerWallpaper;
+            defaultWallpaper = Properties.Resources.Win95PlusDefaultWallpaper;
             themeName = "default95plus";
         }
     }

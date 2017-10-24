@@ -8,18 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Histacom2.OS.Win95.Win95Apps
+namespace Histacom2.OS.Win98.Win98Apps
 {
-    public partial class WinClassicWelcome : UserControl
+    public partial class Win98Welcome : UserControl
     {
-        public WinClassicWelcome()
+        public Win98Welcome()
         {
             InitializeComponent();
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void classicButton1_Click(object sender, EventArgs e)
         {
-            ParentForm.Close();
+            this.ParentForm.Close();
         }
     }
 }

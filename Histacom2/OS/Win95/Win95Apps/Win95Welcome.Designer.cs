@@ -1,6 +1,6 @@
 ﻿namespace Histacom2.OS.Win95.Win95Apps
 {
-    partial class WinClassicWelcome
+    partial class Win95Welcome
     {
         /// <summary> 
         /// Required designer variable.
