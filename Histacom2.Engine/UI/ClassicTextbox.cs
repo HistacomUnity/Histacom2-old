@@ -30,11 +30,10 @@ namespace Histacom2.Engine.UI
                 this.Paint += new PaintEventHandler((object sender, PaintEventArgs e) =>
                 {
                     // Update a bunch of variables!
-                    if (SaveSystem.currentTheme != null) textBox1.Font = SaveSystem.currentTheme.buttonFont;
-                    else textBox1.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular);
+                    textBox1.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular);
 
-                    if (SaveSystem.currentTheme != null) BackColor = SaveSystem.currentTheme.threeDObjectsColor;
-                    else BackColor = Color.White;
+                    if (SaveSystem.currentTheme != null) textBox1.BackColor = SaveSystem.currentTheme.threeDObjectsColor;
+                    else textBox1.BackColor = Color.White;
 
                     if (SaveSystem.currentTheme != null)
                     {

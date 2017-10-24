@@ -93,8 +93,6 @@
             this.Controls.Add(this.bborder);
             this.Controls.Add(this.rborder);
             this.Controls.Add(this.lborder);
-            this.MaximumSize = new System.Drawing.Size(0, 17);
-            this.MinimumSize = new System.Drawing.Size(100, 17);
             this.Name = "ClassicTextBox";
             this.Size = new System.Drawing.Size(100, 17);
             ((System.ComponentModel.ISupportInitialize)(this.bborder)).EndInit();

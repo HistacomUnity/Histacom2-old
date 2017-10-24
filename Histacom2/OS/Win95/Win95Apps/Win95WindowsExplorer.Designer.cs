@@ -55,12 +55,12 @@
             this.bottomleftcorner = new System.Windows.Forms.Panel();
             this.topleftcorner = new System.Windows.Forms.Panel();
             this.pnlSave = new System.Windows.Forms.Panel();
-            this.refresh = new System.Windows.Forms.Timer(this.components);
+            this.txtSave = new Histacom2.Engine.UI.ClassicTextBox();
             this.classicLabel2 = new Histacom2.Engine.UI.ClassicLabel();
             this.classicLabel1 = new Histacom2.Engine.UI.ClassicLabel();
             this.classicButton1 = new Histacom2.Engine.UI.ClassicButton();
             this.btnSave = new Histacom2.Engine.UI.ClassicButton();
-            this.txtSave = new Histacom2.Engine.UI.ClassicTextBox();
+            this.refresh = new System.Windows.Forms.Timer(this.components);
             this.program.SuspendLayout();
             this.MenuStrip1.SuspendLayout();
             this.pnlSave.SuspendLayout();
@@ -295,10 +295,17 @@
             this.pnlSave.TabIndex = 18;
             this.pnlSave.Visible = false;
             // 
-            // refresh
+            // txtSave
             // 
-            this.refresh.Interval = 15000;
-            this.refresh.Tick += new System.EventHandler(this.refresh_Tick);
+            this.txtSave.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSave.BackColor = System.Drawing.Color.White;
+            this.txtSave.Location = new System.Drawing.Point(56, 6);
+            this.txtSave.Name = "txtSave";
+            this.txtSave.Size = new System.Drawing.Size(549, 17);
+            this.txtSave.TabIndex = 22;
+            this.txtSave.UseSystemPasswordChar = false;
             // 
             // classicLabel2
             // 
@@ -348,16 +355,10 @@
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // txtSave
+            // refresh
             // 
-            this.txtSave.BackColor = System.Drawing.Color.White;
-            this.txtSave.Location = new System.Drawing.Point(56, 6);
-            this.txtSave.MaximumSize = new System.Drawing.Size(0, 17);
-            this.txtSave.MinimumSize = new System.Drawing.Size(100, 17);
-            this.txtSave.Name = "txtSave";
-            this.txtSave.Size = new System.Drawing.Size(549, 17);
-            this.txtSave.TabIndex = 22;
-            this.txtSave.UseSystemPasswordChar = false;
+            this.refresh.Interval = 15000;
+            this.refresh.Tick += new System.EventHandler(this.refresh_Tick);
             // 
             // Win95WindowsExplorer
             // 
