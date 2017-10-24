@@ -810,6 +810,7 @@ namespace Histacom2.Engine
 
         [Order]
         public Theme customTheme { get; set; }
+        public bool FTime98 { get; set; }
     }
 
     public class FileSystemFolderInfo

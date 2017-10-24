@@ -23,6 +23,7 @@ namespace Histacom2.OS.Win98
         public List<WinClassic> nonimportantapps = new List<WinClassic>();
         public WebChat1999 webchat;
         public WinClassic ie;
+        public WinClassic welcome;
 
         public TaskBarController tb = new TaskBarController();
 
@@ -113,6 +114,22 @@ namespace Histacom2.OS.Win98
 
             // Bring to this the front
             this.BringToFront();
+
+            //Check if it is the first time
+            if (CurrentSave.FTime98 == false)
+            {
+                CurrentSave.FTime98 = true;
+                SaveGame();
+                welcome = wm.Init(new Win98Welcome(), "Welcome", null, false, false, resize: false);
+                AddTaskBarItem(welcome, welcome.Tag.ToString(), "Welcome", null);
+
+                nonimportantapps.Add(welcome);
+                nonimportantapps[nonimportantapps.Count - 1].BringToFront();
+                nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
+
+                welcome.BringToFront();
+                welcome.Activate();
+            }
 
             // Update the desktop Icons!
 

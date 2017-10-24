@@ -280,11 +280,11 @@
     <Compile Include="OS\Win95\Win95Apps\WinClassicThemePanel.Designer.cs">
       <DependentUpon>WinClassicThemePanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicWelcome.cs">
+    <Compile Include="OS\Win95\Win95Apps\Win95Welcome.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OS\Win95\Win95Apps\WinClassicWelcome.Designer.cs">
-      <DependentUpon>WinClassicWelcome.cs</DependentUpon>
+    <Compile Include="OS\Win95\Win95Apps\Win95Welcome.Designer.cs">
+      <DependentUpon>Win95Welcome.cs</DependentUpon>
     </Compile>
     <Compile Include="OS\Win95\Win95Apps\Win95WindowsExplorer.cs">
       <SubType>UserControl</SubType>
@@ -328,6 +328,12 @@
     </Compile>
     <Compile Include="OS\Win98\Win98Apps\WebChat1999.Designer.cs">
       <DependentUpon>WebChat1999.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\Win98\Win98Apps\Win98Welcome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win98\Win98Apps\Win98Welcome.Designer.cs">
+      <DependentUpon>Win98Welcome.cs</DependentUpon>
     </Compile>
     <Compile Include="OS\Win98\Win98Apps\WinClassicIE4.cs">
       <SubType>UserControl</SubType>
@@ -532,8 +538,8 @@
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicTimeDistorter.resx">
       <DependentUpon>WinClassicTimeDistorter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicWelcome.resx">
-      <DependentUpon>WinClassicWelcome.cs</DependentUpon>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\Win95Welcome.resx">
+      <DependentUpon>Win95Welcome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\Win95WindowsExplorer.resx">
       <DependentUpon>Win95WindowsExplorer.cs</DependentUpon>
@@ -555,6 +561,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win98\Win98Apps\WebChat1999.resx">
       <DependentUpon>WebChat1999.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win98\Win98Apps\Win98Welcome.resx">
+      <DependentUpon>Win98Welcome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win98\Win98Apps\WinClassicIE4.resx">
       <DependentUpon>WinClassicIE4.cs</DependentUpon>
