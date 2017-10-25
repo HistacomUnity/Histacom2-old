@@ -143,8 +143,8 @@ namespace Histacom2.OS.Win98.Win98Apps
             switch (chatStage)
             {
                 case 1: // td asks are you the time distorter guy
-                    if (msg.Contains("yes") | msg.Contains("yea") | msg.Contains("yep") | msg.Contains("thats me") | msg.Contains("that's me")) chatStage = 2;
-                    else if (msg.Contains("no") | msg.Contains("nope") | msg.Contains("not")) chatStage = 3;
+                    if (msg.Contains("yes") || msg.Contains("yea") || msg.Contains("yep") || msg.Contains("thats me") || msg.Contains("that's me")) chatStage = 2;
+                    else if (msg.Contains("no") || msg.Contains("nope") || msg.Contains("not")) chatStage = 3;
                     else chatStage = 4;
 
                     chatScript2();
