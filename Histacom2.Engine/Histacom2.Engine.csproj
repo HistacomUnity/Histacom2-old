@@ -221,6 +221,8 @@
     <Content Include="Resources\Win95PlusTravelWallpaper.jpg" />
     <Content Include="Resources\WinXP\Window\WinXP_Bottom.png" />
     <Content Include="Resources\WinXP\Window\WinXP_Close.png" />
+    <None Include="Resources\WinXP\Window\WinXP_CloseHover.png" />
+    <None Include="Resources\WinXP\Window\WinXP_ClosePress.png" />
     <Content Include="Resources\WinXP\Window\WinXP_LBCorner.png" />
     <Content Include="Resources\WinXP\Window\WinXP_LeftSide.png" />
     <Content Include="Resources\WinXP\Window\WinXP_Max.png" />

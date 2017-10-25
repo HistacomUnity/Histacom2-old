@@ -1163,6 +1163,26 @@ namespace Histacom2.Engine.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap WinXP_CloseHover {
+            get {
+                object obj = ResourceManager.GetObject("WinXP_CloseHover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WinXP_ClosePress {
+            get {
+                object obj = ResourceManager.GetObject("WinXP_ClosePress", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap WinXP_LeftSide {
             get {
                 object obj = ResourceManager.GetObject("WinXP_LeftSide", resourceCulture);

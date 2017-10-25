@@ -55,8 +55,8 @@
             // program
             // 
             this.program.BackColor = System.Drawing.Color.OldLace;
-            this.program.Controls.Add(this.flowLayoutPanel1);
             this.program.Controls.Add(this.bottomleftcorner);
+            this.program.Controls.Add(this.flowLayoutPanel1);
             this.program.Controls.Add(this.toprightcorner);
             this.program.Controls.Add(this.bottomrightcorner);
             this.program.Controls.Add(this.topleftcorner);
@@ -82,9 +82,10 @@
             // 
             this.bottomleftcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.bottomleftcorner.BackgroundImage = global::Histacom2.Engine.Properties.Resources.WinXP_BottomLeft;
+            this.bottomleftcorner.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.bottomleftcorner.Location = new System.Drawing.Point(0, 296);
             this.bottomleftcorner.Name = "bottomleftcorner";
-            this.bottomleftcorner.Size = new System.Drawing.Size(5, 4);
+            this.bottomleftcorner.Size = new System.Drawing.Size(4, 4);
             this.bottomleftcorner.TabIndex = 10;
             // 
             // toprightcorner
@@ -120,6 +121,7 @@
             // bottom
             // 
             this.bottom.BackgroundImage = global::Histacom2.Engine.Properties.Resources.WinXP_Bottom;
+            this.bottom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bottom.Cursor = System.Windows.Forms.Cursors.SizeNS;
             this.bottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.bottom.Location = new System.Drawing.Point(4, 296);
@@ -131,6 +133,7 @@
             // 
             this.top.BackColor = System.Drawing.Color.Transparent;
             this.top.BackgroundImage = global::Histacom2.Engine.Properties.Resources.WinXP_TopBar;
+            this.top.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.top.Controls.Add(this.programIcon);
             this.top.Controls.Add(this.maximizebutton);
             this.top.Controls.Add(this.minimizebutton);
@@ -178,11 +181,11 @@
             // 
             this.programname.AutoSize = true;
             this.programname.BackColor = System.Drawing.Color.Transparent;
-            this.programname.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.programname.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.programname.ForeColor = System.Drawing.Color.White;
-            this.programname.Location = new System.Drawing.Point(25, 7);
+            this.programname.Location = new System.Drawing.Point(25, 6);
             this.programname.Name = "programname";
-            this.programname.Size = new System.Drawing.Size(112, 16);
+            this.programname.Size = new System.Drawing.Size(110, 18);
             this.programname.TabIndex = 3;
             this.programname.Text = "Application Title";
             this.programname.MouseDown += new System.Windows.Forms.MouseEventHandler(this.top_MouseDown);
@@ -197,6 +200,9 @@
             this.closebutton.TabIndex = 4;
             this.closebutton.TabStop = false;
             this.closebutton.Click += new System.EventHandler(this.closebutton_Click);
+            this.closebutton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.closebutton_MouseDown);
+            this.closebutton.MouseEnter += new System.EventHandler(this.closebutton_MouseEnter);
+            this.closebutton.MouseLeave += new System.EventHandler(this.closebutton_MouseLeave);
             // 
             // right
             // 
