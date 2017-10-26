@@ -112,7 +112,7 @@ namespace Histacom2.Engine
             {
                 app.programIcon.Hide();
                 app.programIcon.Image = Properties.Resources.nullIcon;
-                app.programname.Location = new Point(6, 6);
+                app.programname.Location = new Point(3, 6);
             }
             else app.programIcon.Image = icon;
 

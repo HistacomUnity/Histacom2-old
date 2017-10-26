@@ -94,7 +94,7 @@ namespace Histacom2.Engine.UI
 
         public void PerformClick()
         {
-            this.OnClick(new EventArgs());
+            OnClick(EventArgs.Empty);
         }
     }
 }
