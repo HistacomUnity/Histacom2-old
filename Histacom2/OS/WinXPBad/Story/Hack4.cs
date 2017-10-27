@@ -14,7 +14,7 @@ namespace Histacom2.OS.WinXPBad.Story
 
         public static async void StartObjective()
         {
-            await Task.Delay(6000);
+            await Task.Delay(5000);
             Win95.Win95Apps.WinClassicTerminal Console = new Win95.Win95Apps.WinClassicTerminal(true);
             WinXP app = wm.InitXP(Console, "Command Prompt", null, true, true);
             Console.WriteLine("telnet> 104.27.135.159 Connecting...");
@@ -41,6 +41,8 @@ namespace Histacom2.OS.WinXPBad.Story
             await Task.Delay(3000); Console.WriteLine("TheHiddenHacker> but then, he released something dastardly");
             await Task.Delay(5000); Console.WriteLine("TheHiddenHacker> a virus that infected every single website, and people who visited infected websites got their computers infected and rendered unusable");
             await Task.Delay(4000); Console.WriteLine("TheHiddenHacker> now, its 2002. every website is infected, and 12padams has disappeared...");
+            await Task.Delay(4000); Console.WriteLine("TheHiddenHacker> the only use for the internet now is telnet, which is how im talking to you");
+            await Task.Delay(4000); Console.WriteLine("TheHiddenHacker> and since the internet is destroyed, we have to fix it by going back in time");
         }
     }
 }
