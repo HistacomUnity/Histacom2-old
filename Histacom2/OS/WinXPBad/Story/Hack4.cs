@@ -1,5 +1,6 @@
 ﻿using Histacom2.Engine;
 using Histacom2.Engine.Template;
+using Histacom2.GlobalPrograms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,12 +11,12 @@ namespace Histacom2.OS.WinXPBad.Story
 {
     public class Hack4 : object
     {
+        public static Win95.Win95Apps.WinClassicTerminal Console = new Win95.Win95Apps.WinClassicTerminal(true);
         static WindowManager wm = new WindowManager();
 
         public static async void StartObjective()
         {
             await Task.Delay(5000);
-            Win95.Win95Apps.WinClassicTerminal Console = new Win95.Win95Apps.WinClassicTerminal(true);
             WinXP app = wm.InitXP(Console, "Command Prompt", null, true, true);
             Console.WriteLine("telnet> 104.27.135.159 Connecting...");
 
@@ -43,6 +44,24 @@ namespace Histacom2.OS.WinXPBad.Story
             await Task.Delay(4000); Console.WriteLine("TheHiddenHacker> now, its 2002. every website is infected, and 12padams has disappeared...");
             await Task.Delay(4000); Console.WriteLine("TheHiddenHacker> the only use for the internet now is telnet, which is how im talking to you");
             await Task.Delay(4000); Console.WriteLine("TheHiddenHacker> and since the internet is destroyed, we have to fix it by going back in time");
+            await Task.Delay(4500); Console.WriteLine("TheHiddenHacker> now as i said before, i have the version 0.3 of the time distorter, which 12padams gave to me in 2000.");
+            await Task.Delay(3000); Console.WriteLine("TheHiddenHacker> and it only allows travel to 2000 or 2001.");
+            await Task.Delay(3000); Console.WriteLine("TheHiddenHacker> this means we have 2 choices..");
+            await Task.Delay(4500); Console.WriteLine("TheHiddenHacker> 1. we go to 2001 and try to stop 12padams from releasing the virus (kinda nervous bout this)");
+            await Task.Delay(4000); Console.WriteLine("TheHiddenHacker> or 2. you go to 2000 and pretend everything worked fine during time travel.");
+            await Task.Delay(4500); Console.WriteLine("TheHiddenHacker> i cant go with you to 2000 because nothing would go wrong and it wouldnt make sense for me to be there");
+            await Task.Delay(3500); Console.WriteLine("TheHiddenHacker> okay, ill go ahead and send the time distorter your way");
+            await Task.Delay(3000); Console.WriteLine("telnet> Transferring \"Time Distorter 0.3.exe\" from TheHiddenHacker.");
+
+            await Task.Delay(1000);
+
+            WinClassicDownloader opendownload = new WinClassicDownloader();
+            wm.Init(opendownload, "Downloader", null, false, true);
+            opendownload.appName.Text = "Downloading: Web Chat 1998";
+            opendownload.amountToDL = 35;
+
+            await Task.Delay(5000); Console.WriteLine("telnet> Transfer complete.");
+            await Task.Delay(4000); Console.WriteLine("TheHiddenHacker> now open up the time distorter and make a choice, ill wait");
         }
     }
 }

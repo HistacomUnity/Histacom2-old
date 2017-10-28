@@ -61,6 +61,9 @@ namespace Histacom2.GlobalPrograms
                     case "Downloading: Time Distorter 0.2":
                         CreateWindowsFile(Path.Combine(ProfileWindowsDirectory, "Desktop"), "tdistortv2.exe", "time distorter setup", 11, 21583);
                         break;
+                    case "Downloading: Time Distorter 0.3":
+                        TitleScreen.frmBadXP.desktopicons.Items.Add(new ListViewItem("Time Distorter 0.3", 12));
+                        break;
                 }
                 /* if (appName.Text == "Downloading: Skindows 95")
                 {

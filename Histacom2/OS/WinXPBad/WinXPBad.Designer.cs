@@ -72,6 +72,8 @@ namespace Histacom2.OS.WinXPBad
             this.classicStartMenuItem11 = new Histacom2.Engine.UI.ClassicStartMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.classicStartMenuItem12 = new Histacom2.Engine.UI.ClassicStartMenuItem();
+            this.classicStartMenuItem13 = new Histacom2.Engine.UI.ClassicStartMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.clockTimer = new System.Windows.Forms.Timer(this.components);
             this.desktopImages = new System.Windows.Forms.ImageList(this.components);
             this.desktopicons = new System.Windows.Forms.ListView();
@@ -82,8 +84,6 @@ namespace Histacom2.OS.WinXPBad
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PropertiesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.desktopupdate = new System.Windows.Forms.Timer(this.components);
-            this.classicStartMenuItem13 = new Histacom2.Engine.UI.ClassicStartMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.taskbar.SuspendLayout();
             this.clockPanel.SuspendLayout();
@@ -602,6 +602,29 @@ namespace Histacom2.OS.WinXPBad
             this.classicStartMenuItem12.SubTitle = "Subtitle";
             this.classicStartMenuItem12.Text = "&Control Panel";
             // 
+            // classicStartMenuItem13
+            // 
+            this.classicStartMenuItem13.AutoSize = false;
+            this.classicStartMenuItem13.BackColor = System.Drawing.Color.White;
+            this.classicStartMenuItem13.BackgroundImage = global::Histacom2.Properties.Resources.WinXPStartMenuPlaces;
+            this.classicStartMenuItem13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.classicStartMenuItem13.DoBackColorAdapt = false;
+            this.classicStartMenuItem13.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classicStartMenuItem13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(36)))), ((int)(((byte)(106)))));
+            this.classicStartMenuItem13.Image = global::Histacom2.Properties.Resources.WinXPPrintersSmall;
+            this.classicStartMenuItem13.LayoutStyle = Histacom2.Engine.UI.ClassicStartMenuItemLayout.CloseTitle;
+            this.classicStartMenuItem13.Name = "classicStartMenuItem13";
+            this.classicStartMenuItem13.Size = new System.Drawing.Size(180, 30);
+            this.classicStartMenuItem13.SubTitle = "Subtitle";
+            this.classicStartMenuItem13.Text = "Printers and Faxes";
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.AutoSize = false;
+            this.toolStripMenuItem3.BackgroundImage = global::Histacom2.Properties.Resources.WinXPStartMenuPlacesSeparator1;
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(179, 8);
+            // 
             // clockTimer
             // 
             this.clockTimer.Tick += new System.EventHandler(this.clockTimer_Tick);
@@ -622,6 +645,7 @@ namespace Histacom2.OS.WinXPBad
             this.desktopImages.Images.SetKeyName(9, "WinClassicSetup.png");
             this.desktopImages.Images.SetKeyName(10, "WinClassicSetup.png");
             this.desktopImages.Images.SetKeyName(11, "WinClassicSetup.png");
+            this.desktopImages.Images.SetKeyName(12, "TimeDistorter3.png");
             // 
             // desktopicons
             // 
@@ -696,29 +720,6 @@ namespace Histacom2.OS.WinXPBad
             this.desktopupdate.Enabled = true;
             this.desktopupdate.Interval = 5000;
             this.desktopupdate.Tick += new System.EventHandler(this.desktopupdate_Tick);
-            // 
-            // classicStartMenuItem13
-            // 
-            this.classicStartMenuItem13.AutoSize = false;
-            this.classicStartMenuItem13.BackColor = System.Drawing.Color.White;
-            this.classicStartMenuItem13.BackgroundImage = global::Histacom2.Properties.Resources.WinXPStartMenuPlaces;
-            this.classicStartMenuItem13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.classicStartMenuItem13.DoBackColorAdapt = false;
-            this.classicStartMenuItem13.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.classicStartMenuItem13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(36)))), ((int)(((byte)(106)))));
-            this.classicStartMenuItem13.Image = global::Histacom2.Properties.Resources.WinXPPrintersSmall;
-            this.classicStartMenuItem13.LayoutStyle = Histacom2.Engine.UI.ClassicStartMenuItemLayout.CloseTitle;
-            this.classicStartMenuItem13.Name = "classicStartMenuItem13";
-            this.classicStartMenuItem13.Size = new System.Drawing.Size(180, 30);
-            this.classicStartMenuItem13.SubTitle = "Subtitle";
-            this.classicStartMenuItem13.Text = "Printers and Faxes";
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.AutoSize = false;
-            this.toolStripMenuItem3.BackgroundImage = global::Histacom2.Properties.Resources.WinXPStartMenuPlacesSeparator1;
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(179, 8);
             // 
             // WindowsXPBad
             // 
