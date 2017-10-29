@@ -56,7 +56,23 @@ namespace Histacom2.OS.Win95.Win95Apps
             }
         }
 
-        private void ftpItems_Click(object sender, EventArgs e)
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            ParentForm.Close();
+        }
+
+        private void WinClassicFTPClient_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void topBar_Paint(object sender, PaintEventArgs e)
+        {
+            topBar.BackColor = SaveSystem.currentTheme.threeDObjectsColor;
+        }
+
+        private void ftpFiles_DoubleClick(object sender, EventArgs e)
         {
             Point objDrawingPoint = ftpFiles.PointToClient(Cursor.Position);
             ListViewItem objListViewItem = new ListViewItem();
@@ -116,21 +132,6 @@ namespace Histacom2.OS.Win95.Win95Apps
                     opendownload.amountToDL = 16;
                 }
             }
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            ParentForm.Close();
-        }
-
-        private void WinClassicFTPClient_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void topBar_Paint(object sender, PaintEventArgs e)
-        {
-            topBar.BackColor = SaveSystem.currentTheme.threeDObjectsColor;
         }
     }
 }

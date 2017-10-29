@@ -35,10 +35,10 @@ namespace Histacom2.OS.Win95
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.taskbar = new System.Windows.Forms.Panel();
+            this.startbutton = new System.Windows.Forms.PictureBox();
             this.clockPanel = new System.Windows.Forms.Panel();
             this.taskbartime = new System.Windows.Forms.Label();
             this.taskbarItems = new System.Windows.Forms.Panel();
-            this.startbutton = new System.Windows.Forms.PictureBox();
             this.startmenu = new System.Windows.Forms.Panel();
             this.startmenuitems = new System.Windows.Forms.MenuStrip();
             this.ProgramsToolStripMenuItem = new Histacom2.Engine.UI.ClassicStartMenuItem();
@@ -83,9 +83,6 @@ namespace Histacom2.OS.Win95
             this.TimeDistorterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FTPClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DocumentsToolStripMenuItem = new Histacom2.Engine.UI.ClassicStartMenuItem();
-            this.downloaderTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.installerTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.storyTest1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SettingsToolStripMenuItem = new Histacom2.Engine.UI.ClassicStartMenuItem();
             this.ControlPanelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PrintersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -113,8 +110,8 @@ namespace Histacom2.OS.Win95
             this.desktopupdate = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.taskbar.SuspendLayout();
-            this.clockPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.startbutton)).BeginInit();
+            this.clockPanel.SuspendLayout();
             this.startmenu.SuspendLayout();
             this.startmenuitems.SuspendLayout();
             this.ossidestartmenu.SuspendLayout();
@@ -154,6 +151,16 @@ namespace Histacom2.OS.Win95
             this.taskbar.TabIndex = 2;
             this.taskbar.Paint += new System.Windows.Forms.PaintEventHandler(this.taskbar_Paint);
             // 
+            // startbutton
+            // 
+            this.startbutton.Image = global::Histacom2.Properties.Resources.WinClassicStart;
+            this.startbutton.Location = new System.Drawing.Point(2, 4);
+            this.startbutton.Name = "startbutton";
+            this.startbutton.Size = new System.Drawing.Size(54, 22);
+            this.startbutton.TabIndex = 3;
+            this.startbutton.TabStop = false;
+            this.startbutton.Click += new System.EventHandler(this.startbutton_Click);
+            // 
             // clockPanel
             // 
             this.clockPanel.BackgroundImage = global::Histacom2.Properties.Resources.WinClassicTime;
@@ -184,16 +191,6 @@ namespace Histacom2.OS.Win95
             this.taskbarItems.Name = "taskbarItems";
             this.taskbarItems.Size = new System.Drawing.Size(3648, 22);
             this.taskbarItems.TabIndex = 5;
-            // 
-            // startbutton
-            // 
-            this.startbutton.Image = global::Histacom2.Properties.Resources.WinClassicStart;
-            this.startbutton.Location = new System.Drawing.Point(2, 4);
-            this.startbutton.Name = "startbutton";
-            this.startbutton.Size = new System.Drawing.Size(54, 22);
-            this.startbutton.TabIndex = 3;
-            this.startbutton.TabStop = false;
-            this.startbutton.Click += new System.EventHandler(this.startbutton_Click);
             // 
             // startmenu
             // 
@@ -239,6 +236,7 @@ namespace Histacom2.OS.Win95
             this.ProgramsToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.ProgramsToolStripMenuItem.BackgroundImage = global::Histacom2.Properties.Resources.sliversilver;
             this.ProgramsToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ProgramsToolStripMenuItem.DoBackColorAdapt = false;
             this.ProgramsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AccessoriesToolStripMenuItem,
             this.StartUpToolStripMenuItem,
@@ -257,9 +255,11 @@ namespace Histacom2.OS.Win95
             this.ProgramsToolStripMenuItem.Image = global::Histacom2.Properties.Resources.WinClassicPrograms;
             this.ProgramsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ProgramsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ProgramsToolStripMenuItem.LayoutStyle = Histacom2.Engine.UI.ClassicStartMenuItemLayout.DistancedTitle;
             this.ProgramsToolStripMenuItem.Name = "ProgramsToolStripMenuItem";
             this.ProgramsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
             this.ProgramsToolStripMenuItem.Size = new System.Drawing.Size(137, 32);
+            this.ProgramsToolStripMenuItem.SubTitle = "Subtitle";
             this.ProgramsToolStripMenuItem.Text = "&Programs";
             // 
             // AccessoriesToolStripMenuItem
@@ -311,7 +311,6 @@ namespace Histacom2.OS.Win95
             this.InternetConnectionWizardToolStripMenuItem.Name = "InternetConnectionWizardToolStripMenuItem";
             this.InternetConnectionWizardToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
             this.InternetConnectionWizardToolStripMenuItem.Text = "Internet Connection Wizard";
-            this.InternetConnectionWizardToolStripMenuItem.Click += new System.EventHandler(this.temp_for_std);
             // 
             // NetMeetingToolStripMenuItem
             // 
@@ -686,6 +685,7 @@ namespace Histacom2.OS.Win95
             this.StartRunnerToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.StartRunnerToolStripMenuItem.Text = "Start Runner";
             this.StartRunnerToolStripMenuItem.Visible = false;
+            this.StartRunnerToolStripMenuItem.Click += new System.EventHandler(this.StartRunnerToolStripMenuItem_Click);
             // 
             // ErrorBlasterToolStripMenuItem
             // 
@@ -750,48 +750,22 @@ namespace Histacom2.OS.Win95
             this.DocumentsToolStripMenuItem.AutoSize = false;
             this.DocumentsToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.DocumentsToolStripMenuItem.BackgroundImage = global::Histacom2.Properties.Resources.sliversilver;
-            this.DocumentsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.downloaderTestToolStripMenuItem,
-            this.installerTestToolStripMenuItem,
-            this.storyTest1ToolStripMenuItem});
+            this.DocumentsToolStripMenuItem.DoBackColorAdapt = false;
             this.DocumentsToolStripMenuItem.Image = global::Histacom2.Properties.Resources.WinClassicDocuments;
             this.DocumentsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DocumentsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.DocumentsToolStripMenuItem.LayoutStyle = Histacom2.Engine.UI.ClassicStartMenuItemLayout.DistancedTitle;
             this.DocumentsToolStripMenuItem.Name = "DocumentsToolStripMenuItem";
             this.DocumentsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
             this.DocumentsToolStripMenuItem.Size = new System.Drawing.Size(137, 32);
+            this.DocumentsToolStripMenuItem.SubTitle = "Subtitle";
             this.DocumentsToolStripMenuItem.Text = "&Documents";
-            // 
-            // downloaderTestToolStripMenuItem
-            // 
-            this.downloaderTestToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.downloaderTestToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("downloaderTestToolStripMenuItem.BackgroundImage")));
-            this.downloaderTestToolStripMenuItem.Name = "downloaderTestToolStripMenuItem";
-            this.downloaderTestToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.downloaderTestToolStripMenuItem.Text = "DownloaderTest";
-            this.downloaderTestToolStripMenuItem.Click += new System.EventHandler(this.downloaderTestToolStripMenuItem_Click);
-            // 
-            // installerTestToolStripMenuItem
-            // 
-            this.installerTestToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.installerTestToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("installerTestToolStripMenuItem.BackgroundImage")));
-            this.installerTestToolStripMenuItem.Name = "installerTestToolStripMenuItem";
-            this.installerTestToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.installerTestToolStripMenuItem.Text = "InstallerTest";
-            this.installerTestToolStripMenuItem.Click += new System.EventHandler(this.installerTestToolStripMenuItem_Click);
-            // 
-            // storyTest1ToolStripMenuItem
-            // 
-            this.storyTest1ToolStripMenuItem.BackgroundImage = global::Histacom2.Properties.Resources.sliversilver;
-            this.storyTest1ToolStripMenuItem.Name = "storyTest1ToolStripMenuItem";
-            this.storyTest1ToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.storyTest1ToolStripMenuItem.Text = "StoryTest1";
-            this.storyTest1ToolStripMenuItem.Click += new System.EventHandler(this.storyTest1ToolStripMenuItem_Click);
             // 
             // SettingsToolStripMenuItem
             // 
             this.SettingsToolStripMenuItem.AutoSize = false;
             this.SettingsToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.SettingsToolStripMenuItem.DoBackColorAdapt = false;
             this.SettingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ControlPanelToolStripMenuItem,
             this.PrintersToolStripMenuItem,
@@ -799,9 +773,11 @@ namespace Histacom2.OS.Win95
             this.SettingsToolStripMenuItem.Image = global::Histacom2.Properties.Resources.WinClassicSettings;
             this.SettingsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SettingsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.SettingsToolStripMenuItem.LayoutStyle = Histacom2.Engine.UI.ClassicStartMenuItemLayout.DistancedTitle;
             this.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem";
             this.SettingsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
             this.SettingsToolStripMenuItem.Size = new System.Drawing.Size(137, 32);
+            this.SettingsToolStripMenuItem.SubTitle = "Subtitle";
             this.SettingsToolStripMenuItem.Text = "&Settings";
             // 
             // ControlPanelToolStripMenuItem
@@ -823,7 +799,6 @@ namespace Histacom2.OS.Win95
             this.PrintersToolStripMenuItem.Name = "PrintersToolStripMenuItem";
             this.PrintersToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.PrintersToolStripMenuItem.Text = "Printers";
-            this.PrintersToolStripMenuItem.Click += new System.EventHandler(this.infoboxTestToolStripMenuItem_Click);
             // 
             // TaskbarToolStripMenuItem
             // 
@@ -839,6 +814,7 @@ namespace Histacom2.OS.Win95
             this.FindToolStripMenuItem.AutoSize = false;
             this.FindToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.FindToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FindToolStripMenuItem.BackgroundImage")));
+            this.FindToolStripMenuItem.DoBackColorAdapt = false;
             this.FindToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FilesOrFoldersToolStripMenuItem,
             this.ComputerToolStripMenuItem,
@@ -847,10 +823,12 @@ namespace Histacom2.OS.Win95
             this.FindToolStripMenuItem.Image = global::Histacom2.Properties.Resources.WinClassicFind;
             this.FindToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.FindToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.FindToolStripMenuItem.LayoutStyle = Histacom2.Engine.UI.ClassicStartMenuItemLayout.DistancedTitle;
             this.FindToolStripMenuItem.Name = "FindToolStripMenuItem";
             this.FindToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
             this.FindToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.FindToolStripMenuItem.Size = new System.Drawing.Size(137, 32);
+            this.FindToolStripMenuItem.SubTitle = "Subtitle";
             this.FindToolStripMenuItem.Text = "&Find";
             // 
             // FilesOrFoldersToolStripMenuItem
@@ -861,7 +839,6 @@ namespace Histacom2.OS.Win95
             this.FilesOrFoldersToolStripMenuItem.Name = "FilesOrFoldersToolStripMenuItem";
             this.FilesOrFoldersToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.FilesOrFoldersToolStripMenuItem.Text = "Files or Folders...";
-            this.FilesOrFoldersToolStripMenuItem.Click += new System.EventHandler(this.FilesOrFoldersToolStripMenuItem_Click);
             // 
             // ComputerToolStripMenuItem
             // 
@@ -894,50 +871,62 @@ namespace Histacom2.OS.Win95
             // 
             this.HelpToolStripMenuItem.AutoSize = false;
             this.HelpToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.HelpToolStripMenuItem.DoBackColorAdapt = false;
             this.HelpToolStripMenuItem.Image = global::Histacom2.Properties.Resources.WinClassicHelp;
             this.HelpToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.HelpToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.HelpToolStripMenuItem.LayoutStyle = Histacom2.Engine.UI.ClassicStartMenuItemLayout.DistancedTitle;
             this.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem";
             this.HelpToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
             this.HelpToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.HelpToolStripMenuItem.Size = new System.Drawing.Size(137, 32);
+            this.HelpToolStripMenuItem.SubTitle = "Subtitle";
             this.HelpToolStripMenuItem.Text = "&Help";
             // 
             // RunToolStripMenuItem
             // 
             this.RunToolStripMenuItem.AutoSize = false;
             this.RunToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.RunToolStripMenuItem.DoBackColorAdapt = false;
             this.RunToolStripMenuItem.Image = global::Histacom2.Properties.Resources.WinClassicRun;
             this.RunToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RunToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.RunToolStripMenuItem.LayoutStyle = Histacom2.Engine.UI.ClassicStartMenuItemLayout.DistancedTitle;
             this.RunToolStripMenuItem.Name = "RunToolStripMenuItem";
             this.RunToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
             this.RunToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.RunToolStripMenuItem.Size = new System.Drawing.Size(137, 32);
+            this.RunToolStripMenuItem.SubTitle = "Subtitle";
             this.RunToolStripMenuItem.Text = "&Run...";
             // 
             // SuspendToolStripMenuItem
             // 
             this.SuspendToolStripMenuItem.AutoSize = false;
             this.SuspendToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.SuspendToolStripMenuItem.DoBackColorAdapt = false;
             this.SuspendToolStripMenuItem.Image = global::Histacom2.Properties.Resources.WinClassicSuspend;
             this.SuspendToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SuspendToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.SuspendToolStripMenuItem.LayoutStyle = Histacom2.Engine.UI.ClassicStartMenuItemLayout.DistancedTitle;
             this.SuspendToolStripMenuItem.Name = "SuspendToolStripMenuItem";
             this.SuspendToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
             this.SuspendToolStripMenuItem.Size = new System.Drawing.Size(137, 32);
+            this.SuspendToolStripMenuItem.SubTitle = "Subtitle";
             this.SuspendToolStripMenuItem.Text = "Suspe&nd";
             // 
             // ShutdownToolStripMenuItem
             // 
             this.ShutdownToolStripMenuItem.AutoSize = false;
             this.ShutdownToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.ShutdownToolStripMenuItem.DoBackColorAdapt = false;
             this.ShutdownToolStripMenuItem.Image = global::Histacom2.Properties.Resources.WinClassicShutdown;
             this.ShutdownToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ShutdownToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ShutdownToolStripMenuItem.LayoutStyle = Histacom2.Engine.UI.ClassicStartMenuItemLayout.DistancedTitle;
             this.ShutdownToolStripMenuItem.Name = "ShutdownToolStripMenuItem";
             this.ShutdownToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
             this.ShutdownToolStripMenuItem.Size = new System.Drawing.Size(137, 32);
+            this.ShutdownToolStripMenuItem.SubTitle = "Subtitle";
             this.ShutdownToolStripMenuItem.Text = "Sh&ut Down...";
             this.ShutdownToolStripMenuItem.Click += new System.EventHandler(this.ShutdownToolStripMenuItem_Click);
             // 
@@ -1078,9 +1067,9 @@ namespace Histacom2.OS.Win95
             this.Load += new System.EventHandler(this.Desktop_Load);
             this.panel1.ResumeLayout(false);
             this.taskbar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.startbutton)).EndInit();
             this.clockPanel.ResumeLayout(false);
             this.clockPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.startbutton)).EndInit();
             this.startmenu.ResumeLayout(false);
             this.startmenuitems.ResumeLayout(false);
             this.startmenuitems.PerformLayout();
@@ -1162,10 +1151,7 @@ namespace Histacom2.OS.Win95
         internal System.Windows.Forms.ToolStripMenuItem TextDocumentToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem PropertiesToolStripMenuItem1;
         internal System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Windows95));
-        private System.Windows.Forms.ToolStripMenuItem downloaderTestToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem installerTestToolStripMenuItem;
         private System.Windows.Forms.Panel taskbarItems;
-        private System.Windows.Forms.ToolStripMenuItem storyTest1ToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem FTPClientToolStripMenuItem;
         private System.Windows.Forms.Timer desktopupdate;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;

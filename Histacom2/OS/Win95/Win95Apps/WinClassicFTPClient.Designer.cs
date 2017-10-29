@@ -78,8 +78,12 @@
             // 
             // btnLogin
             // 
+            this.btnLogin.AdaptBackColorWithTheme = true;
+            this.btnLogin.AdaptFontWithTheme = true;
+            this.btnLogin.AdaptForeColorWithTheme = true;
             this.btnLogin.BackColor = System.Drawing.Color.Silver;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnLogin.ForeColor = System.Drawing.Color.Black;
             this.btnLogin.Location = new System.Drawing.Point(585, 4);
             this.btnLogin.Name = "btnLogin";
@@ -184,7 +188,12 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.AdaptBackColorWithTheme = true;
+            this.btnCancel.AdaptFontWithTheme = true;
+            this.btnCancel.AdaptForeColorWithTheme = true;
             this.btnCancel.BackColor = System.Drawing.Color.Silver;
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnCancel.ForeColor = System.Drawing.Color.Black;
             this.btnCancel.Location = new System.Drawing.Point(3, 2);
             this.btnCancel.Name = "btnCancel";
@@ -227,7 +236,7 @@
             this.ftpFiles.UseCompatibleStateImageBehavior = false;
             this.ftpFiles.View = System.Windows.Forms.View.List;
             this.ftpFiles.Visible = false;
-            this.ftpFiles.Click += new System.EventHandler(this.ftpItems_Click);
+            this.ftpFiles.DoubleClick += new System.EventHandler(this.ftpFiles_DoubleClick);
             // 
             // fileIcons
             // 
