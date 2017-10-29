@@ -15,7 +15,6 @@ Histacom 2 is currently being developed in Microsoft Visual Studio 2017. Visual 
 Load the ``.sln`` project file into Visual Studio and compile. No further steps are required. This list may grow in the future.
 
 ## Links
-Histacom 2 has a forum at https://www.ashifter.ml/timehack/forum
 
 Histacom 2 has a Discord server at https://discord.gg/FZgQMDe (You can also click on the dark blue Discord Badge)
 
