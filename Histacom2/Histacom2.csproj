@@ -917,6 +917,7 @@
     <None Include="Resources\WinClassic\WinClassicApp.png" />
     <None Include="Resources\WinClassic\WinClassicCalcBig.png" />
     <None Include="Resources\WinClassic\Win95WordpadIcon2.png" />
+    <None Include="Resources\WinClassic\Win98Welcome.png" />
     <Content Include="Resources\WinClassic\WinClassicClock.png" />
     <Content Include="Resources\WinClassic\WinClassicComputer.png" />
     <None Include="Resources\WinClassic\WinClassicCopy.png" />

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Win98Welcome));
             this.classicButton1 = new Histacom2.Engine.UI.ClassicButton();
             this.SuspendLayout();
             // 
@@ -41,22 +40,22 @@
             this.classicButton1.DialogResult = System.Windows.Forms.DialogResult.None;
             this.classicButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.classicButton1.ForeColor = System.Drawing.Color.Black;
-            this.classicButton1.Location = new System.Drawing.Point(401, 304);
+            this.classicButton1.Location = new System.Drawing.Point(393, 293);
             this.classicButton1.Name = "classicButton1";
-            this.classicButton1.Size = new System.Drawing.Size(79, 23);
+            this.classicButton1.Size = new System.Drawing.Size(75, 23);
             this.classicButton1.TabIndex = 0;
-            this.classicButton1.Text = "Close";
+            this.classicButton1.Text = "&Begin";
             this.classicButton1.Click += new System.EventHandler(this.classicButton1_Click);
             // 
             // Win98Welcome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::Histacom2.Properties.Resources.Win98Welcome;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.classicButton1);
             this.Name = "Win98Welcome";
-            this.Size = new System.Drawing.Size(483, 327);
+            this.Size = new System.Drawing.Size(477, 322);
             this.ResumeLayout(false);
 
         }
