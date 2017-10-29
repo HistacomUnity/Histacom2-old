@@ -80,7 +80,7 @@ namespace Histacom2.OS.Win95.Win95Apps.Story
             await Task.Delay(2500);
             Console.WriteLine("Command> Show Start Button");
             TitleScreen.frm95.startbutton.Show();
-            TitleScreen.frm95.desktopicons.BackgroundImage = SaveSystem.currentTheme.defaultWallpaper;
+            if (SaveSystem.currentTheme.defaultWallpaper != null) TitleScreen.frm95.desktopicons.BackgroundImage = new Bitmap(currentTheme.defaultWallpaper, Width, Height);
             await Task.Delay(2900);
             Console.WriteLine("12padams> OKAY, NOW YOU'VE DONE IT!");
             await Task.Delay(2500);
