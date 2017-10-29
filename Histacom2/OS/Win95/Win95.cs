@@ -554,6 +554,7 @@ namespace Histacom2.OS.Win95
         private void desktopicons_MouseUp(object sender, MouseEventArgs e)
         {
             heldDownItem = null;
+            startmenu.Hide();
         }
 
         private void GuessTheNumberToolStripMenuItem_Click(object sender, EventArgs e)
@@ -641,6 +642,11 @@ namespace Histacom2.OS.Win95
             app.BringToFront();
             startmenu.Hide();
 
+        }
+
+        private void desktopicons_Click(object sender, EventArgs e)
+        {
+            startmenu.Hide();
         }
     }
 }

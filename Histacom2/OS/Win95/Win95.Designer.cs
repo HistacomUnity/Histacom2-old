@@ -787,7 +787,7 @@ namespace Histacom2.OS.Win95
             this.ControlPanelToolStripMenuItem.Image = global::Histacom2.Properties.Resources.Win95ControlPanelIcon;
             this.ControlPanelToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ControlPanelToolStripMenuItem.Name = "ControlPanelToolStripMenuItem";
-            this.ControlPanelToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ControlPanelToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.ControlPanelToolStripMenuItem.Text = "Control Panel";
             // 
             // PrintersToolStripMenuItem
@@ -797,7 +797,7 @@ namespace Histacom2.OS.Win95
             this.PrintersToolStripMenuItem.Image = global::Histacom2.Properties.Resources.Win95PrintersFolder;
             this.PrintersToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.PrintersToolStripMenuItem.Name = "PrintersToolStripMenuItem";
-            this.PrintersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.PrintersToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.PrintersToolStripMenuItem.Text = "Printers";
             // 
             // TaskbarToolStripMenuItem
@@ -806,7 +806,7 @@ namespace Histacom2.OS.Win95
             this.TaskbarToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("TaskbarToolStripMenuItem.BackgroundImage")));
             this.TaskbarToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.TaskbarToolStripMenuItem.Name = "TaskbarToolStripMenuItem";
-            this.TaskbarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.TaskbarToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.TaskbarToolStripMenuItem.Text = "Taskbar";
             // 
             // FindToolStripMenuItem
