@@ -799,7 +799,6 @@ namespace Histacom2.OS.Win95
             this.PrintersToolStripMenuItem.Name = "PrintersToolStripMenuItem";
             this.PrintersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.PrintersToolStripMenuItem.Text = "Printers";
-            this.PrintersToolStripMenuItem.Click += new System.EventHandler(this.infoboxTestToolStripMenuItem_Click);
             // 
             // TaskbarToolStripMenuItem
             // 

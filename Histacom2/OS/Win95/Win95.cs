@@ -324,13 +324,6 @@ namespace Histacom2.OS.Win95
             }
         }
 
-        private void infoboxTestToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            WinClassic app = wm.StartInfobox95("AShifter's Infobox", "This is the very first Histacom2 Infobox. It's really easy to call, too! \nJust use wm.startInfobox95(string title, string text, InfoboxType type, InfoboxButtons btns)!", InfoboxType.Info, InfoboxButtons.OK);
-
-            app.BringToFront();
-            startmenu.Hide();
-        }
         private void WebChatToolStripMenuItem_Click(object sender, EventArgs e)
         {
             webchat = wm.Init(new WebChat1998(), "Web Chat 1998", null, true, true);
