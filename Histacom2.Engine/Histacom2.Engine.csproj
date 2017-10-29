@@ -49,7 +49,6 @@
     <Compile Include="BSODCreator.cs" />
     <None Include="packages.config" />
     <None Include="Resources\WinClassic\Window\pjBg6mKP.bin" />
-    <Compile Include="CryptoRandom.cs" />
     <Compile Include="DesktopController.cs" />
     <Compile Include="FileDialogBoxManager.cs" />
     <Compile Include="Paintbrush.cs" />
