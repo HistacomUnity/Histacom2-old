@@ -311,7 +311,6 @@ namespace Histacom2.OS.Win95
             this.InternetConnectionWizardToolStripMenuItem.Name = "InternetConnectionWizardToolStripMenuItem";
             this.InternetConnectionWizardToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
             this.InternetConnectionWizardToolStripMenuItem.Text = "Internet Connection Wizard";
-            this.InternetConnectionWizardToolStripMenuItem.Click += new System.EventHandler(this.temp_for_std);
             // 
             // NetMeetingToolStripMenuItem
             // 
