@@ -2095,4 +2095,7 @@
   <data name="Win95PlusTravelWallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\win95plustravelwallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="sliveroldlace" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\sliveroldlace.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -355,10 +355,16 @@
     </Compile>
     <Compile Include="OS\WinXPBad\Story\Hack4.cs" />
     <Compile Include="OS\WinXPBad\VirusLabel.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="OS\WinXPBad\VirusLabel.Designer.cs">
       <DependentUpon>VirusLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\WinXPBad\WinClassicIE6Bad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\WinXPBad\WinClassicIE6Bad.Designer.cs">
+      <DependentUpon>WinClassicIE6Bad.cs</DependentUpon>
     </Compile>
     <Compile Include="OS\WinXPBad\WinClassicTimeDistorter3Bad.cs">
       <SubType>UserControl</SubType>
@@ -590,6 +596,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OS\WinXPBad\VirusLabel.resx">
       <DependentUpon>VirusLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\WinXPBad\WinClassicIE6Bad.resx">
+      <DependentUpon>WinClassicIE6Bad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\WinXPBad\WinXPBad.resx">
       <DependentUpon>WinXPBad.cs</DependentUpon>
@@ -871,6 +880,7 @@
     <None Include="Resources\WinClassic\TimeDistorter1.png" />
     <None Include="Resources\WinClassic\TimeDistorter1Icon.png" />
     <None Include="Resources\WinClassic\sliverwhite.png" />
+    <None Include="Resources\WinClassic\sliveroldlace.png" />
     <Content Include="Resources\WinClassic\TrueColor.png" />
     <None Include="Resources\WinClassic\Win95Info.png" />
     <None Include="Resources\WinClassic\Win95Error.png" />
