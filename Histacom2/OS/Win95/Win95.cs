@@ -140,6 +140,15 @@ namespace Histacom2.OS.Win95
             new ListViewItem("Set Up The Microsoft Network", 4),
             new ListViewItem("Outlook Express", 6) }, ref desktopicons, Path.Combine(ProfileWindowsDirectory, "Desktop"));
             desktopicons.AutoArrange = false;
+
+            // Enable installed programs
+
+            if (CurrentSave.installed95[0]) WebChatToolStripMenuItem.Visible = true;
+            if (CurrentSave.installed95[1]) FTPClientToolStripMenuItem.Visible = true;
+            if (CurrentSave.installed95[2]) StartRunnerToolStripMenuItem.Visible = true;
+            if (CurrentSave.installed95[3]) ErrorBlasterToolStripMenuItem.Visible = true;
+            if (CurrentSave.installed95[5]) TimeDistorterToolStripMenuItem.Visible = true;
+            if (CurrentSave.installed95[6]) GuessTheNumberToolStripMenuItem.Visible = true;
         }
 
         private void fontLoad()

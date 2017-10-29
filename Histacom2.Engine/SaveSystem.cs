@@ -810,7 +810,12 @@ namespace Histacom2.Engine
 
         [Order]
         public Theme customTheme { get; set; }
+
+        [Order]
         public bool FTime98 { get; set; }
+
+        [Order]
+        public bool[] installed95 { get; set; } = new bool[7]; // 0: WC98, 1: FTP, 2: SR, 3: EB, 4: SKNDWS, 5: TD0.1, 6: GTN
     }
 
     public class FileSystemFolderInfo
