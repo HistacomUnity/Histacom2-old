@@ -107,6 +107,10 @@
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="PinkieControls, Version=1.0.1362.15156, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PinkieControls.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -600,6 +604,9 @@
     <EmbeddedResource Include="OS\WinXPBad\WinClassicIE6Bad.resx">
       <DependentUpon>WinClassicIE6Bad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OS\WinXPBad\WinClassicTimeDistorter3Bad.resx">
+      <DependentUpon>WinClassicTimeDistorter3Bad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OS\WinXPBad\WinXPBad.resx">
       <DependentUpon>WinXPBad.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -963,6 +970,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="OS\WinXP\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

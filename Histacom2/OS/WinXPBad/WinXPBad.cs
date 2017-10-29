@@ -289,6 +289,7 @@ namespace Histacom2.OS.WinXPBad
             wm.InitXP(new WinClassicIE6Bad(), "Internet Explorer 6", Properties.Resources.WinXPIE6Icon, true, true);
             startmenu.Hide();
             startbutton.Enabled = false;
+            clockTimer.Enabled = false;
         }
     }
 }
