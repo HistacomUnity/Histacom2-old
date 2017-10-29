@@ -25,12 +25,12 @@ namespace Histacom2
             if (achieved[0] == 1)
             {
                 listView1.Items[0].ImageIndex = 0;
-                listView1.Items[0].Name = "Piracy Ending";
+                listView1.Items[0].Text = "Piracy Ending";
             }
             if (achieved[1] == 1)
             {
                 listView1.Items[1].ImageIndex = 0;
-                listView1.Items[1].Name = "Destruction Ending";
+                listView1.Items[1].Text = "Destruction Ending";
             }
             if (achieved[20] == 1) listView2.Items[0].ImageIndex = 0;
         }

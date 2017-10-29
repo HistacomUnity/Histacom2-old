@@ -38,6 +38,7 @@ namespace Histacom2.OS.WinXPBad
             this.clockPanel = new System.Windows.Forms.Panel();
             this.taskbartime = new Histacom2.Engine.UI.ClassicLabel();
             this.taskbarItems = new System.Windows.Forms.Panel();
+            this.classicLabel2 = new Histacom2.Engine.UI.ClassicLabel();
             this.startbutton = new System.Windows.Forms.PictureBox();
             this.startmenu = new System.Windows.Forms.Panel();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
@@ -87,6 +88,7 @@ namespace Histacom2.OS.WinXPBad
             this.panel1.SuspendLayout();
             this.taskbar.SuspendLayout();
             this.clockPanel.SuspendLayout();
+            this.taskbarItems.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.startbutton)).BeginInit();
             this.startmenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
@@ -168,11 +170,24 @@ namespace Histacom2.OS.WinXPBad
             // taskbarItems
             // 
             this.taskbarItems.BackColor = System.Drawing.Color.Transparent;
+            this.taskbarItems.Controls.Add(this.classicLabel2);
             this.taskbarItems.Cursor = System.Windows.Forms.Cursors.Default;
             this.taskbarItems.Location = new System.Drawing.Point(105, 4);
             this.taskbarItems.Name = "taskbarItems";
             this.taskbarItems.Size = new System.Drawing.Size(3606, 22);
             this.taskbarItems.TabIndex = 5;
+            // 
+            // classicLabel2
+            // 
+            this.classicLabel2.DropShadow = false;
+            this.classicLabel2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classicLabel2.ForeColor = System.Drawing.Color.White;
+            this.classicLabel2.Location = new System.Drawing.Point(0, 5);
+            this.classicLabel2.Name = "classicLabel2";
+            this.classicLabel2.Size = new System.Drawing.Size(315, 14);
+            this.classicLabel2.TabIndex = 6;
+            this.classicLabel2.Text = "Welcome to a world without computers!!!";
+            this.classicLabel2.Visible = false;
             // 
             // startbutton
             // 
@@ -742,6 +757,7 @@ namespace Histacom2.OS.WinXPBad
             this.panel1.ResumeLayout(false);
             this.taskbar.ResumeLayout(false);
             this.clockPanel.ResumeLayout(false);
+            this.taskbarItems.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.startbutton)).EndInit();
             this.startmenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
@@ -777,7 +793,6 @@ namespace Histacom2.OS.WinXPBad
         internal System.Windows.Forms.PictureBox startbutton;
         internal Histacom2.Engine.UI.ClassicLabel taskbartime;
         internal System.Windows.Forms.Panel startmenu;
-        private System.Windows.Forms.Panel clockPanel;
         private System.Windows.Forms.Timer clockTimer;
         private System.Windows.Forms.ImageList desktopImages;
         internal System.Windows.Forms.ListView desktopicons;
@@ -824,5 +839,7 @@ namespace Histacom2.OS.WinXPBad
         private Engine.UI.ClassicStartMenuItem classicStartMenuItem12;
         private Engine.UI.ClassicStartMenuItem classicStartMenuItem13;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        public Engine.UI.ClassicLabel classicLabel2;
+        public System.Windows.Forms.Panel clockPanel;
     }
 }

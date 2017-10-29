@@ -2176,6 +2176,16 @@ namespace Histacom2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap WinXPClose {
+            get {
+                object obj = ResourceManager.GetObject("WinXPClose", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap WinXPComputerSmall {
             get {
                 object obj = ResourceManager.GetObject("WinXPComputerSmall", resourceCulture);

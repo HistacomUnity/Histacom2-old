@@ -684,6 +684,7 @@
   <ItemGroup>
     <Content Include="Icon128x.ico" />
     <Content Include="Resources\12padams_EULA.txt" />
+    <None Include="Resources\WinClassic\WinXPClose.png" />
     <None Include="Resources\WinClassic\WinXPIE6Icon.png" />
     <None Include="Resources\WinClassic\WinXPError.png" />
     <None Include="Resources\WinClassic\WinXPPrintersSmall.png" />

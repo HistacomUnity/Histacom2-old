@@ -99,8 +99,24 @@ namespace Histacom2.OS.WinXPBad.Story
             await Task.Delay(1000); ie.backToolStripMenuItem.Image = null; ie.backToolStripMenuItem.BackColor = Color.Red; ie.toolStripMenuItem2.Visible = false; ie.panel1.BackColor = Color.Black;
             await Task.Delay(1000); ie.backToolStripMenuItem.Visible = false; ie.panel1.Hide(); ie.label1.BackColor = Color.Black;
             await Task.Delay(1000); ie.label1.BackColor = Color.White;
-            await Task.Delay(1000); ie.Hide();
+            await Task.Delay(1000); ie.ParentForm.Hide();
+            await Task.Delay(1000); TitleScreen.frmBadXP.desktopicons.BackgroundImage = Properties.Resources.WinXPError; TitleScreen.frmBadXP.desktopicons.BackgroundImageTiled = true; TitleScreen.frmBadXP.BackgroundImage = null;
+            await Task.Delay(1000); TitleScreen.frmBadXP.classicLabel2.Show();
+            await Task.Delay(1000); TitleScreen.frmBadXP.classicLabel2.ForeColor = Color.Black; TitleScreen.frmBadXP.taskbartime.BackColor = Color.Red;
+            await Task.Delay(1000); TitleScreen.frmBadXP.classicLabel2.ForeColor = Color.White; TitleScreen.frmBadXP.taskbartime.Text = "infected";
+            await Task.Delay(1000); TitleScreen.frmBadXP.classicLabel2.ForeColor = Color.Black; TitleScreen.frmBadXP.desktopicons.Hide();
+            await Task.Delay(1000); TitleScreen.frmBadXP.classicLabel2.ForeColor = Color.White; TitleScreen.frmBadXP.BackColor = Color.Black;
+            await Task.Delay(1000); TitleScreen.frmBadXP.classicLabel2.ForeColor = Color.Black; TitleScreen.frmBadXP.startbutton.Image = Properties.Resources.WinXPClose;
+            await Task.Delay(1000); TitleScreen.frmBadXP.classicLabel2.ForeColor = Color.White; TitleScreen.frmBadXP.startbutton.Image = null;
+            await Task.Delay(1000); TitleScreen.frmBadXP.classicLabel2.ForeColor = Color.Black; TitleScreen.frmBadXP.startbutton.BackColor = Color.White;
+            await Task.Delay(1000); TitleScreen.frmBadXP.classicLabel2.ForeColor = Color.White; TitleScreen.frmBadXP.startbutton.BackColor = Color.Black; TitleScreen.frmBadXP.taskbar.BackgroundImage = Properties.Resources.WinXPClose;
+            await Task.Delay(1000); TitleScreen.frmBadXP.classicLabel2.ForeColor = Color.Black; TitleScreen.frmBadXP.taskbar.BackgroundImage = null; TitleScreen.frmBadXP.taskbar.BackColor = Color.White; TitleScreen.frmBadXP.startbutton.Hide(); TitleScreen.frmBadXP.clockPanel.BackgroundImage = Properties.Resources.WinXPClose;
+            await Task.Delay(1000); TitleScreen.frmBadXP.classicLabel2.ForeColor = Color.White; TitleScreen.frmBadXP.taskbar.BackColor = Color.Black; TitleScreen.frmBadXP.clockPanel.BackgroundImage = null; TitleScreen.frmBadXP.clockPanel.BackColor = Color.White;
+            await Task.Delay(1000); TitleScreen.frmBadXP.classicLabel2.ForeColor = Color.Black; TitleScreen.frmBadXP.clockPanel.BackColor = Color.Black; TitleScreen.frmBadXP.clockPanel.Hide();
             Stop = true;
+            await Task.Delay(10000);
+            SaveSystem.SaveAchievement(1);
+            new AchievementBox(1);
         }
 
         public static async void LabelMaker()

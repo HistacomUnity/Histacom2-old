@@ -27,6 +27,10 @@ namespace Histacom2
                     BackgroundImage = Properties.Resources.EndingPiracy;
                     stayOnScreen = true;
                     break;
+                case 1:
+                    BackgroundImage = Properties.Resources.EndingDestruction;
+                    stayOnScreen = true;
+                    break;
                 case 20:
                     BackgroundImage = Properties.Resources.AchievementMines;
                     button1.Hide();
@@ -55,7 +59,8 @@ namespace Histacom2
             Program.title.Show();
             SaveSystem.CurrentSave = null;
             SaveSystem.currentTheme = null;
-            foreach (Form f in Application.OpenForms) if (!(f is TitleScreen) && !(f is AchievementBox)) f.Close();
+            Application.OpenForms.Cast<Form>().Where(x => !(x is TitleScreen | x is AchievementBox)).ToList().ForEach(x => x.Close());
+            //foreach (Form f in Application.OpenForms) if (!(f is TitleScreen) && !(f is AchievementBox)) f.Close();
             this.Close();
         }
     }
