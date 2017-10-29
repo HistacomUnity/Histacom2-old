@@ -41,9 +41,9 @@
             this.classicLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.classicLabel1.DropShadow = false;
             this.classicLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.classicLabel1.Location = new System.Drawing.Point(43, 34);
+            this.classicLabel1.Location = new System.Drawing.Point(45, 34);
             this.classicLabel1.Name = "classicLabel1";
-            this.classicLabel1.Size = new System.Drawing.Size(270, 120);
+            this.classicLabel1.Size = new System.Drawing.Size(262, 120);
             this.classicLabel1.TabIndex = 2;
             this.classicLabel1.Text = "2002";
             // 
@@ -98,7 +98,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(116, 28);
+            this.label3.Location = new System.Drawing.Point(119, 28);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 16);
             this.label3.TabIndex = 7;
@@ -117,7 +117,7 @@
             this.Controls.Add(this.buttonXP1);
             this.Controls.Add(this.classicLabel1);
             this.Name = "WinClassicTimeDistorter3Bad";
-            this.Size = new System.Drawing.Size(356, 235);
+            this.Size = new System.Drawing.Size(340, 235);
             this.ResumeLayout(false);
             this.PerformLayout();
 

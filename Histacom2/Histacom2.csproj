@@ -891,6 +891,7 @@
     <None Include="Resources\WinClassic\TimeDistorter1Icon.png" />
     <None Include="Resources\WinClassic\sliverwhite.png" />
     <None Include="Resources\WinClassic\sliveroldlace.png" />
+    <None Include="Resources\WinClassic\TimeDistorter3Icon.png" />
     <Content Include="Resources\WinClassic\TrueColor.png" />
     <None Include="Resources\WinClassic\Win95Info.png" />
     <None Include="Resources\WinClassic\Win95Error.png" />

@@ -61,9 +61,10 @@ namespace Histacom2.OS.WinXPBad.Story
                 await Task.Delay(1000);
 
                 WinClassicDownloader opendownload = new WinClassicDownloader();
-                wm.Init(opendownload, "Downloader", null, false, true);
-                opendownload.appName.Text = "Downloading: Web Chat 1998";
-                opendownload.amountToDL = 35;
+                wm.InitXP(opendownload, "Downloader", null, false, true);
+                opendownload.appName.Text = "Downloading: Time Distorter 0.3";
+                opendownload.amountToDL = 38;
+                opendownload.BackColor = Color.OldLace;
 
                 await Task.Delay(5000); Console.WriteLine("telnet> Transfer complete.");
                 await Task.Delay(4000); Console.WriteLine("TheHiddenHacker> now open up the time distorter and make a choice, ill wait");

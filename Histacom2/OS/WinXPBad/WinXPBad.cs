@@ -171,6 +171,7 @@ namespace Histacom2.OS.WinXPBad
                 {
                     if (objListViewItem.Text == "Time Distorter 0.3")
                     {
+                        wm.InitXP(new WinClassicTimeDistorter3Bad(), "Time Distorter 0.3", Properties.Resources.TimeDistorter3Icon, false, false, false, false);
                         /*if (ie != null) { wm.StartInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", InfoboxType.Warning, InfoboxButtons.OK); return; }
                         ie = wm.Init(new WinClassicIE4(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
                         AddTaskBarItem(ie, ie.Tag.ToString(), "Internet Explorer 4", Properties.Resources.Win95IconIE4);
