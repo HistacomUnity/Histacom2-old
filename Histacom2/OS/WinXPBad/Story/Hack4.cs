@@ -3,6 +3,7 @@ using Histacom2.Engine.Template;
 using Histacom2.GlobalPrograms;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -62,6 +63,25 @@ namespace Histacom2.OS.WinXPBad.Story
 
             await Task.Delay(5000); Console.WriteLine("telnet> Transfer complete.");
             await Task.Delay(4000); Console.WriteLine("TheHiddenHacker> now open up the time distorter and make a choice, ill wait");
+        }
+
+        public static async void VirusDestruction(WinClassicIE6Bad ie)
+        {
+            await Task.Delay(10000); ((WinClassic)ie.ParentForm).maximizebutton.Image = ((WinClassic)ie.ParentForm).closebutton.Image;
+            await Task.Delay(1000); ((WinClassic)ie.ParentForm).minimizebutton.Image = ((WinClassic)ie.ParentForm).closebutton.Image;
+            await Task.Delay(1000); ie.toolStripMenuItem8.Image = Properties.Resources.WinXPError;
+            await Task.Delay(1000); ie.toolStripMenuItem7.Image = Properties.Resources.WinXPError;
+            await Task.Delay(1000); ie.toolStripMenuItem5.Image = Properties.Resources.WinXPError;
+            await Task.Delay(1000); ie.toolStripMenuItem4.Image = Properties.Resources.WinXPError;
+            await Task.Delay(1000); ie.toolStripMenuItem3.Image = Properties.Resources.WinXPError;
+            await Task.Delay(1000); ie.toolStripMenuItem2.Image = Properties.Resources.WinXPError;
+            await Task.Delay(1000); ie.backToolStripMenuItem.Image = Properties.Resources.WinXPError;
+            await Task.Delay(3000); ie.comboBox1.BackColor = Color.Lime;
+            await Task.Delay(1000); ie.comboBox1.ForeColor = Color.Red;
+            await Task.Delay(1000); ie.classicLabel1.Text = "Virus:"; ie.classicLabel1.ForeColor = Color.Red; ie.toolStripMenuItem8.BackColor = Color.Lime;
+            await Task.Delay(1000); ie.toolStripMenuItem8.Image = null; ie.toolStripMenuItem8.BackColor = Color.Red; ie.toolStripMenuItem7.BackColor = Color.Lime; ie.panel2.BackColor = Color.Black;
+            await Task.Delay(1000); ie.toolStripMenuItem7.Image = null; ie.toolStripMenuItem7.BackColor = Color.Red; ie.toolStripMenuItem5.BackColor = Color.Lime; ie.toolStripMenuItem8.Visible = false; ie.toolStripMenuItem6.Visible = false;
+            await Task.Delay(1000); ie.toolStripMenuItem5.Image = null; ie.toolStripMenuItem5.BackColor = Color.Red; ie.toolStripMenuItem4.BackColor = Color.Lime; ie.toolStripMenuItem7.Visible = false; ie.comboBox1.BackColor = Color.Black;
         }
     }
 }

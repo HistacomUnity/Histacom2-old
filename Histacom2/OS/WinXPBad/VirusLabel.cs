@@ -25,7 +25,9 @@ namespace Histacom2.OS.WinXPBad
             {
                 label1.ForeColor = Color.Black;
                 light = false;
-            } else {
+            }
+            else
+            {
                 label1.ForeColor = Color.PaleGreen;
                 light = true;
             }

@@ -52,11 +52,12 @@
             this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.classicLabel1 = new Histacom2.Engine.UI.ClassicLabel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.classicLabel1 = new Histacom2.Engine.UI.ClassicLabel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.originalTimer = new System.Windows.Forms.Timer(this.components);
+            this.labelTimer = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -270,6 +271,15 @@
             this.panel2.Size = new System.Drawing.Size(992, 24);
             this.panel2.TabIndex = 4;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(53, 2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(886, 21);
+            this.comboBox1.TabIndex = 1;
+            this.comboBox1.Text = "http://www.microsoft.com/";
+            // 
             // classicLabel1
             // 
             this.classicLabel1.DropShadow = false;
@@ -279,15 +289,6 @@
             this.classicLabel1.Size = new System.Drawing.Size(56, 14);
             this.classicLabel1.TabIndex = 0;
             this.classicLabel1.Text = "A&ddress:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(53, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(886, 21);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.Text = "http://www.microsoft.com/";
             // 
             // panel3
             // 
@@ -316,6 +317,11 @@
             // 
             this.originalTimer.Enabled = true;
             this.originalTimer.Tick += new System.EventHandler(this.originalTimer_Tick);
+            // 
+            // labelTimer
+            // 
+            this.labelTimer.Interval = 1000;
+            this.labelTimer.Tick += new System.EventHandler(this.labelTimer_Tick);
             // 
             // WinClassicIE6Bad
             // 
@@ -357,21 +363,22 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.MenuStrip menuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem8;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Panel panel2;
-        private Engine.UI.ClassicLabel classicLabel1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer originalTimer;
+        private System.Windows.Forms.Timer labelTimer;
+        public System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        public System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        public System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        public System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
+        public System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
+        public System.Windows.Forms.ToolStripMenuItem toolStripMenuItem8;
+        public System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.Label label1;
+        public Engine.UI.ClassicLabel classicLabel1;
+        public System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
     }
 }
