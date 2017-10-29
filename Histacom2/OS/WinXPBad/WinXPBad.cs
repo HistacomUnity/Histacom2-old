@@ -283,6 +283,13 @@ namespace Histacom2.OS.WinXPBad
                 }
             }
         }
+
+        private void classicStartMenuItem1_Click(object sender, EventArgs e)
+        {
+            wm.InitXP(new WinClassicIE6Bad(), "Internet Explorer 6", Properties.Resources.WinXPIE6Icon, true, true);
+            startmenu.Hide();
+            startbutton.Enabled = false;
+        }
     }
 }
 

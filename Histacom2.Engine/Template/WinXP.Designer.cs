@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WinXP));
             this.program = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.Panel();
             this.bottomleftcorner = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.Panel();
             this.toprightcorner = new System.Windows.Forms.Panel();
             this.bottomrightcorner = new System.Windows.Forms.Panel();
             this.topleftcorner = new System.Windows.Forms.Panel();
@@ -70,14 +70,6 @@
             this.program.Size = new System.Drawing.Size(300, 300);
             this.program.TabIndex = 10;
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 30);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(292, 266);
-            this.flowLayoutPanel1.TabIndex = 11;
-            // 
             // bottomleftcorner
             // 
             this.bottomleftcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -87,6 +79,14 @@
             this.bottomleftcorner.Name = "bottomleftcorner";
             this.bottomleftcorner.Size = new System.Drawing.Size(4, 4);
             this.bottomleftcorner.TabIndex = 10;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 30);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(292, 266);
+            this.flowLayoutPanel1.TabIndex = 11;
             // 
             // toprightcorner
             // 
@@ -255,13 +255,13 @@
         internal System.Windows.Forms.Panel topleftcorner;
         internal System.Windows.Forms.Panel bottom;
         internal System.Windows.Forms.Panel top;
-        internal System.Windows.Forms.PictureBox maximizebutton;
-        internal System.Windows.Forms.PictureBox minimizebutton;
         internal System.Windows.Forms.Label programname;
-        internal System.Windows.Forms.PictureBox closebutton;
         internal System.Windows.Forms.Panel right;
         internal System.Windows.Forms.Panel left;
         public System.Windows.Forms.PictureBox programIcon;
         public System.Windows.Forms.Panel flowLayoutPanel1;
+        public System.Windows.Forms.PictureBox maximizebutton;
+        public System.Windows.Forms.PictureBox minimizebutton;
+        public System.Windows.Forms.PictureBox closebutton;
     }
 }
