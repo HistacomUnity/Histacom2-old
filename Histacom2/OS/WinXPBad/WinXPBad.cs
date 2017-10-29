@@ -126,6 +126,7 @@ namespace Histacom2.OS.WinXPBad
         // On Desktop MouseDown
         private void desktop_mousedown(object sender, MouseEventArgs e)
         {
+            startmenu.Hide();
             if (e.Button == MouseButtons.Right)
             {
                 // Check if an item is selected and if so show the Delete option
@@ -150,59 +151,12 @@ namespace Histacom2.OS.WinXPBad
             else if (e.Button == MouseButtons.Left)
             {
                 rightclickbackproperties.Hide();
-                startmenu.Hide();
             }
 
             else if (e.Button == MouseButtons.Middle)
             {
                 rightclickbackproperties.Hide();
             }
-        }
-
-        private void NotePadToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            WinClassicNotepad wp = new WinClassicNotepad();
-            WinClassic app = wm.Init(wp, "Notepad", Properties.Resources.Win95IconNotepad, true, true);
-            AddTaskBarItem(app, app.Tag.ToString(), "Notepad", Properties.Resources.Win95IconNotepad);
-
-            nonimportantapps.Add(app);
-            nonimportantapps[nonimportantapps.Count - 1].BringToFront();
-            nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
-
-            app.BringToFront();
-            startmenu.Hide();
-        }
-        private void downloaderTestToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            WinClassicDownloader opendownload = new WinClassicDownloader();
-            WinClassic app = wm.Init(opendownload, "Downloader", null, false, true);
-            opendownload.appName.Text = "Downloading: Survive The Day";
-
-            AddTaskBarItem(app, app.Tag.ToString(), "Downloader", null);
-
-            app.BringToFront();
-            startmenu.Hide();
-        }
-
-        private void installerTestToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            WinClassicInstaller openinstaller = new WinClassicInstaller("Testing");
-            WinClassic app = wm.Init(openinstaller, "Installer", null, false, true);
-
-            AddTaskBarItem(app, app.Tag.ToString(), "Installer", null);
-
-            app.BringToFront();
-            startmenu.Hide();
-        }
-
-        private void InternetExplorerToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (ie != null) { wm.StartInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", InfoboxType.Warning, InfoboxButtons.OK); return; }
-            ie = wm.Init(new WinClassicIE4(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
-            AddTaskBarItem(ie, ie.Tag.ToString(), "Internet Explorer 4", Properties.Resources.Win95IconIE4);
-            ie.BringToFront();
-            ie.FormClosing += new FormClosingEventHandler(InternetExplorer4_Closing);
-            startmenu.Hide();
         }
 
         private void desktopicons_DoubleClick(object sender, EventArgs e)
@@ -215,106 +169,21 @@ namespace Histacom2.OS.WinXPBad
                 objListViewItem = desktopicons.GetItemAt(objDrawingPoint.X, objDrawingPoint.Y);
                 if (objListViewItem != null)
                 {
-                    if (objListViewItem.Text == "Internet Explorer")
+                    if (objListViewItem.Text == "Time Distorter 0.3")
                     {
-                        if (ie != null) { wm.StartInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", InfoboxType.Warning, InfoboxButtons.OK); return; }
+                        /*if (ie != null) { wm.StartInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", InfoboxType.Warning, InfoboxButtons.OK); return; }
                         ie = wm.Init(new WinClassicIE4(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
                         AddTaskBarItem(ie, ie.Tag.ToString(), "Internet Explorer 4", Properties.Resources.Win95IconIE4);
                         ie.BringToFront();
-                        ie.FormClosing += new FormClosingEventHandler(InternetExplorer4_Closing);
+                        ie.FormClosing += new FormClosingEventHandler(InternetExplorer4_Closing);*/
                         startmenu.Hide();
-                    }
-                    else if (objListViewItem.Text == "My Computer")
-                    {
-                        WinClassic app = wm.Init(new Win95WindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
-                        AddTaskBarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
-                        app.BringToFront();
-                        startmenu.Hide();
-                    }
-                    else if (objListViewItem.Text == "Network Neighborhood")
-                    {
-                        // Alex's TODO here
-
                     }
                     else if (objListViewItem.Text == "Recycle Bin")
                     {
-                        // Another thing you may need to digital poke Alex about doing.
 
-                    }
-                    else if (objListViewItem.Text == "Set Up The Microsoft Network")
-                    {
-                        wm.StartInfobox95("Microsoft Network", "The Microsoft Network is already set up!", InfoboxType.Info, InfoboxButtons.OK);
-                    }
-                    else if (objListViewItem.Text == "Outlook Express")
-                    {
-                        //wm.StartInfobox95("Win32 Application", "That is not a valid Win32 Application.", Properties.Resources.Win95Error);
-                    }
-                    else if (objListViewItem.Text == "Inbox")
-                    {
-                        //wm.StartInfobox95("Win32 Application", "That is not a valid Win32 Application.", Properties.Resources.Win95Error);
-                    }
-                    else
-                    {
-                        // It is an actual file on the disk
-                        WinClassicWindowsExplorer we = new WinClassicWindowsExplorer();
-
-                        // If it is a directory
-                        if (Directory.Exists(objListViewItem.Tag.ToString()))
-                        {
-                            we.CurrentDirectory = objListViewItem.Tag.ToString();
-
-                            WinClassic app = wm.Init(we, "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
-                            AddTaskBarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
-                            app.BringToFront();
-                            startmenu.Hide();
-                        }
-                        else we.OpenFile(objListViewItem.Tag.ToString()); // Just open the file...
                     }
                 }
             }
-        }
-
-        private void infoboxTestToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            WinClassic app = wm.StartInfobox95("AShifter's Infobox", "This is the very first Histacom2 Infobox. It's really easy to call, too! \n Just use wm.startInfobox95(string title, string text, InfoboxType type, InfoboxButtons btns)!", InfoboxType.Info, InfoboxButtons.OK);
-
-            app.BringToFront();
-            startmenu.Hide();
-        }
-        private void WebChatToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (webchat != null) return;
-            webchat = new WebChat1999();
-            WinClassic app = wm.Init(webchat, "Web Chat 1999", null, true, true);
-
-            AddTaskBarItem(app, app.Tag.ToString(), "Web Chat 1999", null);
-
-            app.BringToFront();
-            startmenu.Hide();
-
-            app.FormClosing += (s, fe) => webchat = null;
-        }
-        public void NonImportantApp_Closing(object sender, FormClosingEventArgs e)
-        {
-            nonimportantapps.Remove((WinClassic)sender);
-        }
-        public void InternetExplorer4_Closing(object sender, FormClosingEventArgs e)
-        {
-            ie = null;
-        }
-
-        private void WordPadToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            WinClassicWordPad wp = new WinClassicWordPad();
-            WinClassic app = wm.Init(wp, "Wordpad", Properties.Resources.Win95IconWordpad, true, true);
-            AddTaskBarItem(app, app.Tag.ToString(), "Wordpad", Properties.Resources.Win95IconWordpad);
-
-            nonimportantapps.Add(app);
-            nonimportantapps[nonimportantapps.Count - 1].BringToFront();
-            nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
-
-            app.BringToFront();
-            startmenu.Hide();
         }
 
         public void AddTaskBarItem(Form Application, string ApplicationID, string ApplicationName, Image ApplicationIcon)
@@ -338,112 +207,13 @@ namespace Histacom2.OS.WinXPBad
             foreach (Form form in tb.GetAllOpenApps())
             {
                 // Calls that "AddToTaskbar" thing
-                taskbarItems = tb.AddTaskbarItem95(form.Tag.ToString(), form.Text.ToString(), (Image)form.Icon.ToBitmap(), (UserControl)new Win95TaskBarItem(), taskbarItems);
+                taskbarItems = tb.AddTaskbarItem95(form.Tag.ToString(), form.Text.ToString(), form.Icon.ToBitmap(), new Win95TaskBarItem(), taskbarItems);
             }
-        }
-
-        private void AddressBookToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            WinClassic app = wm.Init(new WinClassicAddressBook(), "Address Book", Properties.Resources.WinClassicAddressBook, true, true);
-            Program.AddTaskbarItem(app, app.Tag.ToString(), "Address Book", Properties.Resources.WinClassicAddressBook);
-
-            Program.nonimportantapps.Add(app);
-            Program.nonimportantapps[Program.nonimportantapps.Count - 1].BringToFront();
-            Program.nonimportantapps[Program.nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(Program.NonImportantApp_Closing);
-
-            app.BringToFront();
-        }
-
-        private void WindowsExplorerToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            FileDialogBoxManager.IsInOpenDialog = false;
-            FileDialogBoxManager.IsInSaveDialog = false;
-            WinClassic app = wm.Init(new WinClassicWindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
-            AddTaskBarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
-
-            nonimportantapps.Add(app);
-            nonimportantapps[nonimportantapps.Count - 1].BringToFront();
-            nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
-
-            app.BringToFront();
-            startmenu.Hide();
-        }
-
-        private void storyTest1ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Hack1.StartObjective();
-        }
-
-        private void temp_for_std(object sender, EventArgs e)
-        {
-            Win2K.Win2KApps.SurviveTheDay std = new Win2K.Win2KApps.SurviveTheDay();
-            WinClassic app = wm.Init(std, "Survive The Day", null, false, false);
-            AddTaskBarItem(app, app.Tag.ToString(), "Survive The Day", null);
-
-            nonimportantapps.Add(app);
-            nonimportantapps[nonimportantapps.Count - 1].BringToFront();
-            nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
-
-            app.BringToFront();
-            startmenu.Hide();
-        }
-
-        private void MSDOSPromptToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            WinClassicTerminal msdos = new WinClassicTerminal(false);
-            WinClassic app = wm.Init(msdos, "MS-DOS Prompt", Properties.Resources.MSDOSPromptToolStripMenuItem1_Image, true, true, false);
-
-            AddTaskBarItem(app, app.Tag.ToString(), "MS-DOS Prompt", Properties.Resources.MSDOSPromptToolStripMenuItem1_Image);
-            app.BringToFront();
-            startmenu.Hide();
-        }
-
-        private void PropertiesToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            WinClassicThemePanel theme = new WinClassicThemePanel();
-            WinClassic app = wm.Init(theme, "Themes", null, false, true, false);
-
-            AddTaskBarItem(app, app.Tag.ToString(), "Themes", null);
-            app.BringToFront();
-            startmenu.Hide();
-        }
-
-        private void TimeDistorterToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (distort != null) return;
-            distort = new WinClassicTimeDistorter2();
-            WinClassic app = wm.Init(distort, "Time Distorter", null, false, false, false);
-            AddTaskBarItem(app, app.Tag.ToString(), "Time Distorter", null);
-            app.BringToFront();
-            startmenu.Hide();
-        }
-
-        private void FTPClientToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            WinClassic app = wm.Init(new WinClassicFTPClient(), "FTP Client", null, true, true);
-
-            AddTaskBarItem(app, app.Tag.ToString(), "FTP Client", null);
-            app.BringToFront();
-            startmenu.Hide();
-        }
-
-        private void CalculatorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            WinClassic app = wm.Init(new WinClassicCalculator(), "Calculator", Properties.Resources.WinClassicCalc, false, false);
-            AddTaskBarItem(app, app.Tag.ToString(), "Calculator", Properties.Resources.WinClassicCalc);
-
-            nonimportantapps.Add(app);
-            nonimportantapps[nonimportantapps.Count - 1].BringToFront();
-            nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
-
-            app.BringToFront();
-            startmenu.Hide();
         }
 
         private void desktopupdate_Tick(object sender, EventArgs e)
         {
-            desktopicons.Items[0].Position = new Point(this.Width - 50, this.Height - 80);
+            //desktopicons.Items[0].Position = new Point(this.Width - 50, this.Height - 80);
             /*
             DesktopController.RefreshDesktopIcons(new ListViewItem[] { new System.Windows.Forms.ListViewItem("My Computer", 0),
             new System.Windows.Forms.ListViewItem("Network Neighborhood", 5),
@@ -506,16 +276,10 @@ namespace Histacom2.OS.WinXPBad
                                 File.Delete(objListViewItem.Tag.ToString());
                                 desktopupdate_Tick(null, null); // Update the desktop Icons
                             }
-                            else
-                            {
-                                wm.StartInfobox95("Windows Explorer", "This object cannot be deleted.", InfoboxType.Error, InfoboxButtons.OK);
-                            }
+                            else wm.StartInfobox95("Windows Explorer", "This object cannot be deleted.", InfoboxType.Error, InfoboxButtons.OK);
                         }
                     }
-                    else
-                    {
-                        wm.StartInfobox95("Windows Explorer", "This object cannot be deleted.", InfoboxType.Error, InfoboxButtons.OK);
-                    }
+                    else wm.StartInfobox95("Windows Explorer", "This object cannot be deleted.", InfoboxType.Error, InfoboxButtons.OK);
                 }
             }
         }

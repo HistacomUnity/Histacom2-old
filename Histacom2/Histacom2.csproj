@@ -354,6 +354,18 @@
       <DependentUpon>WinClassicWindowsExplorer.cs</DependentUpon>
     </Compile>
     <Compile Include="OS\WinXPBad\Story\Hack4.cs" />
+    <Compile Include="OS\WinXPBad\VirusLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\WinXPBad\VirusLabel.Designer.cs">
+      <DependentUpon>VirusLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\WinXPBad\WinClassicTimeDistorter3Bad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\WinXPBad\WinClassicTimeDistorter3Bad.Designer.cs">
+      <DependentUpon>WinClassicTimeDistorter3Bad.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\WinXPBad\WinXPBad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -575,6 +587,9 @@
     <EmbeddedResource Include="OS\Win98\Win98Apps\WinClassicWindowsExplorer.resx">
       <DependentUpon>WinClassicWindowsExplorer.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\WinXPBad\VirusLabel.resx">
+      <DependentUpon>VirusLabel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\WinXPBad\WinXPBad.resx">
       <DependentUpon>WinXPBad.cs</DependentUpon>
