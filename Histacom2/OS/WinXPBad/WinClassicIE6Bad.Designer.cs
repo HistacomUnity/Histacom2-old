@@ -320,6 +320,7 @@
             // 
             // labelTimer
             // 
+            this.labelTimer.Enabled = true;
             this.labelTimer.Interval = 1000;
             this.labelTimer.Tick += new System.EventHandler(this.labelTimer_Tick);
             // 
@@ -336,6 +337,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "WinClassicIE6Bad";
             this.Size = new System.Drawing.Size(992, 656);
+            this.Load += new System.EventHandler(this.WinClassicIE6Bad_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
@@ -351,9 +353,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
@@ -380,5 +379,7 @@
         public Engine.UI.ClassicLabel classicLabel1;
         public System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
+        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.MenuStrip menuStrip1;
     }
 }

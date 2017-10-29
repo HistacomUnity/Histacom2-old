@@ -17,58 +17,65 @@ namespace Histacom2.OS.WinXPBad.Story
 
         public static async void StartObjective()
         {
-            await Task.Delay(5000);
-            WinXP app = wm.InitXP(Console, "Command Prompt", null, true, true);
-            Console.WriteLine("telnet> 104.27.135.159 Connecting...");
+            try {
+                await Task.Delay(5000);
+                WinXP app = wm.InitXP(Console, "Command Prompt", null, true, true);
+                Console.WriteLine("telnet> 104.27.135.159 Connecting...");
 
-            await Task.Delay(2500); Console.WriteLine("telnet> 104.27.135.159 Connected.");
-            await Task.Delay(2500); Console.WriteLine("telnet> 104.27.135.159 set hostname to 'TheHiddenHacker'.");
-            await Task.Delay(2500); Console.WriteLine("TheHiddenHacker> STOP!");
-            await Task.Delay(3000); Console.WriteLine("TheHiddenHacker> DON'T OPEN INTERNET EXPLORER!");
-            await Task.Delay(3500); Console.WriteLine("TheHiddenHacker> the whole web is infected with a virus");
-            await Task.Delay(3500); Console.WriteLine("TheHiddenHacker> and if you open internet explorer, your pc will get infected!");
-            await Task.Delay(2500); Console.WriteLine("TheHiddenHacker> trust me");
-            await Task.Delay(3500); Console.WriteLine("TheHiddenHacker> now i have a lot of things to tell you, so pay attention");
-            await Task.Delay(3500); Console.WriteLine("TheHiddenHacker> the world is in chaos, and it all started back in 1999, right when you left");
-            await Task.Delay(3500); Console.WriteLine("TheHiddenHacker> as you know, 12padams told me to let him know when you got to 2000");
-            await Task.Delay(3500); Console.WriteLine("TheHiddenHacker> and he believed that you would get there without any problems");
-            await Task.Delay(3500); Console.WriteLine("TheHiddenHacker> but, as you saw, you ended up travelling to 2002 instead of 2000");
-            await Task.Delay(3500); Console.WriteLine("TheHiddenHacker> 2000 came and went, and when you never showed up");
-            await Task.Delay(3500); Console.WriteLine("TheHiddenHacker> 12padams refused to believe that his program failed");
-            await Task.Delay(3500); Console.WriteLine("TheHiddenHacker> and so he thought that you did make it to 2000 and i was hiding you");
-            await Task.Delay(3000); Console.WriteLine("TheHiddenHacker> and he lost complete trust in me");
-            await Task.Delay(3500); Console.WriteLine("TheHiddenHacker> later, in march 2001, 12padams made viruses to try to infect my pc");
-            await Task.Delay(4500); Console.WriteLine("TheHiddenHacker> not only because he lost trust in me, but i also had the latest version of the time distorter");
-            await Task.Delay(3000); Console.WriteLine("TheHiddenHacker> thankfully, i avoided those early viruses");
-            await Task.Delay(3000); Console.WriteLine("TheHiddenHacker> but then, he released something dastardly");
-            await Task.Delay(5000); Console.WriteLine("TheHiddenHacker> a virus that infected every single website, and people who visited infected websites got their computers infected and rendered unusable");
-            await Task.Delay(4000); Console.WriteLine("TheHiddenHacker> now, its 2002. every website is infected, and 12padams has disappeared...");
-            await Task.Delay(4000); Console.WriteLine("TheHiddenHacker> the only use for the internet now is telnet, which is how im talking to you");
-            await Task.Delay(4000); Console.WriteLine("TheHiddenHacker> and since the internet is destroyed, we have to fix it by going back in time");
-            await Task.Delay(4500); Console.WriteLine("TheHiddenHacker> now as i said before, i have the version 0.3 of the time distorter, which 12padams gave to me in 2000.");
-            await Task.Delay(3000); Console.WriteLine("TheHiddenHacker> and it only allows travel to 2000 or 2001.");
-            await Task.Delay(3000); Console.WriteLine("TheHiddenHacker> this means we have 2 choices..");
-            await Task.Delay(4500); Console.WriteLine("TheHiddenHacker> 1. we go to 2001 and try to stop 12padams from releasing the virus (kinda nervous bout this)");
-            await Task.Delay(4000); Console.WriteLine("TheHiddenHacker> or 2. you go to 2000 and pretend everything worked fine during time travel.");
-            await Task.Delay(4500); Console.WriteLine("TheHiddenHacker> i cant go with you to 2000 because nothing would go wrong and it wouldnt make sense for me to be there");
-            await Task.Delay(3500); Console.WriteLine("TheHiddenHacker> okay, ill go ahead and send the time distorter your way");
-            await Task.Delay(3000); Console.WriteLine("telnet> Transferring \"Time Distorter 0.3.exe\" from TheHiddenHacker.");
+                await Task.Delay(2500); Console.WriteLine("telnet> 104.27.135.159 Connected.");
+                await Task.Delay(2500); Console.WriteLine("telnet> 104.27.135.159 set hostname to 'TheHiddenHacker'.");
+                await Task.Delay(2500); Console.WriteLine("TheHiddenHacker> STOP!");
+                await Task.Delay(3000); Console.WriteLine("TheHiddenHacker> DON'T OPEN INTERNET EXPLORER!");
+                await Task.Delay(3500); Console.WriteLine("TheHiddenHacker> the whole web is infected with a virus");
+                await Task.Delay(3500); Console.WriteLine("TheHiddenHacker> and if you open internet explorer, your pc will get infected!");
+                await Task.Delay(2500); Console.WriteLine("TheHiddenHacker> trust me");
+                await Task.Delay(3500); Console.WriteLine("TheHiddenHacker> now i have a lot of things to tell you, so pay attention");
+                await Task.Delay(3500); Console.WriteLine("TheHiddenHacker> the world is in chaos, and it all started back in 1999, right when you left");
+                await Task.Delay(3500); Console.WriteLine("TheHiddenHacker> as you know, 12padams told me to let him know when you got to 2000");
+                await Task.Delay(3500); Console.WriteLine("TheHiddenHacker> and he believed that you would get there without any problems");
+                await Task.Delay(3500); Console.WriteLine("TheHiddenHacker> but, as you saw, you ended up travelling to 2002 instead of 2000");
+                await Task.Delay(3500); Console.WriteLine("TheHiddenHacker> 2000 came and went, and when you never showed up");
+                await Task.Delay(3500); Console.WriteLine("TheHiddenHacker> 12padams refused to believe that his program failed");
+                await Task.Delay(3500); Console.WriteLine("TheHiddenHacker> and so he thought that you did make it to 2000 and i was hiding you");
+                await Task.Delay(3000); Console.WriteLine("TheHiddenHacker> and he lost complete trust in me");
+                await Task.Delay(3500); Console.WriteLine("TheHiddenHacker> later, in march 2001, 12padams made viruses to try to infect my pc");
+                await Task.Delay(4500); Console.WriteLine("TheHiddenHacker> not only because he lost trust in me, but i also had the latest version of the time distorter");
+                await Task.Delay(3000); Console.WriteLine("TheHiddenHacker> thankfully, i avoided those early viruses");
+                await Task.Delay(3000); Console.WriteLine("TheHiddenHacker> but then, he released something dastardly");
+                await Task.Delay(5000); Console.WriteLine("TheHiddenHacker> a virus that infected every single website, and people who visited infected websites got their computers infected and rendered unusable");
+                await Task.Delay(4000); Console.WriteLine("TheHiddenHacker> now, its 2002. every website is infected, and 12padams has disappeared...");
+                await Task.Delay(4000); Console.WriteLine("TheHiddenHacker> the only use for the internet now is telnet, which is how im talking to you");
+                await Task.Delay(4000); Console.WriteLine("TheHiddenHacker> and since the internet is destroyed, we have to fix it by going back in time");
+                await Task.Delay(4500); Console.WriteLine("TheHiddenHacker> now as i said before, i have the version 0.3 of the time distorter, which 12padams gave to me in 2000.");
+                await Task.Delay(3000); Console.WriteLine("TheHiddenHacker> and it only allows travel to 2000 or 2001.");
+                await Task.Delay(3000); Console.WriteLine("TheHiddenHacker> this means we have 2 choices..");
+                await Task.Delay(4500); Console.WriteLine("TheHiddenHacker> 1. we go to 2001 and try to stop 12padams from releasing the virus (kinda nervous bout this)");
+                await Task.Delay(4000); Console.WriteLine("TheHiddenHacker> or 2. you go to 2000 and pretend everything worked fine during time travel.");
+                await Task.Delay(4500); Console.WriteLine("TheHiddenHacker> i cant go with you to 2000 because nothing would go wrong and it wouldnt make sense for me to be there");
+                await Task.Delay(3500); Console.WriteLine("TheHiddenHacker> okay, ill go ahead and send the time distorter your way");
+                await Task.Delay(3000); Console.WriteLine("telnet> Transferring \"Time Distorter 0.3.exe\" from TheHiddenHacker.");
 
-            await Task.Delay(1000);
+                await Task.Delay(1000);
 
-            WinClassicDownloader opendownload = new WinClassicDownloader();
-            wm.Init(opendownload, "Downloader", null, false, true);
-            opendownload.appName.Text = "Downloading: Web Chat 1998";
-            opendownload.amountToDL = 35;
+                WinClassicDownloader opendownload = new WinClassicDownloader();
+                wm.Init(opendownload, "Downloader", null, false, true);
+                opendownload.appName.Text = "Downloading: Web Chat 1998";
+                opendownload.amountToDL = 35;
 
-            await Task.Delay(5000); Console.WriteLine("telnet> Transfer complete.");
-            await Task.Delay(4000); Console.WriteLine("TheHiddenHacker> now open up the time distorter and make a choice, ill wait");
+                await Task.Delay(5000); Console.WriteLine("telnet> Transfer complete.");
+                await Task.Delay(4000); Console.WriteLine("TheHiddenHacker> now open up the time distorter and make a choice, ill wait");
+            }
+            catch (Exception e)
+            {
+                return;
+            }
         }
 
         public static async void VirusDestruction(WinClassicIE6Bad ie)
         {
-            await Task.Delay(10000); ((WinClassic)ie.ParentForm).maximizebutton.Image = ((WinClassic)ie.ParentForm).closebutton.Image;
-            await Task.Delay(1000); ((WinClassic)ie.ParentForm).minimizebutton.Image = ((WinClassic)ie.ParentForm).closebutton.Image;
+            Console.ParentForm.Close();
+            await Task.Delay(10000); ((WinXP)ie.ParentForm).maximizebutton.Image = ((WinXP)ie.ParentForm).closebutton.Image;
+            await Task.Delay(1000); ((WinXP)ie.ParentForm).minimizebutton.Image = ((WinXP)ie.ParentForm).closebutton.Image;
             await Task.Delay(1000); ie.toolStripMenuItem8.Image = Properties.Resources.WinXPError;
             await Task.Delay(1000); ie.toolStripMenuItem7.Image = Properties.Resources.WinXPError;
             await Task.Delay(1000); ie.toolStripMenuItem5.Image = Properties.Resources.WinXPError;
@@ -82,6 +89,13 @@ namespace Histacom2.OS.WinXPBad.Story
             await Task.Delay(1000); ie.toolStripMenuItem8.Image = null; ie.toolStripMenuItem8.BackColor = Color.Red; ie.toolStripMenuItem7.BackColor = Color.Lime; ie.panel2.BackColor = Color.Black;
             await Task.Delay(1000); ie.toolStripMenuItem7.Image = null; ie.toolStripMenuItem7.BackColor = Color.Red; ie.toolStripMenuItem5.BackColor = Color.Lime; ie.toolStripMenuItem8.Visible = false; ie.toolStripMenuItem6.Visible = false;
             await Task.Delay(1000); ie.toolStripMenuItem5.Image = null; ie.toolStripMenuItem5.BackColor = Color.Red; ie.toolStripMenuItem4.BackColor = Color.Lime; ie.toolStripMenuItem7.Visible = false; ie.comboBox1.BackColor = Color.Black;
+            await Task.Delay(1000); ie.toolStripMenuItem4.Image = null; ie.toolStripMenuItem4.BackColor = Color.Red; ie.toolStripMenuItem3.BackColor = Color.Lime; ie.toolStripMenuItem5.Visible = false; ie.comboBox1.ForeColor = Color.Black;
+            await Task.Delay(1000); ie.toolStripMenuItem3.Image = null; ie.toolStripMenuItem3.BackColor = Color.Red; ie.toolStripMenuItem2.BackColor = Color.Lime; ie.toolStripMenuItem4.Visible = false; ie.panel2.Hide();
+            await Task.Delay(1000); ie.toolStripMenuItem2.Image = null; ie.toolStripMenuItem2.BackColor = Color.Red; ie.backToolStripMenuItem.BackColor = Color.Lime; ie.toolStripMenuItem3.Visible = false; ie.menuStrip1.Hide(); ie.panel1.BackColor = Color.White;
+            await Task.Delay(1000); ie.backToolStripMenuItem.Image = null; ie.backToolStripMenuItem.BackColor = Color.Red; ie.toolStripMenuItem2.Visible = false; ie.panel1.BackColor = Color.Black;
+            await Task.Delay(1000); ie.backToolStripMenuItem.Visible = false; ie.panel1.Hide(); ie.label1.BackColor = Color.Black;
+            await Task.Delay(1000); ie.label1.BackColor = Color.White;
+            await Task.Delay(1000); ie.Hide();
         }
     }
 }

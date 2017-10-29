@@ -406,6 +406,7 @@ namespace Histacom2.OS.WinXPBad
             this.classicStartMenuItem1.Size = new System.Drawing.Size(181, 40);
             this.classicStartMenuItem1.SubTitle = "Internet Explorer";
             this.classicStartMenuItem1.Text = "Internet";
+            this.classicStartMenuItem1.Click += new System.EventHandler(this.classicStartMenuItem1_Click);
             // 
             // classicStartMenuItem2
             // 

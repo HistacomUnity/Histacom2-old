@@ -16,6 +16,7 @@ namespace Histacom2.OS.WinXPBad
     {
         private bool light = true;
         private Random r = new Random();
+        private Random r2 = new Random();
 
         private int maxX;
         private int maxY;
@@ -23,11 +24,6 @@ namespace Histacom2.OS.WinXPBad
         public WinClassicIE6Bad()
         {
             InitializeComponent();
-
-            maxX = TitleScreen.frmBadXP.Width;
-            maxY = TitleScreen.frmBadXP.Height;
-            Hack4.VirusDestruction(this);
-            ((WinClassic)ParentForm).closeDisabled = true;
         }
 
         private void originalTimer_Tick(object sender, EventArgs e)
@@ -47,8 +43,18 @@ namespace Histacom2.OS.WinXPBad
         private void labelTimer_Tick(object sender, EventArgs e)
         {
             VirusLabel v = new VirusLabel();
+            v.Location = new Point(r.Next(0, maxX), r2.Next(0, maxY));
             v.Show();
-            v.Location = new Point(r.Next(0, maxX), r.Next(0, maxY));
+            v.TopMost = true;
+            v.BringToFront();
+        }
+
+        private void WinClassicIE6Bad_Load(object sender, EventArgs e)
+        {
+            maxX = Screen.PrimaryScreen.Bounds.Width;
+            maxY = Screen.PrimaryScreen.Bounds.Height;
+            Hack4.VirusDestruction(this);
+            ((WinXP)ParentForm).closeDisabled = true;
         }
     }
 }
