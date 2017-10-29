@@ -34,6 +34,7 @@ namespace Histacom2.OS.Win95.Win95Apps
 
         public static async void GoToPage(string url)
         {
+            string newURL = url;
             UserControl uc = new UserControl();
 
             switch (url)
@@ -50,12 +51,24 @@ namespace Histacom2.OS.Win95.Win95Apps
                 case "www.12padams.com":
                     uc = new _12padams1998();
                     break;
+                case "12padams.com":
+                    uc = new _12padams1998();
+                    newURL = "www.12padams.com";
+                    break;
+                case "google.com":
+                    uc = new GoogleHome();
+                    newURL = "www.google.com";
+                    break;
+                case "google.stanford.edu":
+                    uc = new GooglePrototype();
+                    newURL = "www.google.stanford.edu";
+                    break;
                 default:
                     uc = new IENoPage();
                     break;
             }
 
-            addressbar.Text = url;
+            addressbar.Text = newURL;
             uc.Dock = DockStyle.Fill;
 
             await Task.Delay(new Random().Next(500, 1500));

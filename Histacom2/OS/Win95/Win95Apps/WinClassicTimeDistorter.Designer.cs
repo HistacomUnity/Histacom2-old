@@ -104,10 +104,17 @@
             // 
             // btnGo
             // 
-            this.btnGo.Location = new System.Drawing.Point(162, 133);
+            this.btnGo.AdaptBackColorWithTheme = true;
+            this.btnGo.AdaptFontWithTheme = true;
+            this.btnGo.AdaptForeColorWithTheme = true;
+            this.btnGo.BackColor = System.Drawing.Color.Silver;
+            this.btnGo.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnGo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnGo.ForeColor = System.Drawing.Color.Black;
+            this.btnGo.Location = new System.Drawing.Point(155, 133);
             this.btnGo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnGo.Name = "btnGo";
-            this.btnGo.Size = new System.Drawing.Size(124, 23);
+            this.btnGo.Size = new System.Drawing.Size(131, 23);
             this.btnGo.TabIndex = 7;
             this.btnGo.Text = "Go To Destination Year";
             this.btnGo.Click += new System.EventHandler(this.btnGo_Click);

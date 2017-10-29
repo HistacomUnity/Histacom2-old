@@ -235,29 +235,6 @@ namespace Histacom2.OS.Win95
             app.BringToFront();
             startmenu.Hide();
         }
-        private void downloaderTestToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            WinClassicDownloader opendownload = new WinClassicDownloader();
-            WinClassic app = wm.Init(opendownload, "Downloader", null, false, true, resize: false);
-            opendownload.appName.Text = "Downloading: Survive The Day";
-
-            AddTaskBarItem(app, app.Tag.ToString(), "Downloader", null);
-
-            app.BringToFront();
-            startmenu.Hide();
-        }
-
-        private void installerTestToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Win95Installer openinstaller = new Win95Installer("Testing");
-            WinClassic app = wm.Init(openinstaller, "Installer", null, false, true, resize: false);
-
-            AddTaskBarItem(app, app.Tag.ToString(), "Installer", null);
-
-            app.BringToFront();
-            startmenu.Hide();
-        }
-
         private void InternetExplorerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (ie != null) { wm.StartInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", InfoboxType.Warning, InfoboxButtons.OK); return; }
@@ -430,20 +407,6 @@ namespace Histacom2.OS.Win95
         private void storyTest1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Hack1.StartObjective();
-        }
-
-        private void temp_for_std(object sender, EventArgs e)
-        {
-            Win2K.Win2KApps.SurviveTheDay std = new Win2K.Win2KApps.SurviveTheDay();
-            WinClassic app = wm.Init(std, "Survive The Day", null, false, false);
-            AddTaskBarItem(app, app.Tag.ToString(), "Survive The Day", null);
-
-            nonimportantapps.Add(app);
-            nonimportantapps[nonimportantapps.Count - 1].BringToFront();
-            nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
-
-            app.BringToFront();
-            startmenu.Hide();
         }
 
         private void MSDOSPromptToolStripMenuItem1_Click (object sender, EventArgs e)
@@ -673,7 +636,7 @@ namespace Histacom2.OS.Win95
             startmenu.Hide();
         }
 
-        private void FilesOrFoldersToolStripMenuItem_Click(object sender, EventArgs e)
+        private void StartRunnerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WinClassic app = wm.Init(new StartRunner95(), "Welcome to Start Runner 95!", null, false, false, false, false);
             AddTaskBarItem(app, app.Tag.ToString(), "Welcome to Start Runner 95!", null);
@@ -684,6 +647,7 @@ namespace Histacom2.OS.Win95
 
             app.BringToFront();
             startmenu.Hide();
+
         }
     }
 }
