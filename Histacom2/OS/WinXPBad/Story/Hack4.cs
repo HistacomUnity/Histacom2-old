@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Histacom2.OS.WinXPBad.Story
 {
@@ -14,6 +15,8 @@ namespace Histacom2.OS.WinXPBad.Story
     {
         public static Win95.Win95Apps.WinClassicTerminal Console = new Win95.Win95Apps.WinClassicTerminal(true);
         static WindowManager wm = new WindowManager();
+        public static bool Stop = false;
+        static Random Rnd = new Random();
 
         public static async void StartObjective()
         {
@@ -73,6 +76,7 @@ namespace Histacom2.OS.WinXPBad.Story
 
         public static async void VirusDestruction(WinClassicIE6Bad ie)
         {
+            LabelMaker();
             Console.ParentForm.Close();
             await Task.Delay(10000); ((WinXP)ie.ParentForm).maximizebutton.Image = ((WinXP)ie.ParentForm).closebutton.Image;
             await Task.Delay(1000); ((WinXP)ie.ParentForm).minimizebutton.Image = ((WinXP)ie.ParentForm).closebutton.Image;
@@ -96,6 +100,21 @@ namespace Histacom2.OS.WinXPBad.Story
             await Task.Delay(1000); ie.backToolStripMenuItem.Visible = false; ie.panel1.Hide(); ie.label1.BackColor = Color.Black;
             await Task.Delay(1000); ie.label1.BackColor = Color.White;
             await Task.Delay(1000); ie.Hide();
+            Stop = true;
+        }
+
+        public static async void LabelMaker()
+        {
+            while (!Stop)
+            {
+                await Task.Delay(1000);
+                VirusLabel v = new VirusLabel();
+                v.WindowState = FormWindowState.Maximized;
+                v.label1.Location = new Point(Rnd.Next(Screen.PrimaryScreen.Bounds.Width), Rnd.Next(Screen.PrimaryScreen.Bounds.Height));
+                v.Show();
+                v.TopMost = true;
+                v.BringToFront();
+            }
         }
     }
 }

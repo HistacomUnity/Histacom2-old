@@ -57,7 +57,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.originalTimer = new System.Windows.Forms.Timer(this.components);
-            this.labelTimer = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -318,12 +317,6 @@
             this.originalTimer.Enabled = true;
             this.originalTimer.Tick += new System.EventHandler(this.originalTimer_Tick);
             // 
-            // labelTimer
-            // 
-            this.labelTimer.Enabled = true;
-            this.labelTimer.Interval = 1000;
-            this.labelTimer.Tick += new System.EventHandler(this.labelTimer_Tick);
-            // 
             // WinClassicIE6Bad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -366,7 +359,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Timer originalTimer;
-        private System.Windows.Forms.Timer labelTimer;
         public System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         public System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
