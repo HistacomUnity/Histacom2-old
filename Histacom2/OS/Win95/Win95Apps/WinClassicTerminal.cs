@@ -62,7 +62,8 @@ namespace Histacom2.OS.Win95.Win95Apps
             }
             else
             {
-                cmdPrompt.AppendText("\nMicrosoft<R> Windows 95\n   <C>Copyright Microsoft Corp 1981-1995.\n\n");
+                if (SaveSystem.CurrentSave.CurrentOS == "95") cmdPrompt.AppendText("\nMicrosoft<R> Windows 95\n   <C>Copyright Microsoft Corp 1981-1995.\n\n");
+                if (SaveSystem.CurrentSave.CurrentOS == "98") cmdPrompt.AppendText("\nMicrosoft<R> Windows 98\n   <C>Copyright Microsoft Corp 1981-1998.\n\n");
                 cmdPrompt.AppendText(prefix);
             }
         }
