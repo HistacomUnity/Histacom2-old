@@ -310,6 +310,11 @@ namespace Histacom2.Engine.Template
             gfx.DrawLine(new Pen(_darkBack), 0, 2, 2, 2);
         }
 
+        private void minimizebutton_Click(object sender, EventArgs e)
+        {
+            Hide();
+        }
+
         public Size prevSize;
         public Point prevPoint;
         private void maximizebutton_Click(object sender, EventArgs e)

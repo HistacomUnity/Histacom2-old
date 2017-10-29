@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WinClassic));
             this.program = new System.Windows.Forms.Panel();
             this.programContent = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.programtopbar = new System.Windows.Forms.Panel();
             this.programIcon = new System.Windows.Forms.PictureBox();
             this.maximizebutton = new System.Windows.Forms.PictureBox();
@@ -45,7 +46,6 @@
             this.bottom = new System.Windows.Forms.Panel();
             this.right = new System.Windows.Forms.Panel();
             this.top = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.program.SuspendLayout();
             this.programtopbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.programIcon)).BeginInit();
@@ -82,6 +82,14 @@
             this.programContent.Size = new System.Drawing.Size(292, 273);
             this.programContent.TabIndex = 9;
             this.programContent.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.programContent_ControlAdded);
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(4, 22);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(292, 1);
+            this.panel1.TabIndex = 0;
             // 
             // programtopbar
             // 
@@ -130,6 +138,7 @@
             this.minimizebutton.Size = new System.Drawing.Size(16, 14);
             this.minimizebutton.TabIndex = 5;
             this.minimizebutton.TabStop = false;
+            this.minimizebutton.Click += new System.EventHandler(this.minimizebutton_Click);
             // 
             // Title
             // 
@@ -266,14 +275,6 @@
             this.top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
             this.top.MouseMove += new System.Windows.Forms.MouseEventHandler(this.top_MouseMove);
             this.top.MouseUp += new System.Windows.Forms.MouseEventHandler(this.border_MouseUp);
-            // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(4, 22);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(292, 1);
-            this.panel1.TabIndex = 0;
             // 
             // WinClassic
             // 
