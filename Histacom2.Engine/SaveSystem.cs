@@ -352,6 +352,15 @@ namespace Histacom2.Engine
                         break;
                     }
                 }
+                CurrentSave.BytesLeft = 916455424;
+                string toWrite = JsonConvert.SerializeObject(fsfi, Formatting.Indented);
+
+                File.WriteAllText(Path.Combine(ProfileProgramsDirectory, "_data.info"), toWrite);
+
+                fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(ProfileWindowsDirectory, "_data.info")));
+
+                Directory.Delete(Path.Combine(ProfileWindowsDirectory, "Desktop"), true);
+                Directory.CreateDirectory(Path.Combine(ProfileWindowsDirectory, "Desktop"));
             }
         }
 
