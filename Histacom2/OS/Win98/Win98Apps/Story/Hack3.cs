@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -128,7 +129,7 @@ namespace Histacom2.OS.Win98.Win98Apps.Story
             td.classicLabel2.Text = "LOL NO";
             td.classicLabel2.ForeColor = Color.MidnightBlue;
             // 0
-
+            new SoundPlayer(Properties.Resources.distort_fail).Play();
             await Task.Delay(100); td.classicLabel1.Text = "1999";
             await Task.Delay(500);
             await Task.Delay(100); td.classicLabel1.Text = "2000";
