@@ -694,6 +694,7 @@ namespace Histacom2.OS.Win98
             this.WebChatToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.WebChatToolStripMenuItem.Text = "Web Chat";
             this.WebChatToolStripMenuItem.Visible = false;
+            this.WebChatToolStripMenuItem.Click += new System.EventHandler(this.WebChatToolStripMenuItem_Click);
             // 
             // TimeDistorterToolStripMenuItem
             // 
@@ -704,7 +705,7 @@ namespace Histacom2.OS.Win98
             this.TimeDistorterToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
             this.TimeDistorterToolStripMenuItem.Text = "Time Distorter";
             this.TimeDistorterToolStripMenuItem.Visible = false;
-            this.TimeDistorterToolStripMenuItem.Click += new System.EventHandler(TimeDistorterToolStripMenuItem_Click);
+            this.TimeDistorterToolStripMenuItem.Click += new System.EventHandler(this.TimeDistorterToolStripMenuItem_Click);
             // 
             // DocumentsToolStripMenuItem
             // 

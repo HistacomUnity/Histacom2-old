@@ -10,6 +10,7 @@ namespace Histacom2.OS.Win95.Win95Apps.Story
 {
     public class Hack2 : object
     {
+        public static bool Upgraded = false;
         static WindowManager wm = new WindowManager();
 
         public static async void StartObjective()
@@ -273,6 +274,7 @@ namespace Histacom2.OS.Win95.Win95Apps.Story
             SaveSystem.CurrentSave.CurrentOS = "98";
             SaveSystem.currentTheme = new Default98Theme();
             SaveSystem.CurrentSave.ThemeName = "default98";
+            Upgraded = true;
             TitleScreen.frm95.distort.ParentForm.Close();
             foreach (Form frm in Application.OpenForms) if (frm is WinClassic) frm.Close();
             Program.title.StartGame();
