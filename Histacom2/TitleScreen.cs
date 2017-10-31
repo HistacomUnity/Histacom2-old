@@ -57,65 +57,60 @@ namespace Histacom2
 
         public void StartGame()
         {
-            if (Convert.ToInt32(VM_Width.Text) == 1337 && Convert.ToInt32(VM_Height.Text) == 1337) leet();
-            else
+            // Time to decide which OS to start up!
+
+            switch (CurrentSave.CurrentOS)
             {
-                // Time to decide which OS to start up!
+                case "95":
+                    frm95 = new Windows95();
+                    frm95.TopMost = true;
+                    frm95.FormBorderStyle = FormBorderStyle.None;
+                    frm95.WindowState = FormWindowState.Maximized;
+                    //if (vm_mode.Checked == true)
+                    //{
+                    //    frm95.Size = new Size(Convert.ToInt32(VM_Width.Text), Convert.ToInt32(VM_Height.Text));
+                    //    frm95.FormBorderStyle = FormBorderStyle.Fixed3D;
+                    //}
+                    frm95.Show();
+                    Hide();
 
-                switch (CurrentSave.CurrentOS)
-                {
-                    case "95":
-                        frm95 = new Windows95();
-                        frm95.TopMost = true;
-                        frm95.FormBorderStyle = FormBorderStyle.None;
-                        frm95.WindowState = FormWindowState.Maximized;
-                        //if (vm_mode.Checked == true)
-                        //{
-                        //    frm95.Size = new Size(Convert.ToInt32(VM_Width.Text), Convert.ToInt32(VM_Height.Text));
-                        //    frm95.FormBorderStyle = FormBorderStyle.Fixed3D;
-                        //}
-                        frm95.Show();
-                        Hide();
+                    break;
+                case "98":
+                    frm98 = new Windows98();
+                    frm98.TopMost = true;
+                    frm98.FormBorderStyle = FormBorderStyle.None;
+                    frm98.WindowState = FormWindowState.Maximized;
+                    //if (vm_mode.Checked == true)
+                    //{
+                    //    frm98.Size = new Size(Convert.ToInt32(VM_Width.Text), Convert.ToInt32(VM_Height.Text));
+                    //    frm98.FormBorderStyle = FormBorderStyle.Fixed3D;
+                    //}
+                    frm98.Show();
+                    Hide();
 
-                        break;
-                    case "98":
-                        frm98 = new Windows98();
-                        frm98.TopMost = true;
-                        frm98.FormBorderStyle = FormBorderStyle.None;
-                        frm98.WindowState = FormWindowState.Maximized;
-                        //if (vm_mode.Checked == true)
-                        //{
-                        //    frm98.Size = new Size(Convert.ToInt32(VM_Width.Text), Convert.ToInt32(VM_Height.Text));
-                        //    frm98.FormBorderStyle = FormBorderStyle.Fixed3D;
-                        //}
-                        frm98.Show();
-                        Hide();
+                    break;
+                case "xpbad":
+                    frmBadXP = new WindowsXPBad();
+                    frmBadXP.TopMost = true;
+                    frmBadXP.FormBorderStyle = FormBorderStyle.None;
+                    frmBadXP.WindowState = FormWindowState.Maximized;
+                    //if (vm_mode.Checked == true)
+                    //{
+                    //    frm98.Size = new Size(Convert.ToInt32(VM_Width.Text), Convert.ToInt32(VM_Height.Text));
+                    //    frm98.FormBorderStyle = FormBorderStyle.Fixed3D;
+                    //}
+                    frmBadXP.Show();
+                    Hide();
 
-                        break;
-                    case "xpbad":
-                        frmBadXP = new WindowsXPBad();
-                        frmBadXP.TopMost = true;
-                        frmBadXP.FormBorderStyle = FormBorderStyle.None;
-                        frmBadXP.WindowState = FormWindowState.Maximized;
-                        //if (vm_mode.Checked == true)
-                        //{
-                        //    frm98.Size = new Size(Convert.ToInt32(VM_Width.Text), Convert.ToInt32(VM_Height.Text));
-                        //    frm98.FormBorderStyle = FormBorderStyle.Fixed3D;
-                        //}
-                        frmBadXP.Show();
-                        Hide();
+                    break;
+                default:
+                    MessageBox.Show("WARNING! It looks like this save is corrupt!");
+                    MessageBox.Show("We will now open the Save troubleshooter");
 
-                        break;
-                    default:
-                        MessageBox.Show("WARNING! It looks like this save is corrupt!");
-                        MessageBox.Show("We will now open the Save troubleshooter");
+                    SaveFileTroubleShooter troubleshooter = new SaveFileTroubleShooter();
 
-                        SaveFileTroubleShooter troubleshooter = new SaveFileTroubleShooter();
-
-                        troubleshooter.ShowDialog();
-                        break;
-                }
-
+                    troubleshooter.ShowDialog();
+                    break;
             }
         }
 
@@ -153,39 +148,6 @@ namespace Histacom2
             SettingsToolStripMenuItem.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             HelpToolStripMenuItem.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             ShutdownToolStripMenuItem.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
-
-            // Start the VM Mode timer
-            vmModeTimer.Start();
-        }
-
-        private static void leet()
-        {
-            WindowManager wm = new WindowManager();
-            UserControl leet = new UserControl();
-            leet.Width = 500;
-            leet.Height = 500;
-            Label label1 = new Label();
-            label1.Parent = leet;
-            label1.AutoSize = true;
-            label1.Text = "Thank you for making Histacom2 possible.";
-            wm.Init(leet, "Thank You", null, true, true);
-        }
-
-        // The VM Mode timer / checker. Updates every 100ms
-        private void vmModeTimer_Tick(object sender, EventArgs e)
-        {
-            // Check for VM mode
-            if (vm_mode.Checked == true)
-            {
-                VM_Width.Visible = true;
-                VM_Height.Visible = true;
-            }
-            // If VM Mode is disabled
-            else
-            {
-                VM_Width.Visible = false;
-                VM_Height.Visible = false;
-            }
         }
 
         #region Menu Buttons
@@ -220,28 +182,13 @@ namespace Histacom2
 
                 }
 
-                // If VM Mode is not enabled
-                if (vm_mode.Checked != true)
-                {
-                    // Generate fullscreen desktop
-                    frm95 = new Windows95();
-                    frm95.TopMost = true;
-                    frm95.FormBorderStyle = FormBorderStyle.None;
-                    frm95.WindowState = FormWindowState.Maximized;
-                    frm95.Show();
-                    Hide();
-                }
-                // If VM Mode is enabled
-                else
-                {
-                    // Generate desktop with size entered by user
-                    frm95 = new Windows95();
-                    frm95.FormBorderStyle = FormBorderStyle.None;
-                    frm95.Size = new Size(Convert.ToInt32(VM_Width.Text), Convert.ToInt32(VM_Height.Text));
-                    frm95.FormBorderStyle = FormBorderStyle.Fixed3D;
-                    frm95.Show();
-                    Hide();
-                }
+                // Generate fullscreen desktop
+                frm95 = new Windows95();
+                frm95.TopMost = true;
+                frm95.FormBorderStyle = FormBorderStyle.None;
+                frm95.WindowState = FormWindowState.Maximized;
+                frm95.Show();
+                Hide();
             }
         }
         #endregion

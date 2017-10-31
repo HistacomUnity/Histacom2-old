@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TitleScreen));
-            this.vmModeTimer = new System.Windows.Forms.Timer(this.components);
             this.program = new System.Windows.Forms.Panel();
             this.programContent = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -64,10 +63,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.osimage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // vmModeTimer
-            // 
-            this.vmModeTimer.Tick += new System.EventHandler(this.vmModeTimer_Tick);
             // 
             // program
             // 
@@ -348,7 +343,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Timer vmModeTimer;
         internal System.Windows.Forms.Panel program;
         internal System.Windows.Forms.Panel toprightcorner;
         internal System.Windows.Forms.Panel bottomrightcorner;
