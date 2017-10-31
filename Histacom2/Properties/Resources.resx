@@ -1755,6 +1755,13 @@
       "message": "and let me remind you... MS-DOS IS USELESS! NEXT TIME, DONT PIRATE SOFTWARE!",
       "special": null,
       "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 5000,
+      "message": "",
+      "special": ".cmd-end",
+      "userchat": false
     }
   ]
 }</value>

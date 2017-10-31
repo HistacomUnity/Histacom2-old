@@ -1148,7 +1148,8 @@ namespace Histacom2.Properties {
         ///      &quot;userchat&quot;: true
         ///    },
         ///    {
-        ///     [rest of string was truncated]&quot;;.
+        ///      &quot;user&quot;: &quot;SkyHigh&quot;,
+        ///    [rest of string was truncated]&quot;;.
         /// </summary>
         public static string webchat1998_convo {
             get {
