@@ -484,15 +484,6 @@ namespace Histacom2.OS.Win98
             startmenu.Hide();
         }
 
-        private void FTPClientToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            WinClassic app = wm.Init(new WinClassicFTPClient(), "FTP Client", null, true, true);
-
-            AddTaskBarItem(app, app.Tag.ToString(), "FTP Client", null);
-            app.BringToFront();
-            startmenu.Hide();
-        }
-
         private void CalculatorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WinClassic app = wm.Init(new WinClassicCalculator(), "Calculator", Properties.Resources.WinClassicCalc, false, false);
