@@ -360,7 +360,7 @@ namespace Histacom2.Engine
                 fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(ProfileWindowsDirectory, "_data.info")));
 
                 Directory.Delete(Path.Combine(ProfileWindowsDirectory, "Desktop"), true);
-                Directory.CreateDirectory(Path.Combine(ProfileWindowsDirectory, "Desktop"));
+                SaveDirectoryInfo(ProfileWindowsDirectory, "Desktop", true, "Desktop", true);
             }
         }
 
