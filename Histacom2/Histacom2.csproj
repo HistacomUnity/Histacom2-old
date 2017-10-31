@@ -758,6 +758,7 @@
     <None Include="Resources\GuessTheNumber\GTN95_Correct.png" />
     <None Include="Resources\GuessTheNumber\GTN95_Lower.png" />
     <None Include="Resources\GuessTheNumber\GTN95_Error.png" />
+    <None Include="Resources\distort fail.wav" />
     <Content Include="Resources\Icon128x.ico" />
     <None Include="Resources\ICTheme_BG.jpg" />
     <None Include="Resources\IE3\IE3_SwirlyThings.png" />

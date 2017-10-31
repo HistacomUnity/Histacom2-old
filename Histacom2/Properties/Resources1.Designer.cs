@@ -168,6 +168,15 @@ namespace Histacom2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        public static System.IO.UnmanagedMemoryStream distort_fail {
+            get {
+                return ResourceManager.GetStream("distort_fail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         public static System.IO.UnmanagedMemoryStream distort1 {
             get {
                 return ResourceManager.GetStream("distort1", resourceCulture);
