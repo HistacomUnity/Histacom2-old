@@ -172,7 +172,7 @@ namespace Histacom2.OS.Win98.Win98Apps.Story
             SaveSystem.currentTheme = new BadXPTheme();
             SaveSystem.CurrentSave.ThemeName = "badxp";
             td.ParentForm.Close();
-            foreach (Form frm in Application.OpenForms) if (frm is WinClassic) frm.Close();
+            Application.OpenForms.Cast<Form>().Where(x => !(x is WinClassic)).ToList().ForEach(x => x.Close());
             Program.title.StartGame();
             TitleScreen.frm98.Close();
             return;
