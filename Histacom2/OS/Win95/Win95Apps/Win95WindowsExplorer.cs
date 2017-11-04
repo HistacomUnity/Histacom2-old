@@ -22,14 +22,12 @@ namespace Histacom2.OS.Win95.Win95Apps
     {
         public bool IsFileOpenDialog = false;
         public bool IsFileSaveDialog = false;
-        public string onlyViewExtension = "";
+        public List<string> onlyViewExtension = new List<string>();
 
         string ToReplaceWith = ProfileDirectory;
         public string CurrentDirectory = ProfileMyComputerDirectory;
         string OldLabelText;
         string CurrentCopyFile;
-
-        int fileType = 6;
         //string attemptedDirectory = "";
         WindowManager wm = new WindowManager();
 
@@ -89,7 +87,8 @@ namespace Histacom2.OS.Win95.Win95Apps
 													Properties.Resources.TimeDistorter1,
                                                     Properties.Resources.WinClassicGTN,
                                                     Properties.Resources.WinClassicFTP,
-                                                    Properties.Resources.WinClassicRtfFile}); //20
+                                                    Properties.Resources.WinClassicRtfFile, // 20
+                                                    Properties.Resources.WinClassicAddressBook});
 
             program.BringToFront();
 
@@ -124,6 +123,9 @@ namespace Histacom2.OS.Win95.Win95Apps
             }
 
             onlyViewExtension = FileDialogBoxManager.OnlyViewExtension;
+
+            foreach (string str in onlyViewExtension)
+                cmbType.Items.Add(str);
         }
 
         string ReadDataFile(string reqDirectory, bool returnYesIfProtected = false) {
@@ -162,7 +164,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                     {
                         if (!(Path.GetFileName(str) == "_data.info"))
                         { 
-                            if (new FileInfo(str).Extension == onlyViewExtension)
+                            if (onlyViewExtension.Contains(new FileInfo(str).Extension))
                             {
                                 itm = this.mainView.Items.Add(Path.GetFileName(str));
                                 itm.Tag = str;
@@ -232,8 +234,7 @@ namespace Histacom2.OS.Win95.Win95Apps
         {
             try
             {
-                ReturnType(new FileInfo(fileDir).Extension);
-                switch (fileType)
+                switch (ReturnType(new FileInfo(fileDir).Extension))
                 {
                     case 1:
                         WinClassicNotepad np = new WinClassicNotepad();
@@ -501,7 +502,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                 { // If it is a file
                         if (IsFileOpenDialog || IsFileSaveDialog)
                         {
-                            if (new FileInfo(Path.Combine(CurrentDirectory, txtSave.Text)).Extension == onlyViewExtension)
+                            if (onlyViewExtension.Contains(new FileInfo(Path.Combine(CurrentDirectory, txtSave.Text)).Extension))
                             {
                                 Program.WindowsExplorerReturnPath = Path.Combine(CurrentDirectory, txtSave.Text);
                             }
@@ -513,9 +514,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                             ((Form)this.TopLevelControl).Close();
                         }
                         else
-                        {
                             OpenFile(mainView.FocusedItem.Tag.ToString());
-                        }
                 }
             } catch { /* TODO: Illegal operation */ }
         }
@@ -595,7 +594,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                 if (txtSave.Text == "") wm.StartInfobox95("Windows Explorer", "Please enter a filename", InfoboxType.Info, InfoboxButtons.OK);
                 else
                 {
-                    if (new FileInfo(Path.Combine(CurrentDirectory, txtSave.Text)).Extension == onlyViewExtension) Program.WindowsExplorerReturnPath = Path.Combine(CurrentDirectory, txtSave.Text);
+                    if (onlyViewExtension.Contains(new FileInfo(Path.Combine(CurrentDirectory, txtSave.Text)).Extension)) Program.WindowsExplorerReturnPath = Path.Combine(CurrentDirectory, txtSave.Text);
 
                     FileDialogBoxManager.IsInOpenDialog = false;
                     FileDialogBoxManager.IsInSaveDialog = false;

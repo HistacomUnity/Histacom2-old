@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Histacom2.Engine;
 
 namespace Histacom2.OS.Win95.Win95Apps
 {
     public partial class FRMWinClassicAddressBookNewContact : UserControl
     {
+        WindowManager wm = new WindowManager();
         public AddressBookContact toSet = new AddressBookContact();
         public FRMWinClassicAddressBookNewContact()
         {
@@ -37,7 +38,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                 Program.AddressBookSelectedContact = toSet;
                 ((Form)this.TopLevelControl).Close();
             } else {
-                MessageBox.Show("Please fill out the First, Middle and Last name.");
+                wm.StartInfobox95("Address Book", "Please fill out the First, Middle and Last name.", Engine.Template.InfoboxType.Info, Engine.Template.InfoboxButtons.OK);
             }           
         }
 
@@ -62,9 +63,6 @@ namespace Histacom2.OS.Win95.Win95Apps
                         emails.Items.Add(email);
                     }
                 }
-            } else
-            {
-                MessageBox.Show("NULL CONTACT!");
             }
         }
     }

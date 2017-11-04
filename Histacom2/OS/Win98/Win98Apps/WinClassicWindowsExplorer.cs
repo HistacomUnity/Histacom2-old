@@ -22,13 +22,12 @@ namespace Histacom2.OS.Win95.Win95Apps
     {
         public bool IsFileOpenDialog = false;
         public bool IsFileSaveDialog = false;
-        public string onlyViewExtension = "";
+        public List<string> onlyViewExtension = new List<string>();
 
         string ToReplaceWith = ProfileDirectory;
         public string CurrentDirectory = ProfileMyComputerDirectory;
         string OldLabelText;
         string CurrentCopyFile;
-        int fileType = 6;
         //string attemptedDirectory = "";
         WindowManager wm = new WindowManager();
 
@@ -82,7 +81,8 @@ namespace Histacom2.OS.Win95.Win95Apps
                                                     Properties.Resources.TimeDistorter1,
                                                     Properties.Resources.WinClassicGTN,
                                                     Properties.Resources.WinClassicFTP,
-                                                    Properties.Resources.WinClassicRtfFile}); //20
+                                                    Properties.Resources.WinClassicRtfFile, // 20
+                                                    Properties.Resources.WinClassicAddressBook}); 
 
             program.BringToFront();
 
@@ -117,6 +117,11 @@ namespace Histacom2.OS.Win95.Win95Apps
             }
 
             onlyViewExtension = FileDialogBoxManager.OnlyViewExtension;
+
+            foreach (string str in onlyViewExtension)
+                cmbType.Items.Add(str);
+
+            cmbType.Text = onlyViewExtension.FirstOrDefault();
         }
 
         //'Private Sub TreeView1_AfterSelect(ByVal sender As System.Object, ByVal e As System.Windows.Forms.TreeViewEventArgs)
@@ -157,6 +162,19 @@ namespace Histacom2.OS.Win95.Win95Apps
             //try {
             this.mainView.Items.Clear();
 
+            if (CurrentDirectory == ProfileFileSystemDirectory)
+            {
+                txtInfoTitle.Text = "My Computer";
+                pictureBox1.Image = Properties.Resources.Win95ComputerIcon;
+            } else if (CurrentDirectory == ProfileMyComputerDirectory) {
+                txtInfoTitle.Text = "C:";
+                pictureBox1.Image = Properties.Resources.WinClassicFolderSmall; // TODO: ADD DRIVE ICON
+            } else {
+                txtInfoTitle.Text = Path.GetFileName(CurrentDirectory);
+                pictureBox1.Image = Properties.Resources.WinClassicFolderSmall;
+            }
+             
+
             foreach (string str in Directory.GetDirectories(CurrentDirectory))
             {
                 string label = ReadDataFile(str, false);
@@ -172,14 +190,14 @@ namespace Histacom2.OS.Win95.Win95Apps
                 {
                     if (!(Path.GetFileName(str) == "_data.info"))
                     {
-                        if (new FileInfo(str).Extension == onlyViewExtension)
+                        if (onlyViewExtension.Contains(new FileInfo(str).Extension))
                         {
                             itm = this.mainView.Items.Add(Path.GetFileName(str));
                             itm.Tag = str;
                         }
-                        else break;
+                        else continue;
                     }
-                    else break;
+                    else continue;
                 }
                 else
                 {
@@ -188,7 +206,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                         itm = this.mainView.Items.Add(Path.GetFileName(str));
                         itm.Tag = str;
                     }
-                    else break;
+                    else continue;
                 }
                 FileSystemFolderInfo fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(CurrentDirectory, "_data.info")));
                 foreach (var item in fsfi.Files)
@@ -244,8 +262,7 @@ namespace Histacom2.OS.Win95.Win95Apps
         {
             try
             {
-                ReturnType(new FileInfo(fileDir).Extension);
-                switch (fileType)
+                switch (ReturnType(new FileInfo(fileDir).Extension))
                 {
                     case 1:
                         WinClassicNotepad np = new WinClassicNotepad();
@@ -452,7 +469,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                 { // If it is a file
                     if (IsFileOpenDialog || IsFileSaveDialog)
                     {
-                        if (new FileInfo(Path.Combine(CurrentDirectory, txtSave.Text)).Extension == onlyViewExtension)
+                        if (onlyViewExtension.Contains(new FileInfo(Path.Combine(CurrentDirectory, txtSave.Text)).Extension))
                         {
                             Program.WindowsExplorerReturnPath = Path.Combine(CurrentDirectory, txtSave.Text);
                         }
@@ -464,9 +481,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                         ((Form)this.TopLevelControl).Close();
                     }
                     else
-                    {
                         OpenFile(mainView.FocusedItem.Tag.ToString());
-                    }
                 }
             } catch { /* TODO: Illegal operation */ }
         }
@@ -477,7 +492,7 @@ namespace Histacom2.OS.Win95.Win95Apps
             {
                 if (diskView.SelectedNode != null)
                 {
-                    if (diskView.SelectedNode.Text == "My Computer")
+                    if (diskView.SelectedNode.Text == "My Computer" || diskView.SelectedNode.Text == "Desktop")
                     {
                         GoToDir(ProfileFileSystemDirectory);
                     }
@@ -491,11 +506,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                         {
                             // It is a directory:
 
-                            try
-                            {
-                                GoToDir(diskView.SelectedNode.Tag.ToString());
-                            }
-                            catch { }
+                            GoToDir(diskView.SelectedNode.Tag.ToString());
                         }
                     }
                 }
@@ -540,7 +551,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                 if (txtSave.Text == "") wm.StartInfobox95("Windows Explorer", "Please enter a filename", InfoboxType.Info, InfoboxButtons.OK);
                 else
                 {
-                    if (new FileInfo(Path.Combine(CurrentDirectory, txtSave.Text)).Extension == onlyViewExtension) Program.WindowsExplorerReturnPath = Path.Combine(CurrentDirectory, txtSave.Text);
+                    if (onlyViewExtension.Contains(new FileInfo(Path.Combine(CurrentDirectory, txtSave.Text)).Extension)) Program.WindowsExplorerReturnPath = Path.Combine(CurrentDirectory, txtSave.Text);
 
                     FileDialogBoxManager.IsInOpenDialog = false;
                     FileDialogBoxManager.IsInSaveDialog = false;
@@ -980,7 +991,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                 if (txtSave.Text == "") wm.StartInfobox95("Windows Explorer", "Please enter a filename", InfoboxType.Info, InfoboxButtons.OK);
                 else
                 {
-                    if (new FileInfo(Path.Combine(CurrentDirectory, txtSave.Text)).Extension == onlyViewExtension) Program.WindowsExplorerReturnPath = Path.Combine(CurrentDirectory, txtSave.Text);
+                    if (onlyViewExtension.Contains(new FileInfo(Path.Combine(CurrentDirectory, txtSave.Text)).Extension)) Program.WindowsExplorerReturnPath = Path.Combine(CurrentDirectory, txtSave.Text);
 
                     FileDialogBoxManager.IsInOpenDialog = false;
                     FileDialogBoxManager.IsInSaveDialog = false;

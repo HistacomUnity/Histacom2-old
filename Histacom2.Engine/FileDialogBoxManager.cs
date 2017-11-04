@@ -12,27 +12,27 @@ namespace Histacom2.Engine
     {
         public static bool IsInOpenDialog = false;
         public static bool IsInSaveDialog = false;
-        public static string OnlyViewExtension = "";
+        public static List<string> OnlyViewExtension = new List<string>();
 
-        public static void ActivateOpenFileDialog(string ExtensionToView)
+        public static void ActivateOpenFileDialog(params string[] ExtensionToView)
         {
             IsInOpenDialog = true;
             IsInSaveDialog = false;
-            OnlyViewExtension = ExtensionToView;
+            OnlyViewExtension = ExtensionToView.ToList();
         }
 
-        public static void ActivateSaveFileDialog(string ExtensionToView)
+        public static void ActivateSaveFileDialog(params string[] ExtensionToView)
         {
             IsInOpenDialog = false;
             IsInSaveDialog = true;
-            OnlyViewExtension = ExtensionToView;
+            OnlyViewExtension = ExtensionToView.ToList();
         }
 
         public static void DeactivateFileDialog()
         {
             IsInOpenDialog = false;
             IsInSaveDialog = false;
-            OnlyViewExtension = "";
+            OnlyViewExtension = new List<string>();
         }
 
         public static string ReadTextFile(string path)

@@ -34,7 +34,7 @@ namespace Histacom2.Engine.UI
         public static Color _lightBack = Color.Silver;
         public static Color _darkBack = Color.Silver;
 
-        public List<string> items = new List<string> { "TestItem" };
+        public List<string> Items { get; set; } = new List<string>();
 
         public ClassicDropDown()
         {
@@ -117,7 +117,7 @@ namespace Histacom2.Engine.UI
             } else {
                 thisOverlay = new DropDownOverlay();
                 int applyHeight = 0;
-                foreach (string str in items)
+                foreach (string str in Items)
                 {
                     DropDownItem itm = new DropDownItem();
                     itm.ChangeText(str, Font);
