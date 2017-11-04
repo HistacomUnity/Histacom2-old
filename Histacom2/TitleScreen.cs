@@ -149,23 +149,6 @@ namespace Histacom2
             HelpToolStripMenuItem.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             ShutdownToolStripMenuItem.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
         }
-
-<<<<<<< HEAD
-        private static void leet()
-        {
-            WindowManager wm = new WindowManager();
-            UserControl leet = new UserControl();
-            leet.Width = 500;
-            leet.Height = 500;
-            Label label1 = new Label();
-            label1.Parent = leet;
-            label1.AutoSize = true;
-            label1.Text = "Thank you for making Histacom2 possible.";
-            wm.Init(leet, "Thank You", null, true, true);
-        }
-
-=======
->>>>>>> 382f0167714bbcad00ab710fe7dcfa05eaeb88ac
         #region Menu Buttons
 
         #region NewGame
@@ -274,22 +257,6 @@ namespace Histacom2
         {
             AchievementScreen achievelist = new AchievementScreen();
             achievelist.ShowDialog();
-        }
-
-        private void vm_mode_CheckStateChanged(object sender, EventArgs e)
-        {
-            // Check for VM mode
-            if (vm_mode.Checked)
-            {
-                VM_Width.Visible = true;
-                VM_Height.Visible = true;
-            }
-            // If VM Mode is disabled
-            else
-            {
-                VM_Width.Visible = false;
-                VM_Height.Visible = false;
-            }
         }
     }
 }

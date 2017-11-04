@@ -275,6 +275,11 @@ namespace Histacom2.OS.Win95.Win95Apps
         {
             ((Form)this.TopLevelControl).Close();
         }
+
+        private void toolNew_Click(object sender, EventArgs e)
+        {
+            newContext.Show();
+        }
     }
 
     public class AddressBookContact
