@@ -42,7 +42,7 @@ namespace Histacom2.OS.Win95.Win95Apps
             {
                 new AddressBookContactList()
                 {
-                    AttachedNode = treeView1.Nodes[0].Text,
+                    AttachedNode = treeView1.Nodes[0].Text
                 }
             };
         }
@@ -82,17 +82,8 @@ namespace Histacom2.OS.Win95.Win95Apps
                     {
                         foreach (AddressBookContact contact in ContactList.Contacts)
                         {
-                            if (contact != null)
-                            {
-                                if (contact.FirstName != null)
-                                {
-                                    contactsView.Items.Add(contact.FirstName + " " + contact.MiddleName + " " + contact.LastName);
-                                }
-                            }
-                            else
-                            {
-                                MessageBox.Show("Null contact!");
-                            }
+                            if (contact.FirstName != null)
+                                contactsView.Items.Add(contact.FirstName + " " + contact.MiddleName + " " + contact.LastName);
                         }
                     }
                 }
@@ -182,9 +173,16 @@ namespace Histacom2.OS.Win95.Win95Apps
                     {
                         foreach (AddressBookContact Contact in ContactList.Contacts)
                         {
-                            if ((Contact.FirstName + " " + Contact.MiddleName + " " + Contact.LastName) == contactsView.FocusedItem.Text)
+                            if (contactsView.FocusedItem == null)
+                            { // Most likely they are trying to view a whole folder!
+                                wm.StartInfobox95("Properties of a folder", "You cannot view the properties of a contact folder.", InfoboxType.Warning, InfoboxButtons.OK);
+                            }
+                            else
                             {
-                                abnc.toSet = Contact;
+                                if ((Contact.FirstName + " " + Contact.MiddleName + " " + Contact.LastName) == contactsView.FocusedItem.Text)
+                                {
+                                    abnc.toSet = Contact;
+                                }
                             }
                         }
                     }
@@ -228,22 +226,38 @@ namespace Histacom2.OS.Win95.Win95Apps
 
         void DeleteContact()
         {
-            if (treeView1.SelectedNode != null)
+            try
             {
-                foreach (AddressBookContactList ContactList in AddressBookObjects)
+                if (treeView1.SelectedNode != null)
                 {
-                    if (ContactList.AttachedNode == treeView1.SelectedNode.Text)
+                    foreach (AddressBookContactList ContactList in AddressBookObjects)
                     {
-                        foreach (AddressBookContact Contact in ContactList.Contacts)
+                        if (ContactList.AttachedNode == treeView1.SelectedNode.Text)
                         {
-                            if ((Contact.FirstName + " " + Contact.MiddleName + " " + Contact.LastName) == contactsView.FocusedItem.Text)
+                            foreach (AddressBookContact Contact in ContactList.Contacts)
                             {
-                                ContactList.Contacts.Remove(Contact);
+                                if (contactsView.FocusedItem == null)
+                                { // Most likely they are trying to delete a whole folder!
+                                    if (treeView1.SelectedNode.Text != "Shared Contacts")
+                                        if (treeView1.SelectedNode != null)
+                                        {
+                                            AddressBookObjects.Remove(ContactList);
+                                            treeView1.Nodes.Remove(treeView1.SelectedNode);
+                                            UpdateContactListFromNodeName("Shared Contacts");
+                                        }
+                                }
+                                else
+                                {
+                                    if ((Contact.FirstName + " " + Contact.MiddleName + " " + Contact.LastName) == contactsView.FocusedItem.Text)
+                                    {
+                                        ContactList.Contacts.Remove(Contact);
+                                    }
+                                }
                             }
                         }
                     }
                 }
-            }
+            } catch { }
         }
 
         private void toolDelete_Click(object sender, EventArgs e)
@@ -278,7 +292,12 @@ namespace Histacom2.OS.Win95.Win95Apps
 
         private void toolNew_Click(object sender, EventArgs e)
         {
-            newContext.Show();
+            newContext.Show(MousePosition);
+        }
+
+        private void aboutAddressBookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
