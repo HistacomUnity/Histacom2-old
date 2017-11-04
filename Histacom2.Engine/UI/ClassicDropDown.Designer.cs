@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dropDownSwitch = new System.Windows.Forms.PictureBox();
             this.tborder = new System.Windows.Forms.PictureBox();
             this.bborder = new System.Windows.Forms.PictureBox();
             this.rborder = new System.Windows.Forms.PictureBox();
             this.lborder = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dropDownSwitch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tborder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bborder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rborder)).BeginInit();
@@ -50,16 +50,17 @@
             this.textBox1.Size = new System.Drawing.Size(96, 13);
             this.textBox1.TabIndex = 9;
             // 
-            // pictureBox1
+            // dropDownSwitch
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox1.Image = global::Histacom2.Engine.Properties.Resources.ClassicDropDownButton;
-            this.pictureBox1.Location = new System.Drawing.Point(82, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
+            this.dropDownSwitch.Dock = System.Windows.Forms.DockStyle.Right;
+            this.dropDownSwitch.Image = global::Histacom2.Engine.Properties.Resources.ClassicDropDownButton;
+            this.dropDownSwitch.Location = new System.Drawing.Point(82, 2);
+            this.dropDownSwitch.Name = "dropDownSwitch";
+            this.dropDownSwitch.Size = new System.Drawing.Size(16, 16);
+            this.dropDownSwitch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.dropDownSwitch.TabIndex = 10;
+            this.dropDownSwitch.TabStop = false;
+            this.dropDownSwitch.Click += new System.EventHandler(this.dropDownSwitch_Click);
             // 
             // tborder
             // 
@@ -101,7 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.dropDownSwitch);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.tborder);
             this.Controls.Add(this.bborder);
@@ -109,7 +110,8 @@
             this.Controls.Add(this.lborder);
             this.Name = "ClassicDropDown";
             this.Size = new System.Drawing.Size(100, 20);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.ClassicDropDown_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dropDownSwitch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tborder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bborder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rborder)).EndInit();
@@ -126,6 +128,6 @@
         private System.Windows.Forms.PictureBox bborder;
         private System.Windows.Forms.PictureBox rborder;
         private System.Windows.Forms.PictureBox lborder;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox dropDownSwitch;
     }
 }

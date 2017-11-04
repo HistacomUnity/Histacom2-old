@@ -45,6 +45,8 @@ namespace Histacom2.OS.Win95.Win95Apps
                 ctrl.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             }
 
+            txtSave.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            cmbType.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             //Histacom2.Engine.UI.CustomTextBox ctb = new Histacom2.Engine.UI.CustomTextBox(textBox1);
         }
 

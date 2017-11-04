@@ -7,22 +7,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Histacom2.Engine.Template;
 
 namespace Histacom2.Engine.UI
 {
     public partial class ClassicDropDown : UserControl
     {
+        public DropDownOverlay thisOverlay = new DropDownOverlay();
         public bool UseSystemPasswordChar { get; set; }
+        public bool dropDownShown;
 
         public static Color textboxcolor = Color.Black;
 
         public static Color _lightBack = Color.Silver;
         public static Color _darkBack = Color.Silver;
 
+        public List<string> items = new List<string> { "TestItem" };
+
         public ClassicDropDown()
         {
             InitializeComponent();
 
+            
             try
             {
                 // Draw the border    
@@ -30,20 +36,26 @@ namespace Histacom2.Engine.UI
                 this.Paint += new PaintEventHandler((object sender, PaintEventArgs e) =>
                 {
                     // Update a bunch of variables!
-                    textBox1.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular);
-
-                    if (SaveSystem.currentTheme != null) textBox1.BackColor = SaveSystem.currentTheme.threeDObjectsColor;
-                    else textBox1.BackColor = Color.White;
+                    textBox1.Font = Font;
 
                     if (SaveSystem.currentTheme != null)
                     {
+                        textBox1.BackColor = SaveSystem.currentTheme.threeDObjectsColor;
+                        BackColor = SaveSystem.currentTheme.threeDObjectsColor;
+
                         textboxcolor = SaveSystem.currentTheme.windowColor;
 
                         _lightBack = Paintbrush.GetLightFromColor(textboxcolor);
                         _darkBack = Paintbrush.GetDarkFromColor(textboxcolor);
                     }
+                    else
+                    {
+                        textBox1.BackColor = Color.White;
+                        BackColor = Color.White;
+                    }
                 });
 
+                
 
                 tborder.Paint += new PaintEventHandler((object sender, PaintEventArgs e) =>
                 {
@@ -76,6 +88,68 @@ namespace Histacom2.Engine.UI
                 bborder.Invalidate();
             }
             catch { }
+        }
+
+        public void ChooseItem(string str)
+        {
+            textBox1.Text = str;
+            ShowHideDropDown();
+        }
+
+        public void ShowHideDropDown()
+        {
+            if (dropDownShown)
+            {
+                thisOverlay.Close();
+                dropDownShown = false;
+            } else {
+                thisOverlay = new DropDownOverlay();
+                int applyHeight = 0;
+                foreach (string str in items)
+                {
+                    DropDownItem itm = new DropDownItem();
+                    itm.ChangeText(str, Font);
+                    itm.dpdw = this;
+                    itm.Dock = DockStyle.Top;
+                    applyHeight += itm.Height;
+                    thisOverlay.outline.Controls.Add(itm);
+                }
+                thisOverlay.outline.Location = this.PointToScreen(Point.Empty);
+                thisOverlay.outline.Top += this.Height;
+                thisOverlay.outline.Size = new Size(this.Width, applyHeight);
+
+                thisOverlay.Deactivate += (sender2, e2) => { thisOverlay.Close(); dropDownShown = false; };
+
+                thisOverlay.Show();
+                dropDownShown = true;
+            }
+        }
+
+        private void dropDownSwitch_Click(object sender, EventArgs e)
+        {
+            ShowHideDropDown();
+        }
+
+        private void ClassicDropDown_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                ((Form)this.TopLevelControl).FormClosed += (sender2, e2) => { thisOverlay.Close(); };
+                ((Form)this.TopLevelControl).Resize += (sender2, e2) =>
+                {
+                    thisOverlay.outline.Location = this.PointToScreen(Point.Empty);
+                    thisOverlay.outline.Top += this.Height;
+                    thisOverlay.BringToFront();
+                };
+
+                ((Form)this.TopLevelControl).Move += (sender2, e2) =>
+                {
+                    thisOverlay.outline.Location = this.PointToScreen(Point.Empty);
+                    thisOverlay.outline.Top += this.Height;
+                    thisOverlay.BringToFront();
+                };
+            } catch { }
+            
         }
     }
 }

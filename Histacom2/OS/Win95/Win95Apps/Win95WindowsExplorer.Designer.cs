@@ -51,17 +51,15 @@
             this.HelpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.AboutWindows95ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toprightcorner = new System.Windows.Forms.Panel();
-            this.bottomrightcorner = new System.Windows.Forms.Panel();
-            this.bottomleftcorner = new System.Windows.Forms.Panel();
             this.topleftcorner = new System.Windows.Forms.Panel();
             this.pnlSave = new System.Windows.Forms.Panel();
-            this.classicDropDown1 = new Histacom2.Engine.UI.ClassicDropDown();
+            this.cmbType = new Histacom2.Engine.UI.ClassicDropDown();
             this.txtSave = new Histacom2.Engine.UI.ClassicTextBox();
             this.classicLabel2 = new Histacom2.Engine.UI.ClassicLabel();
             this.classicLabel1 = new Histacom2.Engine.UI.ClassicLabel();
-            this.classicButton1 = new Histacom2.Engine.UI.ClassicButton();
             this.btnSave = new Histacom2.Engine.UI.ClassicButton();
             this.refresh = new System.Windows.Forms.Timer(this.components);
+            this.btnCanc = new Histacom2.Engine.UI.ClassicButton();
             this.program.SuspendLayout();
             this.MenuStrip1.SuspendLayout();
             this.pnlSave.SuspendLayout();
@@ -74,8 +72,6 @@
             this.program.Controls.Add(this.diskView);
             this.program.Controls.Add(this.MenuStrip1);
             this.program.Controls.Add(this.toprightcorner);
-            this.program.Controls.Add(this.bottomrightcorner);
-            this.program.Controls.Add(this.bottomleftcorner);
             this.program.Controls.Add(this.topleftcorner);
             this.program.Controls.Add(this.pnlSave);
             this.program.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -258,23 +254,6 @@
             this.toprightcorner.Size = new System.Drawing.Size(4, 4);
             this.toprightcorner.TabIndex = 6;
             // 
-            // bottomrightcorner
-            // 
-            this.bottomrightcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bottomrightcorner.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
-            this.bottomrightcorner.Location = new System.Drawing.Point(700, 513);
-            this.bottomrightcorner.Name = "bottomrightcorner";
-            this.bottomrightcorner.Size = new System.Drawing.Size(4, 4);
-            this.bottomrightcorner.TabIndex = 4;
-            // 
-            // bottomleftcorner
-            // 
-            this.bottomleftcorner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.bottomleftcorner.Location = new System.Drawing.Point(0, 513);
-            this.bottomleftcorner.Name = "bottomleftcorner";
-            this.bottomleftcorner.Size = new System.Drawing.Size(4, 4);
-            this.bottomleftcorner.TabIndex = 2;
-            // 
             // topleftcorner
             // 
             this.topleftcorner.Location = new System.Drawing.Point(0, 0);
@@ -284,11 +263,11 @@
             // 
             // pnlSave
             // 
-            this.pnlSave.Controls.Add(this.classicDropDown1);
+            this.pnlSave.Controls.Add(this.btnCanc);
+            this.pnlSave.Controls.Add(this.cmbType);
             this.pnlSave.Controls.Add(this.txtSave);
             this.pnlSave.Controls.Add(this.classicLabel2);
             this.pnlSave.Controls.Add(this.classicLabel1);
-            this.pnlSave.Controls.Add(this.classicButton1);
             this.pnlSave.Controls.Add(this.btnSave);
             this.pnlSave.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlSave.Location = new System.Drawing.Point(0, 463);
@@ -297,16 +276,15 @@
             this.pnlSave.TabIndex = 18;
             this.pnlSave.Visible = false;
             // 
-            // classicDropDown1
+            // cmbType
             // 
-            this.classicDropDown1.BackColor = System.Drawing.Color.White;
-            this.classicDropDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.classicDropDown1.Location = new System.Drawing.Point(56, 31);
-            this.classicDropDown1.Name = "classicDropDown1";
-            this.classicDropDown1.Size = new System.Drawing.Size(549, 20);
-            this.classicDropDown1.TabIndex = 23;
-            this.classicDropDown1.Text = "classicDropDown1";
-            this.classicDropDown1.UseSystemPasswordChar = false;
+            this.cmbType.BackColor = System.Drawing.Color.White;
+            this.cmbType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.cmbType.Location = new System.Drawing.Point(56, 31);
+            this.cmbType.Name = "cmbType";
+            this.cmbType.Size = new System.Drawing.Size(549, 20);
+            this.cmbType.TabIndex = 23;
+            this.cmbType.UseSystemPasswordChar = false;
             // 
             // txtSave
             // 
@@ -316,7 +294,7 @@
             this.txtSave.BackColor = System.Drawing.Color.White;
             this.txtSave.Location = new System.Drawing.Point(56, 6);
             this.txtSave.Name = "txtSave";
-            this.txtSave.Size = new System.Drawing.Size(549, 17);
+            this.txtSave.Size = new System.Drawing.Size(549, 20);
             this.txtSave.TabIndex = 22;
             this.txtSave.UseSystemPasswordChar = false;
             // 
@@ -338,27 +316,12 @@
             this.classicLabel1.TabIndex = 19;
             this.classicLabel1.Text = "File name:";
             // 
-            // classicButton1
-            // 
-            this.classicButton1.AdaptBackColorWithTheme = true;
-            this.classicButton1.AdaptFontWithTheme = true;
-            this.classicButton1.AdaptForeColorWithTheme = true;
-            this.classicButton1.BackColor = System.Drawing.Color.Silver;
-            this.classicButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.classicButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.classicButton1.ForeColor = System.Drawing.Color.Black;
-            this.classicButton1.Location = new System.Drawing.Point(611, 29);
-            this.classicButton1.Name = "classicButton1";
-            this.classicButton1.Size = new System.Drawing.Size(75, 23);
-            this.classicButton1.TabIndex = 17;
-            this.classicButton1.Text = "Cancel";
-            this.classicButton1.Click += new System.EventHandler(this.btnSave_Click);
-            // 
             // btnSave
             // 
             this.btnSave.AdaptBackColorWithTheme = true;
             this.btnSave.AdaptFontWithTheme = true;
             this.btnSave.AdaptForeColorWithTheme = true;
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.BackColor = System.Drawing.Color.Silver;
             this.btnSave.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
@@ -374,6 +337,21 @@
             // 
             this.refresh.Interval = 15000;
             this.refresh.Tick += new System.EventHandler(this.refresh_Tick);
+            // 
+            // btnCanc
+            // 
+            this.btnCanc.AdaptBackColorWithTheme = true;
+            this.btnCanc.AdaptFontWithTheme = true;
+            this.btnCanc.AdaptForeColorWithTheme = true;
+            this.btnCanc.BackColor = System.Drawing.Color.Silver;
+            this.btnCanc.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnCanc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnCanc.ForeColor = System.Drawing.Color.Black;
+            this.btnCanc.Location = new System.Drawing.Point(611, 27);
+            this.btnCanc.Name = "btnCanc";
+            this.btnCanc.Size = new System.Drawing.Size(75, 25);
+            this.btnCanc.TabIndex = 24;
+            this.btnCanc.Text = "Cancel";
             // 
             // Win95WindowsExplorer
             // 
@@ -415,17 +393,15 @@
         internal System.Windows.Forms.ToolStripMenuItem HelpToolStripMenuItem1;
         internal System.Windows.Forms.ToolStripMenuItem AboutWindows95ToolStripMenuItem;
         internal System.Windows.Forms.Panel toprightcorner;
-        internal System.Windows.Forms.Panel bottomrightcorner;
-        internal System.Windows.Forms.Panel bottomleftcorner;
         internal System.Windows.Forms.Panel topleftcorner;
         internal System.Windows.Forms.ListView mainView;
         internal System.Windows.Forms.Panel pnlSave;
         private System.Windows.Forms.Timer refresh;
         private Engine.UI.ClassicButton btnSave;
-        private Engine.UI.ClassicButton classicButton1;
         private Engine.UI.ClassicLabel classicLabel2;
         private Engine.UI.ClassicLabel classicLabel1;
         private Engine.UI.ClassicTextBox txtSave;
-        private Engine.UI.ClassicDropDown classicDropDown1;
+        private Engine.UI.ClassicDropDown cmbType;
+        private Engine.UI.ClassicButton btnCanc;
     }
 }

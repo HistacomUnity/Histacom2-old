@@ -32,8 +32,16 @@ namespace Histacom2.Engine.UI
                     // Update a bunch of variables!
                     textBox1.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular);
 
-                    if (SaveSystem.currentTheme != null) textBox1.BackColor = SaveSystem.currentTheme.threeDObjectsColor;
-                    else textBox1.BackColor = Color.White;
+                    if (SaveSystem.currentTheme != null)
+                    {
+                        textBox1.BackColor = SaveSystem.currentTheme.threeDObjectsColor;
+                        BackColor = SaveSystem.currentTheme.threeDObjectsColor;
+                    }
+                    else
+                    {
+                        textBox1.BackColor = Color.White;
+                        BackColor = Color.White;
+                    }
 
                     if (SaveSystem.currentTheme != null)
                     {
