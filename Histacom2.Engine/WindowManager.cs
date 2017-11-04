@@ -67,14 +67,14 @@ namespace Histacom2.Engine
             else app.programIcon.Image = icon;
 
             // Check if Max button is enabled and set proper X for Min button
-            if (MaxButton == false)
+            if (!MaxButton)
             {
                 app.maximizebutton.Visible = false;
                 app.minimizebutton.Location = new Point(app.closebutton.Location.X - 14, app.minimizebutton.Location.Y);
             }
 
             // Check if Min button is enabled
-            if (MinButton == false)
+            if (!MinButton)
             {
                 app.minimizebutton.Visible = false;
                 app.minimizebutton.Location = new Point(app.minimizebutton.Location.X, app.minimizebutton.Location.Y);
@@ -102,7 +102,7 @@ namespace Histacom2.Engine
 
             // Show the app
             app.TopMost = true;
-            if (ShowApplicationAsDialog == false) { app.Show(); } else { app.ShowDialog(); }
+            if (!ShowApplicationAsDialog) { app.Show(); } else { app.ShowDialog(); }
             return app;
         }
         
@@ -134,14 +134,14 @@ namespace Histacom2.Engine
             else app.programIcon.Image = icon;
 
             // Check if Max button is enabled and set proper X for Min button
-            if (MaxButton == false)
+            if (!MaxButton)
             {
                 app.maximizebutton.Visible = false;
                 app.minimizebutton.Location = new Point(app.closebutton.Location.X - 14, app.minimizebutton.Location.Y);
             }
 
             // Check if Min button is enabled
-            if (MinButton == false)
+            if (!MinButton)
             {
                 app.minimizebutton.Visible = false;
                 app.minimizebutton.Location = new Point(app.minimizebutton.Location.X, app.minimizebutton.Location.Y);
@@ -165,7 +165,7 @@ namespace Histacom2.Engine
 
             // Show the app
             app.TopMost = true;
-            if (ShowApplicationAsDialog == false) { app.Show(); } else { app.ShowDialog(); }
+            if (!ShowApplicationAsDialog) { app.Show(); } else { app.ShowDialog(); }
             return app;
         }
 

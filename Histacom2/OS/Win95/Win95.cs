@@ -114,7 +114,7 @@ namespace Histacom2.OS.Win95
             this.BringToFront();
 
             //Check if it is the first time
-            if (CurrentSave.FTime95 == false)
+            if (!CurrentSave.FTime95)
             {
                 CurrentSave.FTime95 = true;
                 SaveGame();

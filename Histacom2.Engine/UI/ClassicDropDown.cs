@@ -17,6 +17,18 @@ namespace Histacom2.Engine.UI
         public bool UseSystemPasswordChar { get; set; }
         public bool dropDownShown;
 
+        public override string Text
+        {
+            get
+            {
+                return textBox1.Text;
+            }
+            set
+            {
+                textBox1.Text = value;
+            }
+        }
+
         public static Color textboxcolor = Color.Black;
 
         public static Color _lightBack = Color.Silver;

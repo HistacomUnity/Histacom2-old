@@ -53,13 +53,13 @@
             this.toprightcorner = new System.Windows.Forms.Panel();
             this.topleftcorner = new System.Windows.Forms.Panel();
             this.pnlSave = new System.Windows.Forms.Panel();
+            this.refresh = new System.Windows.Forms.Timer(this.components);
+            this.btnCanc = new Histacom2.Engine.UI.ClassicButton();
             this.cmbType = new Histacom2.Engine.UI.ClassicDropDown();
             this.txtSave = new Histacom2.Engine.UI.ClassicTextBox();
             this.classicLabel2 = new Histacom2.Engine.UI.ClassicLabel();
             this.classicLabel1 = new Histacom2.Engine.UI.ClassicLabel();
             this.btnSave = new Histacom2.Engine.UI.ClassicButton();
-            this.refresh = new System.Windows.Forms.Timer(this.components);
-            this.btnCanc = new Histacom2.Engine.UI.ClassicButton();
             this.program.SuspendLayout();
             this.MenuStrip1.SuspendLayout();
             this.pnlSave.SuspendLayout();
@@ -276,8 +276,33 @@
             this.pnlSave.TabIndex = 18;
             this.pnlSave.Visible = false;
             // 
+            // refresh
+            // 
+            this.refresh.Interval = 15000;
+            this.refresh.Tick += new System.EventHandler(this.refresh_Tick);
+            // 
+            // btnCanc
+            // 
+            this.btnCanc.AdaptBackColorWithTheme = true;
+            this.btnCanc.AdaptFontWithTheme = true;
+            this.btnCanc.AdaptForeColorWithTheme = true;
+            this.btnCanc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCanc.BackColor = System.Drawing.Color.Silver;
+            this.btnCanc.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnCanc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnCanc.ForeColor = System.Drawing.Color.Black;
+            this.btnCanc.Location = new System.Drawing.Point(611, 27);
+            this.btnCanc.Name = "btnCanc";
+            this.btnCanc.Size = new System.Drawing.Size(75, 25);
+            this.btnCanc.TabIndex = 24;
+            this.btnCanc.Text = "Cancel";
+            this.btnCanc.Click += new System.EventHandler(this.btnCanc_Click);
+            // 
             // cmbType
             // 
+            this.cmbType.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbType.BackColor = System.Drawing.Color.White;
             this.cmbType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.cmbType.Location = new System.Drawing.Point(56, 31);
@@ -332,26 +357,6 @@
             this.btnSave.TabIndex = 17;
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // refresh
-            // 
-            this.refresh.Interval = 15000;
-            this.refresh.Tick += new System.EventHandler(this.refresh_Tick);
-            // 
-            // btnCanc
-            // 
-            this.btnCanc.AdaptBackColorWithTheme = true;
-            this.btnCanc.AdaptFontWithTheme = true;
-            this.btnCanc.AdaptForeColorWithTheme = true;
-            this.btnCanc.BackColor = System.Drawing.Color.Silver;
-            this.btnCanc.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnCanc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btnCanc.ForeColor = System.Drawing.Color.Black;
-            this.btnCanc.Location = new System.Drawing.Point(611, 27);
-            this.btnCanc.Name = "btnCanc";
-            this.btnCanc.Size = new System.Drawing.Size(75, 25);
-            this.btnCanc.TabIndex = 24;
-            this.btnCanc.Text = "Cancel";
             // 
             // Win95WindowsExplorer
             // 

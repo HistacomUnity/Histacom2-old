@@ -109,14 +109,14 @@ namespace Histacom2.OS.Win95.Win95Apps
                 IsFileSaveDialog = true;
             }
 
-            if (IsFileOpenDialog == true)
+            if (IsFileOpenDialog)
             {
                 pnlSave.Show();
                 btnSave.Text = "Open";
             }
             else
             {
-                if (IsFileSaveDialog == true)
+                if (IsFileSaveDialog)
                 {
                     pnlSave.Show();
                     btnSave.Text = "Save";
@@ -133,9 +133,9 @@ namespace Histacom2.OS.Win95.Win95Apps
             FileSystemFolderInfo toRead = new FileSystemFolderInfo();
             toRead = JsonConvert.DeserializeObject<FileSystemFolderInfo>(directoryFileInfo);
 
-            if (returnYesIfProtected == true)
+            if (returnYesIfProtected)
             {
-                if (toRead.IsProtected == true) return "yes";
+                if (toRead.IsProtected) return "yes";
             }
             else return toRead.Label;
             return Val;
@@ -717,28 +717,23 @@ namespace Histacom2.OS.Win95.Win95Apps
         {
             try
             {
-                bool OpenFile = false;
                 if (mainView.FocusedItem != null)
                 {
                     if (mainView.FocusedItem.Tag.ToString() == "")
                     { // If it isn't a file
                         GoToDir(Path.Combine(CurrentDirectory, mainView.FocusedItem.Tag.ToString()));
                     }
-                    else OpenFile = true; // If it is a file
+                    else txtSave.Text = mainView.FocusedItem.Tag.ToString();
                 }
-                else OpenFile = true;
-                if (OpenFile == true)
+                if (txtSave.Text == "") wm.StartInfobox95("Windows Explorer", "Please enter a filename", InfoboxType.Info, InfoboxButtons.OK);
+                else
                 {
-                    if (txtSave.Text == "") wm.StartInfobox95("Windows Explorer", "Please enter a filename", InfoboxType.Info, InfoboxButtons.OK);
-                    else
-                    {
-                        if (new FileInfo(Path.Combine(CurrentDirectory, txtSave.Text)).Extension == onlyViewExtension) Program.WindowsExplorerReturnPath = Path.Combine(CurrentDirectory, txtSave.Text);
+                    if (new FileInfo(Path.Combine(CurrentDirectory, txtSave.Text)).Extension == onlyViewExtension) Program.WindowsExplorerReturnPath = Path.Combine(CurrentDirectory, txtSave.Text);
 
-                        FileDialogBoxManager.IsInOpenDialog = false;
-                        FileDialogBoxManager.IsInSaveDialog = false;
+                    FileDialogBoxManager.IsInOpenDialog = false;
+                    FileDialogBoxManager.IsInSaveDialog = false;
 
-                        ((Form)this.TopLevelControl).Close();
-                    }
+                    ((Form)this.TopLevelControl).Close();
                 }
             }
             catch { }
@@ -1040,6 +1035,11 @@ namespace Histacom2.OS.Win95.Win95Apps
             }
 
             RefreshTreeNode();
+        }
+
+        private void btnCanc_Click(object sender, EventArgs e)
+        {
+            ((Form)this.TopLevelControl).Close();
         }
     }
 }

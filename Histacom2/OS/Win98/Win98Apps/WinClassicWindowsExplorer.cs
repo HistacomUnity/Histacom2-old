@@ -102,17 +102,17 @@ namespace Histacom2.OS.Win95.Win95Apps
                 IsFileSaveDialog = true;
             }
 
-            if (IsFileOpenDialog == true)
+            if (IsFileOpenDialog)
             {
                 pnlSave.Show();
-                Button1.Text = "Open";
+                btnSave.Text = "Open";
             }
             else
             {
-                if (IsFileSaveDialog == true)
+                if (IsFileSaveDialog)
                 {
                     pnlSave.Show();
-                    Button1.Text = "Save";
+                    btnSave.Text = "Save";
                 }
             }
 
@@ -139,9 +139,9 @@ namespace Histacom2.OS.Win95.Win95Apps
             FileSystemFolderInfo toRead = new FileSystemFolderInfo();
             toRead = JsonConvert.DeserializeObject<FileSystemFolderInfo>(directoryFileInfo);
 
-            if (returnYesIfProtected == true)
+            if (returnYesIfProtected)
             {
-                if (toRead.IsProtected == true)
+                if (toRead.IsProtected)
                 {
                     return "yes";
                 }
@@ -655,7 +655,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                 }
                 else
                 { // If it is a file
-                    if (IsFileOpenDialog == true || IsFileSaveDialog == true)
+                    if (IsFileOpenDialog || IsFileSaveDialog)
                     {
                         if (new FileInfo(Path.Combine(CurrentDirectory, txtSave.Text)).Extension == onlyViewExtension)
                         {
@@ -734,41 +734,26 @@ namespace Histacom2.OS.Win95.Win95Apps
         {
             try
             {
-                bool OpenFile = false;
                 if (mainView.FocusedItem != null)
                 {
-                    if ((string)mainView.FocusedItem.Tag == "")
+                    if (mainView.FocusedItem.Tag.ToString() == "")
                     { // If it isn't a file
                         GoToDir(Path.Combine(CurrentDirectory, mainView.FocusedItem.Tag.ToString()));
                     }
-                    else OpenFile = true; // If it is a file
+                    else txtSave.Text = mainView.FocusedItem.Tag.ToString();
                 }
-                else OpenFile = true;
-                if (OpenFile == true)
+                if (txtSave.Text == "") wm.StartInfobox95("Windows Explorer", "Please enter a filename", InfoboxType.Info, InfoboxButtons.OK);
+                else
                 {
-                    if (txtSave.Text == "")
-                    {
-                        wm.StartInfobox95("Windows Explorer", "Please enter a filename", InfoboxType.Info, InfoboxButtons.OK);
-                    }
-                    else
-                    {
-                        if (new FileInfo(Path.Combine(CurrentDirectory, txtSave.Text)).Extension == onlyViewExtension)
-                        {
+                    if (new FileInfo(Path.Combine(CurrentDirectory, txtSave.Text)).Extension == onlyViewExtension) Program.WindowsExplorerReturnPath = Path.Combine(CurrentDirectory, txtSave.Text);
 
-                            Program.WindowsExplorerReturnPath = Path.Combine(CurrentDirectory, txtSave.Text);
+                    FileDialogBoxManager.IsInOpenDialog = false;
+                    FileDialogBoxManager.IsInSaveDialog = false;
 
-                        }
-
-
-                        FileDialogBoxManager.IsInOpenDialog = false;
-                        FileDialogBoxManager.IsInSaveDialog = false;
-
-                        ((Form)this.TopLevelControl).Close();
-                    }
+                    ((Form)this.TopLevelControl).Close();
                 }
-            } catch {
-
             }
+            catch { }
         }
 
         private void DeleteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -929,7 +914,7 @@ namespace Histacom2.OS.Win95.Win95Apps
 
         private void FoldersToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (FoldersToolStripMenuItem.Checked == true)
+            if (FoldersToolStripMenuItem.Checked)
             {
                 FoldersToolStripMenuItem.Checked = false;
                 pnlFolders.Hide();
@@ -973,7 +958,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                         }
                     }
 
-                    if (recognized == true)
+                    if (recognized)
                     {
                         // TODO:
                     } else {
@@ -1136,6 +1121,37 @@ namespace Histacom2.OS.Win95.Win95Apps
             {
                 item.Selected = true;
             }
+        }
+
+        private void btnCanc_Click(object sender, EventArgs e)
+        {
+            ((Form)this.TopLevelControl).Close();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (mainView.FocusedItem != null)
+                {
+                    if (mainView.FocusedItem.Tag.ToString() == "")
+                    { // If it isn't a file
+                        GoToDir(Path.Combine(CurrentDirectory, mainView.FocusedItem.Tag.ToString()));
+                    }
+                    else txtSave.Text = mainView.FocusedItem.Tag.ToString();
+                }
+                if (txtSave.Text == "") wm.StartInfobox95("Windows Explorer", "Please enter a filename", InfoboxType.Info, InfoboxButtons.OK);
+                else
+                {
+                    if (new FileInfo(Path.Combine(CurrentDirectory, txtSave.Text)).Extension == onlyViewExtension) Program.WindowsExplorerReturnPath = Path.Combine(CurrentDirectory, txtSave.Text);
+
+                    FileDialogBoxManager.IsInOpenDialog = false;
+                    FileDialogBoxManager.IsInSaveDialog = false;
+
+                    ((Form)this.TopLevelControl).Close();
+                }
+            }
+            catch { }
         }
     }
 }

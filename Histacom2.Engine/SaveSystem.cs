@@ -127,7 +127,7 @@ namespace Histacom2.Engine
         {        
             var save = new Save();
             save.ExperiencedStories = new List<string>();
-            if (DevMode == true)
+            if (DevMode)
             {
                 if (ProfileName == "xpbad")
                 {
@@ -373,7 +373,7 @@ namespace Histacom2.Engine
             info.SubDirs = new List<THDirInfo>(256);
             info.ByteSize = 0;
 
-            if (updateParent == true)
+            if (updateParent)
             {
                 if ((parent != ProfileDirectory))
                 {

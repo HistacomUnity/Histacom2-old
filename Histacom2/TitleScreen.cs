@@ -69,7 +69,7 @@ namespace Histacom2
                         frm95.TopMost = true;
                         frm95.FormBorderStyle = FormBorderStyle.None;
                         frm95.WindowState = FormWindowState.Maximized;
-                        //if (vm_mode.Checked == true)
+                        //if (vm_mode.Checked)
                         //{
                         //    frm95.Size = new Size(Convert.ToInt32(VM_Width.Text), Convert.ToInt32(VM_Height.Text));
                         //    frm95.FormBorderStyle = FormBorderStyle.Fixed3D;
@@ -83,7 +83,7 @@ namespace Histacom2
                         frm98.TopMost = true;
                         frm98.FormBorderStyle = FormBorderStyle.None;
                         frm98.WindowState = FormWindowState.Maximized;
-                        //if (vm_mode.Checked == true)
+                        //if (vm_mode.Checked)
                         //{
                         //    frm98.Size = new Size(Convert.ToInt32(VM_Width.Text), Convert.ToInt32(VM_Height.Text));
                         //    frm98.FormBorderStyle = FormBorderStyle.Fixed3D;
@@ -97,7 +97,7 @@ namespace Histacom2
                         frmBadXP.TopMost = true;
                         frmBadXP.FormBorderStyle = FormBorderStyle.None;
                         frmBadXP.WindowState = FormWindowState.Maximized;
-                        //if (vm_mode.Checked == true)
+                        //if (vm_mode.Checked)
                         //{
                         //    frm98.Size = new Size(Convert.ToInt32(VM_Width.Text), Convert.ToInt32(VM_Height.Text));
                         //    frm98.FormBorderStyle = FormBorderStyle.Fixed3D;
@@ -178,7 +178,7 @@ namespace Histacom2
             newGameBox = new NewGameDialog();
             newGameBox.ShowDialog();
 
-            if (newGameBox.Successful == true)
+            if (newGameBox.Successful)
             {
                 NewGame();
                 StartGame();
@@ -232,7 +232,7 @@ namespace Histacom2
             loadGameBox = new LoadGameDialog();
             loadGameBox.ShowDialog();
 
-            if (loadGameBox.successful == true)
+            if (loadGameBox.successful)
             {
                 LoadSave();
                 SetTheme();
@@ -262,7 +262,7 @@ namespace Histacom2
 
         private void startbutton_Click(object sender, EventArgs e)
         {
-            if (DevMode == true)
+            if (DevMode)
             {
                 DevMode = false;
                 gameversion.Text = "Developer Mode Deactivated";
@@ -296,7 +296,7 @@ namespace Histacom2
         private void vm_mode_CheckStateChanged(object sender, EventArgs e)
         {
             // Check for VM mode
-            if (vm_mode.Checked == true)
+            if (vm_mode.Checked)
             {
                 VM_Width.Visible = true;
                 VM_Height.Visible = true;

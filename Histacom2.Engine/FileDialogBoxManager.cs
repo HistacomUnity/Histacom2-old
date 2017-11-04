@@ -28,6 +28,13 @@ namespace Histacom2.Engine
             OnlyViewExtension = ExtensionToView;
         }
 
+        public static void DeactivateFileDialog()
+        {
+            IsInOpenDialog = false;
+            IsInSaveDialog = false;
+            OnlyViewExtension = "";
+        }
+
         public static string ReadTextFile(string path)
         {
             try

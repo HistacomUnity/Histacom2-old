@@ -37,7 +37,7 @@ namespace Histacom2
             if (!ClientRectangle.Contains(PointToClient(Control.MousePosition)))
             {
                 sidebar.Hide();
-                if (OnceRemoveHeight == false)
+                if (!OnceRemoveHeight)
                 {
                     this.Height -= 28;
                     OnceRemoveHeight = true;
@@ -49,7 +49,7 @@ namespace Histacom2
             } else
             {
                 sidebar.Show();
-                if (OnceAddHeight == false)
+                if (!OnceAddHeight)
                 {
                     this.Height += 28;
                     OnceAddHeight = true;
@@ -95,7 +95,7 @@ namespace Histacom2
         {
             try
             {
-                if (!RequestingNewName == false)
+                if (!RequestingNewName)
                 {
                     if (textBox1.Text == "")
                     {

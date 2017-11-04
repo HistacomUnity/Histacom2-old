@@ -52,9 +52,12 @@
             this.bottomleftcorner = new System.Windows.Forms.Panel();
             this.topleftcorner = new System.Windows.Forms.Panel();
             this.pnlSave = new System.Windows.Forms.Panel();
-            this.Button1 = new System.Windows.Forms.Button();
-            this.Label1 = new System.Windows.Forms.Label();
-            this.txtSave = new System.Windows.Forms.TextBox();
+            this.btnCanc = new Histacom2.Engine.UI.ClassicButton();
+            this.cmbType = new Histacom2.Engine.UI.ClassicDropDown();
+            this.txtSave = new Histacom2.Engine.UI.ClassicTextBox();
+            this.classicLabel2 = new Histacom2.Engine.UI.ClassicLabel();
+            this.classicLabel1 = new Histacom2.Engine.UI.ClassicLabel();
+            this.btnSave = new Histacom2.Engine.UI.ClassicButton();
             this.MenuStrip1 = new System.Windows.Forms.MenuStrip();
             this.FileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CreateShortcutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -112,7 +115,7 @@
             this.mainView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainView.Location = new System.Drawing.Point(396, 24);
             this.mainView.Name = "mainView";
-            this.mainView.Size = new System.Drawing.Size(308, 458);
+            this.mainView.Size = new System.Drawing.Size(308, 439);
             this.mainView.TabIndex = 10;
             this.mainView.UseCompatibleStateImageBehavior = false;
             this.mainView.AfterLabelEdit += new System.Windows.Forms.LabelEditEventHandler(this.mainView_AfterLabelEdit);
@@ -130,7 +133,7 @@
             this.pnlInfo.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlInfo.Location = new System.Drawing.Point(196, 24);
             this.pnlInfo.Name = "pnlInfo";
-            this.pnlInfo.Size = new System.Drawing.Size(200, 458);
+            this.pnlInfo.Size = new System.Drawing.Size(200, 439);
             this.pnlInfo.TabIndex = 19;
             // 
             // pictureBox1
@@ -165,7 +168,7 @@
             this.pnlInfoContent.Controls.Add(this.txtInfoTip);
             this.pnlInfoContent.Location = new System.Drawing.Point(0, 95);
             this.pnlInfoContent.Name = "pnlInfoContent";
-            this.pnlInfoContent.Size = new System.Drawing.Size(199, 362);
+            this.pnlInfoContent.Size = new System.Drawing.Size(199, 343);
             this.pnlInfoContent.TabIndex = 22;
             // 
             // InfoDesc
@@ -245,7 +248,7 @@
             this.pnlFolders.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlFolders.Location = new System.Drawing.Point(0, 24);
             this.pnlFolders.Name = "pnlFolders";
-            this.pnlFolders.Size = new System.Drawing.Size(196, 458);
+            this.pnlFolders.Size = new System.Drawing.Size(196, 439);
             this.pnlFolders.TabIndex = 0;
             // 
             // diskView
@@ -253,7 +256,7 @@
             this.diskView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.diskView.Location = new System.Drawing.Point(0, 22);
             this.diskView.Name = "diskView";
-            this.diskView.Size = new System.Drawing.Size(196, 436);
+            this.diskView.Size = new System.Drawing.Size(196, 417);
             this.diskView.TabIndex = 13;
             this.diskView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.diskView_AfterSelect);
             // 
@@ -325,45 +328,95 @@
             // 
             // pnlSave
             // 
-            this.pnlSave.Controls.Add(this.Button1);
-            this.pnlSave.Controls.Add(this.Label1);
+            this.pnlSave.Controls.Add(this.btnCanc);
+            this.pnlSave.Controls.Add(this.cmbType);
             this.pnlSave.Controls.Add(this.txtSave);
+            this.pnlSave.Controls.Add(this.classicLabel2);
+            this.pnlSave.Controls.Add(this.classicLabel1);
+            this.pnlSave.Controls.Add(this.btnSave);
             this.pnlSave.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlSave.Location = new System.Drawing.Point(0, 482);
+            this.pnlSave.Location = new System.Drawing.Point(0, 463);
             this.pnlSave.Name = "pnlSave";
-            this.pnlSave.Size = new System.Drawing.Size(704, 35);
+            this.pnlSave.Size = new System.Drawing.Size(704, 54);
             this.pnlSave.TabIndex = 18;
             this.pnlSave.Visible = false;
             // 
-            // Button1
+            // btnCanc
             // 
-            this.Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button1.Location = new System.Drawing.Point(626, 3);
-            this.Button1.Name = "Button1";
-            this.Button1.Size = new System.Drawing.Size(75, 23);
-            this.Button1.TabIndex = 17;
-            this.Button1.Text = "Save";
-            this.Button1.UseVisualStyleBackColor = true;
-            this.Button1.Click += new System.EventHandler(this.Button1_Click);
+            this.btnCanc.AdaptBackColorWithTheme = true;
+            this.btnCanc.AdaptFontWithTheme = true;
+            this.btnCanc.AdaptForeColorWithTheme = true;
+            this.btnCanc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCanc.BackColor = System.Drawing.Color.Silver;
+            this.btnCanc.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnCanc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnCanc.ForeColor = System.Drawing.Color.Black;
+            this.btnCanc.Location = new System.Drawing.Point(619, 28);
+            this.btnCanc.Name = "btnCanc";
+            this.btnCanc.Size = new System.Drawing.Size(75, 25);
+            this.btnCanc.TabIndex = 30;
+            this.btnCanc.Text = "Cancel";
+            this.btnCanc.Click += new System.EventHandler(this.btnCanc_Click);
             // 
-            // Label1
+            // cmbType
             // 
-            this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(3, 6);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(57, 13);
-            this.Label1.TabIndex = 16;
-            this.Label1.Text = "File Name:";
+            this.cmbType.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbType.BackColor = System.Drawing.Color.White;
+            this.cmbType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.cmbType.Location = new System.Drawing.Point(64, 32);
+            this.cmbType.Name = "cmbType";
+            this.cmbType.Size = new System.Drawing.Size(549, 20);
+            this.cmbType.TabIndex = 29;
+            this.cmbType.UseSystemPasswordChar = false;
             // 
             // txtSave
             // 
-            this.txtSave.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtSave.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSave.Location = new System.Drawing.Point(60, 3);
+            this.txtSave.BackColor = System.Drawing.Color.White;
+            this.txtSave.Location = new System.Drawing.Point(64, 7);
             this.txtSave.Name = "txtSave";
-            this.txtSave.Size = new System.Drawing.Size(560, 20);
-            this.txtSave.TabIndex = 15;
+            this.txtSave.Size = new System.Drawing.Size(549, 20);
+            this.txtSave.TabIndex = 28;
+            this.txtSave.UseSystemPasswordChar = false;
+            // 
+            // classicLabel2
+            // 
+            this.classicLabel2.DropShadow = false;
+            this.classicLabel2.Location = new System.Drawing.Point(11, 33);
+            this.classicLabel2.Name = "classicLabel2";
+            this.classicLabel2.Size = new System.Drawing.Size(64, 13);
+            this.classicLabel2.TabIndex = 26;
+            this.classicLabel2.Text = "File type:";
+            // 
+            // classicLabel1
+            // 
+            this.classicLabel1.DropShadow = false;
+            this.classicLabel1.Location = new System.Drawing.Point(11, 7);
+            this.classicLabel1.Name = "classicLabel1";
+            this.classicLabel1.Size = new System.Drawing.Size(64, 13);
+            this.classicLabel1.TabIndex = 27;
+            this.classicLabel1.Text = "File name:";
+            // 
+            // btnSave
+            // 
+            this.btnSave.AdaptBackColorWithTheme = true;
+            this.btnSave.AdaptFontWithTheme = true;
+            this.btnSave.AdaptForeColorWithTheme = true;
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.BackColor = System.Drawing.Color.Silver;
+            this.btnSave.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnSave.ForeColor = System.Drawing.Color.Black;
+            this.btnSave.Location = new System.Drawing.Point(619, 2);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 25);
+            this.btnSave.TabIndex = 25;
+            this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // MenuStrip1
             // 
@@ -553,7 +606,6 @@
             this.pnlFoldersTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFolderClose)).EndInit();
             this.pnlSave.ResumeLayout(false);
-            this.pnlSave.PerformLayout();
             this.MenuStrip1.ResumeLayout(false);
             this.MenuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -590,9 +642,6 @@
         internal System.Windows.Forms.Panel topleftcorner;
         internal System.Windows.Forms.ListView mainView;
         internal System.Windows.Forms.Panel pnlSave;
-        internal System.Windows.Forms.Button Button1;
-        internal System.Windows.Forms.Label Label1;
-        internal System.Windows.Forms.TextBox txtSave;
         private System.Windows.Forms.Panel pnlInfo;
         private System.Windows.Forms.Panel pnlFolders;
         private System.Windows.Forms.Panel pnlFoldersTop;
@@ -609,5 +658,11 @@
         private System.Windows.Forms.Label txtInfoDescName;
         private System.Windows.Forms.Label txtInfoDescSize;
         private System.Windows.Forms.Timer refresh;
+        private Engine.UI.ClassicButton btnCanc;
+        private Engine.UI.ClassicDropDown cmbType;
+        private Engine.UI.ClassicTextBox txtSave;
+        private Engine.UI.ClassicLabel classicLabel2;
+        private Engine.UI.ClassicLabel classicLabel1;
+        private Engine.UI.ClassicButton btnSave;
     }
 }

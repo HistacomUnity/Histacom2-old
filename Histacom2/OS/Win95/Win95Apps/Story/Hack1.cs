@@ -74,7 +74,7 @@ namespace Histacom2.OS.Win95.Win95Apps.Story
         
         public static void CheckIfSoundFinished(Object sender, EventArgs e)
         {
-            if (soundThread.IsAlive == false)
+            if (!soundThread.IsAlive)
             {
                 // Continue from where we were
                 System.Windows.Forms.Timer trm = sender as System.Windows.Forms.Timer;

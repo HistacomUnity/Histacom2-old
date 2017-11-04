@@ -58,64 +58,67 @@ namespace Histacom2.OS.Win95.Win95Apps
 
         private void ftpItems_Click(object sender, EventArgs e)
         {
-            Point objDrawingPoint = ftpFiles.PointToClient(Cursor.Position);
-            ListViewItem objListViewItem = new ListViewItem();
-            if (objDrawingPoint != null)
+            try
             {
-                objListViewItem = ftpFiles.GetItemAt(objDrawingPoint.X, objDrawingPoint.Y);
-                if (objListViewItem.Text == "/software/")
+                Point objDrawingPoint = ftpFiles.PointToClient(Cursor.Position);
+                ListViewItem objListViewItem = new ListViewItem();
+                if (objDrawingPoint != null)
                 {
-                    ftpFiles.Clear();
-                    ListViewItem listViewItem1 = new ListViewItem(new string[] { "/downloads/" }, 0, Color.Black, Color.Empty, null);
-                    ListViewItem listViewItem2 = new ListViewItem(new string[] { "skindows.html" }, 1, Color.Black, Color.Empty, null);
-                    ftpFiles.Items.AddRange(new ListViewItem[] { listViewItem1, listViewItem2 });
+                    objListViewItem = ftpFiles.GetItemAt(objDrawingPoint.X, objDrawingPoint.Y);
+                    if (objListViewItem.Text == "/software/")
+                    {
+                        ftpFiles.Clear();
+                        ListViewItem listViewItem1 = new ListViewItem(new string[] { "/downloads/" }, 0, Color.Black, Color.Empty, null);
+                        ListViewItem listViewItem2 = new ListViewItem(new string[] { "skindows.html" }, 1, Color.Black, Color.Empty, null);
+                        ftpFiles.Items.AddRange(new ListViewItem[] { listViewItem1, listViewItem2 });
+                    }
+                    else if (objListViewItem.Text == "/downloads/")
+                    {
+                        ftpFiles.Clear();
+                        ListViewItem listViewItem1 = new ListViewItem(new string[] { "/totallynotthetimedistorter/" }, 0, Color.Black, Color.Empty, null);
+                        ListViewItem listViewItem2 = new ListViewItem(new string[] { "FTP Client Setup.exe" }, 2, Color.Black, Color.Empty, null);
+                        ListViewItem listViewItem3 = new ListViewItem(new string[] { "Web Chat Setup.exe" }, 2, Color.Black, Color.Empty, null);
+                        ListViewItem listViewItem4 = new ListViewItem(new string[] { "Guess The Number V1 Setup.exe" }, 2, Color.Black, Color.Empty, null);
+                        ftpFiles.Items.AddRange(new ListViewItem[] { listViewItem1, listViewItem2, listViewItem3, listViewItem4 });
+                    }
+                    else if (objListViewItem.Text == "/totallynotthetimedistorter/")
+                    {
+                        ftpFiles.Clear();
+                        ListViewItem listViewItem1 = new ListViewItem(new string[] { "Time Distorter Setup.exe" }, 2, Color.Black, Color.Empty, null);
+                        ftpFiles.Items.AddRange(new ListViewItem[] { listViewItem1 });
+                    }
+                    else if (objListViewItem.Text == "FTP Client Setup.exe")
+                    {
+                        WinClassicDownloader opendownload = new WinClassicDownloader();
+                        WindowManager wm = new WindowManager();
+                        wm.Init(opendownload, "Downloader", null, false, true);
+                        opendownload.appName.Text = "Downloading: FTP Client";
+                    }
+                    else if (objListViewItem.Text == "Web Chat Setup.exe")
+                    {
+                        WinClassicDownloader opendownload = new WinClassicDownloader();
+                        WindowManager wm = new WindowManager();
+                        wm.Init(opendownload, "Downloader", null, false, true);
+                        opendownload.appName.Text = "Downloading: Web Chat 1998";
+                        opendownload.amountToDL = 35;
+                    }
+                    else if (objListViewItem.Text == "Time Distorter Setup.exe")
+                    {
+                        WinClassicDownloader opendownload = new WinClassicDownloader();
+                        WindowManager wm = new WindowManager();
+                        wm.Init(opendownload, "Downloader", null, false, true);
+                        opendownload.appName.Text = "Downloading: Time Distorter 0.1";
+                    }
+                    else if (objListViewItem.Text == "Guess The Number V1 Setup.exe")
+                    {
+                        WinClassicDownloader opendownload = new WinClassicDownloader();
+                        WindowManager wm = new WindowManager();
+                        wm.Init(opendownload, "Downloader", null, false, true);
+                        opendownload.appName.Text = "Downloading: Guess The Number V1";
+                        opendownload.amountToDL = 16;
+                    }
                 }
-                else if (objListViewItem.Text == "/downloads/")
-                {
-                    ftpFiles.Clear();
-                    ListViewItem listViewItem1 = new ListViewItem(new string[] { "/totallynotthetimedistorter/" }, 0, Color.Black, Color.Empty, null);
-                    ListViewItem listViewItem2 = new ListViewItem(new string[] { "FTP Client Setup.exe" }, 2, Color.Black, Color.Empty, null);
-                    ListViewItem listViewItem3 = new ListViewItem(new string[] { "Web Chat Setup.exe" }, 2, Color.Black, Color.Empty, null);
-                    ListViewItem listViewItem4 = new ListViewItem(new string[] { "Guess The Number V1 Setup.exe" }, 2, Color.Black, Color.Empty, null);
-                    ftpFiles.Items.AddRange(new ListViewItem[] { listViewItem1, listViewItem2, listViewItem3, listViewItem4 });
-                }
-                else if (objListViewItem.Text == "/totallynotthetimedistorter/")
-                {
-                    ftpFiles.Clear();
-                    ListViewItem listViewItem1 = new ListViewItem(new string[] { "Time Distorter Setup.exe" }, 2, Color.Black, Color.Empty, null);
-                    ftpFiles.Items.AddRange(new ListViewItem[] { listViewItem1 });
-                }
-                else if (objListViewItem.Text == "FTP Client Setup.exe")
-                {
-                    WinClassicDownloader opendownload = new WinClassicDownloader();
-                    WindowManager wm = new WindowManager();
-                    wm.Init(opendownload, "Downloader", null, false, true);
-                    opendownload.appName.Text = "Downloading: FTP Client";
-                }
-                else if (objListViewItem.Text == "Web Chat Setup.exe")
-                {
-                    WinClassicDownloader opendownload = new WinClassicDownloader();
-                    WindowManager wm = new WindowManager();
-                    wm.Init(opendownload, "Downloader", null, false, true);
-                    opendownload.appName.Text = "Downloading: Web Chat 1998";
-                    opendownload.amountToDL = 35;
-                }
-                else if (objListViewItem.Text == "Time Distorter Setup.exe")
-                {
-                    WinClassicDownloader opendownload = new WinClassicDownloader();
-                    WindowManager wm = new WindowManager();
-                    wm.Init(opendownload, "Downloader", null, false, true);
-                    opendownload.appName.Text = "Downloading: Time Distorter 0.1";
-                }
-                else if (objListViewItem.Text == "Guess The Number V1 Setup.exe")
-                {
-                    WinClassicDownloader opendownload = new WinClassicDownloader();
-                    WindowManager wm = new WindowManager();
-                    wm.Init(opendownload, "Downloader", null, false, true);
-                    opendownload.appName.Text = "Downloading: Guess The Number V1";
-                    opendownload.amountToDL = 16;
-                }
-            }
+            } catch { } // Try catch due to if you have more then one item selected the game crashing.
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

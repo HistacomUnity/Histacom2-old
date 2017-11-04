@@ -108,7 +108,7 @@ namespace Histacom2.OS.Win95.Win95Apps.MineSweeper
                     this.Open();
                 }
             }
-            if (_game.ftime == true && !Minded)
+            if (_game.ftime && !Minded)
             {
                 _game.ftime = false;
                 _game._timer = new Timer();

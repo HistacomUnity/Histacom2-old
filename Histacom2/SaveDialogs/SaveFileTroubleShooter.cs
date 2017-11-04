@@ -193,7 +193,7 @@ namespace Histacom2.SaveDialogs
         {
             pnlResolved.Visible = true;
             label1.Hide();
-            if (successful == true)
+            if (successful)
             {
                 label2.Text = "The issue has been resolved.";
 

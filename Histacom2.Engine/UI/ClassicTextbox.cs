@@ -19,6 +19,18 @@ namespace Histacom2.Engine.UI
         public static Color _lightBack = Color.Silver;
         public static Color _darkBack = Color.Silver;
 
+        public override string Text
+        {
+            get
+            {
+                return textBox1.Text;
+            }
+            set
+            {
+                textBox1.Text = value;
+            }
+        }
+
         public ClassicTextBox()
         {
             InitializeComponent();

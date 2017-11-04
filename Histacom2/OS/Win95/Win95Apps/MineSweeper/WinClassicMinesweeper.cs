@@ -129,7 +129,7 @@ namespace Histacom2.OS.Win95.Win95Apps
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (_game.win == true)
+            if (_game.win)
             {
                 button1.BackgroundImage = Properties.Resources.WinClassicMinesweeperWin;
                 switch (level)

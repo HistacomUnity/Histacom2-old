@@ -225,6 +225,7 @@ namespace Histacom2.OS.Win95.Win95Apps
             {
                 ActivateSaveFileDialog(".rtf");
                 string selectedPath = Program.OpenFileExplorerAsDialogAndReturnGivenPath();
+                DeactivateFileDialog();
 
                 if (selectedPath != "")
                 {                    

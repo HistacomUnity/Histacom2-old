@@ -45,7 +45,7 @@ namespace Histacom2.Engine.Template
 
         private void Programtopbar_drag(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left && max == false)
+            if (e.Button == MouseButtons.Left && !max)
             {
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
@@ -306,7 +306,7 @@ namespace Histacom2.Engine.Template
         private void maximizebutton_Click(object sender, EventArgs e)
         {
 
-            if (max == false)
+            if (!max)
             {
                 this.right.Hide();
                 this.left.Hide();
