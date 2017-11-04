@@ -190,6 +190,7 @@ namespace Histacom2.Engine
 
         public static void CreateWindowsDirectory()
         {
+            SaveDirectoryInfo(ProfileWindowsDirectory, "Application Data", true, "Application Data", true);
             SaveDirectoryInfo(ProfileWindowsDirectory, "System", true, "System", true);
             SaveDirectoryInfo(ProfileWindowsDirectory, "Config", true, "Config", true);
             SaveDirectoryInfo(ProfileWindowsDirectory, "Cursors", true, "Cursors", true);
@@ -337,6 +338,8 @@ namespace Histacom2.Engine
                 // Add Address Book into existance!
 
                 SaveDirectoryInfo(ProfileProgramsDirectory, "Outlook Express", false, "Outlook Express", true);
+                SaveDirectoryInfo(Path.Combine(ProfileWindowsDirectory, "Application Data"), "Microsoft", false, "Microsoft", true);
+                SaveDirectoryInfo(Path.Combine(ProfileWindowsDirectory, "Application Data", "Microsoft"), "Address Book", false, "Address Book", true);
                 CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "Outlook Express"), "WAB.exe", "addressbook", 8, 512);
 
                 // There is no "The Microsoft Network" folder!

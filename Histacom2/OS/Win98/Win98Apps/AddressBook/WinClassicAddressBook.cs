@@ -299,6 +299,25 @@ namespace Histacom2.OS.Win95.Win95Apps
         {
 
         }
+
+        private void WinClassicAddressBook_Load(object sender, EventArgs e)
+        {
+            ((Form)this.TopLevelControl).FormClosed += (sender2, e2) =>
+            {
+                SaveData();
+            };
+        }
+
+        public void SaveData()
+        {
+
+        }
+
+        public void SaveDataAs()
+        {
+
+        }
+
     }
 
     public class AddressBookContact
