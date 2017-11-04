@@ -46,6 +46,11 @@ namespace Histacom2.Engine
             e.Graphics.DrawLine(new Pen(foreColor), 4, height / 2, width - 4, height / 2);
         }
 
+        /// <summary>
+        /// Get a color lighter than the input color.
+        /// </summary>
+        /// <param name="basecolor">The color to lighten.</param>
+        /// <returns></returns>
         public static Color GetLightFromColor(Color basecolor)
         {
             if (basecolor == Color.Silver) return Color.White;

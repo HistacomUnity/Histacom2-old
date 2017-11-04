@@ -168,6 +168,15 @@ namespace Histacom2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        public static System.IO.UnmanagedMemoryStream distort_fail {
+            get {
+                return ResourceManager.GetStream("distort_fail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         public static System.IO.UnmanagedMemoryStream distort1 {
             get {
                 return ResourceManager.GetStream("distort1", resourceCulture);
@@ -886,6 +895,16 @@ namespace Histacom2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap sliveroldlace {
+            get {
+                object obj = ResourceManager.GetObject("sliveroldlace", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap sliversilver {
             get {
                 object obj = ResourceManager.GetObject("sliversilver", resourceCulture);
@@ -1096,6 +1115,16 @@ namespace Histacom2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap TimeDistorter3Icon {
+            get {
+                object obj = ResourceManager.GetObject("TimeDistorter3Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap TrueColor {
             get {
                 object obj = ResourceManager.GetObject("TrueColor", resourceCulture);
@@ -1128,7 +1157,8 @@ namespace Histacom2.Properties {
         ///      &quot;userchat&quot;: true
         ///    },
         ///    {
-        ///     [rest of string was truncated]&quot;;.
+        ///      &quot;user&quot;: &quot;SkyHigh&quot;,
+        ///    [rest of string was truncated]&quot;;.
         /// </summary>
         public static string webchat1998_convo {
             get {
@@ -1539,6 +1569,16 @@ namespace Histacom2.Properties {
         public static System.Drawing.Bitmap Win98WebBackground {
             get {
                 object obj = ResourceManager.GetObject("Win98WebBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Win98Welcome {
+            get {
+                object obj = ResourceManager.GetObject("Win98Welcome", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2166,6 +2206,16 @@ namespace Histacom2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap WinXPClose {
+            get {
+                object obj = ResourceManager.GetObject("WinXPClose", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap WinXPComputerSmall {
             get {
                 object obj = ResourceManager.GetObject("WinXPComputerSmall", resourceCulture);
@@ -2196,9 +2246,29 @@ namespace Histacom2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap WinXPError {
+            get {
+                object obj = ResourceManager.GetObject("WinXPError", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap WinXPIE6 {
             get {
                 object obj = ResourceManager.GetObject("WinXPIE6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WinXPIE6Icon {
+            get {
+                object obj = ResourceManager.GetObject("WinXPIE6Icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

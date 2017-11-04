@@ -76,7 +76,7 @@ namespace Histacom2.OS.Win98
         //  When New Game is clicked in TitleScreen.cs
         private void Desktop_Load(object sender, EventArgs e)
         {
-            UpgradeFileSystem( "98");
+            if (!CurrentSave.FTime95) UpgradeFileSystem( "98");
 
             if (currentTheme.defaultWallpaper != null) desktopicons.BackgroundImage = new Bitmap(currentTheme.defaultWallpaper, Width, Height);
             //Start Menu Color - Commented until it works reliably
@@ -480,15 +480,6 @@ namespace Histacom2.OS.Win98
             distort = new WinClassicTimeDistorter2();
             WinClassic app = wm.Init(distort, "Time Distorter", null, false, false, false);
             AddTaskBarItem(app, app.Tag.ToString(), "Time Distorter", null);
-            app.BringToFront();
-            startmenu.Hide();
-        }
-
-        private void FTPClientToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            WinClassic app = wm.Init(new WinClassicFTPClient(), "FTP Client", null, true, true);
-
-            AddTaskBarItem(app, app.Tag.ToString(), "FTP Client", null);
             app.BringToFront();
             startmenu.Hide();
         }

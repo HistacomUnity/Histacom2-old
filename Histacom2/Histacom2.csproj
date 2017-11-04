@@ -13,7 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\Logan\Desktop\</PublishUrl>
+    <PublishUrl>C:\Users\lempamo\Desktop\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -25,15 +25,15 @@
     <MapFileExtensions>true</MapFileExtensions>
     <SupportUrl>http://www.ashifter.ml/histacom/forum</SupportUrl>
     <TargetCulture>en</TargetCulture>
-    <ProductName>HistacomCS</ProductName>
-    <PublisherName>HistacomCS Development Team</PublisherName>
+    <ProductName>Histacom 2.0</ProductName>
+    <PublisherName>Histacom 2.0 Development Team</PublisherName>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>3</ApplicationRevision>
-    <ApplicationVersion>2.0.0.3</ApplicationVersion>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>2.1.0.0</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -106,6 +106,10 @@
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PinkieControls, Version=1.0.1362.15156, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PinkieControls.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -354,6 +358,24 @@
       <DependentUpon>WinClassicWindowsExplorer.cs</DependentUpon>
     </Compile>
     <Compile Include="OS\WinXPBad\Story\Hack4.cs" />
+    <Compile Include="OS\WinXPBad\VirusLabel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OS\WinXPBad\VirusLabel.Designer.cs">
+      <DependentUpon>VirusLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\WinXPBad\WinClassicIE6Bad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\WinXPBad\WinClassicIE6Bad.Designer.cs">
+      <DependentUpon>WinClassicIE6Bad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\WinXPBad\WinClassicTimeDistorter3Bad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\WinXPBad\WinClassicTimeDistorter3Bad.Designer.cs">
+      <DependentUpon>WinClassicTimeDistorter3Bad.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\WinXPBad\WinXPBad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -576,6 +598,15 @@
       <DependentUpon>WinClassicWindowsExplorer.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="OS\WinXPBad\VirusLabel.resx">
+      <DependentUpon>VirusLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\WinXPBad\WinClassicIE6Bad.resx">
+      <DependentUpon>WinClassicIE6Bad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\WinXPBad\WinClassicTimeDistorter3Bad.resx">
+      <DependentUpon>WinClassicTimeDistorter3Bad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OS\WinXPBad\WinXPBad.resx">
       <DependentUpon>WinXPBad.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -660,6 +691,9 @@
   <ItemGroup>
     <Content Include="Icon128x.ico" />
     <Content Include="Resources\12padams_EULA.txt" />
+    <None Include="Resources\WinClassic\WinXPClose.png" />
+    <None Include="Resources\WinClassic\WinXPIE6Icon.png" />
+    <None Include="Resources\WinClassic\WinXPError.png" />
     <None Include="Resources\WinClassic\WinXPPrintersSmall.png" />
     <None Include="Resources\WinClassic\WinXPControlPanelSmall.png" />
     <None Include="Resources\WinClassic\WinXPStartMenuPlacesSeparator1.png" />
@@ -724,6 +758,7 @@
     <None Include="Resources\GuessTheNumber\GTN95_Correct.png" />
     <None Include="Resources\GuessTheNumber\GTN95_Lower.png" />
     <None Include="Resources\GuessTheNumber\GTN95_Error.png" />
+    <None Include="Resources\distort fail.wav" />
     <Content Include="Resources\Icon128x.ico" />
     <None Include="Resources\ICTheme_BG.jpg" />
     <None Include="Resources\IE3\IE3_SwirlyThings.png" />
@@ -856,6 +891,8 @@
     <None Include="Resources\WinClassic\TimeDistorter1.png" />
     <None Include="Resources\WinClassic\TimeDistorter1Icon.png" />
     <None Include="Resources\WinClassic\sliverwhite.png" />
+    <None Include="Resources\WinClassic\sliveroldlace.png" />
+    <None Include="Resources\WinClassic\TimeDistorter3Icon.png" />
     <Content Include="Resources\WinClassic\TrueColor.png" />
     <None Include="Resources\WinClassic\Win95Info.png" />
     <None Include="Resources\WinClassic\Win95Error.png" />
@@ -881,6 +918,7 @@
     <None Include="Resources\WinClassic\WinClassicApp.png" />
     <None Include="Resources\WinClassic\WinClassicCalcBig.png" />
     <None Include="Resources\WinClassic\Win95WordpadIcon2.png" />
+    <None Include="Resources\WinClassic\Win98Welcome.png" />
     <Content Include="Resources\WinClassic\WinClassicClock.png" />
     <Content Include="Resources\WinClassic\WinClassicComputer.png" />
     <None Include="Resources\WinClassic\WinClassicCopy.png" />
@@ -935,6 +973,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="OS\WinXP\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

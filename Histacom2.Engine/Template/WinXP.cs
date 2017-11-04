@@ -17,6 +17,7 @@ namespace Histacom2.Engine.Template
         public WinXP()
         {
             InitializeComponent();
+            SetStyle(ControlStyles.SupportsTransparentBackColor, true);
             DoubleBuffered = true;
         }
 
@@ -43,6 +44,21 @@ namespace Histacom2.Engine.Template
             HTBOTTOM = 15,
             HTBOTTOMLEFT = 16,
             HTBOTTOMRIGHT = 17;
+
+        private void closebutton_MouseDown(object sender, MouseEventArgs e)
+        {
+            closebutton.BackgroundImage = Properties.Resources.WinXP_ClosePress;
+        }
+
+        private void closebutton_MouseLeave(object sender, EventArgs e)
+        {
+            closebutton.BackgroundImage = Properties.Resources.WinXP_Close;
+        }
+
+        private void closebutton_MouseEnter(object sender, EventArgs e)
+        {
+            closebutton.BackgroundImage = Properties.Resources.WinXP_CloseHover;
+        }
 
         private void closebutton_Click(object sender, EventArgs e)
         {

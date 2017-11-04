@@ -352,6 +352,15 @@ namespace Histacom2.Engine
                         break;
                     }
                 }
+                CurrentSave.BytesLeft = 916455424;
+                string toWrite = JsonConvert.SerializeObject(fsfi, Formatting.Indented);
+
+                File.WriteAllText(Path.Combine(ProfileProgramsDirectory, "_data.info"), toWrite);
+
+                fsfi = JsonConvert.DeserializeObject<FileSystemFolderInfo>(File.ReadAllText(Path.Combine(ProfileWindowsDirectory, "_data.info")));
+
+                Directory.Delete(Path.Combine(ProfileWindowsDirectory, "Desktop"), true);
+                SaveDirectoryInfo(ProfileWindowsDirectory, "Desktop", true, "Desktop", true);
             }
         }
 
@@ -810,7 +819,12 @@ namespace Histacom2.Engine
 
         [Order]
         public Theme customTheme { get; set; }
+
+        [Order]
         public bool FTime98 { get; set; }
+
+        [Order]
+        public bool[] installed95 { get; set; } = new bool[7]; // 0: WC98, 1: FTP, 2: SR, 3: EB, 4: SKNDWS, 5: TD0.1, 6: GTN
     }
 
     public class FileSystemFolderInfo

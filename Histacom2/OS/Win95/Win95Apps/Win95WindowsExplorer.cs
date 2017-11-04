@@ -304,7 +304,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                     break;
                 case "web chat setup":
                     Win95Installer inst = new Win95Installer("Web Chat 1998");
-                    inst.InstallCompleted += (sendr, args) => TitleScreen.frm95.WebChatToolStripMenuItem.Visible = true;
+                    inst.InstallCompleted += (sendr, args) => { TitleScreen.frm95.WebChatToolStripMenuItem.Visible = true; CurrentSave.installed95[0] = true; SaveGame(); };
                     WinClassic appInstaller = wm.Init(inst, "Web Chat Setup", null, true, true);
                     Program.AddTaskbarItem(appInstaller, appInstaller.Tag.ToString(), "Web Chat Setup", null);
                     appInstaller.BringToFront();
@@ -318,6 +318,8 @@ namespace Histacom2.OS.Win95.Win95Apps
                         SaveDirectoryInfo(Path.Combine(ProfileProgramsDirectory, "12padams"), "FTP Client", true, "FTP Client", true);
                         CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "12padams", "FTP Client"), "ftpclint.exe", "ftp client", 19, 58395);
                         TitleScreen.frm95.FTPClientToolStripMenuItem.Visible = true;
+                        CurrentSave.installed95[1] = true;
+                        SaveGame();
                     };
                     WinClassic appFtp = wm.Init(instFtp, "FTP Client Setup", null, true, true);
                     Program.AddTaskbarItem(appFtp, appFtp.Tag.ToString(), "FTP Client Setup", null);
@@ -332,6 +334,8 @@ namespace Histacom2.OS.Win95.Win95Apps
                         SaveDirectoryInfo(Path.Combine(ProfileProgramsDirectory, "12padams"), "Time Distorter 0.1", true, "Time Distorter 0.1", true);
                         CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "12padams", "Time Distorter 0.1"), "tdistort.exe", "time distorter", 17, 23895);
                         TitleScreen.frm95.TimeDistorterToolStripMenuItem.Visible = true;
+                        CurrentSave.installed95[5] = true;
+                        SaveGame();
                     };
                     WinClassic appTd = wm.Init(instTd, "Time Distorter Setup", null, true, true);
                     Program.AddTaskbarItem(appTd, appTd.Tag.ToString(), "Time Distorter Setup", null);
@@ -350,6 +354,8 @@ namespace Histacom2.OS.Win95.Win95Apps
                         SaveDirectoryInfo(Path.Combine(ProfileProgramsDirectory, "12padams"), "Guess The Number V1", true, "Guess The Number V1", true);
                         CreateWindowsFile(Path.Combine(ProfileProgramsDirectory, "12padams", "Guess The Number V1"), "guessnum.exe", "guess number", 18, 17483);
                         TitleScreen.frm95.GuessTheNumberToolStripMenuItem.Visible = true;
+                        CurrentSave.installed95[6] = true;
+                        SaveGame();
                     };
                     WinClassic appGtn = wm.Init(instGtn, "Guess The Number Setup", null, true, true);
                     Program.AddTaskbarItem(appGtn, appGtn.Tag.ToString(), "Guess The Number Setup", null);
@@ -367,7 +373,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                     break;
                 case "eb95 setup":
                     Win95Installer ebInstall = new Win95Installer("Error Blaster 95");
-                    ebInstall.InstallCompleted += (sender, args) => TitleScreen.frm95.ErrorBlasterToolStripMenuItem.Visible = true;
+                    ebInstall.InstallCompleted += (sender, args) => { TitleScreen.frm95.ErrorBlasterToolStripMenuItem.Visible = true; CurrentSave.installed95[3] = true; };
                     WinClassic installer = wm.Init(ebInstall, "Error Blaster 95 Setup", null, true, true);
                     Program.AddTaskbarItem(installer, installer.Tag.ToString(), "Error Blaster 95 Setup", null);
                     installer.BringToFront();
@@ -380,9 +386,9 @@ namespace Histacom2.OS.Win95.Win95Apps
                     break;
                 case "sr95 setup":
                     Win95Installer srInstall = new Win95Installer("Start Runner 95");
-                    srInstall.InstallCompleted += (sender, args) => TitleScreen.frm95.ErrorBlasterToolStripMenuItem.Visible = true;
+                    srInstall.InstallCompleted += (sender, args) => { TitleScreen.frm95.StartRunnerToolStripMenuItem.Visible = true; CurrentSave.installed95[2] = true; };
                     WinClassic install = wm.Init(srInstall, "Start Runner 95 Setup", null, true, true);
-                    Program.AddTaskbarItem(install, install.Tag.ToString(), "Error Blaster 95 Setup", null);
+                    Program.AddTaskbarItem(install, install.Tag.ToString(), "Start Runner 95 Setup", null);
                     install.BringToFront();
                     break;
                 default:

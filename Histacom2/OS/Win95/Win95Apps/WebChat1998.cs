@@ -70,9 +70,9 @@ namespace Histacom2.OS.Win95.Win95Apps
         {
             if (!guessing)
             {
-                if (history.ScrollBars != ScrollBars.None) history.AppendText(wcmp.ParseMessage(resources.GetString("convo"), chat_index, TitleScreen.username));
-                else history.Text = wcmp.ParseMessage(resources.GetString("convo"), chat_index, TitleScreen.username);
-                switch (wcmp.GetSpecial(resources.GetString("convo"), chat_index))
+                if (history.ScrollBars != ScrollBars.None) history.AppendText(wcmp.ParseMessage(Properties.Resources.webchat1998_convo, chat_index, TitleScreen.username));
+                else history.Text = wcmp.ParseMessage(Properties.Resources.webchat1998_convo, chat_index, TitleScreen.username);
+                switch (wcmp.GetSpecial(Properties.Resources.webchat1998_convo, chat_index))
                 {
                     case "addsh":
                         listBox1.Items.Add("SkyHigh");
@@ -208,8 +208,8 @@ namespace Histacom2.OS.Win95.Win95Apps
                         if (msgsound) receive.Play();
                         break;
                 }
-                if (TitleScreen.username == "devspeed") Chat.Interval = wcmp.GetMessageDelay(resources.GetString("convo"), chat_index) / 2;
-                else Chat.Interval = wcmp.GetMessageDelay(resources.GetString("convo"), chat_index);
+                if (TitleScreen.username == "devspeed") Chat.Interval = wcmp.GetMessageDelay(Properties.Resources.webchat1998_convo, chat_index) / 2;
+                else Chat.Interval = wcmp.GetMessageDelay(Properties.Resources.webchat1998_convo, chat_index);
             }
             else
             {
@@ -223,7 +223,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                 }
                 guessing = false;
                 receive.Play();
-                Chat.Interval = wcmp.GetMessageDelay(resources.GetString("convo"), chat_index);
+                Chat.Interval = wcmp.GetMessageDelay(Properties.Resources.webchat1998_convo, chat_index);
             }
             chat_index++;
         }

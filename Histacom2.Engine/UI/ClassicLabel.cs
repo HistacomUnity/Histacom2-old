@@ -25,9 +25,11 @@ namespace Histacom2.Engine.UI
             base.OnPaint(e);
             var gfx = e.Graphics;
             if (BackColor != Color.Transparent) gfx.Clear(BackColor);
+            StringFormat sf = new StringFormat();
+            sf.HotkeyPrefix = System.Drawing.Text.HotkeyPrefix.Show;
             gfx.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;
 
-            gfx.DrawString(Text, Font, new SolidBrush(ForeColor), ClientRectangle);
+            gfx.DrawString(Text, Font, new SolidBrush(ForeColor), ClientRectangle, sf);
             Height = (int)gfx.MeasureString(Text, Font, ClientRectangle.Width).Height;
         }
 

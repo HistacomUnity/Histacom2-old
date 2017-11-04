@@ -34,10 +34,6 @@
             this.programContent = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.VM_Height = new System.Windows.Forms.NumericUpDown();
-            this.VM_Width = new System.Windows.Forms.NumericUpDown();
-            this.vm_mode = new System.Windows.Forms.CheckBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gameversion = new System.Windows.Forms.Label();
             this.startbutton = new System.Windows.Forms.PictureBox();
             this.startmenu = new System.Windows.Forms.Panel();
@@ -60,9 +56,6 @@
             this.programContent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VM_Height)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VM_Width)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.startbutton)).BeginInit();
             this.startmenu.SuspendLayout();
             this.startmenuitems.SuspendLayout();
@@ -110,10 +103,6 @@
             // panel2
             // 
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.Controls.Add(this.VM_Height);
-            this.panel2.Controls.Add(this.VM_Width);
-            this.panel2.Controls.Add(this.vm_mode);
-            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.gameversion);
             this.panel2.Controls.Add(this.startbutton);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -121,74 +110,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(791, 28);
             this.panel2.TabIndex = 10;
-            // 
-            // VM_Height
-            // 
-            this.VM_Height.Location = new System.Drawing.Point(658, 5);
-            this.VM_Height.Maximum = new decimal(new int[] {
-            2160,
-            0,
-            0,
-            0});
-            this.VM_Height.Minimum = new decimal(new int[] {
-            480,
-            0,
-            0,
-            0});
-            this.VM_Height.Name = "VM_Height";
-            this.VM_Height.Size = new System.Drawing.Size(50, 20);
-            this.VM_Height.TabIndex = 15;
-            this.VM_Height.Value = new decimal(new int[] {
-            480,
-            0,
-            0,
-            0});
-            this.VM_Height.Visible = false;
-            // 
-            // VM_Width
-            // 
-            this.VM_Width.Location = new System.Drawing.Point(605, 5);
-            this.VM_Width.Maximum = new decimal(new int[] {
-            3840,
-            0,
-            0,
-            0});
-            this.VM_Width.Minimum = new decimal(new int[] {
-            640,
-            0,
-            0,
-            0});
-            this.VM_Width.Name = "VM_Width";
-            this.VM_Width.Size = new System.Drawing.Size(50, 20);
-            this.VM_Width.TabIndex = 14;
-            this.VM_Width.Value = new decimal(new int[] {
-            640,
-            0,
-            0,
-            0});
-            this.VM_Width.Visible = false;
-            // 
-            // vm_mode
-            // 
-            this.vm_mode.AutoSize = true;
-            this.vm_mode.BackColor = System.Drawing.Color.Transparent;
-            this.vm_mode.ForeColor = System.Drawing.Color.Black;
-            this.vm_mode.Location = new System.Drawing.Point(712, 7);
-            this.vm_mode.Name = "vm_mode";
-            this.vm_mode.Size = new System.Drawing.Size(72, 17);
-            this.vm_mode.TabIndex = 4;
-            this.vm_mode.Text = "VM Mode";
-            this.vm_mode.UseVisualStyleBackColor = false;
-            this.vm_mode.CheckStateChanged += new System.EventHandler(this.vm_mode_CheckStateChanged);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(603, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(187, 28);
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
             // 
             // gameversion
             // 
@@ -409,9 +330,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VM_Height)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VM_Width)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.startbutton)).EndInit();
             this.startmenu.ResumeLayout(false);
             this.startmenu.PerformLayout();
@@ -441,10 +359,6 @@
         internal System.Windows.Forms.Panel ossidestartmenu;
         internal System.Windows.Forms.PictureBox osimage;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.NumericUpDown VM_Height;
-        private System.Windows.Forms.NumericUpDown VM_Width;
-        private System.Windows.Forms.CheckBox vm_mode;
-        internal System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Label gameversion;
         internal System.Windows.Forms.PictureBox startbutton;
         private System.Windows.Forms.Timer updateText;

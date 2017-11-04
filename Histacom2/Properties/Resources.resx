@@ -1755,6 +1755,13 @@
       "message": "and let me remind you... MS-DOS IS USELESS! NEXT TIME, DONT PIRATE SOFTWARE!",
       "special": null,
       "userchat": true
+    },
+    {
+      "user": "12padams",
+      "delay": 5000,
+      "message": "",
+      "special": ".cmd-end",
+      "userchat": false
     }
   ]
 }</value>
@@ -2094,5 +2101,26 @@
   </data>
   <data name="Win95PlusTravelWallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\win95plustravelwallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sliveroldlace" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\sliveroldlace.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TimeDistorter3Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\TimeDistorter3Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinXPClose" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\WinXPClose.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinXPError" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\WinXPError.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinXPIE6Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\WinXPIE6Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Win98Welcome" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinClassic\Win98Welcome.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="distort_fail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\distort fail.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

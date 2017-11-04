@@ -54,10 +54,16 @@ namespace Histacom2.OS.Win95.Win95Apps
             {
                 actionPanel.Hide();
                 cmdPrompt.ReadOnly = true;
+                if (SaveSystem.CurrentSave.CurrentOS == "xpbad")
+                {
+                    cmdPrompt.BorderStyle = BorderStyle.None;
+                    cmdPrompt.ScrollBars = RichTextBoxScrollBars.Vertical;
+                }
             }
             else
             {
-                cmdPrompt.AppendText("\nMicrosoft<R> Windows 95\n   <C>Copyright Microsoft Corp 1981-1995.\n\n");
+                if (SaveSystem.CurrentSave.CurrentOS == "95") cmdPrompt.AppendText("\nMicrosoft<R> Windows 95\n   <C>Copyright Microsoft Corp 1981-1995.\n\n");
+                if (SaveSystem.CurrentSave.CurrentOS == "98") cmdPrompt.AppendText("\nMicrosoft<R> Windows 98\n   <C>Copyright Microsoft Corp 1981-1998.\n\n");
                 cmdPrompt.AppendText(prefix);
             }
         }
@@ -68,7 +74,8 @@ namespace Histacom2.OS.Win95.Win95Apps
         public void WriteLine(string Text)
         {
             cmdPrompt.AppendText(Text + "\n");
-            this.Update();
+            cmdPrompt.Update();
+            cmdPrompt.ScrollToCaret();
         }
 
         /// <summary>

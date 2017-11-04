@@ -25,7 +25,7 @@ namespace Histacom2.OS.Win98.Win98Apps
             classicLabel4.Show();
             classicLabel4.Text = "Preparing to travel. ETA: 120 secs.";
             timer1.Start();
-            Story.Hack3.StartObjective();
+            Story.Hack3.StartObjective(this);
         }
 
         private void timer1_Tick(object sender, EventArgs e)

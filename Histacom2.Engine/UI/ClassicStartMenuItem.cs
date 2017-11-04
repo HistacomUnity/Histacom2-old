@@ -56,21 +56,22 @@ namespace Histacom2.Engine.UI
             {
                 if (BackgroundImageLayout == ImageLayout.Stretch) e.Graphics.DrawImage(BackgroundImage, new Rectangle(0, 0, Width, Height + 9));
             }
-
-            if (Selected)
+            int imgWidth = 0;
+            if (Image != null)
+            {
+                if (Selected)
             {
                 if (SaveSystem.currentTheme != null && DoBackColorAdapt) e.Graphics.FillRectangle(new SolidBrush(SaveSystem.currentTheme.selectedBackColor), new Rectangle(0, 0, Width, Image.Height));
                 else e.Graphics.FillRectangle(Brushes.Navy, new Rectangle(0, 0, Width, Image.Height));
             }
 
             e.Graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;
+            
+            e.Graphics.DrawImage(Image, 0 + Padding.Left - Padding.Right, 0); imgWidth = Image.Width; }
+            //if (Image != null) if (Height != Image.Height) if (layout == ClassicStartMenuItemLayout.CloseTitleWithLightSubtitle && Height != Image.Height + 8) { Height = Image.Height; }
 
             StringFormat sf = new StringFormat();
             sf.HotkeyPrefix = System.Drawing.Text.HotkeyPrefix.Show;
-
-            int imgWidth = 0;
-            if (Image != null) { e.Graphics.DrawImage(Image, 0 + Padding.Left - Padding.Right, 0); imgWidth = Image.Width; }
-            //if (Image != null) if (Height != Image.Height) if (layout == ClassicStartMenuItemLayout.CloseTitleWithLightSubtitle && Height != Image.Height + 8) { Height = Image.Height; }
 
             if (!Selected) {
                 switch (layout) {
@@ -133,7 +134,7 @@ namespace Histacom2.Engine.UI
     {
         DistancedTitle,
         CloseTitle,
-        CloseTitleWithTwoLines,
+        //CloseTitleWithTwoLines,
         CloseTitleWithLightSubtitle
     }
 }

@@ -100,7 +100,12 @@
             // 
             // classicButton1
             // 
+            this.classicButton1.AdaptBackColorWithTheme = true;
+            this.classicButton1.AdaptFontWithTheme = true;
+            this.classicButton1.AdaptForeColorWithTheme = true;
             this.classicButton1.BackColor = System.Drawing.Color.Silver;
+            this.classicButton1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.classicButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.classicButton1.ForeColor = System.Drawing.Color.Black;
             this.classicButton1.Location = new System.Drawing.Point(251, 223);
             this.classicButton1.Name = "classicButton1";

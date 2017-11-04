@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,7 +15,7 @@ namespace Histacom2.OS.Win98.Win98Apps.Story
     {
         static WindowManager wm = new WindowManager();
 
-        public static async void StartObjective()
+        public static async void StartObjective(WinClassicTimeDistorter2 td)
         {
             Random r = new Random();
 
@@ -45,9 +46,9 @@ namespace Histacom2.OS.Win98.Win98Apps.Story
             await Task.Delay(6000); TitleScreen.frm98.webchat.history.AppendText($"12padams: oh hey {SaveSystem.ProfileName}, make sure to keep an eye on the year in case something goes wrong" + Environment.NewLine); TitleScreen.frm98.webchat.receive.Play(); // 10
             await Task.Delay(4000); TitleScreen.frm98.webchat.history.AppendText("HiddenHacker: and have a safe trip!" + Environment.NewLine); TitleScreen.frm98.webchat.receive.Play(); // 6
 
-            while (TitleScreen.frm98.distort.secsLeft != 0) { } // 0
+            await Task.Delay(td.secsLeft * 1000); // 0
 
-            TitleScreen.frm98.distort.classicLabel4.Text = "Initiating Time Travel...";
+            td.classicLabel4.Text = "Initiating Time Travel...";
             await Task.Delay(100); Program.Invert(TitleScreen.frm98.webchat);
             await Task.Delay(100); Program.Invert(TitleScreen.frm98.webchat);
             await Task.Delay(100); Program.Invert(TitleScreen.frm98.webchat);
@@ -93,85 +94,85 @@ namespace Histacom2.OS.Win98.Win98Apps.Story
             await Task.Delay(100); Program.Invert(TitleScreen.frm98, false);
             await Task.Delay(100); Program.Invert(TitleScreen.frm98, false); 
 
-            await Task.Delay(100); TitleScreen.frm98.distort.ParentForm.Location = new Point(r.Next(TitleScreen.frm98.Width), r.Next(TitleScreen.frm98.Height)); Program.Invert(TitleScreen.frm98, false);
-            await Task.Delay(100); TitleScreen.frm98.distort.ParentForm.Location = new Point(r.Next(TitleScreen.frm98.Width), r.Next(TitleScreen.frm98.Height)); Program.Invert(TitleScreen.frm98, false);
-            await Task.Delay(100); TitleScreen.frm98.distort.ParentForm.Location = new Point(r.Next(TitleScreen.frm98.Width), r.Next(TitleScreen.frm98.Height)); Program.Invert(TitleScreen.frm98, false);
-            await Task.Delay(100); TitleScreen.frm98.distort.ParentForm.Location = new Point(r.Next(TitleScreen.frm98.Width), r.Next(TitleScreen.frm98.Height)); Program.Invert(TitleScreen.frm98, false);
-            await Task.Delay(100); TitleScreen.frm98.distort.ParentForm.Location = new Point(r.Next(TitleScreen.frm98.Width), r.Next(TitleScreen.frm98.Height)); Program.Invert(TitleScreen.frm98, false);
-            await Task.Delay(100); TitleScreen.frm98.distort.ParentForm.Location = new Point(r.Next(TitleScreen.frm98.Width), r.Next(TitleScreen.frm98.Height)); Program.Invert(TitleScreen.frm98, false);
-            await Task.Delay(100); TitleScreen.frm98.distort.ParentForm.Location = new Point(r.Next(TitleScreen.frm98.Width), r.Next(TitleScreen.frm98.Height)); Program.Invert(TitleScreen.frm98, false);
-            await Task.Delay(100); TitleScreen.frm98.distort.ParentForm.Location = new Point(r.Next(TitleScreen.frm98.Width), r.Next(TitleScreen.frm98.Height)); Program.Invert(TitleScreen.frm98, false);
-            await Task.Delay(100); TitleScreen.frm98.distort.ParentForm.Location = new Point(r.Next(TitleScreen.frm98.Width), r.Next(TitleScreen.frm98.Height)); Program.Invert(TitleScreen.frm98, false);
-            await Task.Delay(100); TitleScreen.frm98.distort.ParentForm.Location = new Point(r.Next(TitleScreen.frm98.Width), r.Next(TitleScreen.frm98.Height)); Program.Invert(TitleScreen.frm98, false); // -5
+            await Task.Delay(100); td.ParentForm.Location = new Point(r.Next(TitleScreen.frm98.Width), r.Next(TitleScreen.frm98.Height)); Program.Invert(TitleScreen.frm98, false);
+            await Task.Delay(100); td.ParentForm.Location = new Point(r.Next(TitleScreen.frm98.Width), r.Next(TitleScreen.frm98.Height)); Program.Invert(TitleScreen.frm98, false);
+            await Task.Delay(100); td.ParentForm.Location = new Point(r.Next(TitleScreen.frm98.Width), r.Next(TitleScreen.frm98.Height)); Program.Invert(TitleScreen.frm98, false);
+            await Task.Delay(100); td.ParentForm.Location = new Point(r.Next(TitleScreen.frm98.Width), r.Next(TitleScreen.frm98.Height)); Program.Invert(TitleScreen.frm98, false);
+            await Task.Delay(100); td.ParentForm.Location = new Point(r.Next(TitleScreen.frm98.Width), r.Next(TitleScreen.frm98.Height)); Program.Invert(TitleScreen.frm98, false);
+            await Task.Delay(100); td.ParentForm.Location = new Point(r.Next(TitleScreen.frm98.Width), r.Next(TitleScreen.frm98.Height)); Program.Invert(TitleScreen.frm98, false);
+            await Task.Delay(100); td.ParentForm.Location = new Point(r.Next(TitleScreen.frm98.Width), r.Next(TitleScreen.frm98.Height)); Program.Invert(TitleScreen.frm98, false);
+            await Task.Delay(100); td.ParentForm.Location = new Point(r.Next(TitleScreen.frm98.Width), r.Next(TitleScreen.frm98.Height)); Program.Invert(TitleScreen.frm98, false);
+            await Task.Delay(100); td.ParentForm.Location = new Point(r.Next(TitleScreen.frm98.Width), r.Next(TitleScreen.frm98.Height)); Program.Invert(TitleScreen.frm98, false);
+            await Task.Delay(100); td.ParentForm.Location = new Point(r.Next(TitleScreen.frm98.Width), r.Next(TitleScreen.frm98.Height)); Program.Invert(TitleScreen.frm98, false); // -5
 
             await Task.Delay(100);
             TitleScreen.frm98.Hide();
-            ((WinClassic)TitleScreen.frm98.distort.ParentForm).BringToFront();
-            ((WinClassic)TitleScreen.frm98.distort.ParentForm).maximizebutton.Enabled = false;
-            ((WinClassic)TitleScreen.frm98.distort.ParentForm).WindowState = FormWindowState.Maximized;
-            ((WinClassic)TitleScreen.frm98.distort.ParentForm).right.Hide();
-            ((WinClassic)TitleScreen.frm98.distort.ParentForm).left.Hide();
-            ((WinClassic)TitleScreen.frm98.distort.ParentForm).bottom.Hide();
-            ((WinClassic)TitleScreen.frm98.distort.ParentForm).top.Hide();
-            ((WinClassic)TitleScreen.frm98.distort.ParentForm).bottomleftcorner.Hide();
-            ((WinClassic)TitleScreen.frm98.distort.ParentForm).bottomrightcorner.Hide();
-            ((WinClassic)TitleScreen.frm98.distort.ParentForm).topleftcorner.Hide();
-            ((WinClassic)TitleScreen.frm98.distort.ParentForm).toprightcorner.Hide();
-            ((WinClassic)TitleScreen.frm98.distort.ParentForm).Dock = DockStyle.Fill;
-            ((WinClassic)TitleScreen.frm98.distort.ParentForm).max = true;
-            ((WinClassic)TitleScreen.frm98.distort.ParentForm).maximizebutton.Image = Engine.Properties.Resources.WinClassicRestore;
-            ((WinClassic)TitleScreen.frm98.distort.ParentForm).programtopbar.Hide();
-            TitleScreen.frm98.distort.BackColor = Color.Black;
-            foreach (Control c in TitleScreen.frm98.distort.Controls) { c.BackColor = Color.Black; c.Hide(); }
-            TitleScreen.frm98.distort.classicLabel1.Show();
-            TitleScreen.frm98.distort.classicLabel1.ForeColor = Color.Lime;
-            TitleScreen.frm98.distort.classicLabel2.Text = "LOL NO";
-            TitleScreen.frm98.distort.classicLabel2.ForeColor = Color.MidnightBlue;
+            ((WinClassic)td.ParentForm).BringToFront();
+            ((WinClassic)td.ParentForm).maximizebutton.Enabled = false;
+            ((WinClassic)td.ParentForm).WindowState = FormWindowState.Maximized;
+            ((WinClassic)td.ParentForm).right.Hide();
+            ((WinClassic)td.ParentForm).left.Hide();
+            ((WinClassic)td.ParentForm).bottom.Hide();
+            ((WinClassic)td.ParentForm).top.Hide();
+            ((WinClassic)td.ParentForm).bottomleftcorner.Hide();
+            ((WinClassic)td.ParentForm).bottomrightcorner.Hide();
+            ((WinClassic)td.ParentForm).topleftcorner.Hide();
+            ((WinClassic)td.ParentForm).toprightcorner.Hide();
+            ((WinClassic)td.ParentForm).Dock = DockStyle.Fill;
+            ((WinClassic)td.ParentForm).max = true;
+            ((WinClassic)td.ParentForm).maximizebutton.Image = Engine.Properties.Resources.WinClassicRestore;
+            ((WinClassic)td.ParentForm).programtopbar.Hide();
+            td.BackColor = Color.Black;
+            foreach (Control c in td.Controls) { c.BackColor = Color.Black; c.Hide(); }
+            td.classicLabel1.Show();
+            td.classicLabel1.ForeColor = Color.Lime;
+            td.classicLabel2.Text = "LOL NO";
+            td.classicLabel2.ForeColor = Color.MidnightBlue;
             // 0
-
-            await Task.Delay(100); TitleScreen.frm98.distort.classicLabel1.Text = "1999";
+            new SoundPlayer(Properties.Resources.distort_fail).Play();
+            await Task.Delay(100); td.classicLabel1.Text = "1999";
             await Task.Delay(500);
-            await Task.Delay(100); TitleScreen.frm98.distort.classicLabel1.Text = "2000";
-            await Task.Delay(100); TitleScreen.frm98.distort.classicLabel1.Text = "2000"; TitleScreen.frm98.distort.classicLabel2.Show();
-            await Task.Delay(100); TitleScreen.frm98.distort.classicLabel1.Text = "2000"; TitleScreen.frm98.distort.classicLabel2.Hide();
-            await Task.Delay(100); TitleScreen.frm98.distort.classicLabel1.Text = "1900"; // 1
+            await Task.Delay(100); td.classicLabel1.Text = "2000";
+            await Task.Delay(100); td.classicLabel1.Text = "2000"; td.classicLabel2.Show();
+            await Task.Delay(100); td.classicLabel1.Text = "2000"; td.classicLabel2.Hide();
+            await Task.Delay(100); td.classicLabel1.Text = "1900"; // 1
 
-            await Task.Delay(100); TitleScreen.frm98.distort.classicLabel1.Hide();
-            await Task.Delay(100); TitleScreen.frm98.distort.classicLabel1.Show();
-            await Task.Delay(100); TitleScreen.frm98.distort.classicLabel1.Text = "2000";
-            await Task.Delay(100); TitleScreen.frm98.distort.classicLabel1.Text = "1900"; // 1.4
+            await Task.Delay(100); td.classicLabel1.Hide();
+            await Task.Delay(100); td.classicLabel1.Show();
+            await Task.Delay(100); td.classicLabel1.Text = "2000";
+            await Task.Delay(100); td.classicLabel1.Text = "1900"; // 1.4
 
             for (int year = 1901; year < 2000; year++)
             {
                 await Task.Delay(80);
-                TitleScreen.frm98.distort.classicLabel1.Text = year.ToString();
+                td.classicLabel1.Text = year.ToString();
             } // 9.32
-            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Hide(); // 9.4
-            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Show(); 
-            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Hide(); 
-            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Show();
-            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Text = "2000";
-            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Hide(); // 9.8
-            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Show();
-            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Hide(); 
-            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Show(); 
-            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Text = "2001"; 
-            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Hide(); // 10.2
-            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Show();
-            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Hide();
-            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Show();
-            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Text = "2002";
-            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Hide(); // 10.6
-            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Show();
-            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Hide();
-            await Task.Delay(80); TitleScreen.frm98.distort.classicLabel1.Show(); // 10.84
+            await Task.Delay(80); td.classicLabel1.Hide(); // 9.4
+            await Task.Delay(80); td.classicLabel1.Show(); 
+            await Task.Delay(80); td.classicLabel1.Hide(); 
+            await Task.Delay(80); td.classicLabel1.Show();
+            await Task.Delay(80); td.classicLabel1.Text = "2000";
+            await Task.Delay(80); td.classicLabel1.Hide(); // 9.8
+            await Task.Delay(80); td.classicLabel1.Show();
+            await Task.Delay(80); td.classicLabel1.Hide(); 
+            await Task.Delay(80); td.classicLabel1.Show(); 
+            await Task.Delay(80); td.classicLabel1.Text = "2001"; 
+            await Task.Delay(80); td.classicLabel1.Hide(); // 10.2
+            await Task.Delay(80); td.classicLabel1.Show();
+            await Task.Delay(80); td.classicLabel1.Hide();
+            await Task.Delay(80); td.classicLabel1.Show();
+            await Task.Delay(80); td.classicLabel1.Text = "2002";
+            await Task.Delay(80); td.classicLabel1.Hide(); // 10.6
+            await Task.Delay(80); td.classicLabel1.Show();
+            await Task.Delay(80); td.classicLabel1.Hide();
+            await Task.Delay(80); td.classicLabel1.Show(); // 10.84
             await Task.Delay(3000);
 
             SaveSystem.CurrentSave.CurrentOS = "xpbad";
             SaveSystem.currentTheme = new BadXPTheme();
             SaveSystem.CurrentSave.ThemeName = "badxp";
-            TitleScreen.frm98.distort.ParentForm.Close();
-            foreach (Form frm in Application.OpenForms) if (frm is WinClassic) frm.Close();
+            td.ParentForm.Close();
+            Application.OpenForms.Cast<Form>().Where(x => !(x is WinClassic)).ToList().ForEach(x => x.Close());
             Program.title.StartGame();
             TitleScreen.frm98.Close();
             return;

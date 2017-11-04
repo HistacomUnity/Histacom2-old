@@ -38,6 +38,7 @@ namespace Histacom2.OS.WinXPBad
             this.clockPanel = new System.Windows.Forms.Panel();
             this.taskbartime = new Histacom2.Engine.UI.ClassicLabel();
             this.taskbarItems = new System.Windows.Forms.Panel();
+            this.classicLabel2 = new Histacom2.Engine.UI.ClassicLabel();
             this.startbutton = new System.Windows.Forms.PictureBox();
             this.startmenu = new System.Windows.Forms.Panel();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
@@ -72,6 +73,8 @@ namespace Histacom2.OS.WinXPBad
             this.classicStartMenuItem11 = new Histacom2.Engine.UI.ClassicStartMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.classicStartMenuItem12 = new Histacom2.Engine.UI.ClassicStartMenuItem();
+            this.classicStartMenuItem13 = new Histacom2.Engine.UI.ClassicStartMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.clockTimer = new System.Windows.Forms.Timer(this.components);
             this.desktopImages = new System.Windows.Forms.ImageList(this.components);
             this.desktopicons = new System.Windows.Forms.ListView();
@@ -82,11 +85,10 @@ namespace Histacom2.OS.WinXPBad
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PropertiesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.desktopupdate = new System.Windows.Forms.Timer(this.components);
-            this.classicStartMenuItem13 = new Histacom2.Engine.UI.ClassicStartMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.taskbar.SuspendLayout();
             this.clockPanel.SuspendLayout();
+            this.taskbarItems.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.startbutton)).BeginInit();
             this.startmenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
@@ -168,11 +170,24 @@ namespace Histacom2.OS.WinXPBad
             // taskbarItems
             // 
             this.taskbarItems.BackColor = System.Drawing.Color.Transparent;
+            this.taskbarItems.Controls.Add(this.classicLabel2);
             this.taskbarItems.Cursor = System.Windows.Forms.Cursors.Default;
             this.taskbarItems.Location = new System.Drawing.Point(105, 4);
             this.taskbarItems.Name = "taskbarItems";
             this.taskbarItems.Size = new System.Drawing.Size(3606, 22);
             this.taskbarItems.TabIndex = 5;
+            // 
+            // classicLabel2
+            // 
+            this.classicLabel2.DropShadow = false;
+            this.classicLabel2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classicLabel2.ForeColor = System.Drawing.Color.White;
+            this.classicLabel2.Location = new System.Drawing.Point(0, 5);
+            this.classicLabel2.Name = "classicLabel2";
+            this.classicLabel2.Size = new System.Drawing.Size(315, 14);
+            this.classicLabel2.TabIndex = 6;
+            this.classicLabel2.Text = "Welcome to a world without computers!!!";
+            this.classicLabel2.Visible = false;
             // 
             // startbutton
             // 
@@ -406,6 +421,7 @@ namespace Histacom2.OS.WinXPBad
             this.classicStartMenuItem1.Size = new System.Drawing.Size(181, 40);
             this.classicStartMenuItem1.SubTitle = "Internet Explorer";
             this.classicStartMenuItem1.Text = "Internet";
+            this.classicStartMenuItem1.Click += new System.EventHandler(this.classicStartMenuItem1_Click);
             // 
             // classicStartMenuItem2
             // 
@@ -602,6 +618,29 @@ namespace Histacom2.OS.WinXPBad
             this.classicStartMenuItem12.SubTitle = "Subtitle";
             this.classicStartMenuItem12.Text = "&Control Panel";
             // 
+            // classicStartMenuItem13
+            // 
+            this.classicStartMenuItem13.AutoSize = false;
+            this.classicStartMenuItem13.BackColor = System.Drawing.Color.White;
+            this.classicStartMenuItem13.BackgroundImage = global::Histacom2.Properties.Resources.WinXPStartMenuPlaces;
+            this.classicStartMenuItem13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.classicStartMenuItem13.DoBackColorAdapt = false;
+            this.classicStartMenuItem13.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classicStartMenuItem13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(36)))), ((int)(((byte)(106)))));
+            this.classicStartMenuItem13.Image = global::Histacom2.Properties.Resources.WinXPPrintersSmall;
+            this.classicStartMenuItem13.LayoutStyle = Histacom2.Engine.UI.ClassicStartMenuItemLayout.CloseTitle;
+            this.classicStartMenuItem13.Name = "classicStartMenuItem13";
+            this.classicStartMenuItem13.Size = new System.Drawing.Size(180, 30);
+            this.classicStartMenuItem13.SubTitle = "Subtitle";
+            this.classicStartMenuItem13.Text = "Printers and Faxes";
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.AutoSize = false;
+            this.toolStripMenuItem3.BackgroundImage = global::Histacom2.Properties.Resources.WinXPStartMenuPlacesSeparator1;
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(179, 8);
+            // 
             // clockTimer
             // 
             this.clockTimer.Tick += new System.EventHandler(this.clockTimer_Tick);
@@ -622,6 +661,7 @@ namespace Histacom2.OS.WinXPBad
             this.desktopImages.Images.SetKeyName(9, "WinClassicSetup.png");
             this.desktopImages.Images.SetKeyName(10, "WinClassicSetup.png");
             this.desktopImages.Images.SetKeyName(11, "WinClassicSetup.png");
+            this.desktopImages.Images.SetKeyName(12, "TimeDistorter3.png");
             // 
             // desktopicons
             // 
@@ -697,29 +737,6 @@ namespace Histacom2.OS.WinXPBad
             this.desktopupdate.Interval = 5000;
             this.desktopupdate.Tick += new System.EventHandler(this.desktopupdate_Tick);
             // 
-            // classicStartMenuItem13
-            // 
-            this.classicStartMenuItem13.AutoSize = false;
-            this.classicStartMenuItem13.BackColor = System.Drawing.Color.White;
-            this.classicStartMenuItem13.BackgroundImage = global::Histacom2.Properties.Resources.WinXPStartMenuPlaces;
-            this.classicStartMenuItem13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.classicStartMenuItem13.DoBackColorAdapt = false;
-            this.classicStartMenuItem13.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.classicStartMenuItem13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(36)))), ((int)(((byte)(106)))));
-            this.classicStartMenuItem13.Image = global::Histacom2.Properties.Resources.WinXPPrintersSmall;
-            this.classicStartMenuItem13.LayoutStyle = Histacom2.Engine.UI.ClassicStartMenuItemLayout.CloseTitle;
-            this.classicStartMenuItem13.Name = "classicStartMenuItem13";
-            this.classicStartMenuItem13.Size = new System.Drawing.Size(180, 30);
-            this.classicStartMenuItem13.SubTitle = "Subtitle";
-            this.classicStartMenuItem13.Text = "Printers and Faxes";
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.AutoSize = false;
-            this.toolStripMenuItem3.BackgroundImage = global::Histacom2.Properties.Resources.WinXPStartMenuPlacesSeparator1;
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(179, 8);
-            // 
             // WindowsXPBad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -740,6 +757,7 @@ namespace Histacom2.OS.WinXPBad
             this.panel1.ResumeLayout(false);
             this.taskbar.ResumeLayout(false);
             this.clockPanel.ResumeLayout(false);
+            this.taskbarItems.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.startbutton)).EndInit();
             this.startmenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
@@ -775,7 +793,6 @@ namespace Histacom2.OS.WinXPBad
         internal System.Windows.Forms.PictureBox startbutton;
         internal Histacom2.Engine.UI.ClassicLabel taskbartime;
         internal System.Windows.Forms.Panel startmenu;
-        private System.Windows.Forms.Panel clockPanel;
         private System.Windows.Forms.Timer clockTimer;
         private System.Windows.Forms.ImageList desktopImages;
         internal System.Windows.Forms.ListView desktopicons;
@@ -822,5 +839,7 @@ namespace Histacom2.OS.WinXPBad
         private Engine.UI.ClassicStartMenuItem classicStartMenuItem12;
         private Engine.UI.ClassicStartMenuItem classicStartMenuItem13;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        public Engine.UI.ClassicLabel classicLabel2;
+        public System.Windows.Forms.Panel clockPanel;
     }
 }
