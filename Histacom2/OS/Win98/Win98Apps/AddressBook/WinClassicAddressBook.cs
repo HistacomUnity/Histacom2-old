@@ -388,8 +388,11 @@ namespace Histacom2.OS.Win95.Win95Apps
         public void UpdateTreeView(AddressBookContactList lst, int count = 0)
         {
             try
-            {                               
-                string[] parts = lst.NodePath.Split('\\');
+            {
+                string[] parts = new string[] { "Shared Contacts" };
+                if (lst.NodePath != null)
+                    parts = lst.NodePath.Split('\\');
+
                 if (count == 0) UpdatePrevParent = treeView1.Nodes[0];
                 if (lst.NodePath != FindNodePath(treeView1.Nodes[0]))
                 {

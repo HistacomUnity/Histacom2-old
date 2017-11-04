@@ -14,7 +14,6 @@ namespace Histacom2.Engine.UI
     public partial class ClassicDropDown : UserControl
     {
         public DropDownOverlay thisOverlay = new DropDownOverlay();
-        public bool UseSystemPasswordChar { get; set; }
         public bool dropDownShown;
 
         public override string Text
@@ -26,6 +25,18 @@ namespace Histacom2.Engine.UI
             set
             {
                 textBox1.Text = value;
+            }
+        }
+
+        public bool UseSystemPasswordChar
+        {
+            get
+            {
+                return textBox1.UseSystemPasswordChar;
+            }
+            set
+            {
+                textBox1.UseSystemPasswordChar = value;
             }
         }
 

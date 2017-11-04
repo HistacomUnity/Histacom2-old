@@ -12,8 +12,6 @@ namespace Histacom2.Engine.UI
 {
     public partial class ClassicTextBox : UserControl
     {
-        public bool UseSystemPasswordChar { get; set; }
-
         public static Color textboxcolor = Color.Black;
 
         public static Color _lightBack = Color.Silver;
@@ -28,6 +26,18 @@ namespace Histacom2.Engine.UI
             set
             {
                 textBox1.Text = value;
+            }
+        }
+
+        public bool UseSystemPasswordChar
+        {
+            get
+            {
+                return textBox1.UseSystemPasswordChar;
+            }
+            set
+            {
+                textBox1.UseSystemPasswordChar = value;
             }
         }
 

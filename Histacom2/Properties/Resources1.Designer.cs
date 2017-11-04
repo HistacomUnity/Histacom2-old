@@ -19,7 +19,7 @@ namespace Histacom2.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resources {
@@ -976,7 +976,9 @@ namespace Histacom2.Properties {
         ///    &quot;btn4txt&quot;: &quot;&quot;,
         ///    &quot;btn4tag&quot;: &quot;&quot;,
         ///    &quot;btn5txt&quot;: &quot;&quot;,
-        ///    &quot;btn5tag&quot;: &quot; [rest of string was truncated]&quot;;.
+        ///    &quot;btn5tag&quot;: &quot;&quot;
+        ///  },
+        ///  &quot;inthe [rest of string was truncated]&quot;;.
         /// </summary>
         public static string std_story {
             get {
@@ -1616,6 +1618,16 @@ namespace Histacom2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap WinClassicAddressBookBig {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicAddressBookBig", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap WinClassicAddressBookDeleteIcon {
             get {
                 object obj = ResourceManager.GetObject("WinClassicAddressBookDeleteIcon", resourceCulture);
@@ -1699,6 +1711,16 @@ namespace Histacom2.Properties {
         public static System.Drawing.Bitmap WinClassicDocuments {
             get {
                 object obj = ResourceManager.GetObject("WinClassicDocuments", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WinClassicDrive {
+            get {
+                object obj = ResourceManager.GetObject("WinClassicDrive", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

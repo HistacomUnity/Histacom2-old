@@ -17,6 +17,10 @@ namespace Histacom2.OS.Win95.Win95Apps
         public WinClassicFTPClient()
         {
             InitializeComponent();
+
+            hostnameBox.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
+            usernameBox.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
+            passBox.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
         }
 
 
@@ -64,7 +68,7 @@ namespace Histacom2.OS.Win95.Win95Apps
 
         private void WinClassicFTPClient_Load(object sender, EventArgs e)
         {
-            
+            textBox4.Text = "21";
         }
 
         private void topBar_Paint(object sender, PaintEventArgs e)

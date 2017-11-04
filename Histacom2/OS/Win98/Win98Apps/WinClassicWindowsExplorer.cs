@@ -38,11 +38,6 @@ namespace Histacom2.OS.Win95.Win95Apps
 
         void WinClassicWindowsExplorer_Load(object sender, EventArgs e)
         {
-            if (SaveSystem.CurrentSave.CurrentOS == "2000")
-            {
-                pnlInfo.Width = 200;
-                txtInfoTitle.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
-            }
 
             diskView.ImageList = new ImageList();
 
@@ -82,7 +77,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                                                     Properties.Resources.WinClassicGTN,
                                                     Properties.Resources.WinClassicFTP,
                                                     Properties.Resources.WinClassicRtfFile, // 20
-                                                    Properties.Resources.WinClassicAddressBook}); 
+                                                    Properties.Resources.WinClassicAddressBookBig}); 
 
             program.BringToFront();
 
@@ -122,6 +117,9 @@ namespace Histacom2.OS.Win95.Win95Apps
                 cmbType.Items.Add(str);
 
             cmbType.Text = onlyViewExtension.FirstOrDefault();
+
+            txtSave.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            cmbType.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
         }
 
         //'Private Sub TreeView1_AfterSelect(ByVal sender As System.Object, ByVal e As System.Windows.Forms.TreeViewEventArgs)
@@ -168,10 +166,10 @@ namespace Histacom2.OS.Win95.Win95Apps
                 pictureBox1.Image = Properties.Resources.Win95ComputerIcon;
             } else if (CurrentDirectory == ProfileMyComputerDirectory) {
                 txtInfoTitle.Text = "C:";
-                pictureBox1.Image = Properties.Resources.WinClassicFolderSmall; // TODO: ADD DRIVE ICON
+                pictureBox1.Image = Properties.Resources.WinClassicDrive;
             } else {
                 txtInfoTitle.Text = Path.GetFileName(CurrentDirectory);
-                pictureBox1.Image = Properties.Resources.WinClassicFolderSmall;
+                pictureBox1.Image = Properties.Resources.WinClassicFolder;
             }
              
 
@@ -282,6 +280,19 @@ namespace Histacom2.OS.Win95.Win95Apps
                         break;
                     case 12:
                         OpenApplication(FileDialogBoxManager.ReadTextFile(fileDir), fileDir);
+                        break;
+                    case 13:
+                        WinClassicAddressBook wcab = new WinClassicAddressBook();
+                        wcab.AddressBookObjects = JsonConvert.DeserializeObject<List<AddressBookContactList>>(File.ReadAllText(fileDir));
+
+                        wcab.treeView1.Nodes.Clear();
+                        wcab.treeView1.Nodes.Add("Shared Contacts");
+                        foreach (AddressBookContactList lst in wcab.AddressBookObjects)
+                            wcab.UpdateTreeView(lst);
+
+                        WinClassic app3 = wm.Init(wcab, "Address Book", Properties.Resources.WinClassicAddressBook, true, true);
+
+                        Program.AddTaskbarItem(app3, app3.Tag.ToString(), "Address Book", Properties.Resources.WinClassicAddressBook);
                         break;
                 }
             }
@@ -407,9 +418,10 @@ namespace Histacom2.OS.Win95.Win95Apps
                 case ".bmp":
                 case ".zip":
                     return 11;
-
                 case ".exe":
                     return 12;
+                case ".wab":
+                    return 13;
                 case ".avi":
                 case ".m4v":
                 case ".mp4":
@@ -820,6 +832,8 @@ namespace Histacom2.OS.Win95.Win95Apps
                     return "Image File";
                 case 12:
                     return "Executable File";
+                case 13:
+                    return "Address Book File";
                 case 21:
                     return "Video File";
                 case 16:

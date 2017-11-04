@@ -42,7 +42,7 @@
             // bborder
             // 
             this.bborder.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bborder.Location = new System.Drawing.Point(2, 15);
+            this.bborder.Location = new System.Drawing.Point(2, 18);
             this.bborder.Name = "bborder";
             this.bborder.Size = new System.Drawing.Size(96, 2);
             this.bborder.TabIndex = 0;
@@ -53,7 +53,7 @@
             this.lborder.Dock = System.Windows.Forms.DockStyle.Left;
             this.lborder.Location = new System.Drawing.Point(0, 0);
             this.lborder.Name = "lborder";
-            this.lborder.Size = new System.Drawing.Size(2, 17);
+            this.lborder.Size = new System.Drawing.Size(2, 20);
             this.lborder.TabIndex = 1;
             this.lborder.TabStop = false;
             // 
@@ -62,7 +62,7 @@
             this.rborder.Dock = System.Windows.Forms.DockStyle.Right;
             this.rborder.Location = new System.Drawing.Point(98, 0);
             this.rborder.Name = "rborder";
-            this.rborder.Size = new System.Drawing.Size(2, 17);
+            this.rborder.Size = new System.Drawing.Size(2, 20);
             this.rborder.TabIndex = 2;
             this.rborder.TabStop = false;
             // 
@@ -94,7 +94,7 @@
             this.Controls.Add(this.rborder);
             this.Controls.Add(this.lborder);
             this.Name = "ClassicTextBox";
-            this.Size = new System.Drawing.Size(100, 17);
+            this.Size = new System.Drawing.Size(100, 20);
             ((System.ComponentModel.ISupportInitialize)(this.bborder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lborder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rborder)).EndInit();

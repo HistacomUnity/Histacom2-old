@@ -88,7 +88,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                                                     Properties.Resources.WinClassicGTN,
                                                     Properties.Resources.WinClassicFTP,
                                                     Properties.Resources.WinClassicRtfFile, // 20
-                                                    Properties.Resources.WinClassicAddressBook});
+                                                    Properties.Resources.WinClassicAddressBookBig});
 
             program.BringToFront();
 
