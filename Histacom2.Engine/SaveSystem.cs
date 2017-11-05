@@ -2,7 +2,7 @@
 // to put some effort into cheating ;)
 // During development, leave it undefined to use the
 // easily modifiable JSON serialised format
-#define BINARY_SAVE
+//#define BINARY_SAVE
 
 using System;
 using System.Collections.Generic;
