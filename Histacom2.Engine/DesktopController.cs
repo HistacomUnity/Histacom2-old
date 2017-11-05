@@ -17,9 +17,9 @@ namespace Histacom2.Engine
             string directoryFileInfo = File.ReadAllText(Path.Combine(reqDirectory, "_data.info"));
             FileSystemFolderInfo toRead = JsonConvert.DeserializeObject<FileSystemFolderInfo>(directoryFileInfo);
 
-            if (returnYesIfProtected == true)
+            if (returnYesIfProtected)
             {
-                if (toRead.IsProtected == true)
+                if (toRead.IsProtected)
                 {
                     return "yes";
                 }

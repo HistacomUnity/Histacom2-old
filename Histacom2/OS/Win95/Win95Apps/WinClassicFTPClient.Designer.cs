@@ -38,21 +38,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WinClassicFTPClient));
             this.topBar = new System.Windows.Forms.Panel();
             this.btnLogin = new Histacom2.Engine.UI.ClassicButton();
-            this.infoLabel = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.passBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.usernameBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.hostnameBox = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCancel = new Histacom2.Engine.UI.ClassicButton();
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.ftpFiles = new System.Windows.Forms.ListView();
             this.fileIcons = new System.Windows.Forms.ImageList(this.components);
+            this.hostnameBox = new Histacom2.Engine.UI.ClassicTextBox();
+            this.usernameBox = new Histacom2.Engine.UI.ClassicTextBox();
+            this.passBox = new Histacom2.Engine.UI.ClassicTextBox();
+            this.infoLabel = new Histacom2.Engine.UI.ClassicLabel();
+            this.textBox4 = new Histacom2.Engine.UI.ClassicTextBox();
+            this.classicLabel1 = new Histacom2.Engine.UI.ClassicLabel();
+            this.classicLabel2 = new Histacom2.Engine.UI.ClassicLabel();
+            this.classicLabel3 = new Histacom2.Engine.UI.ClassicLabel();
+            this.classicLabel4 = new Histacom2.Engine.UI.ClassicLabel();
             this.topBar.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -60,16 +60,16 @@
             // topBar
             // 
             this.topBar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.topBar.Controls.Add(this.btnLogin);
             this.topBar.Controls.Add(this.infoLabel);
-            this.topBar.Controls.Add(this.label4);
             this.topBar.Controls.Add(this.textBox4);
-            this.topBar.Controls.Add(this.label3);
             this.topBar.Controls.Add(this.passBox);
-            this.topBar.Controls.Add(this.label2);
             this.topBar.Controls.Add(this.usernameBox);
-            this.topBar.Controls.Add(this.label1);
             this.topBar.Controls.Add(this.hostnameBox);
+            this.topBar.Controls.Add(this.btnLogin);
+            this.topBar.Controls.Add(this.classicLabel4);
+            this.topBar.Controls.Add(this.classicLabel3);
+            this.topBar.Controls.Add(this.classicLabel2);
+            this.topBar.Controls.Add(this.classicLabel1);
             this.topBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.topBar.Location = new System.Drawing.Point(0, 0);
             this.topBar.Name = "topBar";
@@ -85,90 +85,12 @@
             this.btnLogin.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnLogin.ForeColor = System.Drawing.Color.Black;
-            this.btnLogin.Location = new System.Drawing.Point(585, 4);
+            this.btnLogin.Location = new System.Drawing.Point(571, 4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(44, 20);
             this.btnLogin.TabIndex = 9;
             this.btnLogin.Text = "Login";
             this.btnLogin.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // infoLabel
-            // 
-            this.infoLabel.AutoSize = true;
-            this.infoLabel.ForeColor = System.Drawing.Color.Red;
-            this.infoLabel.Location = new System.Drawing.Point(635, 7);
-            this.infoLabel.Name = "infoLabel";
-            this.infoLabel.Size = new System.Drawing.Size(35, 13);
-            this.infoLabel.TabIndex = 8;
-            this.infoLabel.Text = "label5";
-            this.infoLabel.Visible = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(503, 7);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "&Port:";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(538, 4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(41, 20);
-            this.textBox4.TabIndex = 7;
-            this.textBox4.Text = "21";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(335, 7);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Pass&word:";
-            // 
-            // passBox
-            // 
-            this.passBox.Location = new System.Drawing.Point(397, 4);
-            this.passBox.Name = "passBox";
-            this.passBox.PasswordChar = '*';
-            this.passBox.Size = new System.Drawing.Size(100, 20);
-            this.passBox.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(156, 7);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "&Username:";
-            // 
-            // usernameBox
-            // 
-            this.usernameBox.Location = new System.Drawing.Point(214, 4);
-            this.usernameBox.Name = "usernameBox";
-            this.usernameBox.Size = new System.Drawing.Size(100, 20);
-            this.usernameBox.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "&Host:";
-            // 
-            // hostnameBox
-            // 
-            this.hostnameBox.Location = new System.Drawing.Point(41, 4);
-            this.hostnameBox.Name = "hostnameBox";
-            this.hostnameBox.Size = new System.Drawing.Size(100, 20);
-            this.hostnameBox.TabIndex = 1;
             // 
             // contextMenuStrip1
             // 
@@ -246,6 +168,96 @@
             this.fileIcons.Images.SetKeyName(1, "WinClassicNotepad.png");
             this.fileIcons.Images.SetKeyName(2, "WinClassicSetup.png");
             // 
+            // hostnameBox
+            // 
+            this.hostnameBox.BackColor = System.Drawing.Color.White;
+            this.hostnameBox.Location = new System.Drawing.Point(37, 4);
+            this.hostnameBox.Name = "hostnameBox";
+            this.hostnameBox.Size = new System.Drawing.Size(113, 20);
+            this.hostnameBox.TabIndex = 10;
+            this.hostnameBox.UseSystemPasswordChar = false;
+            // 
+            // usernameBox
+            // 
+            this.usernameBox.BackColor = System.Drawing.Color.White;
+            this.usernameBox.Location = new System.Drawing.Point(220, 4);
+            this.usernameBox.Name = "usernameBox";
+            this.usernameBox.Size = new System.Drawing.Size(109, 20);
+            this.usernameBox.TabIndex = 10;
+            this.usernameBox.UseSystemPasswordChar = false;
+            // 
+            // passBox
+            // 
+            this.passBox.BackColor = System.Drawing.Color.White;
+            this.passBox.Location = new System.Drawing.Point(392, 4);
+            this.passBox.Name = "passBox";
+            this.passBox.Size = new System.Drawing.Size(105, 20);
+            this.passBox.TabIndex = 10;
+            this.passBox.UseSystemPasswordChar = true;
+            // 
+            // infoLabel
+            // 
+            this.infoLabel.DropShadow = false;
+            this.infoLabel.ForeColor = System.Drawing.Color.Red;
+            this.infoLabel.Location = new System.Drawing.Point(621, 7);
+            this.infoLabel.Name = "infoLabel";
+            this.infoLabel.Size = new System.Drawing.Size(75, 13);
+            this.infoLabel.TabIndex = 11;
+            this.infoLabel.Text = "classicLabel1";
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.Color.White;
+            this.textBox4.Location = new System.Drawing.Point(530, 4);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(36, 20);
+            this.textBox4.TabIndex = 10;
+            this.textBox4.UseSystemPasswordChar = false;
+            // 
+            // classicLabel1
+            // 
+            this.classicLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.classicLabel1.DropShadow = false;
+            this.classicLabel1.ForeColor = System.Drawing.Color.Black;
+            this.classicLabel1.Location = new System.Drawing.Point(3, 7);
+            this.classicLabel1.Name = "classicLabel1";
+            this.classicLabel1.Size = new System.Drawing.Size(75, 13);
+            this.classicLabel1.TabIndex = 11;
+            this.classicLabel1.Text = "Host:";
+            // 
+            // classicLabel2
+            // 
+            this.classicLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.classicLabel2.DropShadow = false;
+            this.classicLabel2.ForeColor = System.Drawing.Color.Black;
+            this.classicLabel2.Location = new System.Drawing.Point(156, 7);
+            this.classicLabel2.Name = "classicLabel2";
+            this.classicLabel2.Size = new System.Drawing.Size(75, 13);
+            this.classicLabel2.TabIndex = 11;
+            this.classicLabel2.Text = "Username:";
+            // 
+            // classicLabel3
+            // 
+            this.classicLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.classicLabel3.DropShadow = false;
+            this.classicLabel3.ForeColor = System.Drawing.Color.Black;
+            this.classicLabel3.Location = new System.Drawing.Point(335, 7);
+            this.classicLabel3.Name = "classicLabel3";
+            this.classicLabel3.Size = new System.Drawing.Size(75, 13);
+            this.classicLabel3.TabIndex = 11;
+            this.classicLabel3.Text = "Password:";
+            // 
+            // classicLabel4
+            // 
+            this.classicLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.classicLabel4.DropShadow = false;
+            this.classicLabel4.ForeColor = System.Drawing.Color.Black;
+            this.classicLabel4.Location = new System.Drawing.Point(503, 7);
+            this.classicLabel4.Name = "classicLabel4";
+            this.classicLabel4.Size = new System.Drawing.Size(75, 13);
+            this.classicLabel4.TabIndex = 11;
+            this.classicLabel4.Text = "Port:";
+            // 
             // WinClassicFTPClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,7 +269,6 @@
             this.Size = new System.Drawing.Size(762, 499);
             this.Load += new System.EventHandler(this.WinClassicFTPClient_Load);
             this.topBar.ResumeLayout(false);
-            this.topBar.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -266,21 +277,21 @@
         #endregion
 
         private System.Windows.Forms.Panel topBar;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox passBox;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox usernameBox;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        public System.Windows.Forms.TextBox hostnameBox;
-        private System.Windows.Forms.Label infoLabel;
         private System.Windows.Forms.Panel panel1;
         private Engine.UI.ClassicButton btnCancel;
         private System.Windows.Forms.Label welcomeLabel;
         internal System.Windows.Forms.ListView ftpFiles;
         private System.Windows.Forms.ImageList fileIcons;
         private Engine.UI.ClassicButton btnLogin;
+        private Engine.UI.ClassicTextBox hostnameBox;
+        private Engine.UI.ClassicTextBox passBox;
+        private Engine.UI.ClassicTextBox usernameBox;
+        private Engine.UI.ClassicLabel infoLabel;
+        private Engine.UI.ClassicTextBox textBox4;
+        private Engine.UI.ClassicLabel classicLabel1;
+        private Engine.UI.ClassicLabel classicLabel3;
+        private Engine.UI.ClassicLabel classicLabel2;
+        private Engine.UI.ClassicLabel classicLabel4;
     }
 }

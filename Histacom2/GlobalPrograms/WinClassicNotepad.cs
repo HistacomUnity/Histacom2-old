@@ -100,16 +100,21 @@ namespace Histacom2.GlobalPrograms
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (CurrentFilePath == "")
+            try
             {
-                // We aren't in a file right now
+                if (CurrentFilePath == "")
+                {
+                    // We aren't in a file right now
 
-                SaveAs();
-            } else {
+                    SaveAs();
+                }
+                else
+                {
 
-                File.Delete(CurrentFilePath);
-                SaveSystem.CreateWindowsFile(new FileInfo(CurrentFilePath).Directory.FullName, CurrentFilePath.Split('\\').Last(), mainText.Text, 12, mainText.Text.Length);
-            }
+                    File.Delete(CurrentFilePath);
+                    SaveSystem.CreateWindowsFile(new FileInfo(CurrentFilePath).Directory.FullName, CurrentFilePath.Split('\\').Last(), mainText.Text, 12, mainText.Text.Length);
+                }
+            } catch { } // This try catch loop was added due the game crashing if the desktop is updating the same time the notepad is saving... which I got!
         }
 
         void SaveAs()
@@ -118,6 +123,7 @@ namespace Histacom2.GlobalPrograms
             {
                 ActivateSaveFileDialog(".txt");
                 string selectedPath = Program.OpenFileExplorerAsDialogAndReturnGivenPath();
+                DeactivateFileDialog();
 
                 if (selectedPath != "")
                 {

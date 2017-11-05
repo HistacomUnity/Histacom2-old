@@ -759,6 +759,7 @@
     <None Include="Resources\GuessTheNumber\GTN95_Lower.png" />
     <None Include="Resources\GuessTheNumber\GTN95_Error.png" />
     <None Include="Resources\distort fail.wav" />
+    <None Include="Resources\addrbook.ico_32x32[1].png" />
     <Content Include="Resources\Icon128x.ico" />
     <None Include="Resources\ICTheme_BG.jpg" />
     <None Include="Resources\IE3\IE3_SwirlyThings.png" />
@@ -878,6 +879,8 @@
     <None Include="Resources\win95plussportswallpaper.jpg" />
     <None Include="Resources\win95plusthe60wallpaper.jpg" />
     <None Include="Resources\win95plustravelwallpaper.jpg" />
+    <None Include="Resources\WinClassicDrive.png" />
+    <None Include="Resources\WinClassicAddressBookBig.png" />
     <Content Include="Resources\WinClassic\16Color.png" />
     <Content Include="Resources\WinClassic\256Color.png" />
     <None Include="Resources\WinClassic\tada.wav" />

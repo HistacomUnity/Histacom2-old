@@ -67,7 +67,7 @@ namespace Histacom2.Engine.Template
 
         private void top_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left && max == false)
+            if (e.Button == MouseButtons.Left && !max)
             {
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);

@@ -46,7 +46,7 @@ namespace Histacom2
                     if (!(txtProfName.Text.Length > 20))
                     {
                         ProfileName = txtProfName.Text;
-                        if (DevMode == true)
+                        if (DevMode)
                         {
                             if (Directory.Exists(ProfileDirectory))
                             {
@@ -84,7 +84,7 @@ namespace Histacom2
 
         private void NewGameDialog_Load(object sender, EventArgs e)
         {
-            if (DevMode == true)
+            if (DevMode)
             {
                 btnDevMode.Show();
             }

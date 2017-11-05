@@ -22,20 +22,30 @@ namespace Histacom2.OS.Win95.Win95Apps
     {
         public bool IsFileOpenDialog = false;
         public bool IsFileSaveDialog = false;
-        public string onlyViewExtension = "";
+        public List<string> onlyViewExtension = new List<string>();
 
         string ToReplaceWith = ProfileDirectory;
         public string CurrentDirectory = ProfileMyComputerDirectory;
         string OldLabelText;
         string CurrentCopyFile;
-
-        int fileType = 6;
         //string attemptedDirectory = "";
         WindowManager wm = new WindowManager();
 
         public Win95WindowsExplorer()
         {
             InitializeComponent();
+
+
+            // Fonts! yoy!
+
+            foreach (Control ctrl in this.Controls)
+            {
+                ctrl.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            }
+
+            txtSave.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            cmbType.Font = new Font(TitleScreen.pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            //Histacom2.Engine.UI.CustomTextBox ctb = new Histacom2.Engine.UI.CustomTextBox(textBox1);
         }
 
         void WinClassicWindowsExplorer_Load(object sender, EventArgs e)
@@ -77,7 +87,8 @@ namespace Histacom2.OS.Win95.Win95Apps
 													Properties.Resources.TimeDistorter1,
                                                     Properties.Resources.WinClassicGTN,
                                                     Properties.Resources.WinClassicFTP,
-                                                    Properties.Resources.WinClassicRtfFile}); //20
+                                                    Properties.Resources.WinClassicRtfFile, // 20
+                                                    Properties.Resources.WinClassicAddressBookBig});
 
             program.BringToFront();
 
@@ -97,21 +108,24 @@ namespace Histacom2.OS.Win95.Win95Apps
                 IsFileSaveDialog = true;
             }
 
-            if (IsFileOpenDialog == true)
+            if (IsFileOpenDialog)
             {
                 pnlSave.Show();
-                Button1.Text = "Open";
+                btnSave.Text = "Open";
             }
             else
             {
-                if (IsFileSaveDialog == true)
+                if (IsFileSaveDialog)
                 {
                     pnlSave.Show();
-                    Button1.Text = "Save";
+                    btnSave.Text = "Save";
                 }
             }
 
             onlyViewExtension = FileDialogBoxManager.OnlyViewExtension;
+
+            foreach (string str in onlyViewExtension)
+                cmbType.Items.Add(str);
         }
 
         string ReadDataFile(string reqDirectory, bool returnYesIfProtected = false) {
@@ -121,9 +135,9 @@ namespace Histacom2.OS.Win95.Win95Apps
             FileSystemFolderInfo toRead = new FileSystemFolderInfo();
             toRead = JsonConvert.DeserializeObject<FileSystemFolderInfo>(directoryFileInfo);
 
-            if (returnYesIfProtected == true)
+            if (returnYesIfProtected)
             {
-                if (toRead.IsProtected == true) return "yes";
+                if (toRead.IsProtected) return "yes";
             }
             else return toRead.Label;
             return Val;
@@ -150,7 +164,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                     {
                         if (!(Path.GetFileName(str) == "_data.info"))
                         { 
-                            if (new FileInfo(str).Extension == onlyViewExtension)
+                            if (onlyViewExtension.Contains(new FileInfo(str).Extension))
                             {
                                 itm = this.mainView.Items.Add(Path.GetFileName(str));
                                 itm.Tag = str;
@@ -220,8 +234,7 @@ namespace Histacom2.OS.Win95.Win95Apps
         {
             try
             {
-                ReturnType(new FileInfo(fileDir).Extension);
-                switch (fileType)
+                switch (ReturnType(new FileInfo(fileDir).Extension))
                 {
                     case 1:
                         WinClassicNotepad np = new WinClassicNotepad();
@@ -385,228 +398,89 @@ namespace Histacom2.OS.Win95.Win95Apps
             }
         }
 
-        string ReturnType(string extension) {
-            string returnVal = "File";
-            fileType = 0;
+        int ReturnType(string extension) {
             switch (extension) {
                 case ".txt":
-                    fileType = 1;
-                    returnVal = "Text Document \n createtext";
-                    break;
-                case ".dat":
-                    fileType = 1;
-                    returnVal = "Text Document \n createtext";
-                    break;
-                case ".rtf":
-                    fileType = 2;
-                    returnVal = "Rich Text Document \n createtext";
-                    break;
                 case ".cfg":
-                    fileType = 1;
-                    returnVal = "Config file \n createtext";
-                    break;
                 case ".log":
-                    fileType = 1;
-                    returnVal = "log text file \n createtext";
-                    break;
                 case ".ini":
-                    fileType = 1;
-                    returnVal = "initialization \n createtext";
-                    break;
                 case ".properties":
-                    fileType = 1;
-                    returnVal = "Config file \n createtext";
-                    break;
                 case ".json":
-                    fileType = 1;
-                    returnVal = "Config file \n createtext";
-                    break;
+                case ".dat":
+                    return 1;
+
+                case ".rtf":
+                    return 2;      
+                    
                 case ".doc":
-                    fileType = 3;
-                    returnVal = "Word Document \n word";
-                    break;
+                    return 3;
                 case ".docm":
-                    fileType = 3;
-                    returnVal = "Macro-Enabled Word Document \n word";
-                    break;
+                    return 3;
                 case ".xls":
-                    fileType = 4;
-                    returnVal = "Excel Spreadsheets \n excel";
-                    break;
+                    return 4;
                 case ".ppt":
-                    fileType = 5;
-                    returnVal = "Powerpoint Presentation \n powerpoint";
-                    break;
+                    return 5;
                 case ".pub":
-                    fileType = 7;
-                    returnVal = "Publisher Document \n powerpoint";
-                    break;
+                    return 7;
                 case ".xps":
-                    fileType = 8;
-                    returnVal = "XPS Document \n xpsview";
-                    break;
+                    return 8;
                 case ".htm":
-                    fileType = 9;
-                    returnVal = "HTML web page \n html";
-                    break;
+                    return 9;
                 case ".html":
-                    fileType = 9;
-                    returnVal = "HTML web page \n html";
-                    break;
+                    return 9;
                 case ".wps":
-                    fileType = 10;
-                    returnVal = "Works document \n works";
-                    break;
+                    return 10; 
                 case ".wmf":
-                    fileType = 11;
-                    returnVal = "Windows Metafile (A picture) \n createart";
-                    break;
                 case ".emf":
-                    fileType = 11;
-                    returnVal = "Enhanced Metafile (A picture) \n createart";
-                    break;
                 case ".png":
-                    fileType = 11;
-                    returnVal = "Picture file (Portable Network Graphics) \n createart";
-                    break;
                 case ".jpg":
-                    fileType = 11;
-                    returnVal = "Picture file \n createart";
-                    break;
                 case ".jpeg":
-                    fileType = 11;
-                    returnVal = "Picture file \n createart";
-                    break;
                 case ".gif":
-                    fileType = 12;
-                    returnVal = "Picture file \n gifman";
-                    break;
                 case ".tif":
-                    fileType = 11;
-                    returnVal = "Picture file \n createart";
-                    break;
                 case ".bmp":
-                    fileType = 11;
-                    returnVal = "Picture file \n createart";
-                    break;
                 case ".zip":
-                    fileType = 11;
-                    returnVal = "Compressed ZIP file \n winrar";
-                    break;
+                    return 11;
+
                 case ".exe":
-                    fileType = 12;
-                    returnVal = "Program \n exe";
-                    break;
-                case ".avi":
-                    fileType = 15;
-                    returnVal = "Video \n video";
-                    break;
+                    return 12;
+                case ".avi":              
                 case ".m4v":
-                    fileType = 15;
-                    returnVal = "Video (MPEG-4) \n video";
-                    break;
                 case ".mp4":
-                    fileType = 15;
-                    returnVal = "Video (MPEG-4) \n video";
-                    break;
                 case ".wmv":
-                    fileType = 15;
-                    returnVal = "Video \n video";
-                    break;
                 case ".m2v":
-                    fileType = 15;
-                    returnVal = "Video \n video";
-                    break;
                 case ".m3u":
-                    fileType = 15;
-                    returnVal = "Video \n video";
-                    break;
                 case ".mts":
-                    fileType = 15;
-                    returnVal = "Video \n video";
-                    break;
                 case ".dv":
-                    fileType = 15;
-                    returnVal = "Video (Digital Video) \n video";
-                    break;
                 case ".flv":
-                    fileType = 15;
-                    returnVal = "Video \n video";
-                    break;
                 case ".m1v":
-                    fileType = 15;
-                    returnVal = "Video \n video";
-                    break;
                 case ".m2ts":
-                    fileType = 15;
-                    returnVal = "Video \n video";
-                    break;
                 case ".mkv":
-                    fileType = 15;
-                    returnVal = "Video \n video";
-                    break;
                 case ".mov":
-                    fileType = 15;
-                    returnVal = "Video \n video";
-                    break;
                 case ".mpeg4":
-                    fileType = 15;
-                    returnVal = "Video \n video";
-                    break;
                 case ".mpeg":
-                    fileType = 15;
-                    returnVal = "Video \n video";
-                    break;
                 case ".mpg":
-                    fileType = 15;
-                    returnVal = "Video \n video";
-                    break;
                 case ".3gp":
-                    fileType = 15;
-                    returnVal = "Video \n video";
-                    break;
                 case ".m4p":
-                    fileType = 15;
-                    returnVal = "Video \n video";
-                    break;
+                    return 15;
+
                 case ".mp2":
-                    fileType = 21;
-                    returnVal = "Audio \n video";
-                    break;
                 case ".mp3":
-                    fileType = 21;
-                    returnVal = "Audio \n video";
-                    break;
                 case ".wav":
-                    fileType = 21;
-                    returnVal = "Audio \n video";
-                    break;
+                    return 21;
                 case ".nls":
-                    fileType = 16;
-                    returnVal = "Font file \n font";
-                    break;
+                    return 16;
                 case ".dll":
-                    fileType = 17;
-                    returnVal = "System File \n sys";
-                    break;
+                    return 17;
                 case ".bat":
-                    fileType = 18;
-                    returnVal = "MS-DOS Batch File \n winterm";
-                    break;
+                    return 18;
                 case ".url":
-                    fileType = 19;
-                    returnVal = "Shortcut \n short";
-                    break;
+                    return 19;
                 case ".sh":
-                    fileType = 20;
-                    returnVal = "BASH file \n winterm";
-                    break;
+                    return 20;
                 case ".win":
-                    fileType = 17;
-                    returnVal = "System file \n sys";
-                    break;
+                    return 17;
             }
-            return returnVal;
+            return 0;
         }
 
     //Private Sub windows_explorer_Closed(sender As Object, e As EventArgs) Handles Me.Closed
@@ -628,7 +502,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                 { // If it is a file
                         if (IsFileOpenDialog || IsFileSaveDialog)
                         {
-                            if (new FileInfo(Path.Combine(CurrentDirectory, txtSave.Text)).Extension == onlyViewExtension)
+                            if (onlyViewExtension.Contains(new FileInfo(Path.Combine(CurrentDirectory, txtSave.Text)).Extension))
                             {
                                 Program.WindowsExplorerReturnPath = Path.Combine(CurrentDirectory, txtSave.Text);
                             }
@@ -640,9 +514,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                             ((Form)this.TopLevelControl).Close();
                         }
                         else
-                        {
                             OpenFile(mainView.FocusedItem.Tag.ToString());
-                        }
                 }
             } catch { /* TODO: Illegal operation */ }
         }
@@ -707,36 +579,30 @@ namespace Histacom2.OS.Win95.Win95Apps
             RefreshTreeNode();
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
             try
             {
-                bool OpenFile = false;
                 if (mainView.FocusedItem != null)
                 {
                     if (mainView.FocusedItem.Tag.ToString() == "")
                     { // If it isn't a file
                         GoToDir(Path.Combine(CurrentDirectory, mainView.FocusedItem.Tag.ToString()));
                     }
-                    else OpenFile = true; // If it is a file
+                    else txtSave.Text = mainView.FocusedItem.Tag.ToString();
                 }
-                else OpenFile = true;
-                if (OpenFile == true)
+                if (txtSave.Text == "") wm.StartInfobox95("Windows Explorer", "Please enter a filename", InfoboxType.Info, InfoboxButtons.OK);
+                else
                 {
-                    if (txtSave.Text == "") wm.StartInfobox95("Windows Explorer", "Please enter a filename", InfoboxType.Info, InfoboxButtons.OK);
-                    else
-                    {
-                        if (new FileInfo(Path.Combine(CurrentDirectory, txtSave.Text)).Extension == onlyViewExtension) Program.WindowsExplorerReturnPath = Path.Combine(CurrentDirectory, txtSave.Text);
+                    if (onlyViewExtension.Contains(new FileInfo(Path.Combine(CurrentDirectory, txtSave.Text)).Extension)) Program.WindowsExplorerReturnPath = Path.Combine(CurrentDirectory, txtSave.Text);
 
-                        FileDialogBoxManager.IsInOpenDialog = false;
-                        FileDialogBoxManager.IsInSaveDialog = false;
+                    FileDialogBoxManager.IsInOpenDialog = false;
+                    FileDialogBoxManager.IsInSaveDialog = false;
 
-                        ((Form)this.TopLevelControl).Close();
-                    }
+                    ((Form)this.TopLevelControl).Close();
                 }
-            } catch {
-
             }
+            catch { }
         }
 
         private void DeleteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1035,6 +901,11 @@ namespace Histacom2.OS.Win95.Win95Apps
             }
 
             RefreshTreeNode();
+        }
+
+        private void btnCanc_Click(object sender, EventArgs e)
+        {
+            ((Form)this.TopLevelControl).Close();
         }
     }
 }

@@ -288,7 +288,6 @@
             this.Text = "WinClassic";
             this.Activated += new System.EventHandler(this.WinClassic_Activated);
             this.Deactivate += new System.EventHandler(this.WinClassic_Deactivate);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.WinClassic_Paint);
             this.program.ResumeLayout(false);
             this.programtopbar.ResumeLayout(false);
             this.programtopbar.PerformLayout();

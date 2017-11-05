@@ -54,6 +54,18 @@
     <Compile Include="Paintbrush.cs" />
     <Compile Include="SaveSystem.cs" />
     <Compile Include="TaskBarController.cs" />
+    <Compile Include="Template\DropDownItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\DropDownItem.Designer.cs">
+      <DependentUpon>DropDownItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\DropDownOverlay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\DropDownOverlay.Designer.cs">
+      <DependentUpon>DropDownOverlay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Template\ResizeOverlay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,14 +106,23 @@
     <Compile Include="UI\ClassicButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UI\ClassicDropDown.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ClassicDropDown.Designer.cs">
+      <DependentUpon>ClassicDropDown.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\ClassicLabel.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UI\ClassicStartMenuItem.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UI\ClassicTextbox.cs">
-      <SubType>Component</SubType>
+    <Compile Include="UI\ClassicTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ClassicTextBox.Designer.cs">
+      <DependentUpon>ClassicTextBox.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\IProgressBar.cs">
       <SubType>Component</SubType>
@@ -119,6 +140,12 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\DropDownItem.resx">
+      <DependentUpon>DropDownItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\DropDownOverlay.resx">
+      <DependentUpon>DropDownOverlay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template\ResizeOverlay.resx">
       <DependentUpon>ResizeOverlay.cs</DependentUpon>
@@ -138,9 +165,16 @@
     <EmbeddedResource Include="Template\WinXP.resx">
       <DependentUpon>WinXP.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\ClassicDropDown.resx">
+      <DependentUpon>ClassicDropDown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ClassicTextBox.resx">
+      <DependentUpon>ClassicTextBox.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\chord.wav" />
+    <None Include="Resources\ClassicDropDownButton.png" />
     <Content Include="Resources\Icon128x.ico" />
     <None Include="Resources\WinBadXPStart.wav" />
     <None Include="Resources\WinXPWallpaper.png" />
