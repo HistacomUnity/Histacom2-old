@@ -879,8 +879,8 @@
     <None Include="Resources\win95plussportswallpaper.jpg" />
     <None Include="Resources\win95plusthe60wallpaper.jpg" />
     <None Include="Resources\win95plustravelwallpaper.jpg" />
-    <None Include="Resources\WinClassicAddressBookBig.png" />
     <None Include="Resources\WinClassicDrive.png" />
+    <None Include="Resources\WinClassicAddressBookBig.png" />
     <Content Include="Resources\WinClassic\16Color.png" />
     <Content Include="Resources\WinClassic\256Color.png" />
     <None Include="Resources\WinClassic\tada.wav" />
