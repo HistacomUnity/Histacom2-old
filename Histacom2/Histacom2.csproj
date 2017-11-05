@@ -22,12 +22,12 @@
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <SupportUrl>http://www.ashifter.ml/histacom/forum</SupportUrl>
+    <MapFileExtensions>false</MapFileExtensions>
     <TargetCulture>en</TargetCulture>
     <ProductName>Histacom 2.0</ProductName>
-    <PublisherName>Histacom 2.0 Development Team</PublisherName>
+    <PublisherName>AJL Games</PublisherName>
     <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>2.1.0.0</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
