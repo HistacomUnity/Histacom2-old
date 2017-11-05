@@ -42,12 +42,12 @@ namespace Histacom2.SaveDialogs
 
             // Check if the main.save file exists
 
-            string savefile = Path.Combine(SaveSystem.ProfileDirectory, "main.save");
-            string oldsavefile = Path.Combine(SaveSystem.ProfileDirectory, "oldmain.save");
+            string savefile = Path.Combine(SaveSystem.ProfileDirectory, SaveSystem.ProfileFile);
+            string oldsavefile = Path.Combine(SaveSystem.ProfileDirectory, "old" + SaveSystem.ProfileFile);
 
             if (!File.Exists(savefile))
             {
-                WriteToLog("ISSUE FOUND! File main.save doesn't exist");
+                WriteToLog($"ISSUE FOUND! File {SaveSystem.ProfileFile} doesn't exist");
 
                 WriteToLog("Creating one...");
 
@@ -58,7 +58,7 @@ namespace Histacom2.SaveDialogs
                 EndScan(true);
                 return;
             } else {
-                WriteToLog("File main.save does exist - checking contents");
+                WriteToLog($"File {SaveSystem.ProfileFile} does exist - checking contents");
                 bool readable = false;
 
                 try
@@ -136,11 +136,11 @@ namespace Histacom2.SaveDialogs
                         } catch {
                             // It's unusable...
 
-                            WriteToLog("ISSUE FOUND! File main.save is unreadable");
+                            WriteToLog($"ISSUE FOUND! File {SaveSystem.ProfileFile} is unreadable");
 
                             WriteToLog("Sorry, there is no repairing it easily, your data will be lost");
 
-                            string backupfile = Path.Combine(SaveSystem.ProfileDirectory, "main.backup");
+                            string backupfile = savefile + ".bak";
 
                             if (Directory.Exists(backupfile)) Directory.Delete(backupfile);
 
