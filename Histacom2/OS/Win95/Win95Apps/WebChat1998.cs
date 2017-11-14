@@ -235,12 +235,13 @@ namespace Histacom2.OS.Win95.Win95Apps
             await Task.Delay(1500);
             history.Text = "Starting MS-DOS...";
             await Task.Delay(1000);
-            history.Text = "Starting MS-DOS...\n\nC:\\>";
+            history.Text = "Starting MS-DOS..." + Environment.NewLine + Environment.NewLine + "C:\\>";
             history.ReadOnly = false;
             await Task.Delay(5000);
             history.ReadOnly = true;
             history.Text = "GAME OVER. Your computer has been locked down to MS-DOS because you pirated software. Seriously, what were you thinking?";
             await Task.Delay(2000);
+            Cursor.Show();
             SaveSystem.SaveAchievement(0);
             new AchievementBox(0);
         }
