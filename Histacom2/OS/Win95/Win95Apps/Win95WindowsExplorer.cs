@@ -656,7 +656,7 @@ namespace Histacom2.OS.Win95.Win95Apps
         private void AboutWindows95ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WindowManager wm = new WindowManager();
-            wm.StartAboutBox95("Windows 95", "Microsoft Windows 95 Rev B", Properties.Resources.WinClassicAbout95);
+            wm.StartAboutBox95("Windows 95", "Microsoft Windows", Properties.Resources.WinClassicAbout95);
         }
 
         private void RenameToolStripMenuItem_Click(object sender, EventArgs e)

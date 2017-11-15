@@ -167,7 +167,19 @@ namespace Histacom2.Engine
             AboutBox95 uc = new AboutBox95();
             uc.pictureBox1.Image = appicon;
             uc.textBox1.Text = longname + "\r\nWindows 95\r\nCopyright © 1981-1995 Microsoft Corp.";
-            uc.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
+            uc.textBox1.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
+            uc.textBox2.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
+
+            return Init(uc, "About " + shortname, null, false, false, resize: false);
+        }
+
+        public WinClassic StartAboutBox98(string shortname, string longname, Image appicon)
+        {
+            AboutBox98 uc = new AboutBox98();
+            uc.pictureBox1.Image = appicon;
+            uc.textBox1.Text = longname + "\r\nWindows 98\r\nCopyright © 1981-1997 Microsoft Corp.";
+            uc.textBox1.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
+            uc.textBox2.Font = new Font(pfc.Families[0], 16F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
 
             return Init(uc, "About " + shortname, null, false, false, resize: false);
         }

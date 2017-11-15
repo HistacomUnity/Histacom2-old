@@ -57,6 +57,12 @@
     <Compile Include="Paintbrush.cs" />
     <Compile Include="SaveSystem.cs" />
     <Compile Include="TaskBarController.cs" />
+    <Compile Include="Template\AboutBox98.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\AboutBox98.Designer.cs">
+      <DependentUpon>AboutBox98.cs</DependentUpon>
+    </Compile>
     <Compile Include="Template\DropDownItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\AboutBox98.resx">
+      <DependentUpon>AboutBox98.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template\DropDownItem.resx">
       <DependentUpon>DropDownItem.cs</DependentUpon>

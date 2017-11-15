@@ -231,7 +231,7 @@ namespace Histacom2.OS.WinXPBad
         {
             if (Directory.Exists(Path.Combine(ProfileWindowsDirectory, "Desktop", "New Folder")))
             {
-                wm.StartAboutBox95("Windows Explorer", "A folder called New Folder already exists - please rename it.", Properties.Resources.Win95Error);
+                //wm.StartAboutBox95("Windows Explorer", "A folder called New Folder already exists - please rename it.", Properties.Resources.Win95Error);
             }
             else
             {
@@ -243,7 +243,7 @@ namespace Histacom2.OS.WinXPBad
         {
             if (File.Exists(Path.Combine(ProfileWindowsDirectory, "Desktop", "New Text Document.txt")))
             {
-                wm.StartAboutBox95("Windows Explorer", "A folder called New Text Document already exists - please rename it.", Properties.Resources.Win95Error);
+                //wm.StartAboutBox95("Windows Explorer", "A folder called New Text Document already exists - please rename it.", Properties.Resources.Win95Error);
             }
             else
             {

@@ -499,21 +499,21 @@ namespace Histacom2.OS.Win98
 
         private void desktopupdate_Tick(object sender, EventArgs e)
         {
-            DesktopController.RefreshDesktopIcons(new ListViewItem[] { new System.Windows.Forms.ListViewItem("My Computer", 0),
-            new System.Windows.Forms.ListViewItem("Network Neighborhood", 5),
-            new System.Windows.Forms.ListViewItem("Inbox", 3),
-            new System.Windows.Forms.ListViewItem("Recycle Bin", 7),
-            new System.Windows.Forms.ListViewItem("Internet Explorer", 2),
-            new System.Windows.Forms.ListViewItem("Online Services", 1),
-            new System.Windows.Forms.ListViewItem("Set Up The Microsoft Network", 4),
-            new System.Windows.Forms.ListViewItem("Outlook Express", 6) }, ref desktopicons, Path.Combine(ProfileWindowsDirectory, "Desktop"));
+            DesktopController.RefreshDesktopIcons(new ListViewItem[] { new ListViewItem("My Computer", 0),
+            new ListViewItem("Network Neighborhood", 5),
+            new ListViewItem("Inbox", 3),
+            new ListViewItem("Recycle Bin", 7),
+            new ListViewItem("Internet Explorer", 2),
+            new ListViewItem("Online Services", 1),
+            new ListViewItem("Set Up The Microsoft Network", 4),
+            new ListViewItem("Outlook Express", 6) }, ref desktopicons, Path.Combine(ProfileWindowsDirectory, "Desktop"));
         }
 
         private void FolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Directory.Exists(Path.Combine(ProfileWindowsDirectory, "Desktop", "New Folder")))
             {
-                wm.StartAboutBox95("Windows Explorer", "A folder called New Folder already exists - please rename it.", Properties.Resources.Win95Error);
+                wm.StartInfobox95("Windows Explorer", "A folder called New Folder already exists - please rename it.", InfoboxType.Error, InfoboxButtons.OK);
             }
             else
             {
@@ -525,7 +525,7 @@ namespace Histacom2.OS.Win98
         {
             if (File.Exists(Path.Combine(ProfileWindowsDirectory, "Desktop", "New Text Document.txt")))
             {
-                wm.StartAboutBox95("Windows Explorer", "A folder called New Text Document already exists - please rename it.", Properties.Resources.Win95Error);
+                wm.StartInfobox95("Windows Explorer", "A folder called New Text Document already exists - please rename it.", InfoboxType.Error, InfoboxButtons.OK);
             }
             else
             {
@@ -571,30 +571,6 @@ namespace Histacom2.OS.Win98
                     }
                 }
             }
-        }
-    }
-    public class MyRenderer : ToolStripProfessionalRenderer
-    {
-        public MyRenderer() : base(new MyColors()) { }
-    }
-
-    public class MyColors : ProfessionalColorTable
-    {
-        public override Color MenuItemSelectedGradientBegin
-        {
-            get { return Color.Navy; }
-        }
-        public override Color MenuItemSelectedGradientEnd
-        {
-            get { return Color.Navy; }
-        }
-        public override Color MenuItemPressedGradientBegin
-        {
-            get { return Color.Navy; }
-        }
-        public override Color MenuItemPressedGradientEnd
-        {
-            get { return Color.Navy; }
         }
     }
 }

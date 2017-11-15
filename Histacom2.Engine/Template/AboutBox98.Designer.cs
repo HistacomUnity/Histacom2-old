@@ -1,6 +1,6 @@
 ﻿namespace Histacom2.Engine.Template
 {
-    partial class AboutBox95
+    partial class AboutBox98
     {
         /// <summary> 
         /// Required designer variable.
@@ -57,7 +57,7 @@
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(193, 42);
             this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "@SOFTWARENAME\r\nWindows 95\r\nCopyright © 1981-1995 Microsoft Corp.";
+            this.textBox1.Text = "@SOFTWARENAME\r\nWindows 98\r\nCopyright © 1981-1997 Microsoft Corp.";
             // 
             // textBox2
             // 
@@ -84,21 +84,21 @@
             // 
             this.textBox3.BackColor = System.Drawing.Color.Silver;
             this.textBox3.DropShadow = false;
-            this.textBox3.Location = new System.Drawing.Point(76, 162);
+            this.textBox3.Location = new System.Drawing.Point(74, 162);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(270, 13);
+            this.textBox3.Size = new System.Drawing.Size(274, 13);
             this.textBox3.TabIndex = 1;
-            this.textBox3.Text = "Physical Memory Available to Windows:   64,992 KB";
+            this.textBox3.Text = "Physical Memory Available to Windows:   196,052 KB";
             // 
             // textBox4
             // 
             this.textBox4.BackColor = System.Drawing.Color.Silver;
             this.textBox4.DropShadow = false;
-            this.textBox4.Location = new System.Drawing.Point(76, 184);
+            this.textBox4.Location = new System.Drawing.Point(74, 184);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(270, 13);
+            this.textBox4.Size = new System.Drawing.Size(274, 13);
             this.textBox4.TabIndex = 0;
-            this.textBox4.Text = "System Resources:                                    97% Free";
+            this.textBox4.Text = "System Resources:                                    90% Free";
             // 
             // classicButton1
             // 
@@ -116,7 +116,7 @@
             this.classicButton1.Text = "OK";
             this.classicButton1.Click += new System.EventHandler(this.classicButton1_Click);
             // 
-            // AboutBox95
+            // AboutBox98
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -128,8 +128,8 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "AboutBox95";
-            this.Size = new System.Drawing.Size(335, 255);
+            this.Name = "AboutBox98";
+            this.Size = new System.Drawing.Size(342, 255);
             this.Tag = "gnoreFormOnTaskbar";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -141,11 +141,11 @@
         #endregion
 
         internal System.Windows.Forms.PictureBox pictureBox1;
+        internal System.Windows.Forms.TextBox textBox1;
+        internal System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private UI.ClassicLabel textBox3;
         private UI.ClassicLabel textBox4;
         private UI.ClassicButton classicButton1;
-        public System.Windows.Forms.TextBox textBox1;
-        public System.Windows.Forms.TextBox textBox2;
     }
 }
