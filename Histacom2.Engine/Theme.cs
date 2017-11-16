@@ -95,8 +95,10 @@ namespace Histacom2.Engine
             windowColor = Color.White;
 
             activeTitleBarColor = Color.Navy;
+            activeTitleBarColor2 = Color.FromArgb(16, 132, 208);
             activeTitleTextColor = Color.White;
             inactiveTitleBarColor = Color.Gray;
+            inactiveTitleBarColor2 = Color.FromArgb(181, 181, 181);
             inactiveTitleTextColor = Color.Silver;
 
             selectedBackColor = Color.Navy;

@@ -52,8 +52,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Histacom2.Properties.Resources.Win98Welcome;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Controls.Add(this.classicButton1);
+            this.DoubleBuffered = true;
             this.Name = "Win98Welcome";
             this.Size = new System.Drawing.Size(477, 322);
             this.ResumeLayout(false);
