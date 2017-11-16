@@ -38,7 +38,7 @@ namespace Histacom2.GlobalPrograms
         {
             WindowManager wm = new WindowManager();
             if (SaveSystem.CurrentSave.CurrentOS == "95") wm.StartAboutBox95("Notepad", "Microsoft Notepad", Properties.Resources.WinClassicNotepad);
-            else wm.StartAboutBox98("Notepad", "Microsoft Notepad", Properties.Resources.WinClassicNotepad);
+            else wm.StartAboutBox98("Notepad", "Microsoft (R) Notepad", Properties.Resources.WinClassicNotepad);
         }
 
         private void wordWrapToolStripMenuItem_Click(object sender, EventArgs e)

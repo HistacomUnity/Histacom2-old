@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -333,6 +334,21 @@ namespace Histacom2.Engine.Template
         private void minimizebutton_Click(object sender, EventArgs e)
         {
             Hide();
+        }
+
+        private void programtopbar_Paint(object sender, PaintEventArgs e)
+        {
+            var gfx = e.Graphics;
+            if (isActive)
+            {
+                if (SaveSystem.currentTheme.activeTitleBarColor2 == null) return;
+                gfx.FillRectangle(new LinearGradientBrush(programtopbar.ClientRectangle, SaveSystem.currentTheme.activeTitleBarColor, SaveSystem.currentTheme.activeTitleBarColor2, 0.0), programtopbar.ClientRectangle);
+            }
+            else
+            {
+                if (SaveSystem.currentTheme.inactiveTitleBarColor2 == null) return;
+                gfx.FillRectangle(new LinearGradientBrush(programtopbar.ClientRectangle, SaveSystem.currentTheme.inactiveTitleBarColor, SaveSystem.currentTheme.inactiveTitleBarColor2, 0.0), programtopbar.ClientRectangle);
+            }
         }
 
         public Size prevSize;

@@ -27,8 +27,10 @@ namespace Histacom2.Engine
         public Color windowColor { get; set; }
 
         public Color activeTitleBarColor { get; set; }
+        public Color activeTitleBarColor2 { get; set; }
         public Color activeTitleTextColor { get; set; }
         public Color inactiveTitleBarColor { get; set; }
+        public Color inactiveTitleBarColor2 { get; set; }
         public Color inactiveTitleTextColor { get; set; }
 
         public Color selectedBackColor { get; set; }
