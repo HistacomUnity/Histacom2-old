@@ -16,5 +16,15 @@ namespace Histacom2.OS.WinXPBad
         {
             InitializeComponent();
         }
+
+        private void buttonXP1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonXP2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

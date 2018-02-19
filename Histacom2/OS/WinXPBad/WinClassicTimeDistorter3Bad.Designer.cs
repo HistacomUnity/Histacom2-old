@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.classicLabel1 = new Histacom2.Engine.UI.ClassicLabel();
             this.buttonXP1 = new PinkieControls.ButtonXP();
             this.buttonXP2 = new PinkieControls.ButtonXP();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // classicLabel1
@@ -59,6 +61,7 @@
             this.buttonXP1.Size = new System.Drawing.Size(101, 25);
             this.buttonXP1.TabIndex = 3;
             this.buttonXP1.Text = "Travel to 2000";
+            this.buttonXP1.Click += new System.EventHandler(this.buttonXP1_Click);
             // 
             // buttonXP2
             // 
@@ -72,6 +75,7 @@
             this.buttonXP2.Size = new System.Drawing.Size(101, 25);
             this.buttonXP2.TabIndex = 4;
             this.buttonXP2.Text = "Travel to 2001";
+            this.buttonXP2.Click += new System.EventHandler(this.buttonXP2_Click);
             // 
             // label1
             // 
@@ -100,7 +104,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(119, 28);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 16);
+            this.label3.Size = new System.Drawing.Size(98, 16);
             this.label3.TabIndex = 7;
             this.label3.Text = "Current Year:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -131,5 +135,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Timer timer1;
     }
 }

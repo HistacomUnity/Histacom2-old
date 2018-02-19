@@ -120,6 +120,16 @@ namespace Histacom2.OS.WinXPBad.Story
             new AchievementBox(1);
         }
 
+        public static async void Travel2K()
+        {
+
+        }
+
+        public static async void TravelME()
+        {
+
+        }
+
         public static async void LabelMaker()
         {
             while (!Stop)
