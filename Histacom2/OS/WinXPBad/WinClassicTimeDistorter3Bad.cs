@@ -12,6 +12,8 @@ namespace Histacom2.OS.WinXPBad
 {
     public partial class WinClassicTimeDistorter3Bad : UserControl
     {
+        public int secsLeft = 60;
+
         public WinClassicTimeDistorter3Bad()
         {
             InitializeComponent();
@@ -19,12 +21,20 @@ namespace Histacom2.OS.WinXPBad
 
         private void buttonXP1_Click(object sender, EventArgs e)
         {
-
+            buttonXP1.Hide();
+            buttonXP2.Hide();
+            timer1.Start();
         }
 
         private void buttonXP2_Click(object sender, EventArgs e)
         {
+            buttonXP1.Hide();
+            buttonXP2.Hide();
+        }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label2.Text = secsLeft--.ToString();
         }
     }
 }

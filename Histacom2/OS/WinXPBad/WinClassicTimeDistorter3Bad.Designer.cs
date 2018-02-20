@@ -109,6 +109,10 @@
             this.label3.Text = "Current Year:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // WinClassicTimeDistorter3Bad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

@@ -120,12 +120,25 @@ namespace Histacom2.OS.WinXPBad.Story
             new AchievementBox(1);
         }
 
-        public static async void Travel2K()
+        public static async void Travel2K(WinClassicTimeDistorter3Bad td)
         {
+            await Task.Delay(3500); Console.WriteLine("TheHiddenHacker> looks like youre going back to 2000");
+            await Task.Delay(4500); Console.WriteLine("TheHiddenHacker> this means it would be like you never made it here");
+            await Task.Delay(5000); Console.WriteLine("TheHiddenHacker> for you youve gone from 98 to 99");
+            await Task.Delay(4000); Console.WriteLine("TheHiddenHacker> then the time distorter glicthed and sent you to 2002");
+            await Task.Delay(5000); Console.WriteLine("TheHiddenHacker> but since youre going to 2000, itll be like the distorter never glitched out");
+            await Task.Delay(4000); Console.WriteLine("TheHiddenHacker> so youll have to pretend you made it safely here");
+            await Task.Delay(4000); Console.WriteLine("TheHiddenHacker> oh and also, youll be the only one who knows about coming here");
+            await Task.Delay(5000); Console.WriteLine("TheHiddenHacker> i wont remember because i wont be coming with you, youll be meeting with past me");
+            await Task.Delay(6000); Console.WriteLine("TheHiddenHacker> also also im really glad you chose 2000, im not sure we could tell 12padams the story and make him believe it");
+            await Task.Delay(5000); Console.WriteLine("TheHiddenHacker> looks like its almost time");
+            await Task.Delay(4000); Console.WriteLine("TheHiddenHacker> bye, and good luck to you");
+            await Task.Delay(3000); Console.WriteLine("telnet> 104.27.135.159 Disconnected.");
 
+            await Task.Delay(td.secsLeft * 1000);
         }
 
-        public static async void TravelME()
+        public static async void TravelME(WinClassicTimeDistorter3Bad td)
         {
 
         }
