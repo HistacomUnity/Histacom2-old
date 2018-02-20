@@ -24,12 +24,15 @@ namespace Histacom2.OS.WinXPBad
             buttonXP1.Hide();
             buttonXP2.Hide();
             timer1.Start();
+            Story.Hack4.Travel2K(this);
         }
 
         private void buttonXP2_Click(object sender, EventArgs e)
         {
             buttonXP1.Hide();
             buttonXP2.Hide();
+            timer1.Start();
+            Story.Hack4.TravelME(this);
         }
 
         private void timer1_Tick(object sender, EventArgs e)

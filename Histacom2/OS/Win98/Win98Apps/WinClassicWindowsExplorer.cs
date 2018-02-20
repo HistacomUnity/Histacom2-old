@@ -765,7 +765,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                     bool recognized = false;
                     string description = "";
 
-                    if (SaveSystem.CurrentSave.CurrentOS == "2000" || SaveSystem.CurrentSave.CurrentOS == "ME")
+                    if (CurrentSave.CurrentOS == "2000" || CurrentSave.CurrentOS == "ME")
                     {
                         switch (File.ReadAllText(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text)))
                         {

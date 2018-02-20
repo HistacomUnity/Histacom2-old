@@ -40,6 +40,7 @@ namespace Histacom2.OS.WinXPBad.Story
                 await Task.Delay(3500); Console.WriteLine("TheHiddenHacker> 2000 came and went, and when you never showed up");
                 await Task.Delay(3500); Console.WriteLine("TheHiddenHacker> 12padams refused to believe that his program failed");
                 await Task.Delay(3500); Console.WriteLine("TheHiddenHacker> and so he thought that you did make it to 2000 and i was hiding you");
+                //                                         TheHiddenHacker> we called out jason for being extremely stupid, then he went ballistic,
                 await Task.Delay(3000); Console.WriteLine("TheHiddenHacker> and he lost complete trust in me");
                 await Task.Delay(3500); Console.WriteLine("TheHiddenHacker> later, in march 2001, 12padams made viruses to try to infect my pc");
                 await Task.Delay(4500); Console.WriteLine("TheHiddenHacker> not only because he lost trust in me, but i also had the latest version of the time distorter");
@@ -132,7 +133,7 @@ namespace Histacom2.OS.WinXPBad.Story
             await Task.Delay(5000); Console.WriteLine("TheHiddenHacker> i wont remember because i wont be coming with you, youll be meeting with past me");
             await Task.Delay(6000); Console.WriteLine("TheHiddenHacker> also also im really glad you chose 2000, im not sure we could tell 12padams the story and make him believe it");
             await Task.Delay(5000); Console.WriteLine("TheHiddenHacker> looks like its almost time");
-            await Task.Delay(4000); Console.WriteLine("TheHiddenHacker> bye, and good luck to you");
+            await Task.Delay(4000); Console.WriteLine("TheHiddenHacker> goodbye, and best of luck to you");
             await Task.Delay(3000); Console.WriteLine("telnet> 104.27.135.159 Disconnected.");
 
             await Task.Delay(td.secsLeft * 1000);
