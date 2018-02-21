@@ -141,6 +141,15 @@ namespace Histacom2.OS.WinXPBad.Story
 
         public static async void TravelME(WinClassicTimeDistorter3Bad td)
         {
+            await Task.Delay(4000); Console.WriteLine("TheHiddenHacker> so were going to 2001 it seems");
+            await Task.Delay(5000); Console.WriteLine("TheHiddenHacker> this means we have to convince 12padams not to release the virus");
+            await Task.Delay(4000); Console.WriteLine("TheHiddenHacker> tbh im a bit nervous about doing this");
+            await Task.Delay(5000); Console.WriteLine("TheHiddenHacker> like, how exactly can we explain whats going on, and why you never made it?");
+            await Task.Delay(3000); Console.WriteLine("TheHiddenHacker> but eh");
+            await Task.Delay(4000); Console.WriteLine("TheHiddenHacker> i guess we can figure it out when we get there");
+            await Task.Delay(5000); Console.WriteLine("TheHiddenHacker> anyways, as i said before, im coming with you to 2001");
+            await Task.Delay(5000); Console.WriteLine("TheHiddenHacker> and i activated my time distorter a little after you did");
+            await Task.Delay(5000); Console.WriteLine("TheHiddenHacker> but as soon as i get to 2001, ill setup another telnet"); //40
 
         }
 

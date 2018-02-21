@@ -17,7 +17,6 @@ namespace Histacom2.OS.Win95.Win95Apps._12padamsViruses
     public partial class StartRunner95 : UserControl
     {
         Point beginLocation;
-        int taskbarLength;
         int xLocation;
         Timer moveStart = new Timer();
         private static PrivateFontCollection pfc = new PrivateFontCollection();

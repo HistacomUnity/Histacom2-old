@@ -21,18 +21,9 @@ namespace Histacom2.OS.WinXPBad
         private SoundPlayer startsound;
         public WindowManager wm = new WindowManager();
 
-        public List<WinClassic> nonimportantapps = new List<WinClassic>();
-        public WebChat1999 webchat;
-        public WinClassic ie;
-
         public TaskBarController tb = new TaskBarController();
 
         public int currentappcount = 0;
-
-        public bool webchatInstalled = false;
-
-        public bool hiddenpadamsFound = false;
-        private WinClassicTimeDistorter2 distort;
 
         // Init the form
         public WindowsXPBad()

@@ -760,36 +760,17 @@ namespace Histacom2.OS.Win95.Win95Apps
 
                 if (File.Exists(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text)))
                 {
-                    // Check if it is a regonized file - if so then in Windows 2000/ME it gives a fancy description
+                    // lemon note: no more implementation of windows explorer, because holy hell is it hard and buggy
 
-                    bool recognized = false;
-                    string description = "";
+                    InfoDesc.Show();
 
-                    if (CurrentSave.CurrentOS == "2000" || CurrentSave.CurrentOS == "ME")
-                    {
-                        switch (File.ReadAllText(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text)))
-                        {
-                            case "explorer":
-                                recognized = true;
-                                description = "Insert a description here...";
-                                break;
-                        }
-                    }
+                    FileInfo fi = new FileInfo(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text));
+                    txtInfoDescName.Text = mainView.FocusedItem.Text;
+                    txtInfoDescType.Text = GetDescription(ReturnType(fi.Extension));
+                    txtInfoDescModified.Text = fi.CreationTime.ToString();
 
-                    if (recognized)
-                    {
-                        // TODO:
-                    } else {
-                        InfoDesc.Show();
-
-                        FileInfo fi = new FileInfo(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text));
-                        txtInfoDescName.Text = mainView.FocusedItem.Text;
-                        txtInfoDescType.Text = GetDescription(ReturnType(fi.Extension));
-                        txtInfoDescModified.Text = fi.CreationTime.ToString();
-
-                        txtInfoDescSize.Show();
-                        txtInfoDescSize.Text = $"Size: {fi.Length} bytes.";
-                    }
+                    txtInfoDescSize.Show();
+                    txtInfoDescSize.Text = $"Size: {fi.Length} bytes.";
 
                 } else if (Directory.Exists(Path.Combine(CurrentDirectory, mainView.FocusedItem.Text))) {
                     txtInfoTip.Hide();
@@ -831,7 +812,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                 case 11:
                     return "Image File";
                 case 12:
-                    return "Executable File";
+                    return "Application";
                 case 13:
                     return "Address Book File";
                 case 21:

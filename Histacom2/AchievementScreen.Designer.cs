@@ -34,6 +34,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AchievementScreen));
             System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Mines Swept Away", 1);
             System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("Time Hacked", "WinClassicEndingsLocked.png");
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("I\'ve Got Survivalism", "WinClassicEndingsLocked.png");
             this.listView1 = new System.Windows.Forms.ListView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.button1 = new System.Windows.Forms.Button();
@@ -95,9 +96,11 @@
             listViewItem3.Tag = "mines";
             listViewItem3.ToolTipText = "Complete Minesweeper\'s Hard Mode";
             listViewItem4.ToolTipText = "Complete All Endings";
+            listViewItem5.ToolTipText = "Get the only good ending in \"Survive The Day\".";
             this.listView2.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem3,
-            listViewItem4});
+            listViewItem4,
+            listViewItem5});
             this.listView2.LargeImageList = this.imageList1;
             this.listView2.Location = new System.Drawing.Point(174, 24);
             this.listView2.MultiSelect = false;
