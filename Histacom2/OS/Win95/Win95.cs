@@ -264,69 +264,60 @@ namespace Histacom2.OS.Win95
                 objListViewItem = desktopicons.GetItemAt(objDrawingPoint.X, objDrawingPoint.Y);
                 if (objListViewItem != null)
                 {
-                    if (objListViewItem.Text == "Internet Explorer")
+                    switch (objListViewItem.Text)
                     {
-                        if (ie != null) { wm.StartInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", InfoboxType.Warning, InfoboxButtons.OK); return; }
-                        ie = wm.Init(new WinClassicIE3(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
-                        AddTaskBarItem(ie, ie.Tag.ToString(), "Internet Explorer 4", Properties.Resources.Win95IconIE4);
-                        ie.BringToFront();
-                        ie.FormClosing += new FormClosingEventHandler(InternetExplorer4_Closing);
-                        startmenu.Hide();
-                    }
-                    else if (objListViewItem.Text == "My Computer") // TODO: Implement slightly limited explorer (with no treeview and a new window each time ya go into a dir)
-                    {
-                        WinClassic app = wm.Init(new Win95WindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
-                        AddTaskBarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
-                        app.BringToFront();
-                        startmenu.Hide();
-                    }
-                    else if (objListViewItem.Text == "Network Neighborhood")
-                    {
-                        // Alex's TODO here
-
-                    }
-                    else if (objListViewItem.Text == "Recycle Bin")
-                    {
-                        // Another thing you may need to digital poke Alex about doing.
-
-                    }
-                    else if (objListViewItem.Text == "Set Up The Microsoft Network") {
-                        wm.StartInfobox95("Microsoft Network", "The Microsoft Network is already set up!", InfoboxType.Info, InfoboxButtons.OK);
-                    } else if (objListViewItem.Text == "Outlook Express") {
-                        //wm.StartInfobox95("Win32 Application", "That is not a valid Win32 Application.", Properties.Resources.Win95Error);
-                    }
-                    else if (objListViewItem.Text == "Inbox")
-                    {
-                        //wm.StartInfobox95("Win32 Application", "That is not a valid Win32 Application.", Properties.Resources.Win95Error);
-                    }
-                    else if (objListViewItem.Text == "Online Services")
-                    {
-                        wm.StartInfobox95("Caught it!", "If you were to run this, the game would crash!\nLuckily, it won't crash this time!", InfoboxType.Error, InfoboxButtons.OK);
-                    }
-                   
-                    else
-                    {
-                        // It is an actual file on the disk
-
-                        Win95WindowsExplorer we = new Win95WindowsExplorer();
-
-                        // If it is a directory
-
-                        if (Directory.Exists(objListViewItem.Tag.ToString()))
-                        {
-                            we.CurrentDirectory = objListViewItem.Tag.ToString();
-
-                            WinClassic app = wm.Init(we, "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
-                            AddTaskBarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
-                            app.BringToFront();
+                        case "Internet Explorer":
+                            if (ie != null) { wm.StartInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", InfoboxType.Warning, InfoboxButtons.OK); return; }
+                            ie = wm.Init(new WinClassicIE3(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
+                            AddTaskBarItem(ie, ie.Tag.ToString(), "Internet Explorer 4", Properties.Resources.Win95IconIE4);
+                            ie.BringToFront();
+                            ie.FormClosing += new FormClosingEventHandler(InternetExplorer4_Closing);
                             startmenu.Hide();
-                        }
-                        else
-                        {
-                            // Just open the file...
+                            break;
+                        case "My Computer":
+                            WinClassic we = wm.Init(new Win95WindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
+                            AddTaskBarItem(we, we.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
+                            we.BringToFront();
+                            startmenu.Hide();
+                            break;
+                        case "Network Neighborhood":
+                            // Alex's TODO here
+                            break;
+                        case "Recycle Bin":
+                            // Another thing you may need to digital poke Alex about doing.
+                            break;
+                        case "Set Up The Microsoft Network":
+                            wm.StartInfobox95("Microsoft Network", "The Microsoft Network is already set up!", InfoboxType.Info, InfoboxButtons.OK);
+                            break;
+                        case "Outlook Express":
+                            //wm.StartInfobox95("Win32 Application", "That is not a valid Win32 Application.", Properties.Resources.Win95Error);
+                            break;
+                        case "Inbox":
+                            //wm.StartInfobox95("Win32 Application", "That is not a valid Win32 Application.", Properties.Resources.Win95Error);
+                            break;
+                        case "Online Services":
+                            wm.StartInfobox95("Caught it!", "If you were to run this, the game would crash!\nLuckily, it won't crash this time!", InfoboxType.Error, InfoboxButtons.OK);
+                            break;
+                        default:
+                            // It is an actual file on the disk
+                            Win95WindowsExplorer wwe = new Win95WindowsExplorer();
 
-                            we.OpenFile(objListViewItem.Tag.ToString());
-                        }
+                            // If it is a directory
+                            if (Directory.Exists(objListViewItem.Tag.ToString()))
+                            {
+                                wwe.CurrentDirectory = objListViewItem.Tag.ToString();
+
+                                WinClassic app = wm.Init(wwe, "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
+                                AddTaskBarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
+                                app.BringToFront();
+                                startmenu.Hide();
+                            }
+                            else
+                            {
+                                // Just open the file...
+                                wwe.OpenFile(objListViewItem.Tag.ToString());
+                            }
+                            break;
 
                     }
                 }

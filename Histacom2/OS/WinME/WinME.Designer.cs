@@ -947,12 +947,11 @@ namespace Histacom2.OS.WinME
             // 
             // osimage
             // 
-            this.osimage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.osimage.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.osimage.Image = global::Histacom2.Properties.Resources.Win95SideBar;
             this.osimage.Location = new System.Drawing.Point(0, 0);
             this.osimage.Name = "osimage";
             this.osimage.Size = new System.Drawing.Size(21, 265);
-            this.osimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.osimage.TabIndex = 0;
             this.osimage.TabStop = false;
             // 
