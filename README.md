@@ -25,9 +25,5 @@ Histacom 2 has a YouTube channel at https://www.youtube.com/channel/UCU3uiIgHdLa
 ## Documentation
 Histacom 2's documentation can be found on the Histacom 2 Wiki: https://github.com/Histacom2-Devs/Histacom2 
 
-## Other Repositories
-* An unofficial project called "Histacom.AU".
-This is a rewrite of Histacom in Python, and has a place [here](https://github.com/Histacom2-Devs/histacom-au).
-
 ## License
 Histacom 2 is licensed under the [MIT license](https://github.com/Histacom2-Devs/Histacom2/blob/master/LICENSE). All code committed to the Histacom 2 repository becomes the property of the Histacom 2 Development Team, and will **not** be removed upon request.
