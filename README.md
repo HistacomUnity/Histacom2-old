@@ -23,7 +23,7 @@ Histacom 2 has an AppVeyor project at https://ci.appveyor.com/project/timehack/t
 Histacom 2 has a YouTube channel at https://www.youtube.com/channel/UCU3uiIgHdLaNvPYEB1hWPsg (We have a tutorial on how to contribute over there)
 
 ## Documentation
-Histacom 2's documentation can be found on the Histacom 2 Wiki: https://github.com/Histacom2-Devs/Histacom2 
+Histacom 2's documentation can be found on the Histacom 2 Wiki: https://github.com/LemonyStudios/Histacom2/wiki
 
 ## License
-Histacom 2 is licensed under the [MIT license](https://github.com/Histacom2-Devs/Histacom2/blob/master/LICENSE). All code committed to the Histacom 2 repository becomes the property of the Histacom 2 Development Team, and will **not** be removed upon request.
+Histacom 2 is licensed under the [MIT license](https://github.com/LemonyStudios/Histacom2/blob/master/LICENSE). All code committed to the Histacom 2 repository becomes the property of the LemonyStudios, and will **not** be removed upon request.
