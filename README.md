@@ -3,7 +3,7 @@
 [![Discord](https://img.shields.io/discord/266018132827570176.svg?colorB=7289DA&label=discord)](https://discord.gg/ffuXR9k)
 
 # Histacom 2
-## The remake of the original hacking simulator!
+## The (DISCONTINUED) remake of the original hacking simulator!
 Histacom 2 is a C# version of the PC game Histacom, released by 12padams in 2010. Here are some of our goals:
 * Get Histacom 2 to the same playable state that the original Histacom's in and beyond.
 * Add more applications to the operating systems.
