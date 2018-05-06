@@ -3,7 +3,7 @@
 [![Discord](https://img.shields.io/discord/266018132827570176.svg?colorB=7289DA&label=discord)](https://discord.gg/ffuXR9k)
 
 # Histacom 2
-## The (DISCONTINUED) remake of the original hacking simulator!
+## The remake of the original hacking simulator!
 Histacom 2 is a C# version of the PC game Histacom, released by 12padams in 2010. Here are some of our goals:
 * Get Histacom 2 to the same playable state that the original Histacom's in and beyond.
 * Add more applications to the operating systems.
@@ -23,7 +23,7 @@ Histacom 2 has an AppVeyor project at https://ci.appveyor.com/project/timehack/t
 Histacom 2 has a YouTube channel at https://www.youtube.com/channel/UCU3uiIgHdLaNvPYEB1hWPsg (We have a tutorial on how to contribute over there)
 
 ## Documentation
-Histacom 2's documentation can be found on the Histacom 2 Wiki: https://github.com/LemonyStudios/Histacom2/wiki
+Histacom 2's documentation can be found on the Histacom 2 Wiki: https://github.com/Melonz/Histacom2/wiki
 
 ## License
-Histacom 2 is licensed under the [MIT license](https://github.com/LemonyStudios/Histacom2/blob/master/LICENSE). All code committed to the Histacom 2 repository becomes the property of the LemonyStudios, and will **not** be removed upon request.
+Histacom 2 is licensed under the [MIT license](https://github.com/Melonz/Histacom2/blob/master/LICENSE). All code committed to the Histacom 2 repository becomes the property of Melonz Software, and will **not** be removed upon request.
