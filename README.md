@@ -1,7 +1,10 @@
-<a href="https://ci.appveyor.com/project/timehack/timehack"><img src="https://ci.appveyor.com/api/projects/status/8x34p8b0i2idblgd?svg=true" style="border: 0;" alt="AppVeyor Badge"></a>
-[![Discord](https://img.shields.io/discord/562604068493852675.svg?colorB=7289DA&label=discord)](https://discord.gg/CeBBXWN)
+<span style="text-align: center;">  
+  <a href="https://ci.appveyor.com/project/timehack/timehack"><img src="https://ci.appveyor.com/api/projects/status/8x34p8b0i2idblgd?svg=true" style="border: 0;" alt="AppVeyor Badge"></a>
+  
+  [![Discord](https://img.shields.io/discord/562604068493852675.svg?colorB=7289DA&label=discord)](https://discord.gg/CeBBXWN)
 
-[![# Histacom 2](https://raw.githubusercontent.com/TheRandomMelon/Histacom2/master/Histacom2/Resources/TitleScreen/Histacom2_Logo.png)]
+  ![# Histacom 2](https://raw.githubusercontent.com/TheRandomMelon/Histacom2/master/Histacom2/Resources/TitleScreen/Histacom2_Logo.png)
+</span>
 Histacom 2 is a C# version of the PC game Histacom, released by 12padams in 2010. Here are some of our goals:
 * Get Histacom 2 to the same playable state that the original Histacom's in and beyond.
 * Add more applications to the operating systems.
