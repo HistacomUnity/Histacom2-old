@@ -6,7 +6,7 @@
     <a href="https://ci.appveyor.com/project/timehack/timehack"><img src="https://ci.appveyor.com/api/projects/status/8x34p8b0i2idblgd?svg=true" style="border: 0;" alt="AppVeyor Badge"></a>
     <a href="https://discord.gg/CeBBXWN"><img src="https://img.shields.io/discord/562604068493852675.svg?colorB=7289DA&label=discord" style="border: 0;"></a>
     <img src="https://img.shields.io/github/repo-size/TheRandomMelon/Histacom2.svg" style="border: 0;">
-    <img src="https://img.shields.io/github/issues/TheRandomMelon/Histacom2.svg" style="border: 0;">
+    <a href="https://github.com/TheRandomMelon/Histacom2/issues"><img src="https://img.shields.io/github/issues/TheRandomMelon/Histacom2.svg" style="border: 0;"></a>
   </p>
 </div>
 
