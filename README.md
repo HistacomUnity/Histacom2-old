@@ -1,10 +1,11 @@
 <div align="center">
   <p>
+      <img src="https://raw.githubusercontent.com/TheRandomMelon/Histacom2/master/Histacom2/Resources/TitleScreen/Histacom2_Logo.png" style="border: 0;">
+  </p>
+  <br/>
+  <p>
     <a href="https://ci.appveyor.com/project/timehack/timehack"><img src="https://ci.appveyor.com/api/projects/status/8x34p8b0i2idblgd?svg=true" style="border: 0;" alt="AppVeyor Badge"></a>
     <a href="https://discord.gg/CeBBXWN"><img src="https://img.shields.io/discord/562604068493852675.svg?colorB=7289DA&label=discord" style="border: 0;"></a>
-  </p>
-  <p>
-      <img src="https://raw.githubusercontent.com/TheRandomMelon/Histacom2/master/Histacom2/Resources/TitleScreen/Histacom2_Logo.png" style="border: 0;">
   </p>
 </div>
 
