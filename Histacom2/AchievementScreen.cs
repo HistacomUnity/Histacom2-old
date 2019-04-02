@@ -33,7 +33,7 @@ namespace Histacom2
                 listView1.Items[1].Text = "Destruction Ending";
             }
             if (achieved[20] == 1) listView2.Items[0].ImageIndex = 0;
-            if (achieved[21] == 1) listView2.Items[1].ImageIndex = 0;
+            // if (achieved[21] == 1) listView2.Items[1].ImageIndex = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -1,8 +1,7 @@
 <a href="https://ci.appveyor.com/project/timehack/timehack"><img src="https://ci.appveyor.com/api/projects/status/8x34p8b0i2idblgd?svg=true" style="border: 0;" alt="AppVeyor Badge"></a>
-[![Discord](https://img.shields.io/discord/266018132827570176.svg?colorB=7289DA&label=discord)](https://discord.gg/ffuXR9k)
+[![Discord](https://img.shields.io/discord/562604068493852675.svg?colorB=7289DA&label=discord)](https://discord.gg/CeBBXWN)
 
-# Histacom 2
-## The remake of the original hacking simulator!
+[![# Histacom 2](https://raw.githubusercontent.com/TheRandomMelon/Histacom2/master/Histacom2/Resources/TitleScreen/Histacom2_Logo.png)]
 Histacom 2 is a C# version of the PC game Histacom, released by 12padams in 2010. Here are some of our goals:
 * Get Histacom 2 to the same playable state that the original Histacom's in and beyond.
 * Add more applications to the operating systems.
@@ -15,14 +14,14 @@ Load the ``.sln`` project file into Visual Studio and compile. No further steps 
 
 ## Links
 
-Histacom 2 has a Discord server at https://discord.gg/FZgQMDe (You can also click on the dark blue Discord Badge)
+Discord server: https://discord.gg/CeBBXWN (You can also click on the dark blue Discord Badge)
 
-Histacom 2 has an AppVeyor project at https://ci.appveyor.com/project/timehack/timehack (You can also use the AppVeyor badge)
+AppVeyor project: https://ci.appveyor.com/project/timehack/timehack (You can also use the AppVeyor badge)
 
-Histacom 2 has a YouTube channel at https://www.youtube.com/channel/UCU3uiIgHdLaNvPYEB1hWPsg (We have a tutorial on how to contribute over there)
+YouTube Channel: https://www.youtube.com/channel/UCU3uiIgHdLaNvPYEB1hWPsg (Note that the videos are probably outdated.)
 
 ## Documentation
-Histacom 2's documentation can be found on the Histacom 2 Wiki: https://github.com/LemonyStudios/Histacom2/wiki
+Histacom 2's documentation can be found on the Histacom 2 Wiki: https://github.com/TheRandomMelon/Histacom2/wiki
 
 ## License
-Histacom 2 is licensed under the [MIT license](https://github.com/LemonyStudios/Histacom2/blob/master/LICENSE). All code committed to the Histacom 2 repository becomes the property of the LemonyStudios, and will **not** be removed upon request.
+Histacom 2 is licensed under the [MIT license](https://github.com/TheRandomMelon/Histacom2/blob/master/LICENSE). All code committed to the Histacom 2 repository becomes the property of Michael Webb, and cannot be removed under request. Please consider this before contributing.

@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TitleScreen));
             this.program = new System.Windows.Forms.Panel();
             this.programContent = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gameversion = new System.Windows.Forms.Label();
             this.startbutton = new System.Windows.Forms.PictureBox();
@@ -52,9 +51,9 @@
             this.bottomleftcorner = new System.Windows.Forms.Panel();
             this.topleftcorner = new System.Windows.Forms.Panel();
             this.updateText = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.program.SuspendLayout();
             this.programContent.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.startbutton)).BeginInit();
             this.startmenu.SuspendLayout();
@@ -81,7 +80,7 @@
             // programContent
             // 
             this.programContent.BackColor = System.Drawing.Color.Teal;
-            this.programContent.Controls.Add(this.pictureBox3);
+            this.programContent.Controls.Add(this.label1);
             this.programContent.Controls.Add(this.panel2);
             this.programContent.Controls.Add(this.startmenu);
             this.programContent.Controls.Add(this.pictureBox2);
@@ -90,15 +89,6 @@
             this.programContent.Name = "programContent";
             this.programContent.Size = new System.Drawing.Size(791, 300);
             this.programContent.TabIndex = 9;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::Histacom2.Properties.Resources.CopyrightNotice;
-            this.pictureBox3.Location = new System.Drawing.Point(162, 220);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(225, 50);
-            this.pictureBox3.TabIndex = 13;
-            this.pictureBox3.TabStop = false;
             // 
             // panel2
             // 
@@ -163,7 +153,7 @@
             this.startmenuitems.Name = "startmenuitems";
             this.startmenuitems.Padding = new System.Windows.Forms.Padding(1, 2, 0, 0);
             this.startmenuitems.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.startmenuitems.Size = new System.Drawing.Size(140, 220);
+            this.startmenuitems.Size = new System.Drawing.Size(140, 239);
             this.startmenuitems.TabIndex = 0;
             this.startmenuitems.Text = "StartMenu";
             // 
@@ -311,6 +301,18 @@
             this.updateText.Enabled = true;
             this.updateText.Tick += new System.EventHandler(this.updateText_Tick);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(161, 228);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(293, 39);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "© Philip Adams, Michael Webb and contributors, 2010-2019.\r\nAll operating systems " +
+    "shown in this game\r\nbelong to their respective owners.";
+            // 
             // TitleScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -328,7 +330,7 @@
             this.Load += new System.EventHandler(this.TitleScreen_Load);
             this.program.ResumeLayout(false);
             this.programContent.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.programContent.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.startbutton)).EndInit();
@@ -365,6 +367,6 @@
         private System.Windows.Forms.Timer updateText;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ToolStripMenuItem achievementsToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label1;
     }
 }
