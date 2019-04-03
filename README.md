@@ -3,7 +3,7 @@
       <img src="https://raw.githubusercontent.com/TheRandomMelon/Histacom2/master/Histacom2/Resources/TitleScreen/Histacom2_Logo.png" style="border: 0;">
   </p>
   <p>
-    <a href="https://ci.appveyor.com/project/TheRandomMelon/histacom2"><img src="https://ci.appveyor.com/api/projects/status/n4a3isbjjpt9bu95?svg=true" style="border: 0;" alt="AppVeyor Badge"></a>
+    <a href="https://ci.appveyor.com/project/TheRandomMelon/histacom2"><img src="https://ci.appveyor.com/api/projects/status/ior5vrubtrvp958g?svg=true" style="border: 0;" alt="AppVeyor Badge"></a>
     <a href="https://discord.gg/CeBBXWN"><img src="https://img.shields.io/discord/562604068493852675.svg?colorB=7289DA&label=discord" style="border: 0;"></a>
     <img src="https://img.shields.io/github/repo-size/TheRandomMelon/Histacom2.svg" style="border: 0;">
     <a href="https://github.com/TheRandomMelon/Histacom2/issues"><img src="https://img.shields.io/github/issues/TheRandomMelon/Histacom2.svg" style="border: 0;"></a>
