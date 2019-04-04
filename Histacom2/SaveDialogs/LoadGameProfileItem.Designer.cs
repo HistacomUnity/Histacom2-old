@@ -34,128 +34,132 @@
             this.exampleNameBtn = new System.Windows.Forms.Button();
             this.profileName = new System.Windows.Forms.Label();
             this.pnlConfirm = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnNo = new System.Windows.Forms.Button();
+            this.btnYes = new System.Windows.Forms.Button();
+            this.lblProfile = new System.Windows.Forms.Label();
+            this.txtProfileName = new System.Windows.Forms.TextBox();
             this.sidebar.SuspendLayout();
             this.pnlConfirm.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidebar
             // 
-            this.sidebar.BackColor = System.Drawing.Color.Gray;
+            this.sidebar.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.sidebar.Controls.Add(this.exampleLoadProfile);
             this.sidebar.Controls.Add(this.exampleDelete);
             this.sidebar.Controls.Add(this.exampleNameBtn);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.sidebar.Location = new System.Drawing.Point(245, 0);
+            this.sidebar.Location = new System.Drawing.Point(366, 0);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(102, 82);
+            this.sidebar.Size = new System.Drawing.Size(129, 134);
             this.sidebar.TabIndex = 2;
             this.sidebar.Visible = false;
             // 
             // exampleLoadProfile
             // 
-            this.exampleLoadProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.exampleLoadProfile.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.exampleLoadProfile.Location = new System.Drawing.Point(3, 1);
+            this.exampleLoadProfile.BackColor = System.Drawing.Color.Silver;
+            this.exampleLoadProfile.FlatAppearance.BorderSize = 0;
+            this.exampleLoadProfile.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exampleLoadProfile.Location = new System.Drawing.Point(4, 5);
             this.exampleLoadProfile.Name = "exampleLoadProfile";
-            this.exampleLoadProfile.Size = new System.Drawing.Size(94, 23);
+            this.exampleLoadProfile.Size = new System.Drawing.Size(122, 38);
             this.exampleLoadProfile.TabIndex = 0;
             this.exampleLoadProfile.Text = "Load Profile!";
-            this.exampleLoadProfile.UseVisualStyleBackColor = false;
+            this.exampleLoadProfile.UseVisualStyleBackColor = true;
             this.exampleLoadProfile.Click += new System.EventHandler(this.exampleLoadProfile_Click);
             // 
             // exampleDelete
             // 
             this.exampleDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.exampleDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.exampleDelete.Location = new System.Drawing.Point(3, 54);
+            this.exampleDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exampleDelete.Location = new System.Drawing.Point(4, 93);
             this.exampleDelete.Name = "exampleDelete";
-            this.exampleDelete.Size = new System.Drawing.Size(93, 23);
+            this.exampleDelete.Size = new System.Drawing.Size(122, 38);
             this.exampleDelete.TabIndex = 0;
             this.exampleDelete.Text = "Delete";
-            this.exampleDelete.UseVisualStyleBackColor = false;
+            this.exampleDelete.UseVisualStyleBackColor = true;
             this.exampleDelete.Click += new System.EventHandler(this.exampleDelete_Click);
             // 
             // exampleNameBtn
             // 
             this.exampleNameBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.exampleNameBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.exampleNameBtn.Location = new System.Drawing.Point(3, 27);
+            this.exampleNameBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exampleNameBtn.Location = new System.Drawing.Point(4, 49);
             this.exampleNameBtn.Name = "exampleNameBtn";
-            this.exampleNameBtn.Size = new System.Drawing.Size(93, 23);
+            this.exampleNameBtn.Size = new System.Drawing.Size(122, 38);
             this.exampleNameBtn.TabIndex = 0;
             this.exampleNameBtn.Text = "Change Name";
-            this.exampleNameBtn.UseVisualStyleBackColor = false;
+            this.exampleNameBtn.UseVisualStyleBackColor = true;
             this.exampleNameBtn.Click += new System.EventHandler(this.exampleNameBtn_Click);
             // 
             // profileName
             // 
-            this.profileName.BackColor = System.Drawing.Color.Gray;
+            this.profileName.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.profileName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profileName.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.profileName.Location = new System.Drawing.Point(0, 0);
             this.profileName.Name = "profileName";
-            this.profileName.Size = new System.Drawing.Size(245, 82);
+            this.profileName.Padding = new System.Windows.Forms.Padding(44);
+            this.profileName.Size = new System.Drawing.Size(366, 134);
             this.profileName.TabIndex = 1;
             this.profileName.Text = "Profile Name";
             // 
             // pnlConfirm
             // 
-            this.pnlConfirm.BackColor = System.Drawing.Color.Gray;
-            this.pnlConfirm.Controls.Add(this.button2);
-            this.pnlConfirm.Controls.Add(this.button1);
-            this.pnlConfirm.Controls.Add(this.label1);
-            this.pnlConfirm.Controls.Add(this.textBox1);
+            this.pnlConfirm.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.pnlConfirm.Controls.Add(this.btnNo);
+            this.pnlConfirm.Controls.Add(this.btnYes);
+            this.pnlConfirm.Controls.Add(this.lblProfile);
+            this.pnlConfirm.Controls.Add(this.txtProfileName);
             this.pnlConfirm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlConfirm.Location = new System.Drawing.Point(0, 32);
+            this.pnlConfirm.Location = new System.Drawing.Point(0, 69);
             this.pnlConfirm.Name = "pnlConfirm";
-            this.pnlConfirm.Size = new System.Drawing.Size(245, 50);
+            this.pnlConfirm.Size = new System.Drawing.Size(366, 65);
             this.pnlConfirm.TabIndex = 1;
             this.pnlConfirm.Visible = false;
             // 
-            // label1
+            // btnNo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(240, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Are you really sure you want to delete this Profile?";
+            this.btnNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNo.Location = new System.Drawing.Point(121, 29);
+            this.btnNo.Name = "btnNo";
+            this.btnNo.Size = new System.Drawing.Size(109, 29);
+            this.btnNo.TabIndex = 1;
+            this.btnNo.Text = "No";
+            this.btnNo.UseVisualStyleBackColor = true;
+            this.btnNo.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btnYes
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(10, 20);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 22);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Yes";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnYes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnYes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnYes.Location = new System.Drawing.Point(7, 29);
+            this.btnYes.Name = "btnYes";
+            this.btnYes.Size = new System.Drawing.Size(109, 29);
+            this.btnYes.TabIndex = 1;
+            this.btnYes.Text = "Yes";
+            this.btnYes.UseVisualStyleBackColor = true;
+            this.btnYes.Click += new System.EventHandler(this.button1_Click);
             // 
-            // cancelButton
+            // lblProfile
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Location = new System.Drawing.Point(136, 20);
-            this.button2.Name = "cancelButton";
-            this.button2.Size = new System.Drawing.Size(109, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "No";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.lblProfile.AutoSize = true;
+            this.lblProfile.BackColor = System.Drawing.Color.Transparent;
+            this.lblProfile.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProfile.Location = new System.Drawing.Point(3, 5);
+            this.lblProfile.Name = "lblProfile";
+            this.lblProfile.Size = new System.Drawing.Size(357, 21);
+            this.lblProfile.TabIndex = 1;
+            this.lblProfile.Text = "Are you really sure you want to delete this Profile?";
             // 
-            // textBox1
+            // txtProfileName
             // 
-            this.textBox1.Location = new System.Drawing.Point(3, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(130, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Visible = false;
+            this.txtProfileName.Location = new System.Drawing.Point(6, 33);
+            this.txtProfileName.Name = "txtProfileName";
+            this.txtProfileName.Size = new System.Drawing.Size(109, 20);
+            this.txtProfileName.TabIndex = 1;
+            this.txtProfileName.Visible = false;
             // 
             // LoadGameProfileItem
             // 
@@ -165,7 +169,7 @@
             this.Controls.Add(this.profileName);
             this.Controls.Add(this.sidebar);
             this.Name = "LoadGameProfileItem";
-            this.Size = new System.Drawing.Size(347, 82);
+            this.Size = new System.Drawing.Size(495, 134);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.LoadGameProfileItem_Paint);
             this.sidebar.ResumeLayout(false);
             this.pnlConfirm.ResumeLayout(false);
@@ -182,9 +186,9 @@
         private System.Windows.Forms.Button exampleNameBtn;
         private System.Windows.Forms.Label profileName;
         private System.Windows.Forms.Panel pnlConfirm;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblProfile;
+        private System.Windows.Forms.Button btnNo;
+        private System.Windows.Forms.Button btnYes;
+        private System.Windows.Forms.TextBox txtProfileName;
     }
 }

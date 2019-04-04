@@ -39,11 +39,12 @@ namespace Histacom2
                 sidebar.Hide();
                 if (!OnceRemoveHeight)
                 {
-                    this.Height -= 28;
+                    profileName.Padding = new Padding(44, 44, 44, 44);
                     OnceRemoveHeight = true;
-                    profileName.BackColor = Color.Gray;
-                    sidebar.BackColor = Color.Gray;
-                    pnlConfirm.BackColor = Color.Gray;
+                    profileName.BackColor = Color.FromArgb(255, 51, 153, 255);
+                    sidebar.BackColor = Color.FromArgb(255, 51, 153, 255);
+                    pnlConfirm.BackColor = Color.FromArgb(255, 51, 153, 255);
+                    pnlConfirm.Hide();
                 }
                 OnceAddHeight = false;
             } else
@@ -51,11 +52,11 @@ namespace Histacom2
                 sidebar.Show();
                 if (!OnceAddHeight)
                 {
-                    this.Height += 28;
+                    profileName.Padding = new Padding(3, 3, 3, 3);
                     OnceAddHeight = true;
-                    profileName.BackColor = Color.LightGray;
-                    sidebar.BackColor = Color.LightGray;
-                    pnlConfirm.BackColor = Color.LightGray;
+                    profileName.BackColor = Color.FromArgb(255, 89, 172, 255);
+                    sidebar.BackColor = Color.FromArgb(255, 89, 172, 255);
+                    pnlConfirm.BackColor = Color.FromArgb(255, 89, 172, 255);
                 }             
                 OnceRemoveHeight = false;
             }
@@ -97,26 +98,26 @@ namespace Histacom2
             {
                 if (!RequestingNewName)
                 {
-                    if (textBox1.Text == "")
+                    if (txtProfileName.Text == "")
                     {
                         MessageBox.Show("New profile name cannot be empty!");
                     }
                     else
                     {
-                        if (textBox1.Text.Length > 20)
+                        if (txtProfileName.Text.Length > 20)
                         {
                             MessageBox.Show("The profile name cannot be longer than 20 characters");
                         }
                         else
                         {
-                            if (Directory.Exists(Path.Combine(AllProfilesDirectory, textBox1.Text)))
+                            if (Directory.Exists(Path.Combine(AllProfilesDirectory, txtProfileName.Text)))
                             {
                                 MessageBox.Show("That profile already exists");
                             }
                             else
                             {
-                                Directory.Move(Path.Combine(AllProfilesDirectory, this.Tag.ToString()), Path.Combine(AllProfilesDirectory, textBox1.Text));
-                                this.Tag = textBox1.Text;
+                                Directory.Move(Path.Combine(AllProfilesDirectory, this.Tag.ToString()), Path.Combine(AllProfilesDirectory, txtProfileName.Text));
+                                this.Tag = txtProfileName.Text;
                                 this.Invalidate();
                             }
                         }
@@ -131,20 +132,20 @@ namespace Histacom2
 
         private void exampleDelete_Click(object sender, EventArgs e)
         {
-            label1.Text = "Are you really sure you want to delete this Profile?";
-            button1.Show();
-            textBox1.Hide();
-            button2.Text = "No";
+            lblProfile.Text = "Are you really sure you want to delete this profile?";
+            btnYes.Show();
+            txtProfileName.Hide();
+            btnNo.Text = "No";
             RequestingNewName = false;
             pnlConfirm.Show();         
         }
 
         private void exampleNameBtn_Click(object sender, EventArgs e)
         {
-            label1.Text = "Enter a new profile name: ";
-            button1.Hide();
-            textBox1.Show();
-            button2.Text = "OK";
+            lblProfile.Text = "Enter a new profile name: ";
+            btnYes.Hide();
+            txtProfileName.Show();
+            btnNo.Text = "OK";
             RequestingNewName = true;
             pnlConfirm.Show();
         }

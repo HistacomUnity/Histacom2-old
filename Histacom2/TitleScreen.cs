@@ -22,6 +22,7 @@ namespace Histacom2
         public static Windows95 frm95;
         public static Windows98 frm98;
         public static WindowsXPBad frmBadXP;
+        public static string gameVersion = "Version 2.0.3-dev";
         public static string username;
         public static string progress = "95";
         
@@ -132,7 +133,7 @@ namespace Histacom2
             Resources.google.Save(Path.Combine(DataDirectory, "google.jpg"));
 
             // Set GameVersion
-            gameversion.Text = "Version 2.0.1";
+            gameversion.Text = gameVersion;
 
             // Initialize Font
             File.WriteAllBytes(DataDirectory + "\\LeviWindows.ttf", Resources.LeviWindows);
@@ -223,7 +224,7 @@ namespace Histacom2
 
         private void gameversion_MouseLeave(object sender, EventArgs e)
         {
-            gameversion.Text = "Version 2.0.1";
+            gameversion.Text = gameVersion;
         }
 
         private void startbutton_Click(object sender, EventArgs e)
@@ -246,9 +247,9 @@ namespace Histacom2
 
         private void updateText_Tick(object sender, EventArgs e)
         {
-            if (gameversion.Text != "Version 2.0.1")
+            if (gameversion.Text != gameVersion)
             {
-                gameversion.Text = "Version 2.0.1";
+                gameversion.Text = gameVersion;
                 updateText.Stop();
             }
         }

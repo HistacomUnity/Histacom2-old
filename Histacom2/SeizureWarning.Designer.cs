@@ -41,7 +41,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(600, 331);
+            this.pictureBox1.Size = new System.Drawing.Size(600, 316);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -51,7 +51,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(261, 275);
+            this.button1.Location = new System.Drawing.Point(261, 265);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -67,7 +67,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "SeizureWarning";
-            this.Size = new System.Drawing.Size(600, 330);
+            this.Size = new System.Drawing.Size(600, 310);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

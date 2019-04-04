@@ -73,6 +73,7 @@
             this.Profiles.AutoScroll = true;
             this.Profiles.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Profiles.Location = new System.Drawing.Point(0, 0);
+            this.Profiles.Margin = new System.Windows.Forms.Padding(0);
             this.Profiles.Name = "Profiles";
             this.Profiles.Size = new System.Drawing.Size(516, 340);
             this.Profiles.TabIndex = 2;

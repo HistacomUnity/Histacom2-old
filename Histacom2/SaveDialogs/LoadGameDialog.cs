@@ -39,7 +39,7 @@ namespace Histacom2
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Here you can control all your profiles! Use can open a profile by hovering over it and clicking 'Load Profile!'");
+            MessageBox.Show("Here, you can control all of your profiles! You can load a profile by hovering over it and clicking 'Load Profile!'");
         }
 
         private void LoadGameDialog_Load(object sender, EventArgs e)
@@ -50,6 +50,7 @@ namespace Histacom2
                 newItem.Tag = Path.GetFileName(dir);
                 newItem.Dock = DockStyle.Top;
                 Profiles.Controls.Add(newItem);
+                newItem.BorderStyle = BorderStyle.Fixed3D;
                 newItem.Show();
             }
         }
