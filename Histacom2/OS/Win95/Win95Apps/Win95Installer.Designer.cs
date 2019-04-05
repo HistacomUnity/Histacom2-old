@@ -281,6 +281,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.installPic);
+            this.MaximumSize = new System.Drawing.Size(483, 340);
+            this.MinimumSize = new System.Drawing.Size(483, 340);
             this.Name = "Win95Installer";
             this.Size = new System.Drawing.Size(483, 340);
             this.Load += new System.EventHandler(this.Win95Installer_Load);

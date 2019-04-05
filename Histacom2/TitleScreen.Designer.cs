@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TitleScreen));
             this.program = new System.Windows.Forms.Panel();
             this.programContent = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gameversion = new System.Windows.Forms.Label();
             this.startbutton = new System.Windows.Forms.PictureBox();
@@ -51,7 +52,6 @@
             this.bottomleftcorner = new System.Windows.Forms.Panel();
             this.topleftcorner = new System.Windows.Forms.Panel();
             this.updateText = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             this.program.SuspendLayout();
             this.programContent.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -89,6 +89,18 @@
             this.programContent.Name = "programContent";
             this.programContent.Size = new System.Drawing.Size(791, 300);
             this.programContent.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(161, 228);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(293, 39);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "© Philip Adams, Michael Webb and contributors, 2010-2019.\r\nAll operating systems " +
+    "shown in this game\r\nbelong to their respective owners.";
             // 
             // panel2
             // 
@@ -216,6 +228,7 @@
             this.HelpToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.HelpToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
             this.HelpToolStripMenuItem.Text = "Help";
+            this.HelpToolStripMenuItem.Click += new System.EventHandler(this.helpItemClick);
             // 
             // ShutdownToolStripMenuItem
             // 
@@ -300,18 +313,6 @@
             // 
             this.updateText.Enabled = true;
             this.updateText.Tick += new System.EventHandler(this.updateText_Tick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(161, 228);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(293, 39);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "© Philip Adams, Michael Webb and contributors, 2010-2019.\r\nAll operating systems " +
-    "shown in this game\r\nbelong to their respective owners.";
             // 
             // TitleScreen
             // 

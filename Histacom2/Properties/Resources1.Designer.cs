@@ -19,7 +19,7 @@ namespace Histacom2.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resources {
@@ -199,6 +199,16 @@ namespace Histacom2.Properties {
         public static System.Drawing.Bitmap EndingPiracy {
             get {
                 object obj = ResourceManager.GetObject("EndingPiracy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap exchng32_12950 {
+            get {
+                object obj = ResourceManager.GetObject("exchng32_12950", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -850,15 +860,6 @@ namespace Histacom2.Properties {
             get {
                 object obj = ResourceManager.GetObject("minesweepSquareWrong", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream modem_dial {
-            get {
-                return ResourceManager.GetStream("modem_dial", resourceCulture);
             }
         }
         
@@ -2375,6 +2376,16 @@ namespace Histacom2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap WinXPProfilePictureChess {
+            get {
+                object obj = ResourceManager.GetObject("WinXPProfilePictureChess", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap WinXPRecentSmall {
             get {
                 object obj = ResourceManager.GetObject("WinXPRecentSmall", resourceCulture);
@@ -2588,6 +2599,16 @@ namespace Histacom2.Properties {
         public static System.Drawing.Bitmap WinXPTour {
             get {
                 object obj = ResourceManager.GetObject("WinXPTour", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WinXPTurnOff {
+            get {
+                object obj = ResourceManager.GetObject("WinXPTurnOff", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

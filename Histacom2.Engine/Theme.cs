@@ -487,6 +487,7 @@ namespace Histacom2.Engine
         public BadXPTheme()
         {
             startSound = Properties.Resources.WinBadXPStart;
+            stopSound = Properties.Resources.WinXPShutdown;
 
             threeDObjectsColor = Color.White;
 

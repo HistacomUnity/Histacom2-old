@@ -306,7 +306,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                 case "web chat setup":
                     Win95Installer inst = new Win95Installer("Web Chat 1998");
                     inst.InstallCompleted += (sendr, args) => { TitleScreen.frm95.WebChatToolStripMenuItem.Visible = true; CurrentSave.installed95[0] = true; SaveGame(); };
-                    WinClassic appInstaller = wm.Init(inst, "Web Chat Setup", null, true, true);
+                    WinClassic appInstaller = wm.Init(inst, "Web Chat Setup", null, false, true, false, false);
                     Program.AddTaskbarItem(appInstaller, appInstaller.Tag.ToString(), "Web Chat Setup", null);
                     appInstaller.BringToFront();
 
@@ -322,7 +322,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                         CurrentSave.installed95[1] = true;
                         SaveGame();
                     };
-                    WinClassic appFtp = wm.Init(instFtp, "FTP Client Setup", null, true, true);
+                    WinClassic appFtp = wm.Init(instFtp, "FTP Client Setup", null, false, true, false, false);
                     Program.AddTaskbarItem(appFtp, appFtp.Tag.ToString(), "FTP Client Setup", null);
                     appFtp.BringToFront();
 
@@ -338,7 +338,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                         CurrentSave.installed95[5] = true;
                         SaveGame();
                     };
-                    WinClassic appTd = wm.Init(instTd, "Time Distorter Setup", null, true, true);
+                    WinClassic appTd = wm.Init(instTd, "Time Distorter Setup", null, false, true, false, false);
                     Program.AddTaskbarItem(appTd, appTd.Tag.ToString(), "Time Distorter Setup", null);
                     appTd.BringToFront();
 
@@ -358,7 +358,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                         CurrentSave.installed95[6] = true;
                         SaveGame();
                     };
-                    WinClassic appGtn = wm.Init(instGtn, "Guess The Number Setup", null, true, true);
+                    WinClassic appGtn = wm.Init(instGtn, "Guess The Number Setup", null, false, true, false, false);
                     Program.AddTaskbarItem(appGtn, appGtn.Tag.ToString(), "Guess The Number Setup", null);
                     appGtn.BringToFront();
 
@@ -375,7 +375,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                 case "eb95 setup":
                     Win95Installer ebInstall = new Win95Installer("Error Blaster 95");
                     ebInstall.InstallCompleted += (sender, args) => { TitleScreen.frm95.ErrorBlasterToolStripMenuItem.Visible = true; CurrentSave.installed95[3] = true; };
-                    WinClassic installer = wm.Init(ebInstall, "Error Blaster 95 Setup", null, true, true);
+                    WinClassic installer = wm.Init(ebInstall, "Error Blaster 95 Setup", null, false, true, false, false);
                     Program.AddTaskbarItem(installer, installer.Tag.ToString(), "Error Blaster 95 Setup", null);
                     installer.BringToFront();
                     break;
@@ -388,7 +388,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                 case "sr95 setup":
                     Win95Installer srInstall = new Win95Installer("Start Runner 95");
                     srInstall.InstallCompleted += (sender, args) => { TitleScreen.frm95.StartRunnerToolStripMenuItem.Visible = true; CurrentSave.installed95[2] = true; };
-                    WinClassic install = wm.Init(srInstall, "Start Runner 95 Setup", null, true, true);
+                    WinClassic install = wm.Init(srInstall, "Start Runner 95 Setup", null, false, true, false, false);
                     Program.AddTaskbarItem(install, install.Tag.ToString(), "Start Runner 95 Setup", null);
                     install.BringToFront();
                     break;

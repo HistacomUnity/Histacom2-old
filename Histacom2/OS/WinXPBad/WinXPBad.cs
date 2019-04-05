@@ -31,6 +31,8 @@ namespace Histacom2.OS.WinXPBad
             InitializeComponent();
             SetStyle(ControlStyles.SupportsTransparentBackColor, true);
             BackgroundImage = currentTheme.defaultWallpaper;
+
+            lblUsername.Text = ProfileName;
         }
 
         //  When New Game is clicked in TitleScreen.cs
@@ -97,6 +99,11 @@ namespace Histacom2.OS.WinXPBad
         private void ShutdownToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveGame();
+            Program.ShutdownApplication(currentTheme.stopSound);
+        }
+
+        private void turnOffClick(object sender, EventArgs e)
+        {
             Program.ShutdownApplication(currentTheme.stopSound);
         }
 

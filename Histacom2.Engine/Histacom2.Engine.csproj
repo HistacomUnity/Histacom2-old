@@ -265,6 +265,7 @@
     <Content Include="Resources\Win95PlusTravelStart.wav" />
     <Content Include="Resources\Win95PlusTravelStop.wav" />
     <Content Include="Resources\Win95PlusTravelWallpaper.jpg" />
+    <None Include="Resources\WinXPShutdown.wav" />
     <Content Include="Resources\WinXP\Window\WinXP_Bottom.png" />
     <Content Include="Resources\WinXP\Window\WinXP_Close.png" />
     <None Include="Resources\WinXP\Window\WinXP_CloseHover.png" />

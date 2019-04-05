@@ -348,7 +348,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                 case "web chat 99 setup":
                     WinClassicInstaller inst = new WinClassicInstaller("Web Chat 1999");
                     inst.InstallCompleted += (sendr, args) => TitleScreen.frm98.WebChatToolStripMenuItem.Visible = true;
-                    WinClassic appInstaller = wm.Init(inst, "Web Chat Setup", null, true, true);
+                    WinClassic appInstaller = wm.Init(inst, "Web Chat Setup", null, false, true, false, false);
                     Program.AddTaskbarItem(appInstaller, appInstaller.Tag.ToString(), "Web Chat Setup", null);
                     appInstaller.BringToFront();
 
@@ -359,7 +359,7 @@ namespace Histacom2.OS.Win95.Win95Apps
                     {
                         TitleScreen.frm98.TimeDistorterToolStripMenuItem.Visible = true;
                     };
-                    WinClassic appTd = wm.Init(instTd, "Time Distorter Setup", null, true, true);
+                    WinClassic appTd = wm.Init(instTd, "Time Distorter Setup", null, false, true, false, false);
                     Program.AddTaskbarItem(appTd, appTd.Tag.ToString(), "Time Distorter Setup", null);
                     appTd.BringToFront();
 

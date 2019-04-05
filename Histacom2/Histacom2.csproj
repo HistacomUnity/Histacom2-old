@@ -701,6 +701,9 @@
   <ItemGroup>
     <Content Include="Icon128x.ico" />
     <Content Include="Resources\12padams_EULA.txt" />
+    <None Include="Resources\WinXPShutdown.wav" />
+    <None Include="Resources\WinXPProfilePictureChess.png" />
+    <None Include="Resources\WinXPTurnOff.png" />
     <None Include="Resources\WinClassic\WinXPClose.png" />
     <None Include="Resources\WinClassic\WinXPIE6Icon.png" />
     <None Include="Resources\WinClassic\WinXPError.png" />
@@ -770,6 +773,7 @@
     <None Include="Resources\GuessTheNumber\GTN95_Error.png" />
     <None Include="Resources\distort fail.wav" />
     <None Include="Resources\addrbook.ico_32x32[1].png" />
+    <None Include="Resources\exchng32_12950.ico" />
     <Content Include="Resources\Icon128x.ico" />
     <None Include="Resources\ICTheme_BG.jpg" />
     <None Include="Resources\IE3\IE3_SwirlyThings.png" />
@@ -842,7 +846,6 @@
     <None Include="Resources\minesweepSquare7.png" />
     <None Include="Resources\minesweepSquare8.png" />
     <None Include="Resources\minesweepSquareQuestion.png" />
-    <Content Include="Resources\modem_dial.wav" />
     <None Include="Resources\MS-DOS-logo-1.png" />
     <None Include="Resources\msdosprompt.png" />
     <None Include="Resources\SeizureWarning.png" />

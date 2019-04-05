@@ -95,5 +95,13 @@ namespace Histacom2
             MessageBox.Show("DevMode (Development Mode) is a special mode that lets you test features without having a large amount of accounts just to test a new feature. How it works is simple:" +
                 "\n1. It checks for a profile of the same name.\n2. If so, it deletes the profile and starts a new game.\n3. If not, then it starts a new game.");
         }
+
+        private void txtProfName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                btnOk_Click(null, null);
+            }
+        }
     }
 }

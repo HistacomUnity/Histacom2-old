@@ -43,6 +43,7 @@
             this.txtProfName.Name = "txtProfName";
             this.txtProfName.Size = new System.Drawing.Size(314, 20);
             this.txtProfName.TabIndex = 0;
+            this.txtProfName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProfName_KeyPress);
             // 
             // label1
             // 

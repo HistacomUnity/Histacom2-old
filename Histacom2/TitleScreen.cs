@@ -215,6 +215,13 @@ namespace Histacom2
         }
         #endregion
 
+        #region HelpButton
+        private void helpItemClick(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/TheRandomMelon/Histacom2/wiki");
+        }
+        #endregion
+
         #endregion
 
         private void gameversion_MouseHover(object sender, EventArgs e)
@@ -258,6 +265,11 @@ namespace Histacom2
         {
             AchievementScreen achievelist = new AchievementScreen();
             achievelist.ShowDialog();
+        }
+
+        private void helpMenu(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/TheRandomMelon/Histacom2/wiki");
         }
     }
 }

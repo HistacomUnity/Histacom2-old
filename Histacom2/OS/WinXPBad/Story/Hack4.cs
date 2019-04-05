@@ -21,7 +21,6 @@ namespace Histacom2.OS.WinXPBad.Story
         public static async void StartObjective()
         {
             try {
-                await Task.Delay(5000);
                 WinXP app = wm.InitXP(Console, "Command Prompt", null, true, true);
                 Console.WriteLine("telnet> 104.27.135.159 Connecting...");
 
@@ -79,7 +78,10 @@ namespace Histacom2.OS.WinXPBad.Story
         public static async void VirusDestruction(WinClassicIE6Bad ie)
         {
             LabelMaker();
-            Console.ParentForm.Close();
+            if (Console.ParentForm != null)
+            {
+                Console.ParentForm.Close();
+            }
             await Task.Delay(10000); ((WinXP)ie.ParentForm).maximizebutton.Image = ((WinXP)ie.ParentForm).closebutton.Image;
             await Task.Delay(1000); ((WinXP)ie.ParentForm).minimizebutton.Image = ((WinXP)ie.ParentForm).closebutton.Image;
             await Task.Delay(1000); ie.toolStripMenuItem8.Image = Properties.Resources.WinXPError;
