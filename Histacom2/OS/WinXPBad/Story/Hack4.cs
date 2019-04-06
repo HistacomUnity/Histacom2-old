@@ -78,8 +78,7 @@ namespace Histacom2.OS.WinXPBad.Story
         public static async void VirusDestruction(WinClassicIE6Bad ie)
         {
             LabelMaker();
-            if (Console.ParentForm != null)
-            {
+            if (Console.ParentForm != null) {
                 Console.ParentForm.Close();
             }
             await Task.Delay(10000); ((WinXP)ie.ParentForm).maximizebutton.Image = ((WinXP)ie.ParentForm).closebutton.Image;

@@ -43,21 +43,16 @@ namespace Histacom2
         public static extern bool ReleaseCapture();
 
 
-        public TitleScreen()
-        {
+        public TitleScreen() {
             InitializeComponent();
             this.startmenu.Paint += (sender, args) => Paintbrush.PaintClassicBorders(sender, args, 2);
-            if (!File.Exists(Path.Combine(DataDirectory, "o.k")))
-            {
-                SeizureWarning sw = new SeizureWarning();
-                sw.Size = programContent.Size;
-                programContent.Controls.Add(sw);
-                sw.BringToFront();
-            }
+            SeizureWarning sw = new SeizureWarning();
+            sw.Size = programContent.Size;
+            programContent.Controls.Add(sw);
+            sw.BringToFront();
         }
 
-        public void StartGame()
-        {
+        public void StartGame() {
             // Time to decide which OS to start up!
 
 			switch (CurrentSave.CurrentOS)
@@ -115,8 +110,7 @@ namespace Histacom2
 			}
         }
 
-        private void VM_WidthHeight_KeyPress(object sender, KeyPressEventArgs e)
-        {
+        private void VM_WidthHeight_KeyPress(object sender, KeyPressEventArgs e) {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.')) e.Handled = true;
 
             // only allow one decimal point
@@ -124,8 +118,7 @@ namespace Histacom2
         }
 
         // When the TitleScreen Loads
-        private void TitleScreen_Load(object sender, EventArgs e)
-        {
+        private void TitleScreen_Load(object sender, EventArgs e) {
             Directory.CreateDirectory(GameDirectory);
             Directory.CreateDirectory(DataDirectory);
             Directory.CreateDirectory(AllProfilesDirectory);
@@ -155,27 +148,22 @@ namespace Histacom2
         #region NewGame
 
         // When NewGame is Clicked
-        private void NewGame_Click(object sender, EventArgs e)
-        {
+        private void NewGame_Click(object sender, EventArgs e) {
             newGameBox = new NewGameDialog();
             newGameBox.ShowDialog();
 
-            if (newGameBox.Successful)
-            {
+            if (newGameBox.Successful) {
                 NewGame();
                 StartGame();
             }
         }
 
-        public void BSODRewind(object sender, EventArgs e)
-        {
-            if (progress == "95")
-            {
+        public void BSODRewind(object sender, EventArgs e) {
+            if (progress == "95") {
                 frm95.Close();
                 frm95 = null;
 
-                try
-                {
+                try {
                     // Time to close all the game applications
                     foreach (Form frm in Application.OpenForms) if (frm.Tag.ToString() != "ignoreFormOnTaskbar") frm.Close();
                 } catch {
@@ -194,13 +182,11 @@ namespace Histacom2
         #endregion
 
         #region LoadGame
-        private void LoadGame_Click(object sender, EventArgs e)
-        {
+        private void LoadGame_Click(object sender, EventArgs e) {
             loadGameBox = new LoadGameDialog();
             loadGameBox.ShowDialog();
 
-            if (loadGameBox.successful)
-            {
+            if (loadGameBox.successful) {
                 LoadSave();
                 SetTheme();
                 StartGame();
@@ -209,66 +195,54 @@ namespace Histacom2
         #endregion
 
         #region ExitButton
-        private void Exit_Click(object sender, EventArgs e)
-        {
+        private void Exit_Click(object sender, EventArgs e) {
             Application.Exit();
         }
         #endregion
 
         #region HelpButton
-        private void helpItemClick(object sender, EventArgs e)
-        {
+        private void helpItemClick(object sender, EventArgs e) {
             System.Diagnostics.Process.Start("https://github.com/TheRandomMelon/Histacom2/wiki");
         }
         #endregion
 
         #endregion
 
-        private void gameversion_MouseHover(object sender, EventArgs e)
-        {
+        private void gameversion_MouseHover(object sender, EventArgs e) {
             gameversion.Text = "There are no easter eggs here!";
         }
 
-        private void gameversion_MouseLeave(object sender, EventArgs e)
-        {
+        private void gameversion_MouseLeave(object sender, EventArgs e) {
             gameversion.Text = gameVersion;
         }
 
-        private void startbutton_Click(object sender, EventArgs e)
-        {
-            if (DevMode)
-            {
+        private void startbutton_Click(object sender, EventArgs e) {
+            if (DevMode) {
                 DevMode = false;
                 gameversion.Text = "Developer Mode Deactivated";
             } else {
                 DevMode = true;
                 gameversion.Text = "Developer Mode Activated";
             }
-            
         }
 
-        private void closebutton_Click_1(object sender, EventArgs e)
-        {
+        private void closebutton_Click_1(object sender, EventArgs e) {
             Application.Exit();
         }
 
-        private void updateText_Tick(object sender, EventArgs e)
-        {
-            if (gameversion.Text != gameVersion)
-            {
+        private void updateText_Tick(object sender, EventArgs e) {
+            if (gameversion.Text != gameVersion) {
                 gameversion.Text = gameVersion;
                 updateText.Stop();
             }
         }
 
-        private void achievementsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        private void achievementsToolStripMenuItem_Click(object sender, EventArgs e) {
             AchievementScreen achievelist = new AchievementScreen();
             achievelist.ShowDialog();
         }
 
-        private void helpMenu(object sender, EventArgs e)
-        {
+        private void helpMenu(object sender, EventArgs e) {
             System.Diagnostics.Process.Start("https://github.com/TheRandomMelon/Histacom2/wiki");
         }
     }
