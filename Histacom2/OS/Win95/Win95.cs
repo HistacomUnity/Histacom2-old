@@ -291,7 +291,7 @@ namespace Histacom2.OS.Win95
                             //wm.StartInfobox95("Win32 Application", "That is not a valid Win32 Application.", Properties.Resources.Win95Error);
                             break;
                         case "Online Services":
-                            wm.StartInfobox95("Caught it!", "If you were to run this, the game would crash!\nLuckily, it won't crash this time!", InfoboxType.Error, InfoboxButtons.OK);
+                            wm.StartInfobox95("Online Services", "This feature isn't implemented yet.", InfoboxType.Error, InfoboxButtons.OK);
                             break;
                         default:
                             // It is an actual file on the disk
