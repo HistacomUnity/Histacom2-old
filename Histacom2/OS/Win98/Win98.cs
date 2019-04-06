@@ -294,12 +294,14 @@ namespace Histacom2.OS.Win98
                     else if (objListViewItem.Text == "Network Neighborhood")
                     {
                         // Alex's TODO here
-
                     }
                     else if (objListViewItem.Text == "Recycle Bin")
                     {
                         // Another thing you may need to digital poke Alex about doing.
-
+                    }
+                    else if (objListViewItem.Text == "Online Services")
+                    {
+                        wm.StartInfobox95("Online Services", "This feature isn't implemented yet.", InfoboxType.Error, InfoboxButtons.OK);
                     }
                     else if (objListViewItem.Text == "Set Up The Microsoft Network")
                     {
