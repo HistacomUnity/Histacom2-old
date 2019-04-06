@@ -33,6 +33,17 @@ namespace Histacom2.OS.Win98
 
         public bool hiddenpadamsFound = false;
         public WinClassicTimeDistorter2 distort;
+        
+        // Overrides the Painting function of the Form, so that you don't see all that crap drawing.
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;  // Turn on WS_EX_COMPOSITED
+                return cp;
+            }
+        }
 
         // Init the form
         public Windows98()
@@ -114,22 +125,6 @@ namespace Histacom2.OS.Win98
 
             // Bring to this the front
             this.BringToFront();
-
-            //Check if it is the first time
-            if (!CurrentSave.FTime98)
-            {
-                CurrentSave.FTime98 = true;
-                SaveGame();
-                welcome = wm.Init(new Win98Welcome(), "Welcome", null, false, false, resize: false);
-                AddTaskBarItem(welcome, welcome.Tag.ToString(), "Welcome", null);
-
-                nonimportantapps.Add(welcome);
-                nonimportantapps[nonimportantapps.Count - 1].BringToFront();
-                nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
-
-                welcome.BringToFront();
-                welcome.Activate();
-            }
 
             // Update the desktop Icons!
 
@@ -570,6 +565,31 @@ namespace Histacom2.OS.Win98
                         wm.StartInfobox95("Windows Explorer", "This object cannot be deleted.", InfoboxType.Error, InfoboxButtons.OK);
                     }
                 }
+            }
+        }
+
+        private void waitUntil98Loaded_Tick(object sender, EventArgs e)
+        {
+            if (Visible)
+            {
+                //Check if it is the first time
+                if (!CurrentSave.FTime98)
+                {
+                    CurrentSave.FTime98 = true;
+                    SaveGame();
+                    welcome = wm.Init(new Win98Welcome(), "Welcome", null, false, false, resize: false);
+                    AddTaskBarItem(welcome, welcome.Tag.ToString(), "Welcome", null);
+
+                    nonimportantapps.Add(welcome);
+                    nonimportantapps[nonimportantapps.Count - 1].BringToFront();
+                    nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
+
+                    welcome.BringToFront();
+                    welcome.Activate();
+
+                    waitUntil98Loaded.Enabled = false;
+                }
+
             }
         }
     }

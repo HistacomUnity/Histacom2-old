@@ -13,6 +13,7 @@ using static Histacom2.Engine.SaveSystem;
 using Histacom2.OS.Win98.Win98Apps;
 using Histacom2.GlobalPrograms;
 using Histacom2.OS.WinXPBad.Story;
+using System.Threading.Tasks;
 
 namespace Histacom2.OS.WinXPBad
 {
@@ -24,6 +25,17 @@ namespace Histacom2.OS.WinXPBad
         public TaskBarController tb = new TaskBarController();
 
         public int currentappcount = 0;
+        
+        // Overrides the Painting function of the Form, so that you don't see all that crap drawing.
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;  // Turn on WS_EX_COMPOSITED
+                return cp;
+            }
+        }
 
         // Init the form
         public WindowsXPBad()
@@ -76,8 +88,6 @@ namespace Histacom2.OS.WinXPBad
             lv.Position = new Point(20, 20);
             desktopicons.Invalidate();
             //DesktopController.RefreshDesktopIcons(new ListViewItem[] { new System.Windows.Forms.ListViewItem("Recycle Bin", 7) }, ref desktopicons, Path.Combine(ProfileWindowsDirectory, "Desktop"));
-
-            Hack4.StartObjective();
         }
 
         private void fontLoad()
@@ -289,6 +299,15 @@ namespace Histacom2.OS.WinXPBad
             startmenu.Hide();
             startbutton.Enabled = false;
             clockTimer.Enabled = false;
+        }
+
+        private void waitUntilLoaded_Tick(object sender, EventArgs e)
+        {
+            if (Visible)
+            {
+                Hack4.StartObjective();
+                waitUntilLoaded.Enabled = false;
+            }
         }
     }
 }

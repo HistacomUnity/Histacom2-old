@@ -57,6 +57,7 @@ namespace Histacom2.OS.WinXPBad
             this.panel3 = new System.Windows.Forms.Panel();
             this.picWinXPStartTop = new System.Windows.Forms.Panel();
             this.lblUsername = new Histacom2.Engine.UI.ClassicLabel();
+            this.picProfilePicture = new System.Windows.Forms.PictureBox();
             this.picWinXPStartRight = new System.Windows.Forms.PictureBox();
             this.picWinXPStartLeft = new System.Windows.Forms.PictureBox();
             this.xpMenuStripLeft = new System.Windows.Forms.MenuStrip();
@@ -87,7 +88,7 @@ namespace Histacom2.OS.WinXPBad
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PropertiesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.desktopupdate = new System.Windows.Forms.Timer(this.components);
-            this.picProfilePicture = new System.Windows.Forms.PictureBox();
+            this.waitUntilLoaded = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.taskbar.SuspendLayout();
             this.clockPanel.SuspendLayout();
@@ -108,12 +109,12 @@ namespace Histacom2.OS.WinXPBad
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel3.SuspendLayout();
             this.picWinXPStartTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWinXPStartRight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWinXPStartLeft)).BeginInit();
             this.xpMenuStripLeft.SuspendLayout();
             this.xpMenuStripRight.SuspendLayout();
             this.rightclickbackproperties.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picProfilePicture)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -405,6 +406,17 @@ namespace Histacom2.OS.WinXPBad
             this.lblUsername.Size = new System.Drawing.Size(91, 19);
             this.lblUsername.TabIndex = 3;
             this.lblUsername.Text = "Username";
+            // 
+            // picProfilePicture
+            // 
+            this.picProfilePicture.BackColor = System.Drawing.Color.Transparent;
+            this.picProfilePicture.BackgroundImage = global::Histacom2.Properties.Resources.WinXPProfilePictureChess;
+            this.picProfilePicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picProfilePicture.Location = new System.Drawing.Point(0, 9);
+            this.picProfilePicture.Name = "picProfilePicture";
+            this.picProfilePicture.Size = new System.Drawing.Size(48, 48);
+            this.picProfilePicture.TabIndex = 7;
+            this.picProfilePicture.TabStop = false;
             // 
             // picWinXPStartRight
             // 
@@ -779,16 +791,10 @@ namespace Histacom2.OS.WinXPBad
             this.desktopupdate.Interval = 5000;
             this.desktopupdate.Tick += new System.EventHandler(this.desktopupdate_Tick);
             // 
-            // picProfilePicture
+            // waitUntilLoaded
             // 
-            this.picProfilePicture.BackColor = System.Drawing.Color.Transparent;
-            this.picProfilePicture.BackgroundImage = global::Histacom2.Properties.Resources.WinXPProfilePictureChess;
-            this.picProfilePicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picProfilePicture.Location = new System.Drawing.Point(0, 9);
-            this.picProfilePicture.Name = "picProfilePicture";
-            this.picProfilePicture.Size = new System.Drawing.Size(48, 48);
-            this.picProfilePicture.TabIndex = 7;
-            this.picProfilePicture.TabStop = false;
+            this.waitUntilLoaded.Enabled = true;
+            this.waitUntilLoaded.Tick += new System.EventHandler(this.waitUntilLoaded_Tick);
             // 
             // WindowsXPBad
             // 
@@ -828,6 +834,7 @@ namespace Histacom2.OS.WinXPBad
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel3.ResumeLayout(false);
             this.picWinXPStartTop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picProfilePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWinXPStartRight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWinXPStartLeft)).EndInit();
             this.xpMenuStripLeft.ResumeLayout(false);
@@ -835,7 +842,6 @@ namespace Histacom2.OS.WinXPBad
             this.xpMenuStripRight.ResumeLayout(false);
             this.xpMenuStripRight.PerformLayout();
             this.rightclickbackproperties.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picProfilePicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -900,5 +906,6 @@ namespace Histacom2.OS.WinXPBad
         private System.Windows.Forms.MenuStrip xpMenuStripBottom;
         private Engine.UI.ClassicStartMenuItem xpStartBottomTurnOff;
         private System.Windows.Forms.PictureBox picProfilePicture;
+        private System.Windows.Forms.Timer waitUntilLoaded;
     }
 }
