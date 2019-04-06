@@ -13,15 +13,12 @@ namespace Histacom2
 {
     public partial class SeizureWarning : UserControl
     {
-        public SeizureWarning()
-        {
+        public SeizureWarning() {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            File.WriteAllText(Path.Combine(Engine.SaveSystem.DataDirectory, "o.k"), ".");
-            this.Hide();
+        private void button1_Click(object sender, EventArgs e) {
+            Hide();
         }
     }
 }

@@ -12,17 +12,13 @@ using Histacom2.Engine;
 
 namespace Histacom2
 {
-    public partial class AchievementBox : Form
-    {
+    public partial class AchievementBox : Form {
         private bool stayOnScreen = false;
 
-        public AchievementBox(int type)
-        {
+        public AchievementBox(int type) {
             InitializeComponent();
-            this.BringToFront();
-            this.Show();
-            switch (type)
-            {
+            BringToFront();
+            switch (type) {
                 case 0: //Piracy Ending
                     BackgroundImage = Properties.Resources.EndingPiracy;
                     stayOnScreen = true;
@@ -37,25 +33,22 @@ namespace Histacom2
                     break;
             }
             Location = new Point(Screen.PrimaryScreen.WorkingArea.Width - 202, -102);
-            while (this.Location.Y != 0)
-            {
+            Show();
+            while (Location.Y != 0) {
                 Thread.Sleep(5);
                 Location = new Point(Location.X, Location.Y + 1);
             }
-            if (!stayOnScreen)
-            {
+            if (!stayOnScreen) {
                 Thread.Sleep(3000);
-                while (this.Location.Y != -102)
-                {
+                while (Location.Y != -102) {
                     Thread.Sleep(5);
                     Location = new Point(Location.X, Location.Y - 1);
                 }
-                this.Close();
+                Close();
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+        private void button1_Click(object sender, EventArgs e) {
             Program.title.Show();
             SaveSystem.CurrentSave = null;
             SaveSystem.currentTheme = null;

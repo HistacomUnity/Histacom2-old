@@ -11,24 +11,19 @@ using Histacom2.Engine;
 
 namespace Histacom2
 {
-    public partial class AchievementScreen : Form
-    {
-        public AchievementScreen()
-        {
+    public partial class AchievementScreen : Form {
+        public AchievementScreen() {
             InitializeComponent();
         }
 
-        private void AchievementScreen_Load(object sender, EventArgs e)
-        {
+        private void AchievementScreen_Load(object sender, EventArgs e) {
             byte[] achieved = SaveSystem.GetAchievements();
 
-            if (achieved[0] == 1)
-            {
+            if (achieved[0] == 1) {
                 listView1.Items[0].ImageIndex = 0;
                 listView1.Items[0].Text = "Piracy Ending";
             }
-            if (achieved[1] == 1)
-            {
+            if (achieved[1] == 1) {
                 listView1.Items[1].ImageIndex = 0;
                 listView1.Items[1].Text = "Destruction Ending";
             }
@@ -36,9 +31,8 @@ namespace Histacom2
             // if (achieved[21] == 1) listView2.Items[1].ImageIndex = 0;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
+        private void button1_Click(object sender, EventArgs e) {
+            Close();
         }
     }
 }
