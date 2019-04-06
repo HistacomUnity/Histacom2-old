@@ -36,6 +36,17 @@ namespace Histacom2.OS.Win95
 
         ListViewItem heldDownItem;
         Point heldDownPoint;
+        
+        // Overrides the Painting function of the Form, so that you don't see all that crap drawing.
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;  // Turn on WS_EX_COMPOSITED
+                return cp;
+            }
+        }
 
         // Init the form
         public Windows95()
@@ -112,22 +123,6 @@ namespace Histacom2.OS.Win95
 
             // Bring to this the front
             this.BringToFront();
-
-            //Check if it is the first time
-            if (!CurrentSave.FTime95)
-            {
-                CurrentSave.FTime95 = true;
-                SaveGame();
-                welcome = wm.Init(new Win95Welcome(), "Welcome", null, false, false, resize: false);
-                AddTaskBarItem(welcome, welcome.Tag.ToString(), "Welcome", null);
-
-                nonimportantapps.Add(welcome);
-                nonimportantapps[nonimportantapps.Count - 1].BringToFront();
-                nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
-
-                welcome.BringToFront();
-                welcome.Activate();
-            }
 
             // Update the Desktop icons
 
@@ -647,6 +642,30 @@ namespace Histacom2.OS.Win95
         private void desktopicons_Click(object sender, EventArgs e)
         {
             startmenu.Hide();
+        }
+
+        private void waitUntil95Loaded_Tick(object sender, EventArgs e)
+        {
+            if (Visible)
+            {
+                //Check if it is the first time
+                if (!CurrentSave.FTime95)
+                {
+                    CurrentSave.FTime95 = true;
+                    SaveGame();
+                    welcome = wm.Init(new Win95Welcome(), "Welcome", null, false, false, resize: false);
+                    AddTaskBarItem(welcome, welcome.Tag.ToString(), "Welcome", null);
+
+                    nonimportantapps.Add(welcome);
+                    nonimportantapps[nonimportantapps.Count - 1].BringToFront();
+                    nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
+
+                    welcome.BringToFront();
+                    welcome.Activate();
+
+                    waitUntil95Loaded.Enabled = false;
+                }
+            }
         }
     }
 }
