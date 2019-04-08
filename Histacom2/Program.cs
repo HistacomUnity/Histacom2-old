@@ -14,6 +14,7 @@ using Histacom2.Engine;
 using Histacom2.Engine.Template;
 using System.Drawing;
 using Histacom2.SaveDialogs;
+using Histacom2.OS.Win98;
 
 namespace Histacom2
 {

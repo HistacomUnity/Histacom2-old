@@ -1,6 +1,6 @@
-﻿namespace Histacom2.Engine.Template.Taskbars
+﻿namespace Histacom2.OS.Win95
 {
-    partial class Win95TaskBarItem
+    partial class Windows95TaskbarItem
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Win95TaskBarItem));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Windows95TaskbarItem));
             this.progName = new System.Windows.Forms.Label();
             this.progPic = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();

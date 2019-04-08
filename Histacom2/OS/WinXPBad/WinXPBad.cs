@@ -6,7 +6,6 @@ using System.Media;
 using System.Windows.Forms;
 using Histacom2.Engine;
 using Histacom2.Engine.Template;
-using Histacom2.Engine.Template.Taskbars;
 using Histacom2.OS.Win95.Win95Apps;
 using Histacom2.OS.Win95.Win95Apps.Story;
 using static Histacom2.Engine.SaveSystem;
@@ -14,6 +13,7 @@ using Histacom2.OS.Win98.Win98Apps;
 using Histacom2.GlobalPrograms;
 using Histacom2.OS.WinXPBad.Story;
 using System.Threading.Tasks;
+using Histacom2.OS.Win95;
 
 namespace Histacom2.OS.WinXPBad
 {
@@ -197,7 +197,7 @@ namespace Histacom2.OS.WinXPBad
 
         public void AddTaskBarItem(Form Application, string ApplicationID, string ApplicationName, Image ApplicationIcon)
         {
-            taskbarItems = tb.AddTaskbarItem95(ApplicationID, ApplicationName, ApplicationIcon, (UserControl)new Win95TaskBarItem(), taskbarItems);
+            taskbarItems = tb.AddTaskbarItem95(ApplicationID, ApplicationName, ApplicationIcon, (UserControl)new Windows95TaskbarItem(), taskbarItems);
             Application.FormClosed += new FormClosedEventHandler(UpdateTaskbarFromClosedApplication);
         }
 
@@ -216,7 +216,7 @@ namespace Histacom2.OS.WinXPBad
             foreach (Form form in tb.GetAllOpenApps())
             {
                 // Calls that "AddToTaskbar" thing
-                taskbarItems = tb.AddTaskbarItem95(form.Tag.ToString(), form.Text.ToString(), form.Icon.ToBitmap(), new Win95TaskBarItem(), taskbarItems);
+                taskbarItems = tb.AddTaskbarItem95(form.Tag.ToString(), form.Text.ToString(), form.Icon.ToBitmap(), new Windows95TaskbarItem(), taskbarItems);
             }
         }
 
