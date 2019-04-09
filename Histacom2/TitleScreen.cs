@@ -209,7 +209,7 @@ namespace Histacom2
         #endregion
 
         private void gameversion_MouseHover(object sender, EventArgs e) {
-            gameversion.Text = "There are no easter eggs here!";
+            gameversion.Text = $"Running on {Assembly.GetEntryAssembly().GetCustomAttribute<System.Runtime.Versioning.TargetFrameworkAttribute>().FrameworkName}";
         }
 
         private void gameversion_MouseLeave(object sender, EventArgs e) {
