@@ -6,33 +6,35 @@ using System.Media;
 using System.Windows.Forms;
 using Histacom2.Engine;
 using Histacom2.Engine.Template;
-using Histacom2.Engine.Template.Taskbars;
 using Histacom2.OS.Win95.Win95Apps;
 using Histacom2.OS.Win95.Win95Apps.Story;
 using static Histacom2.Engine.SaveSystem;
-using Histacom2.OS.Win98.Win98Apps;
+using Histacom2.OS.Win95.Win95Apps._12padamViruses;
+using Histacom2.OS.Win95.Win95Apps._12padamsViruses;
 using Histacom2.GlobalPrograms;
 
-namespace Histacom2.OS.Win98
+namespace Histacom2.OS.Win95
 {
-    public partial class Windows98 : Form
+    public partial class Windows95 : Form
     {
         private SoundPlayer startsound;
         public WindowManager wm = new WindowManager();
 
         public List<WinClassic> nonimportantapps = new List<WinClassic>();
-        public WebChat1999 webchat;
+        public WinClassic webchat;
         public WinClassic ie;
         public WinClassic welcome;
-
+        public WinClassicTimeDistorter distort;
         public TaskBarController tb = new TaskBarController();
 
-        public int currentappcount = 0;
+        public int CurrentAppCount = 0;
 
-        public bool webchatInstalled = false;
+        public bool WebChatInstalled = false;
 
-        public bool hiddenpadamsFound = false;
-        public WinClassicTimeDistorter2 distort;
+        public bool HiddenPadamsFound = false;
+
+        ListViewItem heldDownItem;
+        Point heldDownPoint;
         
         // Overrides the Painting function of the Form, so that you don't see all that crap drawing.
         protected override CreateParams CreateParams
@@ -46,15 +48,15 @@ namespace Histacom2.OS.Win98
         }
 
         // Init the form
-        public Windows98()
+        public Windows95()
         {
             InitializeComponent();
-            startmenu.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            //startmenu.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             ProgramsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             AccessoriesToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             CommunicationsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             MultimediaToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
-            SystemToolsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            GamesToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             StartUpToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             MSDOSPromptToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             DocumentsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
@@ -87,16 +89,11 @@ namespace Histacom2.OS.Win98
         //  When New Game is clicked in TitleScreen.cs
         private void Desktop_Load(object sender, EventArgs e)
         {
-            if (!CurrentSave.FTime95) UpgradeFileSystem( "98");
-
             if (currentTheme.defaultWallpaper != null) desktopicons.BackgroundImage = new Bitmap(currentTheme.defaultWallpaper, Width, Height);
-            //Start Menu Color - Commented until it works reliably
-            //startmenuitems.Renderer = new MyRenderer();
-            //ProgramsToolStripMenuItem.DropDown.Renderer = new MyRenderer();
 
             // Make Font Mandatory
             fontLoad();
-
+            
             // Play Windows 95 Start Sound
             Stream audio = currentTheme.startSound;
             startsound = new SoundPlayer(audio);
@@ -126,16 +123,26 @@ namespace Histacom2.OS.Win98
             // Bring to this the front
             this.BringToFront();
 
-            // Update the desktop Icons!
+            // Update the Desktop icons
 
-            DesktopController.RefreshDesktopIcons(new ListViewItem[] { new System.Windows.Forms.ListViewItem("My Computer", 0),
-            new System.Windows.Forms.ListViewItem("Network Neighborhood", 5),
-            new System.Windows.Forms.ListViewItem("Inbox", 3),
-            new System.Windows.Forms.ListViewItem("Recycle Bin", 7),
-            new System.Windows.Forms.ListViewItem("Internet Explorer", 2),
-            new System.Windows.Forms.ListViewItem("Online Services", 1),
-            new System.Windows.Forms.ListViewItem("Set Up The Microsoft Network", 4),
-            new System.Windows.Forms.ListViewItem("Outlook Express", 6) }, ref desktopicons, Path.Combine(ProfileWindowsDirectory, "Desktop"));
+            DesktopController.RefreshDesktopIcons(new ListViewItem[] { new ListViewItem("My Computer", 0),
+            new ListViewItem("Network Neighborhood", 5),
+            new ListViewItem("Inbox", 3),
+            new ListViewItem("Recycle Bin", 7),
+            new ListViewItem("Internet Explorer", 2),
+            new ListViewItem("Online Services", 1),
+            new ListViewItem("Set Up The Microsoft Network", 4),
+            new ListViewItem("Outlook Express", 6) }, ref desktopicons, Path.Combine(ProfileWindowsDirectory, "Desktop"));
+            desktopicons.AutoArrange = false;
+
+            // Enable installed programs
+
+            if (CurrentSave.installed95[0]) WebChatToolStripMenuItem.Visible = true;
+            if (CurrentSave.installed95[1]) FTPClientToolStripMenuItem.Visible = true;
+            if (CurrentSave.installed95[2]) StartRunnerToolStripMenuItem.Visible = true;
+            if (CurrentSave.installed95[3]) ErrorBlasterToolStripMenuItem.Visible = true;
+            if (CurrentSave.installed95[5]) TimeDistorterToolStripMenuItem.Visible = true;
+            if (CurrentSave.installed95[6]) GuessTheNumberToolStripMenuItem.Visible = true;
         }
 
         private void fontLoad()
@@ -158,8 +165,8 @@ namespace Histacom2.OS.Win98
         private void startbutton_Click(object sender, EventArgs e)
         {
             startmenu.Show();
-            startmenu.BringToFront();
             if (taskbar.Visible) taskbar.BringToFront();
+            startmenu.BringToFront();
         }
 
         // Shutdown button
@@ -170,12 +177,6 @@ namespace Histacom2.OS.Win98
         }
 
         #endregion //Region
-
-        // Give Year Code - NYI
-        private void taskbartime_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         // Set the Clock
         private void clockTimer_Tick(object sender, EventArgs e)
@@ -193,9 +194,7 @@ namespace Histacom2.OS.Win98
                 if (desktopicons.FocusedItem != null)
                 {
                     deleteToolStripMenuItem.Visible = true;
-                }
-                else
-                {
+                } else {
                     deleteToolStripMenuItem.Visible = false;
                 }
 
@@ -211,6 +210,13 @@ namespace Histacom2.OS.Win98
             {
                 rightclickbackproperties.Hide();
                 startmenu.Hide();
+
+                heldDownItem = desktopicons.GetItemAt(e.X, e.Y);
+                if (heldDownItem != null)
+                {
+                    heldDownPoint = new Point(e.X - heldDownItem.Position.X,
+                                              e.Y - heldDownItem.Position.Y);
+                }
             }
 
             else if (e.Button == MouseButtons.Middle)
@@ -232,33 +238,10 @@ namespace Histacom2.OS.Win98
             app.BringToFront();
             startmenu.Hide();
         }
-        private void downloaderTestToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            WinClassicDownloader opendownload = new WinClassicDownloader();
-            WinClassic app = wm.Init(opendownload, "Downloader", null, false, true);
-            opendownload.appName.Text = "Downloading: Survive The Day";
-
-            AddTaskBarItem(app, app.Tag.ToString(), "Downloader", null);
-
-            app.BringToFront();
-            startmenu.Hide();
-        }
-
-        private void installerTestToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            WinClassicInstaller openinstaller = new WinClassicInstaller("Testing");
-            WinClassic app = wm.Init(openinstaller, "Installer", null, false, true);
-
-            AddTaskBarItem(app, app.Tag.ToString(), "Installer", null);
-
-            app.BringToFront();
-            startmenu.Hide();
-        }
-
         private void InternetExplorerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (ie != null) { wm.StartInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", InfoboxType.Warning, InfoboxButtons.OK); return; }
-            ie = wm.Init(new WinClassicIE4(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
+            ie = wm.Init(new WinClassicIE3(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
             AddTaskBarItem(ie, ie.Tag.ToString(), "Internet Explorer 4", Properties.Resources.Win95IconIE4);
             ie.BringToFront();
             ie.FormClosing += new FormClosingEventHandler(InternetExplorer4_Closing);
@@ -275,86 +258,74 @@ namespace Histacom2.OS.Win98
                 objListViewItem = desktopicons.GetItemAt(objDrawingPoint.X, objDrawingPoint.Y);
                 if (objListViewItem != null)
                 {
-                    if (objListViewItem.Text == "Internet Explorer")
+                    switch (objListViewItem.Text)
                     {
-                        if (ie != null) { wm.StartInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", InfoboxType.Warning, InfoboxButtons.OK); return; }
-                        ie = wm.Init(new WinClassicIE4(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
-                        AddTaskBarItem(ie, ie.Tag.ToString(), "Internet Explorer 4", Properties.Resources.Win95IconIE4);
-                        ie.BringToFront();
-                        ie.FormClosing += new FormClosingEventHandler(InternetExplorer4_Closing);
-                        startmenu.Hide();
-                    }
-                    else if (objListViewItem.Text == "My Computer")
-                    {
-                        WinClassic app = wm.Init(new Win95WindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
-                        AddTaskBarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
-                        app.BringToFront();
-                        startmenu.Hide();
-                    }
-                    else if (objListViewItem.Text == "Network Neighborhood")
-                    {
-                        // Alex's TODO here
-                    }
-                    else if (objListViewItem.Text == "Recycle Bin")
-                    {
-                        // Another thing you may need to digital poke Alex about doing.
-                    }
-                    else if (objListViewItem.Text == "Online Services")
-                    {
-                        wm.StartInfobox95("Online Services", "This feature isn't implemented yet.", InfoboxType.Error, InfoboxButtons.OK);
-                    }
-                    else if (objListViewItem.Text == "Set Up The Microsoft Network")
-                    {
-                        wm.StartInfobox95("Microsoft Network", "The Microsoft Network is already set up!", InfoboxType.Info, InfoboxButtons.OK);
-                    }
-                    else if (objListViewItem.Text == "Outlook Express")
-                    {
-                        //wm.StartInfobox95("Win32 Application", "That is not a valid Win32 Application.", Properties.Resources.Win95Error);
-                    }
-                    else if (objListViewItem.Text == "Inbox")
-                    {
-                        //wm.StartInfobox95("Win32 Application", "That is not a valid Win32 Application.", Properties.Resources.Win95Error);
-                    }
-                    else
-                    {
-                        // It is an actual file on the disk
-                        WinClassicWindowsExplorer we = new WinClassicWindowsExplorer();
-
-                        // If it is a directory
-                        if (Directory.Exists(objListViewItem.Tag.ToString()))
-                        {
-                            we.CurrentDirectory = objListViewItem.Tag.ToString();
-
-                            WinClassic app = wm.Init(we, "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
-                            AddTaskBarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
-                            app.BringToFront();
+                        case "Internet Explorer":
+                            if (ie != null) { wm.StartInfobox95("Error Opening Internet Explorer", "An instance of Internet Explorer 4 is already open.", InfoboxType.Warning, InfoboxButtons.OK); return; }
+                            ie = wm.Init(new WinClassicIE3(), "Internet Explorer 4", Properties.Resources.Win95IconIE4, true, true);
+                            AddTaskBarItem(ie, ie.Tag.ToString(), "Internet Explorer 4", Properties.Resources.Win95IconIE4);
+                            ie.BringToFront();
+                            ie.FormClosing += new FormClosingEventHandler(InternetExplorer4_Closing);
                             startmenu.Hide();
-                        }
-                        else we.OpenFile(objListViewItem.Tag.ToString()); // Just open the file...
+                            break;
+                        case "My Computer":
+                            WinClassic we = wm.Init(new Win95WindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
+                            AddTaskBarItem(we, we.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
+                            we.BringToFront();
+                            startmenu.Hide();
+                            break;
+                        case "Network Neighborhood":
+                            // Alex's TODO here
+                            break;
+                        case "Recycle Bin":
+                            // Another thing you may need to digital poke Alex about doing.
+                            break;
+                        case "Set Up The Microsoft Network":
+                            wm.StartInfobox95("Microsoft Network", "The Microsoft Network is already set up!", InfoboxType.Info, InfoboxButtons.OK);
+                            break;
+                        case "Outlook Express":
+                            //wm.StartInfobox95("Win32 Application", "That is not a valid Win32 Application.", Properties.Resources.Win95Error);
+                            break;
+                        case "Inbox":
+                            //wm.StartInfobox95("Win32 Application", "That is not a valid Win32 Application.", Properties.Resources.Win95Error);
+                            break;
+                        case "Online Services":
+                            wm.StartInfobox95("Online Services", "This feature isn't implemented yet.", InfoboxType.Error, InfoboxButtons.OK);
+                            break;
+                        default:
+                            // It is an actual file on the disk
+                            Win95WindowsExplorer wwe = new Win95WindowsExplorer();
+
+                            // If it is a directory
+                            if (Directory.Exists(objListViewItem.Tag.ToString()))
+                            {
+                                wwe.CurrentDirectory = objListViewItem.Tag.ToString();
+
+                                WinClassic app = wm.Init(wwe, "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
+                                AddTaskBarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
+                                app.BringToFront();
+                                startmenu.Hide();
+                            }
+                            else
+                            {
+                                // Just open the file...
+                                wwe.OpenFile(objListViewItem.Tag.ToString());
+                            }
+                            break;
+
                     }
                 }
             }
         }
 
-        private void infoboxTestToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            WinClassic app = wm.StartInfobox95("AShifter's Infobox", "This is the very first Histacom2 Infobox. It's really easy to call, too! \n Just use wm.startInfobox95(string title, string text, InfoboxType type, InfoboxButtons btns)!", InfoboxType.Info, InfoboxButtons.OK);
-
-            app.BringToFront();
-            startmenu.Hide();
-        }
         private void WebChatToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (webchat != null) return;
-            webchat = new WebChat1999();
-            WinClassic app = wm.Init(webchat, "Web Chat 1999", null, true, true);
+            webchat = wm.Init(new WebChat1998(), "Web Chat 1998", null, true, true);
 
-            AddTaskBarItem(app, app.Tag.ToString(), "Web Chat 1999", null);
+            AddTaskBarItem(webchat, webchat.Tag.ToString(), "Web Chat 1998", null);
 
-            app.BringToFront();
+            webchat.BringToFront();
             startmenu.Hide();
-
-            app.FormClosing += (s, fe) => webchat = null;
         }
         public void NonImportantApp_Closing(object sender, FormClosingEventArgs e)
         {
@@ -368,8 +339,8 @@ namespace Histacom2.OS.Win98
         private void WordPadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WinClassicWordPad wp = new WinClassicWordPad();
-            WinClassic app = wm.Init(wp, "Wordpad", Properties.Resources.Win95IconWordpad, true, true);
-            AddTaskBarItem(app, app.Tag.ToString(), "Wordpad", Properties.Resources.Win95IconWordpad);
+            WinClassic app = wm.Init(wp, "Wordpad", Properties.Resources.Win95WordpadIcon2, true, true);
+            AddTaskBarItem(app, app.Tag.ToString(), "Wordpad", Properties.Resources.Win95WordpadIcon2);
 
             nonimportantapps.Add(app);
             nonimportantapps[nonimportantapps.Count - 1].BringToFront();
@@ -381,7 +352,7 @@ namespace Histacom2.OS.Win98
 
         public void AddTaskBarItem(Form Application, string ApplicationID, string ApplicationName, Image ApplicationIcon)
         {
-            taskbarItems = tb.AddTaskbarItem95(ApplicationID, ApplicationName, ApplicationIcon, (UserControl)new Win95TaskBarItem(), taskbarItems);
+            taskbarItems = tb.AddTaskbarItem95(ApplicationID, ApplicationName, ApplicationIcon, (UserControl)new Windows95TaskbarItem(), taskbarItems);
             Application.FormClosed += new FormClosedEventHandler(UpdateTaskbarFromClosedApplication);
         }
 
@@ -400,28 +371,16 @@ namespace Histacom2.OS.Win98
             foreach (Form form in tb.GetAllOpenApps())
             {
                 // Calls that "AddToTaskbar" thing
-                taskbarItems = tb.AddTaskbarItem95(form.Tag.ToString(), form.Text.ToString(), (Image)form.Icon.ToBitmap(), (UserControl)new Win95TaskBarItem(), taskbarItems);
+                taskbarItems = tb.AddTaskbarItem95(form.Tag.ToString(), form.Text.ToString(), (Image)form.Icon.ToBitmap(), (UserControl)new Windows95TaskbarItem(), taskbarItems);
             }
-        }
-
-        private void AddressBookToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            WinClassic app = wm.Init(new WinClassicAddressBook(), "Address Book", Properties.Resources.WinClassicAddressBook, true, true);
-            Program.AddTaskbarItem(app, app.Tag.ToString(), "Address Book", Properties.Resources.WinClassicAddressBook);
-
-            Program.nonimportantapps.Add(app);
-            Program.nonimportantapps[Program.nonimportantapps.Count - 1].BringToFront();
-            Program.nonimportantapps[Program.nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(Program.NonImportantApp_Closing);
-
-            app.BringToFront();
         }
 
         private void WindowsExplorerToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             FileDialogBoxManager.IsInOpenDialog = false;
             FileDialogBoxManager.IsInSaveDialog = false;
-            WinClassic app = wm.Init(new WinClassicWindowsExplorer(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
+            Win95WindowsExplorer we = new Win95WindowsExplorer();
+            WinClassic app = wm.Init(we, "Windows Explorer", Properties.Resources.WinClassicFileExplorer, true, true);
             AddTaskBarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
 
             nonimportantapps.Add(app);
@@ -437,21 +396,7 @@ namespace Histacom2.OS.Win98
             Hack1.StartObjective();
         }
 
-        private void temp_for_std(object sender, EventArgs e)
-        {
-            Win2K.Win2KApps.SurviveTheDay std = new Win2K.Win2KApps.SurviveTheDay();
-            WinClassic app = wm.Init(std, "Survive The Day", null, false, false);
-            AddTaskBarItem(app, app.Tag.ToString(), "Survive The Day", null);
-
-            nonimportantapps.Add(app);
-            nonimportantapps[nonimportantapps.Count - 1].BringToFront();
-            nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
-
-            app.BringToFront();
-            startmenu.Hide();
-        }
-
-        private void MSDOSPromptToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void MSDOSPromptToolStripMenuItem1_Click (object sender, EventArgs e)
         {
             WinClassicTerminal msdos = new WinClassicTerminal(false);
             WinClassic app = wm.Init(msdos, "MS-DOS Prompt", Properties.Resources.MSDOSPromptToolStripMenuItem1_Image, true, true, false);
@@ -464,7 +409,7 @@ namespace Histacom2.OS.Win98
         private void PropertiesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             WinClassicThemePanel theme = new WinClassicThemePanel();
-            WinClassic app = wm.Init(theme, "Themes", null, false, true, false);
+            WinClassic app = wm.Init(theme, "Themes", null, false, true, false, resize: false);
 
             AddTaskBarItem(app, app.Tag.ToString(), "Themes", null);
             app.BringToFront();
@@ -473,17 +418,24 @@ namespace Histacom2.OS.Win98
 
         private void TimeDistorterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (distort != null) return;
-            distort = new WinClassicTimeDistorter2();
-            WinClassic app = wm.Init(distort, "Time Distorter", null, false, false, false);
+            distort = new WinClassicTimeDistorter("1998", "1999", 150, Hack2.StartObjective);
+            WinClassic app = wm.Init(distort, "Time Distorter", null, false, true);
             AddTaskBarItem(app, app.Tag.ToString(), "Time Distorter", null);
+            app.BringToFront();
+            startmenu.Hide();
+        }
+        private void FTPClientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WinClassic app = wm.Init(new WinClassicFTPClient(), "FTP Client", null, true, true);
+
+            AddTaskBarItem(app, app.Tag.ToString(), "FTP Client", null);
             app.BringToFront();
             startmenu.Hide();
         }
 
         private void CalculatorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            WinClassic app = wm.Init(new WinClassicCalculator(), "Calculator", Properties.Resources.WinClassicCalc, false, false);
+        { 
+            WinClassic app = wm.Init(new WinClassicCalculator(), "Calculator", Properties.Resources.WinClassicCalc, false, false, resize: false);
             AddTaskBarItem(app, app.Tag.ToString(), "Calculator", Properties.Resources.WinClassicCalc);
 
             nonimportantapps.Add(app);
@@ -496,16 +448,19 @@ namespace Histacom2.OS.Win98
 
         private void desktopupdate_Tick(object sender, EventArgs e)
         {
-            DesktopController.RefreshDesktopIcons(new ListViewItem[] { new ListViewItem("My Computer", 0),
-            new ListViewItem("Network Neighborhood", 5),
-            new ListViewItem("Inbox", 3),
-            new ListViewItem("Recycle Bin", 7),
-            new ListViewItem("Internet Explorer", 2),
-            new ListViewItem("Online Services", 1),
-            new ListViewItem("Set Up The Microsoft Network", 4),
-            new ListViewItem("Outlook Express", 6) }, ref desktopicons, Path.Combine(ProfileWindowsDirectory, "Desktop"));
+            // Update the Desktop icons
+
+            DesktopController.RefreshDesktopIcons(new ListViewItem[] { new System.Windows.Forms.ListViewItem("My Computer", 0),
+            new System.Windows.Forms.ListViewItem("Network Neighborhood", 5),
+            new System.Windows.Forms.ListViewItem("Inbox", 3),
+            new System.Windows.Forms.ListViewItem("Recycle Bin", 7),
+            new System.Windows.Forms.ListViewItem("Internet Explorer", 2),
+            new System.Windows.Forms.ListViewItem("Online Services", 1),
+            new System.Windows.Forms.ListViewItem("Set Up The Microsoft Network", 4),
+            new System.Windows.Forms.ListViewItem("Outlook Express", 6) }, ref desktopicons, Path.Combine(ProfileWindowsDirectory, "Desktop"));
         }
 
+        // When add new folder is clicked
         private void FolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Directory.Exists(Path.Combine(ProfileWindowsDirectory, "Desktop", "New Folder")))
@@ -515,6 +470,7 @@ namespace Histacom2.OS.Win98
             else
             {
                 SaveDirectoryInfo(Path.Combine(ProfileWindowsDirectory, "Desktop"), "New Folder", false, "New folder", true);
+                desktopupdate_Tick(null, null); // Update the desktop Icons
             }
         }
 
@@ -527,9 +483,8 @@ namespace Histacom2.OS.Win98
             else
             {
                 File.Create(Path.Combine(ProfileWindowsDirectory, "Desktop", "New Text Document.txt"));
+                desktopupdate_Tick(null, null); // Update the desktop Icons
             }
-
-            desktopupdate_Tick(null, null); // Update the Desktop Icons
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -561,25 +516,143 @@ namespace Histacom2.OS.Win98
                                 wm.StartInfobox95("Windows Explorer", "This object cannot be deleted.", InfoboxType.Error, InfoboxButtons.OK);
                             }
                         }
-                    }
-                    else
-                    {
+                    } else {
                         wm.StartInfobox95("Windows Explorer", "This object cannot be deleted.", InfoboxType.Error, InfoboxButtons.OK);
-                    }
+                    }                 
                 }
             }
         }
 
-        private void waitUntil98Loaded_Tick(object sender, EventArgs e)
+        private void MinsweeperToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WinClassic app = wm.Init(new WinClassicMinesweeper(), "Minesweeper", Properties.Resources.WinClassicMinesweeper, false, false, false, false);
+            AddTaskBarItem(app, app.Tag.ToString(), "Minesweeper", Properties.Resources.WinClassicMinesweeper);
+
+            nonimportantapps.Add(app);
+            nonimportantapps[nonimportantapps.Count - 1].BringToFront();
+            nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
+
+            app.BringToFront();
+            startmenu.Hide();
+        }
+
+        private void desktopicons_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (heldDownItem != null)
+            {
+                heldDownItem.Position = new Point(e.Location.X - heldDownPoint.X,
+                                                  e.Location.Y - heldDownPoint.Y);
+            }
+        }
+
+        private void desktopicons_MouseUp(object sender, MouseEventArgs e)
+        {
+            heldDownItem = null;
+            startmenu.Hide();
+        }
+
+        private void GuessTheNumberToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WinClassic app = wm.Init(new GuessTheNumber(), "Guess The Number", Properties.Resources.WinClassicGTNIcon, false, false, false, false);
+            AddTaskBarItem(app, app.Tag.ToString(), "Guess The Number", Properties.Resources.WinClassicGTNIcon);
+
+            nonimportantapps.Add(app);
+            nonimportantapps[nonimportantapps.Count - 1].BringToFront();
+            nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
+
+            app.BringToFront();
+            startmenu.Hide();
+        }
+
+        private void taskbar_Paint(object sender, PaintEventArgs e)
+        {
+            var gfx = e.Graphics;
+            gfx.Clear(currentTheme.threeDObjectsColor);
+
+            var _lightBack = Paintbrush.GetLightFromColor(currentTheme.threeDObjectsColor);
+
+            gfx.DrawLine(new Pen(_lightBack), 0, 1, taskbar.Width, 1);
+        }
+
+        private void clockPanel_Paint(object sender, PaintEventArgs e)
+        {
+            var gfx = e.Graphics;
+            gfx.Clear(currentTheme.threeDObjectsColor);
+
+            var _lightBack = Paintbrush.GetLightFromColor(currentTheme.threeDObjectsColor);
+            var _darkBack = Paintbrush.GetDarkFromColor(currentTheme.threeDObjectsColor);
+
+            gfx.DrawLine(new Pen(_lightBack), 0, 1, clockPanel.Width, 1);
+            gfx.DrawLine(new Pen(_darkBack), 0, 24, 0, 4);
+            gfx.DrawLine(new Pen(_darkBack), 61, 4, 0, 4);
+            gfx.DrawLine(new Pen(_lightBack), 62, 4, 62, 25);
+            gfx.DrawLine(new Pen(_lightBack), 0, 25, 62, 25);
+        }
+
+        private void startmenuitems_Paint(object sender, PaintEventArgs e)
+        {
+            var gfx = e.Graphics;
+            gfx.Clear(currentTheme.threeDObjectsColor);
+        }
+
+        private void startmenu_Paint(object sender, PaintEventArgs e)
+        {
+            var gfx = e.Graphics;
+            gfx.Clear(currentTheme.threeDObjectsColor);
+
+            var _lightBack = Paintbrush.GetLightFromColor(currentTheme.threeDObjectsColor);
+            var _darkBack = Paintbrush.GetDarkFromColor(currentTheme.threeDObjectsColor);
+
+            gfx.DrawLine(Pens.Black, 0, startmenu.Height - 1, startmenu.Width - 1, startmenu.Height - 1);
+            gfx.DrawLine(Pens.Black, startmenu.Width - 1, startmenu.Height - 1, startmenu.Width - 1, 0);
+            gfx.DrawLine(new Pen(_darkBack), 1, startmenu.Height - 2, startmenu.Width - 2, startmenu.Height - 2);
+            gfx.DrawLine(new Pen(_darkBack), startmenu.Width - 2, 1, startmenu.Width - 2, startmenu.Height - 2);
+            gfx.DrawLine(new Pen(_lightBack), 1, startmenu.Height - 3, 1, 1);
+            gfx.DrawLine(new Pen(_lightBack), startmenu.Width - 3, 1, 1, 1);
+        }
+
+        private void ErrorBlasterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WinClassic app = wm.Init(new ErrorBlaster95(), "Welcome to Error Blaster 95!", null, false, false, false, false);
+            AddTaskBarItem(app, app.Tag.ToString(), "Welcome to Error Blaster 95!", null);
+
+            nonimportantapps.Add(app);
+            nonimportantapps[nonimportantapps.Count - 1].BringToFront();
+            nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
+
+            app.BringToFront();
+            startmenu.Hide();
+        }
+
+        private void StartRunnerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WinClassic app = wm.Init(new StartRunner95(), "Welcome to Start Runner 95!", null, false, false, false, false);
+            AddTaskBarItem(app, app.Tag.ToString(), "Welcome to Start Runner 95!", null);
+
+            nonimportantapps.Add(app);
+            nonimportantapps[nonimportantapps.Count - 1].BringToFront();
+            nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
+
+            app.BringToFront();
+            startmenu.Hide();
+
+        }
+
+        private void desktopicons_Click(object sender, EventArgs e)
+        {
+            startmenu.Hide();
+        }
+
+        private void waitUntil95Loaded_Tick(object sender, EventArgs e)
         {
             if (Visible)
             {
                 //Check if it is the first time
-                if (!CurrentSave.FTime98)
+                if (!CurrentSave.FTime95)
                 {
-                    CurrentSave.FTime98 = true;
+                    CurrentSave.FTime95 = true;
                     SaveGame();
-                    welcome = wm.Init(new Win98Welcome(), "Welcome", null, false, false, resize: false);
+                    welcome = wm.Init(new Win95Welcome(), "Welcome", null, false, false, resize: false);
                     AddTaskBarItem(welcome, welcome.Tag.ToString(), "Welcome", null);
 
                     nonimportantapps.Add(welcome);
@@ -589,9 +662,8 @@ namespace Histacom2.OS.Win98
                     welcome.BringToFront();
                     welcome.Activate();
 
-                    waitUntil98Loaded.Enabled = false;
+                    waitUntil95Loaded.Enabled = false;
                 }
-
             }
         }
     }

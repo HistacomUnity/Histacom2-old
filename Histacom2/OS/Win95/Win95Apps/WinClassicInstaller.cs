@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TimeHACK.OS.Win95;
+using Histacom2.OS.Win95;
+using Histacom2;
 
 namespace TimeHACK.WinClassicForms
 {

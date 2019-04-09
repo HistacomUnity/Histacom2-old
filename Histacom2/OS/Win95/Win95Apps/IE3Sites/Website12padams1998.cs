@@ -13,10 +13,10 @@ using Histacom2.GlobalPrograms;
 
 namespace Histacom2.OS.Win95.Win95Apps.IE3Sites
 {
-    public partial class _12padams1998 : UserControl
+    public partial class Website12padams1998 : UserControl
     {
         bool clicked = false;
-        public _12padams1998()
+        public Website12padams1998()
         {
             InitializeComponent();
             button1.Paint += (s, args) => Paintbrush.PaintClassicBorders(s, args, 2);

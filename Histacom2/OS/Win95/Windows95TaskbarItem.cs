@@ -1,21 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Histacom2.Engine;
+using System;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Histacom2.Engine;
 
-namespace Histacom2.Engine.Template.Taskbars
+namespace Histacom2.OS.Win95
 {
-    public partial class Win95TaskBarItem : UserControl
+    public partial class Windows95TaskbarItem : UserControl
     {
+
         TaskBarController tb = new TaskBarController();
         public string ApplicationID;
-        public Win95TaskBarItem()
+
+        public Windows95TaskbarItem()
         {
             InitializeComponent();
             progName.Font = new Font(TitleScreen.pfc.Families[0], 16f, FontStyle.Regular, GraphicsUnit.Point, ((0)));

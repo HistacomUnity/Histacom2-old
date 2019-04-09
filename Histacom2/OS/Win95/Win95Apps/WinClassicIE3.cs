@@ -49,10 +49,10 @@ namespace Histacom2.OS.Win95.Win95Apps
                     uc = new GooglePrototype();
                     break;
                 case "www.12padams.com":
-                    uc = new _12padams1998();
+                    uc = new Website12padams1998();
                     break;
                 case "12padams.com":
-                    uc = new _12padams1998();
+                    uc = new Website12padams1998();
                     newURL = "www.12padams.com";
                     break;
                 case "google.com":
