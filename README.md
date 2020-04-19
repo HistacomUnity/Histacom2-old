@@ -26,8 +26,6 @@ Discord server: https://discord.gg/CeBBXWN (You can also click on the dark blue 
 
 AppVeyor project: https://ci.appveyor.com/project/timehack/timehack (You can also use the AppVeyor badge)
 
-YouTube Channel: https://www.youtube.com/channel/UCU3uiIgHdLaNvPYEB1hWPsg (Note that the videos are probably outdated.)
-
 ## Documentation
 Histacom 2's documentation can be found on the Histacom 2 Wiki (WIP): https://github.com/TheRandomMelon/Histacom2/wiki
 
